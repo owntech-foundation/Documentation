@@ -1,6 +1,6 @@
-site_name: MkDocs Test
+site_name: OwnTech Documentation Center
 site_url: https://owntech-foundation.github.io/
-docs_dir: examples/
+docs_dir: docs/
 theme:
   name: material
   features:
