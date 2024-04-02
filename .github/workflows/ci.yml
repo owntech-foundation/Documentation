@@ -34,7 +34,7 @@ jobs:
       - name: Checkout OwnTech Tutorials wiki repo
         uses: actions/checkout@v4
         with:
-          repository: owntech-foundation/Tutorials.wiki.git
+          repository: owntech-foundation/Tutorials.wiki
           path: tutorials
           
       - uses: ssciwr/doxygen-install@v1
