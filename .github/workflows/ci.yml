@@ -1,0 +1,47 @@
+name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Checkout OwnTech Core repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/Core
+          path: core
+
+      - name: Checkout OwnTech Control library repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/control_library
+          path: controlLibrary
+
+      - name: Checkout OwnTech Examples repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/examples
+          path: examples
+          
+      - uses: ssciwr/doxygen-install@v1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - name: Install python packages
+        run: pip install mkdocs-material mkdoxy pillow cairosvg
+      - name: Print mkdocs version
+        run: mkdocs --version
+      - name: Publish docs
+        run: mkdocs gh-deploy --force
