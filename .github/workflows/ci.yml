@@ -1,4 +1,4 @@
-name: ci 
+name: Brew OwnTech Documentation Center 
 on:
   push:
     branches:
@@ -17,25 +17,25 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core
-          path: core
+          path: docs/core
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/control_library
-          path: controlLibrary
+          path: docs/controlLibrary
 
       - name: Checkout OwnTech Examples repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/examples
-          path: examples
+          path: docs/examples
           
       - name: Checkout OwnTech Tutorials wiki repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Tutorials.wiki
-          path: tutorials
+          path: docs/tutorials
           
       - uses: ssciwr/doxygen-install@v1
       - uses: actions/setup-python@v4

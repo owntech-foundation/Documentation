@@ -1,6 +1,5 @@
 site_name: OwnTech Documentation Center
 site_url: https://owntech-foundation.github.io/
-docs_dir: docs/
 theme:
   name: material
   features:
@@ -33,14 +32,14 @@ plugins:
   - mkdoxy:
       projects:
         powerAPI: # name of project must be alphanumeric + numbers (without spaces)
-          src-dirs: core/ # path to source code (support multiple paths separated by space) => INPUT
+          src-dirs: docs/core/ # path to source code (support multiple paths separated by space) => INPUT
           full-doc: True # if you want to generate full documentation
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*/public_api/*.c */public_api/*.cpp */public_api/*.h* */owntech_communication/zephyr/src/* */owntech_spin_api/zephyr/src/*" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
             
         controlLibrary: # name of project must be alphanumeric + numbers (without spaces)
-          src-dirs: controlLibrary/src # path to source code (support multiple paths separated by space) => INPUT
+          src-dirs: docs/controlLibrary/src # path to source code (support multiple paths separated by space) => INPUT
           full-doc: True # if you want to generate full documentation
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*.h *.c" # specify file patterns to filter out
@@ -69,33 +68,33 @@ nav:
     - Examples: 
         - SPIN:
             - ADC: 
-                - Software triggered measurement: SPIN/ADC/adc_software_trigger/README.md
-                - Synchronous measurements: SPIN/ADC/adc_hrtim_trigger/README.md
+                - Software triggered measurement: examples/SPIN/ADC/adc_software_trigger/README.md
+                - Synchronous measurements: examples/SPIN/ADC/adc_hrtim_trigger/README.md
             - DAC:
-                - Signal generation: SPIN/DAC/signal_generation/README.md
+                - Signal generation: examples/SPIN/DAC/signal_generation/README.md
             - LED:
-                - Blinky: SPIN/LED/blinky/README.md
+                - Blinky: examples/SPIN/LED/blinky/README.md
             - PWM:
-                - Duty cycle control: SPIN/PWM/duty_cycle_setting/README.md
-                - Phase shift control: SPIN/PWM/phase_shift/README.md
-                - Multiple PWM operation: SPIN/PWM/multiple_pwm/README.md
+                - Duty cycle control: examples/SPIN/PWM/duty_cycle_setting/README.md
+                - Phase shift control: examples/SPIN/PWM/phase_shift/README.md
+                - Multiple PWM operation: examples/SPIN/PWM/multiple_pwm/README.md
             - Timer: 
-                - Incremental encoder: SPIN/TIMER/incremental_encoder/README.md
+                - Incremental encoder: examples/SPIN/TIMER/incremental_encoder/README.md
         - TWIST: 
             - DC DC topology examples:
-                - Buck voltage mode: TWIST/DC_DC/buck_voltage_mode/README.md
-                - Buck current mode: TWIST/DC_DC/buck_current_mode/README.md
-                - Boost voltage mode: TWIST/DC_DC/boost_voltage_mode/README.md
-                - Interleaved Buck: TWIST/DC_DC/interleaved/README.md
+                - Buck voltage mode: examples/TWIST/DC_DC/buck_voltage_mode/README.md
+                - Buck current mode: examples/TWIST/DC_DC/buck_current_mode/README.md
+                - Boost voltage mode: examples/TWIST/DC_DC/boost_voltage_mode/README.md
+                - Interleaved Buck: examples/TWIST/DC_DC/interleaved/README.md
             - Microgrid examples: 
-                - AC client server: TWIST/Microgrid/AC_client_server/README.md
-                - AC peer to peer: TWIST/Microgrid/AC_peer_to_peer/README.md
-                - DC client server: TWIST/Microgrid/DC_client_server/README.md
-                - DC peer to peer: TWIST/Microgrid/DC_peer_to_peer/README.md
-                - DC droop: TWIST/Microgrid/DC_droop/README.md
+                - AC client server: examples/TWIST/Microgrid/AC_client_server/README.md
+                - AC peer to peer: examples/TWIST/Microgrid/AC_peer_to_peer/README.md
+                - DC client server: examples/TWIST/Microgrid/DC_client_server/README.md
+                - DC peer to peer: examples/TWIST/Microgrid/DC_peer_to_peer/README.md
+                - DC droop: examples/TWIST/Microgrid/DC_droop/README.md
             - DC AC topology examples: 
-                - Grid forming Inverter: TWIST/DC_AC/grid_forming/README.md
-                - Grid following Inverter: TWIST/DC_AC/grid_following/README.md
+                - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
+                - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
         - SPIN API:  
             - Class: powerAPI/classSpinAPI.md
