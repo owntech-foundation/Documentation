@@ -31,7 +31,7 @@ jobs:
           repository: owntech-foundation/examples
           path: examples
           
-        - name: Checkout OwnTech Tutorials wiki repo
+      - name: Checkout OwnTech Tutorials wiki repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Tutorials.wiki.git
