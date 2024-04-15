@@ -75,7 +75,7 @@ nav:
     - Home:
         - index.md
     - Getting Started:
-        - tutorials/Setting-up-your-environment.md
+        - VSCode Setup: core/docs/vscode_setup.md
         - Blinky: tutorials/Blinky.md
         - OwnPlot: tutorials/OwnPlot.md
     - Examples:

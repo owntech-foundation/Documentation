@@ -13,10 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Checkout OwnTech Core repo
+      - name: Checkout OwnTech Core repo Luiz
         uses: actions/checkout@v4
         with:
-          repository: owntech-foundation/Core
+          repository: luizvilla/Core
           path: docs/core
 
       - name: Checkout OwnTech Bootloader repo
