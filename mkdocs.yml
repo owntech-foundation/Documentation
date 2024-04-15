@@ -122,7 +122,10 @@ nav:
         - Task API: powerAPI/classTaskAPI.md
         - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
+            - Analog Communication: powerAPI/classAnalogCommunication.md
+            - RS485: powerAPI/classRs485Communication.md
             - CAN: powerAPI/classCanCommunication.md
+            - Real Time Sync: powerAPI/classSyncCommunication.md
         - Safety API: powerAPI/classsafety.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
