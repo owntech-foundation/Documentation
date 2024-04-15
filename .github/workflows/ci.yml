@@ -18,6 +18,13 @@ jobs:
         with:
           repository: owntech-foundation/Core
           path: docs/core
+          
+      - name: Checkout OwnTech Bootloader repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/bootloader
+          ref: docs
+          path: docs/bootloader
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
