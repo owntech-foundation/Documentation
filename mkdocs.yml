@@ -1,5 +1,6 @@
 site_name: OwnTech Documentation Center
 site_url: https://owntech-foundation.github.io/Documentation
+copyright: Copyright &copy; 2024 Owntech
 extra:
   social:
     - icon: fontawesome/brands/github
