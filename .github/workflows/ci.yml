@@ -25,6 +25,8 @@ jobs:
           repository: owntech-foundation/bootloader
           ref: docs
           path: docs/bootloader
+          sparse-checkout: |
+            docs
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
@@ -59,6 +61,8 @@ jobs:
         with:
           repository: owntech-foundation/Owntech-Matlab
           path: docs/Matlab
+          sparse-checkout: |
+            docs
 
       - name: Checkout OwnTech OwnPlot repo
         uses: actions/checkout@v4
@@ -66,6 +70,8 @@ jobs:
           repository: owntech-foundation/OwnPlot
           ref: doc_v1.6.0
           path: docs/OwnPlot
+          sparse-checkout: |
+            docs
 
       - uses: ssciwr/doxygen-install@v1
       - uses: actions/setup-python@v4
