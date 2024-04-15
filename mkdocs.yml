@@ -149,6 +149,10 @@ nav:
         - TWIST Sparse: twist/getting_started.md
 
     - OwnPlot:
-        - TWIST: OwnPlot/docs/index.md
+        - Getting Started: OwnPlot/docs/index.md
+        - ReadMe: Ownplot/README.md
+        - User Manual: OwnPlot/docs/user/index.md
+        - Developer Manual: OwnPlot/docs/dev/index.md
+          - Architecture: OwnPlot/docs/dev/arch.md
 copyright: |
   &copy; 2024 <a href="https://github.com/owntech-foundation"  target="_blank" rel="noopener">OwnTech Foundation</a>
