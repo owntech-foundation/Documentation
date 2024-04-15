@@ -142,7 +142,7 @@ nav:
         - Notch Filter: controlLibrary/classNotchFilter.md
 
     - Matlab:
-        - MATLAB : matlab/docs/getting_started.md
+        - MATLAB : Matlab/docs/getting_started.md
 
     - Hardware:
         - TWIST: twist/docs/getting_started.md
