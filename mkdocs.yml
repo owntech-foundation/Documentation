@@ -146,7 +146,8 @@ nav:
 
     - Hardware:
         - TWIST: twist/docs/getting_started.md
-    
+        - TWIST Sparse: twist/getting_started.md
+
     - OwnPlot:
         - TWIST: OwnPlot/docs/index.md
 copyright: |

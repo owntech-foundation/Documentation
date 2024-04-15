@@ -18,7 +18,7 @@ jobs:
         with:
           repository: owntech-foundation/Core
           path: docs/core
-          
+
       - name: Checkout OwnTech Bootloader repo
         uses: actions/checkout@v4
         with:
@@ -51,20 +51,22 @@ jobs:
           repository: owntech-foundation/TWIST
           ref: draft-doc-1.4
           path: docs/twist
+          sparse-checkout: |
+            docs
 
       - name: Checkout OwnTech Matlab repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Owntech-Matlab
           path: docs/Matlab
-  
+
       - name: Checkout OwnTech OwnPlot repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/OwnPlot
           ref: doc_v1.6.0
           path: docs/OwnPlot
-          
+
       - uses: ssciwr/doxygen-install@v1
       - uses: actions/setup-python@v4
         with:
