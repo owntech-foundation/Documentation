@@ -47,6 +47,7 @@ plugins:
         powerAPI: # name of project must be alphanumeric + numbers (without spaces)
           src-dirs: docs/core/ # path to source code (support multiple paths separated by space) => INPUT
           full-doc: True # if you want to generate full documentation
+          template-dir: templates_custom
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*/public_api/*.c */public_api/*.cpp */public_api/*.h* */owntech_communication/zephyr/src/* */owntech_spin_api/zephyr/src/*" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
@@ -57,6 +58,7 @@ plugins:
         controlLibrary: # name of project must be alphanumeric + numbers (without spaces)
           src-dirs: docs/controlLibrary/src # path to source code (support multiple paths separated by space) => INPUT
           full-doc: True # if you want to generate full documentation
+          template-dir: templates_custom
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*.h *.c" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
