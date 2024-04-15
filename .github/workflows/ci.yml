@@ -16,7 +16,8 @@ jobs:
       - name: Checkout OwnTech Core repo Luiz
         uses: actions/checkout@v4
         with:
-          repository: luizvilla/Core
+          repository: owntech-foundation/Core
+          ref: draft-docs
           path: docs/core
 
       - name: Checkout OwnTech Bootloader repo
