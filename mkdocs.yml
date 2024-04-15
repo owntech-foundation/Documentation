@@ -41,6 +41,7 @@ plugins:
             RECURSIVE: True # recursive search in source directories
             SHOW_NAMESPACES: False # don't show namespaces in documentation
             ENABLE_PREPROCESSING: False
+            OPTIMIZE_OUTPUT_FOR_C: True
 
         controlLibrary: # name of project must be alphanumeric + numbers (without spaces)
           src-dirs: docs/controlLibrary/src # path to source code (support multiple paths separated by space) => INPUT
@@ -49,6 +50,7 @@ plugins:
             FILE_PATTERNS: "*.h *.c" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
             SHOW_NAMESPACES: False
+            OPTIMIZE_OUTPUT_FOR_C: True
 
 markdown_extensions:
   - pymdownx.highlight:
