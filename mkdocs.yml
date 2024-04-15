@@ -159,7 +159,10 @@ nav:
           - Notch Filter: controlLibrary/classNotchFilter.md
 
     - Matlab:
-        - MATLAB : Matlab/docs/getting_started.md
+        - Getting started: Matlab/docs/getting_started.md
+        - First compilation: Matlab/docs/first_compilation_with_matlab.md
+        - Open loop: Matlab/docs/open_loop_buck.md
+        - Closed loop: Matlab/docs/closed_loop_buck.md
 
     - Hardware:
         - TWIST: twist/docs/getting_started.md
