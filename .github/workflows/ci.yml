@@ -48,8 +48,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Owntech-Matlab
-          path: docs/matlab
-
+          path: docs/Matlab
+  
+      - name: Checkout OwnTech OwnPlot repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/OwnPlot
+          ref: doc_v1.6.0
+          path: docs/OwnPlot
+          
       - uses: ssciwr/doxygen-install@v1
       - uses: actions/setup-python@v4
         with:
