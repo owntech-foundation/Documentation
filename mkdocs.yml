@@ -152,7 +152,8 @@ nav:
         - Getting Started: OwnPlot/docs/index.md
         - ReadMe: Ownplot/README.md
         - User Manual: OwnPlot/docs/user/user.md
-        - Developer Manual: OwnPlot/docs/dev/dev.md
+        - Developer Manual:
+            - Developer: OwnPlot/docs/dev/dev.md
             - Architecture: OwnPlot/docs/dev/arch.md
 
 copyright: |
