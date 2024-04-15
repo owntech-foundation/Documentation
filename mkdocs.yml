@@ -153,6 +153,7 @@ nav:
         - ReadMe: Ownplot/README.md
         - User Manual: OwnPlot/docs/user/user.md
         - Developer Manual: OwnPlot/docs/dev/dev.md
-          - Architecture: OwnPlot/docs/dev/arch.md
+            - Architecture: OwnPlot/docs/dev/arch.md
+
 copyright: |
   &copy; 2024 <a href="https://github.com/owntech-foundation"  target="_blank" rel="noopener">OwnTech Foundation</a>
