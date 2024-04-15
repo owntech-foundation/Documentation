@@ -102,6 +102,7 @@ nav:
                 - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
+        - Bootloader: bootloader/docs/getting_started.md
         - SPIN API:
             - Class: powerAPI/classSpinAPI.md
             - ADC: powerAPI/classAdcHAL.md
