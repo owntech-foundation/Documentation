@@ -2,6 +2,7 @@ site_name: OwnTech Documentation Center
 site_url: https://owntech-foundation.github.io/
 theme:
   name: material
+  custom_dir: overrides
   favicon: images/favicon.ico
   logo: images/OwnTech.png
   features:
