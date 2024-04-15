@@ -140,6 +140,9 @@ nav:
         - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
         - Notch Filter: controlLibrary/classNotchFilter.md
 
+    - Matlab:
+        - MATLAB : matlab/docs/getting_started.md
+
     - Hardware:
         - TWIST: twist/docs/etting_started.md
 

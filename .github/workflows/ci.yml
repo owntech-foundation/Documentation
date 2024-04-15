@@ -42,6 +42,12 @@ jobs:
         with:
           repository: owntech-foundation/TWIST
           path: docs/twist
+      
+      - name: Checkout OwnTech Matlab repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/Owntech-Matlab
+          path: docs/matlab
 
       - uses: ssciwr/doxygen-install@v1
       - uses: actions/setup-python@v4
