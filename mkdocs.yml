@@ -133,21 +133,25 @@ nav:
         - Getting started: controlLibrary/docs/getting-started.md
         - Controller interface: controlLibrary/classController.md
         - PID:
+            - Use: controlLibrary/docs/getting-started.md
             - PID structure: controlLibrary/classPid.md
             - PID Parameters: controlLibrary/structPidParams.md
         - Proportional Resonant (PR):
+            - Use: controlLibrary/docs/use-pr.md
             - PR structure: controlLibrary/classPr.md
-            - PR Data: controlLibrary/structPrParams.md
+            - PR Parameters: controlLibrary/structPrParams.md
         - RST:
+            - Use: controlLibrary/use-rst.md
             - RST structure: controlLibrary/classRST.md
-            - RST Data: controlLibrary/structRstParams.md
+            - RST Parameters: controlLibrary/structRstParams.md
         - Phase Lock Loop (PLL):
+            - Use: controlLibrary/use-pll.md
             - PLL Sinus: controlLibrary/classPllSinus.md
-            - PLL Data: controlLibrary/structPllDatas.md
-        - 1st order Filter:
-            - Low Pass: controlLibrary/classLowPassFirstOrderFilter.md
-        - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
-        - Notch Filter: controlLibrary/classNotchFilter.md
+            - PLL Datas: controlLibrary/structPllDatas.md
+        - Filters:
+          - 1st order Low Pass Filter: controlLibrary/classLowPassFirstOrderFilter.md
+          - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
+          - Notch Filter: controlLibrary/classNotchFilter.md
 
     - Matlab:
         - MATLAB : Matlab/docs/getting_started.md
