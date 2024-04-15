@@ -143,11 +143,11 @@ nav:
             - PR structure: controlLibrary/classPr.md
             - PR Parameters: controlLibrary/structPrParams.md
         - RST:
-            - Use: controlLibrary/use-rst.md
+            - Use: controlLibrary/docs/use-rst.md
             - RST structure: controlLibrary/classRST.md
             - RST Parameters: controlLibrary/structRstParams.md
         - Phase Lock Loop (PLL):
-            - Use: controlLibrary/use-pll.md
+            - Use: controlLibrary/docs/use-pll.md
             - PLL Sinus: controlLibrary/classPllSinus.md
             - PLL Datas: controlLibrary/structPllDatas.md
         - Filters:
