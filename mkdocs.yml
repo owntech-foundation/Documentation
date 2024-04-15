@@ -165,7 +165,9 @@ nav:
     - OwnPlot:
         - Getting Started: OwnPlot/docs/index.md
         - ReadMe: Ownplot/README.md
-        - User Manual: OwnPlot/docs/user/user.md
+        - User Manual:
+            - User: OwnPlot/docs/user/user.md
+            - Setup: OwnPlot/docs/user/setup.md
         - Developer Manual:
             - Developer: OwnPlot/docs/dev/dev.md
             - Architecture: OwnPlot/docs/dev/arch.md
