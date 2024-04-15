@@ -8,6 +8,7 @@ extra:
       link: mailto:contact@owntech.org
 theme:
   name: material
+  custom_dir: overrides
   favicon: images/favicon.ico
   logo: images/OwnTech.png
   extra_css:
