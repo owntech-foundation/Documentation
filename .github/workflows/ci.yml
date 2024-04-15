@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/control_library
+          ref: docs
           path: docs/controlLibrary
 
       - name: Checkout OwnTech Examples repo
