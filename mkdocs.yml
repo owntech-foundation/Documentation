@@ -18,14 +18,14 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
       primary: teal
-      accent: purple 
-    - scheme: slate 
+      accent: purple
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: teal
       accent: lime
 
@@ -39,14 +39,14 @@ plugins:
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*/public_api/*.c */public_api/*.cpp */public_api/*.h* */owntech_communication/zephyr/src/* */owntech_spin_api/zephyr/src/*" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
-            
+
         controlLibrary: # name of project must be alphanumeric + numbers (without spaces)
           src-dirs: docs/controlLibrary/src # path to source code (support multiple paths separated by space) => INPUT
           full-doc: True # if you want to generate full documentation
           doxy-cfg: # standard doxygen configuration (key: value)
             FILE_PATTERNS: "*.h *.c" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
-            
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -67,13 +67,13 @@ markdown_extensions:
 nav:
     - Home:
         - index.md
-    - Getting Started: 
+    - Getting Started:
         - tutorials/Setting-up-your-environment.md
         - Blinky: tutorials/Blinky.md
         - OwnPlot: tutorials/OwnPlot.md
-    - Examples: 
+    - Examples:
         - SPIN:
-            - ADC: 
+            - ADC:
                 - Software triggered measurement: examples/SPIN/ADC/adc_software_trigger/README.md
                 - Synchronous measurements: examples/SPIN/ADC/adc_hrtim_trigger/README.md
             - DAC:
@@ -84,25 +84,25 @@ nav:
                 - Duty cycle control: examples/SPIN/PWM/duty_cycle_setting/README.md
                 - Phase shift control: examples/SPIN/PWM/phase_shift/README.md
                 - Multiple PWM operation: examples/SPIN/PWM/multiple_pwm/README.md
-            - Timer: 
+            - Timer:
                 - Incremental encoder: examples/SPIN/TIMER/incremental_encoder/README.md
-        - TWIST: 
+        - TWIST:
             - DC DC topology examples:
                 - Buck voltage mode: examples/TWIST/DC_DC/buck_voltage_mode/README.md
                 - Buck current mode: examples/TWIST/DC_DC/buck_current_mode/README.md
                 - Boost voltage mode: examples/TWIST/DC_DC/boost_voltage_mode/README.md
                 - Interleaved Buck: examples/TWIST/DC_DC/interleaved/README.md
-            - Microgrid examples: 
+            - Microgrid examples:
                 - AC client server: examples/TWIST/Microgrid/AC_client_server/README.md
                 - AC peer to peer: examples/TWIST/Microgrid/AC_peer_to_peer/README.md
                 - DC client server: examples/TWIST/Microgrid/DC_client_server/README.md
                 - DC peer to peer: examples/TWIST/Microgrid/DC_peer_to_peer/README.md
                 - DC droop: examples/TWIST/Microgrid/DC_droop/README.md
-            - DC AC topology examples: 
+            - DC AC topology examples:
                 - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
-        - SPIN API:  
+        - SPIN API:
             - Class: powerAPI/classSpinAPI.md
             - ADC: powerAPI/classAdcHAL.md
             - COMP: powerAPI/classCompHAL.md
@@ -116,7 +116,7 @@ nav:
         - TWIST API: powerAPI/classTwistAPI.md
         - Data API: powerAPI/classDataAPI.md
         - Task API: powerAPI/classTaskAPI.md
-        - Communication API: 
+        - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
             - CAN: powerAPI/classCanCommunication.md
         - Safety API: powerAPI/classsafety.md
@@ -125,19 +125,22 @@ nav:
         - PID:
             - PID structure: controlLibrary/classPid.md
             - PID Parameters: controlLibrary/structPidParams.md
-        - Proportional Resonant (PR): 
+        - Proportional Resonant (PR):
             - PR structure: controlLibrary/classPr.md
             - PR Data: controlLibrary/structPrParams.md
-        - RST: 
+        - RST:
             - RST structure: controlLibrary/classRST.md
             - RST Data: controlLibrary/structRstParams.md
         - Phase Lock Loop (PLL):
             - PLL Sinus: controlLibrary/classPllSinus.md
             - PLL Data: controlLibrary/structPllDatas.md
-        - 1st order Filter: 
+        - 1st order Filter:
             - Low Pass: controlLibrary/classLowPassFirstOrderFilter.md
         - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
         - Notch Filter: controlLibrary/classNotchFilter.md
-        
+
+    - Hardware:
+        - TWIST: twist/getting_started.md
+
 copyright: |
   &copy; 2024 <a href="https://github.com/owntech-foundation"  target="_blank" rel="noopener">OwnTech Foundation</a>
