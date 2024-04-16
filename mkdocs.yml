@@ -163,30 +163,37 @@ nav:
         - Safety API: powerAPI/classsafety.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
-        - Controller interface:
-          - Principle: controlLibrary/docs/controller.md
-          - Doc : controlLibrary/classController.md
-        - PID:
-            - Use: controlLibrary/docs/getting-started.md
+        - Controller: 
+          - Generic Controller:
+            - Principle: controlLibrary/docs/controller.md
+            - Doc : controlLibrary/classController.md
+          - PID:
+            - Use: controlLibrary/docs/use-pid.md
             - PID structure: controlLibrary/classPid.md
             - PID Parameters: controlLibrary/structPidParams.md
-        - Proportional Resonant (PR):
+          - Proportional Resonant (PR):
             - Use: controlLibrary/docs/use-pr.md
             - PR structure: controlLibrary/classPr.md
             - PR Parameters: controlLibrary/structPrParams.md
-        - RST:
+          - RST:
             - Use: controlLibrary/docs/use-rst.md
             - RST structure: controlLibrary/classRST.md
             - RST Parameters: controlLibrary/structRstParams.md
-        - Phase Lock Loop (PLL):
+        - Filters:
+          - Use: controlLibrary/docs/use-filters.md
+          - 1st order Low Pass Filter:               
+              Use: controlLibrary/docs/use-firstorder.md
+              API: controlLibrary/classLowPassFirstOrderFilter.md
+          - Finite Impulse Response filter (FIR): 
+            - Use: controlLibrary/
+            - API: controlLibrary/classFir.md
+          - Notch Filter: 
+            - Use: controlLibrary/docs/use-notchfilter.md 
+            - Notch Filter API: controlLibrary/classNotchFilter.md
+          - Phase Lock Loop (PLL):
             - Use: controlLibrary/docs/use-pll.md
             - PLL Sinus: controlLibrary/classPllSinus.md
             - PLL Datas: controlLibrary/structPllDatas.md
-        - Filters:
-          - Use: controlLibrary/docs/use-filters.md
-          - 1st order Low Pass Filter: controlLibrary/classLowPassFirstOrderFilter.md
-          - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
-          - Notch Filter: controlLibrary/classNotchFilter.md
 
     - MATLAB:
         - Getting started: Matlab/docs/getting_started.md
