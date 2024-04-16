@@ -182,7 +182,7 @@ nav:
           - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
           - Notch Filter: controlLibrary/classNotchFilter.md
 
-    - Matlab:
+    - MATLAB:
         - Getting started: Matlab/docs/getting_started.md
         - First compilation: Matlab/docs/first_compilation_with_matlab.md
         - Open loop: Matlab/docs/open_loop_buck.md
