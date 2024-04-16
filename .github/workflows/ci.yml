@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/OwnPlot
-          ref: doc_v1.6.0
+          ref: doc_v1.6.0_2
           path: docs/OwnPlot
           sparse-checkout: |
             docs
