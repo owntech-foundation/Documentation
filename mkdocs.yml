@@ -84,6 +84,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 nav:
     - Home:
@@ -147,7 +154,9 @@ nav:
         - Safety API: powerAPI/classsafety.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
-        - Controller interface: controlLibrary/classController.md
+        - Controller interface: 
+          - Principle: controlLibrary/docs/controller.md
+          - Doc : controlLibrary/classController.md
         - PID:
             - Use: controlLibrary/docs/getting-started.md
             - PID structure: controlLibrary/classPid.md
@@ -165,6 +174,7 @@ nav:
             - PLL Sinus: controlLibrary/classPllSinus.md
             - PLL Datas: controlLibrary/structPllDatas.md
         - Filters:
+          - Use: controlLibrary/docs/use-filters.md
           - 1st order Low Pass Filter: controlLibrary/classLowPassFirstOrderFilter.md
           - Finite Impulse Response filter (FIR): controlLibrary/classFir.md
           - Notch Filter: controlLibrary/classNotchFilter.md
