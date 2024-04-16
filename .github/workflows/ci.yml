@@ -1,5 +1,7 @@
 name: Brew OwnTech Documentation Center
 on:
+  repository_dispatch:
+    types: [trigger-workflow]
   push:
     branches:
       - master
