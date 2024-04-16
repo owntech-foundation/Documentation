@@ -42,6 +42,7 @@ theme:
 
 plugins:
   - search
+  - macros
   - mkdoxy:
       projects:
         powerAPI: # name of project must be alphanumeric + numbers (without spaces)
