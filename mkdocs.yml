@@ -1,6 +1,6 @@
 site_name: OwnTech Documentation Center
 site_url: https://owntech-foundation.github.io/Documentation
-copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">&copy <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.owntech.org">OwnTech Foundation</a> under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">&copy <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.owntech.org">OwnTech Foundation</a> under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 extra:
   ownplot:
     version: 1.6.0
@@ -9,6 +9,8 @@ extra:
       link: https://github.com/owntech-foundation
     - icon: fontawesome/solid/paper-plane
       link: mailto:contact@owntech.org
+  images:
+    icon-width: 60
 theme:
   name: material
   custom_dir: overrides
@@ -157,7 +159,7 @@ nav:
         - Safety API: powerAPI/classsafety.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
-        - Controller interface: 
+        - Controller interface:
           - Principle: controlLibrary/docs/controller.md
           - Doc : controlLibrary/classController.md
         - PID:
