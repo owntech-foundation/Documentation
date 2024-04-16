@@ -194,11 +194,10 @@ nav:
 
     - OwnPlot:
         - Getting Started: OwnPlot/docs/index.md
-        - ReadMe: Ownplot/README.md
         - User Manual:
-            - User: OwnPlot/docs/user/user.md
-            - Setup: OwnPlot/docs/user/setup.md
-            - My First Port: OwnPlot/docs/user/first_steps.md
+            - Home: OwnPlot/docs/user-manual/home.md
+            - Setup: OwnPlot/docs/user-manual/setup.md
+            - My First Port: OwnPlot/docs/user-manual/first_steps.md
         - Developer Manual:
             - Developer: OwnPlot/docs/dev/dev.md
             - Architecture: OwnPlot/docs/dev/arch.md
