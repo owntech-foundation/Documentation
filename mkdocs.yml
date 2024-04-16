@@ -10,7 +10,9 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:contact@owntech.org
   images:
-    icon-width: 60
+    width: 300
+    icon:
+      width: 60
 theme:
   name: material
   custom_dir: overrides
