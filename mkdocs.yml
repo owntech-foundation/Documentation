@@ -195,11 +195,8 @@ nav:
           - 1st order Low Pass Filter:
             - Use: controlLibrary/docs/use-firstorder.md
             - API: controlLibrary/classLowPassFirstOrderFilter.md
-          - Finite Impulse Response filter (FIR):
-            - Use: controlLibrary/use-fir.md
-            - API: controlLibrary/classFir.md
-          - Notch Filter:
-            - Use: controlLibrary/docs/use-notchfilter.md
+          - Notch Filter: 
+            - Use: controlLibrary/docs/use-notchfilter.md 
             - API: controlLibrary/classNotchFilter.md
           - Phase Lock Loop (PLL):
             - Use: controlLibrary/docs/use-pll.md
