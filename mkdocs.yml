@@ -107,6 +107,11 @@ nav:
         - First Example: core/docs/first_example.md
         - Blinky: tutorials/Blinky.md
         - OwnPlot: tutorials/OwnPlot.md
+        - MATLAB:
+          - Getting started: Matlab/docs/getting_started.md
+          - First compilation: Matlab/docs/first_compilation_with_matlab.md
+          - Open loop: Matlab/docs/open_loop_buck.md
+          - Closed loop: Matlab/docs/closed_loop_buck.md
     - Examples:
         - SPIN:
             - ADC:
