@@ -217,9 +217,9 @@ nav:
         - TWIST Sparse: twist/getting_started.md
 
     - OwnPlot:
-        - Home: OwnPlot/docs/index.md
+        - OwnPlot/docs/index.md
         - User Manual:
-            - Home: OwnPlot/docs/user-manual/home.md
+            - OwnPlot/docs/user-manual/home.md
             - Getting Started:
                 - Setup: OwnPlot/docs/user-manual/setup.md
                 - Dev board demo code: OwnPlot/docs/user-manual/dev-board-demo.md
@@ -230,5 +230,5 @@ nav:
                 - Plotter: OwnPlot/docs/user-manual/components/plotter.md
             - Troubleshooting: OwnPlot/docs/user-manual/troubleshooting.md
         - Developer Manual:
-            - Home: OwnPlot/docs/dev-manual/home.md
+            - OwnPlot/docs/dev-manual/home.md
             - Architecture: OwnPlot/docs/dev-manual/arch.md
