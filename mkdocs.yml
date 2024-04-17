@@ -224,7 +224,9 @@ nav:
             - Dev board demo code: OwnPlot/docs/user-manual/dev-board-demo.md
             - My First Port: OwnPlot/docs/user-manual/first-steps.md
             - Components:
+                - Tabs: OwnPlot/docs/user-manual/components/tabs.md
                 - Terminal: OwnPlot/docs/user-manual/components/terminal.md
+                - Plotter: OwnPlot/docs/user-manual/components/plotter.md
             - Troubleshooting: OwnPlot/docs/user-manual/troubleshooting.md
         - Developer Manual:
             - Home: OwnPlot/docs/dev-manual/home.md
