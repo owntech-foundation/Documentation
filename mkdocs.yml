@@ -74,6 +74,7 @@ plugins:
             OPTIMIZE_OUTPUT_FOR_C: True
 
 markdown_extensions:
+  - include
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
