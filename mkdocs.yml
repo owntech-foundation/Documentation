@@ -97,6 +97,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - abbr
+
 
 
 nav:
@@ -169,7 +171,7 @@ nav:
         - Safety API: powerAPI/classsafety.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
-        - Controller: 
+        - Controller:
           - Generic Controller:
             - Principle: controlLibrary/docs/controller.md
             - API : controlLibrary/classController.md
@@ -187,14 +189,14 @@ nav:
             - Parameters API: controlLibrary/structRstParams.md
         - Filters:
           - Intro: controlLibrary/docs/use-filters.md
-          - 1st order Low Pass Filter:               
+          - 1st order Low Pass Filter:
             - Use: controlLibrary/docs/use-firstorder.md
             - API: controlLibrary/classLowPassFirstOrderFilter.md
-          - Finite Impulse Response filter (FIR): 
+          - Finite Impulse Response filter (FIR):
             - Use: controlLibrary/use-fir.md
             - API: controlLibrary/classFir.md
-          - Notch Filter: 
-            - Use: controlLibrary/docs/use-notchfilter.md 
+          - Notch Filter:
+            - Use: controlLibrary/docs/use-notchfilter.md
             - API: controlLibrary/classNotchFilter.md
           - Phase Lock Loop (PLL):
             - Use: controlLibrary/docs/use-pll.md
@@ -222,4 +224,3 @@ nav:
         - Developer Manual:
             - Home: OwnPlot/docs/dev-manual/home.md
             - Architecture: OwnPlot/docs/dev-manual/arch.md
- 
