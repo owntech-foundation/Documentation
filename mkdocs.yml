@@ -110,8 +110,7 @@ nav:
     - Getting Started:
         - Environment Setup: core/docs/environment_setup.md
         - First Example: core/docs/first_example.md
-        - Blinky: tutorials/Blinky.md
-        - OwnPlot: tutorials/OwnPlot.md
+        - OwnPlot Setup: core/docs/ownplot_setup.md
         - MATLAB:
           - Getting started: Matlab/docs/getting_started.md
           - First compilation: Matlab/docs/first_compilation_with_matlab.md
@@ -195,8 +194,8 @@ nav:
           - 1st order Low Pass Filter:
             - Use: controlLibrary/docs/use-firstorder.md
             - API: controlLibrary/classLowPassFirstOrderFilter.md
-          - Notch Filter: 
-            - Use: controlLibrary/docs/use-notchfilter.md 
+          - Notch Filter:
+            - Use: controlLibrary/docs/use-notchfilter.md
             - API: controlLibrary/classNotchFilter.md
           - Phase Lock Loop (PLL):
             - Use: controlLibrary/docs/use-pll.md
