@@ -5,11 +5,12 @@ source: False
 start: 1
 end: 0
 ---
-
-{{"---"}}
-{{"search:"}}
-{{"  boost: 0.5"}}
-{{"---"}}
+{% raw %}
+---
+search:
+  boost: 0.5
+---
+{% endraw %}
 
 {% filter indent(config.get('indent_level', 0), True) %}
 
