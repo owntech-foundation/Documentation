@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Checkout OwnTech Core repo Luiz
+      - name: Checkout OwnTech Core repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core

@@ -103,7 +103,7 @@ nav:
     - Home:
         - index.md
     - Getting Started:
-        - VSCode Setup: core/docs/vscode_setup.md
+        - Environment Setup: core/docs/environment_setup.md
         - First Example: core/docs/first_example.md
         - Blinky: tutorials/Blinky.md
         - OwnPlot: tutorials/OwnPlot.md
