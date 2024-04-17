@@ -212,6 +212,7 @@ nav:
             - Home: OwnPlot/docs/user-manual/home.md
             - Setup: OwnPlot/docs/user-manual/setup.md
             - My First Port: OwnPlot/docs/user-manual/first-steps.md
+            - Terminal: OwnPlot/docs/user-manual/terminal.md
             - Troubleshooting: OwnPlot/docs/user-manual/troubleshooting.md
         - Developer Manual:
             - Home: OwnPlot/docs/dev-manual/home.md
