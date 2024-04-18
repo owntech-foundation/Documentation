@@ -163,7 +163,7 @@ nav:
             - VERSION: powerAPI/classVersionHAL.md
         - TWIST API: powerAPI/classTwistAPI.md
         - Data API: powerAPI/classDataAPI.md
-        - Task API: core/scheduling.md
+        - Task API: core/docs/scheduling.md
         - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
             - Analog Communication: powerAPI/classAnalogCommunication.md
