@@ -44,20 +44,14 @@ jobs:
           repository: owntech-foundation/examples
           path: docs/examples
 
-      - name: Checkout OwnTech Tutorials wiki repo
-        uses: actions/checkout@v4
-        with:
-          repository: owntech-foundation/Tutorials.wiki
-          path: docs/tutorials
-
-      - name: Checkout OwnTech Twist repo
-        uses: actions/checkout@v4
-        with:
-          repository: owntech-foundation/TWIST
-          ref: draft-doc-1.4
-          path: docs/twist
-          sparse-checkout: |
-            docs
+      # - name: Checkout OwnTech Twist repo
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: owntech-foundation/TWIST
+      #     ref: draft-doc-1.4
+      #     path: docs/twist
+      #     sparse-checkout: |
+      #       docs
 
       - name: Checkout OwnTech Matlab repo
         uses: actions/checkout@v4
