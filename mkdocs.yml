@@ -147,7 +147,7 @@ nav:
                 - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
-        - Home: core/docs/powerAPI/md
+        - Home: core/docs/powerAPI/
         - ADC: core/docs/adc.md
         - PWM: core/docs/pwm.md
         - Bootloader: bootloader/docs/getting_started.md
