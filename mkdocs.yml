@@ -209,9 +209,9 @@ nav:
         - Open loop: Matlab/docs/open_loop_buck.md
         - Closed loop: Matlab/docs/closed_loop_buck.md
 
-    - Hardware:
-        - TWIST: twist/docs/getting_started.md
-        - TWIST Sparse: twist/getting_started.md
+    # - Hardware:
+    #     - TWIST: twist/docs/getting_started.md
+    #     - TWIST Sparse: twist/getting_started.md
 
     - OwnPlot:
         - OwnPlot/docs/index.md
