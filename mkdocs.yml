@@ -7,9 +7,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/owntech-foundation
-    - icon: fontawesome/brands/discord:
+    - icon: fontawesome/brands/discord
       link: https://discord.com/invite/KAM8ukUYF5
-    - icon: fontawesome/solid/envelope:
+    - icon: fontawesome/solid/envelope
       link: mailto:contact@owntech.org
   images:
     width: 300
