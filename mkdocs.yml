@@ -162,7 +162,7 @@ nav:
             - UART: powerAPI/classUartHAL.md
             - VERSION: powerAPI/classVersionHAL.md
         - TWIST API: powerAPI/classTwistAPI.md
-        - Data API: powerAPI/classDataAPI.md
+        - Data API: core/docs/dataAPI.md
         - Task API: core/docs/scheduling.md
         - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
