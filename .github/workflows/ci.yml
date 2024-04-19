@@ -30,7 +30,7 @@ jobs:
           path: docs/bootloader
           sparse-checkout: |
             docs/getting_started.md
-            docs/*.svg
+            docs/images
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
