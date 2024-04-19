@@ -29,7 +29,8 @@ jobs:
           ref: docs
           path: docs/bootloader
           sparse-checkout: |
-            docs
+            docs/getting_started.md
+            docs/*.svg
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
@@ -42,6 +43,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/examples
+          ref: docs
           path: docs/examples
 
       # - name: Checkout OwnTech Twist repo
