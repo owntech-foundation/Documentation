@@ -141,13 +141,12 @@ nav:
                 - AC client server: examples/TWIST/Microgrid/AC_client_server/README.md
                 - AC peer to peer: examples/TWIST/Microgrid/AC_peer_to_peer/README.md
                 - DC client server: examples/TWIST/Microgrid/DC_client_server/README.md
-                - DC peer to peer: examples/TWIST/Microgrid/DC_peer_to_peer/README.md
                 - DC droop: examples/TWIST/Microgrid/DC_droop/README.md
             - DC AC topology examples:
                 - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
-        - Home: core/docs/powerAPI/
+        - Home: core/docs/powerAPI.md
         - ADC: core/docs/adc.md
         - PWM: core/docs/pwm.md
         - Bootloader: bootloader/docs/getting_started.md
