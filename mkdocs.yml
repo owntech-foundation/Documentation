@@ -117,6 +117,7 @@ nav:
           - Open loop: Matlab/docs/open_loop_buck.md
           - Closed loop: Matlab/docs/closed_loop_buck.md
     - Examples:
+        - Home: examples/docs/home.md
         - SPIN:
             - ADC:
                 - Software triggered measurement: examples/SPIN/ADC/adc_software_trigger/README.md
