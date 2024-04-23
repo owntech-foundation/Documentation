@@ -152,6 +152,7 @@ nav:
         - Home: core/docs/powerAPI.md
         - ADC: core/docs/adc.md
         - PWM: core/docs/pwm.md
+        - TWIST: core/docs/twistAPI.md
         - Bootloader: bootloader/docs/getting_started.md
         - SPIN API:
             - Class: powerAPI/classSpinAPI.md
