@@ -150,22 +150,19 @@ nav:
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
     - Power API:
         - Home: core/docs/powerAPI.md
-        - ADC: core/docs/adc.md
-        - PWM: core/docs/pwm.md
-        - TWIST: core/docs/twistAPI.md
         - Bootloader: bootloader/docs/getting_started.md
         - SPIN API:
             - Class: powerAPI/classSpinAPI.md
-            - ADC: powerAPI/classAdcHAL.md
+            - ADC: core/docs/adc.md
             - COMP: powerAPI/classCompHAL.md
             - DAC: powerAPI/classDacHAL.md
             - GPIO: powerAPI/classGpioHAL.md
             - LED: powerAPI/classLedHAL.md
-            - PWM: powerAPI/classPwmHAL.md
+            - PWM: core/docs/pwm.md
             - TIMER: powerAPI/classTimerHAL.md
             - UART: powerAPI/classUartHAL.md
             - VERSION: powerAPI/classVersionHAL.md
-        - TWIST API: powerAPI/classTwistAPI.md
+        - TWIST API: core/docs/twistAPI.md
         - Data API: core/docs/dataAPI.md
         - Task API: core/docs/scheduling.md
         - Communication API:
