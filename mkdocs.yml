@@ -155,7 +155,7 @@ nav:
             - Class: powerAPI/classSpinAPI.md
             - ADC: core/docs/adc.md
             - COMP: powerAPI/classCompHAL.md
-            - DAC: powerAPI/classDacHAL.md
+            - DAC: core/docs/dac.md
             - GPIO: powerAPI/classGpioHAL.md
             - LED: powerAPI/classLedHAL.md
             - PWM: core/docs/pwm.md
