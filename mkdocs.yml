@@ -156,7 +156,7 @@ nav:
             - ADC: core/docs/adc.md
             - COMP: powerAPI/classCompHAL.md
             - DAC: core/docs/dac.md
-            - GPIO: powerAPI/classGpioHAL.md
+            - GPIO: core/docs/gpio.md
             - LED: powerAPI/classLedHAL.md
             - PWM: core/docs/pwm.md
             - TIMER: powerAPI/classTimerHAL.md
