@@ -75,6 +75,11 @@ plugins:
             SHOW_NAMESPACES: False
             OPTIMIZE_OUTPUT_FOR_C: True
 
+        # OwnModels: # name of project must be alphanumeric + numbers (without spaces)
+        #   src-dirs: docs/OwnModels/ # path to source code (support multiple paths separated by space) => INPUT
+        #   full-doc: True # if you want to generate full documentation
+
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -208,6 +213,11 @@ nav:
         - First compilation: Matlab/docs/first_compilation_with_matlab.md
         - Open loop: Matlab/docs/open_loop_buck.md
         - Closed loop: Matlab/docs/closed_loop_buck.md
+
+    - OwnModels:
+        - Getting started with PLECS: OwnModels/docs/getting_started.md
+        - First example: OwnModels/docs/first_example.md
+
 
     # - Hardware:
     #     - TWIST: twist/docs/getting_started.md
