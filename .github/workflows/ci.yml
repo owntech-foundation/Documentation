@@ -63,7 +63,7 @@ jobs:
           sparse-checkout: |
             docs
 
-      - name: Checkout OwnTech Matlab repo
+      - name: Checkout OwnTech OwnModels repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/OwnModels
