@@ -216,7 +216,8 @@ nav:
 
     - OwnModels:
         - Getting started with PLECS: OwnModels/docs/getting_started.md
-        - First example: OwnModels/docs/first_example.md
+        - Open loop example: OwnModels/docs/first_example.md
+        - Voltage mode example: OwnModels/docs/voltage_mode_simulation.md
 
 
     # - Hardware:
