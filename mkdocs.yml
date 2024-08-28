@@ -18,9 +18,6 @@ extra:
       - manage
   version:
       provider: mike
-      default:
-        - stable
-        - development
   ownplot:
     version: 0.6.1
   social:
