@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 #ifndef PWMHAL_H_
@@ -40,101 +40,93 @@
 #include "adc.h"
 #include "hrtim_enum.h"
 
-
 typedef enum
 {
-    buck,
-    boost
+     buck,
+     boost
 } leg_operation_t;
 
 typedef enum
 {
-    unipolar,
-    bipolar
+     unipolar,
+     bipolar
 } inverter_modulation_t;
-
-
 
 class PwmHAL
 {
 public:
-    //HRTIM configuration
+     // HRTIM configuration
 
-    void initUnit(hrtim_tu_number_t pwmX);
+     void initUnit(hrtim_tu_number_t pwmX);
 
-    void startDualOutput(hrtim_tu_number_t pwmX);
+     void startDualOutput(hrtim_tu_number_t pwmX);
 
+     void stopDualOutput(hrtim_tu_number_t pwmX);
 
-    void stopDualOutput(hrtim_tu_number_t pwmX);
+     void startSingleOutput(hrtim_tu_number_t tu, hrtim_output_number_t output);
 
+     void stopSingleOutput(hrtim_tu_number_t tu, hrtim_output_number_t output);
 
-    void startSingleOutput(hrtim_tu_number_t tu, hrtim_output_number_t output);
+     void setModulation(hrtim_tu_number_t pwmX, hrtim_cnt_t modulation);
 
-    void stopSingleOutput(hrtim_tu_number_t tu, hrtim_output_number_t output);
+     void setSwitchConvention(hrtim_tu_number_t pwmX, hrtim_switch_convention_t convention);
 
-    void setModulation(hrtim_tu_number_t pwmX, hrtim_cnt_t modulation);
+     void initFrequency(uint32_t init_frequency);
 
+     void initFrequency(uint32_t init_frequency, uint32_t minimal_frequency);
 
-    void setSwitchConvention(hrtim_tu_number_t pwmX, hrtim_switch_convention_t convention);
+     void setDeadTime(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns);
 
-    void setFrequency(uint32_t value);
+     void setDutyCycle(hrtim_tu_number_t pwmX, float32_t duty_cycle);
 
-    void setDeadTime(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns);
+     void setPhaseShift(hrtim_tu_number_t pwmX, int16_t shift);
 
-    void setDutyCycle(hrtim_tu_number_t pwmX, float32_t duty_cycle);
+     void setMode(hrtim_tu_number_t pwmX, hrtim_pwm_mode_t mode);
 
-    void setPhaseShift(hrtim_tu_number_t pwmX, int16_t shift);
+     hrtim_pwm_mode_t getMode(hrtim_tu_number_t pwmX);
 
-    void setMode(hrtim_tu_number_t pwmX, hrtim_pwm_mode_t mode);
+     void setEev(hrtim_tu_number_t pwmX, hrtim_external_trigger_t eev);
 
-    hrtim_pwm_mode_t getMode(hrtim_tu_number_t pwmX);
+     hrtim_external_trigger_t getEev(hrtim_tu_number_t pwmX);
 
-    void setEev(hrtim_tu_number_t pwmX, hrtim_external_trigger_t eev);
+     hrtim_cnt_t getModulation(hrtim_tu_number_t pwmX);
 
-    hrtim_external_trigger_t getEev(hrtim_tu_number_t pwmX);
+     hrtim_switch_convention_t getSwitchConvention(hrtim_tu_number_t pwmX);
 
-    hrtim_cnt_t getModulation(hrtim_tu_number_t pwmX);
+     uint16_t getPeriod(hrtim_tu_number_t pwmX);
 
-    hrtim_switch_convention_t getSwitchConvention(hrtim_tu_number_t pwmX);
+     void setAdcTriggerPostScaler(hrtim_tu_number_t pwmX, uint32_t ps_ratio);
 
-    uint16_t getPeriod(hrtim_tu_number_t pwmX);
+     void setAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
 
-    void setAdcTriggerPostScaler(hrtim_tu_number_t pwmX, uint32_t ps_ratio);
+     hrtim_adc_trigger_t getAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
 
+     void enableAdcTrigger(hrtim_tu_number_t tu_number);
 
-    void setAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
+     void disableAdcTrigger(hrtim_tu_number_t tu_number);
 
+     void setAdcTriggerInstant(hrtim_tu_number_t pwmX, float32_t trig_val);
 
-    hrtim_adc_trigger_t getAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
+     void setAdcEdgeTrigger(hrtim_tu_number_t pwmX, hrtim_adc_edgetrigger_t adc_edge_trigger);
 
-    void enableAdcTrigger(hrtim_tu_number_t tu_number);
+     hrtim_adc_edgetrigger_t getAdcEdgeTrigger(hrtim_tu_number_t pwmX);
 
-   void disableAdcTrigger(hrtim_tu_number_t tu_number);
+     void setAdcDecimation(hrtim_tu_number_t pwmX, uint32_t decimation);
 
-    void setAdcTriggerInstant(hrtim_tu_number_t pwmX, float32_t trig_val);
+     void disablePeriodEvnt(hrtim_tu_t PWM_tu);
 
-    void setAdcEdgeTrigger(hrtim_tu_number_t pwmX, hrtim_adc_edgetrigger_t adc_edge_trigger);
+     void setPeriodEvntRep(hrtim_tu_t PWM_tu, uint32_t repetition);
 
-    hrtim_adc_edgetrigger_t getAdcEdgeTrigger(hrtim_tu_number_t pwmX);
+     uint32_t getPeriodEvntRep(hrtim_tu_t PWM_tu);
 
-    void setAdcDecimation(hrtim_tu_number_t pwmX,  uint32_t decimation);
+     void configurePeriodEvnt(hrtim_tu_t PWM_tu, uint32_t repetition, hrtim_callback_t callback);
 
-    void disablePeriodEvnt(hrtim_tu_t PWM_tu);
+     void enablePeriodEvnt(hrtim_tu_t PWM_tu);
 
-    void setPeriodEvntRep(hrtim_tu_t PWM_tu, uint32_t repetition);
+     uint32_t getPeriodUs(hrtim_tu_number_t pwmX);
 
-    uint32_t getPeriodEvntRep(hrtim_tu_t PWM_tu);
-
-    void configurePeriodEvnt(hrtim_tu_t PWM_tu, uint32_t repetition, hrtim_callback_t callback);
-
-    void enablePeriodEvnt(hrtim_tu_t PWM_tu);
-
-    uint32_t getPeriodUs(hrtim_tu_number_t pwmX);
-
-
+     void setFrequency(uint32_t frequency_update);
 };
-
-
 
 #endif // PWMHAL_H_
 ```

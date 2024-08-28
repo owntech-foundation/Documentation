@@ -74,6 +74,7 @@
 |  void | [**hrtim\_adc\_trigger\_dis**](#function-hrtim_adc_trigger_dis) (hrtim\_tu\_number\_t tu\_number) <br>_Disbables a ADCx trigger event._  |
 |  void | [**hrtim\_adc\_trigger\_en**](#function-hrtim_adc_trigger_en) (hrtim\_tu\_number\_t tu\_number) <br>_Configures and enables an ADC trigger event._  |
 |  void | [**hrtim\_adc\_trigger\_set\_postscaler**](#function-hrtim_adc_trigger_set_postscaler) (hrtim\_tu\_number\_t tu\_number, uint32\_t ps\_ratio) <br>_Sets the HRTIM event postsaler. Postscaler ratio indicates how many potential events will be ignored between two events which are effectively generated._  |
+|  void | [**hrtim\_change\_frequency**](#function-hrtim_change_frequency) (uint32\_t new\_frequency) <br>_Change the frequency/period after it has been initialized._  |
 |  void | [**hrtim\_cmpl\_pwm\_out1**](#function-hrtim_cmpl_pwm_out1) (hrtim\_tu\_number\_t tu\_number) <br>_Activates OUT 1 (switch H) with a given switching convention._  |
 |  void | [**hrtim\_cmpl\_pwm\_out2**](#function-hrtim_cmpl_pwm_out2) (hrtim\_tu\_number\_t tu\_number) <br>_Activates OUT 2 (switch L) with a given switching convention._  |
 |  void | [**hrtim\_cnt\_dis**](#function-hrtim_cnt_dis) (hrtim\_tu\_number\_t tu\_number) <br>_Disables a timing unit counter._  |
@@ -83,7 +84,7 @@
 |  void | [**hrtim\_duty\_cycle\_set**](#function-hrtim_duty_cycle_set) (hrtim\_tu\_number\_t tu\_number, uint16\_t value) <br>_Updates the duty cycle of a timing unit._  |
 |  hrtim\_external\_trigger\_t | [**hrtim\_eev\_get**](#function-hrtim_eev_get) (hrtim\_tu\_number\_t tu\_number) <br>_Returns the external event trigger used in current mode._  |
 |  void | [**hrtim\_eev\_set**](#function-hrtim_eev_set) (hrtim\_tu\_number\_t tu\_number, hrtim\_external\_trigger\_t eev) <br>_Sets the external event used in current mode for a timing unit._  |
-|  void | [**hrtim\_frequency\_set**](#function-hrtim_frequency_set) (uint32\_t value) <br>_Sets the period of a given timing unit._  |
+|  void | [**hrtim\_frequency\_set**](#function-hrtim_frequency_set) (uint32\_t frequency\_set, uint32\_t frequency\_min) <br>_Sets the period of a given timing unit._  |
 |  int | [**hrtim\_get\_apb2\_clock**](#function-hrtim_get_apb2_clock) () <br>_Gets the APB2 clock._  |
 |  hrtim\_cnt\_t | [**hrtim\_get\_modulation**](#function-hrtim_get_modulation) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the switching convention of a given timing unit._  |
 |  hrtim\_tu\_ON\_OFF\_t | [**hrtim\_get\_status**](#function-hrtim_get_status) (hrtim\_tu\_number\_t tu\_number) <br>_Returns if the timer was initialized with default value or not._  |
@@ -639,6 +640,40 @@ void hrtim_adc_trigger_set_postscaler (
 
 
 
+### function hrtim\_change\_frequency 
+
+_Change the frequency/period after it has been initialized._ 
+```C++
+void hrtim_change_frequency (
+    uint32_t new_frequency
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `new_frequency` The new frequency in Hz 
+
+
+
+**Warning:**
+
+the new frequency can't be inferior to the the one set in the initialization step 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function hrtim\_cmpl\_pwm\_out1 
 
 _Activates OUT 1 (switch H) with a given switching convention._ 
@@ -981,7 +1016,8 @@ void hrtim_eev_set (
 _Sets the period of a given timing unit._ 
 ```C++
 void hrtim_frequency_set (
-    uint32_t value
+    uint32_t frequency_set,
+    uint32_t frequency_min
 ) 
 ```
 

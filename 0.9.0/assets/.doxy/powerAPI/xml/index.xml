@@ -92,6 +92,10 @@
     <member refid="classDataAPI_1a25fdfec31e1ff0f57dd9efd269a896e3" kind="function"><name>getLatest</name></member>
     <member refid="classDataAPI_1a4e86c7e940a187d04c88b96aafb78bf3" kind="function"><name>convert</name></member>
     <member refid="classDataAPI_1a26f5b94ff35f8263153bbb92a14a6682" kind="function"><name>setParameters</name></member>
+    <member refid="classDataAPI_1aef69385146e128a353b0f88618464339" kind="function"><name>retrieveStoredParameterValue</name></member>
+    <member refid="classDataAPI_1a8bddef1811f64e5ad2d2256c8e1febae" kind="function"><name>retrieveStoredConversionType</name></member>
+    <member refid="classDataAPI_1ab21994d514ab12bc445145db9c2bc415" kind="function"><name>storeParametersInMemory</name></member>
+    <member refid="classDataAPI_1a83894ad35bb7fee56cde2c4cf9de424c" kind="function"><name>retrieveParametersFromMemory</name></member>
     <member refid="classDataAPI_1a4f873db07dbf3cb714bcf8e98dd69867" kind="function"><name>setTwistChannelsUserCalibrationFactors</name></member>
     <member refid="classDataAPI_1afa13db051b8efed2cab77c02e8d201ea" kind="function"><name>enableAcquisition</name></member>
     <member refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" kind="function"><name>start</name></member>
@@ -105,6 +109,10 @@
     <member refid="classDataAPI_1accd6afe6fcd2d6faba59aaa10a73a443" kind="function"><name>getLatest</name></member>
     <member refid="classDataAPI_1af061686467b62f029f7037e753c88b80" kind="function"><name>convert</name></member>
     <member refid="classDataAPI_1ab6d39f30efb71ff028ade458ff368e4c" kind="function"><name>setParameters</name></member>
+    <member refid="classDataAPI_1a95cc5c8937f01c30d2c3b5b1d633ccf7" kind="function"><name>retrieveStoredParameterValue</name></member>
+    <member refid="classDataAPI_1ac354cb785b7ddf564c2b5ad0d8fcbb8d" kind="function"><name>retrieveStoredConversionType</name></member>
+    <member refid="classDataAPI_1a2a458ce91e0213377d8fc0524d3a8e85" kind="function"><name>storeParametersInMemory</name></member>
+    <member refid="classDataAPI_1afd8651ac8b9d724ab897e3e663b0c363" kind="function"><name>retrieveParametersFromMemory</name></member>
     <member refid="classDataAPI_1a78062804a51341b4520e80eb18a48539" kind="function"><name>enableChannel</name></member>
     <member refid="classDataAPI_1a700139e96b08d9b843f70f286a656379" kind="function"><name>getChannelRawValues</name></member>
     <member refid="classDataAPI_1a3fc1988f5b640d2f611ab80628a8b863" kind="function"><name>peekChannel</name></member>
@@ -167,7 +175,8 @@
     <member refid="classPwmHAL_1af87a7e0c7647bee04c2401cd404d779e" kind="function"><name>stopSingleOutput</name></member>
     <member refid="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" kind="function"><name>setModulation</name></member>
     <member refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" kind="function"><name>setSwitchConvention</name></member>
-    <member refid="classPwmHAL_1a1e0da4d5f551a9b1b8aa1fe13ecb51e4" kind="function"><name>setFrequency</name></member>
+    <member refid="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" kind="function"><name>initFrequency</name></member>
+    <member refid="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" kind="function"><name>initFrequency</name></member>
     <member refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kind="function"><name>setDeadTime</name></member>
     <member refid="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" kind="function"><name>setDutyCycle</name></member>
     <member refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kind="function"><name>setPhaseShift</name></member>
@@ -193,6 +202,7 @@
     <member refid="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" kind="function"><name>configurePeriodEvnt</name></member>
     <member refid="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" kind="function"><name>enablePeriodEvnt</name></member>
     <member refid="classPwmHAL_1a116866358e313d5425d5510ee4488df7" kind="function"><name>getPeriodUs</name></member>
+    <member refid="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" kind="function"><name>setFrequency</name></member>
   </compound>
   <compound refid="classRs485Communication" kind="class"><name>Rs485Communication</name>
     <member refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" kind="function"><name>configure</name></member>
@@ -291,9 +301,13 @@
     <member refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kind="function"><name>setLegDutyCycle</name></member>
     <member refid="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" kind="function"><name>setAllDutyCycle</name></member>
     <member refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kind="function"><name>startLeg</name></member>
+    <member refid="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" kind="function"><name>connectLegCapacitor</name></member>
     <member refid="classTwistAPI_1ab42e4f3dc7452a845fb810112e127139" kind="function"><name>startAll</name></member>
+    <member refid="classTwistAPI_1a1a3d88e55e5dc4b73dcdc585caad9e3b" kind="function"><name>connectAllCapacitor</name></member>
     <member refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kind="function"><name>stopLeg</name></member>
+    <member refid="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" kind="function"><name>disconnectLegCapacitor</name></member>
     <member refid="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" kind="function"><name>stopAll</name></member>
+    <member refid="classTwistAPI_1a370a51d44afb2088476449f53f8ad575" kind="function"><name>disconnectAllCapacitor</name></member>
     <member refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kind="function"><name>setLegTriggerValue</name></member>
     <member refid="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" kind="function"><name>setAllTriggerValue</name></member>
     <member refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kind="function"><name>setLegPhaseShift</name></member>
@@ -528,6 +542,9 @@
     <member refid="DataAPI_8cpp_1adb0d8045416654c1cd036832f3374138" kind="variable"><name>data</name></member>
   </compound>
   <compound refid="DataAPI_8h" kind="file"><name>DataAPI.h</name>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56" kind="enum"><name>parameter_t</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a5fdf95beef901fba4bdb3ac7e7668773" kind="enumvalue"><name>gain</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a330e576ee3e552e8f2f3f0056d68530b" kind="enumvalue"><name>offset</name></member>
     <member refid="DataAPI_8h_1a30e77e0b6fd428a0cceed4edb1ddbd20" kind="enum"><name>channel_t</name></member>
     <member refid="DataAPI_8h_1a30e77e0b6fd428a0cceed4edb1ddbd20a95a9f4594fca644bea2ef0243f8dfb27" kind="enumvalue"><name>UNDEFINED_CHANNEL</name></member>
     <member refid="DataAPI_8h_1a30e77e0b6fd428a0cceed4edb1ddbd20a4019476b139508bcdee7741eb5fecf96" kind="enumvalue"><name>DT_FOREACH_STATUS_OKAY</name></member>
@@ -583,7 +600,7 @@
     <member refid="hrtim_8h_1afc65f5b375f47305d116b4663a02821f" kind="function"><name>hrtim_get_switch_convention</name></member>
     <member refid="hrtim_8h_1acd62d83382ae3c19848034b8ba21fe00" kind="function"><name>hrtim_cmpl_pwm_out1</name></member>
     <member refid="hrtim_8h_1a16a347bd8643190ec474a9caf6912b15" kind="function"><name>hrtim_cmpl_pwm_out2</name></member>
-    <member refid="hrtim_8h_1a47c356bcbfc3563a69ceea64990c293e" kind="function"><name>hrtim_frequency_set</name></member>
+    <member refid="hrtim_8h_1a4545279553facff6316ee64d2117b0c6" kind="function"><name>hrtim_frequency_set</name></member>
     <member refid="hrtim_8h_1ab6e465c9014bfc4b81cff2726827ae9b" kind="function"><name>hrtim_period_get</name></member>
     <member refid="hrtim_8h_1ade0093fd39a6279114c47358df1fb6d2" kind="function"><name>hrtim_period_Master_get</name></member>
     <member refid="hrtim_8h_1a7e73e86c7dc6a31e980263d4f7a3521d" kind="function"><name>hrtim_period_get_us</name></member>
@@ -615,6 +632,7 @@
     <member refid="hrtim_8h_1aca88caf294365cb56e9ae0ea0359d6c0" kind="function"><name>hrtim_adc_triger_get</name></member>
     <member refid="hrtim_8h_1a20ef1290f7ec12dbfd0468ab9d6f8915" kind="function"><name>hrtim_eev_set</name></member>
     <member refid="hrtim_8h_1ad6eeb07361ae6b0b9965d56bae228b07" kind="function"><name>hrtim_eev_get</name></member>
+    <member refid="hrtim_8h_1a9630ccd98dc0e5c73c09297e40f90156" kind="function"><name>hrtim_change_frequency</name></member>
   </compound>
   <compound refid="hrtim__enum_8h" kind="file"><name>hrtim_enum.h</name>
     <member refid="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96" kind="enum"><name>hrtim_tu_t</name></member>
@@ -755,6 +773,7 @@
     <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214" kind="enum"><name>twist_version_t</name></member>
     <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214a9bc624d7dba59eb98ffcc31cd9dc4a1e" kind="enumvalue"><name>shield_TWIST_V1_2</name></member>
     <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214a5020ee0f1fb344dddcf755a9fccb3c6d" kind="enumvalue"><name>shield_TWIST_V1_3</name></member>
+    <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214ad19c718b2895010691663b2858a7046c" kind="enumvalue"><name>shield_TWIST_V1_4</name></member>
     <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214aadbebf2f318cbba0bda27a73a71ec2ff" kind="enumvalue"><name>shield_ownverter</name></member>
     <member refid="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214a711dc7df5b30d57443327b66627fd68c" kind="enumvalue"><name>shield_other</name></member>
     <member refid="TwistAPI_8h_1a37256dfec96d7353164b072c03fd9d30" kind="variable"><name>twist</name></member>

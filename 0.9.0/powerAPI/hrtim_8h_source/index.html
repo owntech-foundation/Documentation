@@ -3799,7 +3799,7 @@
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cm"> *   You should have received a copy of the GNU Lesser General Public License</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="cm"> *   along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cm"> *</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cm"> * SPDX-License-Identifier: LGLPV2.1</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cm"> * SPDX-License-Identifier: LGPL-2.1</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cm"> */</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="cm">/*</span>
@@ -3876,7 +3876,7 @@
 <a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>
 <a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="kt">void</span><span class="w"> </span><span class="nf">hrtim_cmpl_pwm_out2</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">);</span>
 <a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>
-<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="kt">void</span><span class="w"> </span><span class="nf">hrtim_frequency_set</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="kt">void</span><span class="w"> </span><span class="nf">hrtim_frequency_set</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_set</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_min</span><span class="p">);</span>
 <a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
 <a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">hrtim_period_get</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">);</span>
 <a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>
@@ -3940,11 +3940,13 @@
 <a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>
 <a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="nf">hrtim_eev_get</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">);</span>
 <a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>
-<a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a><span class="cp">#ifdef __cplusplus</span>
-<a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a><span class="p">}</span>
-<a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a><span class="cp">#endif</span>
-<a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>
-<a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a><span class="cp">#endif </span><span class="c1">// HRTIM_H_</span>
+<a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a><span class="kt">void</span><span class="w"> </span><span class="nf">hrtim_change_frequency</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">new_frequency</span><span class="p">);</span>
+<a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>
+<a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a><span class="cp">#ifdef __cplusplus</span>
+<a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a><span class="p">}</span>
+<a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a><span class="cp">#endif</span>
+<a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>
+<a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a><span class="cp">#endif </span><span class="c1">// HRTIM_H_</span>
 </code></pre></div>
 
 

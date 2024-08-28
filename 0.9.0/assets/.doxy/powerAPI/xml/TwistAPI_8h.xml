@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="44" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="45" bodyend="47"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="39" bodyend="41"/>
       </memberdef>
       <memberdef kind="enum" id="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214" prot="public" static="no" strong="no">
         <type></type>
@@ -36,6 +36,13 @@
         </enumvalue>
         <enumvalue id="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214a5020ee0f1fb344dddcf755a9fccb3c6d" prot="public">
           <name>shield_TWIST_V1_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="TwistAPI_8h_1ae85f338c1096963810fdc26558b35214ad19c718b2895010691663b2858a7046c" prot="public">
+          <name>shield_TWIST_V1_4</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -61,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="50" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="51" bodyend="56"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="44" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="45" bodyend="51"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -81,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="284" column="17" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" declline="284" declcolumn="17"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="299" column="17" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" declline="299" declcolumn="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -105,7 +112,7 @@
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POWER_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -115,93 +122,92 @@
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;arm_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hrtim_enum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG1_CAPA_DGND<sp/>PC6</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG2_CAPA_DGND<sp/>PB7</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG1_DRIVER_SWITCH<sp/>PC12</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG2_DRIVER_SWITCH<sp/>PC13</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG_TOKEN(node_id)<sp/>DT_STRING_TOKEN(node_id,<sp/>leg_name),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEG_TOKEN(node_id)<sp/>DT_STRING_TOKEN(node_id,<sp/>leg_name),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>All<sp/>the<sp/>leg<sp/>with<sp/>okay<sp/>status<sp/>in<sp/>the<sp/>device<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>DT_FOREACH_CHILD_STATUS_OKAY(DT_NODELABEL(power_shield),<sp/>LEG_TOKEN)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/>leg_t;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>All<sp/>the<sp/>leg<sp/>with<sp/>okay<sp/>status<sp/>in<sp/>the<sp/>device<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Enum<sp/>to<sp/>define<sp/>the<sp/>hardware<sp/>version<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DT_FOREACH_CHILD_STATUS_OKAY(DT_NODELABEL(power_shield),<sp/>LEG_TOKEN)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/>leg_t;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Enum<sp/>to<sp/>define<sp/>the<sp/>hardware<sp/>version<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_TWIST_V1_2<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_TWIST_V1_3,</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_ownverter,</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_other,</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">}<sp/>twist_version_t;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="classTwistAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTwistAPI" kindref="compound">TwistAPI</ref></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>twist_version_t<sp/>twist_version<sp/>=<sp/>shield_other;<sp/></highlight><highlight class="comment">//<sp/>shield<sp/>version</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>twist_init<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>if<sp/>shield<sp/>version<sp/>has<sp/>been<sp/>initalized<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_tu_number_t<sp/>spinNumberToTu(uint16_t<sp/>spin_number);<sp/></highlight><highlight class="comment">//<sp/>return<sp/>timing<sp/>unit<sp/>from<sp/>spin<sp/>pin<sp/>number</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ad3fa84f44fa2b15ba82acce14438b376" kindref="member">setVersion</ref>(twist_version_t<sp/>twist_ver);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg_t<sp/>leg,<sp/>hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" kindref="member">initAllMode</ref>(hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">setLegDutyCycle</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>duty_leg);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" kindref="member">setAllDutyCycle</ref>(float32_t<sp/>duty_all);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">startLeg</ref>(leg_t<sp/>leg);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_TWIST_V1_2<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_TWIST_V1_3,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_TWIST_V1_4,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_ownverter,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>shield_other,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/>twist_version_t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classTwistAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTwistAPI" kindref="compound">TwistAPI</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>twist_version_t<sp/>twist_version<sp/>=<sp/>shield_other;<sp/></highlight><highlight class="comment">//<sp/>shield<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>twist_init<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>if<sp/>shield<sp/>version<sp/>has<sp/>been<sp/>initalized<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_tu_number_t<sp/>spinNumberToTu(uint16_t<sp/>spin_number);<sp/></highlight><highlight class="comment">//<sp/>return<sp/>timing<sp/>unit<sp/>from<sp/>spin<sp/>pin<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ad3fa84f44fa2b15ba82acce14438b376" kindref="member">setVersion</ref>(twist_version_t<sp/>twist_ver);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg_t<sp/>leg,<sp/>hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" kindref="member">initAllMode</ref>(hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">setLegDutyCycle</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>duty_leg);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" kindref="member">setAllDutyCycle</ref>(float32_t<sp/>duty_all);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">startLeg</ref>(leg_t<sp/>leg);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" kindref="member">connectLegCapacitor</ref>(leg_t<sp/>leg);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab42e4f3dc7452a845fb810112e127139" kindref="member">startAll</ref>();</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">stopLeg</ref>(leg_t<sp/>leg);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" kindref="member">stopAll</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1a3d88e55e5dc4b73dcdc585caad9e3b" kindref="member">connectAllCapacitor</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">stopLeg</ref>(leg_t<sp/>leg);</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">setLegTriggerValue</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>trigger_value);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" kindref="member">setAllTriggerValue</ref>(float32_t<sp/>trigger_value);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">setLegPhaseShift</ref>(leg_t<sp/>leg,<sp/>int16_t<sp/>phase_shift);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8272b08f8716ceff4b3b2acaa20b16d6" kindref="member">setAllPhaseShift</ref>(int16_t<sp/>phase_shift);</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">setLegSlopeCompensation</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage);</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab4d97717a70c2e66cc5f08bb4ca44490" kindref="member">setAllSlopeCompensation</ref>(float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage);</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">setLegDeadTime</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt);</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ae68fdea676f7ef3d3045637bae97fba0" kindref="member">setAllDeadTime</ref>(uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt);</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">setLegAdcDecim</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>adc_decim);</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a092b1f640d3a83a4a6c4d67c45bddd79" kindref="member">setAllAdcDecim</ref>(uint16_t<sp/>adc_decim);</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">initLegBuck</ref>(leg_t<sp/>leg,<sp/>hrtim_pwm_mode_t<sp/>leg_mode<sp/>=<sp/>VOLTAGE_MODE);</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" kindref="member">initAllBuck</ref>(hrtim_pwm_mode_t<sp/>leg_mode<sp/>=<sp/>VOLTAGE_MODE);</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">initLegBoost</ref>(leg_t<sp/>leg);</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" kindref="member">initAllBoost</ref>();</highlight></codeline>
-<codeline lineno="280"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"></highlight></codeline>
-<codeline lineno="283"><highlight class="comment">//<sp/>Public<sp/>object<sp/>to<sp/>interact<sp/>with<sp/>the<sp/>class</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI" kindref="compound">TwistAPI</ref><sp/>twist;</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TWISTAPI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" kindref="member">disconnectLegCapacitor</ref>(leg_t<sp/>leg);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" kindref="member">stopAll</ref>();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a370a51d44afb2088476449f53f8ad575" kindref="member">disconnectAllCapacitor</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">setLegTriggerValue</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>trigger_value);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" kindref="member">setAllTriggerValue</ref>(float32_t<sp/>trigger_value);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">setLegPhaseShift</ref>(leg_t<sp/>leg,<sp/>int16_t<sp/>phase_shift);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8272b08f8716ceff4b3b2acaa20b16d6" kindref="member">setAllPhaseShift</ref>(int16_t<sp/>phase_shift);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">setLegSlopeCompensation</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab4d97717a70c2e66cc5f08bb4ca44490" kindref="member">setAllSlopeCompensation</ref>(float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">setLegDeadTime</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ae68fdea676f7ef3d3045637bae97fba0" kindref="member">setAllDeadTime</ref>(uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">setLegAdcDecim</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>adc_decim);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a092b1f640d3a83a4a6c4d67c45bddd79" kindref="member">setAllAdcDecim</ref>(uint16_t<sp/>adc_decim);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">initLegBuck</ref>(leg_t<sp/>leg,<sp/>hrtim_pwm_mode_t<sp/>leg_mode<sp/>=<sp/>VOLTAGE_MODE);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" kindref="member">initAllBuck</ref>(hrtim_pwm_mode_t<sp/>leg_mode<sp/>=<sp/>VOLTAGE_MODE);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">initLegBoost</ref>(leg_t<sp/>leg);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" kindref="member">initAllBoost</ref>();</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="comment">//<sp/>Public<sp/>object<sp/>to<sp/>interact<sp/>with<sp/>the<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI" kindref="compound">TwistAPI</ref><sp/>twist;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TWISTAPI_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h"/>
   </compounddef>

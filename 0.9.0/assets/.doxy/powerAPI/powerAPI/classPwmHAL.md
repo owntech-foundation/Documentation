@@ -66,6 +66,8 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  uint32\_t | [**getPeriodEvntRep**](#function-getperiodevntrep) (hrtim\_tu\_t PWM\_tu) <br>_This function returns the repetition counter value._  |
 |  uint32\_t | [**getPeriodUs**](#function-getperiodus) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period in µs of the selected timer._  |
 |  hrtim\_switch\_convention\_t | [**getSwitchConvention**](#function-getswitchconvention) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the switching convention of the selected timing unit._  |
+|  void | [**initFrequency**](#function-initfrequency-12) (uint32\_t init\_frequency) <br>_This function initialize the frequency._  |
+|  void | [**initFrequency**](#function-initfrequency-22) (uint32\_t init\_frequency, uint32\_t minimal\_frequency) <br>_This functions initialize the frequency and also sets the minimal reachable frequency._  |
 |  void | [**initUnit**](#function-initunit) (hrtim\_tu\_number\_t pwmX) <br>_This function initializes a timing unit._  |
 |  void | [**setAdcDecimation**](#function-setadcdecimation) (hrtim\_tu\_number\_t pwmX, uint32\_t decimation) <br>_This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger._  |
 |  void | [**setAdcEdgeTrigger**](#function-setadcedgetrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_edgetrigger\_t adc\_edge\_trigger) <br>_This function sets the adc trig rollover mode for the selected timer._  |
@@ -75,7 +77,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**setDeadTime**](#function-setdeadtime) (hrtim\_tu\_number\_t pwmX, uint16\_t rise\_ns, uint16\_t fall\_ns) <br>_This function sets the dead time for the selected timing unit._  |
 |  void | [**setDutyCycle**](#function-setdutycycle) (hrtim\_tu\_number\_t pwmX, float32\_t duty\_cycle) <br>_This function sets the duty cycle for the selected timing unit._  |
 |  void | [**setEev**](#function-seteev) (hrtim\_tu\_number\_t pwmX, hrtim\_external\_trigger\_t eev) <br>_This function sets external event linked to the timing unit essential for the current mode._  |
-|  void | [**setFrequency**](#function-setfrequency) (uint32\_t value) <br>_This function sets the frequency._  |
+|  void | [**setFrequency**](#function-setfrequency) (uint32\_t frequency\_update) <br>_Change the frequency/period after it has been initialized._  |
 |  void | [**setMode**](#function-setmode) (hrtim\_tu\_number\_t pwmX, hrtim\_pwm\_mode\_t mode) <br>_This function sets a special pwm mode for voltage or current mode._  |
 |  void | [**setModulation**](#function-setmodulation) (hrtim\_tu\_number\_t pwmX, hrtim\_cnt\_t modulation) <br>_This function sets the modulation mode for a given PWM unit._  |
 |  void | [**setPeriodEvntRep**](#function-setperiodevntrep) (hrtim\_tu\_t PWM\_tu, uint32\_t repetition) <br>_This function sets the repetition counter to ISR period._  |
@@ -585,6 +587,76 @@ PWMx1 (high side convention) or PWMx2 (low-side convention)
 
 
 
+### function initFrequency [1/2]
+
+_This function initialize the frequency._ 
+```C++
+void PwmHAL::initFrequency (
+    uint32_t init_frequency
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `init_frequency` frequency in Hz
+
+
+
+**Warning:**
+
+this function must be called BEFORE initialiazing any timing unit. the frequency initialized becomes the MINIMUM possible. use it BEFORE initialization of the timing unit. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function initFrequency [2/2]
+
+_This functions initialize the frequency and also sets the minimal reachable frequency._ 
+```C++
+void PwmHAL::initFrequency (
+    uint32_t init_frequency,
+    uint32_t minimal_frequency
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `init_frequency` frequency in Hz 
+* `minimal_frequency` desired minimal frequency in Hz
+
+
+
+**Warning:**
+
+this function must be called BEFORE initialiazing any timing unit 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function initUnit 
 
 _This function initializes a timing unit._ 
@@ -839,7 +911,7 @@ void PwmHAL::setDeadTime (
 
 **Warning:**
 
-use this function AFTER initializing the chosen timer 
+use this function BEFORE initializing the chosen timer 
 
 
 
@@ -918,10 +990,10 @@ this function must be called before initialiazing a timing unit
 
 ### function setFrequency 
 
-_This function sets the frequency._ 
+_Change the frequency/period after it has been initialized._ 
 ```C++
 void PwmHAL::setFrequency (
-    uint32_t value
+    uint32_t frequency_update
 ) 
 ```
 
@@ -932,13 +1004,13 @@ void PwmHAL::setFrequency (
 **Parameters:**
 
 
-* `value` frequency in Hz
+* `frequency_update` The new frequency in Hz 
 
 
 
 **Warning:**
 
-this function must be called BEFORE initialiazing any timing unit 
+The new frequency can't be inferior to the the one set in the initialization step Use it AFTER the initialization of the timing unit. 
 
 
 

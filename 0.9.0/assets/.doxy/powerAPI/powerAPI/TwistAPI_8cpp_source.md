@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 #include "TwistAPI.h"
@@ -77,13 +77,11 @@ void TwistAPI::setVersion(twist_version_t twist_ver)
 
 void TwistAPI::initLegMode(leg_t leg, hrtim_switch_convention_t leg_convention, hrtim_pwm_mode_t leg_mode)
 {
-
-    spin.pwm.setFrequency(timer_frequency); // Configure PWM frequency
+    spin.pwm.initFrequency(timer_frequency); // Configure PWM frequency
 
     spin.pwm.setModulation(spinNumberToTu(dt_pwm_pin[leg]), dt_modulation[leg]); // Set modulation
 
     spin.pwm.setAdcEdgeTrigger(spinNumberToTu(dt_pwm_pin[leg]), dt_edge_trigger[leg]); // Configure ADC rollover in center aligned mode
-
 
     if (leg_mode == CURRENT_MODE)
     {
@@ -129,15 +127,14 @@ void TwistAPI::initLegMode(leg_t leg, hrtim_switch_convention_t leg_convention, 
             spin.comp.initialize(1);
         }
     }
-    if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMA)
-        spin.gpio.configurePin(PC12, OUTPUT);
-    else if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMC)
-        spin.gpio.configurePin(PC13, OUTPUT);
-    else if (twist_version == shield_ownverter && spinNumberToTu(dt_pwm_pin[leg]) == PWME)
-        spin.gpio.configurePin(PB7, OUTPUT);
 
-    if (twist_init == false)
-        twist_init = true; // When a leg has been initialized, shield version should not be modified
+    for(uint8_t i = 0; i < dt_leg_count; i++)
+    {
+        if(dt_pin_driver[i] != 0) spin.gpio.configurePin(dt_pin_driver[i], OUTPUT);
+        if(dt_pin_capacitor[i] != 0) spin.gpio.configurePin(dt_pin_capacitor[i], OUTPUT);
+    }
+
+    if (twist_init == false) twist_init = true; // When a leg has been initialized, shield version should not be modified
 }
 
 void TwistAPI::initAllMode(hrtim_switch_convention_t leg_convention, hrtim_pwm_mode_t leg_mode)
@@ -173,18 +170,18 @@ void TwistAPI::setAllDutyCycle(float32_t duty_all)
 
 void TwistAPI::startLeg(leg_t leg)
 {
-    if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMA)
-        spin.gpio.setPin(PC12);
-    else if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMC)
-        spin.gpio.setPin(PC13);
-    else if (twist_version == shield_ownverter && spinNumberToTu(dt_pwm_pin[leg]) == PWME)
-        spin.gpio.setPin(PB7);
+    if(dt_pin_driver[leg] != 0) spin.gpio.setPin(dt_pin_driver[leg]);
 
     /* start PWM*/
     if (!dt_output1_inactive[leg])
         spin.pwm.startSingleOutput(spinNumberToTu(dt_pwm_pin[leg]), TIMING_OUTPUT1);
     if (!dt_output2_inactive[leg])
         spin.pwm.startSingleOutput(spinNumberToTu(dt_pwm_pin[leg]), TIMING_OUTPUT2);
+}
+
+void TwistAPI::connectLegCapacitor(leg_t leg)
+{
+    if(dt_pin_capacitor[leg] != 0) spin.gpio.setPin(dt_pin_capacitor[leg]);
 }
 
 void TwistAPI::startAll()
@@ -195,27 +192,40 @@ void TwistAPI::startAll()
     }
 }
 
+void TwistAPI::connectAllCapacitor()
+{
+    for (int8_t i = 0; i < dt_leg_count; i++)
+    {
+        connectLegCapacitor(static_cast<leg_t>(i));
+    }
+}
 
 void TwistAPI::stopLeg(leg_t leg)
 {
     /* Stop PWM */
     spin.pwm.stopDualOutput(spinNumberToTu(dt_pwm_pin[leg]));
 
-
-    if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMA)
-        spin.gpio.resetPin(PC12);
-    else if ((twist_version == shield_TWIST_V1_2 || twist_version == shield_ownverter || twist_version == shield_TWIST_V1_3) && spinNumberToTu(dt_pwm_pin[leg]) == PWMC)
-        spin.gpio.resetPin(PC13);
-    else if (twist_version == shield_ownverter && spinNumberToTu(dt_pwm_pin[leg]) == PWME)
-        spin.gpio.resetPin(PB7);
+    if(dt_pin_driver[leg] != 0) spin.gpio.resetPin(dt_pin_driver[leg]);
 }
 
+void TwistAPI::disconnectLegCapacitor(leg_t leg)
+{
+    if(dt_pin_capacitor[leg] != 0) spin.gpio.resetPin(dt_pin_capacitor[leg]);
+}
 
 void TwistAPI::stopAll()
 {
     for (int8_t i = 0; i < dt_leg_count; i++)
     {
         stopLeg(static_cast<leg_t>(i));
+    }
+}
+
+void TwistAPI::disconnectAllCapacitor()
+{
+    for (int8_t i = 0; i < dt_leg_count; i++)
+    {
+        disconnectLegCapacitor(static_cast<leg_t>(i));
     }
 }
 
@@ -233,7 +243,6 @@ void TwistAPI::setLegSlopeCompensation(leg_t leg, float32_t set_voltage, float32
         break;
     }
 }
-
 
 void TwistAPI::setAllSlopeCompensation(float32_t set_voltage, float32_t reset_voltage)
 {
@@ -297,7 +306,6 @@ void TwistAPI::setLegAdcDecim(leg_t leg, uint16_t adc_decim)
     spin.pwm.setAdcDecimation(spinNumberToTu(dt_pwm_pin[leg]), adc_decim);
 }
 
-
 void TwistAPI::setAllAdcDecim(uint16_t adc_decim)
 {
     for (int8_t i = 0; i < dt_leg_count; i++)
@@ -305,7 +313,6 @@ void TwistAPI::setAllAdcDecim(uint16_t adc_decim)
         setLegAdcDecim(static_cast<leg_t>(i), adc_decim);
     }
 }
-
 
 void TwistAPI::initLegBuck(leg_t leg, hrtim_pwm_mode_t leg_mode)
 {
@@ -322,7 +329,6 @@ void TwistAPI::initAllBuck(hrtim_pwm_mode_t leg_mode)
         initLegBuck(static_cast<leg_t>(i), leg_mode);
     }
 }
-
 
 void TwistAPI::initLegBoost(leg_t leg)
 {

@@ -117,6 +117,7 @@ enum leg_t {
 enum twist_version_t {
     shield_TWIST_V1_2 = 0,
     shield_TWIST_V1_3,
+    shield_TWIST_V1_4,
     shield_ownverter,
     shield_other
 };

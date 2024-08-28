@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="512" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="512" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="612" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="612" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a82af28cfe103ccc54621ecda804baf6d" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="513" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="513" bodyend="513"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="613" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="613" bodyend="613"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1aa256f9f332fb816b047a514a0fa11649" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="514" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="514" bodyend="514"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="614" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="614" bodyend="614"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1ae19ede93eb2655a763eeaf83ea0420a4" prot="private" static="no" mutable="no">
         <type>DispatchMethod_t</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="515" column="18" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="515" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="615" column="18" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="615" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a0d949a03948434ebfbfa3c7f5de23412" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="516" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="516" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="616" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="616" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="110" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="56" bodyend="61"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="121" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="56" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a9eeea7fbd0c0447a3a9da20b381bc855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="128" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="63" bodyend="81"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="139" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="63" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a1cd2d1dc2e78f05cbeb3b2e91e5b4e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="165" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="83" bodyend="87"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="176" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="83" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4c384884b21d4bac9ef5e1d2c90a5b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="184" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="89" bodyend="93"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="195" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="89" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a25fdfec31e1ff0f57dd9efd269a896e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="214" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="95" bodyend="99"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="225" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="95" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4e86c7e940a187d04c88b96aafb78bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -324,13 +324,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Converted value in the relevant unit. </para>
+<simplesect kind="return"><para>Converted value in the relevant unit. Returns -5000 if the channel is not active. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="228" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="101" bodyend="105"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="239" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="101" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a26f5b94ff35f8263153bbb92a14a6682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -385,7 +385,141 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="243" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="107" bodyend="111"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="254" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1aef69385146e128a353b0f88618464339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t DataAPI::retrieveStoredParameterValue</definition>
+        <argsstring>(channel_t channel, parameter_t parameter_name)</argsstring>
+        <name>retrieveStoredParameterValue</name>
+        <qualifiedname>DataAPI::retrieveStoredParameterValue</qualifiedname>
+        <param>
+          <type>channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>parameter_t</type>
+          <declname>parameter_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion parameteres for the chosen channel . </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to get a conversion parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Paramater to be retreived: <computeroutput>gain</computeroutput> or <computeroutput>offset</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="264" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1a8bddef1811f64e5ad2d2256c8e1febae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>conversion_type_t</type>
+        <definition>conversion_type_t DataAPI::retrieveStoredConversionType</definition>
+        <argsstring>(channel_t channel)</argsstring>
+        <name>retrieveStoredConversionType</name>
+        <qualifiedname>DataAPI::retrieveStoredConversionType</qualifiedname>
+        <param>
+          <type>channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion type for the chosen channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to get a conversion parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="273" column="19" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1ab21994d514ab12bc445145db9c2bc415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DataAPI::storeParametersInMemory</definition>
+        <argsstring>(channel_t channel)</argsstring>
+        <name>storeParametersInMemory</name>
+        <qualifiedname>DataAPI::storeParametersInMemory</qualifiedname>
+        <param>
+          <type>channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to write the gain and offset parameters of the board to is non-volatile memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function should be called after updating the parameters using setParameters.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to save the values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="283" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1a83894ad35bb7fee56cde2c4cf9de424c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DataAPI::retrieveParametersFromMemory</definition>
+        <argsstring>(channel_t channel)</argsstring>
+        <name>retrieveParametersFromMemory</name>
+        <qualifiedname>DataAPI::retrieveParametersFromMemory</qualifiedname>
+        <param>
+          <type>channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to read the gain and offset parameters of the board to is non-volatile memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to save the values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="290" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="126" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4f873db07dbf3cb714bcf8e98dd69867" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,13 +533,13 @@
         <detaileddescription>
 <para><simplesect kind="note"><para>This function requires Console to interact with the user. You must first call console_init() before calling this function.</para>
 </simplesect>
-<simplesect kind="note"><para>This function can&apos;t be called before the <emphasis>all</emphasis> Twist channels have been enabled (you can use <ref refid="classDataAPI_1a9eeea7fbd0c0447a3a9da20b381bc855" kindref="member">enableTwistDefaultChannels()</ref> for that purpose). The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task. </para>
+<simplesect kind="note"><para>This function can&apos;t be called before <emphasis>all</emphasis> Twist channels have been enabled (you can use <ref refid="classDataAPI_1a9eeea7fbd0c0447a3a9da20b381bc855" kindref="member">enableTwistDefaultChannels()</ref> for that purpose). The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="256" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="113" bodyend="116"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="304" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="138" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1afa13db051b8efed2cab77c02e8d201ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -452,7 +586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="275" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="124" bodyend="131"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="323" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="150" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4656e02f0227660869d5167f456fedfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -476,7 +610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="307" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="133" bodyend="162"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="355" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="159" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -502,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="322" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="164" bodyend="167"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="370" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="190" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1abb9623a77e9c1924413f39488814e8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -541,7 +675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="341" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="169" bodyend="172"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="389" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="195" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a1a359db888adafb5015c0f1fd338defe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DispatchMethod_t</type>
@@ -561,7 +695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="351" column="18" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="174" bodyend="177"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="399" column="18" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="200" bodyend="203"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa73130020e80ffb99f43201e317a53eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -592,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="364" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="179" bodyend="182"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="412" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="205" bodyend="208"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a091a1f05f90753af26f6a4eebf9329d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -623,7 +757,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="377" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="184" bodyend="189"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="425" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="210" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa9bb6640c01ae5bb199275921402c077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -686,7 +820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="419" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="191" bodyend="201"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="467" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="216" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a9df2eb63a9f7ef5096cc1b7cbc3ba07d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -731,7 +865,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="438" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="203" bodyend="212"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="486" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="228" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1accd6afe6fcd2d6faba59aaa10a73a443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -796,7 +930,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="469" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="214" bodyend="227"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="517" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="239" bodyend="252"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1af061686467b62f029f7037e753c88b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -847,13 +981,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Converted value in the relevant unit. </para>
+<simplesect kind="return"><para>Converted value in the relevant unit. If there is an error, returns -5000. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="484" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="229" bodyend="238"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="532" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="254" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ab6d39f30efb71ff028ade458ff368e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -920,7 +1054,179 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="500" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="240" bodyend="249"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="548" column="6" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="265" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1a95cc5c8937f01c30d2c3b5b1d633ccf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t DataAPI::retrieveStoredParameterValue</definition>
+        <argsstring>(uint8_t adc_num, uint8_t pin_num, parameter_t parameter_name)</argsstring>
+        <name>retrieveStoredParameterValue</name>
+        <qualifiedname>DataAPI::retrieveStoredParameterValue</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_num</declname>
+        </param>
+        <param>
+          <type>parameter_t</type>
+          <declname>parameter_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion parameteres for the chosen channel . </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to get a conversion parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Paramater to be retreived: <computeroutput>gain</computeroutput> or <computeroutput>offset</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the value of the parameter. Returns -5000 if the channel is not active. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="560" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="300" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1ac354cb785b7ddf564c2b5ad0d8fcbb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>conversion_type_t</type>
+        <definition>conversion_type_t DataAPI::retrieveStoredConversionType</definition>
+        <argsstring>(uint8_t adc_num, uint8_t pin_num)</argsstring>
+        <name>retrieveStoredConversionType</name>
+        <qualifiedname>DataAPI::retrieveStoredConversionType</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_num</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion type for the chosen channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield channel to get a conversion parameter.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the type of convertion of the given pin. Returns -5 if the channel is not active. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="571" column="19" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="312" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1a2a458ce91e0213377d8fc0524d3a8e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DataAPI::storeParametersInMemory</definition>
+        <argsstring>(uint8_t adc_num, uint8_t pin_num)</argsstring>
+        <name>storeParametersInMemory</name>
+        <qualifiedname>DataAPI::storeParametersInMemory</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_num</declname>
+        </param>
+        <briefdescription>
+<para>Store the currently configured conversion parameters of a given channel in NVS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pin_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SPIN pin number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if parameters were correcly stored, negative value if there was an error: -1: There was an error, -5000: Channel not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="584" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="277" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classDataAPI_1afd8651ac8b9d724ab897e3e663b0c363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DataAPI::retrieveParametersFromMemory</definition>
+        <argsstring>(uint8_t adc_num, uint8_t pin_num)</argsstring>
+        <name>retrieveParametersFromMemory</name>
+        <qualifiedname>DataAPI::retrieveParametersFromMemory</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_num</declname>
+        </param>
+        <briefdescription>
+<para>Retreived previously configured conversion parameters from NVS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pin_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SPIN pin number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn&apos;t match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel -5000: Channel not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="599" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="289" bodyend="298"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -944,7 +1250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="504" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="255" bodyend="279"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="604" column="8" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="329" bodyend="351"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a700139e96b08d9b843f70f286a656379" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -970,7 +1276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="505" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="281" bodyend="297"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="605" column="10" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="353" bodyend="369"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a3fc1988f5b640d2f611ab80628a8b863" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -992,7 +1298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="506" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="299" bodyend="319"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="606" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="371" bodyend="391"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aab5b1650cc520c70522d95cd6bffee03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -1019,7 +1325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="507" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="321" bodyend="381"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="607" column="11" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="393" bodyend="453"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ab23f35e543e572e06ccf36e3e69dda84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1041,7 +1347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="508" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="383" bodyend="392"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="608" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="455" bodyend="464"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a206e7b16cd418eee34f6d709d7854104" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1063,14 +1369,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="509" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="394" bodyend="550"/>
+        <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="609" column="9" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.cpp" bodystart="466" bodyend="622"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="91" column="1" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="92" bodyend="518"/>
+    <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" line="102" column="1" bodyfile="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/DataAPI.h" bodystart="103" bodyend="618"/>
     <listofallmembers>
       <member refid="classDataAPI_1a82af28cfe103ccc54621ecda804baf6d" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>channels_ranks</name></member>
       <member refid="classDataAPI_1a4e86c7e940a187d04c88b96aafb78bf3" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>convert</name></member>
@@ -1095,6 +1401,12 @@
       <member refid="classDataAPI_1a9df2eb63a9f7ef5096cc1b7cbc3ba07d" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>peek</name></member>
       <member refid="classDataAPI_1a3fc1988f5b640d2f611ab80628a8b863" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>peekChannel</name></member>
       <member refid="classDataAPI_1a0d949a03948434ebfbfa3c7f5de23412" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>repetition_count_between_dispatches</name></member>
+      <member refid="classDataAPI_1a83894ad35bb7fee56cde2c4cf9de424c" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveParametersFromMemory</name></member>
+      <member refid="classDataAPI_1afd8651ac8b9d724ab897e3e663b0c363" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveParametersFromMemory</name></member>
+      <member refid="classDataAPI_1a8bddef1811f64e5ad2d2256c8e1febae" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveStoredConversionType</name></member>
+      <member refid="classDataAPI_1ac354cb785b7ddf564c2b5ad0d8fcbb8d" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveStoredConversionType</name></member>
+      <member refid="classDataAPI_1aef69385146e128a353b0f88618464339" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveStoredParameterValue</name></member>
+      <member refid="classDataAPI_1a95cc5c8937f01c30d2c3b5b1d633ccf7" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>retrieveStoredParameterValue</name></member>
       <member refid="classDataAPI_1abb9623a77e9c1924413f39488814e8b8" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>setDispatchMethod</name></member>
       <member refid="classDataAPI_1a26f5b94ff35f8263153bbb92a14a6682" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>setParameters</name></member>
       <member refid="classDataAPI_1ab6d39f30efb71ff028ade458ff368e4c" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>setParameters</name></member>
@@ -1102,6 +1414,8 @@
       <member refid="classDataAPI_1a4f873db07dbf3cb714bcf8e98dd69867" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>setTwistChannelsUserCalibrationFactors</name></member>
       <member refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>start</name></member>
       <member refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>started</name></member>
+      <member refid="classDataAPI_1ab21994d514ab12bc445145db9c2bc415" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>storeParametersInMemory</name></member>
+      <member refid="classDataAPI_1a2a458ce91e0213377d8fc0524d3a8e85" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>storeParametersInMemory</name></member>
       <member refid="classDataAPI_1a091a1f05f90753af26f6a4eebf9329d4" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>triggerAcquisition</name></member>
     </listofallmembers>
   </compounddef>

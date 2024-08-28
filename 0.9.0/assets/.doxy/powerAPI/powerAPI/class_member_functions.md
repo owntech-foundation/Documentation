@@ -15,6 +15,8 @@
 * **configureCustom** ([**Rs485Communication**](classRs485Communication.md))
 * **createBackground** ([**TaskAPI**](classTaskAPI.md))
 * **createCritical** ([**TaskAPI**](classTaskAPI.md))
+* **connectAllCapacitor** ([**TwistAPI**](classTwistAPI.md))
+* **connectLegCapacitor** ([**TwistAPI**](classTwistAPI.md))
 
 
 ## d
@@ -22,6 +24,8 @@
 * **disableChannel** ([**AdcHAL**](classAdcHAL.md))
 * **disableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **disablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
+* **disconnectAllCapacitor** ([**TwistAPI**](classTwistAPI.md))
+* **disconnectLegCapacitor** ([**TwistAPI**](classTwistAPI.md))
 * **disableSafetyApi** ([**safety**](classsafety.md))
 
 
@@ -80,6 +84,7 @@
 * **init** ([**AnalogCommunication**](classAnalogCommunication.md))
 * **initialize** ([**CompHAL**](classCompHAL.md), [**LedHAL**](classLedHAL.md))
 * **initConstValue** ([**DacHAL**](classDacHAL.md))
+* **initFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initMaster** ([**SyncCommunication**](classSyncCommunication.md))
 * **initSlave** ([**SyncCommunication**](classSyncCommunication.md))
@@ -100,6 +105,9 @@
 
 ## r
 
+* **retrieveParametersFromMemory** ([**DataAPI**](classDataAPI.md))
+* **retrieveStoredConversionType** ([**DataAPI**](classDataAPI.md))
+* **retrieveStoredParameterValue** ([**DataAPI**](classDataAPI.md))
 * **readPin** ([**GpioHAL**](classGpioHAL.md))
 * **resetPin** ([**GpioHAL**](classGpioHAL.md))
 * **retrieveThreshold** ([**safety**](classsafety.md))
@@ -123,6 +131,7 @@
 * **setTwistChannelsUserCalibrationFactors** ([**DataAPI**](classDataAPI.md))
 * **start** ([**DataAPI**](classDataAPI.md))
 * **started** ([**DataAPI**](classDataAPI.md))
+* **storeParametersInMemory** ([**DataAPI**](classDataAPI.md))
 * **setPin** ([**GpioHAL**](classGpioHAL.md))
 * **setAdcDecimation** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcEdgeTrigger** ([**PwmHAL**](classPwmHAL.md))

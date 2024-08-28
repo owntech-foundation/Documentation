@@ -38,6 +38,7 @@
 | ---: | :--- |
 | enum  | [**DispatchMethod\_t**](#enum-dispatchmethod_t)  <br> |
 | enum  | [**channel\_t**](#enum-channel_t)  <br> |
+| enum uint8\_t | [**parameter\_t**](#enum-parameter_t)  <br> |
 
 
 
@@ -135,6 +136,22 @@ enum channel_t {
 
 
 <hr>
+
+
+
+### enum parameter\_t 
+
+```C++
+enum parameter_t {
+    gain = 1,
+    offset = 2
+};
+```
+
+
+
+
+<hr>
 ## Public Attributes Documentation
 
 
@@ -205,7 +222,7 @@ DataAPI data;
 
 **Date:**
 
-2023
+2024
 
 
 

@@ -63,6 +63,12 @@
 |  uint16\_t \* | [**getRawValues**](#function-getrawvalues-22) (uint8\_t adc\_num, uint8\_t pin\_num, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified pin. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._  |
 |  float32\_t | [**peek**](#function-peek-12) (channel\_t channel) <br>_Function to access the latest value available from the channel, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started._  |
 |  float32\_t | [**peek**](#function-peek-22) (uint8\_t adc\_num, uint8\_t pin\_num) <br>_Function to access the latest value available from a pin, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started._  |
+|  int8\_t | [**retrieveParametersFromMemory**](#function-retrieveparametersfrommemory-12) (channel\_t channel) <br>_Use this function to read the gain and offset parameters of the board to is non-volatile memory._  |
+|  int8\_t | [**retrieveParametersFromMemory**](#function-retrieveparametersfrommemory-22) (uint8\_t adc\_num, uint8\_t pin\_num) <br>_Retreived previously configured conversion parameters from NVS._  |
+|  conversion\_type\_t | [**retrieveStoredConversionType**](#function-retrievestoredconversiontype-12) (channel\_t channel) <br>_Use this function to get the current conversion type for the chosen channel._  |
+|  conversion\_type\_t | [**retrieveStoredConversionType**](#function-retrievestoredconversiontype-22) (uint8\_t adc\_num, uint8\_t pin\_num) <br>_Use this function to get the current conversion type for the chosen channel._  |
+|  float32\_t | [**retrieveStoredParameterValue**](#function-retrievestoredparametervalue-12) (channel\_t channel, parameter\_t parameter\_name) <br>_Use this function to get the current conversion parameteres for the chosen channel ._  |
+|  float32\_t | [**retrieveStoredParameterValue**](#function-retrievestoredparametervalue-22) (uint8\_t adc\_num, uint8\_t pin\_num, parameter\_t parameter\_name) <br>_Use this function to get the current conversion parameteres for the chosen channel ._  |
 |  void | [**setDispatchMethod**](#function-setdispatchmethod) (DispatchMethod\_t dispatch\_method) <br>_Sets the dispatch method of the module._  |
 |  void | [**setParameters**](#function-setparameters-12) (channel\_t channel, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for the channel if default values are not accurate enough._  |
 |  void | [**setParameters**](#function-setparameters-22) (uint8\_t adc\_num, uint8\_t pin\_num, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for the channel if default values are not accurate enough._  |
@@ -70,6 +76,8 @@
 |  void | [**setTwistChannelsUserCalibrationFactors**](#function-settwistchannelsusercalibrationfactors) () <br>_Retrieve stored parameters from Flash memory and configure ADC parameters._  |
 |  int8\_t | [**start**](#function-start) () <br>_This functions manually starts the acquisition chain._  |
 |  bool | [**started**](#function-started) () <br>_Checks if the module is already started._  |
+|  int8\_t | [**storeParametersInMemory**](#function-storeparametersinmemory-12) (channel\_t channel) <br>_Use this function to write the gain and offset parameters of the board to is non-volatile memory._  |
+|  int8\_t | [**storeParametersInMemory**](#function-storeparametersinmemory-22) (uint8\_t adc\_num, uint8\_t pin\_num) <br>_Store the currently configured conversion parameters of a given channel in NVS._  |
 |  void | [**triggerAcquisition**](#function-triggeracquisition) (uint8\_t adc\_num) <br>_Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired._  |
 
 
@@ -135,7 +143,7 @@ This function can't be called before the channel is enabled.
 
 **Returns:**
 
-Converted value in the relevant unit. 
+Converted value in the relevant unit. Returns -5000 if the channel is not active. 
 
 
 
@@ -180,7 +188,7 @@ This function can't be called before the pin is enabled.
 
 **Returns:**
 
-Converted value in the relevant unit. 
+Converted value in the relevant unit. If there is an error, returns -5000. 
 
 
 
@@ -682,6 +690,225 @@ Latest available value available from the given channel. If there was no value a
 
 
 
+### function retrieveParametersFromMemory [1/2]
+
+_Use this function to read the gain and offset parameters of the board to is non-volatile memory._ 
+```C++
+int8_t DataAPI::retrieveParametersFromMemory (
+    channel_t channel
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to save the values. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function retrieveParametersFromMemory [2/2]
+
+_Retreived previously configured conversion parameters from NVS._ 
+```C++
+int8_t DataAPI::retrieveParametersFromMemory (
+    uint8_t adc_num,
+    uint8_t pin_num
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `adc_num` ADC number 
+* `pin_num` SPIN pin number
+
+
+
+**Returns:**
+
+0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn't match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel -5000: Channel not found. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function retrieveStoredConversionType [1/2]
+
+_Use this function to get the current conversion type for the chosen channel._ 
+```C++
+conversion_type_t DataAPI::retrieveStoredConversionType (
+    channel_t channel
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function can't be called before the channel is enabled.
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to get a conversion parameter. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function retrieveStoredConversionType [2/2]
+
+_Use this function to get the current conversion type for the chosen channel._ 
+```C++
+conversion_type_t DataAPI::retrieveStoredConversionType (
+    uint8_t adc_num,
+    uint8_t pin_num
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function can't be called before the channel is enabled.
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to get a conversion parameter.
+
+
+
+**Returns:**
+
+Returns the type of convertion of the given pin. Returns -5 if the channel is not active. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function retrieveStoredParameterValue [1/2]
+
+_Use this function to get the current conversion parameteres for the chosen channel ._ 
+```C++
+float32_t DataAPI::retrieveStoredParameterValue (
+    channel_t channel,
+    parameter_t parameter_name
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function can't be called before the channel is enabled.
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to get a conversion parameter. 
+* `parameter_name` Paramater to be retreived: `gain` or `offset`. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function retrieveStoredParameterValue [2/2]
+
+_Use this function to get the current conversion parameteres for the chosen channel ._ 
+```C++
+float32_t DataAPI::retrieveStoredParameterValue (
+    uint8_t adc_num,
+    uint8_t pin_num,
+    parameter_t parameter_name
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function can't be called before the channel is enabled.
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to get a conversion parameter. 
+* `parameter_name` Paramater to be retreived: `gain` or `offset`.
+
+
+
+**Returns:**
+
+Returns the value of the parameter. Returns -5000 if the channel is not active. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function setDispatchMethod 
 
 _Sets the dispatch method of the module._ 
@@ -851,7 +1078,7 @@ This function requires Console to interact with the user. You must first call co
 
 **Note:**
 
-This function can't be called before the _all_ Twist channels have been enabled (you can use [**enableTwistDefaultChannels()**](classDataAPI.md#function-enabletwistdefaultchannels) for that purpose). The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task. 
+This function can't be called before _all_ Twist channels have been enabled (you can use [**enableTwistDefaultChannels()**](classDataAPI.md#function-enabletwistdefaultchannels) for that purpose). The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task. 
 
 
 
@@ -926,6 +1153,76 @@ bool DataAPI::started ()
 **Returns:**
 
 true is the module has been started, false otherwise. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function storeParametersInMemory [1/2]
+
+_Use this function to write the gain and offset parameters of the board to is non-volatile memory._ 
+```C++
+int8_t DataAPI::storeParametersInMemory (
+    channel_t channel
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function should be called after updating the parameters using setParameters.
+
+
+
+
+**Parameters:**
+
+
+* `channel` Name of the shield channel to save the values. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function storeParametersInMemory [2/2]
+
+_Store the currently configured conversion parameters of a given channel in NVS._ 
+```C++
+int8_t DataAPI::storeParametersInMemory (
+    uint8_t adc_num,
+    uint8_t pin_num
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `adc_num` ADC number 
+* `pin_num` SPIN pin number
+
+
+
+**Returns:**
+
+0 if parameters were correcly stored, negative value if there was an error: -1: There was an error, -5000: Channel not found. 
 
 
 

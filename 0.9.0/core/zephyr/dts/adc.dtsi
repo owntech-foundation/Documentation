@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2022 OwnTech.
+ * Copyright (c) 2022-2024 OwnTech.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  *
  * Ideally, this file's content should be contributed
  * to Zephyr's definition of STM32G4 SOC.
@@ -15,7 +15,6 @@
 			clocks = < &rcc STM32_CLOCK_BUS_AHB2 0x00004000 >;
 			interrupts = < 18 0x0 >;
 			status = "disabled";
-			label = "ADC_3";
 			#io-channel-cells = < 0x1 >;
 		};
 
@@ -25,7 +24,6 @@
 			clocks = < &rcc STM32_CLOCK_BUS_AHB2 0x00004000 >;
 			interrupts = < 18 0x0 >;
 			status = "disabled";
-			label = "ADC_4";
 			#io-channel-cells = < 0x1 >;
 		};
 
@@ -35,7 +33,6 @@
 			clocks = < &rcc STM32_CLOCK_BUS_AHB2 0x00004000 >;
 			interrupts = < 18 0x0 >;
 			status = "disabled";
-			label = "ADC_5";
 			#io-channel-cells = < 0x1 >;
 		};
 	};

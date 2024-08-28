@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 // OwnTech Power API
@@ -174,11 +174,18 @@ void PwmHAL::setSwitchConvention(hrtim_tu_number_t pwmX, hrtim_switch_convention
     hrtim_set_switch_convention(pwmX, convention);
 }
 
-void PwmHAL::setFrequency(uint32_t value)
+void PwmHAL::initFrequency(uint32_t init_frequency, uint32_t minimal_frequency)
 {
     if (!hrtim_get_status(PWMA))
         hrtim_init_default_all(); // initialize default parameters before
-    hrtim_frequency_set(value);
+    hrtim_frequency_set(init_frequency, minimal_frequency);
+}
+
+void PwmHAL::initFrequency(uint32_t init_frequency)
+{
+    if (!hrtim_get_status(PWMA))
+        hrtim_init_default_all(); // initialize default parameters before
+    hrtim_frequency_set(init_frequency, init_frequency);
 }
 
 void PwmHAL::setDeadTime(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns)
@@ -346,6 +353,11 @@ void PwmHAL::setAdcDecimation(hrtim_tu_number_t pwmX, uint32_t decimation)
     else if (decimation < 1)
         decimation = 1;
     hrtim_adc_trigger_set_postscaler(pwmX, decimation - 1);
+}
+
+void PwmHAL::setFrequency(uint32_t frequency_update)
+{
+    hrtim_change_frequency(frequency_update);
 }
 ```
 

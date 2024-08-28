@@ -51,6 +51,10 @@
 
 | Type | Name |
 | ---: | :--- |
+|  void | [**connectAllCapacitor**](#function-connectallcapacitor) () <br>_Connect the electrolyt capacitor to all the legs._  |
+|  void | [**connectLegCapacitor**](#function-connectlegcapacitor) (leg\_t leg) <br>_Connect the electrolytic capacitor._  |
+|  void | [**disconnectAllCapacitor**](#function-disconnectallcapacitor) () <br>_disconnect the electrolyt capacitor to all the legs._  |
+|  void | [**disconnectLegCapacitor**](#function-disconnectlegcapacitor) (leg\_t leg) <br>_Disonnect the electrolytic capacitor._  |
 |  void | [**initAllBoost**](#function-initallboost) () <br>_Initialise all the legs for boost topology, current mode is not supported for boost._  |
 |  void | [**initAllBuck**](#function-initallbuck) (hrtim\_pwm\_mode\_t leg\_mode=VOLTAGE\_MODE) <br>_Initialise all the legs for buck topology._  |
 |  void | [**initAllMode**](#function-initallmode) (hrtim\_switch\_convention\_t leg\_convention, hrtim\_pwm\_mode\_t leg\_mode) <br>_Initialize power modes for all legs._  |
@@ -104,6 +108,86 @@
 
 ## Public Functions Documentation
 
+
+
+
+### function connectAllCapacitor 
+
+```C++
+void TwistAPI::connectAllCapacitor () 
+```
+
+
+
+
+<hr>
+
+
+
+### function connectLegCapacitor 
+
+_Connect the electrolytic capacitor._ 
+```C++
+void TwistAPI::connectLegCapacitor (
+    leg_t leg
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `leg` The selected leg for which to connect the capacitor. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function disconnectAllCapacitor 
+
+```C++
+void TwistAPI::disconnectAllCapacitor () 
+```
+
+
+
+
+<hr>
+
+
+
+### function disconnectLegCapacitor 
+
+_Disonnect the electrolytic capacitor._ 
+```C++
+void TwistAPI::disconnectLegCapacitor (
+    leg_t leg
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `leg` The selected leg for which to disonnect the capacitor. 
+
+
+
+
+        
+
+<hr>
 
 
 

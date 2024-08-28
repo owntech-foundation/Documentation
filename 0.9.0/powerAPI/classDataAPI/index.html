@@ -3901,6 +3901,60 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-retrieveparametersfrommemory-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveParametersFromMemory [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-retrieveparametersfrommemory-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveParametersFromMemory [2/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-retrievestoredconversiontype-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveStoredConversionType [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-retrievestoredconversiontype-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveStoredConversionType [2/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-retrievestoredparametervalue-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveStoredParameterValue [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-retrievestoredparametervalue-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function retrieveStoredParameterValue [2/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-setdispatchmethod" class="md-nav__link">
     <span class="md-ellipsis">
       function setDispatchMethod
@@ -3958,6 +4012,24 @@
   <a href="#function-started" class="md-nav__link">
     <span class="md-ellipsis">
       function started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-storeparametersinmemory-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function storeParametersInMemory [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-storeparametersinmemory-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function storeParametersInMemory [2/2]
     </span>
   </a>
   
@@ -4052,6 +4124,30 @@
 <td style="text-align: left;"><a href="#function-peek-22"><strong>peek</strong></a> (uint8_t adc_num, uint8_t pin_num) <br><em>Function to access the latest value available from a pin, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">int8_t</td>
+<td style="text-align: left;"><a href="#function-retrieveparametersfrommemory-12"><strong>retrieveParametersFromMemory</strong></a> (channel_t channel) <br><em>Use this function to read the gain and offset parameters of the board to is non-volatile memory.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">int8_t</td>
+<td style="text-align: left;"><a href="#function-retrieveparametersfrommemory-22"><strong>retrieveParametersFromMemory</strong></a> (uint8_t adc_num, uint8_t pin_num) <br><em>Retreived previously configured conversion parameters from NVS.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">conversion_type_t</td>
+<td style="text-align: left;"><a href="#function-retrievestoredconversiontype-12"><strong>retrieveStoredConversionType</strong></a> (channel_t channel) <br><em>Use this function to get the current conversion type for the chosen channel.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">conversion_type_t</td>
+<td style="text-align: left;"><a href="#function-retrievestoredconversiontype-22"><strong>retrieveStoredConversionType</strong></a> (uint8_t adc_num, uint8_t pin_num) <br><em>Use this function to get the current conversion type for the chosen channel.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">float32_t</td>
+<td style="text-align: left;"><a href="#function-retrievestoredparametervalue-12"><strong>retrieveStoredParameterValue</strong></a> (channel_t channel, parameter_t parameter_name) <br><em>Use this function to get the current conversion parameteres for the chosen channel .</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">float32_t</td>
+<td style="text-align: left;"><a href="#function-retrievestoredparametervalue-22"><strong>retrieveStoredParameterValue</strong></a> (uint8_t adc_num, uint8_t pin_num, parameter_t parameter_name) <br><em>Use this function to get the current conversion parameteres for the chosen channel .</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-setdispatchmethod"><strong>setDispatchMethod</strong></a> (DispatchMethod_t dispatch_method) <br><em>Sets the dispatch method of the module.</em></td>
 </tr>
@@ -4080,6 +4176,14 @@
 <td style="text-align: left;"><a href="#function-started"><strong>started</strong></a> () <br><em>Checks if the module is already started.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">int8_t</td>
+<td style="text-align: left;"><a href="#function-storeparametersinmemory-12"><strong>storeParametersInMemory</strong></a> (channel_t channel) <br><em>Use this function to write the gain and offset parameters of the board to is non-volatile memory.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">int8_t</td>
+<td style="text-align: left;"><a href="#function-storeparametersinmemory-22"><strong>storeParametersInMemory</strong></a> (uint8_t adc_num, uint8_t pin_num) <br><em>Store the currently configured conversion parameters of a given channel in NVS.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-triggeracquisition"><strong>triggerAcquisition</strong></a> (uint8_t adc_num) <br><em>Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired.</em></td>
 </tr>
@@ -4101,7 +4205,7 @@
 <li><code>raw_value</code> Raw value obtained from which the value originates</li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p>Converted value in the relevant unit. </p>
+<p>Converted value in the relevant unit. Returns -5000 if the channel is not active. </p>
 <hr>
 
 <h3 id="function-convert-22">function convert [2/2]</h3>
@@ -4121,7 +4225,7 @@
 <li><code>raw_value</code> Raw value obtained from the channel buffer.</li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p>Converted value in the relevant unit. </p>
+<p>Converted value in the relevant unit. If there is an error, returns -5000. </p>
 <hr>
 
 <h3 id="function-enableacquisition">function enableAcquisition</h3>
@@ -4318,11 +4422,105 @@
 <p>Latest available value available from the given channel. If there was no value acquired in this channel yet, return value is NO_VALUE. </p>
 <hr>
 
+<h3 id="function-retrieveparametersfrommemory-12">function retrieveParametersFromMemory [1/2]</h3>
+<p><em>Use this function to read the gain and offset parameters of the board to is non-volatile memory.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to save the values. </li>
+</ul>
+<hr>
+
+<h3 id="function-retrieveparametersfrommemory-22">function retrieveParametersFromMemory [2/2]</h3>
+<p><em>Retreived previously configured conversion parameters from NVS.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>adc_num</code> ADC number </li>
+<li><code>pin_num</code> SPIN pin number</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn't match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel -5000: Channel not found. </p>
+<hr>
+
+<h3 id="function-retrievestoredconversiontype-12">function retrieveStoredConversionType [1/2]</h3>
+<p><em>Use this function to get the current conversion type for the chosen channel.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveStoredConversionType</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function can't be called before the channel is enabled.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to get a conversion parameter. </li>
+</ul>
+<hr>
+
+<h3 id="function-retrievestoredconversiontype-22">function retrieveStoredConversionType [2/2]</h3>
+<p><em>Use this function to get the current conversion type for the chosen channel.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveStoredConversionType</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function can't be called before the channel is enabled.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to get a conversion parameter.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the type of convertion of the given pin. Returns -5 if the channel is not active. </p>
+<hr>
+
+<h3 id="function-retrievestoredparametervalue-12">function retrieveStoredParameterValue [1/2]</h3>
+<p><em>Use this function to get the current conversion parameteres for the chosen channel .</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveStoredParameterValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">parameter_t</span><span class="w"> </span><span class="n">parameter_name</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function can't be called before the channel is enabled.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to get a conversion parameter. </li>
+<li><code>parameter_name</code> Paramater to be retreived: <code>gain</code> or <code>offset</code>. </li>
+</ul>
+<hr>
+
+<h3 id="function-retrievestoredparametervalue-22">function retrieveStoredParameterValue [2/2]</h3>
+<p><em>Use this function to get the current conversion parameteres for the chosen channel .</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveStoredParameterValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">parameter_t</span><span class="w"> </span><span class="n">parameter_name</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function can't be called before the channel is enabled.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to get a conversion parameter. </li>
+<li><code>parameter_name</code> Paramater to be retreived: <code>gain</code> or <code>offset</code>.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Returns the value of the parameter. Returns -5000 if the channel is not active. </p>
+<hr>
+
 <h3 id="function-setdispatchmethod">function setDispatchMethod</h3>
 <p><em>Sets the dispatch method of the module.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setDispatchMethod</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">DispatchMethod_t</span><span class="w"> </span><span class="n">dispatch_method</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setDispatchMethod</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">DispatchMethod_t</span><span class="w"> </span><span class="n">dispatch_method</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>End-user should not worry about this function, which is used internally by the Scheduling module.</p>
@@ -4334,11 +4532,11 @@
 
 <h3 id="function-setparameters-12">function setParameters [1/2]</h3>
 <p><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setParameters</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setParameters</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the channel is enabled. The <a href="./"><strong>DataAPI</strong></a> must not have been started, neither explicitly nor by starting the Uninterruptible task.</p>
@@ -4352,12 +4550,12 @@
 
 <h3 id="function-setparameters-22">function setParameters [2/2]</h3>
 <p><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setParameters</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setParameters</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled. The <a href="./"><strong>DataAPI</strong></a> module must not have been started, neither explicitly nor by starting the Uninterruptible task.</p>
@@ -4372,9 +4570,9 @@
 
 <h3 id="function-setrepetitionsbetweendispatches">function setRepetitionsBetweenDispatches</h3>
 <p><em>Indicates the repetition count between two external dispatches when it is handled externally by the Scheduling module. This value is used to calibrate buffers sizes.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setRepetitionsBetweenDispatches</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setRepetitionsBetweenDispatches</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>End-user should not worry about this function, which is used internally by the Scheduling module.</p>
@@ -4386,17 +4584,17 @@
 
 <h3 id="function-settwistchannelsusercalibrationfactors">function setTwistChannelsUserCalibrationFactors</h3>
 <p><em>Retrieve stored parameters from Flash memory and configure ADC parameters.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setTwistChannelsUserCalibrationFactors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setTwistChannelsUserCalibrationFactors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function requires Console to interact with the user. You must first call console_init() before calling this function.</p>
 <p><strong>Note:</strong></p>
-<p>This function can't be called before the <em>all</em> Twist channels have been enabled (you can use <a href="./#function-enabletwistdefaultchannels"><strong>enableTwistDefaultChannels()</strong></a> for that purpose). The <a href="./"><strong>DataAPI</strong></a> must not have been started, neither explicitly nor by starting the Uninterruptible task. </p>
+<p>This function can't be called before <em>all</em> Twist channels have been enabled (you can use <a href="./#function-enabletwistdefaultchannels"><strong>enableTwistDefaultChannels()</strong></a> for that purpose). The <a href="./"><strong>DataAPI</strong></a> must not have been started, neither explicitly nor by starting the Uninterruptible task. </p>
 <hr>
 
 <h3 id="function-start">function start</h3>
 <p><em>This functions manually starts the acquisition chain.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>If your code uses an uninterruptible task, you do not need to start Data Acquisition manually, it will automatically be started at the same time as the task as their internal behavior are intrinsically linked. If for some reason you have an uninterruptible task in your code, but do not want the Scheduling module to be in charge of Data Acquisition, you need to indicate it when starting the uninterruptible task. In that case, Data Acquisition must be manually started using this function. Note that in taht case, dispatch will use DMA interrupts which consumes a non-negligible amount of processor time and it is not advised.</p>
@@ -4410,17 +4608,47 @@
 
 <h3 id="function-started">function started</h3>
 <p><em>Checks if the module is already started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>true is the module has been started, false otherwise. </p>
 <hr>
 
+<h3 id="function-storeparametersinmemory-12">function storeParametersInMemory [1/2]</h3>
+<p><em>Use this function to write the gain and offset parameters of the board to is non-volatile memory.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeParametersInMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">channel_t</span><span class="w"> </span><span class="n">channel</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function should be called after updating the parameters using setParameters.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channel</code> Name of the shield channel to save the values. </li>
+</ul>
+<hr>
+
+<h3 id="function-storeparametersinmemory-22">function storeParametersInMemory [2/2]</h3>
+<p><em>Store the currently configured conversion parameters of a given channel in NVS.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeParametersInMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="p">,</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>adc_num</code> ADC number </li>
+<li><code>pin_num</code> SPIN pin number</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>0 if parameters were correcly stored, negative value if there was an error: -1: There was an error, -5000: Channel not found. </p>
+<hr>
+
 <h3 id="function-triggeracquisition">function triggerAcquisition</h3>
 <p><em>Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the at least one channel is enabled on the ADC and the <a href="./"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>

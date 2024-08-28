@@ -3837,6 +3837,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enum-parameter_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum parameter_t
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3985,6 +3994,10 @@
 <td style="text-align: right;">enum</td>
 <td style="text-align: left;"><a href="#enum-channel_t"><strong>channel_t</strong></a>  <br></td>
 </tr>
+<tr>
+<td style="text-align: right;">enum uint8_t</td>
+<td style="text-align: left;"><a href="#enum-parameter_t"><strong>parameter_t</strong></a>  <br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-attributes">Public Attributes</h2>
@@ -4053,32 +4066,40 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">};</span>
 </code></pre></div>
 <hr>
+
+<h3 id="enum-parameter_t">enum parameter_t</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">parameter_t</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">gain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">};</span>
+</code></pre></div>
+<hr>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-data_is_missing">variable DATA_IS_MISSING</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_MISSING</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_MISSING</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data_is_ok">variable DATA_IS_OK</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OK</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OK</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data_is_old">variable DATA_IS_OLD</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OLD</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OLD</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-no_value">variable NO_VALUE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">NO_VALUE</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">NO_VALUE</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data">variable data</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">DataAPI</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">DataAPI</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 </code></pre></div>
 <p><strong>Date:</strong></p>
-<p>2023</p>
+<p>2024</p>
 <p><strong>Author:</strong></p>
 <p>Clément Foucher <a href="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</a> </p>
 <p><strong>Author:</strong></p>
@@ -4088,12 +4109,12 @@
 <hr>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
 <h3 id="variable-adc_count">variable ADC_COUNT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ADC_COUNT</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ADC_COUNT</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-channels_per_adc">variable CHANNELS_PER_ADC</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CHANNELS_PER_ADC</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CHANNELS_PER_ADC</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 

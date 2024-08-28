@@ -676,14 +676,18 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="275" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="275" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="hrtim_8h_1a47c356bcbfc3563a69ceea64990c293e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hrtim_8h_1a4545279553facff6316ee64d2117b0c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void hrtim_frequency_set</definition>
-        <argsstring>(uint32_t value)</argsstring>
+        <argsstring>(uint32_t frequency_set, uint32_t frequency_min)</argsstring>
         <name>hrtim_frequency_set</name>
         <param>
           <type>uint32_t</type>
-          <declname>value</declname>
+          <declname>frequency_set</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_min</declname>
         </param>
         <briefdescription>
 <para>Sets the period of a given timing unit. </para>
@@ -2195,6 +2199,36 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="725" column="26" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="725" declcolumn="26"/>
       </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a9630ccd98dc0e5c73c09297e40f90156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_change_frequency</definition>
+        <argsstring>(uint32_t new_frequency)</argsstring>
+        <name>hrtim_change_frequency</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>new_frequency</declname>
+        </param>
+        <briefdescription>
+<para>Change the frequency/period after it has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>the new frequency can&apos;t be inferior to the the one set in the initialization step </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="732" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="732" declcolumn="6"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -2217,7 +2251,7 @@
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
@@ -2294,7 +2328,7 @@
 <codeline lineno="263"><highlight class="normal"></highlight></codeline>
 <codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_cmpl_pwm_out2(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_frequency_set(uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_frequency_set(uint32_t<sp/>frequency_set,<sp/>uint32_t<sp/>frequency_min);</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"></highlight></codeline>
 <codeline lineno="303"><highlight class="normal">uint16_t<sp/>hrtim_period_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
 <codeline lineno="304"><highlight class="normal"></highlight></codeline>
@@ -2358,11 +2392,13 @@
 <codeline lineno="711"><highlight class="normal"></highlight></codeline>
 <codeline lineno="725"><highlight class="normal">hrtim_external_trigger_t<sp/>hrtim_eev_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
 <codeline lineno="726"><highlight class="normal"></highlight></codeline>
-<codeline lineno="727"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="728"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="729"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="730"><highlight class="normal"></highlight></codeline>
-<codeline lineno="731"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HRTIM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_change_frequency(uint32_t<sp/>new_frequency);</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HRTIM_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h"/>
   </compounddef>

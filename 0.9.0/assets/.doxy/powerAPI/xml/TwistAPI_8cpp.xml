@@ -43,7 +43,7 @@
 <codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
 <codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TwistAPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -96,268 +96,274 @@
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">TwistAPI::initLegMode</ref>(leg_t<sp/>leg,<sp/>hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
 <codeline lineno="75"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a1e0da4d5f551a9b1b8aa1fe13ecb51e4" kindref="member">setFrequency</ref>(timer_frequency);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>frequency</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" kindref="member">setModulation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_modulation[leg]);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>modulation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" kindref="member">setAdcEdgeTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_edge_trigger[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>ADC<sp/>rollover<sp/>in<sp/>center<sp/>aligned<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(leg_mode<sp/>==<sp/>CURRENT_MODE)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC3)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" kindref="member">setEev</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>EEV4);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC1)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" kindref="member">setEev</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>EEV5);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>current<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" kindref="member">setMode</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>CURRENT_MODE);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" kindref="member">initFrequency</ref>(timer_frequency);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>frequency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" kindref="member">setModulation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_modulation[leg]);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>modulation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" kindref="member">setAdcEdgeTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_edge_trigger[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>ADC<sp/>rollover<sp/>in<sp/>center<sp/>aligned<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(leg_mode<sp/>==<sp/>CURRENT_MODE)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC3)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" kindref="member">setEev</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>EEV4);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC1)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" kindref="member">setEev</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>EEV5);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>current<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" kindref="member">setMode</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>CURRENT_MODE);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" kindref="member">setSwitchConvention</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>leg_convention);<sp/></highlight><highlight class="comment">//<sp/>choose<sp/>which<sp/>output<sp/>of<sp/>the<sp/>timer<sp/>unit<sp/>to<sp/>control<sp/>whith<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" kindref="member">setSwitchConvention</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>leg_convention);<sp/></highlight><highlight class="comment">//<sp/>choose<sp/>which<sp/>output<sp/>of<sp/>the<sp/>timer<sp/>unit<sp/>to<sp/>control<sp/>whith<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" kindref="member">initUnit</ref>(spinNumberToTu(dt_pwm_pin[leg]));<sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>leg<sp/>unit</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" kindref="member">initUnit</ref>(spinNumberToTu(dt_pwm_pin[leg]));<sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>leg<sp/>unit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kindref="member">setPhaseShift</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_phase_shift[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>initial<sp/>phase<sp/>shift</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kindref="member">setPhaseShift</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_phase_shift[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>initial<sp/>phase<sp/>shift</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kindref="member">setDeadTime</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_rising_deadtime[leg],<sp/>dt_falling_deadtime[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>dead<sp/>time</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kindref="member">setDeadTime</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_rising_deadtime[leg],<sp/>dt_falling_deadtime[leg]);<sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>PWM<sp/>dead<sp/>time</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_adc[leg]<sp/>!=<sp/>ADCTRIG_NONE)</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" kindref="member">setAdcDecimation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_adc_decim[leg]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_adc[leg]<sp/>!=<sp/>ADCTRIG_NONE)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" kindref="member">setAdcDecimation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_adc_decim[leg]);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" kindref="member">setAdcTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_adc[leg]);</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" kindref="member">setAdcTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>dt_adc[leg]);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" kindref="member">enableAdcTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]));</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(leg_mode<sp/>==<sp/>CURRENT_MODE)</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC1)</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.currentModeInit(<sp/>1,<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.pwm_tu);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>.<ref refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" kindref="member">initialize</ref>(3);</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC3)</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.currentModeInit(<sp/>3,<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.pwm_tu);</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>.<ref refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" kindref="member">initialize</ref>(1);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA)</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(PC12,<sp/>OUTPUT);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMC)</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(PC13,<sp/>OUTPUT);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twist_version<sp/>==<sp/>shield_ownverter<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWME)</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(PB7,<sp/>OUTPUT);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twist_init<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>twist_init<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>When<sp/>a<sp/>leg<sp/>has<sp/>been<sp/>initialized,<sp/>shield<sp/>version<sp/>should<sp/>not<sp/>be<sp/>modified</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" kindref="member">TwistAPI::initAllMode</ref>(hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
-<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>leg_convention,<sp/>leg_mode);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">TwistAPI::setLegDutyCycle</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>duty_leg)</highlight></codeline>
-<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_leg<sp/>&gt;<sp/>0.9)</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_leg<sp/>=<sp/>0.9;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_leg<sp/>&lt;<sp/>0.1)</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_leg<sp/>=<sp/>0.1;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>value<sp/>=<sp/>duty_leg<sp/>*<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.period;</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_duty_cycle_set(spinNumberToTu(dt_pwm_pin[leg]),<sp/>value);</highlight></codeline>
-<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" kindref="member">TwistAPI::setAllDutyCycle</ref>(float32_t<sp/>duty_all)</highlight></codeline>
-<codeline lineno="186"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_all<sp/>&gt;<sp/>0.9)</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_all<sp/>=<sp/>0.9;</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_all<sp/>&lt;<sp/>0.1)</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_all<sp/>=<sp/>0.1;</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">setLegDutyCycle</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>duty_all);</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">TwistAPI::startLeg</ref>(leg_t<sp/>leg)</highlight></codeline>
-<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA)</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(PC12);</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMC)</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(PC13);</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twist_version<sp/>==<sp/>shield_ownverter<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWME)</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(PB7);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" kindref="member">enableAdcTrigger</ref>(spinNumberToTu(dt_pwm_pin[leg]));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(leg_mode<sp/>==<sp/>CURRENT_MODE)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC1)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.currentModeInit(<sp/>1,<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.pwm_tu);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>.<ref refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" kindref="member">initialize</ref>(3);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dt_current_pin[leg]<sp/>==<sp/>CM_DAC3)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.currentModeInit(<sp/>3,<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.pwm_tu);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>.<ref refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" kindref="member">initialize</ref>(1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_driver[i]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(dt_pin_driver[i],<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_capacitor[i]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(dt_pin_capacitor[i],<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twist_init<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>twist_init<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>When<sp/>a<sp/>leg<sp/>has<sp/>been<sp/>initialized,<sp/>shield<sp/>version<sp/>should<sp/>not<sp/>be<sp/>modified</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" kindref="member">TwistAPI::initAllMode</ref>(hrtim_switch_convention_t<sp/>leg_convention,<sp/>hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>leg_convention,<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">TwistAPI::setLegDutyCycle</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>duty_leg)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_leg<sp/>&gt;<sp/>0.9)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_leg<sp/>=<sp/>0.9;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_leg<sp/>&lt;<sp/>0.1)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_leg<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>value<sp/>=<sp/>duty_leg<sp/>*<sp/>tu_channel[spinNumberToTu(dt_pwm_pin[leg])]-&gt;pwm_conf.period;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_duty_cycle_set(spinNumberToTu(dt_pwm_pin[leg]),<sp/>value);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" kindref="member">TwistAPI::setAllDutyCycle</ref>(float32_t<sp/>duty_all)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_all<sp/>&gt;<sp/>0.9)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_all<sp/>=<sp/>0.9;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_all<sp/>&lt;<sp/>0.1)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duty_all<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" kindref="member">setLegDutyCycle</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>duty_all);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">TwistAPI::startLeg</ref>(leg_t<sp/>leg)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_driver[leg]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(dt_pin_driver[leg]);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>PWM*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dt_output1_inactive[leg])</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" kindref="member">startSingleOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>TIMING_OUTPUT1);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dt_output2_inactive[leg])</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" kindref="member">startSingleOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>TIMING_OUTPUT2);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"></highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>PWM*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dt_output1_inactive[leg])</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" kindref="member">startSingleOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>TIMING_OUTPUT1);</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dt_output2_inactive[leg])</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" kindref="member">startSingleOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>TIMING_OUTPUT2);</highlight></codeline>
-<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab42e4f3dc7452a845fb810112e127139" kindref="member">TwistAPI::startAll</ref>()</highlight></codeline>
-<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">startLeg</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">TwistAPI::stopLeg</ref>(leg_t<sp/>leg)</highlight></codeline>
-<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Stop<sp/>PWM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" kindref="member">stopDualOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" kindref="member">TwistAPI::connectLegCapacitor</ref>(leg_t<sp/>leg)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_capacitor[leg]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(dt_pin_capacitor[leg]);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab42e4f3dc7452a845fb810112e127139" kindref="member">TwistAPI::startAll</ref>()</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" kindref="member">startLeg</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1a3d88e55e5dc4b73dcdc585caad9e3b" kindref="member">TwistAPI::connectAllCapacitor</ref>()</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" kindref="member">connectLegCapacitor</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="230"><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA)</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(PC12);</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((twist_version<sp/>==<sp/>shield_TWIST_V1_2<sp/>||<sp/>twist_version<sp/>==<sp/>shield_ownverter<sp/>||<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_3)<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMC)</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(PC13);</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twist_version<sp/>==<sp/>shield_ownverter<sp/>&amp;&amp;<sp/>spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWME)</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(PB7);</highlight></codeline>
-<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" kindref="member">TwistAPI::stopAll</ref>()</highlight></codeline>
-<codeline lineno="245"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">stopLeg</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">TwistAPI::setLegSlopeCompensation</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage)</highlight></codeline>
-<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(dt_current_pin[leg])</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CM_DAC1:</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.slopeCompensation(1,<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CM_DAC3:</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.slopeCompensation(3,<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight></codeline>
-<codeline lineno="267"><highlight class="normal"></highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab4d97717a70c2e66cc5f08bb4ca44490" kindref="member">TwistAPI::setAllSlopeCompensation</ref>(float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage)</highlight></codeline>
-<codeline lineno="269"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">setLegSlopeCompensation</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">TwistAPI::setLegTriggerValue</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>trigger_value)</highlight></codeline>
-<codeline lineno="277"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&gt;<sp/>0.95)</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.95;</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&lt;<sp/>0.05)</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.05;</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" kindref="member">setAdcTriggerInstant</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>trigger_value);</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">TwistAPI::stopLeg</ref>(leg_t<sp/>leg)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Stop<sp/>PWM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" kindref="member">stopDualOutput</ref>(spinNumberToTu(dt_pwm_pin[leg]));</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_driver[leg]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(dt_pin_driver[leg]);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" kindref="member">TwistAPI::disconnectLegCapacitor</ref>(leg_t<sp/>leg)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dt_pin_capacitor[leg]<sp/>!=<sp/>0)<sp/>spin.<ref refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" kindref="member">gpio</ref>.<ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(dt_pin_capacitor[leg]);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" kindref="member">TwistAPI::stopAll</ref>()</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" kindref="member">stopLeg</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a370a51d44afb2088476449f53f8ad575" kindref="member">TwistAPI::disconnectAllCapacitor</ref>()</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" kindref="member">disconnectLegCapacitor</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">TwistAPI::setLegSlopeCompensation</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(dt_current_pin[leg])</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CM_DAC1:</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.slopeCompensation(1,<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CM_DAC3:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>.slopeCompensation(3,<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ab4d97717a70c2e66cc5f08bb4ca44490" kindref="member">TwistAPI::setAllSlopeCompensation</ref>(float32_t<sp/>set_voltage,<sp/>float32_t<sp/>reset_voltage)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" kindref="member">setLegSlopeCompensation</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>set_voltage,<sp/>reset_voltage);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="284"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="285"><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" kindref="member">TwistAPI::setAllTriggerValue</ref>(float32_t<sp/>trigger_value)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">TwistAPI::setLegTriggerValue</ref>(leg_t<sp/>leg,<sp/>float32_t<sp/>trigger_value)</highlight></codeline>
 <codeline lineno="287"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&gt;<sp/>0.95)</highlight></codeline>
 <codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.95;</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&lt;<sp/>0.05)</highlight></codeline>
 <codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.05;</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">setLegTriggerValue</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>trigger_value);</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">TwistAPI::setLegPhaseShift</ref>(leg_t<sp/>leg,<sp/>int16_t<sp/>phase_shift)</highlight></codeline>
-<codeline lineno="299"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kindref="member">setPhaseShift</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>phase_shift);</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"></highlight></codeline>
-<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8272b08f8716ceff4b3b2acaa20b16d6" kindref="member">TwistAPI::setAllPhaseShift</ref>(int16_t<sp/>phase_shift)</highlight></codeline>
-<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">setLegPhaseShift</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>phase_shift);</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="310"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" kindref="member">setAdcTriggerInstant</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>trigger_value);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" kindref="member">TwistAPI::setAllTriggerValue</ref>(float32_t<sp/>trigger_value)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&gt;<sp/>0.95)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.95;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger_value<sp/>&lt;<sp/>0.05)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trigger_value<sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" kindref="member">setLegTriggerValue</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>trigger_value);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">TwistAPI::setLegPhaseShift</ref>(leg_t<sp/>leg,<sp/>int16_t<sp/>phase_shift)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kindref="member">setPhaseShift</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>phase_shift);</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"></highlight></codeline>
-<codeline lineno="312"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">TwistAPI::setLegDeadTime</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt)</highlight></codeline>
-<codeline lineno="313"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kindref="member">setDeadTime</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>ns_rising_dt,<sp/>ns_falling_dt);</highlight></codeline>
-<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"></highlight></codeline>
-<codeline lineno="317"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ae68fdea676f7ef3d3045637bae97fba0" kindref="member">TwistAPI::setAllDeadTime</ref>(uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt)</highlight></codeline>
-<codeline lineno="318"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">setLegDeadTime</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>ns_rising_dt,<sp/>ns_falling_dt);</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="324"><highlight class="normal"></highlight></codeline>
-<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">TwistAPI::setLegAdcDecim</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>adc_decim)</highlight></codeline>
-<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" kindref="member">setAdcDecimation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>adc_decim);</highlight></codeline>
-<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"></highlight></codeline>
-<codeline lineno="330"><highlight class="normal"></highlight></codeline>
-<codeline lineno="331"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a092b1f640d3a83a4a6c4d67c45bddd79" kindref="member">TwistAPI::setAllAdcDecim</ref>(uint16_t<sp/>adc_decim)</highlight></codeline>
-<codeline lineno="332"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">setLegAdcDecim</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>adc_decim);</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="337"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a8272b08f8716ceff4b3b2acaa20b16d6" kindref="member">TwistAPI::setAllPhaseShift</ref>(int16_t<sp/>phase_shift)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" kindref="member">setLegPhaseShift</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>phase_shift);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">TwistAPI::setLegDeadTime</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kindref="member">setDeadTime</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>ns_rising_dt,<sp/>ns_falling_dt);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1ae68fdea676f7ef3d3045637bae97fba0" kindref="member">TwistAPI::setAllDeadTime</ref>(uint16_t<sp/>ns_rising_dt,<sp/>uint16_t<sp/>ns_falling_dt)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" kindref="member">setLegDeadTime</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>ns_rising_dt,<sp/>ns_falling_dt);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">TwistAPI::setLegAdcDecim</ref>(leg_t<sp/>leg,<sp/>uint16_t<sp/>adc_decim)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>spin.<ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>.<ref refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" kindref="member">setAdcDecimation</ref>(spinNumberToTu(dt_pwm_pin[leg]),<sp/>adc_decim);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="339"><highlight class="normal"></highlight></codeline>
-<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">TwistAPI::initLegBuck</ref>(leg_t<sp/>leg,<sp/>hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a092b1f640d3a83a4a6c4d67c45bddd79" kindref="member">TwistAPI::setAllAdcDecim</ref>(uint16_t<sp/>adc_decim)</highlight></codeline>
 <codeline lineno="341"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA<sp/>&amp;&amp;<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_2)</highlight></codeline>
-<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx2,<sp/>leg_mode);</highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx1,<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" kindref="member">setLegAdcDecim</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>adc_decim);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="346"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="347"><highlight class="normal"></highlight></codeline>
-<codeline lineno="348"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" kindref="member">TwistAPI::initAllBuck</ref>(hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">TwistAPI::initLegBuck</ref>(leg_t<sp/>leg,<sp/>hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
 <codeline lineno="349"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">initLegBuck</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>leg_mode);</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA<sp/>&amp;&amp;<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_2)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx2,<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx1,<sp/>leg_mode);</highlight></codeline>
 <codeline lineno="354"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"></highlight></codeline>
-<codeline lineno="356"><highlight class="normal"></highlight></codeline>
-<codeline lineno="357"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">TwistAPI::initLegBoost</ref>(leg_t<sp/>leg)</highlight></codeline>
-<codeline lineno="358"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA<sp/>&amp;&amp;<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_2)</highlight></codeline>
-<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx1,<sp/>VOLTAGE_MODE);</highlight></codeline>
-<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx2,<sp/>VOLTAGE_MODE);</highlight></codeline>
-<codeline lineno="363"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="364"><highlight class="normal"></highlight></codeline>
-<codeline lineno="365"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" kindref="member">TwistAPI::initAllBoost</ref>()</highlight></codeline>
-<codeline lineno="366"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
-<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">initLegBoost</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
-<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="371"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" kindref="member">TwistAPI::initAllBuck</ref>(hrtim_pwm_mode_t<sp/>leg_mode)</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" kindref="member">initLegBuck</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/>leg_mode);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">TwistAPI::initLegBoost</ref>(leg_t<sp/>leg)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spinNumberToTu(dt_pwm_pin[leg])<sp/>==<sp/>PWMA<sp/>&amp;&amp;<sp/>twist_version<sp/>==<sp/>shield_TWIST_V1_2)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx1,<sp/>VOLTAGE_MODE);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" kindref="member">initLegMode</ref>(leg,<sp/>PWMx2,<sp/>VOLTAGE_MODE);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" kindref="member">TwistAPI::initAllBoost</ref>()</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dt_leg_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" kindref="member">initLegBoost</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">leg_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i));</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp"/>
   </compounddef>

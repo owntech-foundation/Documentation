@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="61" column="17" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="61" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="56" column="17" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classTwistAPI_1a19c7b1bc378e6f325f989889cb05a0e1" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="62" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="62" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="57" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="64" column="19" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="33" bodyend="63"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="59" column="19" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="33" bodyend="63"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="75" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="65" bodyend="72"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="70" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="65" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1adaf2cf198c41d0536b6de1a41281f97c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,9 +143,9 @@
 <para>/!\ WARNING : Current mode is currently only supported for BUCK /!\</para>
 <para>Configure PWM adc trigger. ADC_TRIG1 trigger ADC1, and ADC_TRIG3 trigger ADC2</para>
 <para>Choose which dac control the leg in current mode</para>
-<para>Only relevant for twist and ownverter hardware, to enable optocouplers for mosfet driver</para>
+<para>Only relevant for twist and ownverter hardware, to enable optocouplers for mosfet driver and connection to electrolytic capacitor</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="87" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="74" bodyend="165"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="82" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="74" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="98" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="167" bodyend="173"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="93" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="165" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a8268f967c30cd8564a331ff98dc65e9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="110" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="175" bodyend="183"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="104" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="173" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1ab960c3ffc3aa9dc60e4c90ae886ede85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="120" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="185" bodyend="196"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="114" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="183" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a20825736c5146b35b1318e2e85e69e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -290,7 +290,36 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to enable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="132" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="198" bodyend="215"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="126" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="196" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwistAPI::connectLegCapacitor</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>connectLegCapacitor</name>
+        <qualifiedname>TwistAPI::connectLegCapacitor</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>Connect the electrolytic capacitor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected leg for which to connect the capacitor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="133" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="210" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1ab42e4f3dc7452a845fb810112e127139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,7 +334,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="138" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="217" bodyend="223"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="138" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="215" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classTwistAPI_1a1a3d88e55e5dc4b73dcdc585caad9e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwistAPI::connectAllCapacitor</definition>
+        <argsstring>()</argsstring>
+        <name>connectAllCapacitor</name>
+        <qualifiedname>TwistAPI::connectAllCapacitor</qualifiedname>
+        <briefdescription>
+<para>Connect the electrolyt capacitor to all the legs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="143" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="223" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a27e09d3139ab97fa27501881ccb68706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -335,7 +379,36 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to disable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="145" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="226" bodyend="241"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="150" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="231" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwistAPI::disconnectLegCapacitor</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>disconnectLegCapacitor</name>
+        <qualifiedname>TwistAPI::disconnectLegCapacitor</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>Disonnect the electrolytic capacitor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected leg for which to disonnect the capacitor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="157" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="242" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1af1ea84d7a25afa660c5ce9e6d8387fe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -350,7 +423,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="150" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="244" bodyend="250"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="162" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="247" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classTwistAPI_1a370a51d44afb2088476449f53f8ad575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwistAPI::disconnectAllCapacitor</definition>
+        <argsstring>()</argsstring>
+        <name>disconnectAllCapacitor</name>
+        <qualifiedname>TwistAPI::disconnectAllCapacitor</qualifiedname>
+        <briefdescription>
+<para>disconnect the electrolyt capacitor to all the legs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="167" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="255" bodyend="261"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a6f79bf7751b509e776f78e734f904a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="161" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="276" bodyend="284"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="178" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="286" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1af0c11304c6d976b05c4f331ccc9cd41a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -422,7 +510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="171" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="286" bodyend="296"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="188" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="296" bodyend="306"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a511a16009bcc9da86ea9529a9063c396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -463,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="179" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="298" bodyend="302"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="196" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="308" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a8272b08f8716ceff4b3b2acaa20b16d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -492,7 +580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="186" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="304" bodyend="310"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="203" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="314" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a1d762fb899aa1ccc0f4fb41654384e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -547,7 +635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="197" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="252" bodyend="265"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="214" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="263" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1ab4d97717a70c2e66cc5f08bb4ca44490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -590,7 +678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="207" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="268" bodyend="274"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="224" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="278" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a60f2ff621f6e38517e8c3a92a31c0bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -643,7 +731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="216" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="312" bodyend="315"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="233" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="322" bodyend="325"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1ae68fdea676f7ef3d3045637bae97fba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -684,7 +772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="225" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="317" bodyend="323"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="241" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="327" bodyend="333"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a9fc300c71a486aa06762976089e4c145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -726,7 +814,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="238" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="325" bodyend="328"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="254" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="335" bodyend="338"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a092b1f640d3a83a4a6c4d67c45bddd79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -756,7 +844,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="251" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="331" bodyend="337"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="266" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="340" bodyend="346"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a26f12ef8aef60f55fe058f8ccff1d76b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -798,7 +886,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="260" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="340" bodyend="346"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="275" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="348" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -828,7 +916,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="267" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="348" bodyend="354"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="282" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="356" bodyend="362"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a6e26fa356c5e9beb11efeaacf21425f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -857,7 +945,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="274" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="357" bodyend="363"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="289" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="364" bodyend="370"/>
       </memberdef>
       <memberdef kind="function" id="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -872,15 +960,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="279" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="365" bodyend="371"/>
+        <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="294" column="6" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.cpp" bodystart="372" bodyend="378"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="58" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="59" bodyend="280"/>
+    <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" line="53" column="1" bodyfile="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h" bodystart="54" bodyend="295"/>
     <listofallmembers>
+      <member refid="classTwistAPI_1a1a3d88e55e5dc4b73dcdc585caad9e3b" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>connectAllCapacitor</name></member>
+      <member refid="classTwistAPI_1ab9229f9f4e160368ed19a091b67e42cb" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>connectLegCapacitor</name></member>
+      <member refid="classTwistAPI_1a370a51d44afb2088476449f53f8ad575" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>disconnectAllCapacitor</name></member>
+      <member refid="classTwistAPI_1a02eca78e0c41e538fa3cb2a9ab7d6e75" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>disconnectLegCapacitor</name></member>
       <member refid="classTwistAPI_1a288e5d7ba96e64729a0ae93e0d705a31" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>initAllBoost</name></member>
       <member refid="classTwistAPI_1a3c03b975be5c5399d250a55f2765fd04" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>initAllBuck</name></member>
       <member refid="classTwistAPI_1a4957e23c490640c896d5441e8b7f8299" prot="public" virt="non-virtual"><scope>TwistAPI</scope><name>initAllMode</name></member>

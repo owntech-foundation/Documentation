@@ -14,7 +14,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 /**
@@ -46,6 +46,16 @@
 #define ADC_3 3
 #define ADC_4 4
 
+#define ERROR_CHANNEL_OFF -5
+#define ERROR_CHANNEL_NOT_FOUND -5000
+
+typedef enum : uint8_t
+{
+	gain = 1,
+	offset = 2
+
+} parameter_t;
+
 /////
 // Device-tree related macro
 
@@ -70,6 +80,7 @@ enum class DispatchMethod_t
 	on_dma_interrupt,
 	externally_triggered
 };
+
 
 
 //////
@@ -223,7 +234,7 @@ public:
 	 * @param channel Name of the shield channel from which the value originates
 	 * @param raw_value Raw value obtained from which the value originates
 	 *
-	 * @return Converted value in the relevant unit.
+	 * @return Converted value in the relevant unit. Returns -5000 if the channel is not active.
 	 */
 	float32_t convert(channel_t channel, uint16_t raw_value);
 
@@ -243,12 +254,49 @@ public:
 	void setParameters(channel_t channel, float32_t gain, float32_t offset);
 
 	/**
+	 * @brief Use this function to get the current conversion parameteres for the chosen channel .
+	 *
+	 * @note  This function can't be called before the channel is enabled.
+	 *
+	 * @param channel Name of the shield channel to get a conversion parameter.
+	 * @param parameter_name Paramater to be retreived: `gain` or `offset`.
+	 */
+	float32_t retrieveStoredParameterValue(channel_t channel, parameter_t parameter_name);
+
+	/**
+	 * @brief Use this function to get the current conversion type for the chosen channel.
+	 *
+	 * @note  This function can't be called before the channel is enabled.
+	 *
+	 * @param channel Name of the shield channel to get a conversion parameter.
+	 */
+	conversion_type_t retrieveStoredConversionType(channel_t channel);
+
+
+	/**
+	 * @brief Use this function to write the gain and offset parameters of the board to is non-volatile memory.
+	 *
+	 * @note  This function should be called after updating the parameters using setParameters.
+	 *
+	 * @param channel Name of the shield channel to save the values.
+	 */
+	int8_t storeParametersInMemory(channel_t channel);
+
+	/**
+	 * @brief Use this function to read the gain and offset parameters of the board to is non-volatile memory.
+	 *
+	 * @param channel Name of the shield channel to save the values.
+	 */
+	int8_t retrieveParametersFromMemory(channel_t channel);
+
+
+	/**
 	 * @brief Retrieve stored parameters from Flash memory and configure ADC parameters
 	 *
 	 * @note  This function requires Console to interact with the user.
 	 *        You must first call console_init() before calling this function.
 	 *
-	 * @note  This function can't be called before the *all* Twist channels have
+	 * @note  This function can't be called before *all* Twist channels have
 	 *        been enabled (you can use enableTwistDefaultChannels() for that
 	 *        purpose). The DataAPI must not have been started, neither
 	 *        explicitly nor by starting the Uninterruptible task.
@@ -479,7 +527,7 @@ public:
 	 * @param pin_num Number of the pin from which to obtain values.
 	 * @param raw_value Raw value obtained from the channel buffer.
 	 *
-	 * @return Converted value in the relevant unit.
+	 * @return Converted value in the relevant unit. If there is an error, returns -5000.
 	 */
 	float32_t convert(uint8_t adc_num, uint8_t pin_num, uint16_t raw_value);
 
@@ -498,6 +546,58 @@ public:
 	 *        after gain has been applied.
 	 */
 	void setParameters(uint8_t adc_num, uint8_t pin_num, float32_t gain, float32_t offset);
+
+	/**
+	 * @brief Use this function to get the current conversion parameteres for the chosen channel .
+	 *
+	 * @note  This function can't be called before the channel is enabled.
+	 *
+	 * @param channel Name of the shield channel to get a conversion parameter.
+	 * @param parameter_name Paramater to be retreived: `gain` or `offset`.
+	 *
+	 * @return Returns the value of the parameter. Returns -5000 if the channel is not active.
+	 */
+	float32_t retrieveStoredParameterValue(uint8_t adc_num, uint8_t pin_num, parameter_t parameter_name);
+
+	/**
+	 * @brief Use this function to get the current conversion type for the chosen channel.
+	 *
+	 * @note  This function can't be called before the channel is enabled.
+	 *
+	 * @param channel Name of the shield channel to get a conversion parameter.
+	 *
+	 * @return Returns the type of convertion of the given pin. Returns -5 if the channel is not active.
+	 */
+	conversion_type_t retrieveStoredConversionType(uint8_t adc_num, uint8_t pin_num);
+
+
+	/**
+	 * @brief Store the currently configured conversion parameters of a given channel in NVS.
+	 *
+	 * @param[in] adc_num       ADC number
+	 * @param[in] pin_num   	SPIN pin number
+	 *
+	 * @return 0 if parameters were correcly stored, negative value if there was an error:
+	 * 			-1: There was an error,
+	 * 			-5000: Channel not found.
+	 */
+	int8_t storeParametersInMemory(uint8_t adc_num, uint8_t pin_num);
+
+	/**
+	 * @brief Retreived previously configured conversion parameters from NVS.
+	 *
+	 * @param[in] adc_num       ADC number
+	 * @param[in] pin_num   	SPIN pin number
+	 *
+	 * @return 0 if parameters were correcly retreived, negative value if there was an error:
+	 *         -1: NVS is empty
+	 *         -2: NVS contains data, but their version doesn't match current version
+	 *         -3: NVS data is corrupted
+	 *         -4: NVS contains data, but not for the requested channel
+	 *         -5000: Channel not found.
+	 */
+	int8_t retrieveParametersFromMemory(uint8_t adc_num, uint8_t pin_num);
+
 
 
 private:

@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 /*
@@ -101,7 +101,7 @@ void hrtim_cmpl_pwm_out1(hrtim_tu_number_t tu_number);
 
 void hrtim_cmpl_pwm_out2(hrtim_tu_number_t tu_number);
 
-void hrtim_frequency_set(uint32_t value);
+void hrtim_frequency_set(uint32_t frequency_set, uint32_t frequency_min);
 
 uint16_t hrtim_period_get(hrtim_tu_number_t tu_number);
 
@@ -164,6 +164,8 @@ hrtim_adc_trigger_t hrtim_adc_triger_get(hrtim_tu_number_t tu_number);
 void hrtim_eev_set(hrtim_tu_number_t tu_number, hrtim_external_trigger_t eev);
 
 hrtim_external_trigger_t hrtim_eev_get(hrtim_tu_number_t tu_number);
+
+void hrtim_change_frequency(uint32_t new_frequency);
 
 #ifdef __cplusplus
 }

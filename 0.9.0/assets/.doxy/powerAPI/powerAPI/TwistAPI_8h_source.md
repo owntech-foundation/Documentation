@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 #ifndef POWER_H_
@@ -33,12 +33,6 @@
 #include <zephyr/kernel.h>
 #include "arm_math.h"
 #include "hrtim_enum.h"
-
-#define LEG1_CAPA_DGND PC6
-#define LEG2_CAPA_DGND PB7
-#define LEG1_DRIVER_SWITCH PC12
-#define LEG2_DRIVER_SWITCH PC13
-
 
 #define LEG_TOKEN(node_id) DT_STRING_TOKEN(node_id, leg_name),
 
@@ -53,6 +47,7 @@ typedef enum
 {
     shield_TWIST_V1_2 = 0,
     shield_TWIST_V1_3,
+    shield_TWIST_V1_4,
     shield_ownverter,
     shield_other,
 } twist_version_t;
@@ -72,19 +67,25 @@ public:
 
     void initAllMode(hrtim_switch_convention_t leg_convention, hrtim_pwm_mode_t leg_mode);
 
-
     void setLegDutyCycle(leg_t leg, float32_t duty_leg);
 
     void setAllDutyCycle(float32_t duty_all);
 
     void startLeg(leg_t leg);
 
+    void connectLegCapacitor(leg_t leg);
 
     void startAll();
 
+    void connectAllCapacitor();
+
     void stopLeg(leg_t leg);
 
+    void disconnectLegCapacitor(leg_t leg);
+
     void stopAll();
+
+    void disconnectAllCapacitor();
 
     void setLegTriggerValue(leg_t leg, float32_t trigger_value);
 
@@ -100,11 +101,9 @@ public:
 
     void setLegDeadTime(leg_t leg, uint16_t ns_rising_dt, uint16_t ns_falling_dt);
 
-
     void setAllDeadTime(uint16_t ns_rising_dt, uint16_t ns_falling_dt);
 
     void setLegAdcDecim(leg_t leg, uint16_t adc_decim);
-
 
     void setAllAdcDecim(uint16_t adc_decim);
 

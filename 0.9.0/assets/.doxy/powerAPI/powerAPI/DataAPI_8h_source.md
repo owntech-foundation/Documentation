@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 #ifndef DATAAPI_H_
@@ -48,6 +48,16 @@
 #define ADC_3 3
 #define ADC_4 4
 
+#define ERROR_CHANNEL_OFF -5
+#define ERROR_CHANNEL_NOT_FOUND -5000
+
+typedef enum : uint8_t
+{
+    gain = 1,
+    offset = 2
+
+} parameter_t;
+
 // Device-tree related macro
 
 #ifdef CONFIG_SHIELD_TWIST
@@ -70,6 +80,7 @@ enum class DispatchMethod_t
     on_dma_interrupt,
     externally_triggered
 };
+
 
 
 // Constants definitions
@@ -106,6 +117,16 @@ public:
 
     void setParameters(channel_t channel, float32_t gain, float32_t offset);
 
+    float32_t retrieveStoredParameterValue(channel_t channel, parameter_t parameter_name);
+
+    conversion_type_t retrieveStoredConversionType(channel_t channel);
+
+
+    int8_t storeParametersInMemory(channel_t channel);
+
+    int8_t retrieveParametersFromMemory(channel_t channel);
+
+
     void setTwistChannelsUserCalibrationFactors();
 
 #endif
@@ -136,6 +157,16 @@ public:
     float32_t convert(uint8_t adc_num, uint8_t pin_num, uint16_t raw_value);
 
     void setParameters(uint8_t adc_num, uint8_t pin_num, float32_t gain, float32_t offset);
+
+    float32_t retrieveStoredParameterValue(uint8_t adc_num, uint8_t pin_num, parameter_t parameter_name);
+
+    conversion_type_t retrieveStoredConversionType(uint8_t adc_num, uint8_t pin_num);
+
+
+    int8_t storeParametersInMemory(uint8_t adc_num, uint8_t pin_num);
+
+    int8_t retrieveParametersFromMemory(uint8_t adc_num, uint8_t pin_num);
+
 
 
 private:

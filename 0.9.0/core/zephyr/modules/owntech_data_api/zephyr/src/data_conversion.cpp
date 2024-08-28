@@ -14,7 +14,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 /**
@@ -101,9 +101,13 @@ float32_t data_conversion_convert_raw_value(uint8_t adc_num, uint8_t channel_num
 		case conversion_linear:
 			return (raw_value*conversion_parameters[adc_index][channel_index][0]) + conversion_parameters[adc_index][channel_index][1];
 			break;
+		case no_channel_error:
+			return ERROR_CHANNEL_NOT_FOUND;
+			break;
+		default:
+			return ERROR_CHANNEL_NOT_FOUND;
+			break;
 	}
-
-	return 0;
 }
 
 void data_conversion_set_conversion_parameters_linear(uint8_t adc_num, uint8_t channel_num, float32_t gain, float32_t offset)

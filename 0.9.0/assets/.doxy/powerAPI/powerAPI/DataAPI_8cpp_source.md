@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-2024 LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -24,7 +24,7 @@
  *   You should have received a copy of the GNU Lesser General Public License
  *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * SPDX-License-Identifier: LGLPV2.1
+ * SPDX-License-Identifier: LGPL-2.1
  */
 
 // Stdlib
@@ -109,10 +109,36 @@ void DataAPI::setParameters(channel_t channel, float32_t gain, float32_t offset)
     data_conversion_set_conversion_parameters_linear(channel_info.adc_num, channel_info.channel_num, gain, offset);
 }
 
+float32_t DataAPI::retrieveStoredParameterValue(channel_t channel, parameter_t parameter_name)
+{
+    channel_info_t channel_info = shield_channels_get_enabled_channel_info(channel);
+    return data_conversion_get_parameter(channel_info.adc_num,channel_info.channel_num, parameter_name);
+
+}
+
+conversion_type_t DataAPI::retrieveStoredConversionType(channel_t channel)
+{
+    channel_info_t channel_info = shield_channels_get_enabled_channel_info(channel);
+    return data_conversion_get_conversion_type(channel_info.adc_num,channel_info.channel_num);
+}
+
+int8_t DataAPI::retrieveParametersFromMemory(channel_t channel)
+{
+    channel_info_t channel_info = shield_channels_get_enabled_channel_info(channel);
+    return data_conversion_retrieve_channel_parameters_from_nvs(channel_info.adc_num, channel_info.channel_num);
+}
+
+int8_t DataAPI::storeParametersInMemory(channel_t channel)
+{
+    channel_info_t channel_info = shield_channels_get_enabled_channel_info(channel);
+    return data_conversion_store_channel_parameters_in_nvs(channel_info.adc_num, channel_info.channel_num);
+}
+
 void DataAPI::setTwistChannelsUserCalibrationFactors()
 {
     shield_channels_set_user_acquisition_parameters();
 }
+
 
 #endif // CONFIG_SHIELD_TWIST
 
@@ -183,7 +209,6 @@ void DataAPI::triggerAcquisition(uint8_t adc_num)
 {
     uint8_t enabled_channels = spin.adc.getEnabledChannelsCount(adc_num);
     spin.adc.triggerSoftwareConversion(adc_num, enabled_channels);
-
 }
 
 uint16_t* DataAPI::getRawValues(uint8_t adc_num, uint8_t pin_num, uint32_t& number_of_values_acquired)
@@ -229,7 +254,7 @@ float32_t DataAPI::convert(uint8_t adc_num, uint8_t pin_num, uint16_t raw_value)
     uint8_t channel_num = this->getChannelNumber(adc_num, pin_num);
     if (channel_num == 0)
     {
-        return 0;
+        return ERROR_CHANNEL_NOT_FOUND;
     }
 
     return data_conversion_convert_raw_value(adc_num, channel_num, raw_value);
@@ -245,6 +270,55 @@ void DataAPI::setParameters(uint8_t adc_num, uint8_t pin_num, float32_t gain, fl
 
     data_conversion_set_conversion_parameters_linear(adc_num, channel_num, gain, offset);
 }
+
+
+int8_t DataAPI::storeParametersInMemory(uint8_t adc_num, uint8_t pin_num)
+{
+    uint8_t channel_num = this->getChannelNumber(adc_num, pin_num);
+    if (channel_num == 0)
+    {
+        return ERROR_CHANNEL_NOT_FOUND;
+    }
+
+    return data_conversion_store_channel_parameters_in_nvs(adc_num, channel_num);
+}
+
+
+int8_t DataAPI::retrieveParametersFromMemory(uint8_t adc_num, uint8_t pin_num)
+{
+    uint8_t channel_num = this->getChannelNumber(adc_num, pin_num);
+    if (channel_num == 0)
+    {
+        return ERROR_CHANNEL_NOT_FOUND;
+    }
+
+    return data_conversion_retrieve_channel_parameters_from_nvs(adc_num, channel_num);
+}
+
+float32_t DataAPI::retrieveStoredParameterValue(uint8_t adc_num, uint8_t pin_num, parameter_t parameter_name)
+{
+    uint8_t channel_num = this->getChannelNumber(adc_num, pin_num);
+    if (channel_num == 0)
+    {
+        return ERROR_CHANNEL_NOT_FOUND;
+    }
+
+    return data_conversion_get_parameter(adc_num,channel_num, parameter_name);
+
+}
+
+conversion_type_t DataAPI::retrieveStoredConversionType(uint8_t adc_num, uint8_t pin_num)
+{
+    uint8_t channel_num = this->getChannelNumber(adc_num, pin_num);
+    if (channel_num == 0)
+    {
+        return no_channel_error;
+    }
+
+    return data_conversion_get_conversion_type(adc_num,channel_num);
+}
+
+
 
 
 // Private functions
@@ -263,8 +337,6 @@ int8_t DataAPI::enableChannel(uint8_t adc_num, uint8_t channel_num)
     // Enable channel
     spin.adc.enableDma(adc_num, true);
     spin.adc.enableChannel(adc_num, channel_num);
-
-
 
     // Remember rank
     uint8_t adc_index = adc_num-1;
@@ -355,7 +427,7 @@ float32_t DataAPI::getChannelLatest(uint8_t adc_num, uint8_t channel_num, uint8_
         float32_t peekValue;
         if (raw_value != PEEK_NO_VALUE)
         {
-            data_conversion_convert_raw_value(adc_num, channel_num, raw_value);
+            peekValue = data_conversion_convert_raw_value(adc_num, channel_num, raw_value);
         }
         else
         {

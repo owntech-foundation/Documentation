@@ -57,6 +57,7 @@
 * **hrtim\_adc\_trigger\_dis** ([**hrtim.h**](hrtim_8h.md))
 * **hrtim\_adc\_trigger\_en** ([**hrtim.h**](hrtim_8h.md))
 * **hrtim\_adc\_trigger\_set\_postscaler** ([**hrtim.h**](hrtim_8h.md))
+* **hrtim\_change\_frequency** ([**hrtim.h**](hrtim_8h.md))
 * **hrtim\_cmpl\_pwm\_out1** ([**hrtim.h**](hrtim_8h.md))
 * **hrtim\_cmpl\_pwm\_out2** ([**hrtim.h**](hrtim_8h.md))
 * **hrtim\_cnt\_dis** ([**hrtim.h**](hrtim_8h.md))
