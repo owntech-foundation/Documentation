@@ -94,5 +94,7 @@ jobs:
         run: pip install Jinja2 --upgrade
       - name: Print mkdocs version
         run: mkdocs --version
-      - name: Publish docs
-        run: mkdocs gh-deploy --force
+      - name: Clear all docs versions
+        run: mike delete --all
+      - name: Publish docs using mike versioning tool
+        run: mike deploy --push --update-aliases 0.9.0 latest
