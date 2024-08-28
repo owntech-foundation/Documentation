@@ -36,7 +36,7 @@
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>LL<sp/>drivers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32_ll_gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_NUM<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_NUM<sp/>ADC_2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC_NUM<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC_CHAN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>

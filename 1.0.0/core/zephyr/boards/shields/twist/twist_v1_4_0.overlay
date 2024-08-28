@@ -52,6 +52,7 @@
 			sensor-name = "V1_LOW";
 			default-gain = <0x3d3851ec>;
 			default-offset = <0xc2b867f0>;
+			sensor-conv-type = "LINEAR";
 			v1-low-adc1 {
 				io-channels = <&adc1 1>;
 				spin-pin = <29>;
@@ -68,6 +69,7 @@
 			sensor-name = "V2_LOW";
 			default-gain = <0x3d3851ec>;
 			default-offset = <0xc2b867f0>;
+			sensor-conv-type = "LINEAR";
 			v2-low-adc1 {
 				io-channels = <&adc1 6>;
 				spin-pin = <24>;
@@ -84,6 +86,7 @@
 			sensor-name = "V_HIGH";
 			default-gain = <0x3cf57710>;
 			default-offset = <0x00000000>;
+			sensor-conv-type = "LINEAR";
 			v-high-adc1 {
 				io-channels = <&adc1 9>;
 				spin-pin = <27>;
@@ -103,6 +106,7 @@
 			default-gain = <0x3ba3d70a>;
 			default-offset = <0xc1200000>;
 			spin-pin = <30>;
+			sensor-conv-type = "LINEAR";
 			i1-low-adc1 {
 				io-channels = <&adc1 2>;
 				spin-pin = <30>;
@@ -119,6 +123,7 @@
 			sensor-name = "I2_LOW";
 			default-gain = <0x3ba3d70a>;
 			default-offset = <0xc1200000>;
+			sensor-conv-type = "LINEAR";
 			i2-low-adc1 {
 				io-channels = <&adc1 7>;
 				spin-pin = <25>;
@@ -135,6 +140,7 @@
 			sensor-name = "I_HIGH";
 			default-gain = <0x3ba3d70a>;
 			default-offset = <0xc1200000>;
+			sensor-conv-type = "LINEAR";
 			i-high-adc1 {
 				io-channels = <&adc1 8>;
 				spin-pin = <26>;
@@ -148,35 +154,43 @@
 
 		/* Other channels */
 
-		temp: temp-sensor {
+		temp1: temp-sensor-1 {
 			compatible = "shield-sensors";
-			sensor-name = "TEMP_SENSOR";
-			default-gain = <0x3f800000>;
-			default-offset = <0x00000000>;
-			temp-sensor-adc3 {
-				io-channels = <&adc3 12>;
-				spin-pin = <31>;
-			};
-			status = "disabled";
-		};
-
-		extra: extra-sensor {
-			compatible = "shield-sensors";
-			sensor-name = "EXTRA_MEAS";
-			default-gain = <0x3f800000>;
-			default-offset = <0x00000000>;
+			sensor-name = "TEMP_SENSOR_1";
+			default-r0 = <0x461c4000>;
+			default-b = <0x4557a000>;
+			default-rdiv = <0x469c4000>;
+			default-t0 = <0x43951333>;
+			sensor-conv-type = "THERMISTANCE";
 			analog-comm-adc4 {
 				io-channels = <&adc4 5>;
 				spin-pin = <6>;
 			};
-			status = "disabled";
+			status = "okay";
 		};
+
+		temp2: temp-sensor-2 {
+			compatible = "shield-sensors";
+			sensor-name = "TEMP_SENSOR_2";
+			default-r0 = <0x461c4000>;
+			default-b = <0x4557a000>;
+			default-rdiv = <0x469c4000>;
+			default-t0 = <0x43951333>;
+			sensor-conv-type = "THERMISTANCE";
+			temp-sensor-adc3 {
+				io-channels = <&adc3 12>;
+				spin-pin = <37>;
+			};
+			status = "okay";
+		};
+
 
 		analog: analog-comm {
 			compatible = "shield-sensors";
 			sensor-name = "ANALOG_COMM";
 			default-gain = <0x3f800000>;
 			default-offset = <0x00000000>;
+			sensor-conv-type = "LINEAR";
 			extra-sensor-adc2 {
 				io-channels = <&adc2 5>;
 				spin-pin = <35>;
@@ -247,21 +261,21 @@
 
 		/* Other channels thresholds */
 
-		temptd: temp-sensor-td {
+		temptd1: temp-sensor-1-td {
 			compatible = "safety-thresholds";
-			sensor-name = "TEMP_SENSOR";
-			threshold-name = "TEMP_SENSOR_TD";
-			threshold-high = <0x00000000>;
-			threshold-low = <0x00000000>;
+			sensor-name = "TEMP_SENSOR_1";
+			threshold-name = "TEMP_SENSOR_1_TD";
+			threshold-high = <0x428c0000>;  /*  70C */
+			threshold-low = <0xc1a00000>;	/* -20C */
 			status = "disabled";
 		};
 
-		extratd: extra-sensor-td {
+		temptd2: temp-sensor-2-td {
 			compatible = "safety-thresholds";
-			sensor-name = "EXTRA_MEAS";
-			threshold-name = "EXTRA_MEAS_TD";
-			threshold-high = <0x00000000>;
-			threshold-low = <0x00000000>;
+			sensor-name = "TEMP_SENSOR_2";
+			threshold-name = "TEMP_SENSOR_2_TD";
+			threshold-high = <0x428c0000>;	/*  70C */
+			threshold-low = <0xc1a00000>;	/* -20C */
 			status = "disabled";
 		};
 

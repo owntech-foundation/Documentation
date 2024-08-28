@@ -75,6 +75,14 @@ struct sensor_info_t
 	uint8_t pin_num;
 };
 
+#ifdef CONFIG_SHIELD_OWNVERTER
+	typedef enum
+	{
+		TEMP_1 = 0,
+		TEMP_2 = 1,
+		TEMP_3 = 2
+	} ownverter_temp_sensor_t;
+#endif
 
 /////
 // Static class definition
@@ -116,6 +124,7 @@ private:
 		int2float default_t0;
 	} sensor_dt_data_t;
 
+
 public:
 
 	/**
@@ -128,11 +137,11 @@ public:
 	 * @note  This function must be called *before* ADC is started.
 	 *
 	 * @param[in] sensor_name Name of the sensor using enumeration sensor_t.
-	 * @param[in] adc_number Number of the ADC which should be used for acquisition.
+	 * @param[in] adc_number The ADC which should be used for acquisition.
 	 *
 	 * @return 0 if the sensor was correctly enabled, negative value if there was an error.
 	 */
-	int8_t enableSensor(sensor_t sensor_name, uint8_t adc_number);
+	int8_t enableSensor(sensor_t sensor_name, adc_t adc_number);
 
 	/**
 	 * @brief Function to access the acquired data for specified sensor.
@@ -321,6 +330,45 @@ public:
 	 */
 	int8_t retrieveParametersFromMemory(sensor_t sensor_name);
 
+#ifdef CONFIG_SHIELD_OWNVERTER
+
+	/**
+	 * @brief This function is used to enable acquisition of all voltage/current
+	 *        sensors on the Twist shield.
+	 *        Sensors are attributed as follows:
+	 *        ADC1: - V1, V2, V3, VH, VN      
+	 * 		  ADC2: - I1, I2, I3, IH, T
+	 *
+	 * @note  This function will configure ADC 1 and 2 to be automatically
+	 *        triggered by the HRTIM, so the board must be configured as
+	 *        a power converted to enable HRTIM events.
+	 *        All other ADCs remain software triggered, thus will only be
+	 *        acquired when triggerAcquisition() is called.
+	 * 		  It also configures the gpios that control the MUX that chooses which
+	 * 		  temperature will be measured. 
+	 *
+	 * @note  This function must be called *before* ADC is started.
+	 */
+	void enableDefaultOwnverterSensors();
+
+	/**
+	 * @brief This function sets the gpios attached to the MUX to control which 
+	 * 		  measurement will be performed.
+	 *        The logic is:
+	 * 					 IN1   IN2
+	 * 			TEMP 1    T     F
+	 * 			TEMP 2    F     T
+	 * 			TEMP 3    T     T
+	 *
+	 * @param[in] temperature_sensor Name of the temperature sensor to trigger.
+	 * 							     Can be either TEMP_1, TEMP_2 or TEMP_3.
+	 *
+	 * @note  This function will decide which value will be read automatically 
+	 * 	      by the ADC2 to which the temperature of the Ownverter is linked.
+	 */
+	void setOwnverterTempMeas(ownverter_temp_sensor_t temperature_sensor);
+#endif
+
 #ifdef CONFIG_SHIELD_TWIST
 
 	/**
@@ -356,6 +404,19 @@ public:
 	 *        explicitly nor by starting the Uninterruptible task.
 	 */
 	void setTwistSensorsUserCalibrationFactors();
+
+	/**
+	 * @brief Manually triggers the temperature measurement of the Twist board.
+	 *
+	 * @param[in] temperature_sensor Name of the temperature sensor to trigger.
+	 * 							     Can be either TEMP_SENSOR_1 or TEMP_SENSOR_2.
+	 *
+	 * @note  This function must be called to trigger a conversion of the ADC
+	 * 		  to which the sensor is linked. It must be called BEFORE reading
+	 *        a new measurement. Account for delays in the measurement.
+	 */
+	void triggerTwistTempMeas(sensor_t temperature_sensor);
+
 #endif
 
 private:
@@ -395,6 +456,12 @@ private:
 	static sensor_dt_data_t** available_sensors_props[ADC_COUNT];
 	static sensor_dt_data_t* enabled_sensors[];
 	static bool initialized;
+
+	#ifdef CONFIG_SHIELD_OWNVERTER
+	static uint8_t   temp_mux_in_1;
+	static uint8_t   temp_mux_in_2;
+
+	#endif
 
 };
 

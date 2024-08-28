@@ -81,6 +81,11 @@
 
 
 
+#ifdef CONFIG_SHIELD_OWNVERTER
+	uint8_t SensorsAPI::temp_mux_in_1 = DT_PROP(DT_NODELABEL(temp), mux_spin_pin_1);
+	uint8_t SensorsAPI::temp_mux_in_2 = DT_PROP(DT_NODELABEL(temp), mux_spin_pin_2);	
+#endif
+
 
 /////
 // Variables
@@ -116,7 +121,7 @@ bool SensorsAPI::initialized = false;
 // Public functions accessible only when using a power shield
 
 
-int8_t SensorsAPI::enableSensor(sensor_t sensor_name, uint8_t adc_num)
+int8_t SensorsAPI::enableSensor(sensor_t sensor_name, adc_t adc_num)
 {
 	if (initialized == false)
 	{
@@ -212,27 +217,115 @@ int8_t SensorsAPI::storeParametersInMemory(sensor_t sensor_name)
 	return data_conversion_store_channel_parameters_in_nvs(sensor_info.adc_num, sensor_info.channel_num);
 }
 
+#ifdef CONFIG_SHIELD_OWNVERTER
 
-#ifdef CONFIG_SHIELD_TWIST
-
-void SensorsAPI::enableDefaultTwistSensors()
+void SensorsAPI::enableDefaultOwnverterSensors()
 {
+	/*  Defines the triggers of all ADCs.
+		ADC 1 - Triggered by HRTIM C, which is linked to event 3
+		ADC 2 - Triggered by HRTIM A, which is linked to event 1
+		ADC 3, 4 and 5 - Triggered by software 
+		                 They are mainly used for non-real-time measurements,
+						 such as temperature*/
 	spin.data.configureTriggerSource(ADC_1, hrtim_ev1);
 	spin.data.configureTriggerSource(ADC_2, hrtim_ev3);
 	spin.data.configureTriggerSource(ADC_3, software);
 	spin.data.configureTriggerSource(ADC_4, software);
 	spin.data.configureTriggerSource(ADC_5, software);
 
+	/*  Defines ADC 1 and ADC 2 measurments as discontinuous.
+		This is specially helpful for creating synchronous measurements. 
+		Each measurement is done once per period of HRTIM at a precise moment*/
 	spin.data.configureDiscontinuousMode(ADC_1, 1);
 	spin.data.configureDiscontinuousMode(ADC_2, 1);
 
-	this->enableSensor(I1_LOW, 1);
-	this->enableSensor(V1_LOW, 1);
-	this->enableSensor(V_HIGH, 1);
+	/* Creates the list of measurements of the ADC 1 */
+	this->enableSensor(V1_LOW, ADC_1);
+	this->enableSensor(V2_LOW, ADC_1);
+	this->enableSensor(V3_LOW, ADC_1);
+	this->enableSensor(V_HIGH, ADC_1);
+	this->enableSensor(V_NEUTR, ADC_1);
 
-	this->enableSensor(I2_LOW, 2);
-	this->enableSensor(V2_LOW, 2);
-	this->enableSensor(I_HIGH, 2);
+	/* Creates the list of measurements of the ADC 2 */
+	this->enableSensor(I1_LOW, ADC_2);
+	this->enableSensor(I2_LOW, ADC_2);
+	this->enableSensor(I3_LOW, ADC_2);
+	this->enableSensor(I_HIGH, ADC_2);
+	this->enableSensor(TEMP_SENSOR, ADC_2);
+
+	/* Configure the pins of the temperature MUX */
+	spin.gpio.configurePin(temp_mux_in_1,OUTPUT);
+	spin.gpio.configurePin(temp_mux_in_2,OUTPUT);
+
+
+}
+
+void SensorsAPI::setOwnverterTempMeas(ownverter_temp_sensor_t temperature_sensor)
+{
+	if(temperature_sensor == TEMP_1){
+		spin.gpio.setPin(temp_mux_in_1);   
+		spin.gpio.resetPin(temp_mux_in_2);
+	}else if(temperature_sensor == TEMP_2){
+		spin.gpio.resetPin(temp_mux_in_1);
+		spin.gpio.setPin(temp_mux_in_2);
+	}else if(temperature_sensor == TEMP_3){
+		spin.gpio.setPin(temp_mux_in_1);
+		spin.gpio.setPin(temp_mux_in_2);
+	}
+}
+
+
+#endif
+
+#ifdef CONFIG_SHIELD_TWIST
+
+void SensorsAPI::enableDefaultTwistSensors()
+{
+	/*  Defines the triggers of all ADCs.
+		ADC 1 - Triggered by HRTIM C, which is linked to event 3
+		ADC 2 - Triggered by HRTIM A, which is linked to event 1
+		ADC 3, 4 and 5 - Triggered by software 
+		                 They are mainly used for non-real-time measurements,
+						 such as temperature*/
+	spin.data.configureTriggerSource(ADC_1, hrtim_ev1);
+	spin.data.configureTriggerSource(ADC_2, hrtim_ev3);
+	spin.data.configureTriggerSource(ADC_3, software);
+	spin.data.configureTriggerSource(ADC_4, software);
+	spin.data.configureTriggerSource(ADC_5, software);
+
+
+	/*  Defines ADC 1 and ADC 2 measurments as discontinuous.
+		This is specially helpful for creating synchronous measurements. 
+		Each measurement is done once per period of HRTIM at a precise moment*/
+	uint32_t num_discontinuous_meas = 1;
+	spin.data.configureDiscontinuousMode(ADC_1, num_discontinuous_meas);
+	spin.data.configureDiscontinuousMode(ADC_2, num_discontinuous_meas);
+
+	/* Creates the list of measurements of the ADC 1 */
+	this->enableSensor(I1_LOW, ADC_1);
+	this->enableSensor(V1_LOW, ADC_1);
+	this->enableSensor(V_HIGH, ADC_1);
+
+	/* Creates the list of measurements of the ADC 2 */
+	this->enableSensor(I2_LOW, ADC_2);
+	this->enableSensor(V2_LOW, ADC_2);
+	this->enableSensor(I_HIGH, ADC_2);
+
+	/* Creates the list of measurements of the ADC 3 */
+	int8_t test = this->enableSensor(TEMP_SENSOR_1, ADC_4);
+
+	/* Creates the list of measurements of the ADC 4 */
+	test = this->enableSensor(TEMP_SENSOR_2, ADC_3);
+
+}
+
+void SensorsAPI::triggerTwistTempMeas(sensor_t temperature_sensor)
+{
+	if(temperature_sensor == TEMP_SENSOR_1){
+		 spin.data.triggerAcquisition(ADC_4);
+	}else{
+		 spin.data.triggerAcquisition(ADC_3);
+	}
 }
 
 void SensorsAPI::setTwistSensorsUserCalibrationFactors()
