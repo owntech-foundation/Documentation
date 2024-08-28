@@ -94,6 +94,10 @@ jobs:
         run: pip install Jinja2 --upgrade
       - name: Print mkdocs version
         run: mkdocs --version
+      - name: Make sure git user.name is configured because it is used by mike versioning tool.
+        run: git config --global user.name "${{github.actor}}"
+      - name: Make sure git user.email is configured
+        run: git config --global user.email "${{github.actor}}@users.noreply.github.com"      
       - name: Clear all docs versions
         run: mike delete --all
       - name: Publish docs using mike versioning tool
