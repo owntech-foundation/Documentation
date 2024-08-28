@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_e0b0ebd8181eadf56b45f70b679dd6ce" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_adc_driver</compoundname>
+    <innerdir refid="dir_fc55e1a77480d908ce2594a494dae021">docs/core/zephyr/modules/owntech_adc_driver/zephyr</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_adc_driver/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="hrtim__enum_8h" kind="file" language="C++">
+    <compoundname>hrtim_enum.h</compoundname>
+    <innerclass refid="structpwm__conf__t" prot="public">pwm_conf_t</innerclass>
+    <innerclass refid="structphase__shift__conf__t" prot="public">phase_shift_conf_t</innerclass>
+    <innerclass refid="structgpio__conf__t" prot="public">gpio_conf_t</innerclass>
+    <innerclass refid="structswitch__conv__conf__t" prot="public">switch_conv_conf_t</innerclass>
+    <innerclass refid="structadc__hrtim__conf__t" prot="public">adc_hrtim_conf_t</innerclass>
+    <innerclass refid="structcomp__usage__conf__t" prot="public">comp_usage_conf_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_tu_t</name>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96a5bf102cc24481b1874939a60b6ca0305" prot="public">
+          <name>TIMA</name>
+          <initializer>= LL_HRTIM_TIMER_A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96a73c150ac9c4cef7a28d1968840d084f1" prot="public">
+          <name>TIMB</name>
+          <initializer>= LL_HRTIM_TIMER_B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96aef6b96de3399faf2aed17c92590aaf91" prot="public">
+          <name>TIMC</name>
+          <initializer>= LL_HRTIM_TIMER_C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96ad9308ff63e27844f121ddfd7c234f495" prot="public">
+          <name>TIMD</name>
+          <initializer>= LL_HRTIM_TIMER_D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96ae9e4c627760f36823cdd153c24229157" prot="public">
+          <name>TIME</name>
+          <initializer>= LL_HRTIM_TIMER_E</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96ad1843acc04416958e6e96752fcff80d9" prot="public">
+          <name>TIMF</name>
+          <initializer>= LL_HRTIM_TIMER_F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96a9f403f75f5dcd075e1383698a5bb3903" prot="public">
+          <name>MSTR</name>
+          <initializer>= LL_HRTIM_TIMER_MASTER</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM timing units definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="50" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_tu_number_t</name>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07a48cac649b8e49efafc8aeeb1a72b5aaa" prot="public">
+          <name>PWMA</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07aee6ffb042d1a6becb33b5d716d65df0b" prot="public">
+          <name>PWMB</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07ab200d33813e3aae04118e370fc87570a" prot="public">
+          <name>PWMC</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07a24b335de7f9b5f790fbe1425352e766c" prot="public">
+          <name>PWMD</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07a5077cd53d48632d803bbe407a8e6e3fe" prot="public">
+          <name>PWME</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1afa38e913ba8b44a4389391b3ebe0ab07a3930919e5e9ccd182b777500f4c10c80" prot="public">
+          <name>PWMF</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM timing units number definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="64" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1ab1c73fc67842d0867124d7b00e21d4db" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_gpio_clock_number_t</name>
+        <enumvalue id="hrtim__enum_8h_1ab1c73fc67842d0867124d7b00e21d4dbacec8178d5a743d796ea05488eaccafa8" prot="public">
+          <name>CLK_GPIOA</name>
+          <initializer>= LL_AHB2_GRP1_PERIPH_GPIOA</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab1c73fc67842d0867124d7b00e21d4dba0f83deed40045a9000d19c2535fadd88" prot="public">
+          <name>CLK_GPIOB</name>
+          <initializer>= LL_AHB2_GRP1_PERIPH_GPIOB</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab1c73fc67842d0867124d7b00e21d4dba1138f688647030010e77a405cce6e5a1" prot="public">
+          <name>CLK_GPIOC</name>
+          <initializer>= LL_AHB2_GRP1_PERIPH_GPIOC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM gpio clock units definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="77" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_reset_trig_t</name>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0ba39714b730bf15ec0cb5708da15b62150" prot="public">
+          <name>MSTR_PER</name>
+          <initializer>= LL_HRTIM_RESETTRIG_MASTER_PER</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0ba85bb7a748483c0c916f28d404577eaf8" prot="public">
+          <name>MSTR_CMP1</name>
+          <initializer>= LL_HRTIM_RESETTRIG_MASTER_CMP1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0ba63267151033a01cd7ca43e4f2675f0ad" prot="public">
+          <name>MSTR_CMP2</name>
+          <initializer>= LL_HRTIM_RESETTRIG_MASTER_CMP2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0bae0644e16226f5c3849c04d644790b6c7" prot="public">
+          <name>MSTR_CMP3</name>
+          <initializer>= LL_HRTIM_RESETTRIG_MASTER_CMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0ba9cdf3ecebaac9612ab874ce6f713b629" prot="public">
+          <name>MSTR_CMP4</name>
+          <initializer>= LL_HRTIM_RESETTRIG_MASTER_CMP4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ab8195a1e770eccf4458e540477b5fc0baf60e5416fa63a74dac2e7c5cdf531618" prot="public">
+          <name>PWMA_CMP2</name>
+          <initializer>= LL_HRTIM_RESETTRIG_OTHER1_CMP2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM reset trig source definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="87" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="88" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a2b4274d6862d3e7e3ba5e3966e94625a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_pwm_mode_t</name>
+        <enumvalue id="hrtim__enum_8h_1a2b4274d6862d3e7e3ba5e3966e94625aa4b8e192bfa39f848006dfe7151e70fe3" prot="public">
+          <name>VOLTAGE_MODE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a2b4274d6862d3e7e3ba5e3966e94625aa768f2095b01860f3d0d2e9b715396885" prot="public">
+          <name>CURRENT_MODE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Special PWM mode for current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="100" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_output_set_t</name>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148ac9c5f5e38584210e727d23f059a4f8d3" prot="public">
+          <name>SET_NONE</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_NONE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148ab03bc49b12f80f298c39069aa5c49537" prot="public">
+          <name>SET_CMP1</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_TIMCMP1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148a3c67a153087c465a7ca2476ade9ccdcd" prot="public">
+          <name>SET_CMP2</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_TIMCMP2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148ad33500635c8cb550915be07a2a2513d0" prot="public">
+          <name>SET_CMP3</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_TIMCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148a9b97a0405ecfb9899564d8477d4645f1" prot="public">
+          <name>SET_CMP4</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_TIMCMP4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a8034a4f3022f9d1aeef8517ab1014148a1f46439dba3caf8ff4a142620f92a34b" prot="public">
+          <name>SET_PER</name>
+          <initializer>= LL_HRTIM_OUTPUTSET_TIMPER</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM output set units definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="109" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="110" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_output_reset_t</name>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9ad68d2a22bc616ae25919e10eb1ce6b76" prot="public">
+          <name>RST_NONE</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_NONE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9a19a59d56a4fc8621d7050f6d5ca2ab75" prot="public">
+          <name>RST_CMP1</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_TIMCMP1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9a16de03e33e5b792ffb063785c1644e9f" prot="public">
+          <name>RST_CMP2</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_TIMCMP2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9adc998d572a24b9313c12c84a2ccaf657" prot="public">
+          <name>RST_CMP3</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_TIMCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9a8f6632a98a130d8f5d65fd7326f67cb3" prot="public">
+          <name>RST_CMP4</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_TIMCMP4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a4231085f35153aee8a4c8a597cd003b9a7bc15e809ed6f9031ed7d019d91d2dd0" prot="public">
+          <name>RST_PER</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_TIMPER</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM output reset units definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="122" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_output_units_t</name>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa2e5c0daf2ef4f2dd39e89f9ef5292206" prot="public">
+          <name>PWMA1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TA1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa4002c516acd0b29ad6f8b0f37764c415" prot="public">
+          <name>PWMA2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TA2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa3c9c2dd1b9b3b9eb31b347d3fa433087" prot="public">
+          <name>PWMB1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TB1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aad7dd1556921369284ec9ba31054155d1" prot="public">
+          <name>PWMB2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TB2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa8377002b0ce2933aa0f28afcd9903488" prot="public">
+          <name>PWMC1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TC1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aaf823447f8206d3f718f0344210cc82fa" prot="public">
+          <name>PWMC2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TC2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aab357707501ebfacf1e862cf2ab2e9dd8" prot="public">
+          <name>PWMD1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TD1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa985f8a7a46959fada1b2a9efb26b0c17" prot="public">
+          <name>PWMD2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TD2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aaef50a81768ac359c85144d6708225566" prot="public">
+          <name>PWME1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TE1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa3f17eb97d5f3131d615e9d20f3fe8d9c" prot="public">
+          <name>PWME2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TE2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa79eaabe4403e21fb6d535ad2e599e810" prot="public">
+          <name>PWMF1</name>
+          <initializer>= LL_HRTIM_OUTPUT_TF1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a570cfa6eb69452768c08065ff07f057aa891f83d152d3a8be5c176e8a3180d92b" prot="public">
+          <name>PWMF2</name>
+          <initializer>= LL_HRTIM_OUTPUT_TF2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM output units definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="135" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="136" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1ad8839bec84b49379a199890149f6fcd7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_output_number_t</name>
+        <enumvalue id="hrtim__enum_8h_1ad8839bec84b49379a199890149f6fcd7a6a8338815098f8b1f47b729b85abb269" prot="public">
+          <name>TIMING_OUTPUT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ad8839bec84b49379a199890149f6fcd7a45cf57e8dfdb96aec414d1b74caa6782" prot="public">
+          <name>TIMING_OUTPUT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="151" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_adc_trigger_t</name>
+        <enumvalue id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa2300845d01b574473d6b68f2709a7370" prot="public">
+          <name>ADCTRIG_1</name>
+          <initializer>= LL_HRTIM_ADCTRIG_1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa07160feb6201c8b4a0eb126b7b43d1f0" prot="public">
+          <name>ADCTRIG_2</name>
+          <initializer>= LL_HRTIM_ADCTRIG_2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aaa99b62aeefd0e6e75c2456446fea455d" prot="public">
+          <name>ADCTRIG_3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aacb1a506e97bd02060a1fdd338cbbd67a" prot="public">
+          <name>ADCTRIG_4</name>
+          <initializer>= LL_HRTIM_ADCTRIG_4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa2bb41c5f71dee6ca0e69471fad306a22" prot="public">
+          <name>ADCTRIG_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM ADC trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="160" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="161" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_adc_event_t</name>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094cae29e29ee0aa091132fe3ce9dfb4ca041" prot="public">
+          <name>PWMA_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094ca1f61943c088dae7d6843f511cd5322c3" prot="public">
+          <name>PWMB_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094caf96713766d3ff2f677bdd20e3c6d1e99" prot="public">
+          <name>PWMC_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094ca622afe5323b57bfd5c086f3c532efbc4" prot="public">
+          <name>PWMD_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094ca1e345d56570922f16e5e56fcf1a6fbb5" prot="public">
+          <name>PWME_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_E</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094ca15bfa8f224ac20ce8a7a63647643f13d" prot="public">
+          <name>PWMF_UPDT</name>
+          <initializer>= LL_HRTIM_ADCTRIG_UPDATE_TIMER_F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM ADC event update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="172" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="173" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_adc_source_t</name>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a8646b1abda040f9f3d26a618b2979a5e" prot="public">
+          <name>TIMA_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMACMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a2829e69bef6e5d74bb601607840010ed" prot="public">
+          <name>TIMB_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMBCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a0d60a0c1e6de206e7ac8699da34ffb7f" prot="public">
+          <name>TIMC_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMCCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a5282905057ef074e25ab1c490640836d" prot="public">
+          <name>TIMD_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMDCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a95aa6baaae460a7021d705eb10ba9f24" prot="public">
+          <name>TIME_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMECMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a916a9b2a5976426e28ede24e5c43a043a70303a17381f71ee31e75979bfcba0db" prot="public">
+          <name>TIMF_CMP3</name>
+          <initializer>= LL_HRTIM_ADCTRIG_SRC13_TIMFCMP3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM ADC Event Number and its associated source There are a huge number of possibilities, for now this code explores only a few. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>prioritize cmp3, cmp4 and cmp2 might be used for current mode, and cmp1 for duty cycle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="187" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="188" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbba" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_cmp_t</name>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaad31c89b936e178cebaaa8ea155aa435c" prot="public">
+          <name>CMP1xR</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaa2a1208345d6b8788589ba20d2dd1ee28" prot="public">
+          <name>CMP2xR</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaaba76f9511627020875b6fe626419cdc4" prot="public">
+          <name>CMP3xR</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaad0989980bfb7821353f62d2ee0e45287" prot="public">
+          <name>CMP4xR</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaaddbcbde413395a68c0b05452aea81ed4" prot="public">
+          <name>MCMP1R</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaa612ee92d5f06dadf78c9a21805a1e684" prot="public">
+          <name>MCMP2R</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaa15fbcfcf376d2573714158afce36bc20" prot="public">
+          <name>MCMP3R</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaaf2b08a40cd4433f3fceda2d2196fe60f" prot="public">
+          <name>MCMP4R</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9ebaa5c1a037579a30be87bd2b7abbbaac1303605a5841c40ea926404a30c1d42" prot="public">
+          <name>MCMPER</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM comparators definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="200" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="201" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1ac4465159b9b170ec50470cf2adb09e17" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_out_t</name>
+        <enumvalue id="hrtim__enum_8h_1ac4465159b9b170ec50470cf2adb09e17a65d5fdb550fca1555a39bc4ac486852b" prot="public">
+          <name>OUT1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ac4465159b9b170ec50470cf2adb09e17a9d9779ee4b40afd700152873c283020e" prot="public">
+          <name>OUT2</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>timing unit output 1 or 2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="216" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1ada180d37ae75d762e91488e69c407e62" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_switch_convention_t</name>
+        <enumvalue id="hrtim__enum_8h_1ada180d37ae75d762e91488e69c407e62ab7399e245cfe12cbe625b8634cd98ed6" prot="public">
+          <name>PWMx1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1ada180d37ae75d762e91488e69c407e62aea532b9e1fc7f7e958528aee5bb54411" prot="public">
+          <name>PWMx2</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM TU switch convention PWMx1 : control high-side mosfet PWMx2 : control low-side mosfet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="227" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1adffcca0ed208674a112d3ce2657e2ffb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_comp_usage_t</name>
+        <enumvalue id="hrtim__enum_8h_1adffcca0ed208674a112d3ce2657e2ffba1e780c62cb3fd2edcac39f739bbe6f6c" prot="public">
+          <name>USED</name>
+          <initializer>= true</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1adffcca0ed208674a112d3ce2657e2ffbacc62d1576546f3245237e1b232d838b6" prot="public">
+          <name>FREE</name>
+          <initializer>= false</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>comparator usage for a timing unit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="236" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="237" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a9200c13d18067ad91373fba773b88901" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_tu_ON_OFF_t</name>
+        <enumvalue id="hrtim__enum_8h_1a9200c13d18067ad91373fba773b88901ae32d551231d74e11835f07a57d05a839" prot="public">
+          <name>UNIT_ON</name>
+          <initializer>= true</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a9200c13d18067ad91373fba773b88901a39c52181d63267d12d79de87ca0910cc" prot="public">
+          <name>UNIT_OFF</name>
+          <initializer>= false</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>describe if a timing unit has been initialized </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="245" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a06081c7a74ba8216b95790a95a2a07d9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_adc_t</name>
+        <enumvalue id="hrtim__enum_8h_1a06081c7a74ba8216b95790a95a2a07d9a2666a5dd6ad5957b0ba387e9c8bb5ccc" prot="public">
+          <name>ADC1R</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a06081c7a74ba8216b95790a95a2a07d9afa626499683dc8e541d703061a423136" prot="public">
+          <name>ADC2R</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a06081c7a74ba8216b95790a95a2a07d9aaa35a56aaaa6529fd68d6d874128d01c" prot="public">
+          <name>ADC3R</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a06081c7a74ba8216b95790a95a2a07d9af4b85b4f0efe7935a6bc58db2cdb7c1b" prot="public">
+          <name>ADC4R</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM ADC trigger registers definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="254" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="255" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a5b1a467530a96621387af7f5551f135b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_adc_edgetrigger_t</name>
+        <enumvalue id="hrtim__enum_8h_1a5b1a467530a96621387af7f5551f135bad02006acf28d4e7f65bb8e078896b07b" prot="public">
+          <name>EdgeTrigger_up</name>
+          <initializer>= LL_HRTIM_ROLLOVER_MODE_PER</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a5b1a467530a96621387af7f5551f135badd6874ee4723250d88d9199fd246e01c" prot="public">
+          <name>EdgeTrigger_down</name>
+          <initializer>= LL_HRTIM_ROLLOVER_MODE_RST</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a5b1a467530a96621387af7f5551f135bae05dc3ba37a486775fe74ec8e3f8db02" prot="public">
+          <name>EdgeTrigger_Both</name>
+          <initializer>= LL_HRTIM_ROLLOVER_MODE_BOTH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="262" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="263" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_external_trigger_t</name>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981adb6b4e449ecd6662ec959643c92c6c53" prot="public">
+          <name>EEV1</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981ace9f60d224cc74739fdd7447c0f629f1" prot="public">
+          <name>EEV2</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981aac32e52e30a2492f119950322a8c52ff" prot="public">
+          <name>EEV3</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981af8232dc98d07af046e56702c8519280f" prot="public">
+          <name>EEV4</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981a2e0ce821c09c0457b711a13b861abd19" prot="public">
+          <name>EEV5</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981aead07a1f8fb3d48635d1559dfb278eb3" prot="public">
+          <name>EEV6</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981aa1fac783e2223b1cf13ff7bf64c2112f" prot="public">
+          <name>EEV7</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981a5bff3d9794374f7b1c7febf93a8a0784" prot="public">
+          <name>EEV8</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a1cf798cd0923eff698db46cedbed5981adc788817a89c7fff9e0e56390ddc123a" prot="public">
+          <name>EEV9</name>
+          <initializer>= LL_HRTIM_OUTPUTRESET_EEV_9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>External eventcoming from comparator used for current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="272" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="273" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="enum" id="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hrtim_cnt_t</name>
+        <enumvalue id="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442ba8815a2e4174a883a84c52f623abca0ee" prot="public">
+          <name>Lft_aligned</name>
+          <initializer>= LL_HRTIM_COUNTING_MODE_UP</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442ba5c841ec18d04dd1d7145a24ce2d308c9" prot="public">
+          <name>UpDwn</name>
+          <initializer>= LL_HRTIM_COUNTING_MODE_UP_DOWN</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HRTIM counting mode setting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="288" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="289" bodyend="293"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hrtim__enum_8h_1a1e46077558f9b641a9a5f373fa4af59a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* hrtim_callback_t) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>hrtim_callback_t</name>
+        <briefdescription>
+<para>callback function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="40" column="13" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="hrtim__enum_8h_1a083f1b534cd9560062de5ff4a03daa1a" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t HRTIM_CHANNELS</definition>
+        <argsstring></argsstring>
+        <name>HRTIM_CHANNELS</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="42" column="26" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HRTIM_ENUM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HRTIM_ENUM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_hrtim.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32g4xx_ll_gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_bus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*hrtim_callback_t)();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>HRTIM_CHANNELS<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMA<sp/>=<sp/>LL_HRTIM_TIMER_A,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMB<sp/>=<sp/>LL_HRTIM_TIMER_B,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMC<sp/>=<sp/>LL_HRTIM_TIMER_C,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMD<sp/>=<sp/>LL_HRTIM_TIMER_D,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIME<sp/>=<sp/>LL_HRTIM_TIMER_E,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMF<sp/>=<sp/>LL_HRTIM_TIMER_F,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR<sp/>=<sp/>LL_HRTIM_TIMER_MASTER</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_tu_t;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMA<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMB<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMC<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMD<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWME<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMF<sp/>=<sp/>5</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_tu_number_t;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLK_GPIOA<sp/>=<sp/>LL_AHB2_GRP1_PERIPH_GPIOA,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLK_GPIOB<sp/>=<sp/>LL_AHB2_GRP1_PERIPH_GPIOB,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLK_GPIOC<sp/>=<sp/>LL_AHB2_GRP1_PERIPH_GPIOC</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_gpio_clock_number_t;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR_PER<sp/>=<sp/>LL_HRTIM_RESETTRIG_MASTER_PER,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR_CMP1<sp/>=<sp/>LL_HRTIM_RESETTRIG_MASTER_CMP1,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR_CMP2<sp/>=<sp/>LL_HRTIM_RESETTRIG_MASTER_CMP2,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR_CMP3<sp/>=<sp/>LL_HRTIM_RESETTRIG_MASTER_CMP3,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTR_CMP4<sp/>=<sp/>LL_HRTIM_RESETTRIG_MASTER_CMP4,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMA_CMP2<sp/>=<sp/>LL_HRTIM_RESETTRIG_OTHER1_CMP2</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_reset_trig_t;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VOLTAGE_MODE<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CURRENT_MODE<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_pwm_mode_t;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_NONE<sp/>=<sp/>LL_HRTIM_OUTPUTSET_NONE,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_CMP1<sp/>=<sp/>LL_HRTIM_OUTPUTSET_TIMCMP1,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_CMP2<sp/>=<sp/>LL_HRTIM_OUTPUTSET_TIMCMP2,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_CMP3<sp/>=<sp/>LL_HRTIM_OUTPUTSET_TIMCMP3,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_CMP4<sp/>=<sp/>LL_HRTIM_OUTPUTSET_TIMCMP4,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_PER<sp/>=<sp/>LL_HRTIM_OUTPUTSET_TIMPER</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_output_set_t;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_NONE<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_NONE,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_CMP1<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_TIMCMP1,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_CMP2<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_TIMCMP2,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_CMP3<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_TIMCMP3,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_CMP4<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_TIMCMP4,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RST_PER<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_TIMPER</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_output_reset_t;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMA1<sp/>=<sp/>LL_HRTIM_OUTPUT_TA1,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMA2<sp/>=<sp/>LL_HRTIM_OUTPUT_TA2,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMB1<sp/>=<sp/>LL_HRTIM_OUTPUT_TB1,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMB2<sp/>=<sp/>LL_HRTIM_OUTPUT_TB2,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMC1<sp/>=<sp/>LL_HRTIM_OUTPUT_TC1,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMC2<sp/>=<sp/>LL_HRTIM_OUTPUT_TC2,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMD1<sp/>=<sp/>LL_HRTIM_OUTPUT_TD1,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMD2<sp/>=<sp/>LL_HRTIM_OUTPUT_TD2,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWME1<sp/>=<sp/>LL_HRTIM_OUTPUT_TE1,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWME2<sp/>=<sp/>LL_HRTIM_OUTPUT_TE2,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMF1<sp/>=<sp/>LL_HRTIM_OUTPUT_TF1,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMF2<sp/>=<sp/>LL_HRTIM_OUTPUT_TF2</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_output_units_t;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMING_OUTPUT1,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMING_OUTPUT2,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}hrtim_output_number_t;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCTRIG_1<sp/>=<sp/>LL_HRTIM_ADCTRIG_1,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCTRIG_2<sp/>=<sp/>LL_HRTIM_ADCTRIG_2,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCTRIG_3<sp/>=<sp/>LL_HRTIM_ADCTRIG_3,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCTRIG_4<sp/>=<sp/>LL_HRTIM_ADCTRIG_4,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADCTRIG_NONE,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_adc_trigger_t;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMA_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_A,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMB_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_B,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMC_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_C,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMD_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_D,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWME_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_E,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMF_UPDT<sp/>=<sp/>LL_HRTIM_ADCTRIG_UPDATE_TIMER_F</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_adc_event_t;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMA_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMACMP3,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMB_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMBCMP3,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMC_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMCCMP3,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMD_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMDCMP3,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIME_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMECMP3,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TIMF_CMP3<sp/>=<sp/>LL_HRTIM_ADCTRIG_SRC13_TIMFCMP3</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_adc_source_t;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CMP1xR<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CMP2xR<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CMP3xR<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CMP4xR<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCMP1R<sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCMP2R<sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCMP3R<sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCMP4R<sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCMPER<sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_cmp_t;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OUT1<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OUT2<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_out_t;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMx1<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PWMx2<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_switch_convention_t;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USED<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FREE<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_comp_usage_t;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNIT_ON<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNIT_OFF<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_tu_ON_OFF_t;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADC1R<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADC2R<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADC3R<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ADC4R<sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_adc_t;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EdgeTrigger_up<sp/>=<sp/>LL_HRTIM_ROLLOVER_MODE_PER,</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EdgeTrigger_down<sp/>=<sp/>LL_HRTIM_ROLLOVER_MODE_RST,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EdgeTrigger_Both<sp/>=<sp/>LL_HRTIM_ROLLOVER_MODE_BOTH</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_adc_edgetrigger_t;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV1<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_1,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV2<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_2,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV3<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_3,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV4<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_4,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV5<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_5,</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV6<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_6,</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV7<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_7,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV8<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_8,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EEV9<sp/>=<sp/>LL_HRTIM_OUTPUTRESET_EEV_9</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_external_trigger_t;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lft_aligned<sp/>=<sp/>LL_HRTIM_COUNTING_MODE_UP,</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpDwn<sp/>=<sp/>LL_HRTIM_COUNTING_MODE_UP_DOWN<sp/></highlight><highlight class="comment">//<sp/>also<sp/>known<sp/>as<sp/>center<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>hrtim_cnt_t;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"></codeline>
+<codeline lineno="301" refid="structpwm__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_tu_t<sp/>pwm_tu;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Timing<sp/>Unit<sp/>associated<sp/>with<sp/>the<sp/>PWM<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>rise_dead_time;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Rising<sp/>Edge<sp/>Dead<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>fall_dead_time;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Falling<sp/>Edge<sp/>Dead<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>duty_cycle;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Current<sp/>value<sp/>of<sp/>its<sp/>duty<sp/>cycle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>period;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Period<sp/>used<sp/>by<sp/>the<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>frequency;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Frequency<sp/>used<sp/>by<sp/>the<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_cnt_t<sp/>modulation;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Type<sp/>of<sp/>modulation<sp/>used<sp/>for<sp/>this<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_tu_ON_OFF_t<sp/>unit_on;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>State<sp/>of<sp/>the<sp/>time<sp/>unit<sp/>(ON/OFF)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ckpsc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Holds<sp/>the<sp/>clock<sp/>pre-scaler<sp/>of<sp/>the<sp/>timing<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_pwm_mode_t<sp/>pwm_mode;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>pwm<sp/>mode<sp/>for<sp/>voltage<sp/>mode<sp/>or<sp/>current<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_external_trigger_t<sp/>external_trigger;<sp/></highlight><highlight class="comment">/*<sp/>external<sp/>trigger<sp/>event<sp/>for<sp/>current<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpwm__conf__t" kindref="compound">pwm_conf_t</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="structphase__shift__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>value;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Value<sp/>of<sp/>the<sp/>phase<sp/>shift<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_tu_t<sp/>compare_tu;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compare<sp/>timing<sp/>unit<sp/>used<sp/>to<sp/>make<sp/>the<sp/>phase<sp/>shift<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_reset_trig_t<sp/>reset_trig;<sp/></highlight><highlight class="comment">/*<sp/>Pulse<sp/>width<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structphase__shift__conf__t" kindref="compound">phase_shift_conf_t</ref>;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="structgpio__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_TypeDef<sp/>*unit;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>GPIO<sp/>structure<sp/>to<sp/>which<sp/>the<sp/>TU<sp/>pins<sp/>belong<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LL_GPIO_InitTypeDef<sp/>switch_H;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Details<sp/>of<sp/>the<sp/>high-side<sp/>switch<sp/>gpio<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_output_units_t<sp/>OUT_H;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>High-side<sp/>switch<sp/>hrtim<sp/>output<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LL_GPIO_InitTypeDef<sp/>switch_L;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Details<sp/>of<sp/>the<sp/>low-side<sp/>switch<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_output_units_t<sp/>OUT_L;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Low-side<sp/>switch<sp/>hrtim<sp/>output<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_gpio_clock_number_t<sp/>tu_gpio_CLK;<sp/></highlight><highlight class="comment">/*<sp/>Gpio<sp/>clock<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgpio__conf__t" kindref="compound">gpio_conf_t</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="structswitch__conv__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_switch_convention_t<sp/>convention;<sp/></highlight><highlight class="comment">/*<sp/>High-side<sp/>or<sp/>Low-side<sp/>switch<sp/>convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>set_H[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>event<sp/>used<sp/>to<sp/>the<sp/>High-side<sp/>switch<sp/>on<sp/>the<sp/>high-side<sp/>convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>reset_H[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>event<sp/>used<sp/>to<sp/>the<sp/>Low-side<sp/>switch<sp/>on<sp/>the<sp/>high-side<sp/>convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>set_L[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>event<sp/>used<sp/>to<sp/>the<sp/>High-side<sp/>switch<sp/>on<sp/>the<sp/>high-side<sp/>convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>reset_L[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>event<sp/>used<sp/>to<sp/>the<sp/>Low-side<sp/>switch<sp/>on<sp/>the<sp/>high-side<sp/>convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structswitch__conv__conf__t" kindref="compound">switch_conv_conf_t</ref>;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="structadc__hrtim__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_adc_event_t<sp/>adc_event;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ADC<sp/>event<sp/>linked<sp/>to<sp/>this<sp/>PWM<sp/>time<sp/>unit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_adc_source_t<sp/>adc_source;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ADC<sp/>time<sp/>unit<sp/>linked<sp/>to<sp/>this<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_adc_trigger_t<sp/>adc_trigger;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ADC<sp/>trigger<sp/>between<sp/>source<sp/>and<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_adc_edgetrigger_t<sp/>adc_rollover;<sp/></highlight><highlight class="comment">/*<sp/>ADC<sp/>rollover<sp/>only<sp/>relevant<sp/>in<sp/>center<sp/>aligned<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structadc__hrtim__conf__t" kindref="compound">adc_hrtim_conf_t</ref>;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="structcomp__usage__conf__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_comp_usage_t<sp/>cmp1;<sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>1<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cmp1_value;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>1<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_comp_usage_t<sp/>cmp2;<sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>2<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cmp2_value;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>1<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_comp_usage_t<sp/>cmp3;<sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>3<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cmp3_value;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>1<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hrtim_comp_usage_t<sp/>cmp4;<sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>4<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>cmp4_value;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>if<sp/>the<sp/>COMP<sp/>1<sp/>of<sp/>the<sp/>tu<sp/>is<sp/>being<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structcomp__usage__conf__t" kindref="compound">comp_usage_conf_t</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>COMPARATOR_DRIVER_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h"/>
+  </compounddef>
+</doxygen>

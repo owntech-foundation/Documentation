@@ -1,0 +1,36 @@
+{
+    "name": "control_library",
+    "version": "0.1",
+    "description": "Library to help control of OwnTech power electronics.",
+    "keywords": "OwnTech Power Electronics Control",
+    "repository":
+    {
+      "type": "git", 
+      "url": "https://gitlab.laas.fr:rruelland/otlib_motor_control.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Regis Ruelland",
+        "email": "regis.ruelland@laas.fr"
+      },
+      {
+          "name": "Luiz Villa",
+          "email":"luiz.villa@laas.fr"
+      },
+      {
+          "name": "Guillaume Arthaud",
+          "email": "guillaume.arthaud@laas.fr"
+      },
+      {
+          "name": "Ayoub Farah Hassan",
+          "email": "ayoub.farah-hassan@laas.fr"
+      }
+    ],
+    "export" : 
+    {
+        "exclude": ["test*"]
+    },
+    "license": " LGPL-2.1-only",
+    "homepage": "https://www.owntech.org/"
+}

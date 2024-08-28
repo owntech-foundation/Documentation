@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdac__driver__api" kind="struct" language="C++" prot="public">
+    <compoundname>dac_driver_api</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdac__driver__api_1a2c823e6a5820eb4bceb3264937714872" prot="public" static="no" mutable="no">
+        <type>dac_api_setconstvalue</type>
+        <definition>dac_api_setconstvalue dac_driver_api::setconstvalue</definition>
+        <argsstring></argsstring>
+        <name>setconstvalue</name>
+        <qualifiedname>dac_driver_api::setconstvalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="103" column="27" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1aa32088534b74e1030bb8c70260bc71f6" prot="public" static="no" mutable="no">
+        <type>dac_api_setfunction</type>
+        <definition>dac_api_setfunction dac_driver_api::setfunction</definition>
+        <argsstring></argsstring>
+        <name>setfunction</name>
+        <qualifiedname>dac_driver_api::setfunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="104" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1ac2942f1f7157e6eaaec263d606cbd626" prot="public" static="no" mutable="no">
+        <type>dac_api_fn_upd_reset</type>
+        <definition>dac_api_fn_upd_reset dac_driver_api::fn_upd_reset</definition>
+        <argsstring></argsstring>
+        <name>fn_upd_reset</name>
+        <qualifiedname>dac_driver_api::fn_upd_reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="105" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1aae2a2977533976f772fa170a0ed011d5" prot="public" static="no" mutable="no">
+        <type>dac_api_fn_upd_step</type>
+        <definition>dac_api_fn_upd_step dac_driver_api::fn_upd_step</definition>
+        <argsstring></argsstring>
+        <name>fn_upd_step</name>
+        <qualifiedname>dac_driver_api::fn_upd_step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="106" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1a645e450ee28ec2d26046b78ae585e0d4" prot="public" static="no" mutable="no">
+        <type>dac_api_pinconfigure</type>
+        <definition>dac_api_pinconfigure dac_driver_api::pinconfigure</definition>
+        <argsstring></argsstring>
+        <name>pinconfigure</name>
+        <qualifiedname>dac_driver_api::pinconfigure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="107" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1afffa63fb46a1deb97cf73252dcde69b9" prot="public" static="no" mutable="no">
+        <type>dac_api_start</type>
+        <definition>dac_api_start dac_driver_api::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>dac_driver_api::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="108" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__driver__api_1ab9f34201c47d54118939531243a9340a" prot="public" static="no" mutable="no">
+        <type>dac_api_stop</type>
+        <definition>dac_api_stop dac_driver_api::stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <qualifiedname>dac_driver_api::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="109" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dac_driver_api</label>
+        <link refid="structdac__driver__api"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>setfunction</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dac_function_config_t</label>
+        <link refid="structdac__function__config__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="101" column="12" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="102" bodyend="110"/>
+    <listofallmembers>
+      <member refid="structdac__driver__api_1ac2942f1f7157e6eaaec263d606cbd626" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>fn_upd_reset</name></member>
+      <member refid="structdac__driver__api_1aae2a2977533976f772fa170a0ed011d5" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>fn_upd_step</name></member>
+      <member refid="structdac__driver__api_1a645e450ee28ec2d26046b78ae585e0d4" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>pinconfigure</name></member>
+      <member refid="structdac__driver__api_1a2c823e6a5820eb4bceb3264937714872" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>setconstvalue</name></member>
+      <member refid="structdac__driver__api_1aa32088534b74e1030bb8c70260bc71f6" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>setfunction</name></member>
+      <member refid="structdac__driver__api_1afffa63fb46a1deb97cf73252dcde69b9" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>start</name></member>
+      <member refid="structdac__driver__api_1ab9f34201c47d54118939531243a9340a" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classCompHAL" kind="class" language="C++" prot="public">
+    <compoundname>CompHAL</compoundname>
+    <includes refid="CompHAL_8h" local="no">CompHAL.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CompHAL::initialize</definition>
+        <argsstring>(uint8_t comparator_number)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>CompHAL::initialize</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>comparator_number</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a comparator for the current mode control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Current mode control deploys a comparator together with a DAC. This function must be called after setting up the DAC linked to the comparator. Note that comparator 1 is linked with DAC3 and comparator 3 with DAC1. Comparator 1 is linked with ilow1 and comparator 3 is linked with ilow2.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comparator_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be either 1 or 3</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="date"><para>2023</para>
+</simplesect>
+<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="50" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.cpp" bodystart="37" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles comparator 1 and 3 of the SPIN board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Use this element to call the initialization function of either comparator </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" bodystart="38" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" prot="public" virt="non-virtual"><scope>CompHAL</scope><name>initialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

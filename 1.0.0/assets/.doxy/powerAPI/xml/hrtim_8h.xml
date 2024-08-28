@@ -1,0 +1,2405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="hrtim_8h" kind="file" language="C++">
+    <compoundname>hrtim.h</compoundname>
+    <innerclass refid="structtimer__hrtim__t" prot="public">timer_hrtim_t</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="hrtim_8h_1ace7b97bbcac9805a385db7095cb83194" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="structtimer__hrtim__t" kindref="compound">timer_hrtim_t</ref> *</type>
+        <definition>timer_hrtim_t* tu_channel[HRTIM_STU_NUMOF]</definition>
+        <argsstring>[HRTIM_STU_NUMOF]</argsstring>
+        <name>tu_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="67" column="22" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="67" declcolumn="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hrtim_8h_1a2e5264b06327e1e4505e24a60f86cf18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hrtim_get_apb2_clock</definition>
+        <argsstring>()</argsstring>
+        <name>hrtim_get_apb2_clock</name>
+        <briefdescription>
+<para>Gets the APB2 clock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="75" column="5" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="75" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a6bdd1bac42011c8fbfea65545a1349a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_init_default_all</definition>
+        <argsstring>()</argsstring>
+        <name>hrtim_init_default_all</name>
+        <briefdescription>
+<para>this function initalize all the default parameters for each timing unit structure </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>this function must be called before changing any timing unit parameters (frequency, phase_shift) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="81" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="81" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a9ea562cc2afd2cef8cf20ffd8a69a801" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t hrtim_tu_init</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_tu_init</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>timing unit period </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="95" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="95" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a844b0875827bd527771e389f666fcd25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_tu_ON_OFF_t</type>
+        <definition>hrtim_tu_ON_OFF_t hrtim_get_status</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_get_status</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns if the timer was initialized with default value or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="108" column="19" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="108" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a7d8f545d4ada07115107ef64841042d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_tu_gpio_init</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_tu_gpio_init</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the gpio elements of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="121" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="121" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a67fb8d14a9a49b201108048fb0de7650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_out_dis</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_out_dis</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Disables the output of a given timingg unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="134" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a283643748ae11c19e6530c081cc97ece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_out_en</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_out_en</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Enables the output of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="147" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="147" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ac6c81692f1e6ae33912cf18e80dda4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_out_en_single</definition>
+        <argsstring>(hrtim_output_units_t PWM_OUT)</argsstring>
+        <name>hrtim_out_en_single</name>
+        <param>
+          <type>hrtim_output_units_t</type>
+          <declname>PWM_OUT</declname>
+        </param>
+        <briefdescription>
+<para>Enables only one output of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_OUT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output pin to be chosen: <itemizedlist>
+<listitem><para>PWMA1 </para>
+</listitem>
+<listitem><para>PWMA2 </para>
+</listitem>
+<listitem><para>PWMB1 </para>
+</listitem>
+<listitem><para>PWMB2 </para>
+</listitem>
+<listitem><para>PWMC1 </para>
+</listitem>
+<listitem><para>PWMC2 </para>
+</listitem>
+<listitem><para>PWMD1 </para>
+</listitem>
+<listitem><para>PWMD2 </para>
+</listitem>
+<listitem><para>PWME1 </para>
+</listitem>
+<listitem><para>PWME2 </para>
+</listitem>
+<listitem><para>PWMF1 </para>
+</listitem>
+<listitem><para>PWMF2 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="166" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="166" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aeb77b60ab236eb9dd211acc4761127be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_out_dis_single</definition>
+        <argsstring>(hrtim_output_units_t PWM_OUT)</argsstring>
+        <name>hrtim_out_dis_single</name>
+        <param>
+          <type>hrtim_output_units_t</type>
+          <declname>PWM_OUT</declname>
+        </param>
+        <briefdescription>
+<para>Disables only one output of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_OUT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output pin to be chosen: <itemizedlist>
+<listitem><para>PWMA1 </para>
+</listitem>
+<listitem><para>PWMA2 </para>
+</listitem>
+<listitem><para>PWMB1 </para>
+</listitem>
+<listitem><para>PWMB2 </para>
+</listitem>
+<listitem><para>PWMC1 </para>
+</listitem>
+<listitem><para>PWMC2 </para>
+</listitem>
+<listitem><para>PWMD1 </para>
+</listitem>
+<listitem><para>PWMD2 </para>
+</listitem>
+<listitem><para>PWME1 </para>
+</listitem>
+<listitem><para>PWME2 </para>
+</listitem>
+<listitem><para>PWMF1 </para>
+</listitem>
+<listitem><para>PWMF2 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="185" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="185" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aa484a6a8ff61a7da4b3ccf698d596033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_set_modulation</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_cnt_t modulation)</argsstring>
+        <name>hrtim_set_modulation</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_cnt_t</type>
+          <declname>modulation</declname>
+        </param>
+        <briefdescription>
+<para>Sets the switching convention of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">modulation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>modulation: <itemizedlist>
+<listitem><para>Lft_aligned = LL_HRTIM_COUNTING_MODE_UP, </para>
+</listitem>
+<listitem><para>UpDwn = LL_HRTIM_COUNTING_MODE_UP_DOWN </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="201" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="201" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aa32bdc70261b1fa910c04cc480d11dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_cnt_t</type>
+        <definition>hrtim_cnt_t hrtim_get_modulation</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_get_modulation</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Gets the switching convention of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>modulation: <itemizedlist>
+<listitem><para>Lft_aligned, </para>
+</listitem>
+<listitem><para>UpDwn </para>
+</listitem>
+</itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="217" column="13" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="217" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a98067bd24e22f18b4399aa0eb297fbbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_set_switch_convention</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_switch_convention_t convention)</argsstring>
+        <name>hrtim_set_switch_convention</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_switch_convention_t</type>
+          <declname>convention</declname>
+        </param>
+        <briefdescription>
+<para>Sets the switching convention of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">convention</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Switching convention: <itemizedlist>
+<listitem><para>PWMx1 </para>
+</listitem>
+<listitem><para>PWMx2 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="233" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="233" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1afc65f5b375f47305d116b4663a02821f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_switch_convention_t</type>
+        <definition>hrtim_switch_convention_t hrtim_get_switch_convention</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_get_switch_convention</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Gets the switching convention of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Switching convention of the given time unit <itemizedlist>
+<listitem><para>HIGH = 0, </para>
+</listitem>
+<listitem><para>LOW = 1 </para>
+</listitem>
+</itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="249" column="27" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="249" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1acd62d83382ae3c19848034b8ba21fe00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_cmpl_pwm_out1</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_cmpl_pwm_out1</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Activates OUT 1 (switch H) with a given switching convention. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="262" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="262" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a16a347bd8643190ec474a9caf6912b15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_cmpl_pwm_out2</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_cmpl_pwm_out2</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Activates OUT 2 (switch L) with a given switching convention. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="275" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="275" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a4545279553facff6316ee64d2117b0c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_frequency_set</definition>
+        <argsstring>(uint32_t frequency_set, uint32_t frequency_min)</argsstring>
+        <name>hrtim_frequency_set</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_set</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the period of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="289" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="289" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ab6e465c9014bfc4b81cff2726827ae9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t hrtim_period_get</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_period_get</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns the period of a given timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Period of the timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="303" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="303" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ade0093fd39a6279114c47358df1fb6d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t hrtim_period_Master_get</definition>
+        <argsstring>()</argsstring>
+        <name>hrtim_period_Master_get</name>
+        <briefdescription>
+<para>Returns the period of a master timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Period of the master timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="310" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="310" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a7e73e86c7dc6a31e980263d4f7a3521d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t hrtim_period_get_us</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_period_get_us</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns the period of a given timing unit in microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Period of the timing unit in microseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="324" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="324" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a352014ad6233a538f11b2d8752345028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t hrtim_period_Master_get_us</definition>
+        <argsstring>()</argsstring>
+        <name>hrtim_period_Master_get_us</name>
+        <briefdescription>
+<para>Returns the period of the master timer in microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Period of the timer master in microseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="331" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="331" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a8a03614bfa8448316ebcf459beb8860e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_tu_cmp_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_cmp_t cmp, uint16_t value)</argsstring>
+        <name>hrtim_tu_cmp_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_cmp_t</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets one of the four comparators of the HRTIM master timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Master comparators: <itemizedlist>
+<listitem><para>CMP1xR = 1, </para>
+</listitem>
+<listitem><para>CMP2xR = 2, </para>
+</listitem>
+<listitem><para>CMP3xR = 3, </para>
+</listitem>
+<listitem><para>CMP4xR = 4 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparator new value to set: </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="343" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="343" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a2483ba5318db46893f8a1572b4f08f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_master_cmp_set</definition>
+        <argsstring>(hrtim_cmp_t cmp, uint16_t value)</argsstring>
+        <name>hrtim_master_cmp_set</name>
+        <param>
+          <type>hrtim_cmp_t</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets one of the four comparators of the HRTIM master timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Master comparators: <itemizedlist>
+<listitem><para>MCMP1R = 1, </para>
+</listitem>
+<listitem><para>MCMP2R = 2 </para>
+</listitem>
+<listitem><para>MCMP3R = 3, </para>
+</listitem>
+<listitem><para>MCMP4R = 4 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparator new value to set: </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="355" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="355" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aef5641593dfd29400edc18980958217d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_dt_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, uint16_t rise_ns, uint16_t fall_ns)</argsstring>
+        <name>hrtim_dt_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>rise_ns</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>fall_ns</declname>
+        </param>
+        <briefdescription>
+<para>Sets up a dead time in nano second for given complementary outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rise_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired dead time of the rising edge in nano second </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fall_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired dead time of the falling edge in nano second </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="371" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="371" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1afb07bc408499fcc59cadbd41624375eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_duty_cycle_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, uint16_t value)</argsstring>
+        <name>hrtim_duty_cycle_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Updates the duty cycle of a timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired duty cycle value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="385" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="385" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ab50bc547a70fece1701a652290231bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_phase_shift_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, uint16_t shift)</argsstring>
+        <name>hrtim_phase_shift_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+<para>Shifts the PWM of a timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired phase shift value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="399" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="399" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1acd059b1d01a67b0b5c84b31521bbbe76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_dt_init</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_dt_init</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the dead-time for the PWM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="412" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="412" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ab33a9a08036cbdfff2b63d390ac0d1e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_cnt_en</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_cnt_en</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Enables a timing unit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="425" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="425" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a5a61508c2cb1df40bc5f869b3d79a9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_cnt_dis</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_cnt_dis</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Disables a timing unit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="438" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="438" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a16a948ae1f25f4e06ce963fc696a132b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_rst_evt_en</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt)</argsstring>
+        <name>hrtim_rst_evt_en</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_reset_trig_t</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Enables a timer counter reset event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset EVent: <itemizedlist>
+<listitem><para>MSTR_PER = LL_HRTIM_RESETTRIG_MASTER_PER, </para>
+</listitem>
+<listitem><para>MSTR_CMP1 = LL_HRTIM_RESETTRIG_MASTER_CMP1, </para>
+</listitem>
+<listitem><para>MSTR_CMP2 = LL_HRTIM_RESETTRIG_MASTER_CMP2, </para>
+</listitem>
+<listitem><para>MSTR_CMP3 = LL_HRTIM_RESETTRIG_MASTER_CMP3, </para>
+</listitem>
+<listitem><para>MSTR_CMP4 = LL_HRTIM_RESETTRIG_MASTER_CMP4, </para>
+</listitem>
+<listitem><para>PWMA_CMP2 = LL_HRTIM_RESETTRIG_OTHER1_CMP2 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="458" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="458" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1af1ad64931a54c22b61d422aa520caeb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_rst_evt_dis</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt)</argsstring>
+        <name>hrtim_rst_evt_dis</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_reset_trig_t</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Disables a timer counter reset event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset EVent: <itemizedlist>
+<listitem><para>MSTR_PER = LL_HRTIM_RESETTRIG_MASTER_PER, </para>
+</listitem>
+<listitem><para>MSTR_CMP1 = LL_HRTIM_RESETTRIG_MASTER_CMP1, </para>
+</listitem>
+<listitem><para>MSTR_CMP2 = LL_HRTIM_RESETTRIG_MASTER_CMP2, </para>
+</listitem>
+<listitem><para>MSTR_CMP3 = LL_HRTIM_RESETTRIG_MASTER_CMP3, </para>
+</listitem>
+<listitem><para>MSTR_CMP4 = LL_HRTIM_RESETTRIG_MASTER_CMP4, </para>
+</listitem>
+<listitem><para>PWMA_CMP2 = LL_HRTIM_RESETTRIG_OTHER1_CMP2 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="478" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="478" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a531162eb57c125c60284eaf093d00b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_adc_trigger_set_postscaler</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, uint32_t ps_ratio)</argsstring>
+        <name>hrtim_adc_trigger_set_postscaler</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ps_ratio</declname>
+        </param>
+        <briefdescription>
+<para>Sets the HRTIM event postsaler. Postscaler ratio indicates how many potential events will be ignored between two events which are effectively generated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ps_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Post scaler ratio (0 = no post scaler, default) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="487" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="487" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a3fb73f2f40a292136bb056b2680102e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_adc_trigger_en</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_adc_trigger_en</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Configures and enables an ADC trigger event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="500" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="500" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a8166babe910722bdc5dc3db2a80ec76a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_adc_trigger_dis</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_adc_trigger_dis</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Disbables a ADCx trigger event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="513" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="513" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ac79de907e4c862eb3b437ef245b2d93e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_adc_rollover_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_adc_edgetrigger_t adc_rollover)</argsstring>
+        <name>hrtim_adc_rollover_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_adc_edgetrigger_t</type>
+          <declname>adc_rollover</declname>
+        </param>
+        <briefdescription>
+<para>Configures the adc rollover mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_rollover</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rollover mode <itemizedlist>
+<listitem><para>EdgeTrigger_up </para>
+</listitem>
+<listitem><para>EdgeTrigger_down </para>
+</listitem>
+<listitem><para>EdgeTrigger_Both </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="531" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="531" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aa60272092443ff1fc1207eda93b11bc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_adc_edgetrigger_t</type>
+        <definition>hrtim_adc_edgetrigger_t hrtim_adc_rollover_get</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_adc_rollover_get</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns the adc rollover mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>adc_rollover rollover mode : <itemizedlist>
+<listitem><para>EdgeTrigger_up </para>
+</listitem>
+<listitem><para>EdgeTrigger_down </para>
+</listitem>
+<listitem><para>EdgeTrigger_Both </para>
+</listitem>
+</itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="549" column="25" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="549" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ad444cf28b59010b7512f8c945456ac61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_PeriodicEvent_configure</definition>
+        <argsstring>(hrtim_tu_t tu, uint32_t repetition, hrtim_callback_t callback)</argsstring>
+        <name>hrtim_PeriodicEvent_configure</name>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>tu</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>repetition</declname>
+        </param>
+        <param>
+          <type>hrtim_callback_t</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Configures interrupt on repetition counter for the chosen timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit which will be the source for the ISR: <itemizedlist>
+<listitem><para>MSTR </para>
+</listitem>
+<listitem><para>TIMA </para>
+</listitem>
+<listitem><para>TIMB </para>
+</listitem>
+<listitem><para>TIMC </para>
+</listitem>
+<listitem><para>TIMD </para>
+</listitem>
+<listitem><para>TIME </para>
+</listitem>
+<listitem><para>TIMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>repetition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value between 1 and 256 for the repetition counter: period of the event wrt. periods of the HRTIM. E.g. when set to 10, one event will be triggered every 10 HRTIM period. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a void(void) function that will be called when the event is triggerred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="567" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="567" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a7d580e0cbb7d4048e3a87e893ed45d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_PeriodicEvent_en</definition>
+        <argsstring>(hrtim_tu_t tu)</argsstring>
+        <name>hrtim_PeriodicEvent_en</name>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>tu</declname>
+        </param>
+        <briefdescription>
+<para>Enables interrupt on repetition counter for the chosen timing unit. The periodic event configuration must have been done previously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit which will be the source for the ISR: <itemizedlist>
+<listitem><para>MSTR </para>
+</listitem>
+<listitem><para>TIMA </para>
+</listitem>
+<listitem><para>TIMB </para>
+</listitem>
+<listitem><para>TIMC </para>
+</listitem>
+<listitem><para>TIMD </para>
+</listitem>
+<listitem><para>TIME </para>
+</listitem>
+<listitem><para>TIMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="581" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="581" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aabb4c38315c1ce4f9cfb16f984138332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_PeriodicEvent_dis</definition>
+        <argsstring>(hrtim_tu_t tu)</argsstring>
+        <name>hrtim_PeriodicEvent_dis</name>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>tu</declname>
+        </param>
+        <briefdescription>
+<para>Disables interrupt on repetition counter for the chosen timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit which will be the source for the ISR: <itemizedlist>
+<listitem><para>MSTR </para>
+</listitem>
+<listitem><para>TIMA </para>
+</listitem>
+<listitem><para>TIMB </para>
+</listitem>
+<listitem><para>TIMC </para>
+</listitem>
+<listitem><para>TIMD </para>
+</listitem>
+<listitem><para>TIME </para>
+</listitem>
+<listitem><para>TIMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="594" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="594" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a53c2e48933300ed7bcf4b989ae8288bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_PeriodicEvent_SetRep</definition>
+        <argsstring>(hrtim_tu_t tu, uint32_t repetition)</argsstring>
+        <name>hrtim_PeriodicEvent_SetRep</name>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>tu</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>repetition</declname>
+        </param>
+        <briefdescription>
+<para>Changes the repetition counter value to control the ISR interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit which will be the source for the ISR: <itemizedlist>
+<listitem><para>MSTR </para>
+</listitem>
+<listitem><para>TIMA </para>
+</listitem>
+<listitem><para>TIMB </para>
+</listitem>
+<listitem><para>TIMC </para>
+</listitem>
+<listitem><para>TIMD </para>
+</listitem>
+<listitem><para>TIME </para>
+</listitem>
+<listitem><para>TIMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>repetion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value between 1 and 256 for the repetition counter: period of the event wrt. periods of the HRTIM. E.g. when set to 10, one event will be triggered every 10 HRTIM period. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="610" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="610" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ae9be83f2d19953b2dea75e88fcf2df4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t hrtim_PeriodicEvent_GetRep</definition>
+        <argsstring>(hrtim_tu_t tu)</argsstring>
+        <name>hrtim_PeriodicEvent_GetRep</name>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>tu</declname>
+        </param>
+        <briefdescription>
+<para>Gets the current value of the repetition counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit which will be the source for the ISR <itemizedlist>
+<listitem><para>MSTR </para>
+</listitem>
+<listitem><para>TIMA </para>
+</listitem>
+<listitem><para>TIMB </para>
+</listitem>
+<listitem><para>TIMC </para>
+</listitem>
+<listitem><para>TIMD </para>
+</listitem>
+<listitem><para>TIME </para>
+</listitem>
+<listitem><para>TIMF </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value between 1 and 256 for the repetition counter: period of the event wrt. periods of the HRTIM. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="625" column="10" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="625" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a58ac4aa23e6db07a53e10903cc38bd77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DualDAC_init</definition>
+        <argsstring>(hrtim_tu_number_t tu)</argsstring>
+        <name>DualDAC_init</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu</declname>
+        </param>
+        <briefdescription>
+<para>Initializes dual DAC reset and trigger. The selected timing unit CMP2 will trigger the step (Decrement/Increment of sawtooth) and the reset (return to initial value). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timing unit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="634" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="634" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a54d6c998327d43767d0565b0e07cd6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_pwm_mode_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_pwm_mode_t mode)</argsstring>
+        <name>hrtim_pwm_mode_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_pwm_mode_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pwm mode : voltage or current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm mode: <itemizedlist>
+<listitem><para>VOLTAGE_MODE </para>
+</listitem>
+<listitem><para>CURRENT_MODE </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="651" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="651" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a3a93a479f426d32c4d370a9706ddf973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_pwm_mode_t</type>
+        <definition>hrtim_pwm_mode_t hrtim_pwm_mode_get</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_pwm_mode_get</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns timing unit pwm mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CURRENT_MODE or VOLTAGE_MODE </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="657" column="18" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="657" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a4808eca151864af294fff76a9dd6a5a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_adc_triger_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_adc_trigger_t adc_trig)</argsstring>
+        <name>hrtim_adc_triger_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_adc_trigger_t</type>
+          <declname>adc_trig</declname>
+        </param>
+        <briefdescription>
+<para>Sets the adc trigger number for a timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_trig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm mode: <itemizedlist>
+<listitem><para>ADCTRIG_1 </para>
+</listitem>
+<listitem><para>ADCTRIG_2 </para>
+</listitem>
+<listitem><para>ADCTRIG_3 </para>
+</listitem>
+<listitem><para>ADCTRIG_4 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="676" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="676" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1aca88caf294365cb56e9ae0ea0359d6c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_adc_trigger_t</type>
+        <definition>hrtim_adc_trigger_t hrtim_adc_triger_get</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_adc_triger_get</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns the adc trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>ADCTRIG_1 = ADC trigger 1, </para>
+</listitem>
+<listitem><para>ADCTRIG_2 = ADC trigger 2, </para>
+</listitem>
+<listitem><para>ADCTRIG_3 = ADC trigger 3, </para>
+</listitem>
+<listitem><para>ADCTRIG_4 = ADC trigger 4 </para>
+</listitem>
+</itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="686" column="21" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="686" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a20ef1290f7ec12dbfd0468ab9d6f8915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_eev_set</definition>
+        <argsstring>(hrtim_tu_number_t tu_number, hrtim_external_trigger_t eev)</argsstring>
+        <name>hrtim_eev_set</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <param>
+          <type>hrtim_external_trigger_t</type>
+          <declname>eev</declname>
+        </param>
+        <briefdescription>
+<para>Sets the external event used in current mode for a timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing unit number: <itemizedlist>
+<listitem><para>PWMA </para>
+</listitem>
+<listitem><para>PWMB </para>
+</listitem>
+<listitem><para>PWMC </para>
+</listitem>
+<listitem><para>PWMD </para>
+</listitem>
+<listitem><para>PWME </para>
+</listitem>
+<listitem><para>PWMF</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_trig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm mode: <itemizedlist>
+<listitem><para>EEV1 </para>
+</listitem>
+<listitem><para>EEV2 </para>
+</listitem>
+<listitem><para>EEV3 </para>
+</listitem>
+<listitem><para>EEV4 </para>
+</listitem>
+<listitem><para>EEV5 </para>
+</listitem>
+<listitem><para>EEV6 </para>
+</listitem>
+<listitem><para>EEV7 </para>
+</listitem>
+<listitem><para>EEV8 </para>
+</listitem>
+<listitem><para>EEV9 </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="710" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="710" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1ad6eeb07361ae6b0b9965d56bae228b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_external_trigger_t</type>
+        <definition>hrtim_external_trigger_t hrtim_eev_get</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>hrtim_eev_get</name>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>Returns the external event trigger used in current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><itemizedlist>
+<listitem><para>EEV1 = external event 1, </para>
+</listitem>
+<listitem><para>EEV2 = external event 2, </para>
+</listitem>
+<listitem><para>EEV3 = external event 3, </para>
+</listitem>
+<listitem><para>EEV4 = external event 4, </para>
+</listitem>
+<listitem><para>EEV5 = external event 5, </para>
+</listitem>
+<listitem><para>EEV6 = external event 6, </para>
+</listitem>
+<listitem><para>EEV7 = external event 7, </para>
+</listitem>
+<listitem><para>EEV8 = external event 8, </para>
+</listitem>
+<listitem><para>EEV9 = external event 9 </para>
+</listitem>
+</itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="725" column="26" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="725" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="hrtim_8h_1a9630ccd98dc0e5c73c09297e40f90156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hrtim_change_frequency</definition>
+        <argsstring>(uint32_t new_frequency)</argsstring>
+        <name>hrtim_change_frequency</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>new_frequency</declname>
+        </param>
+        <briefdescription>
+<para>Change the frequency/period after it has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">new_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>the new frequency can&apos;t be inferior to the the one set in the initialization step </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" line="732" column="6" declfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h" declline="732" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2023</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>@author<sp/>Luiz<sp/>Villa<sp/>&lt;luiz.villa@laas.fr&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HRTIM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HRTIM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;arm_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hrtim_enum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TU_DEFAULT_DT<sp/>(100U)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dead-time<sp/>in<sp/>ns<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TU_DEFAULT_FREQ<sp/>(200000U)<sp/><sp/></highlight><highlight class="comment">/*<sp/>frequency<sp/>in<sp/>Hz<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TU_DEFAULT_PERIOD<sp/>(27200U)<sp/></highlight><highlight class="comment">/*<sp/>default<sp/>period<sp/>for<sp/>200kHz<sp/>in<sp/>bits<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HRTIM_MCR_TFCEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HRTIM_STU_NUMOF<sp/>(6U)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HRTIM_STU_NUMOF<sp/>(5U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structtimer__hrtim__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpwm__conf__t" kindref="compound">pwm_conf_t</ref><sp/>pwm_conf;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pulse<sp/>Width<sp/>Modulation<sp/>Configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structphase__shift__conf__t" kindref="compound">phase_shift_conf_t</ref><sp/>phase_shift;<sp/></highlight><highlight class="comment">/*<sp/>Phase<sp/>shift<sp/>configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgpio__conf__t" kindref="compound">gpio_conf_t</ref><sp/>gpio_conf;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pulse<sp/>width<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structswitch__conv__conf__t" kindref="compound">switch_conv_conf_t</ref><sp/>switch_conv;<sp/></highlight><highlight class="comment">/*<sp/>Switch<sp/>Convention<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structadc__hrtim__conf__t" kindref="compound">adc_hrtim_conf_t</ref><sp/>adc_hrtim;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ADC<sp/>-<sp/>HRTIM<sp/>setup*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcomp__usage__conf__t" kindref="compound">comp_usage_conf_t</ref><sp/>comp_usage;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Usage<sp/>of<sp/>comp1<sp/>to<sp/>comp4<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><ref refid="structtimer__hrtim__t" kindref="compound">timer_hrtim_t</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structtimer__hrtim__t" kindref="compound">timer_hrtim_t</ref><sp/>*tu_channel[HRTIM_STU_NUMOF];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hrtim_get_apb2_clock();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_init_default_all();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">uint16_t<sp/>hrtim_tu_init(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">hrtim_tu_ON_OFF_t<sp/>hrtim_get_status(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_tu_gpio_init(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_out_dis(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_out_en(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_out_en_single(hrtim_output_units_t<sp/>PWM_OUT);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_out_dis_single(hrtim_output_units_t<sp/>PWM_OUT);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_set_modulation(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_cnt_t<sp/>modulation);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">hrtim_cnt_t<sp/>hrtim_get_modulation(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_set_switch_convention(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_switch_convention_t<sp/>convention);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">hrtim_switch_convention_t<sp/>hrtim_get_switch_convention(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_cmpl_pwm_out1(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_cmpl_pwm_out2(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_frequency_set(uint32_t<sp/>frequency_set,<sp/>uint32_t<sp/>frequency_min);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">uint16_t<sp/>hrtim_period_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal">uint16_t<sp/>hrtim_period_Master_get();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal">uint32_t<sp/>hrtim_period_get_us(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal">uint32_t<sp/>hrtim_period_Master_get_us();</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_tu_cmp_set(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_cmp_t<sp/>cmp,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_master_cmp_set(hrtim_cmp_t<sp/>cmp,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_dt_set(hrtim_tu_number_t<sp/>tu_number,<sp/>uint16_t<sp/>rise_ns,<sp/>uint16_t<sp/>fall_ns);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_duty_cycle_set(hrtim_tu_number_t<sp/>tu_number,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_phase_shift_set(hrtim_tu_number_t<sp/>tu_number,<sp/>uint16_t<sp/>shift);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_dt_init(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_cnt_en(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_cnt_dis(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_rst_evt_en(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_reset_trig_t<sp/>evt);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_rst_evt_dis(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_reset_trig_t<sp/>evt);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_adc_trigger_set_postscaler(hrtim_tu_number_t<sp/>tu_number,<sp/>uint32_t<sp/>ps_ratio);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_adc_trigger_en(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_adc_trigger_dis(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_adc_rollover_set(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_adc_edgetrigger_t<sp/>adc_rollover);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal">hrtim_adc_edgetrigger_t<sp/>hrtim_adc_rollover_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_PeriodicEvent_configure(hrtim_tu_t<sp/>tu,<sp/>uint32_t<sp/>repetition,<sp/>hrtim_callback_t<sp/>callback);</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_PeriodicEvent_en(hrtim_tu_t<sp/>tu);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_PeriodicEvent_dis(hrtim_tu_t<sp/>tu);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_PeriodicEvent_SetRep(hrtim_tu_t<sp/>tu,<sp/>uint32_t<sp/>repetition);</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal">uint32_t<sp/>hrtim_PeriodicEvent_GetRep(hrtim_tu_t<sp/>tu);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DualDAC_init(hrtim_tu_number_t<sp/>tu);</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_pwm_mode_set(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_pwm_mode_t<sp/>mode);</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal">hrtim_pwm_mode_t<sp/>hrtim_pwm_mode_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_adc_triger_set(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_adc_trigger_t<sp/>adc_trig);</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal">hrtim_adc_trigger_t<sp/>hrtim_adc_triger_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_eev_set(hrtim_tu_number_t<sp/>tu_number,<sp/>hrtim_external_trigger_t<sp/>eev);</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="normal">hrtim_external_trigger_t<sp/>hrtim_eev_get(hrtim_tu_number_t<sp/>tu_number);</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hrtim_change_frequency(uint32_t<sp/>new_frequency);</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HRTIM_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim.h"/>
+  </compounddef>
+</doxygen>

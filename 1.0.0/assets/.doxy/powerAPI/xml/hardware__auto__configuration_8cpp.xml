@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="hardware__auto__configuration_8cpp" kind="file" language="C++">
+    <compoundname>hardware_auto_configuration.cpp</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="hardware__auto__configuration_8cpp_1a12f256099fd25cbed71f52def6da0e32" prot="public" static="yes" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* dac2</definition>
+        <argsstring></argsstring>
+        <name>dac2</name>
+        <initializer>= DEVICE_DT_GET(DAC2_DEVICE)</initializer>
+        <briefdescription>
+<para>This file automatically performs some hardware configuration using Zephyr macros. Configuration done in this file is low-level peripheral configuration required for OwnTech board to operate, do not mess with it unless you are absolutely sure of what you&apos;re doing. This file does not contain any public function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="date"><para>2024 </para>
+</simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Jean Alinei <ulink url="mailto:jean.alinei@laas.fr">jean.alinei@laas.fr</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="46" column="27" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="hardware__auto__configuration_8cpp_1a19e6e7365193fded7006679584d71dde" prot="public" static="yes" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* cdc_acm_console</definition>
+        <argsstring></argsstring>
+        <name>cdc_acm_console</name>
+        <initializer>= DEVICE_DT_GET(CDC_ACM_DEVICE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="119" column="27" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a3fe464d89468b32648c9929fab409f1e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _vrefbuf_init</definition>
+        <argsstring>()</argsstring>
+        <name>_vrefbuf_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="51" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1ae3742f33399ba42b86c958a32307ac17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _dac2_init</definition>
+        <argsstring>()</argsstring>
+        <name>_dac2_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="61" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a05e35e88b1a661d783a2dbaa2b1804ac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _console_init</definition>
+        <argsstring>()</argsstring>
+        <name>_console_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="73" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="73" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1ab72f8b4e4159c49dfbc4b4b86686b2b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _img_validation</definition>
+        <argsstring>()</argsstring>
+        <name>_img_validation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="83" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a8a8c2e8a15efc7e0179c301594766a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reboot_bootloader_task</definition>
+        <argsstring>(struct k_work *work)</argsstring>
+        <name>reboot_bootloader_task</name>
+        <param>
+          <type>struct k_work *</type>
+          <declname>work</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="102" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1ab45b8207f4204d4b949de3801df5cecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>K_WORK_DEFINE</definition>
+        <argsstring>(reboot_bootloader_work, reboot_bootloader_task)</argsstring>
+        <name>K_WORK_DEFINE</name>
+        <param>
+          <type>reboot_bootloader_work</type>
+        </param>
+        <param>
+          <type>reboot_bootloader_task</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="108" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="108" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a7d98b9e13c7ba67826d1d16c84a72887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _cdc_rate_callback</definition>
+        <argsstring>(const struct device *dev, uint32_t rate)</argsstring>
+        <name>_cdc_rate_callback</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="109" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1ad23d16390b4efde842612af0d39dfba0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _register_cdc_rate_callback</definition>
+        <argsstring>()</argsstring>
+        <name>_register_cdc_rate_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="120" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="120" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a4fb96642a0b93246fe3b7adf0e471a2e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _swap_usart1_tx_rx</definition>
+        <argsstring>()</argsstring>
+        <name>_swap_usart1_tx_rx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="131" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" bodystart="131" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a100d7d31c4c17cd04a03ce6cb70f53cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_vrefbuf_init, PRE_KERNEL_1, CONFIG_KERNEL_INIT_PRIORITY_DEVICE)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_vrefbuf_init</type>
+        </param>
+        <param>
+          <type>PRE_KERNEL_1</type>
+        </param>
+        <param>
+          <type>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="144" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="144" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a159fe58e36cbfc6554179709bcd36968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_dac2_init, PRE_KERNEL_2, CONFIG_KERNEL_INIT_PRIORITY_DEVICE)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_dac2_init</type>
+        </param>
+        <param>
+          <type>PRE_KERNEL_2</type>
+        </param>
+        <param>
+          <type>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="149" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="149" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1af5fdba5d23b64230ccc54559ca550ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_console_init, APPLICATION, 89)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_console_init</type>
+        </param>
+        <param>
+          <type>APPLICATION</type>
+        </param>
+        <param>
+          <type>89</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="154" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="154" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a7398cf00e518fea02cfa51fa599bc4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_img_validation, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_img_validation</type>
+        </param>
+        <param>
+          <type>APPLICATION</type>
+        </param>
+        <param>
+          <type>CONFIG_APPLICATION_INIT_PRIORITY</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="160" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="160" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a3dd5ddd64acabb1cd4b0f6fb85e67cc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_register_cdc_rate_callback, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_register_cdc_rate_callback</type>
+        </param>
+        <param>
+          <type>APPLICATION</type>
+        </param>
+        <param>
+          <type>CONFIG_APPLICATION_INIT_PRIORITY</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="167" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="167" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="hardware__auto__configuration_8cpp_1a1c9baa999401e3e4838d629cfe68970e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SYS_INIT</definition>
+        <argsstring>(_swap_usart1_tx_rx, PRE_KERNEL_1, CONFIG_KERNEL_INIT_PRIORITY_DEVICE)</argsstring>
+        <name>SYS_INIT</name>
+        <param>
+          <type>_swap_usart1_tx_rx</type>
+        </param>
+        <param>
+          <type>PRE_KERNEL_1</type>
+        </param>
+        <param>
+          <type>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" line="174" column="1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp" declline="174" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Zephyr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/console/console.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STM32<sp/>LL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_bus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_system.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Owntech<sp/>driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dac.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dac2<sp/>=<sp/>DEVICE_DT_GET(DAC2_DEVICE);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">//<sp/>Functions<sp/>to<sp/>be<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_vrefbuf_init()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_VREFBUF_SetVoltageScaling(LL_VREFBUF_VOLTAGE_SCALE0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_VREFBUF_DisableHIZ();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_VREFBUF_Enable();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_dac2_init()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(device_is_ready(dac2)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dac_set_const_value(dac2,<sp/>1,<sp/>2048U);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dac_pin_configure(dac2,<sp/>1,<sp/>dac_pin_external);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dac_start(dac2,<sp/>1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_console_init()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>console_init();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_BOOTLOADER_MCUBOOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/dfu/mcuboot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_img_validation()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boot_is_img_confirmed()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>boot_write_img_confirmed();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>confirm<sp/>image&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CONFIG_BOOTLOADER_MCUBOOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RETENTION_BOOT_MODE)<sp/>&amp;&amp;<sp/>defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT)<sp/>&amp;&amp;<sp/>defined(CONFIG_USB_CDC_ACM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/retention/bootmode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/reboot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reboot_bootloader_task(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>k_work*<sp/>work)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>bootmode_set(BOOT_MODE_TYPE_BOOTLOADER);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>sys_reboot(SYS_REBOOT_WARM);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">K_WORK_DEFINE(reboot_bootloader_work,<sp/>reboot_bootloader_task);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_cdc_rate_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint32_t<sp/>rate)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rate<sp/>==<sp/>1200)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_work_submit(&amp;reboot_bootloader_work);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/uart/cdc_acm.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_ACM_DEVICE<sp/>DT_NODELABEL(cdc_acm_uart0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>cdc_acm_console<sp/>=<sp/>DEVICE_DT_GET(CDC_ACM_DEVICE);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_register_cdc_rate_callback()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>cdc_acm_dte_rate_callback_set(cdc_acm_console,<sp/>_cdc_rate_callback);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CONFIG_RETENTION_BOOT_MODE<sp/>&amp;&amp;<sp/>CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT<sp/>&amp;&amp;<sp/>CONFIG_USB_CDC_ACM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_SHIELD_O2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_lpuart.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_swap_usart1_tx_rx()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_LPUART_Disable(LPUART1);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_LPUART_SetTXRXSwap(LPUART1,<sp/>LL_LPUART_TXRX_SWAPPED);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_LPUART_Enable(LPUART1);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SHIELD_O2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="comment">//<sp/>Zephyr<sp/>macros<sp/>to<sp/>automatically<sp/>run<sp/>above<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">SYS_INIT(_vrefbuf_init,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRE_KERNEL_1,<sp/></highlight><highlight class="comment">//<sp/>To<sp/>be<sp/>run<sp/>in<sp/>the<sp/>first<sp/>init<sp/>phase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">SYS_INIT(_dac2_init,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRE_KERNEL_2,<sp/></highlight><highlight class="comment">//<sp/>To<sp/>be<sp/>run<sp/>in<sp/>the<sp/>second<sp/>init<sp/>phase<sp/>(depends<sp/>on<sp/>DAC<sp/>driver<sp/>initialization)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">SYS_INIT(_console_init,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APPLICATION,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>89</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_BOOTLOADER_MCUBOOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">SYS_INIT(_img_validation,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APPLICATION,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONFIG_APPLICATION_INIT_PRIORITY</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CONFIG_BOOTLOADER_MCUBOOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_RETENTION_BOOT_MODE)<sp/>&amp;&amp;<sp/>defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT)<sp/>&amp;&amp;<sp/>defined(CONFIG_USB_CDC_ACM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">SYS_INIT(_register_cdc_rate_callback,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APPLICATION,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONFIG_APPLICATION_INIT_PRIORITY</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CONFIG_RETENTION_BOOT_MODE<sp/>&amp;&amp;<sp/>CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT<sp/>&amp;&amp;<sp/>CONFIG_USB_CDC_ACM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_SHIELD_O2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">SYS_INIT(_swap_usart1_tx_rx,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRE_KERNEL_1,<sp/></highlight><highlight class="comment">//<sp/>To<sp/>be<sp/>run<sp/>in<sp/>the<sp/>first<sp/>init<sp/>phase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONFIG_KERNEL_INIT_PRIORITY_DEVICE</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SHIELD_O2</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/hardware_auto_configuration.cpp"/>
+  </compounddef>
+</doxygen>

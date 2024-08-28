@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2022 OwnTech.
+ *
+ * SPDX-License-Identifier: LGPL-2.1
+ */
+
+/ {
+	soc {
+		pinctrl: pin-controller@48000000 {
+			tim4_etr_pb3: tim4_etr_pb3 {
+				pinmux = <STM32_PINMUX('B', 3, AF2)>;
+			};
+			adc4_in5_pb15: adc4_in5_pb15 {
+				pinmux = <STM32_PINMUX('B', 15, ANALOG)>;
+			};
+			hrtim1_scin_pb2: hrtim1_scin_pb2 {
+				pinmux = <STM32_PINMUX('B', 2, AF13)>;
+			};
+			hrtim1_scin_pb6: hrtim1_scin_pb6 {
+				pinmux = <STM32_PINMUX('B', 6, AF12)>;
+			};
+			hrtim1_scout_pb1: hrtim1_scout_pb1 {
+				pinmux = <STM32_PINMUX('B', 1, AF13)>;
+			};
+			hrtim1_scout_pb3: hrtim1_scout_pb3 {
+				pinmux = <STM32_PINMUX('B', 3, AF12)>;
+			};
+			dac3_dummy: dac3_dummy {
+				/* This is a dummy pin that does not exist with LQFP64 packaging */
+				pinmux = <STM32_PINMUX('D', 15, ANALOG)>;
+			};
+		};
+	};
+};

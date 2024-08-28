@@ -1,0 +1,1356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classPwmHAL" kind="class" language="C++" prot="public">
+    <compoundname>PwmHAL</compoundname>
+    <includes refid="PwmHAL_8h" local="no">PwmHAL.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::initUnit</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>initUnit</name>
+        <qualifiedname>PwmHAL::initUnit</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes a timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="date"><para>2023 </para>
+</simplesect>
+<simplesect kind="author"><para>Luiz Villa <ulink url="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="70" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ac2900f6b49f6110a4b1aadacf120201a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::startDualOutput</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>startDualOutput</name>
+        <qualifiedname>PwmHAL::startDualOutput</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This fonction starts both outputs of the selected HRTIM channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="77" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::stopDualOutput</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>stopDualOutput</name>
+        <qualifiedname>PwmHAL::stopDualOutput</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function stops both outputs of the selected HRTIM channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="84" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::startSingleOutput</definition>
+        <argsstring>(hrtim_tu_number_t tu, hrtim_output_number_t output)</argsstring>
+        <name>startSingleOutput</name>
+        <qualifiedname>PwmHAL::startSingleOutput</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu</declname>
+        </param>
+        <param>
+          <type>hrtim_output_number_t</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function starts only one output of the selected HRTIM channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output to disable - TIMING_OUTPUT1, TIMING_OUTPUT2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="92" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="48" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1af87a7e0c7647bee04c2401cd404d779e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::stopSingleOutput</definition>
+        <argsstring>(hrtim_tu_number_t tu, hrtim_output_number_t output)</argsstring>
+        <name>stopSingleOutput</name>
+        <qualifiedname>PwmHAL::stopSingleOutput</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu</declname>
+        </param>
+        <param>
+          <type>hrtim_output_number_t</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function starts only one output of the selected HRTIM channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output to disable - TIMING_OUTPUT1, TIMING_OUTPUT2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="100" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="104" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setModulation</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_cnt_t modulation)</argsstring>
+        <name>setModulation</name>
+        <qualifiedname>PwmHAL::setModulation</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_cnt_t</type>
+          <declname>modulation</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the modulation mode for a given PWM unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">modulation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Modulation - Lft_aligned or UpDwn</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called BEFORE initializing the selected timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="110" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="160" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setSwitchConvention</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_switch_convention_t convention)</argsstring>
+        <name>setSwitchConvention</name>
+        <qualifiedname>PwmHAL::setSwitchConvention</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_switch_convention_t</type>
+          <declname>convention</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the switch convention for a given PWM unit i.e. you decide which one of the output of the timer can be controlled with duty cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">convention</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Switch to be driven by the duty cycle. The other will be complementary - PWMx1 or PWMx2</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called before the timer initialization </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="122" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="167" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::initFrequency</definition>
+        <argsstring>(uint32_t init_frequency)</argsstring>
+        <name>initFrequency</name>
+        <qualifiedname>PwmHAL::initFrequency</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>init_frequency</declname>
+        </param>
+        <briefdescription>
+<para>This function initialize the frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">init_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency in Hz</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called BEFORE initialiazing any timing unit. the frequency initialized becomes the MINIMUM possible. use it BEFORE initialization of the timing unit. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="133" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="181" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::initFrequency</definition>
+        <argsstring>(uint32_t init_frequency, uint32_t minimal_frequency)</argsstring>
+        <name>initFrequency</name>
+        <qualifiedname>PwmHAL::initFrequency</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>init_frequency</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>minimal_frequency</declname>
+        </param>
+        <briefdescription>
+<para>This functions initialize the frequency and also sets the minimal reachable frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">init_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">minimal_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired minimal frequency in Hz</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called BEFORE initialiazing any timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="143" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="174" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setDeadTime</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns)</argsstring>
+        <name>setDeadTime</name>
+        <qualifiedname>PwmHAL::setDeadTime</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>rise_ns</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>fall_ns</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the dead time for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rise_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rising edge dead time in ns </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">falling_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>falling edge dead time in ns</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>use this function BEFORE initializing the chosen timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="154" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="188" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setDutyCycle</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, float32_t duty_cycle)</argsstring>
+        <name>setDutyCycle</name>
+        <qualifiedname>PwmHAL::setDutyCycle</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the duty cycle for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duty cycle value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="162" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="195" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setPhaseShift</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, int16_t shift)</argsstring>
+        <name>setPhaseShift</name>
+        <qualifiedname>PwmHAL::setPhaseShift</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the phase shift in respect to timer A for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phase shift value ° between -360 and 360</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>use this function AFTER setting the frequency and initializing the chosen timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="172" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="201" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setMode</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_pwm_mode_t mode)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>PwmHAL::setMode</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_pwm_mode_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>This function sets a special pwm mode for voltage or current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM mode - VOLTAGE_MODE or CURRENT_MODE</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called BEFORE initialiazing the selected timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="182" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="322" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_pwm_mode_t</type>
+        <definition>hrtim_pwm_mode_t PwmHAL::getMode</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getMode</name>
+        <qualifiedname>PwmHAL::getMode</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the PWM mode (voltage or current mode) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PWM mode - VOLTAGE_MODE or CURRENT_MODE</para>
+</simplesect>
+<simplesect kind="warning"><para>this function must be called before initialiazing a timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="192" column="23" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setEev</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_external_trigger_t eev)</argsstring>
+        <name>setEev</name>
+        <qualifiedname>PwmHAL::setEev</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_external_trigger_t</type>
+          <declname>eev</declname>
+        </param>
+        <briefdescription>
+<para>This function sets external event linked to the timing unit essential for the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">eev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EEV9</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called before initialiazing a timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="202" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="334" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_external_trigger_t</type>
+        <definition>hrtim_external_trigger_t PwmHAL::getEev</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getEev</name>
+        <qualifiedname>PwmHAL::getEev</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the external event linked to the timing unit used for the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EEV9 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="210" column="31" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="341" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_cnt_t</type>
+        <definition>hrtim_cnt_t PwmHAL::getModulation</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getModulation</name>
+        <qualifiedname>PwmHAL::getModulation</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the modulation type of the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lft_aligned or UpDwn (center aligned) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="218" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="221" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_switch_convention_t</type>
+        <definition>hrtim_switch_convention_t PwmHAL::getSwitchConvention</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getSwitchConvention</name>
+        <qualifiedname>PwmHAL::getSwitchConvention</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the switching convention of the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PWMx1 (high side convention) or PWMx2 (low-side convention) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="226" column="32" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1add5baa32e90605383539439104a3c520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PwmHAL::getPeriod</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getPeriod</name>
+        <qualifiedname>PwmHAL::getPeriod</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the period of the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the period value in uint16 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="234" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="231" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setAdcTriggerPostScaler</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, uint32_t ps_ratio)</argsstring>
+        <name>setAdcTriggerPostScaler</name>
+        <qualifiedname>PwmHAL::setAdcTriggerPostScaler</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ps_ratio</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the PostScaler value for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ps_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>post scaler ratio</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called after initialiazing a timing unit, and before enabling the adc trigger </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="245" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setAdcTrigger</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig)</argsstring>
+        <name>setAdcTrigger</name>
+        <qualifiedname>PwmHAL::setAdcTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_adc_trigger_t</type>
+          <declname>adc_trig</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the adc trigger linked to a timer unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_trig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Call this function BEFORE enabling the adc trigger and AFTER initializing the selected timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="255" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="310" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_adc_trigger_t</type>
+        <definition>hrtim_adc_trigger_t PwmHAL::getAdcTrigger</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig)</argsstring>
+        <name>getAdcTrigger</name>
+        <qualifiedname>PwmHAL::getAdcTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_adc_trigger_t</type>
+          <declname>adc_trig</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the adc trigger linked to a timer unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="263" column="26" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="317" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::enableAdcTrigger</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>enableAdcTrigger</name>
+        <qualifiedname>PwmHAL::enableAdcTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>This function enables the adc trigger for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>call this function only AFTER setting the adc trigger and initializing the chosen timer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="272" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="241" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::disableAdcTrigger</definition>
+        <argsstring>(hrtim_tu_number_t tu_number)</argsstring>
+        <name>disableAdcTrigger</name>
+        <qualifiedname>PwmHAL::disableAdcTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>tu_number</declname>
+        </param>
+        <briefdescription>
+<para>This function disables the adc trigger for the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="279" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="263" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setAdcTriggerInstant</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, float32_t trig_val)</argsstring>
+        <name>setAdcTriggerInstant</name>
+        <qualifiedname>PwmHAL::setAdcTriggerInstant</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>trig_val</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the comparator value at which the ADC is trigered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trig_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a value between 0 and 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="287" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="257" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setAdcEdgeTrigger</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, hrtim_adc_edgetrigger_t adc_edge_trigger)</argsstring>
+        <name>setAdcEdgeTrigger</name>
+        <qualifiedname>PwmHAL::setAdcEdgeTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>hrtim_adc_edgetrigger_t</type>
+          <declname>adc_edge_trigger</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the adc trig rollover mode for the selected timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_edge_trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rollover mode - EdgeTrigger_up, EdgeTrigger_down, EdgeTrigger_Both</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called BEFORE initialiazing the selected timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="297" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="298" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hrtim_adc_edgetrigger_t</type>
+        <definition>hrtim_adc_edgetrigger_t PwmHAL::getAdcEdgeTrigger</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getAdcEdgeTrigger</name>
+        <qualifiedname>PwmHAL::getAdcEdgeTrigger</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the adc trigger rollover mode for the selected timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rollover mode - EdgeTrigger_up, EdgeTrigger_down, EdgeTrigger_Both </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="305" column="30" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="305" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setAdcDecimation</definition>
+        <argsstring>(hrtim_tu_number_t pwmX, uint32_t decimation)</argsstring>
+        <name>setAdcDecimation</name>
+        <qualifiedname>PwmHAL::setAdcDecimation</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>decimation</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">decimation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decimation/post-scaler - a number between 1 and 32</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>this function must be called AFTER initialiazing the selected timing unit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="317" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="346" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a87f02068cb744707860185045c86819f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::disablePeriodEvnt</definition>
+        <argsstring>(hrtim_tu_t PWM_tu)</argsstring>
+        <name>disablePeriodEvnt</name>
+        <qualifiedname>PwmHAL::disablePeriodEvnt</qualifiedname>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>PWM_tu</declname>
+        </param>
+        <briefdescription>
+<para>This function disables the interrupt on repetition counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="324" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a350644c31ccf6b662c2f450f27118c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setPeriodEvntRep</definition>
+        <argsstring>(hrtim_tu_t PWM_tu, uint32_t repetition)</argsstring>
+        <name>setPeriodEvntRep</name>
+        <qualifiedname>PwmHAL::setPeriodEvntRep</qualifiedname>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>PWM_tu</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>repetition</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the repetition counter to ISR period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">repetition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of repetition before the interruption on repetition counter event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="332" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="283" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a18e7d18b48641e091ec414b85fe22342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PwmHAL::getPeriodEvntRep</definition>
+        <argsstring>(hrtim_tu_t PWM_tu)</argsstring>
+        <name>getPeriodEvntRep</name>
+        <qualifiedname>PwmHAL::getPeriodEvntRep</qualifiedname>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>PWM_tu</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the repetition counter value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>repetition counter value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="340" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::configurePeriodEvnt</definition>
+        <argsstring>(hrtim_tu_t PWM_tu, uint32_t repetition, hrtim_callback_t callback)</argsstring>
+        <name>configurePeriodEvnt</name>
+        <qualifiedname>PwmHAL::configurePeriodEvnt</qualifiedname>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>PWM_tu</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>repetition</declname>
+        </param>
+        <param>
+          <type>hrtim_callback_t</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>This function configures the interrupt on repetition counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">repetition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of repetition before the interruption on repetition counter event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to call each interupt </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="349" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="268" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::enablePeriodEvnt</definition>
+        <argsstring>(hrtim_tu_t PWM_tu)</argsstring>
+        <name>enablePeriodEvnt</name>
+        <qualifiedname>PwmHAL::enablePeriodEvnt</qualifiedname>
+        <param>
+          <type>hrtim_tu_t</type>
+          <declname>PWM_tu</declname>
+        </param>
+        <briefdescription>
+<para>This function enables the interrupt on repetition counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PWM_tu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="356" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="273" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PwmHAL::getPeriodUs</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getPeriodUs</name>
+        <qualifiedname>PwmHAL::getPeriodUs</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the period in µs of the selected timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="363" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setFrequency</definition>
+        <argsstring>(uint32_t frequency_update)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>PwmHAL::setFrequency</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>frequency_update</declname>
+        </param>
+        <briefdescription>
+<para>Change the frequency/period after it has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frequency_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The new frequency can&apos;t be inferior to the the one set in the initialization step Use it AFTER the initialization of the timing unit. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="371" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="355" bodyend="358"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles all pwm signals for the spin board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Use this element to call functions related to the pwm. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="372"/>
+    <listofallmembers>
+      <member refid="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>configurePeriodEvnt</name></member>
+      <member refid="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>disableAdcTrigger</name></member>
+      <member refid="classPwmHAL_1a87f02068cb744707860185045c86819f" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>disablePeriodEvnt</name></member>
+      <member refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>enableAdcTrigger</name></member>
+      <member refid="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>enablePeriodEvnt</name></member>
+      <member refid="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcEdgeTrigger</name></member>
+      <member refid="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcTrigger</name></member>
+      <member refid="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getEev</name></member>
+      <member refid="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getMode</name></member>
+      <member refid="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getModulation</name></member>
+      <member refid="classPwmHAL_1add5baa32e90605383539439104a3c520" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriod</name></member>
+      <member refid="classPwmHAL_1a18e7d18b48641e091ec414b85fe22342" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodEvntRep</name></member>
+      <member refid="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodUs</name></member>
+      <member refid="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getSwitchConvention</name></member>
+      <member refid="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFrequency</name></member>
+      <member refid="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFrequency</name></member>
+      <member refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initUnit</name></member>
+      <member refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcDecimation</name></member>
+      <member refid="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcEdgeTrigger</name></member>
+      <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTrigger</name></member>
+      <member refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerInstant</name></member>
+      <member refid="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerPostScaler</name></member>
+      <member refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setDeadTime</name></member>
+      <member refid="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setDutyCycle</name></member>
+      <member refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setEev</name></member>
+      <member refid="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setFrequency</name></member>
+      <member refid="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setMode</name></member>
+      <member refid="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setModulation</name></member>
+      <member refid="classPwmHAL_1a350644c31ccf6b662c2f450f27118c56" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setPeriodEvntRep</name></member>
+      <member refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setPhaseShift</name></member>
+      <member refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setSwitchConvention</name></member>
+      <member refid="classPwmHAL_1ac2900f6b49f6110a4b1aadacf120201a" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>startDualOutput</name></member>
+      <member refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>startSingleOutput</name></member>
+      <member refid="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>stopDualOutput</name></member>
+      <member refid="classPwmHAL_1af87a7e0c7647bee04c2401cd404d779e" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>stopSingleOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

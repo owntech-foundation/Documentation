@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structcomp__usage__conf__t" kind="struct" language="C++" prot="public">
+    <compoundname>comp_usage_conf_t</compoundname>
+    <includes refid="hrtim__enum_8h" local="no">hrtim_enum.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1aefa72183534a441f3fda176969c66cdd" prot="public" static="no" mutable="no">
+        <type>hrtim_comp_usage_t</type>
+        <definition>hrtim_comp_usage_t comp_usage_conf_t::cmp1</definition>
+        <argsstring></argsstring>
+        <name>cmp1</name>
+        <qualifiedname>comp_usage_conf_t::cmp1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="367" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1adc96079731a73eecd19faadef3906802" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t comp_usage_conf_t::cmp1_value</definition>
+        <argsstring></argsstring>
+        <name>cmp1_value</name>
+        <qualifiedname>comp_usage_conf_t::cmp1_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="368" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1a93ae688e4dbccc3568f0eea7bfbe8f63" prot="public" static="no" mutable="no">
+        <type>hrtim_comp_usage_t</type>
+        <definition>hrtim_comp_usage_t comp_usage_conf_t::cmp2</definition>
+        <argsstring></argsstring>
+        <name>cmp2</name>
+        <qualifiedname>comp_usage_conf_t::cmp2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="369" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1a561102d62f26dc4ec106d15801925fe8" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t comp_usage_conf_t::cmp2_value</definition>
+        <argsstring></argsstring>
+        <name>cmp2_value</name>
+        <qualifiedname>comp_usage_conf_t::cmp2_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="370" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1a6d61e18889f35c9cc06f92330fde4b46" prot="public" static="no" mutable="no">
+        <type>hrtim_comp_usage_t</type>
+        <definition>hrtim_comp_usage_t comp_usage_conf_t::cmp3</definition>
+        <argsstring></argsstring>
+        <name>cmp3</name>
+        <qualifiedname>comp_usage_conf_t::cmp3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="371" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1a0858264b0e63a0d2c0345621a07d5873" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t comp_usage_conf_t::cmp3_value</definition>
+        <argsstring></argsstring>
+        <name>cmp3_value</name>
+        <qualifiedname>comp_usage_conf_t::cmp3_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="372" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1a9b95b56a9700f5cfe7bf9e5b6f0485f3" prot="public" static="no" mutable="no">
+        <type>hrtim_comp_usage_t</type>
+        <definition>hrtim_comp_usage_t comp_usage_conf_t::cmp4</definition>
+        <argsstring></argsstring>
+        <name>cmp4</name>
+        <qualifiedname>comp_usage_conf_t::cmp4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="373" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcomp__usage__conf__t_1abe7709b9649849089f5f7fed7853162c" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t comp_usage_conf_t::cmp4_value</definition>
+        <argsstring></argsstring>
+        <name>cmp4_value</name>
+        <qualifiedname>comp_usage_conf_t::cmp4_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="374" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure containing the status of the usage of comparators and their values. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="365" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="366" bodyend="375"/>
+    <listofallmembers>
+      <member refid="structcomp__usage__conf__t_1aefa72183534a441f3fda176969c66cdd" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp1</name></member>
+      <member refid="structcomp__usage__conf__t_1adc96079731a73eecd19faadef3906802" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp1_value</name></member>
+      <member refid="structcomp__usage__conf__t_1a93ae688e4dbccc3568f0eea7bfbe8f63" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp2</name></member>
+      <member refid="structcomp__usage__conf__t_1a561102d62f26dc4ec106d15801925fe8" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp2_value</name></member>
+      <member refid="structcomp__usage__conf__t_1a6d61e18889f35c9cc06f92330fde4b46" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp3</name></member>
+      <member refid="structcomp__usage__conf__t_1a0858264b0e63a0d2c0345621a07d5873" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp3_value</name></member>
+      <member refid="structcomp__usage__conf__t_1a9b95b56a9700f5cfe7bf9e5b6f0485f3" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp4</name></member>
+      <member refid="structcomp__usage__conf__t_1abe7709b9649849089f5f7fed7853162c" prot="public" virt="non-virtual"><scope>comp_usage_conf_t</scope><name>cmp4_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

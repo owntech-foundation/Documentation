@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classShieldAPI" kind="class" language="C++" prot="public">
+    <compoundname>ShieldAPI</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" prot="public" static="yes" mutable="no">
+        <type>SensorsAPI</type>
+        <definition>SensorsAPI ShieldAPI::sensors</definition>
+        <argsstring></argsstring>
+        <name>sensors</name>
+        <qualifiedname>ShieldAPI::sensors</qualifiedname>
+        <briefdescription>
+<para>Contains all the functions to interact with shield sensors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="46" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" prot="public" static="yes" mutable="no">
+        <type>PowerAPI</type>
+        <definition>PowerAPI ShieldAPI::power</definition>
+        <argsstring></argsstring>
+        <name>power</name>
+        <qualifiedname>ShieldAPI::power</qualifiedname>
+        <briefdescription>
+<para>Contains all the functions to drive shield power capabilities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="51" column="17" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" prot="public" static="yes" mutable="no">
+        <type>NgndHAL</type>
+        <definition>NgndHAL ShieldAPI::ngnd</definition>
+        <argsstring></argsstring>
+        <name>ngnd</name>
+        <qualifiedname>ShieldAPI::ngnd</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the NGND switch compatible with TWISTs prior to 1.4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="57" column="16" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="39" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="40" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" prot="public" virt="non-virtual"><scope>ShieldAPI</scope><name>ngnd</name></member>
+      <member refid="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" prot="public" virt="non-virtual"><scope>ShieldAPI</scope><name>power</name></member>
+      <member refid="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" prot="public" virt="non-virtual"><scope>ShieldAPI</scope><name>sensors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

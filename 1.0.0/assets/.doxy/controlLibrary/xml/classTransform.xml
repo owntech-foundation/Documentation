@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classTransform" kind="class" language="C++" prot="public">
+    <compoundname>Transform</compoundname>
+    <includes refid="transform_8h" local="no">transform.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classTransform_1a51b09b2fadfd10bf351a1afca15c2146" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdqo__t" kindref="compound">dqo_t</ref></type>
+        <definition>static dqo_t Transform::rotation_to_dqo</definition>
+        <argsstring>(clarke_t Xabo, float32_t theta)</argsstring>
+        <name>rotation_to_dqo</name>
+        <qualifiedname>Transform::rotation_to_dqo</qualifiedname>
+        <param>
+          <type><ref refid="structclarke__t" kindref="compound">clarke_t</ref></type>
+          <declname>Xabo</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>make a - <formula id="1">$\theta$</formula> rotation which transform a <ref refid="structclarke__t" kindref="compound">clarke_t</ref> vector to a <ref refid="structdqo__t" kindref="compound">dqo_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="83" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1a92a30f57e87f21dbbd21b23aa64d6dfd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structclarke__t" kindref="compound">clarke_t</ref></type>
+        <definition>static clarke_t Transform::rotation_to_clarke</definition>
+        <argsstring>(dqo_t Xdqo, float32_t theta)</argsstring>
+        <name>rotation_to_clarke</name>
+        <qualifiedname>Transform::rotation_to_clarke</qualifiedname>
+        <param>
+          <type><ref refid="structdqo__t" kindref="compound">dqo_t</ref></type>
+          <declname>Xdqo</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>make a <formula id="1">$\theta$</formula> rotation which transform a <ref refid="structdqo__t" kindref="compound">dqo_t</ref> vector to a <ref refid="structclarke__t" kindref="compound">clarke_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="87" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1aa79743d1434ee4d1a434e2dcdc746584" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structclarke__t" kindref="compound">clarke_t</ref></type>
+        <definition>static clarke_t Transform::clarke</definition>
+        <argsstring>(three_phase_t Xabc)</argsstring>
+        <name>clarke</name>
+        <qualifiedname>Transform::clarke</qualifiedname>
+        <param>
+          <type><ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref></type>
+          <declname>Xabc</declname>
+        </param>
+        <briefdescription>
+<para>transform a <ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref> vector to a <ref refid="structclarke__t" kindref="compound">clarke_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="91" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1a3e52fa00fb9814bc1db9dce7aa3ba02f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref></type>
+        <definition>static three_phase_t Transform::clarke_inverse</definition>
+        <argsstring>(clarke_t Xabo)</argsstring>
+        <name>clarke_inverse</name>
+        <qualifiedname>Transform::clarke_inverse</qualifiedname>
+        <param>
+          <type><ref refid="structclarke__t" kindref="compound">clarke_t</ref></type>
+          <declname>Xabo</declname>
+        </param>
+        <briefdescription>
+<para>transform a <ref refid="structclarke__t" kindref="compound">clarke_t</ref> vector to a <ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="95" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1a694c7695aa64ca2313d6c4057e39daf6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdqo__t" kindref="compound">dqo_t</ref></type>
+        <definition>static dqo_t Transform::to_dqo</definition>
+        <argsstring>(three_phase_t Xabc, float32_t theta)</argsstring>
+        <name>to_dqo</name>
+        <qualifiedname>Transform::to_dqo</qualifiedname>
+        <param>
+          <type><ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref></type>
+          <declname>Xabc</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>transform a <ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref> vector to a <ref refid="structdqo__t" kindref="compound">dqo_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="99" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1ac07f81a6974cd853e59053f8a6295ad4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref></type>
+        <definition>static three_phase_t Transform::to_threephase</definition>
+        <argsstring>(dqo_t Xdqo, float32_t theta)</argsstring>
+        <name>to_threephase</name>
+        <qualifiedname>Transform::to_threephase</qualifiedname>
+        <param>
+          <type><ref refid="structdqo__t" kindref="compound">dqo_t</ref></type>
+          <declname>Xdqo</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>transform a <ref refid="structdqo__t" kindref="compound">dqo_t</ref> vector to a <ref refid="structthree__phase__t" kindref="compound">three_phase_t</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="103" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>static class to group methods helping translation between reference frames </para>
+    </briefdescription>
+    <detaileddescription>
+<para>mainly 3 reference frames:<orderedlist>
+<listitem><para>abc :three phase</para>
+</listitem><listitem><para><formula id="0">$\alpha, \beta, o$</formula> : clarke.</para>
+</listitem><listitem><para>d, q, o : direct-quadrature. </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <location file="docs/controlLibrary/src/transform.h" line="77" column="1" bodyfile="docs/controlLibrary/src/transform.h" bodystart="78" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classTransform_1aa79743d1434ee4d1a434e2dcdc746584" prot="public" virt="non-virtual"><scope>Transform</scope><name>clarke</name></member>
+      <member refid="classTransform_1a3e52fa00fb9814bc1db9dce7aa3ba02f" prot="public" virt="non-virtual"><scope>Transform</scope><name>clarke_inverse</name></member>
+      <member refid="classTransform_1a92a30f57e87f21dbbd21b23aa64d6dfd" prot="public" virt="non-virtual"><scope>Transform</scope><name>rotation_to_clarke</name></member>
+      <member refid="classTransform_1a51b09b2fadfd10bf351a1afca15c2146" prot="public" virt="non-virtual"><scope>Transform</scope><name>rotation_to_dqo</name></member>
+      <member refid="classTransform_1a694c7695aa64ca2313d6c4057e39daf6" prot="public" virt="non-virtual"><scope>Transform</scope><name>to_dqo</name></member>
+      <member refid="classTransform_1ac07f81a6974cd853e59053f8a6295ad4" prot="public" virt="non-virtual"><scope>Transform</scope><name>to_threephase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

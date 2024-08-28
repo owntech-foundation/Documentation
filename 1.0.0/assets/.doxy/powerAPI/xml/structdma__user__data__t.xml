@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdma__user__data__t" kind="struct" language="C++" prot="public">
+    <compoundname>dma_user_data_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdma__user__data__t_1aeb9e8005eafe56f2b93d608f5eeb256c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dma_user_data_t::has_interrupt</definition>
+        <argsstring></argsstring>
+        <name>has_interrupt</name>
+        <qualifiedname>dma_user_data_t::has_interrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="72" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdma__user__data__t_1ac10d8b935ca3e6bc987ee26714deadd8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dma_user_data_t::src</definition>
+        <argsstring></argsstring>
+        <name>src</name>
+        <qualifiedname>dma_user_data_t::src</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="73" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdma__user__data__t_1a1b1634241fd617a064fed8ed54de0c4a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dma_user_data_t::dst</definition>
+        <argsstring></argsstring>
+        <name>dst</name>
+        <qualifiedname>dma_user_data_t::dst</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="74" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdma__user__data__t_1aaeba83d28484a2f2ba94f9db8e1d57ef" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t dma_user_data_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>dma_user_data_t::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="75" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdma__user__data__t_1aede9594829cc7c4153b98d495354559e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dma_user_data_t::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>dma_user_data_t::channel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="76" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" line="70" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="71" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structdma__user__data__t_1aede9594829cc7c4153b98d495354559e" prot="public" virt="non-virtual"><scope>dma_user_data_t</scope><name>channel</name></member>
+      <member refid="structdma__user__data__t_1a1b1634241fd617a064fed8ed54de0c4a" prot="public" virt="non-virtual"><scope>dma_user_data_t</scope><name>dst</name></member>
+      <member refid="structdma__user__data__t_1aeb9e8005eafe56f2b93d608f5eeb256c" prot="public" virt="non-virtual"><scope>dma_user_data_t</scope><name>has_interrupt</name></member>
+      <member refid="structdma__user__data__t_1aaeba83d28484a2f2ba94f9db8e1d57ef" prot="public" virt="non-virtual"><scope>dma_user_data_t</scope><name>size</name></member>
+      <member refid="structdma__user__data__t_1ac10d8b935ca3e6bc987ee26714deadd8" prot="public" virt="non-virtual"><scope>dma_user_data_t</scope><name>src</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

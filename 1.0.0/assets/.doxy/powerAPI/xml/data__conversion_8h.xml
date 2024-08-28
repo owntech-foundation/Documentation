@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="data__conversion_8h" kind="file" language="C++">
+    <compoundname>data_conversion.h</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="data__conversion_8h_1a56c1047eff4e6f1afe6e0627a00b9198" prot="public" static="no" strong="no">
+        <type>int8_t</type>
+        <name>conversion_type_t</name>
+        <enumvalue id="data__conversion_8h_1a56c1047eff4e6f1afe6e0627a00b9198a7c7b8b9932d71d9fe6b5f2ed993c2765" prot="public">
+          <name>conversion_linear</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data__conversion_8h_1a56c1047eff4e6f1afe6e0627a00b9198afa799ca4740182f5e276b0bc1cc9c413" prot="public">
+          <name>conversion_therm</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data__conversion_8h_1a56c1047eff4e6f1afe6e0627a00b9198a84820b151025810aa114cb775aba2f12" prot="public">
+          <name>no_channel_error</name>
+          <initializer>= -5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" bodystart="38" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="data__conversion_8h_1a193d1b382818a9222a93df76be0c80db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void data_conversion_init</definition>
+        <argsstring>()</argsstring>
+        <name>data_conversion_init</name>
+        <briefdescription>
+<para>Initialize data conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="52" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="78" bodyend="109" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a94c907cbfba1f9b2d449980e3fbd4c59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t data_conversion_convert_raw_value</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num, uint16_t raw_value)</argsstring>
+        <name>data_conversion_convert_raw_value</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>raw_value</declname>
+        </param>
+        <briefdescription>
+<para>Converts the values of the given raw_value into a physical unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to convert</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A float32_t value representing the value in the physical unit of the given channel. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="63" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="111" bodyend="131" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="63" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a100e5a8b815232b4d6ce0347ab7445c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void data_conversion_set_conversion_parameters_linear</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num, float32_t gain, float32_t offset)</argsstring>
+        <name>data_conversion_set_conversion_parameters_linear</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>gain</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Set the conversion type for a given channel to linear and set parameters values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain of the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset of the channel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="74" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="133" bodyend="148" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a5fa66906a5a31b0f044f0a0a65ef90da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void data_conversion_set_conversion_parameters_therm</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num, float32_t r0, float32_t b, float32_t rdiv, float32_t t0)</argsstring>
+        <name>data_conversion_set_conversion_parameters_therm</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>r0</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>rdiv</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>t0</declname>
+        </param>
+        <briefdescription>
+<para>Set the conversion type for a given channel to therm and set parameters values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">r0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter R0 for the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter B for the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rdiv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter RDIV for the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter T0 for the channel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="87" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="150" bodyend="167" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a8aa0b6728977dee08ae5cf768603cef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>conversion_type_t</type>
+        <definition>conversion_type_t data_conversion_get_conversion_type</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num)</argsstring>
+        <name>data_conversion_get_conversion_type</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <briefdescription>
+<para>Get the conversion type for a given channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Currently configured conversion type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="97" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="169" bodyend="175" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="97" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a82a9fff853682900e9d30cf21f88a827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t data_conversion_get_parameter</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num, uint8_t parameter_num)</argsstring>
+        <name>data_conversion_get_parameter</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>parameter_num</declname>
+        </param>
+        <briefdescription>
+<para>Get a conversion parameter for a given channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">parameter_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of the paramter to retreive. E.g. for linear parameters, gain is param 1 and offset is param 2.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Current value of the given parameter. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="109" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="177" bodyend="194" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="109" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1a3dc4aa206281125cb56750161748887c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t data_conversion_store_channel_parameters_in_nvs</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num)</argsstring>
+        <name>data_conversion_store_channel_parameters_in_nvs</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <briefdescription>
+<para>Store the currently configured conversion parameters of a given channel in NVS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if parameters were correcly stored, -1 if there was an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="119" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="196" bodyend="249" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="119" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="data__conversion_8h_1acd9e1a51073c19c490ea0fd59f1bec67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t data_conversion_retrieve_channel_parameters_from_nvs</definition>
+        <argsstring>(uint8_t adc_num, uint8_t channel_num)</argsstring>
+        <name>data_conversion_retrieve_channel_parameters_from_nvs</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <briefdescription>
+<para>Retreived previously configured conversion parameters from NVS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn&apos;t match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="133" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="251" bodyend="313" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="133" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adds<sp/>all<sp/>the<sp/>CMSIS<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">//<sp/>Type<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>int8_t</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_linear<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_therm<sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>no_channel_error<sp/><sp/>=<sp/>-5</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/>conversion_type_t;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">//<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_init();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">float32_t<sp/>data_conversion_convert_raw_value(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>uint16_t<sp/>raw_value);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_linear(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>float32_t<sp/>gain,<sp/>float32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_therm(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>float32_t<sp/>r0,<sp/>float32_t<sp/>b,<sp/>float32_t<sp/>rdiv,<sp/>float32_t<sp/>t0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">conversion_type_t<sp/>data_conversion_get_conversion_type(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">float32_t<sp/>data_conversion_get_parameter(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>uint8_t<sp/>parameter_num);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">int8_t<sp/>data_conversion_store_channel_parameters_in_nvs(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">int8_t<sp/>data_conversion_retrieve_channel_parameters_from_nvs(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h"/>
+  </compounddef>
+</doxygen>

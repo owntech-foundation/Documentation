@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structgpio__conf__t" kind="struct" language="C++" prot="public">
+    <compoundname>gpio_conf_t</compoundname>
+    <includes refid="hrtim__enum_8h" local="no">hrtim_enum.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgpio__conf__t_1a953cef5b95043f0f23cc100bde78c8a3" prot="public" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* gpio_conf_t::unit</definition>
+        <argsstring></argsstring>
+        <name>unit</name>
+        <qualifiedname>gpio_conf_t::unit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="331" column="22" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgpio__conf__t_1a91967e05d4b3a99952568158fb610ed1" prot="public" static="no" mutable="no">
+        <type>LL_GPIO_InitTypeDef</type>
+        <definition>LL_GPIO_InitTypeDef gpio_conf_t::switch_H</definition>
+        <argsstring></argsstring>
+        <name>switch_H</name>
+        <qualifiedname>gpio_conf_t::switch_H</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="332" column="29" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgpio__conf__t_1a487a5266f81ddaa77071b652921e240d" prot="public" static="no" mutable="no">
+        <type>hrtim_output_units_t</type>
+        <definition>hrtim_output_units_t gpio_conf_t::OUT_H</definition>
+        <argsstring></argsstring>
+        <name>OUT_H</name>
+        <qualifiedname>gpio_conf_t::OUT_H</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="333" column="30" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgpio__conf__t_1ad6c040e67accc82c4b2d129a5548b2bb" prot="public" static="no" mutable="no">
+        <type>LL_GPIO_InitTypeDef</type>
+        <definition>LL_GPIO_InitTypeDef gpio_conf_t::switch_L</definition>
+        <argsstring></argsstring>
+        <name>switch_L</name>
+        <qualifiedname>gpio_conf_t::switch_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="334" column="29" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgpio__conf__t_1abd7da5be927797d57543f8e837c7e052" prot="public" static="no" mutable="no">
+        <type>hrtim_output_units_t</type>
+        <definition>hrtim_output_units_t gpio_conf_t::OUT_L</definition>
+        <argsstring></argsstring>
+        <name>OUT_L</name>
+        <qualifiedname>gpio_conf_t::OUT_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="335" column="30" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgpio__conf__t_1af33de12a888f6b2be6c626b62dc0393a" prot="public" static="no" mutable="no">
+        <type>hrtim_gpio_clock_number_t</type>
+        <definition>hrtim_gpio_clock_number_t gpio_conf_t::tu_gpio_CLK</definition>
+        <argsstring></argsstring>
+        <name>tu_gpio_CLK</name>
+        <qualifiedname>gpio_conf_t::tu_gpio_CLK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="336" column="35" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure containing all the information of the gpio linked to a given timing unit. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="329" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="330" bodyend="337"/>
+    <listofallmembers>
+      <member refid="structgpio__conf__t_1a487a5266f81ddaa77071b652921e240d" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>OUT_H</name></member>
+      <member refid="structgpio__conf__t_1abd7da5be927797d57543f8e837c7e052" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>OUT_L</name></member>
+      <member refid="structgpio__conf__t_1a91967e05d4b3a99952568158fb610ed1" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>switch_H</name></member>
+      <member refid="structgpio__conf__t_1ad6c040e67accc82c4b2d129a5548b2bb" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>switch_L</name></member>
+      <member refid="structgpio__conf__t_1af33de12a888f6b2be6c626b62dc0393a" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>tu_gpio_CLK</name></member>
+      <member refid="structgpio__conf__t_1a953cef5b95043f0f23cc100bde78c8a3" prot="public" virt="non-virtual"><scope>gpio_conf_t</scope><name>unit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

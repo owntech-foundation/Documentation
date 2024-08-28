@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="Rs485_8h" kind="file" language="C++">
+    <compoundname>Rs485.h</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="Rs485_8h_1a4ef8c1679448b2c30c45ba984735ef37" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usart_oversampling_t</name>
+        <enumvalue id="Rs485_8h_1a4ef8c1679448b2c30c45ba984735ef37a1f0dc03c8e365b416fc5b3f40e049f32" prot="public">
+          <name>OVER8</name>
+          <initializer>= LL_USART_OVERSAMPLING_8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Rs485_8h_1a4ef8c1679448b2c30c45ba984735ef37a171912e4591ce8b16a98296424c86c16" prot="public">
+          <name>OVER16</name>
+          <initializer>= LL_USART_OVERSAMPLING_16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="34" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" bodystart="34" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Rs485_8h_1a5c77679c0d94e41de2fbec55f259bdfc" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dma_callbackRXfunc_t) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>dma_callbackRXfunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="32" column="9" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Rs485_8h_1a5d066d95610ea1e27833867ff083e12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_usrBuffer</definition>
+        <argsstring>(uint8_t *tx_buffer, uint8_t *rx_buffer)</argsstring>
+        <name>init_usrBuffer</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>tx_buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>rx_buffer</declname>
+        </param>
+        <briefdescription>
+<para>initialize user transmission and reception buffer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tx_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmission buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rx_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reception buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initialize RX and TX buffer by user </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="45" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="104" bodyend="108" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="45" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a7115860f6e25772ee9f1614b3f982af4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_usrFunc</definition>
+        <argsstring>(dma_callbackRXfunc_t fnc_callback)</argsstring>
+        <name>init_usrFunc</name>
+        <param>
+          <type>dma_callbackRXfunc_t</type>
+          <declname>fnc_callback</declname>
+        </param>
+        <briefdescription>
+<para>initialize user function called every RX callback </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fnc_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>void function with no parameters, use NULL if there is no function to call</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initialize usr function to use in the RX callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="52" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="113" bodyend="116" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a0302f6f8be960d4b1722a08242ce1e49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_usrBaudrate</definition>
+        <argsstring>(uint32_t usr_baud)</argsstring>
+        <name>init_usrBaudrate</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>usr_baud</declname>
+        </param>
+        <briefdescription>
+<para>initialize baudrate with user choice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">usr_baud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>baud in bits per second </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>baudrate is initialized by default to 10Mbps if this function is not used</para>
+</simplesect>
+Initialize baudrate by user </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="60" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="121" bodyend="124" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="60" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1ac0891bdebe8644f9b55a6fc85a10e266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_usrDataSize</definition>
+        <argsstring>(uint16_t size)</argsstring>
+        <name>init_usrDataSize</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>initialize DMA data size to send and receive </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the data in byte (max 65535)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Set the size of data we send ie. the number of bytes. eg. : size = 5 means that we send 5 byte (40 bits) of data to USART 3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="67" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="130" bodyend="133" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1ad2b461e9e9044364a28a61cfadcacdd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serial_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>serial_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initialize USART3 </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initialise USART3 peripheral </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="72" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="138" bodyend="162" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a3b61150f56af811db20aebc42520d68c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_DEmode</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_DEmode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initialize Driver Enable mode for RS485 hardware flowcontrol. pin B14 is set to level high when data is transmitted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize driver enable mode for RS485 flowcontrol. See RM0440 37.5.20 for more details. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="78" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="168" bodyend="194" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="78" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a22357a681569af28487cc8d1a908ace7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oversamp_set</definition>
+        <argsstring>(usart_oversampling_t oversampling)</argsstring>
+        <name>oversamp_set</name>
+        <param>
+          <type>usart_oversampling_t</type>
+          <declname>oversampling</declname>
+        </param>
+        <briefdescription>
+<para>set oversampling which is by default oversampling_16. With oversampling_8 we increase speed by 2 but decrease USART sampling by half making it more sensitive to noise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">oversampling</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>choice of oversampling <itemizedlist>
+<listitem><para>OVER8 oversampling_8 </para>
+</listitem>
+<listitem><para>OVER16 oversampling_16</para>
+</listitem>
+</itemizedlist>
+Set the oversampling. See RM0440 37.5.7 for more details. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="88" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="201" bodyend="206" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="88" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a0083e1bff2f5762c1d62f095dfe3cf57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dma_channel_init_tx</definition>
+        <argsstring>()</argsstring>
+        <name>dma_channel_init_tx</name>
+        <briefdescription>
+<para>initialize dma 1 channel 6 for sending data via USART3. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the TX dma channel initialization. The channel is not enabled here to avoid sending data unexpectedly, this channel is enabled only with serial_tx_on when data must be sent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="93" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="213" bodyend="250" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="93" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a2bf2bf6b8b442c052d4ef632c75ded4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dma_channel_init_rx</definition>
+        <argsstring>()</argsstring>
+        <name>dma_channel_init_rx</name>
+        <briefdescription>
+<para>initialize dma 1 channel 7 for receiving data in circular mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para>DMA channel RX initialization, this channel is set on circular mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="98" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="256" bodyend="292" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="98" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1aada3b05e1cf82e4472a630b14c21c2c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serial_tx_on</definition>
+        <argsstring>()</argsstring>
+        <name>serial_tx_on</name>
+        <briefdescription>
+<para>reload dma buffer TX </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>after reloading the buffer, usart will start sending datas</para>
+</simplesect>
+Reload DMA TX buffer. This functions enable TX channel to start sending the datas </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="104" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="298" bodyend="309" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a2b5aea984524ec850aae2fa26b0a4aa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serial_stop</definition>
+        <argsstring>()</argsstring>
+        <name>serial_stop</name>
+        <briefdescription>
+<para>disable usart </para>
+        </briefdescription>
+        <detaileddescription>
+<para>to stop communication </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="109" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="314" bodyend="317" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="109" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Rs485_8h_1a2babcdfe166236440ec866cc9eba19d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serial_start</definition>
+        <argsstring>()</argsstring>
+        <name>serial_start</name>
+        <briefdescription>
+<para>enable usart </para>
+        </briefdescription>
+        <detaileddescription>
+<para>to start or restart communication </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" line="114" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.cpp" bodystart="322" bodyend="325" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h" declline="114" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RS485_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RS485_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stm32_ll_usart.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dma_callbackRXfunc_t)();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>OVER8<sp/>=<sp/>LL_USART_OVERSAMPLING_8,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>OVER16<sp/>=<sp/>LL_USART_OVERSAMPLING_16</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}usart_oversampling_t;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_usrBuffer(uint8_t*<sp/>tx_buffer,<sp/>uint8_t*<sp/>rx_buffer);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_usrFunc(dma_callbackRXfunc_t<sp/>fnc_callback);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_usrBaudrate(uint32_t<sp/>usr_baud);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_usrDataSize(uint16_t<sp/>size);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serial_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_DEmode(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>oversamp_set(usart_oversampling_t<sp/>oversampling);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dma_channel_init_tx();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dma_channel_init_rx();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serial_tx_on();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serial_stop();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serial_start();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RS485_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485.h"/>
+  </compounddef>
+</doxygen>

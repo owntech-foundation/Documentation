@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_09002e7ce91f09aeb040dfd1861a47f4" kind="dir">
+    <compoundname>docs/core/zephyr</compoundname>
+    <innerdir refid="dir_6d0fb8ab814c517e7f155fb837e32f72">docs/core/zephyr/modules</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/"/>
+  </compounddef>
+</doxygen>

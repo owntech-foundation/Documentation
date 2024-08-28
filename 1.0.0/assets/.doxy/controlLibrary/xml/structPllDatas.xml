@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structPllDatas" kind="class" language="C++" prot="public">
+    <compoundname>PllDatas</compoundname>
+    <includes refid="filters_8h" local="no">filters.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPllDatas_1ac6b6afcd15a58714d6103abe4cd2c5eb" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t PllDatas::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>PllDatas::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="90" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPllDatas_1a0b23aeaf97367fe220dc5d875d306778" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t PllDatas::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <qualifiedname>PllDatas::angle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="91" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPllDatas_1ac373b72734b8e486da492cdcb932bc87" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t PllDatas::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>PllDatas::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="92" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>datas returned by pll calculations </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pulsation estimated of the tracked signal [rad/s]</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the tracked signal [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="docs/controlLibrary/src/filters.h" line="89" column="1" bodyfile="docs/controlLibrary/src/filters.h" bodystart="89" bodyend="93"/>
+    <listofallmembers>
+      <member refid="structPllDatas_1a0b23aeaf97367fe220dc5d875d306778" prot="public" virt="non-virtual"><scope>PllDatas</scope><name>angle</name></member>
+      <member refid="structPllDatas_1ac373b72734b8e486da492cdcb932bc87" prot="public" virt="non-virtual"><scope>PllDatas</scope><name>error</name></member>
+      <member refid="structPllDatas_1ac6b6afcd15a58714d6103abe4cd2c5eb" prot="public" virt="non-virtual"><scope>PllDatas</scope><name>w</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

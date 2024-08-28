@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structtimer__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>timer_config_t</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtimer__config__t_1ac5a610f29b5bee333559cf70157ba87d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_config_t::timer_enable_irq</definition>
+        <argsstring></argsstring>
+        <name>timer_enable_irq</name>
+        <qualifiedname>timer_config_t::timer_enable_irq</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="94" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimer__config__t_1a7d48174f49a75fcd666d9b0970947308" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_config_t::timer_enable_encoder</definition>
+        <argsstring></argsstring>
+        <name>timer_enable_encoder</name>
+        <qualifiedname>timer_config_t::timer_enable_encoder</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="95" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimer__config__t_1a6404b2da5fa25ee706cf6c96fd148a51" prot="public" static="no" mutable="no">
+        <type>timer_callback_t</type>
+        <definition>timer_callback_t timer_config_t::timer_irq_callback</definition>
+        <argsstring></argsstring>
+        <name>timer_irq_callback</name>
+        <qualifiedname>timer_config_t::timer_irq_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="97" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimer__config__t_1ab7e0ef1f7440a3c6938dbcd4512ecec7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_config_t::timer_irq_t_usec</definition>
+        <argsstring></argsstring>
+        <name>timer_irq_t_usec</name>
+        <qualifiedname>timer_config_t::timer_irq_t_usec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="98" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimer__config__t_1a7887e2d2e0a30fc0164aa6d15eacfd66" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_config_t::timer_use_zero_latency</definition>
+        <argsstring></argsstring>
+        <name>timer_use_zero_latency</name>
+        <qualifiedname>timer_config_t::timer_use_zero_latency</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="99" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimer__config__t_1ae574df86c4d08cb15f31df91c3b0ec15" prot="public" static="no" mutable="no">
+        <type>pin_mode_t</type>
+        <definition>pin_mode_t timer_config_t::timer_enc_pin_mode</definition>
+        <argsstring></argsstring>
+        <name>timer_enc_pin_mode</name>
+        <qualifiedname>timer_config_t::timer_enc_pin_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="101" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>timer_enable_irq : set to 1 to enable interrupt on timer overflow. timer_enable_encoder: set to 1 for timer to act as an incremental coder counter.</para>
+<para>*** IRQ mode (ignored if timer_enable_irq=0) ***<itemizedlist>
+<listitem><para>timer_irq_callback : pointer to a void(void) function that will be called on timer overflow.</para>
+</listitem><listitem><para>timer_irq_t_usec : period of the interrupt in microsecond (2 to 6553 µs)</para>
+</listitem><listitem><para>timer_use_zero_latency: for tasks, use zero-latency interrupts. Only used by Task API, end-user should set this one to false.</para>
+</listitem></itemizedlist>
+</para>
+<para>*** Incremental encoder mode (ignored if timer_enable_encoder=0) ***<itemizedlist>
+<listitem><para>timer_pin_mode : Pin mode for incremental coder interface.</para>
+</listitem></itemizedlist>
+</para>
+<para>NOTE: At this time, only irq mode is supported on TIM6/TIM7, and only incremental coder mode is suppported on TIM4, which makes this configuration structure almost pointless (except for callback definition). However, it is built this way with future evolutions of the driver in mind. </para>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="91" column="1" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="92" bodyend="102"/>
+    <listofallmembers>
+      <member refid="structtimer__config__t_1a7d48174f49a75fcd666d9b0970947308" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_enable_encoder</name></member>
+      <member refid="structtimer__config__t_1ac5a610f29b5bee333559cf70157ba87d" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_enable_irq</name></member>
+      <member refid="structtimer__config__t_1ae574df86c4d08cb15f31df91c3b0ec15" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_enc_pin_mode</name></member>
+      <member refid="structtimer__config__t_1a6404b2da5fa25ee706cf6c96fd148a51" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_irq_callback</name></member>
+      <member refid="structtimer__config__t_1ab7e0ef1f7440a3c6938dbcd4512ecec7" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_irq_t_usec</name></member>
+      <member refid="structtimer__config__t_1a7887e2d2e0a30fc0164aa6d15eacfd66" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_use_zero_latency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_1a412f239039e530bef8001f48cd80a4" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_communication/zephyr/src</compoundname>
+    <innerfile refid="AnalogCommunication_8cpp">AnalogCommunication.cpp</innerfile>
+    <innerfile refid="AnalogCommunication_8h">AnalogCommunication.h</innerfile>
+    <innerfile refid="CanCommunication_8cpp">CanCommunication.cpp</innerfile>
+    <innerfile refid="CanCommunication_8h">CanCommunication.h</innerfile>
+    <innerfile refid="data__objects_8cpp">data_objects.cpp</innerfile>
+    <innerfile refid="data__objects_8h">data_objects.h</innerfile>
+    <innerfile refid="Rs485_8cpp">Rs485.cpp</innerfile>
+    <innerfile refid="Rs485_8h">Rs485.h</innerfile>
+    <innerfile refid="Rs485Communication_8cpp">Rs485Communication.cpp</innerfile>
+    <innerfile refid="Rs485Communication_8h">Rs485Communication.h</innerfile>
+    <innerfile refid="SyncCommunication_8cpp">SyncCommunication.cpp</innerfile>
+    <innerfile refid="SyncCommunication_8h">SyncCommunication.h</innerfile>
+    <innerfile refid="thingset__isotp_8cpp">thingset_isotp.cpp</innerfile>
+    <innerfile refid="thingset__pub__sub_8cpp">thingset_pub_sub.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/"/>
+  </compounddef>
+</doxygen>
