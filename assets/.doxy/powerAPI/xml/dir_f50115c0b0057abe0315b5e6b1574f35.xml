@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_f50115c0b0057abe0315b5e6b1574f35" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api</compoundname>
+    <innerfile refid="hrtim_8h">hrtim.h</innerfile>
+    <innerfile refid="hrtim__enum_8h">hrtim_enum.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/"/>
+  </compounddef>
+</doxygen>

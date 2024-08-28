@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classAnalogCommunication" kind="class" language="C++" prot="public">
+    <compoundname>AnalogCommunication</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classAnalogCommunication_1a56a95af9f091a01290d3fd924740d06f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCommunication::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>AnalogCommunication::init</qualifiedname>
+        <briefdescription>
+<para>Initializing analog communication (ADC and DAC) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="45" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="41" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classAnalogCommunication_1a5c8f7bf0809b5f91baf3f96785cc9cf8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t AnalogCommunication::getAnalogCommValue</definition>
+        <argsstring>()</argsstring>
+        <name>getAnalogCommValue</name>
+        <qualifiedname>AnalogCommunication::getAnalogCommValue</qualifiedname>
+        <briefdescription>
+<para>Get the analog value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Analog value (A value between 0 and 4096) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="52" column="18" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classAnalogCommunication_1a02653f7a85f104cf78b45da094b10c77" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCommunication::setAnalogCommValue</definition>
+        <argsstring>(uint32_t analog_bus_value)</argsstring>
+        <name>setAnalogCommValue</name>
+        <qualifiedname>AnalogCommunication::setAnalogCommValue</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>analog_bus_value</declname>
+        </param>
+        <briefdescription>
+<para>Set the analog value, the DAC output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analog_bus_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value between 0 and 4096 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="59" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" bodystart="39" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classAnalogCommunication_1a5c8f7bf0809b5f91baf3f96785cc9cf8" prot="public" virt="non-virtual"><scope>AnalogCommunication</scope><name>getAnalogCommValue</name></member>
+      <member refid="classAnalogCommunication_1a56a95af9f091a01290d3fd924740d06f" prot="public" virt="non-virtual"><scope>AnalogCommunication</scope><name>init</name></member>
+      <member refid="classAnalogCommunication_1a02653f7a85f104cf78b45da094b10c77" prot="public" virt="non-virtual"><scope>AnalogCommunication</scope><name>setAnalogCommValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

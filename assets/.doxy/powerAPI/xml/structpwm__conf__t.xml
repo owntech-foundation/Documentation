@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structpwm__conf__t" kind="struct" language="C++" prot="public">
+    <compoundname>pwm_conf_t</compoundname>
+    <includes refid="hrtim__enum_8h" local="no">hrtim_enum.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpwm__conf__t_1a1aaedeb83af04630de2d0a3728af0b9c" prot="public" static="no" mutable="no">
+        <type>hrtim_tu_t</type>
+        <definition>hrtim_tu_t pwm_conf_t::pwm_tu</definition>
+        <argsstring></argsstring>
+        <name>pwm_tu</name>
+        <qualifiedname>pwm_conf_t::pwm_tu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="303" column="20" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1a111f3beb136869494d8d94b1f0895e41" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t pwm_conf_t::rise_dead_time</definition>
+        <argsstring></argsstring>
+        <name>rise_dead_time</name>
+        <qualifiedname>pwm_conf_t::rise_dead_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="304" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1a1359768d61363bc9a92ce047294a2adf" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t pwm_conf_t::fall_dead_time</definition>
+        <argsstring></argsstring>
+        <name>fall_dead_time</name>
+        <qualifiedname>pwm_conf_t::fall_dead_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="305" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1ae0d41e12ba7c843f3b9b5b35c6e5c6ed" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t pwm_conf_t::duty_cycle</definition>
+        <argsstring></argsstring>
+        <name>duty_cycle</name>
+        <qualifiedname>pwm_conf_t::duty_cycle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="306" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1aad26dcb05660b9cecc3a806ba4435a2d" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t pwm_conf_t::period</definition>
+        <argsstring></argsstring>
+        <name>period</name>
+        <qualifiedname>pwm_conf_t::period</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="307" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1a236f47554445be028d6717bdc522f0f0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pwm_conf_t::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <qualifiedname>pwm_conf_t::frequency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="308" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1aa70350641153b3c22138b47d0b2dd4e7" prot="public" static="no" mutable="no">
+        <type>hrtim_cnt_t</type>
+        <definition>hrtim_cnt_t pwm_conf_t::modulation</definition>
+        <argsstring></argsstring>
+        <name>modulation</name>
+        <qualifiedname>pwm_conf_t::modulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="309" column="21" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1ac961245ebce3d6276babea18bae72207" prot="public" static="no" mutable="no">
+        <type>hrtim_tu_ON_OFF_t</type>
+        <definition>hrtim_tu_ON_OFF_t pwm_conf_t::unit_on</definition>
+        <argsstring></argsstring>
+        <name>unit_on</name>
+        <qualifiedname>pwm_conf_t::unit_on</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="310" column="27" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1a20ca10fb1cb21738627bb4cf98588a54" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pwm_conf_t::ckpsc</definition>
+        <argsstring></argsstring>
+        <name>ckpsc</name>
+        <qualifiedname>pwm_conf_t::ckpsc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="311" column="17" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1aa728c152b00638e760fdcaa082a3bcea" prot="public" static="no" mutable="no">
+        <type>hrtim_pwm_mode_t</type>
+        <definition>hrtim_pwm_mode_t pwm_conf_t::pwm_mode</definition>
+        <argsstring></argsstring>
+        <name>pwm_mode</name>
+        <qualifiedname>pwm_conf_t::pwm_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="312" column="26" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpwm__conf__t_1ae3c9bc310758dd584b5539824c0dda31" prot="public" static="no" mutable="no">
+        <type>hrtim_external_trigger_t</type>
+        <definition>hrtim_external_trigger_t pwm_conf_t::external_trigger</definition>
+        <argsstring></argsstring>
+        <name>external_trigger</name>
+        <qualifiedname>pwm_conf_t::external_trigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="313" column="34" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure containing all the data regarding the pwm of a given timing unit. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="301" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="302" bodyend="314"/>
+    <listofallmembers>
+      <member refid="structpwm__conf__t_1a20ca10fb1cb21738627bb4cf98588a54" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>ckpsc</name></member>
+      <member refid="structpwm__conf__t_1ae0d41e12ba7c843f3b9b5b35c6e5c6ed" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>duty_cycle</name></member>
+      <member refid="structpwm__conf__t_1ae3c9bc310758dd584b5539824c0dda31" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>external_trigger</name></member>
+      <member refid="structpwm__conf__t_1a1359768d61363bc9a92ce047294a2adf" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>fall_dead_time</name></member>
+      <member refid="structpwm__conf__t_1a236f47554445be028d6717bdc522f0f0" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>frequency</name></member>
+      <member refid="structpwm__conf__t_1aa70350641153b3c22138b47d0b2dd4e7" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>modulation</name></member>
+      <member refid="structpwm__conf__t_1aad26dcb05660b9cecc3a806ba4435a2d" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>period</name></member>
+      <member refid="structpwm__conf__t_1aa728c152b00638e760fdcaa082a3bcea" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>pwm_mode</name></member>
+      <member refid="structpwm__conf__t_1a1aaedeb83af04630de2d0a3728af0b9c" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>pwm_tu</name></member>
+      <member refid="structpwm__conf__t_1a111f3beb136869494d8d94b1f0895e41" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>rise_dead_time</name></member>
+      <member refid="structpwm__conf__t_1ac961245ebce3d6276babea18bae72207" prot="public" virt="non-virtual"><scope>pwm_conf_t</scope><name>unit_on</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

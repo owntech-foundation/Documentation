@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classFir" kind="class" language="C++" prot="public">
+    <compoundname>Fir</compoundname>
+    <includes refid="fir_8h" local="no">fir.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFir_1a4a0d205ea3c1259b4bed0b1043637833" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Fir::nc</definition>
+        <argsstring></argsstring>
+        <name>nc</name>
+        <qualifiedname>Fir::nc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="53" column="13" bodyfile="docs/controlLibrary/src/fir.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFir_1a23b48dce9b0cdb953d9c426447ded7fd" prot="private" static="no" mutable="no">
+        <type>float32_t *</type>
+        <definition>float32_t* Fir::coeffs</definition>
+        <argsstring></argsstring>
+        <name>coeffs</name>
+        <qualifiedname>Fir::coeffs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="54" column="15" bodyfile="docs/controlLibrary/src/fir.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFir_1aad4a70113cc92b8b8afd6be3f5efe6cd" prot="private" static="no" mutable="no">
+        <type>float32_t *</type>
+        <definition>float32_t* Fir::datas</definition>
+        <argsstring></argsstring>
+        <name>datas</name>
+        <qualifiedname>Fir::datas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="55" column="15" bodyfile="docs/controlLibrary/src/fir.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFir_1a91faad9a8c580719ab5f0107607573f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Fir::Fir</definition>
+        <argsstring>()</argsstring>
+        <name>Fir</name>
+        <qualifiedname>Fir::Fir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1a8557bc5aec691985426994c31dde83fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Fir::Fir</definition>
+        <argsstring>(const uint8_t nc, const float32_t *coeffs)</argsstring>
+        <name>Fir</name>
+        <qualifiedname>Fir::Fir</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <declname>nc</declname>
+        </param>
+        <param>
+          <type>const float32_t *</type>
+          <declname>coeffs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1ab3c26dd1d24e5d8c1c4a515b0e250fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Fir::init</definition>
+        <argsstring>(uint8_t nc, const float32_t *coeffs)</argsstring>
+        <name>init</name>
+        <qualifiedname>Fir::init</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>nc</declname>
+        </param>
+        <param>
+          <type>const float32_t *</type>
+          <declname>coeffs</declname>
+        </param>
+        <briefdescription>
+<para>method to initialize the <ref refid="classFir" kindref="compound">Fir</ref> with its coefficients </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of coefficients </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coeffs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array of coefficients </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="47" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1aa88c2bce82f653d29f8156535706ab3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t Fir::update</definition>
+        <argsstring>(float32_t new_data)</argsstring>
+        <name>update</name>
+        <qualifiedname>Fir::update</qualifiedname>
+        <param>
+          <type>float32_t</type>
+          <declname>new_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="48" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1af590424dffa12dab2cddc04394b25803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fir::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Fir::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1a56bd7e739497efa1d2fefcdb63479550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fir::setCoeff</definition>
+        <argsstring>(uint8_t n, float32_t value)</argsstring>
+        <name>setCoeff</name>
+        <qualifiedname>Fir::setCoeff</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFir_1ab26de4b8a3b17422b4ba6d7e98fbb89e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Fir::~Fir</definition>
+        <argsstring>()</argsstring>
+        <name>~Fir</name>
+        <qualifiedname>Fir::~Fir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/fir.h" line="51" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>a class to implement the Finite Impulse Response filter behaviour </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>2024 </para>
+</simplesect>
+<simplesect kind="author"><para>Régis Ruelland <ulink url="mailto:regis.ruelland@laas.fr">regis.ruelland@laas.fr</ulink></para>
+</simplesect>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of coefficients</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>*coeffs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array of coefficients </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="docs/controlLibrary/src/fir.h" line="36" column="1" bodyfile="docs/controlLibrary/src/fir.h" bodystart="36" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classFir_1a23b48dce9b0cdb953d9c426447ded7fd" prot="private" virt="non-virtual"><scope>Fir</scope><name>coeffs</name></member>
+      <member refid="classFir_1aad4a70113cc92b8b8afd6be3f5efe6cd" prot="private" virt="non-virtual"><scope>Fir</scope><name>datas</name></member>
+      <member refid="classFir_1a91faad9a8c580719ab5f0107607573f2" prot="public" virt="non-virtual"><scope>Fir</scope><name>Fir</name></member>
+      <member refid="classFir_1a8557bc5aec691985426994c31dde83fb" prot="public" virt="non-virtual"><scope>Fir</scope><name>Fir</name></member>
+      <member refid="classFir_1ab3c26dd1d24e5d8c1c4a515b0e250fd5" prot="public" virt="non-virtual"><scope>Fir</scope><name>init</name></member>
+      <member refid="classFir_1a4a0d205ea3c1259b4bed0b1043637833" prot="private" virt="non-virtual"><scope>Fir</scope><name>nc</name></member>
+      <member refid="classFir_1af590424dffa12dab2cddc04394b25803" prot="public" virt="non-virtual"><scope>Fir</scope><name>reset</name></member>
+      <member refid="classFir_1a56bd7e739497efa1d2fefcdb63479550" prot="public" virt="non-virtual"><scope>Fir</scope><name>setCoeff</name></member>
+      <member refid="classFir_1aa88c2bce82f653d29f8156535706ab3a" prot="public" virt="non-virtual"><scope>Fir</scope><name>update</name></member>
+      <member refid="classFir_1ab26de4b8a3b17422b4ba6d7e98fbb89e" prot="public" virt="non-virtual"><scope>Fir</scope><name>~Fir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

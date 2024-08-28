@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classSpinAPI" kind="class" language="C++" prot="public">
+    <compoundname>SpinAPI</compoundname>
+    <includes refid="SpinAPI_8h" local="no">SpinAPI.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" prot="public" static="no" mutable="no">
+        <type><ref refid="classGpioHAL" kindref="compound">GpioHAL</ref></type>
+        <definition>GpioHAL SpinAPI::gpio</definition>
+        <argsstring></argsstring>
+        <name>gpio</name>
+        <qualifiedname>SpinAPI::gpio</qualifiedname>
+        <briefdescription>
+<para>Contains all the functions for the spin gpio. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="67" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a364caad396647bf4376c4a773dca73c1" prot="public" static="no" mutable="no">
+        <type><ref refid="classLedHAL" kindref="compound">LedHAL</ref></type>
+        <definition>LedHAL SpinAPI::led</definition>
+        <argsstring></argsstring>
+        <name>led</name>
+        <qualifiedname>SpinAPI::led</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the embedded LED. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="72" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" prot="public" static="no" mutable="no">
+        <type><ref refid="classDacHAL" kindref="compound">DacHAL</ref></type>
+        <definition>DacHAL SpinAPI::dac</definition>
+        <argsstring></argsstring>
+        <name>dac</name>
+        <qualifiedname>SpinAPI::dac</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 DAC used to generate signals and handle the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="77" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" prot="public" static="no" mutable="no">
+        <type><ref refid="classCompHAL" kindref="compound">CompHAL</ref></type>
+        <definition>CompHAL SpinAPI::comp</definition>
+        <argsstring></argsstring>
+        <name>comp</name>
+        <qualifiedname>SpinAPI::comp</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 comparator used with the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="82" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" prot="public" static="no" mutable="no">
+        <type><ref refid="classPwmHAL" kindref="compound">PwmHAL</ref></type>
+        <definition>PwmHAL SpinAPI::pwm</definition>
+        <argsstring></argsstring>
+        <name>pwm</name>
+        <qualifiedname>SpinAPI::pwm</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 hrtim PWM generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="87" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a977b6d62e96bca1863bfe452e8c0677a" prot="public" static="no" mutable="no">
+        <type><ref refid="classAdcHAL" kindref="compound">AdcHAL</ref></type>
+        <definition>AdcHAL SpinAPI::adc</definition>
+        <argsstring></argsstring>
+        <name>adc</name>
+        <qualifiedname>SpinAPI::adc</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 ADC including configuration and synchronization with the HRTIM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="92" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" prot="public" static="no" mutable="no">
+        <type><ref refid="classUartHAL" kindref="compound">UartHAL</ref></type>
+        <definition>UartHAL SpinAPI::uart</definition>
+        <argsstring></argsstring>
+        <name>uart</name>
+        <qualifiedname>SpinAPI::uart</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 Usart1 functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="97" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a7cb9c45933632d3e522581867c158420" prot="public" static="no" mutable="no">
+        <type><ref refid="classTimerHAL" kindref="compound">TimerHAL</ref></type>
+        <definition>TimerHAL SpinAPI::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>SpinAPI::timer</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the STM32 Timer4 functions that handle the encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="102" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1ab139e9ee868e3c1f3676c4c880a3d637" prot="public" static="no" mutable="no">
+        <type><ref refid="classVersionHAL" kindref="compound">VersionHAL</ref></type>
+        <definition>VersionHAL SpinAPI::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>SpinAPI::version</qualifiedname>
+        <briefdescription>
+<para>Contains all the function related to the versioning of the microcontroller boards. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="107" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpinAPI_1a923a65d67dbae272c75da0890b9ce2d6" prot="public" static="no" mutable="no">
+        <type><ref refid="classNgndHAL" kindref="compound">NgndHAL</ref></type>
+        <definition>NgndHAL SpinAPI::ngnd</definition>
+        <argsstring></argsstring>
+        <name>ngnd</name>
+        <qualifiedname>SpinAPI::ngnd</qualifiedname>
+        <briefdescription>
+<para>Contains all the function of the NGND switch compatible with TWISTs prior to 1.4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="113" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Contains all the elements linked to peripherals of the spin board. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>AdcHAL</label>
+        <link refid="classAdcHAL"/>
+      </node>
+      <node id="5">
+        <label>CompHAL</label>
+        <link refid="classCompHAL"/>
+      </node>
+      <node id="4">
+        <label>DacHAL</label>
+        <link refid="classDacHAL"/>
+      </node>
+      <node id="2">
+        <label>GpioHAL</label>
+        <link refid="classGpioHAL"/>
+      </node>
+      <node id="3">
+        <label>LedHAL</label>
+        <link refid="classLedHAL"/>
+      </node>
+      <node id="11">
+        <label>NgndHAL</label>
+        <link refid="classNgndHAL"/>
+      </node>
+      <node id="6">
+        <label>PwmHAL</label>
+        <link refid="classPwmHAL"/>
+      </node>
+      <node id="1">
+        <label>SpinAPI</label>
+        <link refid="classSpinAPI"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gpio</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>led</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dac</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pwm</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>adc</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>uart</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>timer</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>version</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>ngnd</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TimerHAL</label>
+        <link refid="classTimerHAL"/>
+      </node>
+      <node id="8">
+        <label>UartHAL</label>
+        <link refid="classUartHAL"/>
+      </node>
+      <node id="10">
+        <label>VersionHAL</label>
+        <link refid="classVersionHAL"/>
+      </node>
+    </collaborationgraph>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="59" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" bodystart="60" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classSpinAPI_1a977b6d62e96bca1863bfe452e8c0677a" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>adc</name></member>
+      <member refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>comp</name></member>
+      <member refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>dac</name></member>
+      <member refid="classSpinAPI_1ad403c8ca3be29d136c208a6d1edd0a76" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>gpio</name></member>
+      <member refid="classSpinAPI_1a364caad396647bf4376c4a773dca73c1" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>led</name></member>
+      <member refid="classSpinAPI_1a923a65d67dbae272c75da0890b9ce2d6" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>ngnd</name></member>
+      <member refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>pwm</name></member>
+      <member refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>timer</name></member>
+      <member refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>uart</name></member>
+      <member refid="classSpinAPI_1ab139e9ee868e3c1f3676c4c880a3d637" prot="public" virt="non-virtual"><scope>SpinAPI</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

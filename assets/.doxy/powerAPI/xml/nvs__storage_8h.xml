@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="nvs__storage_8h" kind="file" language="C++">
+    <compoundname>nvs_storage.h</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="nvs__storage_8h_1abb63dcf77b38c739dbfd3e49cf82c648" prot="public" static="no" strong="no">
+        <type></type>
+        <name>nvs_category_t</name>
+        <enumvalue id="nvs__storage_8h_1abb63dcf77b38c739dbfd3e49cf82c648a52f49aba124a600ad9581caabe6a099a" prot="public">
+          <name>VERSION</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nvs__storage_8h_1abb63dcf77b38c739dbfd3e49cf82c648a76ff99a9338d49766d895c5d79ae01b8" prot="public">
+          <name>ADC_CALIBRATION</name>
+          <initializer>= 0x0200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nvs__storage_8h_1abb63dcf77b38c739dbfd3e49cf82c648ae98524e17972c7779f30ad4d75138180" prot="public">
+          <name>MEASURE_THRESHOLD</name>
+          <initializer>= 0x0300</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="43" column="1" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="nvs__storage_8h_1ae4b63b040d32cda3360b66bda94bd29d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t nvs_storage_store_data</definition>
+        <argsstring>(uint16_t data_id, const void *data, uint8_t data_size)</argsstring>
+        <name>nvs_storage_store_data</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>data_id</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="53" column="8" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.c" bodystart="153" bodyend="170" declfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" declline="53" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="nvs__storage_8h_1a241cdb0b7eb4b6a051e968f98cb73183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t nvs_storage_retrieve_data</definition>
+        <argsstring>(uint16_t data_id, void *data_buffer, uint8_t data_buffer_size)</argsstring>
+        <name>nvs_storage_retrieve_data</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>data_id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data_buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_buffer_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="54" column="8" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.c" bodystart="172" bodyend="194" declfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" declline="54" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="nvs__storage_8h_1a419cef2b6cbd21608f2fc4197bcc4f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t nvs_storage_clear_all_stored_data</definition>
+        <argsstring>()</argsstring>
+        <name>nvs_storage_clear_all_stored_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="55" column="8" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.c" bodystart="196" bodyend="205" declfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" declline="55" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="nvs__storage_8h_1afe2e491fbb3a2ae2200464d15fce3998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t nvs_storage_get_current_version</definition>
+        <argsstring>()</argsstring>
+        <name>nvs_storage_get_current_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="57" column="10" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.c" bodystart="207" bodyend="216" declfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" declline="57" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="nvs__storage_8h_1ae39faf648d51733cf6f219b8001e000c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t nvs_storage_get_version_in_nvs</definition>
+        <argsstring>()</argsstring>
+        <name>nvs_storage_get_version_in_nvs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" line="58" column="10" bodyfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.c" bodystart="218" bodyend="227" declfile="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h" declline="58" declcolumn="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NVS_STORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVS_STORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">//<sp/>Type<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NVS<sp/>categories<sp/>must<sp/>be<sp/>on<sp/>the<sp/>upper<sp/>half</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>2-bytes<sp/>value,<sp/>hence<sp/>end<sp/>with<sp/>00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0100,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_CALIBRATION<sp/><sp/>=<sp/>0x0200,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>MEASURE_THRESHOLD<sp/>=<sp/>0x0300,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}nvs_category_t;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">//<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">int8_t<sp/>nvs_storage_store_data(uint16_t<sp/>data_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/>uint8_t<sp/>data_size);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">int8_t<sp/>nvs_storage_retrieve_data(uint16_t<sp/>data_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data_buffer,<sp/>uint8_t<sp/>data_buffer_size);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">int8_t<sp/>nvs_storage_clear_all_stored_data();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">uint16_t<sp/>nvs_storage_get_current_version();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">uint16_t<sp/>nvs_storage_get_version_in_nvs();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>NVS_STORAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_flash_driver/zephyr/public_api/nvs_storage.h"/>
+  </compounddef>
+</doxygen>

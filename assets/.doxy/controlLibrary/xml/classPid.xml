@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classPid" kind="class" language="C++" prot="public">
+    <compoundname>Pid</compoundname>
+    <basecompoundref refid="classController" prot="public" virt="non-virtual">Controller&lt; float32_t, float32_t, float32_t, PidParams &gt;</basecompoundref>
+    <includes refid="pid_8h" local="no">pid.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPid_1afa32002c07db223d55f42619f19a4052" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_integral</definition>
+        <argsstring></argsstring>
+        <name>_integral</name>
+        <qualifiedname>Pid::_integral</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="98" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a0bb4b0e9a69d75c62c1763c3904f321f" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_Kp</definition>
+        <argsstring></argsstring>
+        <name>_Kp</name>
+        <qualifiedname>Pid::_Kp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="99" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a501d9888ee2aae2a93fbbd02d27393c6" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_Ti</definition>
+        <argsstring></argsstring>
+        <name>_Ti</name>
+        <qualifiedname>Pid::_Ti</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="100" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a9902f1c9f693a28127775926be07cf8f" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_Td</definition>
+        <argsstring></argsstring>
+        <name>_Td</name>
+        <qualifiedname>Pid::_Td</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="101" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1afc3cc9a43891278434f4812938baace6" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_N</definition>
+        <argsstring></argsstring>
+        <name>_N</name>
+        <qualifiedname>Pid::_N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="102" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a8cce5eadd6c1ef23bb8ed305f9d832df" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_previous_f_deriv</definition>
+        <argsstring></argsstring>
+        <name>_previous_f_deriv</name>
+        <qualifiedname>Pid::_previous_f_deriv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="103" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a3437c02280d78d2a45ca8df18a1bd80a" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_previous_error</definition>
+        <argsstring></argsstring>
+        <name>_previous_error</name>
+        <qualifiedname>Pid::_previous_error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="104" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1afe056b0ff672643d44ed360f5731182e" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_inverse_Ts</definition>
+        <argsstring></argsstring>
+        <name>_inverse_Ts</name>
+        <qualifiedname>Pid::_inverse_Ts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="106" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a4ac0e1ac46429c02b2863b5ba633ed59" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_inverse_Ti</definition>
+        <argsstring></argsstring>
+        <name>_inverse_Ti</name>
+        <qualifiedname>Pid::_inverse_Ti</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="107" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a26c7806f85d297c4207d8b9a1f0a88bd" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_inverse_Kp</definition>
+        <argsstring></argsstring>
+        <name>_inverse_Kp</name>
+        <qualifiedname>Pid::_inverse_Kp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="108" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a6faf5027e6f2ec747424b6e89792d0b2" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_b1_filter</definition>
+        <argsstring></argsstring>
+        <name>_b1_filter</name>
+        <qualifiedname>Pid::_b1_filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="109" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPid_1a7cb7320b2fe3877c3c27921764643873" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t Pid::_a1_filter</definition>
+        <argsstring></argsstring>
+        <name>_a1_filter</name>
+        <qualifiedname>Pid::_a1_filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="110" column="15" bodyfile="docs/controlLibrary/src/pid.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPid_1a8bcea8fa5b4f855f796ef55c6bc169ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Pid::Pid</definition>
+        <argsstring>()</argsstring>
+        <name>Pid</name>
+        <qualifiedname>Pid::Pid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="81" column="5" bodyfile="docs/controlLibrary/src/pid.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classPid_1a08ded8f3c414188b3e10bb47fa0efb03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int8_t</type>
+        <definition>int8_t Pid::init</definition>
+        <argsstring>(PidParams params) override</argsstring>
+        <name>init</name>
+        <qualifiedname>Pid::init</qualifiedname>
+        <reimplements refid="classController_1a879c564d535b702374822585d9b16227">init</reimplements>
+        <param>
+          <type><ref refid="structPidParams" kindref="compound">PidParams</ref></type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>initialize the standard pid </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a <ref refid="structPidParams" kindref="compound">PidParams</ref> structure with all the parameters of the <ref refid="classPid" kindref="compound">Pid</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if ok else -EINVAL </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="89" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classPid_1a982a9657543c94da9e2a20898e8d9444" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pid::calculate</definition>
+        <argsstring>(void) override</argsstring>
+        <name>calculate</name>
+        <qualifiedname>Pid::calculate</qualifiedname>
+        <reimplements refid="classController_1abb5fa7695fdaa74f92b0394d1544e831">calculate</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>calculate a new command value according to a reference fixed using <computeroutput>setReference</computeroutput> method and a measuremnt fixed using <computeroutput>setMeasurement</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The new command value can be captured using the <computeroutput>get_output</computeroutput> method. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="91" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPid_1ad4cee252541175cb4d1116585fa34b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pid::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <qualifiedname>Pid::reset</qualifiedname>
+        <reimplements refid="classController_1a492a596f91be68c31e01cca0978fd479">reset</reimplements>
+        <briefdescription>
+<para>reset internal states and the last command of the controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPid_1a2e4b8b361055f2eb4bcc762e3fc02e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pid::reset</definition>
+        <argsstring>(float32_t output)</argsstring>
+        <name>reset</name>
+        <qualifiedname>Pid::reset</qualifiedname>
+        <param>
+          <type>float32_t</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/pid.h" line="95" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classPid" kindref="compound">Pid</ref> in a standard form taking into account saturation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>out = Kp * (error + 1 / Ti * error / s + 1 / (1 + Td / N * s) * Td * s * error )</para>
+<para>It uses backward euler integration method.</para>
+<para>Example of use:</para>
+<para><ref refid="classPid" kindref="compound">Pid</ref> mypid; <ref refid="structPidParams" kindref="compound">PidParams</ref> params(Ts, Kp, Ti, Td, N, lower_bound, upper_bound); mypid.init(params); mypid.setMeasurement(y); mypid.setReference(yref); mypid.calculate(); mypid.getOutput(); </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Controller&lt; float32_t, float32_t, float32_t, PidParams &gt;</label>
+        <link refid="classController"/>
+      </node>
+      <node id="1">
+        <label>Pid</label>
+        <link refid="classPid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Controller&lt; float32_t, float32_t, float32_t, PidParams &gt;</label>
+        <link refid="classController"/>
+      </node>
+      <node id="1">
+        <label>Pid</label>
+        <link refid="classPid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="docs/controlLibrary/src/pid.h" line="78" column="1" bodyfile="docs/controlLibrary/src/pid.h" bodystart="78" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classPid_1a7cb7320b2fe3877c3c27921764643873" prot="private" virt="non-virtual"><scope>Pid</scope><name>_a1_filter</name></member>
+      <member refid="classPid_1a6faf5027e6f2ec747424b6e89792d0b2" prot="private" virt="non-virtual"><scope>Pid</scope><name>_b1_filter</name></member>
+      <member refid="classPid_1afa32002c07db223d55f42619f19a4052" prot="private" virt="non-virtual"><scope>Pid</scope><name>_integral</name></member>
+      <member refid="classPid_1a26c7806f85d297c4207d8b9a1f0a88bd" prot="private" virt="non-virtual"><scope>Pid</scope><name>_inverse_Kp</name></member>
+      <member refid="classPid_1a4ac0e1ac46429c02b2863b5ba633ed59" prot="private" virt="non-virtual"><scope>Pid</scope><name>_inverse_Ti</name></member>
+      <member refid="classPid_1afe056b0ff672643d44ed360f5731182e" prot="private" virt="non-virtual"><scope>Pid</scope><name>_inverse_Ts</name></member>
+      <member refid="classPid_1a0bb4b0e9a69d75c62c1763c3904f321f" prot="private" virt="non-virtual"><scope>Pid</scope><name>_Kp</name></member>
+      <member refid="classController_1a9c31c88c3e8e1dfa7fca7db655222564" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_lower_bound</name></member>
+      <member refid="classController_1aa73bd2c40fc73372e40a9dbf562a150e" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_measure</name></member>
+      <member refid="classPid_1afc3cc9a43891278434f4812938baace6" prot="private" virt="non-virtual"><scope>Pid</scope><name>_N</name></member>
+      <member refid="classController_1acbf8d672ba7636091b3bf927db6e12d5" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_output</name></member>
+      <member refid="classPid_1a3437c02280d78d2a45ca8df18a1bd80a" prot="private" virt="non-virtual"><scope>Pid</scope><name>_previous_error</name></member>
+      <member refid="classPid_1a8cce5eadd6c1ef23bb8ed305f9d832df" prot="private" virt="non-virtual"><scope>Pid</scope><name>_previous_f_deriv</name></member>
+      <member refid="classController_1a8fb552b2e77984a003ad0b62d0a2507b" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_reference</name></member>
+      <member refid="classPid_1a9902f1c9f693a28127775926be07cf8f" prot="private" virt="non-virtual"><scope>Pid</scope><name>_Td</name></member>
+      <member refid="classPid_1a501d9888ee2aae2a93fbbd02d27393c6" prot="private" virt="non-virtual"><scope>Pid</scope><name>_Ti</name></member>
+      <member refid="classController_1a36de6a1a4405705ab8613dbfcd64ca35" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_Ts</name></member>
+      <member refid="classController_1ab661a7dbe7aa3f8dabee07b3d7604230" prot="protected" virt="non-virtual"><scope>Pid</scope><name>_upper_bound</name></member>
+      <member refid="classPid_1a982a9657543c94da9e2a20898e8d9444" prot="public" virt="virtual"><scope>Pid</scope><name>calculate</name></member>
+      <member refid="classController_1aa02c83e6f23eb251da2baa8e31ffcd58" prot="public" virt="virtual"><scope>Pid</scope><name>calculateWithReturn</name></member>
+      <member refid="classController_1ae5c2de3d2d7fea6df7c3fb71794bafbe" prot="public" virt="virtual"><scope>Pid</scope><name>getOutput</name></member>
+      <member refid="classPid_1a08ded8f3c414188b3e10bb47fa0efb03" prot="public" virt="virtual"><scope>Pid</scope><name>init</name></member>
+      <member refid="classPid_1a8bcea8fa5b4f855f796ef55c6bc169ae" prot="public" virt="non-virtual"><scope>Pid</scope><name>Pid</name></member>
+      <member refid="classPid_1ad4cee252541175cb4d1116585fa34b42" prot="public" virt="virtual"><scope>Pid</scope><name>reset</name></member>
+      <member refid="classPid_1a2e4b8b361055f2eb4bcc762e3fc02e03" prot="public" virt="non-virtual"><scope>Pid</scope><name>reset</name></member>
+      <member refid="classController_1a03a3170b03559d7cb4de4a3c59c44fcd" prot="public" virt="virtual"><scope>Pid</scope><name>saturate</name></member>
+      <member refid="classController_1a279f0b4a725d12c287ab37403d1f3ad0" prot="public" virt="virtual"><scope>Pid</scope><name>setMeasurement</name></member>
+      <member refid="classController_1a85bb132e340061655b62be027f0afe97" prot="public" virt="virtual"><scope>Pid</scope><name>setReference</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

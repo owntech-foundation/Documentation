@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_6577260132b49845d494a112d8acd7c7" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_safety_api</compoundname>
+    <innerdir refid="dir_2f6071fc869091a6d1e6d7b806fecbf0">docs/core/zephyr/modules/owntech_safety_api/zephyr</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_safety_api/"/>
+  </compounddef>
+</doxygen>

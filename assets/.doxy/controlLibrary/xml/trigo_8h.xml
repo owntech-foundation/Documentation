@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="trigo_8h" kind="file" language="C++">
+    <compoundname>trigo.h</compoundname>
+    <includes local="no">arm_math.h</includes>
+    <includedby refid="filters_8h" local="yes">docs/controlLibrary/src/filters.h</includedby>
+    <includedby refid="transform_8h" local="yes">docs/controlLibrary/src/transform.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>docs/controlLibrary/src/trigo.h</label>
+        <link refid="trigo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>arm_math.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>docs/controlLibrary/src/filters.h</label>
+        <link refid="filters_8h_source"/>
+      </node>
+      <node id="3">
+        <label>docs/controlLibrary/src/transform.h</label>
+        <link refid="transform_8h_source"/>
+      </node>
+      <node id="1">
+        <label>docs/controlLibrary/src/trigo.h</label>
+        <link refid="trigo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="trigo_8h_1ab4541f58738da58b131c6911dcc4adc2" prot="public" static="no" extern="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t MODULO_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MODULO_SIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="31" column="23" declfile="docs/controlLibrary/src/trigo.h" declline="31" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="trigo_8h_1a76cee0a9b4cd641df7d4c6f46ce8508a" prot="public" static="no" extern="yes" mutable="no">
+        <type>const float32_t</type>
+        <definition>const float32_t INV_MODULO_RES</definition>
+        <argsstring></argsstring>
+        <name>INV_MODULO_RES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="32" column="24" declfile="docs/controlLibrary/src/trigo.h" declline="32" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="trigo_8h_1a9fceab69815b961163ac8b7cc0e54e44" prot="public" static="no" extern="yes" mutable="no">
+        <type>const float32_t</type>
+        <definition>const float32_t MODULO_RES</definition>
+        <argsstring></argsstring>
+        <name>MODULO_RES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="33" column="24" declfile="docs/controlLibrary/src/trigo.h" declline="33" declcolumn="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="trigo_8h_1a21d42ddeea67a5af7cac5382bfa63211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t ot_sin</definition>
+        <argsstring>(float32_t x)</argsstring>
+        <name>ot_sin</name>
+        <param>
+          <type>float32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="41" column="11" declfile="docs/controlLibrary/src/trigo.h" declline="41" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="trigo_8h_1a4bab19206e55fcdbf2f36a9a55a74b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t ot_cos</definition>
+        <argsstring>(float32_t x)</argsstring>
+        <name>ot_cos</name>
+        <param>
+          <type>float32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="42" column="11" declfile="docs/controlLibrary/src/trigo.h" declline="42" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="trigo_8h_1ad1568716ca89982fb6ffc27ed8a342f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t ot_modulo_2pi</definition>
+        <argsstring>(float32_t theta)</argsstring>
+        <name>ot_modulo_2pi</name>
+        <param>
+          <type>float32_t</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/trigo.h" line="43" column="11" declfile="docs/controlLibrary/src/trigo.h" declline="43" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>MODULO_SIZE;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>INV_MODULO_RES;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>MODULO_RES;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>use<sp/>CORDIC<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CORDIC<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32g4xx_ll_cordic.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">float32_t<sp/>ot_sin(float32_t<sp/>x);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">float32_t<sp/>ot_cos(float32_t<sp/>x);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">float32_t<sp/>ot_modulo_2pi(float32_t<sp/>theta);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/controlLibrary/src/trigo.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structswitch__conv__conf__t" kind="struct" language="C++" prot="public">
+    <compoundname>switch_conv_conf_t</compoundname>
+    <includes refid="hrtim__enum_8h" local="no">hrtim_enum.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structswitch__conv__conf__t_1a701a344367d55a8c64f9db8eb3b003d1" prot="public" static="no" mutable="no">
+        <type>hrtim_switch_convention_t</type>
+        <definition>hrtim_switch_convention_t switch_conv_conf_t::convention</definition>
+        <argsstring></argsstring>
+        <name>convention</name>
+        <qualifiedname>switch_conv_conf_t::convention</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="344" column="35" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structswitch__conv__conf__t_1ad274575699bceab162310382d03ffd5f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t switch_conv_conf_t::set_H[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>set_H</name>
+        <qualifiedname>switch_conv_conf_t::set_H</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="345" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structswitch__conv__conf__t_1a6400aeb5d0e94aca38bd4e3991f06ce2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t switch_conv_conf_t::reset_H[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>reset_H</name>
+        <qualifiedname>switch_conv_conf_t::reset_H</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="346" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structswitch__conv__conf__t_1abe8d9b2b7424e5947bd1c924dd3c1868" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t switch_conv_conf_t::set_L[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>set_L</name>
+        <qualifiedname>switch_conv_conf_t::set_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="347" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structswitch__conv__conf__t_1a1d1e31142983f96e9086cbcfb4efb390" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t switch_conv_conf_t::reset_L[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>reset_L</name>
+        <qualifiedname>switch_conv_conf_t::reset_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="348" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure describing the switching convention of a given timing unit. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="342" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="343" bodyend="349"/>
+    <listofallmembers>
+      <member refid="structswitch__conv__conf__t_1a701a344367d55a8c64f9db8eb3b003d1" prot="public" virt="non-virtual"><scope>switch_conv_conf_t</scope><name>convention</name></member>
+      <member refid="structswitch__conv__conf__t_1a6400aeb5d0e94aca38bd4e3991f06ce2" prot="public" virt="non-virtual"><scope>switch_conv_conf_t</scope><name>reset_H</name></member>
+      <member refid="structswitch__conv__conf__t_1a1d1e31142983f96e9086cbcfb4efb390" prot="public" virt="non-virtual"><scope>switch_conv_conf_t</scope><name>reset_L</name></member>
+      <member refid="structswitch__conv__conf__t_1ad274575699bceab162310382d03ffd5f" prot="public" virt="non-virtual"><scope>switch_conv_conf_t</scope><name>set_H</name></member>
+      <member refid="structswitch__conv__conf__t_1abe8d9b2b7424e5947bd1c924dd3c1868" prot="public" virt="non-virtual"><scope>switch_conv_conf_t</scope><name>set_L</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

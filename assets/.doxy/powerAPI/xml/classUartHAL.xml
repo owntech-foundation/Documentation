@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classUartHAL" kind="class" language="C++" prot="public">
+    <compoundname>UartHAL</compoundname>
+    <includes refid="UartHAL_8h" local="no">UartHAL.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUartHAL_1adc6225c7a0204a7d830dc956d2725b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UartHAL::usart1Init</definition>
+        <argsstring>()</argsstring>
+        <name>usart1Init</name>
+        <qualifiedname>UartHAL::usart1Init</qualifiedname>
+        <briefdescription>
+<para>Library initialization function for the usart communication. This function is declared on the private section of the .c file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" line="41" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.cpp" bodystart="73" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classUartHAL_1a21d5095c990180c61a2e74dafe46cdad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char UartHAL::usart1ReadChar</definition>
+        <argsstring>()</argsstring>
+        <name>usart1ReadChar</name>
+        <qualifiedname>UartHAL::usart1ReadChar</qualifiedname>
+        <briefdescription>
+<para>This function sends back a single character waiting to be treated from the usart1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>This function returns a single char which is waiting to be treated if no char is waiting it returns an &apos;x&apos; which should be treated as an error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" line="49" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.cpp" bodystart="92" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classUartHAL_1a78e55fcdfa1228d1bd9f2de4554bfc10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UartHAL::usart1WriteChar</definition>
+        <argsstring>(char data)</argsstring>
+        <name>usart1WriteChar</name>
+        <qualifiedname>UartHAL::usart1WriteChar</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>This function transmits a single character through the usart 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>single char to be sent out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" line="56" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.cpp" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classUartHAL_1ab4c0c7922bce9123c8f1625563600bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UartHAL::usart1SwapRxTx</definition>
+        <argsstring>()</argsstring>
+        <name>usart1SwapRxTx</name>
+        <qualifiedname>UartHAL::usart1SwapRxTx</qualifiedname>
+        <briefdescription>
+<para>This function swaps the usart RX and TX pins. It should be called in conjunction with a board version setup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" line="61" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.cpp" bodystart="110" bodyend="115"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles usart 1 for the SPIN board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Use this element to initialize and send messages via usart 1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" line="34" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/UartHAL.h" bodystart="35" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classUartHAL_1adc6225c7a0204a7d830dc956d2725b71" prot="public" virt="non-virtual"><scope>UartHAL</scope><name>usart1Init</name></member>
+      <member refid="classUartHAL_1a21d5095c990180c61a2e74dafe46cdad" prot="public" virt="non-virtual"><scope>UartHAL</scope><name>usart1ReadChar</name></member>
+      <member refid="classUartHAL_1ab4c0c7922bce9123c8f1625563600bd5" prot="public" virt="non-virtual"><scope>UartHAL</scope><name>usart1SwapRxTx</name></member>
+      <member refid="classUartHAL_1a78e55fcdfa1228d1bd9f2de4554bfc10" prot="public" virt="non-virtual"><scope>UartHAL</scope><name>usart1WriteChar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
