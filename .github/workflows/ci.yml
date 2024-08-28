@@ -89,7 +89,7 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - name: Install python packages
-        run: pip install mkdocs-material mkdoxy pillow cairosvg mkdocs-macros-plugin
+        run: pip install mkdocs-material mkdoxy pillow cairosvg mkdocs-macros-plugin mike
       - name: Upgrade Jinja2
         run: pip install Jinja2 --upgrade
       - name: Print mkdocs version
