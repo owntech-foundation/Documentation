@@ -2,16 +2,17 @@ name: Brew OwnTech Documentation Center
 on:
   repository_dispatch:
     types: [trigger-workflow]
-  push:
-    branches:
-      - master
-      - main
+
 permissions:
   contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Print entire payload for debugging
+        if: ${{ github.event_name == 'repository_dispatch' }}
+        run: |
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
       - name: Get branch name from repository_dispatch event
         if: ${{ github.event_name == 'repository_dispatch' }}
         run: |
