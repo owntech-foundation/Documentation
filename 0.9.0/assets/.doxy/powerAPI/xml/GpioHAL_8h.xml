@@ -1,0 +1,966 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="GpioHAL_8h" kind="file" language="C++">
+    <compoundname>GpioHAL.h</compoundname>
+    <innerclass refid="classGpioHAL" prot="public">GpioHAL</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352b" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>pin_t</name>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba09c5d44fd6e7ee5daddd08009b04ac38" prot="public">
+          <name>PA0</name>
+          <initializer>= PA | P0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba201be1986c3153a2eb2de811e1700f0e" prot="public">
+          <name>PA1</name>
+          <initializer>= PA | P1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bada41486a507439d5f7944cb482608272" prot="public">
+          <name>PA2</name>
+          <initializer>= PA | P2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba9d22824e6f426a415722fef30c17bb23" prot="public">
+          <name>PA3</name>
+          <initializer>= PA | P3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba836506b72e125f74f67e68b4797113e3" prot="public">
+          <name>PA4</name>
+          <initializer>= PA | P4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352babbc68c892c3b62e32a645e24b2c3f431" prot="public">
+          <name>PA5</name>
+          <initializer>= PA | P5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bae3a4724611297f7aaf05b3df96500e50" prot="public">
+          <name>PA6</name>
+          <initializer>= PA | P6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba854a1d26d1740bfa815bf76f027e1c90" prot="public">
+          <name>PA7</name>
+          <initializer>= PA | P7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba425b946ed4ca75b99534ce59cbc8c606" prot="public">
+          <name>PA8</name>
+          <initializer>= PA | P8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bad27e336d89371954807f38669532f78f" prot="public">
+          <name>PA9</name>
+          <initializer>= PA | P9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba71181225e895f337ea7be60da873489d" prot="public">
+          <name>PA10</name>
+          <initializer>= PA | P10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bafede1379f9272f8f108c613d02c34e6b" prot="public">
+          <name>PA11</name>
+          <initializer>= PA | P11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bae77aa3a00207709990829bc656fa8e15" prot="public">
+          <name>PA12</name>
+          <initializer>= PA | P12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba67327d2f87c13825e8e9b63e4faa5838" prot="public">
+          <name>PA13</name>
+          <initializer>= PA | P13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba509b3920a607772bb69ddb474f283143" prot="public">
+          <name>PA14</name>
+          <initializer>= PA | P14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baa551c788af416c878a0605d26466f7ad" prot="public">
+          <name>PA15</name>
+          <initializer>= PA | P15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baddf87f545e0fe02b1d66e61cda646572" prot="public">
+          <name>PB0</name>
+          <initializer>= PB | P0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba137b9b5f8c427f5d138faaa7ba3d8528" prot="public">
+          <name>PB1</name>
+          <initializer>= PB | P1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bae0a3351879d6280e2ccc570b1ff50773" prot="public">
+          <name>PB2</name>
+          <initializer>= PB | P2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba35b5c025de3b0d725eef8468eb468fc5" prot="public">
+          <name>PB3</name>
+          <initializer>= PB | P3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba9bdcd1e11a76de8b559e4fe7a7c88ffe" prot="public">
+          <name>PB4</name>
+          <initializer>= PB | P4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba2f98730e36b3418068afb18d6b8b049d" prot="public">
+          <name>PB5</name>
+          <initializer>= PB | P5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba719b788556c95b8f637797cd1779eb94" prot="public">
+          <name>PB6</name>
+          <initializer>= PB | P6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba81ef9abf013c4af2ef0c863e2ebb8fba" prot="public">
+          <name>PB7</name>
+          <initializer>= PB | P7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba2df42c9a8b51e329d9750d14d7822c71" prot="public">
+          <name>PB8</name>
+          <initializer>= PB | P8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba4ee7fa177dff1cba755b5b5ffdc87763" prot="public">
+          <name>PB9</name>
+          <initializer>= PB | P9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba1ede9cd17a3e9e6016d5846b56c327e7" prot="public">
+          <name>PB10</name>
+          <initializer>= PB | P10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baebb4b5e54e5440bd4bb2642b8725dcd2" prot="public">
+          <name>PB11</name>
+          <initializer>= PB | P11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bac01e60c3456b47a2ee77ae94cb76b3b8" prot="public">
+          <name>PB12</name>
+          <initializer>= PB | P12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baeb994c4d0eb8613bd636879aa1c3b679" prot="public">
+          <name>PB13</name>
+          <initializer>= PB | P13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bace964af99cb6df40df7fb5f9aa719f31" prot="public">
+          <name>PB14</name>
+          <initializer>= PB | P14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba2aa1c66ee3202df2f49a7fa058ce6944" prot="public">
+          <name>PB15</name>
+          <initializer>= PB | P15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba0b1e23da65bbef294a96f6e241fe3847" prot="public">
+          <name>PC0</name>
+          <initializer>= PC | P0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba666a45aaab1dece0a062debad9ce22d9" prot="public">
+          <name>PC1</name>
+          <initializer>= PC | P1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba6c7ab61d54ae3d66dd7685f398b3ea74" prot="public">
+          <name>PC2</name>
+          <initializer>= PC | P2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba50342dfa1631d15b5511276629cea8f4" prot="public">
+          <name>PC3</name>
+          <initializer>= PC | P3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba4fa6d9da8c57f1bc272b0295748a727b" prot="public">
+          <name>PC4</name>
+          <initializer>= PC | P4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba4493d2f747a631748a798d226b4c95b1" prot="public">
+          <name>PC5</name>
+          <initializer>= PC | P5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba90af524f20137759a0bb0e126aefdb3e" prot="public">
+          <name>PC6</name>
+          <initializer>= PC | P6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bafb268f9eb312a356caadc0f752b9210e" prot="public">
+          <name>PC7</name>
+          <initializer>= PC | P7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bab03264238bdf9e84a801b9a90df00b2a" prot="public">
+          <name>PC8</name>
+          <initializer>= PC | P8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baa409438bfc05ab62bccff2cd28d5150a" prot="public">
+          <name>PC9</name>
+          <initializer>= PC | P9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba370d1c2dcdb3be1dd9ad85b447856e27" prot="public">
+          <name>PC10</name>
+          <initializer>= PC | P10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba4dcc06fe662d777f69fd571a3f71a4fb" prot="public">
+          <name>PC11</name>
+          <initializer>= PC | P11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba5b70dcf33b69f1c62bd4ca5330c7676f" prot="public">
+          <name>PC12</name>
+          <initializer>= PC | P12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baf24b60794f891878292ab1264f328e5f" prot="public">
+          <name>PC13</name>
+          <initializer>= PC | P13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba1193fcfd1c4b39a13201d79206376266" prot="public">
+          <name>PC14</name>
+          <initializer>= PC | P14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bafc608487d364c80862aaf9997c6be012" prot="public">
+          <name>PC15</name>
+          <initializer>= PC | P15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352baf8af1f184f360c581ec821621299e7ce" prot="public">
+          <name>PD0</name>
+          <initializer>= PD | P0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba754088268ad811f0ed29d1c28d45c778" prot="public">
+          <name>PD1</name>
+          <initializer>= PD | P1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352bae9fbf755a9cf8a27ac44df4e8a2cacfa" prot="public">
+          <name>PD2</name>
+          <initializer>= PD | P2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="GpioHAL_8h_1afe60c7b9305436fcb558564e4a15352ba268895c87430e17f537e7164bf7977df" prot="public">
+          <name>PD3</name>
+          <initializer>= PD | P3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="72" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="73" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="GpioHAL_8h_1a88f24c3ef69ed074ad3075994fa07ac2" prot="public" static="no" extern="yes" mutable="no">
+        <type>const struct device *const</type>
+        <definition>const struct device* const GPIO_A</definition>
+        <argsstring></argsstring>
+        <name>GPIO_A</name>
+        <briefdescription>
+<para>Owntech GPIO API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="date"><para>2023</para>
+</simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="36" column="33" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="30" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="36" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1adaeb6bc2ef3ccd3f27d6a8a2d6e4afab" prot="public" static="no" extern="yes" mutable="no">
+        <type>const struct device *const</type>
+        <definition>const struct device* const GPIO_B</definition>
+        <argsstring></argsstring>
+        <name>GPIO_B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="37" column="33" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="37" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a5156918c7f1ad29e6930c68cc6b23e16" prot="public" static="no" extern="yes" mutable="no">
+        <type>const struct device *const</type>
+        <definition>const struct device* const GPIO_C</definition>
+        <argsstring></argsstring>
+        <name>GPIO_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="38" column="33" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="32" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="38" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a6005486ac3c16c4e91971edbd0a4098a" prot="public" static="no" extern="yes" mutable="no">
+        <type>const struct device *const</type>
+        <definition>const struct device* const GPIO_D</definition>
+        <argsstring></argsstring>
+        <name>GPIO_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="39" column="33" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="33" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="39" declcolumn="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1aad43905ba17421822dbf3f8f8c12688b" prot="public" static="no" extern="yes" mutable="no">
+        <type>const gpio_flags_t</type>
+        <definition>const gpio_flags_t INPUT</definition>
+        <argsstring></argsstring>
+        <name>INPUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="41" column="27" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="35" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="41" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1ae6fc9c907545ca351fa6f55de5f156c9" prot="public" static="no" extern="yes" mutable="no">
+        <type>const gpio_flags_t</type>
+        <definition>const gpio_flags_t INPUT_PULLUP</definition>
+        <argsstring></argsstring>
+        <name>INPUT_PULLUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="42" column="27" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="36" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="42" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a3dc0c48eed96d1ba8dc1bb24e8fdd8c4" prot="public" static="no" extern="yes" mutable="no">
+        <type>const gpio_flags_t</type>
+        <definition>const gpio_flags_t OUTPUT</definition>
+        <argsstring></argsstring>
+        <name>OUTPUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="43" column="27" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="37" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" declline="43" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1ad809983508420a326facb60b12893f06" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t PA</definition>
+        <argsstring></argsstring>
+        <name>PA</name>
+        <initializer>= 0x80 | 0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="46" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1aa0b93e20eb6f6ecf49bb137fad23415c" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t PB</definition>
+        <argsstring></argsstring>
+        <name>PB</name>
+        <initializer>= 0x80 | 0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="47" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a9f634b4e63a97d9ae78ce82766a1de9a" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t PC</definition>
+        <argsstring></argsstring>
+        <name>PC</name>
+        <initializer>= 0x80 | 0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="48" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a3042afef947cce9c8e243c64f022f012" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t PD</definition>
+        <argsstring></argsstring>
+        <name>PD</name>
+        <initializer>= 0x80 | 0x30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="49" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a366f9de172bf75a2ee77a75a46714866" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P0</definition>
+        <argsstring></argsstring>
+        <name>P0</name>
+        <initializer>= 0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="51" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a9b075c4009884c12550ceb9529cf1ce8" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P1</definition>
+        <argsstring></argsstring>
+        <name>P1</name>
+        <initializer>= 0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="52" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a7fb70caf6b2b3bbc145d074ff002f687" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P2</definition>
+        <argsstring></argsstring>
+        <name>P2</name>
+        <initializer>= 0x2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="53" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a75289368c75fe6ff0f8a092e8629ab62" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P3</definition>
+        <argsstring></argsstring>
+        <name>P3</name>
+        <initializer>= 0x3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="54" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a1f2921a3f90dd251d062ac025176f592" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P4</definition>
+        <argsstring></argsstring>
+        <name>P4</name>
+        <initializer>= 0x4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="55" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a8fe5151fcf20171aac09630a6705c6ec" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P5</definition>
+        <argsstring></argsstring>
+        <name>P5</name>
+        <initializer>= 0x5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="56" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1ae8f4ef46a08e88c5fbee497357fc6251" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P6</definition>
+        <argsstring></argsstring>
+        <name>P6</name>
+        <initializer>= 0x6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="57" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a1214031179dcc8c6daa1b40e1afd0b82" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P7</definition>
+        <argsstring></argsstring>
+        <name>P7</name>
+        <initializer>= 0x7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="58" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a2e25513027d3b395e12aa627273783ab" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P8</definition>
+        <argsstring></argsstring>
+        <name>P8</name>
+        <initializer>= 0x8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="59" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a5fc10be8b62083ce89b9d3ce813d391d" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P9</definition>
+        <argsstring></argsstring>
+        <name>P9</name>
+        <initializer>= 0x9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="60" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1ae36d200664704101bba3aa765960fc00" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P10</definition>
+        <argsstring></argsstring>
+        <name>P10</name>
+        <initializer>= 0xA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="61" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a6bce1dcee6cf50df0bd0ae9859a08ee8" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P11</definition>
+        <argsstring></argsstring>
+        <name>P11</name>
+        <initializer>= 0xB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="62" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a3afe3d02fabf9076306f5c71d00823fd" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P12</definition>
+        <argsstring></argsstring>
+        <name>P12</name>
+        <initializer>= 0xC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="63" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1ae1746040d9acd58a95ace05222ce8257" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P13</definition>
+        <argsstring></argsstring>
+        <name>P13</name>
+        <initializer>= 0xD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="64" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a6cdb8ebeea016ee098facbd88bbaf1d6" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P14</definition>
+        <argsstring></argsstring>
+        <name>P14</name>
+        <initializer>= 0xE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="65" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="GpioHAL_8h_1a2f9609d7ceda2cc59d056b8de714a08c" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t P15</definition>
+        <argsstring></argsstring>
+        <name>P15</name>
+        <initializer>= 0xF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="66" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GPIOHAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIOHAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">//<sp/>Public<sp/>constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GPIO_A;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GPIO_B;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GPIO_C;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GPIO_D;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gpio_flags_t<sp/>INPUT;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gpio_flags_t<sp/>INPUT_PULLUP;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gpio_flags_t<sp/>OUTPUT;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0x80<sp/>is<sp/>used<sp/>to<sp/>indicate<sp/>nucleo-style<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PA<sp/>=<sp/>0x80<sp/>|<sp/>0x00;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PB<sp/>=<sp/>0x80<sp/>|<sp/>0x10;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PC<sp/>=<sp/>0x80<sp/>|<sp/>0x20;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PD<sp/>=<sp/>0x80<sp/>|<sp/>0x30;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P0<sp/><sp/>=<sp/>0x0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P1<sp/><sp/>=<sp/>0x1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P2<sp/><sp/>=<sp/>0x2;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P3<sp/><sp/>=<sp/>0x3;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P4<sp/><sp/>=<sp/>0x4;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P5<sp/><sp/>=<sp/>0x5;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P6<sp/><sp/>=<sp/>0x6;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P7<sp/><sp/>=<sp/>0x7;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P8<sp/><sp/>=<sp/>0x8;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P9<sp/><sp/>=<sp/>0x9;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P10<sp/>=<sp/>0xA;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P11<sp/>=<sp/>0xB;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P12<sp/>=<sp/>0xC;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P13<sp/>=<sp/>0xD;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P14<sp/>=<sp/>0xE;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>P15<sp/>=<sp/>0xF;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="comment">//<sp/>Public<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>PA0<sp/><sp/>=<sp/>PA<sp/>|<sp/>P0,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>PA1<sp/><sp/>=<sp/>PA<sp/>|<sp/>P1,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>PA2<sp/><sp/>=<sp/>PA<sp/>|<sp/>P2,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>PA3<sp/><sp/>=<sp/>PA<sp/>|<sp/>P3,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>PA4<sp/><sp/>=<sp/>PA<sp/>|<sp/>P4,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>PA5<sp/><sp/>=<sp/>PA<sp/>|<sp/>P5,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>PA6<sp/><sp/>=<sp/>PA<sp/>|<sp/>P6,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>PA7<sp/><sp/>=<sp/>PA<sp/>|<sp/>P7,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>PA8<sp/><sp/>=<sp/>PA<sp/>|<sp/>P8,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>PA9<sp/><sp/>=<sp/>PA<sp/>|<sp/>P9,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>PA10<sp/>=<sp/>PA<sp/>|<sp/>P10,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>PA11<sp/>=<sp/>PA<sp/>|<sp/>P11,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>PA12<sp/>=<sp/>PA<sp/>|<sp/>P12,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>PA13<sp/>=<sp/>PA<sp/>|<sp/>P13,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>PA14<sp/>=<sp/>PA<sp/>|<sp/>P14,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>PA15<sp/>=<sp/>PA<sp/>|<sp/>P15,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>PB0<sp/><sp/>=<sp/>PB<sp/>|<sp/>P0,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>PB1<sp/><sp/>=<sp/>PB<sp/>|<sp/>P1,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>PB2<sp/><sp/>=<sp/>PB<sp/>|<sp/>P2,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>PB3<sp/><sp/>=<sp/>PB<sp/>|<sp/>P3,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>PB4<sp/><sp/>=<sp/>PB<sp/>|<sp/>P4,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>PB5<sp/><sp/>=<sp/>PB<sp/>|<sp/>P5,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>PB6<sp/><sp/>=<sp/>PB<sp/>|<sp/>P6,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>PB7<sp/><sp/>=<sp/>PB<sp/>|<sp/>P7,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>PB8<sp/><sp/>=<sp/>PB<sp/>|<sp/>P8,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>PB9<sp/><sp/>=<sp/>PB<sp/>|<sp/>P9,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>PB10<sp/>=<sp/>PB<sp/>|<sp/>P10,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>PB11<sp/>=<sp/>PB<sp/>|<sp/>P11,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>PB12<sp/>=<sp/>PB<sp/>|<sp/>P12,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>PB13<sp/>=<sp/>PB<sp/>|<sp/>P13,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>PB14<sp/>=<sp/>PB<sp/>|<sp/>P14,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>PB15<sp/>=<sp/>PB<sp/>|<sp/>P15,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>PC0<sp/><sp/>=<sp/>PC<sp/>|<sp/>P0,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>PC1<sp/><sp/>=<sp/>PC<sp/>|<sp/>P1,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>PC2<sp/><sp/>=<sp/>PC<sp/>|<sp/>P2,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>PC3<sp/><sp/>=<sp/>PC<sp/>|<sp/>P3,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>PC4<sp/><sp/>=<sp/>PC<sp/>|<sp/>P4,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>PC5<sp/><sp/>=<sp/>PC<sp/>|<sp/>P5,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>PC6<sp/><sp/>=<sp/>PC<sp/>|<sp/>P6,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>PC7<sp/><sp/>=<sp/>PC<sp/>|<sp/>P7,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>PC8<sp/><sp/>=<sp/>PC<sp/>|<sp/>P8,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>PC9<sp/><sp/>=<sp/>PC<sp/>|<sp/>P9,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>PC10<sp/>=<sp/>PC<sp/>|<sp/>P10,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>PC11<sp/>=<sp/>PC<sp/>|<sp/>P11,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>PC12<sp/>=<sp/>PC<sp/>|<sp/>P12,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>PC13<sp/>=<sp/>PC<sp/>|<sp/>P13,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>PC14<sp/>=<sp/>PC<sp/>|<sp/>P14,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>PC15<sp/>=<sp/>PC<sp/>|<sp/>P15,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>PD0<sp/><sp/>=<sp/>PD<sp/>|<sp/>P0,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>PD1<sp/><sp/>=<sp/>PD<sp/>|<sp/>P1,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>PD2<sp/><sp/>=<sp/>PD<sp/>|<sp/>P2,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>PD3<sp/><sp/>=<sp/>PD<sp/>|<sp/>P3</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}<sp/>pin_t;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="comment">//<sp/>Class<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classGpioHAL" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGpioHAL" kindref="compound">GpioHAL</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" kindref="member">configurePin</ref>(uint8_t<sp/>pin,<sp/>gpio_flags_t<sp/>flags);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" kindref="member">setPin</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" kindref="member">resetPin</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpioHAL_1a4b5751576cd0dcc6e60bc23c35b71d4a" kindref="member">togglePin</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpioHAL_1a85d13a02c7e01e553703b0a4f14622a1" kindref="member">writePin</ref>(uint8_t<sp/>pin,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGpioHAL_1a3cc80d3a2054968833482744f079b261" kindref="member">readPin</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_pin_t<sp/>getPinNumber(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>getGpioDevice(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GPIOHAL_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="structclarke__t" kind="struct"><name>clarke_t</name>
+    <member refid="structclarke__t_1a3a682711f97be28fd1e7cfe58db95d3a" kind="variable"><name>alpha</name></member>
+    <member refid="structclarke__t_1a5b4d0e2f558d9b844a9dfaa2838cc154" kind="variable"><name>beta</name></member>
+    <member refid="structclarke__t_1aad95600acaf23f52be50d3eeb867c03a" kind="variable"><name>o</name></member>
+  </compound>
+  <compound refid="classController" kind="class"><name>Controller</name>
+    <member refid="classController_1a36de6a1a4405705ab8613dbfcd64ca35" kind="variable"><name>_Ts</name></member>
+    <member refid="classController_1a9c31c88c3e8e1dfa7fca7db655222564" kind="variable"><name>_lower_bound</name></member>
+    <member refid="classController_1ab661a7dbe7aa3f8dabee07b3d7604230" kind="variable"><name>_upper_bound</name></member>
+    <member refid="classController_1a8fb552b2e77984a003ad0b62d0a2507b" kind="variable"><name>_reference</name></member>
+    <member refid="classController_1acbf8d672ba7636091b3bf927db6e12d5" kind="variable"><name>_output</name></member>
+    <member refid="classController_1aa73bd2c40fc73372e40a9dbf562a150e" kind="variable"><name>_measure</name></member>
+    <member refid="classController_1a879c564d535b702374822585d9b16227" kind="function"><name>init</name></member>
+    <member refid="classController_1a492a596f91be68c31e01cca0978fd479" kind="function"><name>reset</name></member>
+    <member refid="classController_1abb5fa7695fdaa74f92b0394d1544e831" kind="function"><name>calculate</name></member>
+    <member refid="classController_1aa02c83e6f23eb251da2baa8e31ffcd58" kind="function"><name>calculateWithReturn</name></member>
+    <member refid="classController_1a85bb132e340061655b62be027f0afe97" kind="function"><name>setReference</name></member>
+    <member refid="classController_1a279f0b4a725d12c287ab37403d1f3ad0" kind="function"><name>setMeasurement</name></member>
+    <member refid="classController_1ae5c2de3d2d7fea6df7c3fb71794bafbe" kind="function"><name>getOutput</name></member>
+    <member refid="classController_1a03a3170b03559d7cb4de4a3c59c44fcd" kind="function"><name>saturate</name></member>
+  </compound>
+  <compound refid="structdqo__t" kind="struct"><name>dqo_t</name>
+    <member refid="structdqo__t_1a5ead974de385ca4b0e0349d5f234611c" kind="variable"><name>d</name></member>
+    <member refid="structdqo__t_1a06319b206c51347a7d3e4db8382ac2e1" kind="variable"><name>q</name></member>
+    <member refid="structdqo__t_1acd253a5549344e63655e92e4c57c80ad" kind="variable"><name>o</name></member>
+  </compound>
+  <compound refid="classFir" kind="class"><name>Fir</name>
+    <member refid="classFir_1a4a0d205ea3c1259b4bed0b1043637833" kind="variable"><name>nc</name></member>
+    <member refid="classFir_1a23b48dce9b0cdb953d9c426447ded7fd" kind="variable"><name>coeffs</name></member>
+    <member refid="classFir_1aad4a70113cc92b8b8afd6be3f5efe6cd" kind="variable"><name>datas</name></member>
+    <member refid="classFir_1a91faad9a8c580719ab5f0107607573f2" kind="function"><name>Fir</name></member>
+    <member refid="classFir_1a8557bc5aec691985426994c31dde83fb" kind="function"><name>Fir</name></member>
+    <member refid="classFir_1ab3c26dd1d24e5d8c1c4a515b0e250fd5" kind="function"><name>init</name></member>
+    <member refid="classFir_1aa88c2bce82f653d29f8156535706ab3a" kind="function"><name>update</name></member>
+    <member refid="classFir_1af590424dffa12dab2cddc04394b25803" kind="function"><name>reset</name></member>
+    <member refid="classFir_1a56bd7e739497efa1d2fefcdb63479550" kind="function"><name>setCoeff</name></member>
+    <member refid="classFir_1ab26de4b8a3b17422b4ba6d7e98fbb89e" kind="function"><name>~Fir</name></member>
+  </compound>
+  <compound refid="classLowPassFirstOrderFilter" kind="class"><name>LowPassFirstOrderFilter</name>
+    <member refid="classLowPassFirstOrderFilter_1a15635f64d67f35509fafb8307aa9a12f" kind="variable"><name>_Ts</name></member>
+    <member refid="classLowPassFirstOrderFilter_1a988a13129c62345388bd21d3aa8c3aa6" kind="variable"><name>_tau</name></member>
+    <member refid="classLowPassFirstOrderFilter_1acf79d11b85ed736529e89d4e88e5a8ad" kind="variable"><name>_a1</name></member>
+    <member refid="classLowPassFirstOrderFilter_1a2b23300caec380fc27ccf103e1589426" kind="variable"><name>_b1</name></member>
+    <member refid="classLowPassFirstOrderFilter_1a21d82cc804c7b4d1f9ccc12a934c18a5" kind="variable"><name>_previous_value</name></member>
+    <member refid="classLowPassFirstOrderFilter_1a4df52ba5d900fe092a8bb2358878989e" kind="function"><name>LowPassFirstOrderFilter</name></member>
+    <member refid="classLowPassFirstOrderFilter_1ae189d285383bb8a9cc3c684c52636310" kind="function"><name>init</name></member>
+    <member refid="classLowPassFirstOrderFilter_1a0f1325df55e290c17cb7289b4614a720" kind="function"><name>calculateWithReturn</name></member>
+    <member refid="classLowPassFirstOrderFilter_1aa49a467c72f2828b03e0535887434db4" kind="function"><name>reset</name></member>
+    <member refid="classLowPassFirstOrderFilter_1af58149daf41337bdbe4bf22b41e15519" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classNotchFilter" kind="class"><name>NotchFilter</name>
+    <member refid="classNotchFilter_1a39f730557f3bf4c448892a58c9797675" kind="variable"><name>_Ts</name></member>
+    <member refid="classNotchFilter_1a28e64756c8981acd08ce91bc8de8b53e" kind="variable"><name>_f0</name></member>
+    <member refid="classNotchFilter_1a7e359aeec4dd409cdf90f3b98368dc7b" kind="variable"><name>_bandwidth</name></member>
+    <member refid="classNotchFilter_1a5d9293ceaf369ba43952a42114f2f5ed" kind="variable"><name>_B</name></member>
+    <member refid="classNotchFilter_1a854c67b914b214484fc452f494dff6c2" kind="variable"><name>_A</name></member>
+    <member refid="classNotchFilter_1ad79c905d5ca5ac4d4fc3ba7dcf3f1e01" kind="variable"><name>_output</name></member>
+    <member refid="classNotchFilter_1aca2b052bcd60a6318e7a5a7e6007c91b" kind="function"><name>NotchFilter</name></member>
+    <member refid="classNotchFilter_1aa88df4b5815000111d083888a6935d6a" kind="function"><name>NotchFilter</name></member>
+    <member refid="classNotchFilter_1a59ee22e08ae16e864f55dcc969808450" kind="function"><name>init</name></member>
+    <member refid="classNotchFilter_1a89073b02085028e8eab33033715c85f6" kind="function"><name>calculateWithReturn</name></member>
+    <member refid="classNotchFilter_1a4902b986b9464098128e3d6c0bdfdc22" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classPid" kind="class"><name>Pid</name>
+    <member refid="classPid_1afa32002c07db223d55f42619f19a4052" kind="variable"><name>_integral</name></member>
+    <member refid="classPid_1a0bb4b0e9a69d75c62c1763c3904f321f" kind="variable"><name>_Kp</name></member>
+    <member refid="classPid_1a501d9888ee2aae2a93fbbd02d27393c6" kind="variable"><name>_Ti</name></member>
+    <member refid="classPid_1a9902f1c9f693a28127775926be07cf8f" kind="variable"><name>_Td</name></member>
+    <member refid="classPid_1afc3cc9a43891278434f4812938baace6" kind="variable"><name>_N</name></member>
+    <member refid="classPid_1a8cce5eadd6c1ef23bb8ed305f9d832df" kind="variable"><name>_previous_f_deriv</name></member>
+    <member refid="classPid_1a3437c02280d78d2a45ca8df18a1bd80a" kind="variable"><name>_previous_error</name></member>
+    <member refid="classPid_1afe056b0ff672643d44ed360f5731182e" kind="variable"><name>_inverse_Ts</name></member>
+    <member refid="classPid_1a4ac0e1ac46429c02b2863b5ba633ed59" kind="variable"><name>_inverse_Ti</name></member>
+    <member refid="classPid_1a26c7806f85d297c4207d8b9a1f0a88bd" kind="variable"><name>_inverse_Kp</name></member>
+    <member refid="classPid_1a6faf5027e6f2ec747424b6e89792d0b2" kind="variable"><name>_b1_filter</name></member>
+    <member refid="classPid_1a7cb7320b2fe3877c3c27921764643873" kind="variable"><name>_a1_filter</name></member>
+    <member refid="classPid_1a8bcea8fa5b4f855f796ef55c6bc169ae" kind="function"><name>Pid</name></member>
+    <member refid="classPid_1a08ded8f3c414188b3e10bb47fa0efb03" kind="function"><name>init</name></member>
+    <member refid="classPid_1a982a9657543c94da9e2a20898e8d9444" kind="function"><name>calculate</name></member>
+    <member refid="classPid_1ad4cee252541175cb4d1116585fa34b42" kind="function"><name>reset</name></member>
+    <member refid="classPid_1a2e4b8b361055f2eb4bcc762e3fc02e03" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="structPidParams" kind="class"><name>PidParams</name>
+    <member refid="structPidParams_1ade8eec5eed6cd5963de30e05336712b6" kind="variable"><name>Ts</name></member>
+    <member refid="structPidParams_1afbb7e3a60f9faa27284d1b411f2c7ce0" kind="variable"><name>Kp</name></member>
+    <member refid="structPidParams_1a2a472658695a656213829fa603706627" kind="variable"><name>Ti</name></member>
+    <member refid="structPidParams_1a2f8f46e75669570dc431320919b0bec0" kind="variable"><name>Td</name></member>
+    <member refid="structPidParams_1a76333301185a68587e14fe71c13c078c" kind="variable"><name>N</name></member>
+    <member refid="structPidParams_1a5ba0edd6f2cbffe051f6b989261498d1" kind="variable"><name>lower_bound</name></member>
+    <member refid="structPidParams_1a68a3b9f983e985364fe89500a385733b" kind="variable"><name>upper_bound</name></member>
+  </compound>
+  <compound refid="structPllDatas" kind="class"><name>PllDatas</name>
+    <member refid="structPllDatas_1ac6b6afcd15a58714d6103abe4cd2c5eb" kind="variable"><name>w</name></member>
+    <member refid="structPllDatas_1a0b23aeaf97367fe220dc5d875d306778" kind="variable"><name>angle</name></member>
+    <member refid="structPllDatas_1ac373b72734b8e486da492cdcb932bc87" kind="variable"><name>error</name></member>
+  </compound>
+  <compound refid="classPllSinus" kind="class"><name>PllSinus</name>
+    <member refid="classPllSinus_1a2dc85dfb373ca64fd00856ebab466d38" kind="variable"><name>_Ts</name></member>
+    <member refid="classPllSinus_1ad1b9320b58b1d2af61243d52b146b9ed" kind="variable"><name>_amplitude</name></member>
+    <member refid="classPllSinus_1ad3ab0e152fa5d654dcc5c9d6de53c190" kind="variable"><name>_f0</name></member>
+    <member refid="classPllSinus_1ab5d05808cf6abb634c29b30b02039f27" kind="variable"><name>_rt</name></member>
+    <member refid="classPllSinus_1a59582c9a7e2df0d993e3ae1e05f5f520" kind="variable"><name>_notch</name></member>
+    <member refid="classPllSinus_1aadddb895f97b68ede3b0ea2243620572" kind="variable"><name>_pi</name></member>
+    <member refid="classPllSinus_1aaa7968f9a3a76efb34202ff7977759b3" kind="variable"><name>_w</name></member>
+    <member refid="classPllSinus_1a34fcc0226d8b941af294637841fca547" kind="variable"><name>_angle</name></member>
+    <member refid="classPllSinus_1a8225e197addc7429eeccd51af9e801de" kind="function"><name>PllSinus</name></member>
+    <member refid="classPllSinus_1a1e245aae9ebd4b2fbe5f3a0d81f0a2e1" kind="function"><name>PllSinus</name></member>
+    <member refid="classPllSinus_1abc35e4d13902da4039b325dbd50e151e" kind="function"><name>init</name></member>
+    <member refid="classPllSinus_1a7a6188c0a51d8a062c5dc30b16198c71" kind="function"><name>calculateWithReturn</name></member>
+    <member refid="classPllSinus_1abde1159881ae42308ba8e3f30574d61b" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classPr" kind="class"><name>Pr</name>
+    <member refid="classPr_1a846f0fbeeca531551c76a598fd39914c" kind="variable"><name>_Ts</name></member>
+    <member refid="classPr_1adf977a8296d868878148bfcf9bd82a6f" kind="variable"><name>_Kp</name></member>
+    <member refid="classPr_1af3bea521455002f25d487553ec174be8" kind="variable"><name>_Kr</name></member>
+    <member refid="classPr_1a8ab2330f91073d6cae46beac631092cf" kind="variable"><name>_inverse_Kr</name></member>
+    <member refid="classPr_1a193c7bd4d58cdf8a193690f46c35d669" kind="variable"><name>_B</name></member>
+    <member refid="classPr_1a35bb7c1c54c18f01a4ed06978caeff51" kind="variable"><name>_A</name></member>
+    <member refid="classPr_1a43ea74d3f304581b473a6d7bfe2a6b0e" kind="variable"><name>_resonant</name></member>
+    <member refid="classPr_1aa4ce41684e3070f2664fd096b00f2ea1" kind="function"><name>Pr</name></member>
+    <member refid="classPr_1aee9dbbf8b24492112232a62cfe6bdbe7" kind="function"><name>init</name></member>
+    <member refid="classPr_1ac89d5fe1736e65c9d739878e2c6228e0" kind="function"><name>calculate</name></member>
+    <member refid="classPr_1a6a1e18a7f1b0285353404e6ed4737f5f" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="structPrParams" kind="class"><name>PrParams</name>
+    <member refid="structPrParams_1ad90cf5c4cae14fef4e46bff707b5f4e7" kind="variable"><name>Ts</name></member>
+    <member refid="structPrParams_1a2194c03de3ba6b46be37517804371d6a" kind="variable"><name>Kp</name></member>
+    <member refid="structPrParams_1a154af275c2c51681e028cc05d572807a" kind="variable"><name>Kr</name></member>
+    <member refid="structPrParams_1a46f2af0386d30d860a5e8308c02de3ed" kind="variable"><name>w0</name></member>
+    <member refid="structPrParams_1a386ad57cacfa8786bf1f9df88b8c5cb0" kind="variable"><name>phi_prime</name></member>
+    <member refid="structPrParams_1ada7aab52638e11401b153b7a9f3ce505" kind="variable"><name>lower_bound</name></member>
+    <member refid="structPrParams_1a90a0952ef3be8a6ba4096968b1475930" kind="variable"><name>upper_bound</name></member>
+  </compound>
+  <compound refid="classRST" kind="class"><name>RST</name>
+    <member refid="classRST_1aa31254a9d99d6c8d1dd70d82f4208f17" kind="variable"><name>_R</name></member>
+    <member refid="classRST_1a05f1997c3d2d4058f9e0713f5a423af8" kind="variable"><name>_Sp</name></member>
+    <member refid="classRST_1a305d98e664540085dee08d2de39dbc7a" kind="variable"><name>_T</name></member>
+    <member refid="classRST_1a579b0b6e7fb23ba504bf92b06dbb6406" kind="variable"><name>_inv_s0</name></member>
+    <member refid="classRST_1abb952ff8c2ed12e6c30b3a882b5fddbf" kind="function"><name>RST</name></member>
+    <member refid="classRST_1a3f5c93c0d833d1a4d81c3ad467d5a8ec" kind="function"><name>init</name></member>
+    <member refid="classRST_1a9d0c38d7d6047776f86a88566a8960eb" kind="function"><name>calculate</name></member>
+    <member refid="classRST_1ad1a869a4469e1224a8d5c626fc0f917c" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="structRstParams" kind="class"><name>RstParams</name>
+    <member refid="structRstParams_1ab8bbe5e6e7e97828cf8b76a4a9f4f404" kind="variable"><name>Ts</name></member>
+    <member refid="structRstParams_1a9cf49487864643c1620dced32be55bb4" kind="variable"><name>nr</name></member>
+    <member refid="structRstParams_1ad9683eacaab476e1fda5064bdb7507e1" kind="variable"><name>r</name></member>
+    <member refid="structRstParams_1adf58a17a49f00007eb0e54991c6ce45e" kind="variable"><name>ns</name></member>
+    <member refid="structRstParams_1ad0ade1e8daa10a52ce3973d3bb6204a6" kind="variable"><name>s</name></member>
+    <member refid="structRstParams_1a6d6fc1fdfa54a3ac89fb5a6662f17df5" kind="variable"><name>nt</name></member>
+    <member refid="structRstParams_1a577faefc6d763a7170c67fa02ab6ce86" kind="variable"><name>t</name></member>
+    <member refid="structRstParams_1a6b09dd795e6240abd2d254c3945dd328" kind="variable"><name>lower_bound</name></member>
+    <member refid="structRstParams_1a24141d05f8bd1b8ee46c84ea2b36eaca" kind="variable"><name>upper_bound</name></member>
+  </compound>
+  <compound refid="structthree__phase__t" kind="struct"><name>three_phase_t</name>
+    <member refid="structthree__phase__t_1a1e2e7237c59ceca460d0552df4663bbb" kind="variable"><name>a</name></member>
+    <member refid="structthree__phase__t_1a087824ce7d156754012bf4e3dc753c74" kind="variable"><name>b</name></member>
+    <member refid="structthree__phase__t_1a67d21784cfdc045457df98379c3514c1" kind="variable"><name>c</name></member>
+  </compound>
+  <compound refid="classTransform" kind="class"><name>Transform</name>
+    <member refid="classTransform_1a51b09b2fadfd10bf351a1afca15c2146" kind="function"><name>rotation_to_dqo</name></member>
+    <member refid="classTransform_1a92a30f57e87f21dbbd21b23aa64d6dfd" kind="function"><name>rotation_to_clarke</name></member>
+    <member refid="classTransform_1aa79743d1434ee4d1a434e2dcdc746584" kind="function"><name>clarke</name></member>
+    <member refid="classTransform_1a3e52fa00fb9814bc1db9dce7aa3ba02f" kind="function"><name>clarke_inverse</name></member>
+    <member refid="classTransform_1a694c7695aa64ca2313d6c4057e39daf6" kind="function"><name>to_dqo</name></member>
+    <member refid="classTransform_1ac07f81a6974cd853e59053f8a6295ad4" kind="function"><name>to_threephase</name></member>
+  </compound>
+  <compound refid="controller_8h" kind="file"><name>controller.h</name>
+  </compound>
+  <compound refid="filters_8h" kind="file"><name>filters.h</name>
+  </compound>
+  <compound refid="fir_8h" kind="file"><name>fir.h</name>
+  </compound>
+  <compound refid="pid_8h" kind="file"><name>pid.h</name>
+  </compound>
+  <compound refid="pr_8h" kind="file"><name>pr.h</name>
+  </compound>
+  <compound refid="rst_8h" kind="file"><name>rst.h</name>
+  </compound>
+  <compound refid="transform_8h" kind="file"><name>transform.h</name>
+    <member refid="transform_8h_1a3305407114521cd4e83a170abd4ceb62" kind="variable"><name>SQRT3_INVERSE</name></member>
+    <member refid="transform_8h_1a55bd277f2adc677b17b8798798c52b10" kind="variable"><name>SQRT3_DIV_2</name></member>
+  </compound>
+  <compound refid="trigo_8h" kind="file"><name>trigo.h</name>
+    <member refid="trigo_8h_1ab4541f58738da58b131c6911dcc4adc2" kind="variable"><name>MODULO_SIZE</name></member>
+    <member refid="trigo_8h_1a76cee0a9b4cd641df7d4c6f46ce8508a" kind="variable"><name>INV_MODULO_RES</name></member>
+    <member refid="trigo_8h_1a9fceab69815b961163ac8b7cc0e54e44" kind="variable"><name>MODULO_RES</name></member>
+    <member refid="trigo_8h_1a21d42ddeea67a5af7cac5382bfa63211" kind="function"><name>ot_sin</name></member>
+    <member refid="trigo_8h_1a4bab19206e55fcdbf2f36a9a55a74b5c" kind="function"><name>ot_cos</name></member>
+    <member refid="trigo_8h_1ad1568716ca89982fb6ffc27ed8a342f7" kind="function"><name>ot_modulo_2pi</name></member>
+  </compound>
+  <compound refid="dir_78b365e62f248710669e9a6984210a4a" kind="dir"><name>docs/controlLibrary</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_0c7b11c8d6d0df41220cb8bbf1e252be" kind="dir"><name>docs/controlLibrary/src</name>
+  </compound>
+</doxygenindex>

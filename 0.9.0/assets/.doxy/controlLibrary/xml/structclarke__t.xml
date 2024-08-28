@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structclarke__t" kind="struct" language="C++" prot="public">
+    <compoundname>clarke_t</compoundname>
+    <includes refid="transform_8h" local="no">transform.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structclarke__t_1a3a682711f97be28fd1e7cfe58db95d3a" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t clarke_t::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>clarke_t::alpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="54" column="15" bodyfile="docs/controlLibrary/src/transform.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structclarke__t_1a5b4d0e2f558d9b844a9dfaa2838cc154" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t clarke_t::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <qualifiedname>clarke_t::beta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="55" column="15" bodyfile="docs/controlLibrary/src/transform.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structclarke__t_1aad95600acaf23f52be50d3eeb867c03a" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t clarke_t::o</definition>
+        <argsstring></argsstring>
+        <name>o</name>
+        <qualifiedname>clarke_t::o</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/transform.h" line="56" column="15" bodyfile="docs/controlLibrary/src/transform.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>to keep together α, β and o values. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/controlLibrary/src/transform.h" line="53" column="1" bodyfile="docs/controlLibrary/src/transform.h" bodystart="53" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structclarke__t_1a3a682711f97be28fd1e7cfe58db95d3a" prot="public" virt="non-virtual"><scope>clarke_t</scope><name>alpha</name></member>
+      <member refid="structclarke__t_1a5b4d0e2f558d9b844a9dfaa2838cc154" prot="public" virt="non-virtual"><scope>clarke_t</scope><name>beta</name></member>
+      <member refid="structclarke__t_1aad95600acaf23f52be50d3eeb867c03a" prot="public" virt="non-virtual"><scope>clarke_t</scope><name>o</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

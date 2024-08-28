@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classVersionHAL" kind="class" language="C++" prot="public">
+    <compoundname>VersionHAL</compoundname>
+    <includes refid="VersionHAL_8h" local="no">VersionHAL.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classVersionHAL_1a241a15b10a88dd2da650d4c8e7467a0b" prot="private" static="yes" mutable="no">
+        <type>board_version_t</type>
+        <definition>board_version_t VersionHAL::board_version</definition>
+        <argsstring></argsstring>
+        <name>board_version</name>
+        <qualifiedname>VersionHAL::board_version</qualifiedname>
+        <initializer>= nucleo_G474RE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" line="88" column="24" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVersionHAL_1ae3c93933efb108137509fcfccd641fbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VersionHAL::setBoardVersion</definition>
+        <argsstring>(board_version_t board_version)</argsstring>
+        <name>setBoardVersion</name>
+        <qualifiedname>VersionHAL::setBoardVersion</qualifiedname>
+        <param>
+          <type>board_version_t</type>
+          <declname>board_version</declname>
+        </param>
+        <briefdescription>
+<para>Sets the version of the microcontroller board. It can take the following values: nucleo_G474RE, O2_v_0_9, O2_v_1_1_2, SPIN_v_0_1, SPIN_v_0_9, SPIN_v_1_0, TWIST_v_1_1_2 TWIST_v_1_1_3, TWIST_v_1_1_4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stand alone versions such as SPIN_v_X comprise only the spin board itself. Legacy versions such as nucleo or O2_X comprise the nucleo board or the old O2 boards. Twist versions comprise all the available Twist connected versions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board_version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enum representing the microcontroller version. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" line="72" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.cpp" bodystart="38" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classVersionHAL_1a164805a3e11c45ac2b8a1a8b1d9412e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>board_version_t</type>
+        <definition>board_version_t VersionHAL::getBoardVersion</definition>
+        <argsstring>()</argsstring>
+        <name>getBoardVersion</name>
+        <qualifiedname>VersionHAL::getBoardVersion</qualifiedname>
+        <briefdescription>
+<para>return board version </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return one of these values : nucleo_G474RE, O2_v_0_9, O2_v_1_1_2, SPIN_v_0_1, SPIN_v_0_9, SPIN_v_1_0, TWIST_v_1_1_2 TWIST_v_1_1_3, TWIST_v_1_1_4 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" line="83" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles the versioning for the spin board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Use this element to defined your version of the SPIN board </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" line="56" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/VersionHAL.h" bodystart="57" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classVersionHAL_1a241a15b10a88dd2da650d4c8e7467a0b" prot="private" virt="non-virtual"><scope>VersionHAL</scope><name>board_version</name></member>
+      <member refid="classVersionHAL_1a164805a3e11c45ac2b8a1a8b1d9412e3" prot="public" virt="non-virtual"><scope>VersionHAL</scope><name>getBoardVersion</name></member>
+      <member refid="classVersionHAL_1ae3c93933efb108137509fcfccd641fbc" prot="public" virt="non-virtual"><scope>VersionHAL</scope><name>setBoardVersion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

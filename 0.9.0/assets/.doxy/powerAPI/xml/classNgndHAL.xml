@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classNgndHAL" kind="class" language="C++" prot="public">
+    <compoundname>NgndHAL</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classNgndHAL_1ac68efaad48a7f458df854ce15d29ed00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NgndHAL::turnOn</definition>
+        <argsstring>()</argsstring>
+        <name>turnOn</name>
+        <qualifiedname>NgndHAL::turnOn</qualifiedname>
+        <briefdescription>
+<para>Turns the NGND switch ON. It is used with versions of the TWIST board prior to 1.4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.h" line="40" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classNgndHAL_1a8c6942db4f9e3738db58ab89eb7bd293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NgndHAL::turnOff</definition>
+        <argsstring>()</argsstring>
+        <name>turnOff</name>
+        <qualifiedname>NgndHAL::turnOff</qualifiedname>
+        <briefdescription>
+<para>Turns the NGND switch OFF. It is used with versions of the TWIST board prior to 1.4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.h" line="46" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.cpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.h" line="32" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/NgndHAL.h" bodystart="33" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classNgndHAL_1a8c6942db4f9e3738db58ab89eb7bd293" prot="public" virt="non-virtual"><scope>NgndHAL</scope><name>turnOff</name></member>
+      <member refid="classNgndHAL_1ac68efaad48a7f458df854ce15d29ed00" prot="public" virt="non-virtual"><scope>NgndHAL</scope><name>turnOn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

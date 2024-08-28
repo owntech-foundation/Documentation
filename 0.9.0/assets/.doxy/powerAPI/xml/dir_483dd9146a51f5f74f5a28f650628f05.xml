@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_483dd9146a51f5f74f5a28f650628f05" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_power_api/zephyr/public_api</compoundname>
+    <innerfile refid="TwistAPI_8cpp">TwistAPI.cpp</innerfile>
+    <innerfile refid="TwistAPI_8h">TwistAPI.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/"/>
+  </compounddef>
+</doxygen>

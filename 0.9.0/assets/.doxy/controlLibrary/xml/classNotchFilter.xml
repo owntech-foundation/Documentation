@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classNotchFilter" kind="class" language="C++" prot="public">
+    <compoundname>NotchFilter</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classNotchFilter_1a39f730557f3bf4c448892a58c9797675" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t NotchFilter::_Ts</definition>
+        <argsstring></argsstring>
+        <name>_Ts</name>
+        <qualifiedname>NotchFilter::_Ts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="71" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNotchFilter_1a28e64756c8981acd08ce91bc8de8b53e" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t NotchFilter::_f0</definition>
+        <argsstring></argsstring>
+        <name>_f0</name>
+        <qualifiedname>NotchFilter::_f0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="72" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNotchFilter_1a7e359aeec4dd409cdf90f3b98368dc7b" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t NotchFilter::_bandwidth</definition>
+        <argsstring></argsstring>
+        <name>_bandwidth</name>
+        <qualifiedname>NotchFilter::_bandwidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="73" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNotchFilter_1a5d9293ceaf369ba43952a42114f2f5ed" prot="private" static="no" mutable="no">
+        <type><ref refid="classFir" kindref="compound">Fir</ref></type>
+        <definition>Fir NotchFilter::_B</definition>
+        <argsstring></argsstring>
+        <name>_B</name>
+        <qualifiedname>NotchFilter::_B</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="75" column="9" bodyfile="docs/controlLibrary/src/filters.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNotchFilter_1a854c67b914b214484fc452f494dff6c2" prot="private" static="no" mutable="no">
+        <type><ref refid="classFir" kindref="compound">Fir</ref></type>
+        <definition>Fir NotchFilter::_A</definition>
+        <argsstring></argsstring>
+        <name>_A</name>
+        <qualifiedname>NotchFilter::_A</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="76" column="9" bodyfile="docs/controlLibrary/src/filters.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNotchFilter_1ad79c905d5ca5ac4d4fc3ba7dcf3f1e01" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t NotchFilter::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <qualifiedname>NotchFilter::_output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="77" column="15" bodyfile="docs/controlLibrary/src/filters.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classNotchFilter_1aca2b052bcd60a6318e7a5a7e6007c91b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NotchFilter::NotchFilter</definition>
+        <argsstring>()</argsstring>
+        <name>NotchFilter</name>
+        <qualifiedname>NotchFilter::NotchFilter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="50" column="5" bodyfile="docs/controlLibrary/src/filters.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classNotchFilter_1aa88df4b5815000111d083888a6935d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NotchFilter::NotchFilter</definition>
+        <argsstring>(float32_t Ts, float32_t f0, float32_t bandwidth)</argsstring>
+        <name>NotchFilter</name>
+        <qualifiedname>NotchFilter::NotchFilter</qualifiedname>
+        <param>
+          <type>float32_t</type>
+          <declname>Ts</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>f0</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>bandwidth</declname>
+        </param>
+        <briefdescription>
+<para>its a band stop filter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sample time [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>central frequency to stop [Hz] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency band [Hz] around f0 where gain &lt; -3dB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classNotchFilter_1a59ee22e08ae16e864f55dcc969808450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t NotchFilter::init</definition>
+        <argsstring>(float32_t Ts, float32_t f0, float32_t bandwidth)</argsstring>
+        <name>init</name>
+        <qualifiedname>NotchFilter::init</qualifiedname>
+        <param>
+          <type>float32_t</type>
+          <declname>Ts</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>f0</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>bandwidth</declname>
+        </param>
+        <briefdescription>
+<para>initialize the band stop filter parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sample time [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>central frequency to stop in [Hz] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency band [Hz] around f0 where gain &lt; -3dB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="67" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classNotchFilter_1a89073b02085028e8eab33033715c85f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t NotchFilter::calculateWithReturn</definition>
+        <argsstring>(float32_t signal)</argsstring>
+        <name>calculateWithReturn</name>
+        <qualifiedname>NotchFilter::calculateWithReturn</qualifiedname>
+        <param>
+          <type>float32_t</type>
+          <declname>signal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="68" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classNotchFilter_1a4902b986b9464098128e3d6c0bdfdc22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NotchFilter::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>NotchFilter::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/filters.h" line="69" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/controlLibrary/src/filters.h" line="48" column="1" bodyfile="docs/controlLibrary/src/filters.h" bodystart="48" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classNotchFilter_1a854c67b914b214484fc452f494dff6c2" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_A</name></member>
+      <member refid="classNotchFilter_1a5d9293ceaf369ba43952a42114f2f5ed" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_B</name></member>
+      <member refid="classNotchFilter_1a7e359aeec4dd409cdf90f3b98368dc7b" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_bandwidth</name></member>
+      <member refid="classNotchFilter_1a28e64756c8981acd08ce91bc8de8b53e" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_f0</name></member>
+      <member refid="classNotchFilter_1ad79c905d5ca5ac4d4fc3ba7dcf3f1e01" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_output</name></member>
+      <member refid="classNotchFilter_1a39f730557f3bf4c448892a58c9797675" prot="private" virt="non-virtual"><scope>NotchFilter</scope><name>_Ts</name></member>
+      <member refid="classNotchFilter_1a89073b02085028e8eab33033715c85f6" prot="public" virt="non-virtual"><scope>NotchFilter</scope><name>calculateWithReturn</name></member>
+      <member refid="classNotchFilter_1a59ee22e08ae16e864f55dcc969808450" prot="public" virt="non-virtual"><scope>NotchFilter</scope><name>init</name></member>
+      <member refid="classNotchFilter_1aca2b052bcd60a6318e7a5a7e6007c91b" prot="public" virt="non-virtual"><scope>NotchFilter</scope><name>NotchFilter</name></member>
+      <member refid="classNotchFilter_1aa88df4b5815000111d083888a6935d6a" prot="public" virt="non-virtual"><scope>NotchFilter</scope><name>NotchFilter</name></member>
+      <member refid="classNotchFilter_1a4902b986b9464098128e3d6c0bdfdc22" prot="public" virt="non-virtual"><scope>NotchFilter</scope><name>reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

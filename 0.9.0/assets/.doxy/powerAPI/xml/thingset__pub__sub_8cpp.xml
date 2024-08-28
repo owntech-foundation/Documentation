@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="thingset__pub__sub_8cpp" kind="file" language="C++">
+    <compoundname>thingset_pub_sub.cpp</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1a8e52c22ac650fcc01ad5c7d69c53d2ae" prot="public" static="no" extern="yes" mutable="no">
+        <type>ThingSet</type>
+        <definition>ThingSet ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="31" column="17" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" declline="31" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1a8a276838f7559c00693c59b0de674f95" prot="public" static="no" extern="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t can_node_addr</definition>
+        <argsstring></argsstring>
+        <name>can_node_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="32" column="17" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/data_objects.cpp" bodystart="48" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" declline="32" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1ade40b926144f47bc149081008762b485" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t broadcast_time</definition>
+        <argsstring></argsstring>
+        <name>broadcast_time</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="date"><para>2024</para>
+</simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="33" column="10" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1a3ce4a3dffec97c8397b33d6dc4a0100c" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t control_time</definition>
+        <argsstring></argsstring>
+        <name>control_time</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="34" column="10" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1a4e454acccb5074ba0697514fc4270776" prot="public" static="yes" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* can_dev</definition>
+        <argsstring></argsstring>
+        <name>can_dev</name>
+        <initializer>= DEVICE_DT_GET(DT_NODELABEL(can1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="35" column="27" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="thingset__pub__sub_8cpp_1ab0e8a13ecafa0b977d41beecc1838193" prot="public" static="no" mutable="no">
+        <type>const struct can_filter</type>
+        <definition>const struct can_filter ctrl_filter</definition>
+        <argsstring></argsstring>
+        <name>ctrl_filter</name>
+        <initializer>= {
+    .id = TS_CAN_BASE_CONTROL,
+    .rtr = CAN_DATAFRAME,
+    .id_type = CAN_EXTENDED_IDENTIFIER,
+    .id_mask = TS_CAN_TYPE_MASK,
+    .rtr_mask = 1
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="43" column="23" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="43" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a395b9547c7f22f7c9067d97a55e15e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CAN_MSGQ_DEFINE</definition>
+        <argsstring>(sub_msgq, 10)</argsstring>
+        <name>CAN_MSGQ_DEFINE</name>
+        <param>
+          <type>sub_msgq</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="41" column="1" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" declline="41" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a326908aff597b292afa2935d27b8e34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void can_pub_isr</definition>
+        <argsstring>(uint32_t err_flags, void *arg)</argsstring>
+        <name>can_pub_isr</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>err_flags</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="51" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a8c4f587bffa57ecb786b8ef4542ccffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void can_pub_send</definition>
+        <argsstring>(uint32_t can_id, uint8_t can_data[8], uint8_t data_len)</argsstring>
+        <name>can_pub_send</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>can_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>can_data</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="56" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a1888c0e967e827a640fa14e98f79c241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void send_ts_can_pub_message</definition>
+        <argsstring>(uint16_t tag)</argsstring>
+        <name>send_ts_can_pub_message</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="78" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="78" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a2826a4ac3a277ac592cded67b76b1988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void update_ts_data_nodes</definition>
+        <argsstring>(struct can_frame rx_frame)</argsstring>
+        <name>update_ts_data_nodes</name>
+        <param>
+          <type>struct can_frame</type>
+          <declname>rx_frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="95" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="95" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a1785fea4783474cc5aeb635b1ce94b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void can_pubsub_thread</definition>
+        <argsstring>()</argsstring>
+        <name>can_pubsub_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="120" column="6" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" bodystart="120" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="thingset__pub__sub_8cpp_1a4286389bab3885a2a6c2566857cd8168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>K_THREAD_DEFINE</definition>
+        <argsstring>(can_pubsub, 1024, can_pubsub_thread, NULL, NULL, NULL, 6, 0, 1000)</argsstring>
+        <name>K_THREAD_DEFINE</name>
+        <param>
+          <type>can_pubsub</type>
+        </param>
+        <param>
+          <type>1024</type>
+        </param>
+        <param>
+          <type>can_pubsub_thread</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>6</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>1000</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" line="165" column="1" declfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp" declline="165" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>The<sp/>Libre<sp/>Solar<sp/>Project<sp/>Contributors</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG_THINGSET_CAN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CONFIG_THINGSET_CAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/can.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="data__objects_8h" kindref="compound">data_objects.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;thingset.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CommunicationAPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>ThingSet<sp/>ts;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/>can_node_addr;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">uint16_t<sp/>broadcast_time<sp/>=<sp/>10;<sp/></highlight><highlight class="comment">//the<sp/>time<sp/>of<sp/>the<sp/>measurement<sp/>variables<sp/>broadcast<sp/>(multiples<sp/>of<sp/>100ms)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">uint16_t<sp/>control_time<sp/>=<sp/>10;<sp/><sp/></highlight><highlight class="comment">//the<sp/>time<sp/>of<sp/>the<sp/>control<sp/>variables<sp/>broadcast/receive<sp/>(multiples<sp/>of<sp/>100ms)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>can_dev<sp/>=<sp/>DEVICE_DT_GET(DT_NODELABEL(can1));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>below<sp/>defines<sp/>should<sp/>go<sp/>into<sp/>the<sp/>ThingSet<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TS_CAN_SOURCE_GET(id)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((uint32_t)id<sp/>&amp;<sp/>TS_CAN_SOURCE_MASK)<sp/>&gt;&gt;<sp/>TS_CAN_SOURCE_POS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TS_CAN_DATA_ID_GET(id)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((uint32_t)id<sp/>&amp;<sp/>TS_CAN_DATA_ID_MASK)<sp/>&gt;&gt;<sp/>TS_CAN_DATA_ID_POS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">CAN_MSGQ_DEFINE(sub_msgq,<sp/>10);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">can_filter<sp/>ctrl_filter<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>.id<sp/>=<sp/>TS_CAN_BASE_CONTROL,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>.rtr<sp/>=<sp/>CAN_DATAFRAME,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>.id_type<sp/>=<sp/>CAN_EXTENDED_IDENTIFIER,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>.id_mask<sp/>=<sp/>TS_CAN_TYPE_MASK,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>.rtr_mask<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>can_pub_isr(uint32_t<sp/>err_flags,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>nothing.<sp/>Publication<sp/>messages<sp/>are<sp/>fire<sp/>and<sp/>forget.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>can_pub_send(uint32_t<sp/>can_id,<sp/>uint8_t<sp/>can_data[8],<sp/>uint8_t<sp/>data_len)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!device_is_ready(can_dev))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">can_frame<sp/>frame<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>frame.id_type<sp/>=<sp/>CAN_EXTENDED_IDENTIFIER;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>frame.rtr<sp/><sp/><sp/><sp/><sp/>=<sp/>CAN_DATAFRAME;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>frame.id<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>can_id;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(frame.data,<sp/>can_data,<sp/>8);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_len<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame.dlc<sp/>=<sp/>data_len;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>can_send(can_dev,<sp/>&amp;frame,<sp/>K_MSEC(10),<sp/>can_pub_isr,<sp/>NULL);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>send_ts_can_pub_message(uint16_t<sp/>tag)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data_len<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_pos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>can_id;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>can_data[8];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_len<sp/>=<sp/>ts.bin_pub_can(start_pos,<sp/>tag,<sp/>can_node_addr,<sp/>can_id,<sp/>can_data);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_len<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>can_pub_send(can_id,<sp/>can_data,<sp/>data_len);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(data_len<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_ts_data_nodes(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>can_frame<sp/>rx_frame)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>process<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>data_id<sp/>=<sp/>TS_CAN_DATA_ID_GET(rx_frame.id);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sender_addr<sp/>=<sp/>TS_CAN_SOURCE_GET(rx_frame.id);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>control<sp/>message<sp/>received?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data_id<sp/>&gt;<sp/>0x8000<sp/>&amp;&amp;<sp/>sender_addr<sp/>&lt;<sp/>can_node_addr)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[5<sp/>+<sp/>8];<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ThingSet<sp/>bin<sp/>headers<sp/>+<sp/>CAN<sp/>frame<sp/>payload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>0x1F;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ThingSet<sp/>pub<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>0xA1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CBOR:<sp/>map<sp/>with<sp/>1<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>0x19;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CBOR:<sp/>uint16<sp/>follows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[3]<sp/>=<sp/>data_id<sp/>&gt;&gt;<sp/>8;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[4]<sp/>=<sp/>data_id;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;buf[5],<sp/>rx_frame.data,<sp/>8);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>status<sp/>=<sp/>ts.bin_sub(buf,<sp/>5<sp/>+<sp/>rx_frame.dlc,<sp/>TS_WRITE_MASK,<sp/>SUBSET_CTRL);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>ts.bin_import(buf<sp/>+<sp/>1,<sp/>4<sp/>+<sp/>rx_frame.dlc,<sp/>TS_WRITE_MASK,<sp/>SUBSET_CTRL);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/>TS_STATUS_CHANGED)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>can_pubsub_thread()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>communication.<ref refid="classCommunicationAPI_1a5a3ff2d2f025ecfc4803b24c07a03562" kindref="member">can</ref>.<ref refid="classCanCommunication_1a4bbea499a4c2d68a4561ba1b95cf676b" kindref="member">enableCan</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!device_is_ready(can_dev))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_id<sp/>=<sp/>can_add_rx_filter_msgq(can_dev,<sp/>&amp;sub_msgq,<sp/>&amp;ctrl_filter);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filter_id<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>next_pub<sp/>=<sp/>k_uptime_get();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>task_wdt_feed(wdt_channel);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>%<sp/>broadcast_time<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normal<sp/>objects:<sp/>only<sp/>every<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dataObjectsUpdateMeasures();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>send_ts_can_pub_message(SUBSET_CAN);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>%<sp/>control_time<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>control<sp/>objects:<sp/>every<sp/>100<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>send_ts_can_pub_message(SUBSET_CTRL);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">can_frame<sp/>rx_frame;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wait<sp/>for<sp/>incoming<sp/>messages<sp/>until<sp/>the<sp/>next<sp/>pub<sp/>message<sp/>has<sp/>to<sp/>be<sp/>sent<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(k_msgq_get(&amp;sub_msgq,<sp/>&amp;rx_frame,<sp/>K_TIMEOUT_ABS_MS(next_pub))<sp/>!=<sp/>-EAGAIN)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>update_ts_data_nodes(rx_frame);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_pub<sp/>+=<sp/>100;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>100<sp/>ms<sp/>period<sp/>(currently<sp/>fixed)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">K_THREAD_DEFINE(can_pubsub,<sp/>1024,<sp/>can_pubsub_thread,<sp/>NULL,<sp/>NULL,<sp/>NULL,<sp/>6,<sp/>0,<sp/>1000);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_THINGSET_CAN<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_pub_sub.cpp"/>
+  </compounddef>
+</doxygen>

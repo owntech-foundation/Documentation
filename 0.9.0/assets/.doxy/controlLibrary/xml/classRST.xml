@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classRST" kind="class" language="C++" prot="public">
+    <compoundname>RST</compoundname>
+    <basecompoundref refid="classController" prot="public" virt="non-virtual">Controller&lt; float32_t, float32_t, float32_t, RstParams &gt;</basecompoundref>
+    <includes refid="rst_8h" local="no">rst.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRST_1aa31254a9d99d6c8d1dd70d82f4208f17" prot="private" static="no" mutable="no">
+        <type><ref refid="classFir" kindref="compound">Fir</ref></type>
+        <definition>Fir RST::_R</definition>
+        <argsstring></argsstring>
+        <name>_R</name>
+        <qualifiedname>RST::_R</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="99" column="9" bodyfile="docs/controlLibrary/src/rst.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRST_1a05f1997c3d2d4058f9e0713f5a423af8" prot="private" static="no" mutable="no">
+        <type><ref refid="classFir" kindref="compound">Fir</ref></type>
+        <definition>Fir RST::_Sp</definition>
+        <argsstring></argsstring>
+        <name>_Sp</name>
+        <qualifiedname>RST::_Sp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="100" column="9" bodyfile="docs/controlLibrary/src/rst.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRST_1a305d98e664540085dee08d2de39dbc7a" prot="private" static="no" mutable="no">
+        <type><ref refid="classFir" kindref="compound">Fir</ref></type>
+        <definition>Fir RST::_T</definition>
+        <argsstring></argsstring>
+        <name>_T</name>
+        <qualifiedname>RST::_T</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="101" column="9" bodyfile="docs/controlLibrary/src/rst.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRST_1a579b0b6e7fb23ba504bf92b06dbb6406" prot="private" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t RST::_inv_s0</definition>
+        <argsstring></argsstring>
+        <name>_inv_s0</name>
+        <qualifiedname>RST::_inv_s0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="102" column="15" bodyfile="docs/controlLibrary/src/rst.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRST_1abb952ff8c2ed12e6c30b3a882b5fddbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RST::RST</definition>
+        <argsstring>()</argsstring>
+        <name>RST</name>
+        <qualifiedname>RST::RST</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="82" column="5" bodyfile="docs/controlLibrary/src/rst.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classRST_1a3f5c93c0d833d1a4d81c3ad467d5a8ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int8_t</type>
+        <definition>int8_t RST::init</definition>
+        <argsstring>(RstParams p) override</argsstring>
+        <name>init</name>
+        <qualifiedname>RST::init</qualifiedname>
+        <reimplements refid="classController_1a879c564d535b702374822585d9b16227">init</reimplements>
+        <param>
+          <type><ref refid="structRstParams" kindref="compound">RstParams</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>initialize the rst controller </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structRstParams" kindref="compound">RstParams</ref> structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if ok -EINVAL if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="90" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classRST_1a9d0c38d7d6047776f86a88566a8960eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RST::calculate</definition>
+        <argsstring>(void) override</argsstring>
+        <name>calculate</name>
+        <qualifiedname>RST::calculate</qualifiedname>
+        <reimplements refid="classController_1abb5fa7695fdaa74f92b0394d1544e831">calculate</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>calculate a new command value according to a reference fixed using <computeroutput>setReference</computeroutput> method and a measuremnt fixed using <computeroutput>setMeasurement</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The new command value can be captured using the <computeroutput>get_output</computeroutput> method. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRST_1ad1a869a4469e1224a8d5c626fc0f917c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RST::reset</definition>
+        <argsstring>(void) override</argsstring>
+        <name>reset</name>
+        <qualifiedname>RST::reset</qualifiedname>
+        <reimplements refid="classController_1a492a596f91be68c31e01cca0978fd479">reset</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>reset internal states and the last command of the controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/controlLibrary/src/rst.h" line="96" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>discrete polynomial regulator taking into account saturations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It uses 3 <ref refid="classFir" kindref="compound">Fir</ref> :<itemizedlist>
+<listitem><para>one on the measurements called R(),</para>
+</listitem><listitem><para>one on the previous command, called S(),</para>
+</listitem><listitem><para>and the last on the reference called T()</para>
+</listitem></itemizedlist>
+</para>
+<para>It mainly allows to add some filtering action on reference or measurements. and sometimes to add some filtering poles which help stabilisation.</para>
+<para>some classical regulators can be implemented by its way like pid and pr. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Controller&lt; float32_t, float32_t, float32_t, RstParams &gt;</label>
+        <link refid="classController"/>
+      </node>
+      <node id="1">
+        <label>RST</label>
+        <link refid="classRST"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Controller&lt; float32_t, float32_t, float32_t, RstParams &gt;</label>
+        <link refid="classController"/>
+      </node>
+      <node id="1">
+        <label>RST</label>
+        <link refid="classRST"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="docs/controlLibrary/src/rst.h" line="80" column="1" bodyfile="docs/controlLibrary/src/rst.h" bodystart="80" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classRST_1a579b0b6e7fb23ba504bf92b06dbb6406" prot="private" virt="non-virtual"><scope>RST</scope><name>_inv_s0</name></member>
+      <member refid="classController_1a9c31c88c3e8e1dfa7fca7db655222564" prot="protected" virt="non-virtual"><scope>RST</scope><name>_lower_bound</name></member>
+      <member refid="classController_1aa73bd2c40fc73372e40a9dbf562a150e" prot="protected" virt="non-virtual"><scope>RST</scope><name>_measure</name></member>
+      <member refid="classController_1acbf8d672ba7636091b3bf927db6e12d5" prot="protected" virt="non-virtual"><scope>RST</scope><name>_output</name></member>
+      <member refid="classRST_1aa31254a9d99d6c8d1dd70d82f4208f17" prot="private" virt="non-virtual"><scope>RST</scope><name>_R</name></member>
+      <member refid="classController_1a8fb552b2e77984a003ad0b62d0a2507b" prot="protected" virt="non-virtual"><scope>RST</scope><name>_reference</name></member>
+      <member refid="classRST_1a05f1997c3d2d4058f9e0713f5a423af8" prot="private" virt="non-virtual"><scope>RST</scope><name>_Sp</name></member>
+      <member refid="classRST_1a305d98e664540085dee08d2de39dbc7a" prot="private" virt="non-virtual"><scope>RST</scope><name>_T</name></member>
+      <member refid="classController_1a36de6a1a4405705ab8613dbfcd64ca35" prot="protected" virt="non-virtual"><scope>RST</scope><name>_Ts</name></member>
+      <member refid="classController_1ab661a7dbe7aa3f8dabee07b3d7604230" prot="protected" virt="non-virtual"><scope>RST</scope><name>_upper_bound</name></member>
+      <member refid="classRST_1a9d0c38d7d6047776f86a88566a8960eb" prot="public" virt="virtual"><scope>RST</scope><name>calculate</name></member>
+      <member refid="classController_1aa02c83e6f23eb251da2baa8e31ffcd58" prot="public" virt="virtual"><scope>RST</scope><name>calculateWithReturn</name></member>
+      <member refid="classController_1ae5c2de3d2d7fea6df7c3fb71794bafbe" prot="public" virt="virtual"><scope>RST</scope><name>getOutput</name></member>
+      <member refid="classRST_1a3f5c93c0d833d1a4d81c3ad467d5a8ec" prot="public" virt="virtual"><scope>RST</scope><name>init</name></member>
+      <member refid="classRST_1ad1a869a4469e1224a8d5c626fc0f917c" prot="public" virt="virtual"><scope>RST</scope><name>reset</name></member>
+      <member refid="classRST_1abb952ff8c2ed12e6c30b3a882b5fddbf" prot="public" virt="non-virtual"><scope>RST</scope><name>RST</name></member>
+      <member refid="classController_1a03a3170b03559d7cb4de4a3c59c44fcd" prot="public" virt="virtual"><scope>RST</scope><name>saturate</name></member>
+      <member refid="classController_1a279f0b4a725d12c287ab37403d1f3ad0" prot="public" virt="virtual"><scope>RST</scope><name>setMeasurement</name></member>
+      <member refid="classController_1a85bb132e340061655b62be027f0afe97" prot="public" virt="virtual"><scope>RST</scope><name>setReference</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

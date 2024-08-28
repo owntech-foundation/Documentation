@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_b0a9bfd1c37d418dc07d30cb79a776da" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_spin_api/zephyr/src</compoundname>
+    <innerfile refid="AdcHAL_8cpp">AdcHAL.cpp</innerfile>
+    <innerfile refid="AdcHAL_8h">AdcHAL.h</innerfile>
+    <innerfile refid="CompHAL_8cpp">CompHAL.cpp</innerfile>
+    <innerfile refid="CompHAL_8h">CompHAL.h</innerfile>
+    <innerfile refid="DacHAL_8cpp">DacHAL.cpp</innerfile>
+    <innerfile refid="DacHAL_8h">DacHAL.h</innerfile>
+    <innerfile refid="GpioHAL_8cpp">GpioHAL.cpp</innerfile>
+    <innerfile refid="GpioHAL_8h">GpioHAL.h</innerfile>
+    <innerfile refid="hardware__auto__configuration_8cpp">hardware_auto_configuration.cpp</innerfile>
+    <innerfile refid="LedHAL_8cpp">LedHAL.cpp</innerfile>
+    <innerfile refid="LedHAL_8h">LedHAL.h</innerfile>
+    <innerfile refid="NgndHAL_8cpp">NgndHAL.cpp</innerfile>
+    <innerfile refid="NgndHAL_8h">NgndHAL.h</innerfile>
+    <innerfile refid="PwmHAL_8cpp">PwmHAL.cpp</innerfile>
+    <innerfile refid="PwmHAL_8h">PwmHAL.h</innerfile>
+    <innerfile refid="TimerHAL_8cpp">TimerHAL.cpp</innerfile>
+    <innerfile refid="TimerHAL_8h">TimerHAL.h</innerfile>
+    <innerfile refid="UartHAL_8cpp">UartHAL.cpp</innerfile>
+    <innerfile refid="UartHAL_8h">UartHAL.h</innerfile>
+    <innerfile refid="VersionHAL_8cpp">VersionHAL.cpp</innerfile>
+    <innerfile refid="VersionHAL_8h">VersionHAL.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/"/>
+  </compounddef>
+</doxygen>

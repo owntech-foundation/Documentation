@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dac_8h" kind="file" language="C++">
+    <compoundname>dac.h</compoundname>
+    <innerclass refid="structdac__function__config__t" prot="public">dac_function_config_t</innerclass>
+    <innerclass refid="structdac__driver__api" prot="public">dac_driver_api</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="dac_8h_1a09d0df8128138f25ae1360eec1e917cc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dac_function_t</name>
+        <enumvalue id="dac_8h_1a09d0df8128138f25ae1360eec1e917cca5f5a4f50b6957e874bd9d0f400c1376c" prot="public">
+          <name>dac_function_noise</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a09d0df8128138f25ae1360eec1e917ccacda8aacf3b8d747dba482036061c9d7a" prot="public">
+          <name>dac_function_triangle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a09d0df8128138f25ae1360eec1e917ccaea4b1649766a7e2ec4d36c1a3cac0966" prot="public">
+          <name>dac_function_sawtooth</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="50" column="1" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="dac_8h_1a49613904577e02f6fdb9086591a87dee" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dac_polarity_t</name>
+        <enumvalue id="dac_8h_1a49613904577e02f6fdb9086591a87deea9a867b34b3bb8ee34a13abebdd0effb5" prot="public">
+          <name>dac_polarity_decrement</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a49613904577e02f6fdb9086591a87deea9fe94b30ba8fbdc6727ba513954b7d74" prot="public">
+          <name>dac_polarity_increment</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="57" column="1" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="dac_8h_1a0b977299a91d4da7fc171b749bebe083" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dac_trigger_t</name>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083acb64c489110d4bcc73d9dc882263673b" prot="public">
+          <name>hrtim_trig1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083a250047af2e6b6521c68d991678822ef5" prot="public">
+          <name>hrtim_trig2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083aa301bc1461241e1dbcb53f357f72226c" prot="public">
+          <name>hrtim_trig3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083a144cdd021bfddf4978b7c7410614a565" prot="public">
+          <name>hrtim_trig4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083a28f39ace3ae7f612fd9896b2e5edbc7c" prot="public">
+          <name>hrtim_trig5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a0b977299a91d4da7fc171b749bebe083ad1d1db58bfe29f4adcc45439ef31eab0" prot="public">
+          <name>hrtim_trig6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="63" column="1" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="64" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="enum" id="dac_8h_1a95445ad5a69ffaa7c9eaf95a501fd699" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dac_pin_config_t</name>
+        <enumvalue id="dac_8h_1a95445ad5a69ffaa7c9eaf95a501fd699afd49b660869d009e02b406fb206d2d5e" prot="public">
+          <name>dac_pin_internal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a95445ad5a69ffaa7c9eaf95a501fd699a57e5d5e9d963da05d4a51e6b4fec87ad" prot="public">
+          <name>dac_pin_external</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dac_8h_1a95445ad5a69ffaa7c9eaf95a501fd699a7e34906a9ac2593936dae04954aca2cd" prot="public">
+          <name>dac_pin_internal_and_external</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="83" column="1" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="84" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dac_8h_1ad18f9df8a3aa4afdf1e687b22bf05320" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_setconstvalue) (const struct device *dev, uint8_t channel, uint32_t value)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel, uint32_t value)</argsstring>
+        <name>dac_api_setconstvalue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="93" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1ad674f5b2b5a225a18de6daf15197c73e" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_setfunction) (const struct device *dev, uint8_t channel, const dac_function_config_t *config)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel, const dac_function_config_t *config)</argsstring>
+        <name>dac_api_setfunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="94" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1acc02198c23d8500e57d1536c43ea3a64" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_fn_upd_reset) (const struct device *dev, uint8_t channel, uint32_t reset_data)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel, uint32_t reset_data)</argsstring>
+        <name>dac_api_fn_upd_reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="95" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1a315b42be3065ebdcaf03b3f2a86a0dfe" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_fn_upd_step) (const struct device *dev, uint8_t channel, uint32_t step_data)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel, uint32_t step_data)</argsstring>
+        <name>dac_api_fn_upd_step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="96" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1af60335c447610b2048072d548255a53f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_pinconfigure) (const struct device *dev, uint8_t channel, dac_pin_config_t config)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel, dac_pin_config_t config)</argsstring>
+        <name>dac_api_pinconfigure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="97" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1aed91cf0fd687c87b5e6efb9ab0a3f223" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_start) (const struct device *dev, uint8_t channel)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel)</argsstring>
+        <name>dac_api_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="98" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dac_8h_1a891bb3f782e754bcd77caaea485c3629" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dac_api_stop) (const struct device *dev, uint8_t channel)</definition>
+        <argsstring>)(const struct device *dev, uint8_t channel)</argsstring>
+        <name>dac_api_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="99" column="9" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dac_8h_1a4deadea576c95bd583410d75f04344ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_set_const_value</definition>
+        <argsstring>(const struct device *dev, uint8_t channel, uint32_t value)</argsstring>
+        <name>dac_set_const_value</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="112" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="112" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1ab1e1d287e8edf60839340ab2915fec98" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_set_function</definition>
+        <argsstring>(const struct device *dev, uint8_t channel, const dac_function_config_t *function_config)</argsstring>
+        <name>dac_set_function</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdac__function__config__t" kindref="compound">dac_function_config_t</ref> *</type>
+          <declname>function_config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="119" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1a844d66261eef2589cc4b50cd4661f40c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_function_update_reset</definition>
+        <argsstring>(const struct device *dev, uint8_t channel, uint32_t reset_data)</argsstring>
+        <name>dac_function_update_reset</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>reset_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="126" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1a5b476fb7b893bd0acc6d4e81b119993e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_function_update_step</definition>
+        <argsstring>(const struct device *dev, uint8_t channel, uint32_t step_data)</argsstring>
+        <name>dac_function_update_step</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>step_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="133" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="133" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1a446487752ea0e788a9e2958edd375b92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_pin_configure</definition>
+        <argsstring>(const struct device *dev, uint8_t channel, dac_pin_config_t pin_config)</argsstring>
+        <name>dac_pin_configure</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>dac_pin_config_t</type>
+          <declname>pin_config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="140" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="140" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1acd9e05e566cf2fc73e359c19c512a040" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_start</definition>
+        <argsstring>(const struct device *dev, uint8_t channel)</argsstring>
+        <name>dac_start</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="147" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="dac_8h_1ab6ba75b72c0ab582c6c1eb8448dd4ff8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dac_stop</definition>
+        <argsstring>(const struct device *dev, uint8_t channel)</argsstring>
+        <name>dac_stop</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="154" column="20" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="154" bodyend="159"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGLPV2.1</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DAC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Zephyr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">//<sp/>Public<sp/>devices<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC1_DEVICE<sp/>DT_NODELABEL(dac1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC2_DEVICE<sp/>DT_NODELABEL(dac2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC3_DEVICE<sp/>DT_NODELABEL(dac3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">//<sp/>Configuration<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_function_noise,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_function_triangle,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_function_sawtooth</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/>dac_function_t;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_polarity_decrement,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_polarity_increment</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/>dac_polarity_t;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig1,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig2,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig3,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig4,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig5,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_trig6</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/>dac_trigger_t;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structdac__function__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_function_t<sp/>dac_function;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_trigger_t<sp/><sp/>reset_trigger_source;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_trigger_t<sp/><sp/>step_trigger_source;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_polarity_t<sp/>polarity;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>reset_data;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>step_data;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="structdac__function__config__t" kindref="compound">dac_function_config_t</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_pin_internal,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_pin_external,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_pin_internal_and_external</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}<sp/>dac_pin_config_t;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="comment">//<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_setconstvalue)<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_setfunction)<sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdac__function__config__t" kindref="compound">dac_function_config_t</ref>*<sp/>config);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_fn_upd_reset)<sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>reset_data);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_fn_upd_step)<sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>step_data);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_pinconfigure)<sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>dac_pin_config_t<sp/>config);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_start)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*dac_api_stop)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>dev,<sp/>uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structdac__driver__api" refkind="compound"><highlight class="normal">__subsystem<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_setconstvalue<sp/>setconstvalue;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_setfunction<sp/><sp/><sp/>setfunction;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_fn_upd_reset<sp/><sp/>fn_upd_reset;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_fn_upd_step<sp/><sp/><sp/>fn_upd_step;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_pinconfigure<sp/><sp/>pinconfigure;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_start<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>dac_api_stop<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stop;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_set_const_value(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>value)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;setconstvalue(dev,<sp/>channel,<sp/>value);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_set_function(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdac__function__config__t" kindref="compound">dac_function_config_t</ref>*<sp/>function_config)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;setfunction(dev,<sp/>channel,<sp/>function_config);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_function_update_reset(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>reset_data)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;fn_upd_reset(dev,<sp/>channel,<sp/>reset_data);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_function_update_step(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>uint32_t<sp/>step_data)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;fn_upd_step(dev,<sp/>channel,<sp/>step_data);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_pin_configure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel,<sp/>dac_pin_config_t<sp/>pin_config)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;pinconfigure(dev,<sp/>channel,<sp/>pin_config);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_start(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;start(dev,<sp/>channel);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dac_stop(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t<sp/>channel)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*<sp/>api<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdac__driver__api" kindref="compound">dac_driver_api</ref>*)(dev-&gt;api);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>api-&gt;stop(dev,<sp/>channel);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DAC_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h"/>
+  </compounddef>
+</doxygen>

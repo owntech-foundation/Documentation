@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_395e94c4eb2e271e16f52d3df300cdd3" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_data_api/zephyr/public_api</compoundname>
+    <innerfile refid="data__api__internal_8h">data_api_internal.h</innerfile>
+    <innerfile refid="DataAPI_8cpp">DataAPI.cpp</innerfile>
+    <innerfile refid="DataAPI_8h">DataAPI.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_data_api/zephyr/public_api/"/>
+  </compounddef>
+</doxygen>

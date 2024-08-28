@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structdac__function__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>dac_function_config_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdac__function__config__t_1a9d05ae2c33c4fc9378a54f0b4f085b15" prot="public" static="no" mutable="no">
+        <type>dac_function_t</type>
+        <definition>dac_function_t dac_function_config_t::dac_function</definition>
+        <argsstring></argsstring>
+        <name>dac_function</name>
+        <qualifiedname>dac_function_config_t::dac_function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="75" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__function__config__t_1acc74cf60c295b7758d2476a53fff2009" prot="public" static="no" mutable="no">
+        <type>dac_trigger_t</type>
+        <definition>dac_trigger_t dac_function_config_t::reset_trigger_source</definition>
+        <argsstring></argsstring>
+        <name>reset_trigger_source</name>
+        <qualifiedname>dac_function_config_t::reset_trigger_source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="76" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__function__config__t_1a8c8f7b1e8f93012a0d8cb1c4f576faba" prot="public" static="no" mutable="no">
+        <type>dac_trigger_t</type>
+        <definition>dac_trigger_t dac_function_config_t::step_trigger_source</definition>
+        <argsstring></argsstring>
+        <name>step_trigger_source</name>
+        <qualifiedname>dac_function_config_t::step_trigger_source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="77" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__function__config__t_1ab531d77a706f7ebe6335d8a9bd74aaff" prot="public" static="no" mutable="no">
+        <type>dac_polarity_t</type>
+        <definition>dac_polarity_t dac_function_config_t::polarity</definition>
+        <argsstring></argsstring>
+        <name>polarity</name>
+        <qualifiedname>dac_function_config_t::polarity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="78" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__function__config__t_1aeb5369e2f20434b53aac2255c9a8d4da" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dac_function_config_t::reset_data</definition>
+        <argsstring></argsstring>
+        <name>reset_data</name>
+        <qualifiedname>dac_function_config_t::reset_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="79" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdac__function__config__t_1aa430ed9050a26c2c8f237921c16299fa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dac_function_config_t::step_data</definition>
+        <argsstring></argsstring>
+        <name>step_data</name>
+        <qualifiedname>dac_function_config_t::step_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="80" column="16" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="73" column="1" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="74" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structdac__function__config__t_1a9d05ae2c33c4fc9378a54f0b4f085b15" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>dac_function</name></member>
+      <member refid="structdac__function__config__t_1ab531d77a706f7ebe6335d8a9bd74aaff" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>polarity</name></member>
+      <member refid="structdac__function__config__t_1aeb5369e2f20434b53aac2255c9a8d4da" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>reset_data</name></member>
+      <member refid="structdac__function__config__t_1acc74cf60c295b7758d2476a53fff2009" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>reset_trigger_source</name></member>
+      <member refid="structdac__function__config__t_1aa430ed9050a26c2c8f237921c16299fa" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>step_data</name></member>
+      <member refid="structdac__function__config__t_1a8c8f7b1e8f93012a0d8cb1c4f576faba" prot="public" virt="non-virtual"><scope>dac_function_config_t</scope><name>step_trigger_source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
