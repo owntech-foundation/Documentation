@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0 # fetch all commits/branches, fixes fast forward issue of mike tool
 
       - name: Checkout OwnTech Core repo
-        if: $branch_name == 'main'
+        if: ${{ github.event.client_payload.version == 'main' }}
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core
@@ -28,7 +28,7 @@ jobs:
           path: docs/core
 
       - name: Checkout OwnTech Core repo
-        if: $branch_name == 'v1.0.0-rc'
+        if: ${{ github.event.client_payload.version == 'v1.0.0-rc' }}
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core
@@ -114,8 +114,8 @@ jobs:
       #- name: Clear all docs versions (do not uncomment except if you know what u'r doing)
       #  run: mike delete --all
       - name: Publish docs for v0.9.0 using mike versioning tool
-        if: $branch_name == 'main'
+        if: ${{ github.event.client_payload.version == 'main' }}
         run: mike deploy --push --update-aliases 0.9.0 latest
       - name: Publish docs for v1.0.0 using mike versioning tool
-        if: $branch_name == 'v1.0.0-rc'
+        if: ${{ github.event.client_payload.version == 'v1.0.0-rc' }}
         run: mike deploy --push --update-aliases 1.0.0 dev
