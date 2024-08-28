@@ -97,7 +97,9 @@ jobs:
       - name: Make sure git user.name is configured because it is used by mike versioning tool.
         run: git config --global user.name "${{github.actor}}"
       - name: Make sure git user.email is configured
-        run: git config --global user.email "${{github.actor}}@users.noreply.github.com"      
+        run: git config --global user.email "${{github.actor}}@users.noreply.github.com" 
+      - name: Nasty fix to fast forward problems, aliasing push to add -f automatically
+        run: git config --global alias.push 'push -f'
       #- name: Clear all docs versions
       #  run: mike delete --all
       - name: Publish docs using mike versioning tool
