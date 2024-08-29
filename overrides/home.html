@@ -48,7 +48,7 @@
 
     .tx-hero .md-button {
         margin-top: .5rem;
-        margin-right: 1.5rem;
+        margin-right: 2.5rem;
         color: var(--md-primary-bg-color)
     }
 
@@ -125,7 +125,7 @@
         .tx-hero {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .tx-hero__content {
@@ -241,13 +241,13 @@
 
 	  <!-- Added Buttons (up to 3) -->
           {%- if config.home_button1_name -%}
-          <a href="{{ config.home_button1_url }}" title="Material | MkDocs" class="{{ config.home_button1_theme }}">
+          <a href="{{ config.home_button1_url }}" title="Start Here" class="{{ config.home_button1_theme }}">
             {{ config.home_button1_name }}
           </a>
 	  {%- endif -%}
 
           {%- if config.home_button2_name -%}
-          <a href="{{ config.home_button2_url }}" title="Material | MkDocs" class="{{ config.home_button2_theme }}">
+          <a href="{{ config.home_button2_url }}" title="Tell me more first" class="{{ config.home_button2_theme }}">
             {{ config.home_button2_name }}
           </a>
 	  {%- endif -%}

@@ -258,10 +258,10 @@ nav:
             - Architecture: OwnPlot/docs/dev-manual/arch.md
 
 # Custom Homepage Elements
-home_cover_image: attachments/wizard-posting.png # This path starts at your root mkdocs directory.
+home_cover_image: docs/images/owntech_home.svg # This path starts at your root mkdocs directory.
 home_tagline: Power at the balm of your hands
 home_description: |
-  The power electronics API you need to deploy your application in minutes|
+  The power electronics API you need to deploy your application in minutes
    - Browse customizable examples, and taylor fit it to your needs.
 
 # Gradient Color
