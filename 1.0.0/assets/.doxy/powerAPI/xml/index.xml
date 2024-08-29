@@ -88,7 +88,8 @@
     <member refid="classDataAPI_1a71c77e8ada7b064600e89a1e1a827ba4" kind="function"><name>peekLatestValue</name></member>
     <member refid="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" kind="function"><name>getLatestValue</name></member>
     <member refid="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" kind="function"><name>convertValue</name></member>
-    <member refid="classDataAPI_1a763f1fee734e142fb6808c931851fe7c" kind="function"><name>setConversionParameters</name></member>
+    <member refid="classDataAPI_1a55bc18d5cbcb646fa0dca4cad6d83d6c" kind="function"><name>setConversionParametersLinear</name></member>
+    <member refid="classDataAPI_1a8400bb28ffd38fea3edac8963bc59a7a" kind="function"><name>setConversionParametersNtcThermistor</name></member>
     <member refid="classDataAPI_1a5d5fed98f96043bf30ade4b0004a9596" kind="function"><name>getConversionParameterValue</name></member>
     <member refid="classDataAPI_1a2d129bb41de793a9ba79e33cd7bf858f" kind="function"><name>getConversionParameterType</name></member>
     <member refid="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" kind="function"><name>storeConversionParametersInMemory</name></member>
@@ -813,6 +814,10 @@
     <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56" kind="enum"><name>parameter_t</name></member>
     <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a5fdf95beef901fba4bdb3ac7e7668773" kind="enumvalue"><name>gain</name></member>
     <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a330e576ee3e552e8f2f3f0056d68530b" kind="enumvalue"><name>offset</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a20eb91018c3024df2ae3582f6e8e662c" kind="enumvalue"><name>r0</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56aa06b03e4cd5c7c464c513a95a7fcf9bf" kind="enumvalue"><name>b</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a53538eeb67ae48d5d5fc6ada568fb3a3" kind="enumvalue"><name>rdiv</name></member>
+    <member refid="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56af64e2e410920640816113ba4b024b166" kind="enumvalue"><name>t0</name></member>
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172" kind="enum"><name>adc_t</name></member>
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172a06bb407aaf24dd0467613c4494cc963f" kind="enumvalue"><name>UNKNOWN_ADC</name></member>
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172a8f7c8bfe7c722771ec69bc5320575612" kind="enumvalue"><name>DEFAULT_ADC</name></member>

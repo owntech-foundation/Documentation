@@ -52,7 +52,11 @@
 typedef enum : uint8_t
 {
     gain = 1,
-    offset = 2
+    offset = 2,
+    r0 = 1,
+    b = 2,
+    rdiv =3,
+    t0=4
 
 } parameter_t;
 
@@ -119,7 +123,9 @@ public:
 
     float32_t convertValue(uint8_t pin_number, uint16_t raw_value);
 
-    void setConversionParameters(uint8_t pin_number, float32_t gain, float32_t offset);
+    void setConversionParametersLinear(uint8_t pin_number, float32_t gain, float32_t offset);
+
+    void setConversionParametersNtcThermistor(uint8_t pin_num, float32_t r0, float32_t b, float32_t rdiv, float32_t t0);
 
     float32_t getConversionParameterValue(uint8_t pin_number, parameter_t parameter_name);
 

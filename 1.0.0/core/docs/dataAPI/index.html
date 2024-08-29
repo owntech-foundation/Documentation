@@ -1,3 +1,5 @@
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -65,6 +67,9 @@
     
     
     
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
   </head>
   
   
@@ -440,7 +445,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome to OwnTech Documentation Center
+    Home
   </span>
   
 
@@ -2192,9 +2197,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setconversionparameters" class="md-nav__link">
+  <a href="#function-setconversionparameterslinear" class="md-nav__link">
     <span class="md-ellipsis">
-      function setConversionParameters
+      function setConversionParametersLinear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setconversionparametersntcthermistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      function setConversionParametersNtcThermistor
     </span>
   </a>
   
@@ -4256,9 +4270,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setconversionparameters" class="md-nav__link">
+  <a href="#function-setconversionparameterslinear" class="md-nav__link">
     <span class="md-ellipsis">
-      function setConversionParameters
+      function setConversionParametersLinear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setconversionparametersntcthermistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      function setConversionParametersNtcThermistor
     </span>
   </a>
   
@@ -4519,7 +4542,11 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setconversionparameters"><strong>setConversionParameters</strong></a> (uint8_t pin_number, float32_t gain, float32_t offset) <br><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em></td>
+<td style="text-align: left;"><a href="#function-setconversionparameterslinear"><strong>setConversionParametersLinear</strong></a> (uint8_t pin_number, float32_t gain, float32_t offset) <br><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-setconversionparametersntcthermistor"><strong>setConversionParametersNtcThermistor</strong></a> (uint8_t pin_num, float32_t r0, float32_t b, float32_t rdiv, float32_t t0) <br><em>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int8_t</td>
@@ -4749,9 +4776,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 <p>0 if parameters were correcly retrieved, negative value if there was an error: -1: persistent memory is empty -2: persistent memory contains data, but its version doesn't match current version -3: data in persistent memory is corrupted -4: persistent memory contains data, but not for the requested pin -5000: pin not found. </p>
 <hr>
 
-<h3 id="function-setconversionparameters">function setConversionParameters</h3>
+<h3 id="function-setconversionparameterslinear">function setConversionParametersLinear</h3>
 <p><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParameters</span><span class="w"> </span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersLinear</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
@@ -4767,9 +4794,31 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 </ul>
 <hr>
 
+<h3 id="function-setconversionparametersntcthermistor">function setConversionParametersNtcThermistor</h3>
+<p><em>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersNtcThermistor</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">r0</span><span class="p">,</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">rdiv</span><span class="p">,</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">t0</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Note:</strong></p>
+<p>This function can't be called before the sensor is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> must not have been started, neither explicitly nor by starting the Uninterruptible task.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pin_number</code> Number of the pin from which to obtain values. </li>
+<li><code>r0</code> The NTC resistance at a reference temperature. </li>
+<li><code>b</code> The sensibility coefficient of the resistance to temperature. </li>
+<li><code>rdiv</code> The bridge dividor resistance used to condition the NTC. </li>
+<li><code>t0</code> The reference temperature of the thermistor. </li>
+</ul>
+<hr>
+
 <h3 id="function-start">function start</h3>
 <p><em>This functions manually starts the acquisition chain.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>If your code uses an uninterruptible task, you do not need to start Data Acquisition manually, it will automatically be started at the same time as the task as their internal behavior are intrinsically linked. If for some reason you have an uninterruptible task in your code, but do not want the Scheduling module to be in charge of Data Acquisition, you need to indicate it when starting the uninterruptible task. In that case, Data Acquisition must be manually started using this function. Note that in taht case, dispatch will use DMA interrupts which consumes a non-negligible amount of processor time and it is not advised.</p>
@@ -4783,7 +4832,7 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-started">function started</h3>
 <p><em>Checks if the module is already started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>true is the module has been started, false otherwise. </p>
@@ -4791,7 +4840,7 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-stop">function stop</h3>
 <p><em>Stops the module if it is started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">stop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">stop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>0 if everything went well, -1 if there was an error. Error is triggered when trying to stop Data API while it was not started. </p>
@@ -4799,9 +4848,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-storeconversionparametersinmemory">function storeConversionParametersInMemory</h3>
 <p><em>Store the currently configured conversion parameters of a given channel in persistent memory.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeConversionParametersInMemory</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeConversionParametersInMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4813,9 +4862,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-triggeracquisition">function triggerAcquisition</h3>
 <p><em>Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the at least one channel is enabled on the ADC and the <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>

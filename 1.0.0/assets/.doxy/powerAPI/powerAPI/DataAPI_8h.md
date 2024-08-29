@@ -149,7 +149,11 @@ enum adc_t {
 ```C++
 enum parameter_t {
     gain = 1,
-    offset = 2
+    offset = 2,
+    r0 = 1,
+    b = 2,
+    rdiv =3,
+    t0 =4
 };
 ```
 

@@ -62,7 +62,8 @@
 |  float32\_t \* | [**getValues**](#function-getvalues) (uint8\_t pin\_number, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._  |
 |  float32\_t | [**peekLatestValue**](#function-peeklatestvalue) (uint8\_t pin\_number) <br>_Function to access the latest value available from a pin, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started._  |
 |  int8\_t | [**retrieveConversionParametersFromMemory**](#function-retrieveconversionparametersfrommemory) (uint8\_t pin\_number) <br>_Retrieved previously configured conversion parameters from persistent memory._  |
-|  void | [**setConversionParameters**](#function-setconversionparameters) (uint8\_t pin\_number, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for the channel if default values are not accurate enough._  |
+|  void | [**setConversionParametersLinear**](#function-setconversionparameterslinear) (uint8\_t pin\_number, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for the channel if default values are not accurate enough._  |
+|  void | [**setConversionParametersNtcThermistor**](#function-setconversionparametersntcthermistor) (uint8\_t pin\_num, float32\_t r0, float32\_t b, float32\_t rdiv, float32\_t t0) <br>_Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough._  |
 |  int8\_t | [**start**](#function-start) () <br>_This functions manually starts the acquisition chain._  |
 |  bool | [**started**](#function-started) () <br>_Checks if the module is already started._  |
 |  int8\_t | [**stop**](#function-stop) () <br>_Stops the module if it is started._  |
@@ -604,11 +605,11 @@ int8_t DataAPI::retrieveConversionParametersFromMemory (
 
 
 
-### function setConversionParameters 
+### function setConversionParametersLinear 
 
 _Use this function to tweak the conversion values for the channel if default values are not accurate enough._ 
 ```C++
-void DataAPI::setConversionParameters (
+void DataAPI::setConversionParametersLinear (
     uint8_t pin_number,
     float32_t gain,
     float32_t offset
@@ -632,6 +633,48 @@ This function can't be called before the pin is enabled. The [**DataAPI**](class
 * `pin_number` Number of the pin from which to obtain values. 
 * `gain` Gain to be applied (multiplied) to the channel raw value. 
 * `offset` Offset to be applied (added) to the channel value after gain has been applied. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setConversionParametersNtcThermistor 
+
+_Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough._ 
+```C++
+void DataAPI::setConversionParametersNtcThermistor (
+    uint8_t pin_num,
+    float32_t r0,
+    float32_t b,
+    float32_t rdiv,
+    float32_t t0
+) 
+```
+
+
+
+
+
+**Note:**
+
+This function can't be called before the sensor is enabled. The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task.
+
+
+
+
+**Parameters:**
+
+
+* `pin_number` Number of the pin from which to obtain values. 
+* `r0` The NTC resistance at a reference temperature. 
+* `b` The sensibility coefficient of the resistance to temperature. 
+* `rdiv` The bridge dividor resistance used to condition the NTC. 
+* `t0` The reference temperature of the thermistor. 
 
 
 
