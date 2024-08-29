@@ -57,7 +57,7 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
       primary: teal
-      accent: purple
+      accent: grey
     - scheme: slate
       toggle:
         icon: material/toggle-switch
@@ -259,9 +259,10 @@ nav:
 
 # Custom Homepage Elements
 home_cover_image: attachments/wizard-posting.png # This path starts at your root mkdocs directory.
-home_tagline: Shadow Wizards Only
+home_tagline: Power at the balm of your hands
 home_description: |
-  This site is an example showcase for my "mkdocs-coverpage" repository.
+  The power electronics API you need to deploy your application in minutes|
+   - Browse customizable examples, and taylor fit it to your needs.
 
 # Gradient Color
 home_gradient_hsla: hsla(0, 0%, 9%, 1) # Default Green: hsla(160deg,47%,55%,1)
