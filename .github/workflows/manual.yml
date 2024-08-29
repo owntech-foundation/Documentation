@@ -1,0 +1,102 @@
+name: Manual generation for OwnTech Documentation Center
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # fetch all commits/branches, fixes fast forward issue of mike tool
+
+      - name: Checkout OwnTech Core repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/Core
+          ref: main
+          path: docs/core
+
+      - name: Checkout OwnTech Bootloader repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/bootloader
+          ref: docs
+          path: docs/bootloader
+          sparse-checkout:
+            docs/getting_started.md
+            docs/images
+
+      - name: Checkout OwnTech Control library repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/control_library
+          ref: docs
+          path: docs/controlLibrary
+
+      - name: Checkout OwnTech Examples repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/examples
+          ref: docs
+          path: docs/examples
+
+      # - name: Checkout OwnTech Twist repo
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: owntech-foundation/TWIST
+      #     ref: draft-doc-1.4
+      #     path: docs/twist
+      #     sparse-checkout: |
+      #       docs
+
+      - name: Checkout OwnTech Matlab repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/Owntech-Matlab
+          path: docs/Matlab
+          sparse-checkout: |
+            docs
+
+      - name: Checkout OwnTech OwnModels repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/OwnModels
+          path: docs/OwnModels
+          sparse-checkout: |
+            docs
+
+      - name: Checkout OwnTech OwnPlot repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/OwnPlot
+          ref: doc_v1.6.0_2
+          path: docs/OwnPlot
+          sparse-checkout: |
+            docs
+
+      - uses: ssciwr/doxygen-install@v1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - name: Install python packages
+        run: pip install mkdocs-material mkdoxy pillow cairosvg mkdocs-macros-plugin mike
+      - name: Upgrade Jinja2
+        run: pip install Jinja2 --upgrade
+      - name: Print mkdocs version
+        run: mkdocs --version
+      - name: Make sure git user.name is configured because it is used by mike versioning tool.
+        run: git config --global user.name "${{github.actor}}"
+      - name: Make sure git user.email is configured
+        run: git config --global user.email "${{github.actor}}@users.noreply.github.com" 
+      #- name: Clear all docs versions (do not uncomment except if you know what u'r doing)
+      #  run: mike delete --all
+      - name: Publish docs for v0.9.0 using mike versioning tool
+        run: mike deploy --push --update-aliases 0.9.0 latest
