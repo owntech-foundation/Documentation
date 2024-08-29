@@ -68,8 +68,8 @@ void PowerAPI::initMode(leg_t leg,                                             \
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-   /*  If ALL_LEGS is selected, loop through all legs */
-    if (leg == ALL_LEGS)
+   /*  If ALL is selected, loop through all legs */
+    if (leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -209,8 +209,8 @@ void PowerAPI::setDutyCycle(leg_t leg, float32_t duty_leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if (leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if (leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -235,8 +235,8 @@ void PowerAPI::start(leg_t leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /* If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /* If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count;
@@ -276,8 +276,8 @@ void PowerAPI::connectCapacitor(leg_t leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -302,8 +302,8 @@ void PowerAPI::stop(leg_t leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -335,8 +335,8 @@ void PowerAPI::disconnectCapacitor(leg_t leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -363,8 +363,8 @@ void PowerAPI::setSlopeCompensation(leg_t leg,                              \
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -406,8 +406,8 @@ void PowerAPI::setTriggerValue(leg_t leg, float32_t trigger_value)
         trigger_value = 0.05;
     }
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -430,8 +430,8 @@ void PowerAPI::setPhaseShift(leg_t leg, int16_t phase_shift)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -455,8 +455,8 @@ void PowerAPI::setDeadTime(leg_t leg,                                       \
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -480,8 +480,8 @@ void PowerAPI::setAdcDecim(leg_t leg, uint16_t adc_decim)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -504,8 +504,8 @@ void PowerAPI::initBuck(leg_t leg, hrtim_pwm_mode_t leg_mode)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */
@@ -536,8 +536,8 @@ void PowerAPI::initBoost(leg_t leg)
     int8_t startIndex = 0;
     int8_t endIndex = 0;
 
-    /*  If ALL_LEGS is selected, loop through all legs */
-    if(leg == ALL_LEGS)
+    /*  If ALL is selected, loop through all legs */
+    if(leg == ALL)
     {
         startIndex = 0;
         endIndex = dt_leg_count; /* retrives the total number of legs */

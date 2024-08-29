@@ -40,7 +40,7 @@
 typedef enum
 {
 	DT_FOREACH_CHILD_STATUS_OKAY(DT_NODELABEL(powershield), LEG_TOKEN)
-	ALL_LEGS
+	ALL
 } leg_t;
 
 class PowerAPI
