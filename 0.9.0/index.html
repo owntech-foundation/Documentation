@@ -368,7 +368,6 @@
       
 
 
-<!-- .tx-container Original Green Gradient: hsla(160deg,47%,55%,1) -->
 <style>
 
     .md-main {
@@ -380,14 +379,15 @@
         height: 100%;
     }
 
-    .tx-container {
-        height: 65vh;
+    .first-section-gradient {
         align-items: center;
         padding-top: .0rem;
         background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(0, 0%, 9%, 1) 99%,#fff 99%)
     }
 
     .tx-hero {
+        display: flex;
+        flex-flow: row;
         margin: 1rem;
         color: var(--md-primary-bg-color);
         justify-content: center;
@@ -407,12 +407,13 @@
     }
 
     .tx-hero__image{
+        overflow: hidden;
         flex: 50%;
         order: 1;
     }
 
     .image_banner{
-        width: 200%;
+        width: 150%;
     }
 
     .tx-hero .md-button {
@@ -595,12 +596,12 @@
 
 
 <!-- Main site entry button descriptions -->
-<section class="tx-container">
+<section class="first-section-gradient">
     <div class="md-grid md-typeset">
         <div class="tx-hero">
         <!-- Custom Image -->
             <div class="tx-hero__image">
-	            <img class="image_banner" src="images/hands_light.jpg" draggable="false">
+	            <img class="image_banner" src="images/hero.png" draggable="false">
             </div>
 
 	<!-- Main Tagline -->
