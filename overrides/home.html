@@ -37,15 +37,19 @@
     }
 
     .tx-hero__content {
+        flex: 50%;
+        order: 0;
         padding-bottom: 1rem;
         margin: 0 auto;
     }
 
     .tx-hero__image{
-        clip-path: (50% 0%, 100% 0%, 50% 100%, 0% 100%);
-        height:100%;
-        order:1;
-        padding-right: 2.5rem;
+        flex: 50%;
+        order: 1;
+    }
+
+    .image_banner{
+        width: 200%;
     }
 
     .tx-hero .md-button {
@@ -233,34 +237,34 @@
         <div class="tx-hero">
         <!-- Custom Image -->
             <div class="tx-hero__image">
-	            <img src="{{ config.home_cover_image }}" draggable="false">
+	            <img class="image_banner" src="{{ config.home_cover_image }}" draggable="false">
             </div>
 
 	<!-- Main Tagline -->
-        <div class="tx-hero__content">
-          <h1>{{ config.home_tagline }}</h1>
-          <p>{{ config.home_description }}</p>
+            <div class="tx-hero__content">
+            <h1>{{ config.home_tagline }}</h1>
+            <p>{{ config.home_description }}</p>
 
-	  <!-- Added Buttons (up to 3) -->
-          {%- if config.home_button1_name -%}
-          <a href="{{ config.home_button1_url }}" title="Start Here" class="{{ config.home_button1_theme }}">
-            {{ config.home_button1_name }}
-          </a>
-	  {%- endif -%}
+        <!-- Added Buttons (up to 3) -->
+            {%- if config.home_button1_name -%}
+            <a href="{{ config.home_button1_url }}" title="Start Here" class="{{ config.home_button1_theme }}">
+                {{ config.home_button1_name }}
+            </a>
+            {%- endif -%}
 
-          {%- if config.home_button2_name -%}
-          <a href="{{ config.home_button2_url }}" title="Tell me more first" class="{{ config.home_button2_theme }}">
-            {{ config.home_button2_name }}
-          </a>
-	  {%- endif -%}
+            {%- if config.home_button2_name -%}
+            <a href="{{ config.home_button2_url }}" title="Tell me more first" class="{{ config.home_button2_theme }}">
+                {{ config.home_button2_name }}
+            </a>
+            {%- endif -%}
 
-	  {%- if config.home_button3_name -%}
-          <a href="{{ config.home_button3_url }}" title="Material | MkDocs" class="{{ config.home_button3_theme }}">
-            {{ config.home_button3_name }}
-          </a>
-	  {%- endif -%}
+            {%- if config.home_button3_name -%}
+            <a href="{{ config.home_button3_url }}" title="Material | MkDocs" class="{{ config.home_button3_theme }}">
+                {{ config.home_button3_name }}
+            </a>
+            {%- endif -%}
+            </div>
         </div>
-      </div>
     </div>
 </section>
 
