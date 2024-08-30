@@ -37,15 +37,17 @@
     }
 
     .tx-hero__content {
-        flex: 50%;
+        flex-basis: 50%;
+        flex-grow: 1;
         order: 0;
         padding-bottom: 1rem;
-        margin: 0 auto;
     }
 
     .tx-hero__image{
         overflow: hidden;
-        flex: 50%;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        margin-left: 4rem;
         order: 1;
     }
 
@@ -118,7 +120,7 @@
         display: block;
     }
 
-    @media screen and (max-width:30em) {
+    /* @media screen and (max-width:30em) {
         .tx-hero h1 {
             font-size: 1.4rem
         }
@@ -137,12 +139,9 @@
         }
 
         .tx-hero__content {
-            max-width: 22rem;
             margin-top: 3.5rem;
             margin-bottom: 3.5rem;
             margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
         }
     }
 
@@ -179,7 +178,7 @@
             background-color: #526cfe47;
             border-radius: 3px;
         }
-    }
+    } */
 
     .hr {
         border-bottom: 1px solid #eee;
