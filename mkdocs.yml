@@ -258,7 +258,7 @@ nav:
             - Architecture: OwnPlot/docs/dev-manual/arch.md
 
 # Custom Homepage Elements
-home_cover_image: images/hands_light.jpg # This path starts at your root mkdocs directory.
+home_cover_image: images/hero.png # This path starts at your root mkdocs directory.
 home_tagline: Power at the palm of your hands
 home_description: |
   The power electronics API you need to deploy your application in minutes
