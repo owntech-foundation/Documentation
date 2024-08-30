@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -400,15 +400,19 @@
     }
 
     .tx-hero__content {
+        flex: 50%;
+        order: 0;
         padding-bottom: 1rem;
         margin: 0 auto;
     }
 
     .tx-hero__image{
-        clip-path: (50% 0%, 100% 0%, 50% 100%, 0% 100%);
-        height:100%;
-        order:1;
-        padding-right: 2.5rem;
+        flex: 50%;
+        order: 1;
+    }
+
+    .image_banner{
+        width: 200%;
     }
 
     .tx-hero .md-button {
@@ -596,22 +600,22 @@
         <div class="tx-hero">
         <!-- Custom Image -->
             <div class="tx-hero__image">
-	            <img src="images/hands_light.jpg" draggable="false">
+	            <img class="image_banner" src="images/hands_light.jpg" draggable="false">
             </div>
 
 	<!-- Main Tagline -->
-        <div class="tx-hero__content">
-          <h1>Power at the palm of your hands</h1>
-          <p>The power electronics API you need to deploy your application in minutes
+            <div class="tx-hero__content">
+            <h1>Power at the palm of your hands</h1>
+            <p>The power electronics API you need to deploy your application in minutes
  - Browse customizable examples, and taylor fit it to your needs.
 </p>
 
-	  <!-- Added Buttons (up to 3) --><a href="core/docs/environment_setup" title="Start Here" class="md-button md-button--primary">
-            Get Started
-          </a><a href="None" title="Tell me more first" class="md-button">
-            Learn More
-          </a></div>
-      </div>
+        <!-- Added Buttons (up to 3) --><a href="core/docs/environment_setup" title="Start Here" class="md-button md-button--primary">
+                Get Started
+            </a><a href="None" title="Tell me more first" class="md-button">
+                Learn More
+            </a></div>
+        </div>
     </div>
 </section>
 
