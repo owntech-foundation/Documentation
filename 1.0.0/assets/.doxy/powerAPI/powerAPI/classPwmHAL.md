@@ -60,15 +60,20 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  hrtim\_adc\_edgetrigger\_t | [**getAdcEdgeTrigger**](#function-getadcedgetrigger) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the adc trigger rollover mode for the selected timer._  |
 |  hrtim\_adc\_trigger\_t | [**getAdcTrigger**](#function-getadctrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_trigger\_t adc\_trig) <br>_This function returns the adc trigger linked to a timer unit._  |
 |  hrtim\_external\_trigger\_t | [**getEev**](#function-geteev) (hrtim\_tu\_number\_t pwmX) <br>_This function sets the external event linked to the timing unit used for the current mode._  |
+|  uint32\_t | [**getFrequencyMax**](#function-getfrequencymax) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the maximum frequency of the selected timer in Hz._  |
+|  uint32\_t | [**getFrequencyMin**](#function-getfrequencymin) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the minimum frequency of the selected timer in Hz._  |
 |  hrtim\_pwm\_mode\_t | [**getMode**](#function-getmode) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the PWM mode (voltage or current mode)_  |
 |  hrtim\_cnt\_t | [**getModulation**](#function-getmodulation) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the modulation type of the selected timing unit._  |
 |  uint16\_t | [**getPeriod**](#function-getperiod) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period of the selected timing unit._  |
 |  uint32\_t | [**getPeriodEvntRep**](#function-getperiodevntrep) (hrtim\_tu\_t PWM\_tu) <br>_This function returns the repetition counter value._  |
+|  uint16\_t | [**getPeriodMax**](#function-getperiodmax) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the maximum period of the selected timing unit._  |
+|  uint16\_t | [**getPeriodMin**](#function-getperiodmin) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period of the selected timing unit._  |
 |  uint32\_t | [**getPeriodUs**](#function-getperiodus) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period in µs of the selected timer._  |
+|  uint32\_t | [**getResolutionPs**](#function-getresolutionps) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the resolution of the timing unit in picoseconds._  |
 |  hrtim\_switch\_convention\_t | [**getSwitchConvention**](#function-getswitchconvention) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the switching convention of the selected timing unit._  |
-|  void | [**initFrequency**](#function-initfrequency-12) (uint32\_t init\_frequency) <br>_This function initialize the frequency._  |
-|  void | [**initFrequency**](#function-initfrequency-22) (uint32\_t init\_frequency, uint32\_t minimal\_frequency) <br>_This functions initialize the frequency and also sets the minimal reachable frequency._  |
+|  void | [**initFixedFrequency**](#function-initfixedfrequency) (uint32\_t fixed\_frequency) <br>_This function initialize the PWM for fixed frequency applications._  |
 |  void | [**initUnit**](#function-initunit) (hrtim\_tu\_number\_t pwmX) <br>_This function initializes a timing unit._  |
+|  void | [**initVariableFrequency**](#function-initvariablefrequency) (uint32\_t initial\_frequency, uint32\_t minimal\_frequency) <br>_This functions initializes the PWM for variable frequency applications._  |
 |  void | [**setAdcDecimation**](#function-setadcdecimation) (hrtim\_tu\_number\_t pwmX, uint32\_t decimation) <br>_This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger._  |
 |  void | [**setAdcEdgeTrigger**](#function-setadcedgetrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_edgetrigger\_t adc\_edge\_trigger) <br>_This function sets the adc trig rollover mode for the selected timer._  |
 |  void | [**setAdcTrigger**](#function-setadctrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_trigger\_t adc\_trig) <br>_This function sets the adc trigger linked to a timer unit._  |
@@ -383,6 +388,60 @@ external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EE
 
 
 
+### function getFrequencyMax 
+
+_This function returns the maximum frequency of the selected timer in Hz._ 
+```C++
+uint32_t PwmHAL::getFrequencyMax (
+    hrtim_tu_number_t pwmX
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function getFrequencyMin 
+
+_This function returns the minimum frequency of the selected timer in Hz._ 
+```C++
+uint32_t PwmHAL::getFrequencyMin (
+    hrtim_tu_number_t pwmX
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function getMode 
 
 _This function returns the PWM mode (voltage or current mode)_ 
@@ -480,7 +539,7 @@ uint16_t PwmHAL::getPeriod (
 
 **Returns:**
 
-the period value in uint16 
+the period value in number of clock cycles 
 
 
 
@@ -526,6 +585,74 @@ repetition counter value
 
 
 
+### function getPeriodMax 
+
+_This function returns the maximum period of the selected timing unit._ 
+```C++
+uint16_t PwmHAL::getPeriodMax (
+    hrtim_tu_number_t pwmX
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+
+
+
+**Returns:**
+
+the period value in number of clock cycles 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function getPeriodMin 
+
+_This function returns the period of the selected timing unit._ 
+```C++
+uint16_t PwmHAL::getPeriodMin (
+    hrtim_tu_number_t pwmX
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+
+
+
+**Returns:**
+
+the period value in number of clock cycles 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function getPeriodUs 
 
 _This function returns the period in µs of the selected timer._ 
@@ -543,6 +670,42 @@ uint32_t PwmHAL::getPeriodUs (
 
 
 * `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function getResolutionPs 
+
+_This function returns the resolution of the timing unit in picoseconds._ 
+```C++
+uint32_t PwmHAL::getResolutionPs (
+    hrtim_tu_number_t pwmX
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF
+
+
+
+**Note:**
+
+The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz 
+ PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz 
+ 
+
 
 
 
@@ -587,12 +750,12 @@ PWMx1 (high side convention) or PWMx2 (low-side convention)
 
 
 
-### function initFrequency [1/2]
+### function initFixedFrequency 
 
-_This function initialize the frequency._ 
+_This function initialize the PWM for fixed frequency applications._ 
 ```C++
-void PwmHAL::initFrequency (
-    uint32_t init_frequency
+void PwmHAL::initFixedFrequency (
+    uint32_t fixed_frequency
 ) 
 ```
 
@@ -603,49 +766,13 @@ void PwmHAL::initFrequency (
 **Parameters:**
 
 
-* `init_frequency` frequency in Hz
+* `fixed_frequency` frequency to be fixed in Hz
 
 
 
 **Warning:**
 
-this function must be called BEFORE initialiazing any timing unit. the frequency initialized becomes the MINIMUM possible. use it BEFORE initialization of the timing unit. 
-
-
-
-
-
-        
-
-<hr>
-
-
-
-### function initFrequency [2/2]
-
-_This functions initialize the frequency and also sets the minimal reachable frequency._ 
-```C++
-void PwmHAL::initFrequency (
-    uint32_t init_frequency,
-    uint32_t minimal_frequency
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `init_frequency` frequency in Hz 
-* `minimal_frequency` desired minimal frequency in Hz
-
-
-
-**Warning:**
-
-this function must be called BEFORE initialiazing any timing unit 
+This function must be called BEFORE initialiazing any timing unit. The frequency will not vary during the operation of the power device. Use it for fixed frequencies only. 
 
 
 
@@ -701,6 +828,42 @@ Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr)
 **Author:**
 
 Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function initVariableFrequency 
+
+_This functions initializes the PWM for variable frequency applications._ 
+```C++
+void PwmHAL::initVariableFrequency (
+    uint32_t initial_frequency,
+    uint32_t minimal_frequency
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `initial_frequency` The initial value of the frequency in Hz 
+* `minimal_frequency` The minimal value of the frequency in Hz
+
+
+
+**Warning:**
+
+This function must be called BEFORE initialiazing any timing unit. The user can vary the frequency during the operation of the power device. This may compromise the resolution of the PWM. you can check your resolution with the getResolutionPS function. 
 
 
 

@@ -71,9 +71,10 @@ public:
 
      void setSwitchConvention(hrtim_tu_number_t pwmX, hrtim_switch_convention_t convention);
 
-     void initFrequency(uint32_t init_frequency);
+     void initFixedFrequency(uint32_t fixed_frequency);
 
-     void initFrequency(uint32_t init_frequency, uint32_t minimal_frequency);
+     void initVariableFrequency(uint32_t initial_frequency,
+                                uint32_t minimal_frequency);
 
      void setDeadTime(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns);
 
@@ -94,6 +95,10 @@ public:
      hrtim_switch_convention_t getSwitchConvention(hrtim_tu_number_t pwmX);
 
      uint16_t getPeriod(hrtim_tu_number_t pwmX);
+
+     uint16_t getPeriodMax(hrtim_tu_number_t pwmX);
+
+     uint16_t getPeriodMin(hrtim_tu_number_t pwmX);
 
      void setAdcTriggerPostScaler(hrtim_tu_number_t pwmX, uint32_t ps_ratio);
 
@@ -126,6 +131,12 @@ public:
      uint32_t getPeriodUs(hrtim_tu_number_t pwmX);
 
      void setFrequency(uint32_t frequency_update);
+
+     uint32_t getFrequencyMin(hrtim_tu_number_t pwmX);
+
+     uint32_t getFrequencyMax(hrtim_tu_number_t pwmX);
+
+     uint32_t getResolutionPs(hrtim_tu_number_t pwmX);
 };
 
 #endif // PWMHAL_H_

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="321" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="321" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="335" column="18" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="335" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structphase__shift__conf__t_1a734e6c9ed110f5f873a721aa8f5e624a" prot="public" static="no" mutable="no">
         <type>hrtim_tu_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="322" column="20" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="322" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="336" column="20" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="336" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structphase__shift__conf__t_1ade6e4f8c95f4b0c94c5d9b9fd1b292f5" prot="public" static="no" mutable="no">
         <type>hrtim_reset_trig_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="323" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="323" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="337" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="337" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -52,7 +52,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="319" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="320" bodyend="324"/>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="333" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="334" bodyend="338"/>
     <listofallmembers>
       <member refid="structphase__shift__conf__t_1a734e6c9ed110f5f873a721aa8f5e624a" prot="public" virt="non-virtual"><scope>phase_shift_conf_t</scope><name>compare_tu</name></member>
       <member refid="structphase__shift__conf__t_1ade6e4f8c95f4b0c94c5d9b9fd1b292f5" prot="public" virt="non-virtual"><scope>phase_shift_conf_t</scope><name>reset_trig</name></member>

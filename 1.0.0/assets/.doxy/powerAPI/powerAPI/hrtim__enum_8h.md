@@ -74,6 +74,14 @@
 | Type | Name |
 | ---: | :--- |
 |  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = = 6<br> |
+|  const uint32\_t | [**HRTIM\_PRESCALER\_RESOLUTION\_PS**](#variable-hrtim_prescaler_resolution_ps)   = = {184, 
+                                                              368,
+                                                              735,
+                                                              1470,
+                                                              2940,
+                                                              5880,
+                                                              11760,
+                                                              23530}<br> |
 
 
 
@@ -553,6 +561,19 @@ enum hrtim_tu_t {
 
 ```C++
 const uint8_t HRTIM_CHANNELS;
+```
+
+
+
+
+<hr>
+
+
+
+### variable HRTIM\_PRESCALER\_RESOLUTION\_PS 
+
+```C++
+const uint32_t HRTIM_PRESCALER_RESOLUTION_PS[8];
 ```
 
 

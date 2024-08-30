@@ -93,6 +93,19 @@ void hrtim_set_modulation(hrtim_tu_number_t tu_number, hrtim_cnt_t modulation);
 
 hrtim_cnt_t hrtim_get_modulation(hrtim_tu_number_t tu_number);
 
+uint32_t hrtim_get_resolution_ps(hrtim_tu_number_t tu_number);
+
+uint16_t hrtim_get_max_period(hrtim_tu_number_t tu_number);
+
+uint16_t hrtim_get_min_period(hrtim_tu_number_t tu_number);
+
+
+uint32_t hrtim_get_max_frequency(hrtim_tu_number_t tu_number);
+
+uint32_t hrtim_get_min_frequency(hrtim_tu_number_t tu_number);
+
+
+
 void hrtim_set_switch_convention(hrtim_tu_number_t tu_number, hrtim_switch_convention_t convention);
 
 hrtim_switch_convention_t hrtim_get_switch_convention(hrtim_tu_number_t tu_number);

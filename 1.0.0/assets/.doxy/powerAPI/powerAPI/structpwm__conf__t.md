@@ -41,10 +41,15 @@ _Structure containing all the data regarding the pwm of a given timing unit._
 |  hrtim\_external\_trigger\_t | [**external\_trigger**](#variable-external_trigger)  <br> |
 |  uint16\_t | [**fall\_dead\_time**](#variable-fall_dead_time)  <br> |
 |  uint32\_t | [**frequency**](#variable-frequency)  <br> |
+|  uint32\_t | [**max\_frequency**](#variable-max_frequency)  <br> |
+|  uint16\_t | [**max\_period**](#variable-max_period)  <br> |
+|  uint32\_t | [**min\_frequency**](#variable-min_frequency)  <br> |
+|  uint16\_t | [**min\_period**](#variable-min_period)  <br> |
 |  hrtim\_cnt\_t | [**modulation**](#variable-modulation)  <br> |
 |  uint16\_t | [**period**](#variable-period)  <br> |
 |  hrtim\_pwm\_mode\_t | [**pwm\_mode**](#variable-pwm_mode)  <br> |
 |  hrtim\_tu\_t | [**pwm\_tu**](#variable-pwm_tu)  <br> |
+|  uint32\_t | [**resolution**](#variable-resolution)  <br> |
 |  uint16\_t | [**rise\_dead\_time**](#variable-rise_dead_time)  <br> |
 |  hrtim\_tu\_ON\_OFF\_t | [**unit\_on**](#variable-unit_on)  <br> |
 
@@ -161,6 +166,58 @@ uint32_t pwm_conf_t::frequency;
 
 
 
+### variable max\_frequency 
+
+```C++
+uint32_t pwm_conf_t::max_frequency;
+```
+
+
+
+
+<hr>
+
+
+
+### variable max\_period 
+
+```C++
+uint16_t pwm_conf_t::max_period;
+```
+
+
+
+
+<hr>
+
+
+
+### variable min\_frequency 
+
+```C++
+uint32_t pwm_conf_t::min_frequency;
+```
+
+
+
+
+<hr>
+
+
+
+### variable min\_period 
+
+```C++
+uint16_t pwm_conf_t::min_period;
+```
+
+
+
+
+<hr>
+
+
+
 ### variable modulation 
 
 ```C++
@@ -204,6 +261,19 @@ hrtim_pwm_mode_t pwm_conf_t::pwm_mode;
 
 ```C++
 hrtim_tu_t pwm_conf_t::pwm_tu;
+```
+
+
+
+
+<hr>
+
+
+
+### variable resolution 
+
+```C++
+uint32_t pwm_conf_t::resolution;
 ```
 
 

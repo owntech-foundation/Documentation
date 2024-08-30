@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -76,7 +76,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -3843,6 +3843,42 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variable-max_frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable max_frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-max_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable max_period
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-min_frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable min_frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-min_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable min_period
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variable-modulation" class="md-nav__link">
     <span class="md-ellipsis">
       variable modulation
@@ -3873,6 +3909,15 @@
   <a href="#variable-pwm_tu" class="md-nav__link">
     <span class="md-ellipsis">
       variable pwm_tu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable resolution
     </span>
   </a>
   
@@ -3952,6 +3997,22 @@
 <td style="text-align: left;"><a href="#variable-frequency"><strong>frequency</strong></a>  <br></td>
 </tr>
 <tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-max_frequency"><strong>max_frequency</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#variable-max_period"><strong>max_period</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-min_frequency"><strong>min_frequency</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#variable-min_period"><strong>min_period</strong></a>  <br></td>
+</tr>
+<tr>
 <td style="text-align: right;">hrtim_cnt_t</td>
 <td style="text-align: left;"><a href="#variable-modulation"><strong>modulation</strong></a>  <br></td>
 </tr>
@@ -3966,6 +4027,10 @@
 <tr>
 <td style="text-align: right;">hrtim_tu_t</td>
 <td style="text-align: left;"><a href="#variable-pwm_tu"><strong>pwm_tu</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#variable-resolution"><strong>resolution</strong></a>  <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint16_t</td>
@@ -4003,33 +4068,58 @@
 </code></pre></div>
 <hr>
 
+<h3 id="variable-max_frequency">variable max_frequency</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">max_frequency</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-max_period">variable max_period</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">max_period</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-min_frequency">variable min_frequency</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">min_frequency</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-min_period">variable min_period</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">min_period</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
 <h3 id="variable-modulation">variable modulation</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">modulation</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">modulation</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-period">variable period</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">period</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">period</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-pwm_mode">variable pwm_mode</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">pwm_mode</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">pwm_mode</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-pwm_tu">variable pwm_tu</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">pwm_tu</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">pwm_tu</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-resolution">variable resolution</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">resolution</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-rise_dead_time">variable rise_dead_time</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">rise_dead_time</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">rise_dead_time</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-unit_on">variable unit_on</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">unit_on</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="n">pwm_conf_t</span><span class="o">::</span><span class="n">unit_on</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 

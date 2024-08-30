@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -80,7 +80,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -134,7 +134,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -368,7 +368,6 @@
       
 
 
-<!-- .tx-container Original Green Gradient: hsla(160deg,47%,55%,1) -->
 <style>
 
     .md-main {
@@ -380,15 +379,17 @@
         height: 100%;
     }
 
-    .tx-container {
+    .first-section-gradient {
+        align-items: center;
         padding-top: .0rem;
         background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(0, 0%, 9%, 1) 99%,#fff 99%)
     }
 
     .tx-hero {
-        margin: 32px 2.8rem;
+        display: flex;
+        flex-flow: row;
         color: var(--md-primary-bg-color);
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .tx-hero h1 {
@@ -398,20 +399,37 @@
     }
 
     .tx-hero__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 60%;
+        flex-grow: 1;
+        order: 0;
         padding-bottom: 1rem;
-        margin: 0 auto;
+        margin-left: 45vh;
+        max-width: 24rem;
     }
 
     .tx-hero__image{
-        width:17rem;
-        height:17rem;
-        order:1;
-        padding-right: 2.5rem;
+        overflow: hidden;
+        flex-shrink: 1;
+        flex-basis: 40%;
+        margin-left: 4rem;
+        order: 1;
+    }
+
+    .image_banner{
+        width: 125%;
+    }
+
+    .container-row{
+        display: flex;
+        flex-direction: row;
     }
 
     .tx-hero .md-button {
         margin-top: .5rem;
-        margin-right: .5rem;
+        margin-right: 2.5rem;
         color: var(--md-primary-bg-color)
     }
 
@@ -487,17 +505,15 @@
 
         .tx-hero {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
         }
 
         .tx-hero__content {
-            max-width: 22rem;
             margin-top: 3.5rem;
             margin-bottom: 3.5rem;
             margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
         }
     }
 
@@ -589,26 +605,27 @@
 
 
 <!-- Main site entry button descriptions -->
-<section class="tx-container">
-    <div class="md-grid md-typeset">
-        <div class="tx-hero">
-        <!-- Custom Image -->
-            <div class="tx-hero__image">
-	            <img src="attachments/wizard-posting.png" draggable="false">
-            </div>
+<section class="first-section-gradient">
+    <div class="tx-hero md-typeset">
+    <!-- Custom Image -->
+        <div class="tx-hero__image">
+            <img class="image_banner" src="images/hero.png" draggable="false">
+        </div>
 
-	<!-- Main Tagline -->
+<!-- Main Tagline -->
         <div class="tx-hero__content">
-          <h1>Shadow Wizards Only</h1>
-          <p>This site is an example showcase for my "mkdocs-coverpage" repository.
+        <h1>Power at the palm of your hands</h1>
+        <p>The power electronics API you need to deploy your application in minutes
+ - Browse customizable examples, and taylor fit it to your needs.
 </p>
 
-	  <!-- Added Buttons (up to 3) --><a href="core/docs/environment_setup" title="Material | MkDocs" class="md-button md-button--primary">
-            Get Started
-          </a><a href="None" title="Material | MkDocs" class="md-button">
-            Learn More
-          </a></div>
-      </div>
+    <!-- Added Buttons (up to 3) -->
+        <div class="container-row"><a href="core/docs/environment_setup" title="Start Here" class="md-button md-button--primary">
+                Get Started
+            </a><a href="None" title="Tell me more first" class="md-button">
+                Learn More
+            </a></div>
+        </div>
     </div>
 </section>
 

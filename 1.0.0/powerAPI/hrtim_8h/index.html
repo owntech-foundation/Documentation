@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -76,7 +76,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -4065,9 +4065,54 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-hrtim_get_max_frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      function hrtim_get_max_frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hrtim_get_max_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      function hrtim_get_max_period
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hrtim_get_min_frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      function hrtim_get_min_frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hrtim_get_min_period" class="md-nav__link">
+    <span class="md-ellipsis">
+      function hrtim_get_min_period
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-hrtim_get_modulation" class="md-nav__link">
     <span class="md-ellipsis">
       function hrtim_get_modulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hrtim_get_resolution_ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      function hrtim_get_resolution_ps
     </span>
   </a>
   
@@ -4427,15 +4472,35 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-hrtim_frequency_set"><strong>hrtim_frequency_set</strong></a> (uint32_t frequency_set, uint32_t frequency_min) <br><em>Sets the period of a given timing unit.</em></td>
+<td style="text-align: left;"><a href="#function-hrtim_frequency_set"><strong>hrtim_frequency_set</strong></a> (uint32_t frequency_set, uint32_t frequency_min) <br><em>Sets the frequency of a given timing unit in Hz.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">int</td>
 <td style="text-align: left;"><a href="#function-hrtim_get_apb2_clock"><strong>hrtim_get_apb2_clock</strong></a> () <br><em>Gets the APB2 clock.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-hrtim_get_max_frequency"><strong>hrtim_get_max_frequency</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the minimum frequency of the timing unit in Hertz.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#function-hrtim_get_max_period"><strong>hrtim_get_max_period</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the maximum period of the timing unit in number of clock cycles.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-hrtim_get_min_frequency"><strong>hrtim_get_min_frequency</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the minimum frequency of the timing unit in Hertz.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#function-hrtim_get_min_period"><strong>hrtim_get_min_period</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the minimum period of the timing unit in number of clock cycles.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">hrtim_cnt_t</td>
 <td style="text-align: left;"><a href="#function-hrtim_get_modulation"><strong>hrtim_get_modulation</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the switching convention of a given timing unit.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-hrtim_get_resolution_ps"><strong>hrtim_get_resolution_ps</strong></a> (hrtim_tu_number_t tu_number) <br><em>Gets the time resolution for a given timing unit.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">hrtim_tu_ON_OFF_t</td>
@@ -4471,7 +4536,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">uint16_t</td>
-<td style="text-align: left;"><a href="#function-hrtim_period_master_get"><strong>hrtim_period_Master_get</strong></a> () <br><em>Returns the period of a master timer.</em></td>
+<td style="text-align: left;"><a href="#function-hrtim_period_master_get"><strong>hrtim_period_Master_get</strong></a> () <br><em>Returns the period of a master timer in number of clock cycles.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
@@ -4479,7 +4544,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">uint16_t</td>
-<td style="text-align: left;"><a href="#function-hrtim_period_get"><strong>hrtim_period_get</strong></a> (hrtim_tu_number_t tu_number) <br><em>Returns the period of a given timing unit.</em></td>
+<td style="text-align: left;"><a href="#function-hrtim_period_get"><strong>hrtim_period_get</strong></a> (hrtim_tu_number_t tu_number) <br><em>Returns the period of a given timing unit in number of clock cycles.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">uint32_t</td>
@@ -5006,7 +5071,7 @@
 <hr>
 
 <h3 id="function-hrtim_frequency_set">function hrtim_frequency_set</h3>
-<p><em>Sets the period of a given timing unit.</em> 
+<p><em>Sets the frequency of a given timing unit in Hz.</em> 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_frequency_set</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_set</span><span class="p">,</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_min</span>
@@ -5034,11 +5099,91 @@
 </code></pre></div>
 <hr>
 
-<h3 id="function-hrtim_get_modulation">function hrtim_get_modulation</h3>
-<p><em>Gets the switching convention of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">hrtim_get_modulation</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-hrtim_get_max_frequency">function hrtim_get_max_frequency</h3>
+<p><em>Gets the minimum frequency of the timing unit in Hertz.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_get_max_frequency</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tu_number</code> Timing unit number: </li>
+<li>PWMA </li>
+<li>PWMB </li>
+<li>PWMC </li>
+<li>PWMD </li>
+<li>PWME </li>
+<li>PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>frequency in Hertz </p>
+<hr>
+
+<h3 id="function-hrtim_get_max_period">function hrtim_get_max_period</h3>
+<p><em>Gets the maximum period of the timing unit in number of clock cycles.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_get_max_period</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tu_number</code> Timing unit number: </li>
+<li>PWMA </li>
+<li>PWMB </li>
+<li>PWMC </li>
+<li>PWMD </li>
+<li>PWME </li>
+<li>PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>period in number of clock cycles </p>
+<hr>
+
+<h3 id="function-hrtim_get_min_frequency">function hrtim_get_min_frequency</h3>
+<p><em>Gets the minimum frequency of the timing unit in Hertz.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_get_min_frequency</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tu_number</code> Timing unit number: </li>
+<li>PWMA </li>
+<li>PWMB </li>
+<li>PWMC </li>
+<li>PWMD </li>
+<li>PWME </li>
+<li>PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>frequency in Hertz </p>
+<hr>
+
+<h3 id="function-hrtim_get_min_period">function hrtim_get_min_period</h3>
+<p><em>Gets the minimum period of the timing unit in number of clock cycles.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_get_min_period</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tu_number</code> Timing unit number: </li>
+<li>PWMA </li>
+<li>PWMB </li>
+<li>PWMC </li>
+<li>PWMD </li>
+<li>PWME </li>
+<li>PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>period in number of clock cycles </p>
+<hr>
+
+<h3 id="function-hrtim_get_modulation">function hrtim_get_modulation</h3>
+<p><em>Gets the switching convention of a given timing unit.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">hrtim_get_modulation</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5056,11 +5201,31 @@
 * UpDwn </p>
 <hr>
 
+<h3 id="function-hrtim_get_resolution_ps">function hrtim_get_resolution_ps</h3>
+<p><em>Gets the time resolution for a given timing unit.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_get_resolution_ps</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tu_number</code> Timing unit number: </li>
+<li>PWMA </li>
+<li>PWMB </li>
+<li>PWMC </li>
+<li>PWMD </li>
+<li>PWME </li>
+<li>PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>resolution in picoseconds </p>
+<hr>
+
 <h3 id="function-hrtim_get_status">function hrtim_get_status</h3>
 <p><em>Returns if the timer was initialized with default value or not.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="n">hrtim_get_status</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="n">hrtim_get_status</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5078,9 +5243,9 @@
 
 <h3 id="function-hrtim_get_switch_convention">function hrtim_get_switch_convention</h3>
 <p><em>Gets the switching convention of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">hrtim_get_switch_convention</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">hrtim_get_switch_convention</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5100,7 +5265,7 @@
 
 <h3 id="function-hrtim_init_default_all">function hrtim_init_default_all</h3>
 <p><em>this function initalize all the default parameters for each timing unit structure</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_init_default_all</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_init_default_all</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Warning:</strong></p>
 <p>this function must be called before changing any timing unit parameters (frequency, phase_shift) </p>
@@ -5108,10 +5273,10 @@
 
 <h3 id="function-hrtim_master_cmp_set">function hrtim_master_cmp_set</h3>
 <p><em>Sets one of the four comparators of the HRTIM master timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_master_cmp_set</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">hrtim_cmp_t</span><span class="w"> </span><span class="n">cmp</span><span class="p">,</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_master_cmp_set</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="n">hrtim_cmp_t</span><span class="w"> </span><span class="n">cmp</span><span class="p">,</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5130,9 +5295,9 @@
 
 <h3 id="function-hrtim_out_dis">function hrtim_out_dis</h3>
 <p><em>Disables the output of a given timingg unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_dis</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_dis</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5148,9 +5313,9 @@
 
 <h3 id="function-hrtim_out_dis_single">function hrtim_out_dis_single</h3>
 <p><em>Disables only one output of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_dis_single</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">hrtim_output_units_t</span><span class="w"> </span><span class="n">PWM_OUT</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_dis_single</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">hrtim_output_units_t</span><span class="w"> </span><span class="n">PWM_OUT</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5172,9 +5337,9 @@
 
 <h3 id="function-hrtim_out_en">function hrtim_out_en</h3>
 <p><em>Enables the output of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_en</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_en</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5190,9 +5355,9 @@
 
 <h3 id="function-hrtim_out_en_single">function hrtim_out_en_single</h3>
 <p><em>Enables only one output of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_en_single</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">hrtim_output_units_t</span><span class="w"> </span><span class="n">PWM_OUT</span>
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_out_en_single</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">hrtim_output_units_t</span><span class="w"> </span><span class="n">PWM_OUT</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5213,8 +5378,8 @@
 <hr>
 
 <h3 id="function-hrtim_period_master_get">function hrtim_period_Master_get</h3>
-<p><em>Returns the period of a master timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_period_Master_get</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<p><em>Returns the period of a master timer in number of clock cycles.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_period_Master_get</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>Period of the master timer </p>
@@ -5222,17 +5387,17 @@
 
 <h3 id="function-hrtim_period_master_get_us">function hrtim_period_Master_get_us</h3>
 <p><em>Returns the period of the master timer in microseconds.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_period_Master_get_us</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_period_Master_get_us</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>Period of the timer master in microseconds </p>
 <hr>
 
 <h3 id="function-hrtim_period_get">function hrtim_period_get</h3>
-<p><em>Returns the period of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_period_get</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">)</span><span class="w"> </span>
+<p><em>Returns the period of a given timing unit in number of clock cycles.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_period_get</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5250,9 +5415,9 @@
 
 <h3 id="function-hrtim_period_get_us">function hrtim_period_get_us</h3>
 <p><em>Returns the period of a given timing unit in microseconds.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_period_get_us</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">hrtim_period_get_us</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5270,10 +5435,10 @@
 
 <h3 id="function-hrtim_phase_shift_set">function hrtim_phase_shift_set</h3>
 <p><em>Shifts the PWM of a timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_phase_shift_set</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">shift</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_phase_shift_set</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">shift</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5294,9 +5459,9 @@
 
 <h3 id="function-hrtim_pwm_mode_get">function hrtim_pwm_mode_get</h3>
 <p><em>Returns timing unit pwm mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">hrtim_pwm_mode_get</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">hrtim_pwm_mode_get</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>CURRENT_MODE or VOLTAGE_MODE </p>
@@ -5304,10 +5469,10 @@
 
 <h3 id="function-hrtim_pwm_mode_set">function hrtim_pwm_mode_set</h3>
 <p><em>Sets the pwm mode : voltage or current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_pwm_mode_set</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span>
-<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_pwm_mode_set</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5330,10 +5495,10 @@
 
 <h3 id="function-hrtim_rst_evt_dis">function hrtim_rst_evt_dis</h3>
 <p><em>Disables a timer counter reset event.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_rst_evt_dis</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">hrtim_reset_trig_t</span><span class="w"> </span><span class="n">evt</span>
-<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_rst_evt_dis</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="n">hrtim_reset_trig_t</span><span class="w"> </span><span class="n">evt</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5360,10 +5525,10 @@
 
 <h3 id="function-hrtim_rst_evt_en">function hrtim_rst_evt_en</h3>
 <p><em>Enables a timer counter reset event.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_rst_evt_en</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="n">hrtim_reset_trig_t</span><span class="w"> </span><span class="n">evt</span>
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_rst_evt_en</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="n">hrtim_reset_trig_t</span><span class="w"> </span><span class="n">evt</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5390,10 +5555,10 @@
 
 <h3 id="function-hrtim_set_modulation">function hrtim_set_modulation</h3>
 <p><em>Sets the switching convention of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_set_modulation</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">modulation</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_set_modulation</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">modulation</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5416,10 +5581,10 @@
 
 <h3 id="function-hrtim_set_switch_convention">function hrtim_set_switch_convention</h3>
 <p><em>Sets the switching convention of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_set_switch_convention</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">convention</span>
-<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_set_switch_convention</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">convention</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5442,11 +5607,11 @@
 
 <h3 id="function-hrtim_tu_cmp_set">function hrtim_tu_cmp_set</h3>
 <p><em>Sets one of the four comparators of the HRTIM master timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_tu_cmp_set</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
-<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">hrtim_cmp_t</span><span class="w"> </span><span class="n">cmp</span><span class="p">,</span>
-<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span>
-<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_tu_cmp_set</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">,</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">    </span><span class="n">hrtim_cmp_t</span><span class="w"> </span><span class="n">cmp</span><span class="p">,</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5465,9 +5630,9 @@
 
 <h3 id="function-hrtim_tu_gpio_init">function hrtim_tu_gpio_init</h3>
 <p><em>Initializes the gpio elements of a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_tu_gpio_init</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">hrtim_tu_gpio_init</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5483,9 +5648,9 @@
 
 <h3 id="function-hrtim_tu_init">function hrtim_tu_init</h3>
 <p><em>Initializes a given timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_tu_init</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
-<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">hrtim_tu_init</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>

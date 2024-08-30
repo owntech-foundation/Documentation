@@ -84,9 +84,14 @@
 |  void | [**hrtim\_duty\_cycle\_set**](#function-hrtim_duty_cycle_set) (hrtim\_tu\_number\_t tu\_number, uint16\_t value) <br>_Updates the duty cycle of a timing unit._  |
 |  hrtim\_external\_trigger\_t | [**hrtim\_eev\_get**](#function-hrtim_eev_get) (hrtim\_tu\_number\_t tu\_number) <br>_Returns the external event trigger used in current mode._  |
 |  void | [**hrtim\_eev\_set**](#function-hrtim_eev_set) (hrtim\_tu\_number\_t tu\_number, hrtim\_external\_trigger\_t eev) <br>_Sets the external event used in current mode for a timing unit._  |
-|  void | [**hrtim\_frequency\_set**](#function-hrtim_frequency_set) (uint32\_t frequency\_set, uint32\_t frequency\_min) <br>_Sets the period of a given timing unit._  |
+|  void | [**hrtim\_frequency\_set**](#function-hrtim_frequency_set) (uint32\_t frequency\_set, uint32\_t frequency\_min) <br>_Sets the frequency of a given timing unit in Hz._  |
 |  int | [**hrtim\_get\_apb2\_clock**](#function-hrtim_get_apb2_clock) () <br>_Gets the APB2 clock._  |
+|  uint32\_t | [**hrtim\_get\_max\_frequency**](#function-hrtim_get_max_frequency) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the minimum frequency of the timing unit in Hertz._  |
+|  uint16\_t | [**hrtim\_get\_max\_period**](#function-hrtim_get_max_period) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the maximum period of the timing unit in number of clock cycles._  |
+|  uint32\_t | [**hrtim\_get\_min\_frequency**](#function-hrtim_get_min_frequency) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the minimum frequency of the timing unit in Hertz._  |
+|  uint16\_t | [**hrtim\_get\_min\_period**](#function-hrtim_get_min_period) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the minimum period of the timing unit in number of clock cycles._  |
 |  hrtim\_cnt\_t | [**hrtim\_get\_modulation**](#function-hrtim_get_modulation) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the switching convention of a given timing unit._  |
+|  uint32\_t | [**hrtim\_get\_resolution\_ps**](#function-hrtim_get_resolution_ps) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the time resolution for a given timing unit._  |
 |  hrtim\_tu\_ON\_OFF\_t | [**hrtim\_get\_status**](#function-hrtim_get_status) (hrtim\_tu\_number\_t tu\_number) <br>_Returns if the timer was initialized with default value or not._  |
 |  hrtim\_switch\_convention\_t | [**hrtim\_get\_switch\_convention**](#function-hrtim_get_switch_convention) (hrtim\_tu\_number\_t tu\_number) <br>_Gets the switching convention of a given timing unit._  |
 |  void | [**hrtim\_init\_default\_all**](#function-hrtim_init_default_all) () <br>_this function initalize all the default parameters for each timing unit structure_  |
@@ -95,9 +100,9 @@
 |  void | [**hrtim\_out\_dis\_single**](#function-hrtim_out_dis_single) (hrtim\_output\_units\_t PWM\_OUT) <br>_Disables only one output of a given timing unit._  |
 |  void | [**hrtim\_out\_en**](#function-hrtim_out_en) (hrtim\_tu\_number\_t tu\_number) <br>_Enables the output of a given timing unit._  |
 |  void | [**hrtim\_out\_en\_single**](#function-hrtim_out_en_single) (hrtim\_output\_units\_t PWM\_OUT) <br>_Enables only one output of a given timing unit._  |
-|  uint16\_t | [**hrtim\_period\_Master\_get**](#function-hrtim_period_master_get) () <br>_Returns the period of a master timer._  |
+|  uint16\_t | [**hrtim\_period\_Master\_get**](#function-hrtim_period_master_get) () <br>_Returns the period of a master timer in number of clock cycles._  |
 |  uint32\_t | [**hrtim\_period\_Master\_get\_us**](#function-hrtim_period_master_get_us) () <br>_Returns the period of the master timer in microseconds._  |
-|  uint16\_t | [**hrtim\_period\_get**](#function-hrtim_period_get) (hrtim\_tu\_number\_t tu\_number) <br>_Returns the period of a given timing unit._  |
+|  uint16\_t | [**hrtim\_period\_get**](#function-hrtim_period_get) (hrtim\_tu\_number\_t tu\_number) <br>_Returns the period of a given timing unit in number of clock cycles._  |
 |  uint32\_t | [**hrtim\_period\_get\_us**](#function-hrtim_period_get_us) (hrtim\_tu\_number\_t tu\_number) <br>_Returns the period of a given timing unit in microseconds._  |
 |  void | [**hrtim\_phase\_shift\_set**](#function-hrtim_phase_shift_set) (hrtim\_tu\_number\_t tu\_number, uint16\_t shift) <br>_Shifts the PWM of a timing unit._  |
 |  hrtim\_pwm\_mode\_t | [**hrtim\_pwm\_mode\_get**](#function-hrtim_pwm_mode_get) (hrtim\_tu\_number\_t tu\_number) <br>_Returns timing unit pwm mode._  |
@@ -1013,7 +1018,7 @@ void hrtim_eev_set (
 
 ### function hrtim\_frequency\_set 
 
-_Sets the period of a given timing unit._ 
+_Sets the frequency of a given timing unit in Hz._ 
 ```C++
 void hrtim_frequency_set (
     uint32_t frequency_set,
@@ -1061,6 +1066,174 @@ int hrtim_get_apb2_clock ()
 
 
 
+### function hrtim\_get\_max\_frequency 
+
+_Gets the minimum frequency of the timing unit in Hertz._ 
+```C++
+uint32_t hrtim_get_max_frequency (
+    hrtim_tu_number_t tu_number
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `tu_number` Timing unit number: 
+  * PWMA 
+  * PWMB 
+  * PWMC 
+  * PWMD 
+  * PWME 
+  * PWMF 
+
+
+
+
+
+**Returns:**
+
+frequency in Hertz 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function hrtim\_get\_max\_period 
+
+_Gets the maximum period of the timing unit in number of clock cycles._ 
+```C++
+uint16_t hrtim_get_max_period (
+    hrtim_tu_number_t tu_number
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `tu_number` Timing unit number: 
+  * PWMA 
+  * PWMB 
+  * PWMC 
+  * PWMD 
+  * PWME 
+  * PWMF 
+
+
+
+
+
+**Returns:**
+
+period in number of clock cycles 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function hrtim\_get\_min\_frequency 
+
+_Gets the minimum frequency of the timing unit in Hertz._ 
+```C++
+uint32_t hrtim_get_min_frequency (
+    hrtim_tu_number_t tu_number
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `tu_number` Timing unit number: 
+  * PWMA 
+  * PWMB 
+  * PWMC 
+  * PWMD 
+  * PWME 
+  * PWMF 
+
+
+
+
+
+**Returns:**
+
+frequency in Hertz 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function hrtim\_get\_min\_period 
+
+_Gets the minimum period of the timing unit in number of clock cycles._ 
+```C++
+uint16_t hrtim_get_min_period (
+    hrtim_tu_number_t tu_number
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `tu_number` Timing unit number: 
+  * PWMA 
+  * PWMB 
+  * PWMC 
+  * PWMD 
+  * PWME 
+  * PWMF 
+
+
+
+
+
+**Returns:**
+
+period in number of clock cycles 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function hrtim\_get\_modulation 
 
 _Gets the switching convention of a given timing unit._ 
@@ -1096,6 +1269,48 @@ modulation:
 * UpDwn 
 
 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function hrtim\_get\_resolution\_ps 
+
+_Gets the time resolution for a given timing unit._ 
+```C++
+uint32_t hrtim_get_resolution_ps (
+    hrtim_tu_number_t tu_number
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `tu_number` Timing unit number: 
+  * PWMA 
+  * PWMB 
+  * PWMC 
+  * PWMD 
+  * PWME 
+  * PWMF 
+
+
+
+
+
+**Returns:**
+
+resolution in picoseconds 
 
 
 
@@ -1409,7 +1624,7 @@ void hrtim_out_en_single (
 
 ### function hrtim\_period\_Master\_get 
 
-_Returns the period of a master timer._ 
+_Returns the period of a master timer in number of clock cycles._ 
 ```C++
 uint16_t hrtim_period_Master_get () 
 ```
@@ -1459,7 +1674,7 @@ Period of the timer master in microseconds
 
 ### function hrtim\_period\_get 
 
-_Returns the period of a given timing unit._ 
+_Returns the period of a given timing unit in number of clock cycles._ 
 ```C++
 uint16_t hrtim_period_get (
     hrtim_tu_number_t tu_number

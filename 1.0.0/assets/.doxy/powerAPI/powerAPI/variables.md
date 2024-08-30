@@ -102,6 +102,7 @@
 
 * **hardware\_version** ([**data\_objects.cpp**](data__objects_8cpp.md))
 * **HRTIM\_CHANNELS** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
+* **HRTIM\_PRESCALER\_RESOLUTION\_PS** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_adc\_edgetrigger\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_adc\_event\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_adc\_source\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))

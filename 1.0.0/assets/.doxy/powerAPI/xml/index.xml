@@ -154,10 +154,15 @@
     <member refid="structpwm__conf__t_1a1359768d61363bc9a92ce047294a2adf" kind="variable"><name>fall_dead_time</name></member>
     <member refid="structpwm__conf__t_1ae0d41e12ba7c843f3b9b5b35c6e5c6ed" kind="variable"><name>duty_cycle</name></member>
     <member refid="structpwm__conf__t_1aad26dcb05660b9cecc3a806ba4435a2d" kind="variable"><name>period</name></member>
+    <member refid="structpwm__conf__t_1a9448ac19ee389203ce2f46f6e4bd2d73" kind="variable"><name>max_period</name></member>
+    <member refid="structpwm__conf__t_1a5cb4eecfc45989fb165f8ba5f1f190c8" kind="variable"><name>min_period</name></member>
     <member refid="structpwm__conf__t_1a236f47554445be028d6717bdc522f0f0" kind="variable"><name>frequency</name></member>
+    <member refid="structpwm__conf__t_1a87806c8b1bce367bb84343fef4017913" kind="variable"><name>max_frequency</name></member>
+    <member refid="structpwm__conf__t_1afea11d18a0a02f26a84714d430060610" kind="variable"><name>min_frequency</name></member>
     <member refid="structpwm__conf__t_1aa70350641153b3c22138b47d0b2dd4e7" kind="variable"><name>modulation</name></member>
     <member refid="structpwm__conf__t_1ac961245ebce3d6276babea18bae72207" kind="variable"><name>unit_on</name></member>
     <member refid="structpwm__conf__t_1a20ca10fb1cb21738627bb4cf98588a54" kind="variable"><name>ckpsc</name></member>
+    <member refid="structpwm__conf__t_1a894655812d74f6f5ef6fb4c641d55d58" kind="variable"><name>resolution</name></member>
     <member refid="structpwm__conf__t_1aa728c152b00638e760fdcaa082a3bcea" kind="variable"><name>pwm_mode</name></member>
     <member refid="structpwm__conf__t_1ae3c9bc310758dd584b5539824c0dda31" kind="variable"><name>external_trigger</name></member>
   </compound>
@@ -169,8 +174,8 @@
     <member refid="classPwmHAL_1af87a7e0c7647bee04c2401cd404d779e" kind="function"><name>stopSingleOutput</name></member>
     <member refid="classPwmHAL_1ace857487759978c81233cb4dcb1698e9" kind="function"><name>setModulation</name></member>
     <member refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" kind="function"><name>setSwitchConvention</name></member>
-    <member refid="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" kind="function"><name>initFrequency</name></member>
-    <member refid="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" kind="function"><name>initFrequency</name></member>
+    <member refid="classPwmHAL_1aea02fe19f0e4bb1ed9c590cbc6d4d6a9" kind="function"><name>initFixedFrequency</name></member>
+    <member refid="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" kind="function"><name>initVariableFrequency</name></member>
     <member refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kind="function"><name>setDeadTime</name></member>
     <member refid="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" kind="function"><name>setDutyCycle</name></member>
     <member refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kind="function"><name>setPhaseShift</name></member>
@@ -181,6 +186,8 @@
     <member refid="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" kind="function"><name>getModulation</name></member>
     <member refid="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" kind="function"><name>getSwitchConvention</name></member>
     <member refid="classPwmHAL_1add5baa32e90605383539439104a3c520" kind="function"><name>getPeriod</name></member>
+    <member refid="classPwmHAL_1ac8fcec5ce72f926bc256febbb217b674" kind="function"><name>getPeriodMax</name></member>
+    <member refid="classPwmHAL_1a700ab0f6086bce6c05b98322033df1e3" kind="function"><name>getPeriodMin</name></member>
     <member refid="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" kind="function"><name>setAdcTriggerPostScaler</name></member>
     <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" kind="function"><name>setAdcTrigger</name></member>
     <member refid="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" kind="function"><name>getAdcTrigger</name></member>
@@ -197,6 +204,9 @@
     <member refid="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" kind="function"><name>enablePeriodEvnt</name></member>
     <member refid="classPwmHAL_1a116866358e313d5425d5510ee4488df7" kind="function"><name>getPeriodUs</name></member>
     <member refid="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" kind="function"><name>setFrequency</name></member>
+    <member refid="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" kind="function"><name>getFrequencyMin</name></member>
+    <member refid="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" kind="function"><name>getFrequencyMax</name></member>
+    <member refid="classPwmHAL_1a326698f2520eed1637959c67da21fb55" kind="function"><name>getResolutionPs</name></member>
   </compound>
   <compound refid="classRs485Communication" kind="class"><name>Rs485Communication</name>
     <member refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" kind="function"><name>configure</name></member>
@@ -533,6 +543,11 @@
     <member refid="hrtim_8h_1aeb77b60ab236eb9dd211acc4761127be" kind="function"><name>hrtim_out_dis_single</name></member>
     <member refid="hrtim_8h_1aa484a6a8ff61a7da4b3ccf698d596033" kind="function"><name>hrtim_set_modulation</name></member>
     <member refid="hrtim_8h_1aa32bdc70261b1fa910c04cc480d11dfd" kind="function"><name>hrtim_get_modulation</name></member>
+    <member refid="hrtim_8h_1a25035af4d4d03229d9010e773316e5a0" kind="function"><name>hrtim_get_resolution_ps</name></member>
+    <member refid="hrtim_8h_1a65aaaa10988c7f8ac4bf78b784b25b05" kind="function"><name>hrtim_get_max_period</name></member>
+    <member refid="hrtim_8h_1aa15f9d886dba5e57dc95af7eed842ae0" kind="function"><name>hrtim_get_min_period</name></member>
+    <member refid="hrtim_8h_1a20c70b88afca06c890e1c8d8a3310ad4" kind="function"><name>hrtim_get_max_frequency</name></member>
+    <member refid="hrtim_8h_1a61d48f0ff6772e883ceb198003c68edd" kind="function"><name>hrtim_get_min_frequency</name></member>
     <member refid="hrtim_8h_1a98067bd24e22f18b4399aa0eb297fbbe" kind="function"><name>hrtim_set_switch_convention</name></member>
     <member refid="hrtim_8h_1afc65f5b375f47305d116b4663a02821f" kind="function"><name>hrtim_get_switch_convention</name></member>
     <member refid="hrtim_8h_1acd62d83382ae3c19848034b8ba21fe00" kind="function"><name>hrtim_cmpl_pwm_out1</name></member>
@@ -697,6 +712,7 @@
     <member refid="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442ba5c841ec18d04dd1d7145a24ce2d308c9" kind="enumvalue"><name>UpDwn</name></member>
     <member refid="hrtim__enum_8h_1a1e46077558f9b641a9a5f373fa4af59a" kind="typedef"><name>hrtim_callback_t</name></member>
     <member refid="hrtim__enum_8h_1a083f1b534cd9560062de5ff4a03daa1a" kind="variable"><name>HRTIM_CHANNELS</name></member>
+    <member refid="hrtim__enum_8h_1a79feb2e77b1b416b4e9fdbcf51c6eee9" kind="variable"><name>HRTIM_PRESCALER_RESOLUTION_PS</name></member>
   </compound>
   <compound refid="ngnd_8h" kind="file"><name>ngnd.h</name>
     <member refid="ngnd_8h_1a0401d76c218af50b6f30ec4cd0a6d6bf" kind="function"><name>ngnd_set</name></member>

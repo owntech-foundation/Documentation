@@ -267,61 +267,61 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="122" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="167" bodyend="172"/>
       </memberdef>
-      <memberdef kind="function" id="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPwmHAL_1aea02fe19f0e4bb1ed9c590cbc6d4d6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void PwmHAL::initFrequency</definition>
-        <argsstring>(uint32_t init_frequency)</argsstring>
-        <name>initFrequency</name>
-        <qualifiedname>PwmHAL::initFrequency</qualifiedname>
+        <definition>void PwmHAL::initFixedFrequency</definition>
+        <argsstring>(uint32_t fixed_frequency)</argsstring>
+        <name>initFixedFrequency</name>
+        <qualifiedname>PwmHAL::initFixedFrequency</qualifiedname>
         <param>
           <type>uint32_t</type>
-          <declname>init_frequency</declname>
+          <declname>fixed_frequency</declname>
         </param>
         <briefdescription>
-<para>This function initialize the frequency. </para>
+<para>This function initialize the PWM for fixed frequency applications. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername direction="in">init_frequency</parametername>
+<parametername direction="in">fixed_frequency</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>frequency in Hz</para>
+<para>frequency to be fixed in Hz</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>this function must be called BEFORE initialiazing any timing unit. the frequency initialized becomes the MINIMUM possible. use it BEFORE initialization of the timing unit. </para>
+<simplesect kind="warning"><para>This function must be called BEFORE initialiazing any timing unit. The frequency will not vary during the operation of the power device. Use it for fixed frequencies only. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="133" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="181" bodyend="186"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="134" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="181" bodyend="186"/>
       </memberdef>
-      <memberdef kind="function" id="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void PwmHAL::initFrequency</definition>
-        <argsstring>(uint32_t init_frequency, uint32_t minimal_frequency)</argsstring>
-        <name>initFrequency</name>
-        <qualifiedname>PwmHAL::initFrequency</qualifiedname>
+        <definition>void PwmHAL::initVariableFrequency</definition>
+        <argsstring>(uint32_t initial_frequency, uint32_t minimal_frequency)</argsstring>
+        <name>initVariableFrequency</name>
+        <qualifiedname>PwmHAL::initVariableFrequency</qualifiedname>
         <param>
           <type>uint32_t</type>
-          <declname>init_frequency</declname>
+          <declname>initial_frequency</declname>
         </param>
         <param>
           <type>uint32_t</type>
           <declname>minimal_frequency</declname>
         </param>
         <briefdescription>
-<para>This functions initialize the frequency and also sets the minimal reachable frequency. </para>
+<para>This functions initializes the PWM for variable frequency applications. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername direction="in">init_frequency</parametername>
+<parametername direction="in">initial_frequency</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>frequency in Hz </para>
+<para>The initial value of the frequency in Hz </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -329,17 +329,17 @@
 <parametername direction="in">minimal_frequency</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>desired minimal frequency in Hz</para>
+<para>The minimal value of the frequency in Hz</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>this function must be called BEFORE initialiazing any timing unit </para>
+<simplesect kind="warning"><para>This function must be called BEFORE initialiazing any timing unit. The user can vary the frequency during the operation of the power device. This may compromise the resolution of the PWM. you can check your resolution with the getResolutionPS function. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="143" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="174" bodyend="179"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="149" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="174" bodyend="179"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -394,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="154" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="188" bodyend="193"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="161" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="188" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="162" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="195" bodyend="199"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="169" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="195" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -478,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="172" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="201" bodyend="219"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="179" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="201" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -521,7 +521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="182" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="322" bodyend="327"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="189" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="331" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_pwm_mode_t</type>
@@ -554,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="192" column="23" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="329" bodyend="332"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="199" column="23" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="338" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -597,7 +597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="202" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="334" bodyend="339"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="209" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="343" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_external_trigger_t</type>
@@ -628,7 +628,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="210" column="31" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="341" bodyend="344"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="217" column="31" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="350" bodyend="353"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_cnt_t</type>
@@ -659,7 +659,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="218" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="221" bodyend="224"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="225" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="221" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_switch_convention_t</type>
@@ -690,7 +690,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="226" column="32" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="226" bodyend="229"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="233" column="32" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="225" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1add5baa32e90605383539439104a3c520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -715,13 +715,75 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the period value in uint16 </para>
+<simplesect kind="return"><para>the period value in number of clock cycles </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="234" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="231" bodyend="234"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="241" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ac8fcec5ce72f926bc256febbb217b674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PwmHAL::getPeriodMax</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getPeriodMax</name>
+        <qualifiedname>PwmHAL::getPeriodMax</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the maximum period of the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the period value in number of clock cycles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="249" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a700ab0f6086bce6c05b98322033df1e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PwmHAL::getPeriodMin</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getPeriodMin</name>
+        <qualifiedname>PwmHAL::getPeriodMin</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the period of the selected timing unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the period value in number of clock cycles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="257" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="240" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -764,7 +826,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="245" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="236" bodyend="239"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="268" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="245" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -807,7 +869,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="255" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="310" bodyend="315"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="278" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="319" bodyend="324"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_adc_trigger_t</type>
@@ -842,7 +904,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="263" column="26" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="317" bodyend="320"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="286" column="26" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="326" bodyend="329"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -873,7 +935,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="272" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="241" bodyend="255"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="295" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="250" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -902,7 +964,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="279" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="263" bodyend="266"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="302" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="272" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -943,7 +1005,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="287" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="257" bodyend="261"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="310" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="266" bodyend="270"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -986,7 +1048,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="297" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="298" bodyend="303"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="320" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="307" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_adc_edgetrigger_t</type>
@@ -1017,7 +1079,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="305" column="30" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="305" bodyend="308"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="328" column="30" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="314" bodyend="317"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1060,7 +1122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="317" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="346" bodyend="353"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="340" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="355" bodyend="362"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a87f02068cb744707860185045c86819f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1089,7 +1151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="324" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="278" bodyend="281"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="347" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="287" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a350644c31ccf6b662c2f450f27118c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1130,7 +1192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="332" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="283" bodyend="286"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="355" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="292" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a18e7d18b48641e091ec414b85fe22342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1161,7 +1223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="340" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="288" bodyend="291"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="363" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="297" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1214,7 +1276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="349" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="268" bodyend="271"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="372" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="277" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1243,7 +1305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="356" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="273" bodyend="276"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="379" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="282" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1272,7 +1334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="363" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="293" bodyend="296"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="386" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="302" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1303,7 +1365,98 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="371" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="355" bodyend="358"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="394" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PwmHAL::getFrequencyMin</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getFrequencyMin</name>
+        <qualifiedname>PwmHAL::getFrequencyMin</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the minimum frequency of the selected timer in Hz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="402" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PwmHAL::getFrequencyMax</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getFrequencyMax</name>
+        <qualifiedname>PwmHAL::getFrequencyMax</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the maximum frequency of the selected timer in Hz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="410" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="369" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a326698f2520eed1637959c67da21fb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t PwmHAL::getResolutionPs</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
+        <name>getResolutionPs</name>
+        <qualifiedname>PwmHAL::getResolutionPs</qualifiedname>
+        <param>
+          <type>hrtim_tu_number_t</type>
+          <declname>pwmX</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the resolution of the timing unit in picoseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwmX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz <linebreak/>
+ PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="432" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="379" bodyend="382"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1314,7 +1467,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="372"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="433"/>
     <listofallmembers>
       <member refid="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>configurePeriodEvnt</name></member>
       <member refid="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>disableAdcTrigger</name></member>
@@ -1324,15 +1477,20 @@
       <member refid="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcEdgeTrigger</name></member>
       <member refid="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcTrigger</name></member>
       <member refid="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getEev</name></member>
+      <member refid="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getFrequencyMax</name></member>
+      <member refid="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getFrequencyMin</name></member>
       <member refid="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getMode</name></member>
       <member refid="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getModulation</name></member>
       <member refid="classPwmHAL_1add5baa32e90605383539439104a3c520" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriod</name></member>
       <member refid="classPwmHAL_1a18e7d18b48641e091ec414b85fe22342" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodEvntRep</name></member>
+      <member refid="classPwmHAL_1ac8fcec5ce72f926bc256febbb217b674" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodMax</name></member>
+      <member refid="classPwmHAL_1a700ab0f6086bce6c05b98322033df1e3" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodMin</name></member>
       <member refid="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodUs</name></member>
+      <member refid="classPwmHAL_1a326698f2520eed1637959c67da21fb55" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getResolutionPs</name></member>
       <member refid="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getSwitchConvention</name></member>
-      <member refid="classPwmHAL_1ab2c2348d10f24e6caab2efa58f30cd48" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFrequency</name></member>
-      <member refid="classPwmHAL_1a168a01a26facd39bb8ebdc87ec07d7bd" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFrequency</name></member>
+      <member refid="classPwmHAL_1aea02fe19f0e4bb1ed9c590cbc6d4d6a9" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFixedFrequency</name></member>
       <member refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initUnit</name></member>
+      <member refid="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initVariableFrequency</name></member>
       <member refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcDecimation</name></member>
       <member refid="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcEdgeTrigger</name></member>
       <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTrigger</name></member>

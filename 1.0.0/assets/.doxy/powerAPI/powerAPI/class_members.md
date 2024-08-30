@@ -108,11 +108,16 @@
 * **getAdcEdgeTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **getAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **getEev** ([**PwmHAL**](classPwmHAL.md))
+* **getFrequencyMax** ([**PwmHAL**](classPwmHAL.md))
+* **getFrequencyMin** ([**PwmHAL**](classPwmHAL.md))
 * **getMode** ([**PwmHAL**](classPwmHAL.md))
 * **getModulation** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriod** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriodEvntRep** ([**PwmHAL**](classPwmHAL.md))
+* **getPeriodMax** ([**PwmHAL**](classPwmHAL.md))
+* **getPeriodMin** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriodUs** ([**PwmHAL**](classPwmHAL.md))
+* **getResolutionPs** ([**PwmHAL**](classPwmHAL.md))
 * **getSwitchConvention** ([**PwmHAL**](classPwmHAL.md))
 * **gpio** ([**SpinAPI**](classSpinAPI.md))
 * **getTimer4IncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
@@ -137,8 +142,9 @@
 * **initConstValue** ([**DacHAL**](classDacHAL.md))
 * **initializeAllAdcs** ([**DataAPI**](classDataAPI.md))
 * **is\_started** ([**DataAPI**](classDataAPI.md))
-* **initFrequency** ([**PwmHAL**](classPwmHAL.md))
+* **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
+* **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initMaster** ([**SyncCommunication**](classSyncCommunication.md))
 * **initSlave** ([**SyncCommunication**](classSyncCommunication.md))
 * **init\_shield** ([**safety**](classsafety.md))
@@ -152,6 +158,10 @@
 
 ## m
 
+* **max\_frequency** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **max\_period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **min\_frequency** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **min\_period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **modulation** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
@@ -191,6 +201,7 @@
 * **reset\_data** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trigger\_source** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trig** ([**phase\_shift\_conf\_t**](structphase__shift__conf__t.md))
+* **resolution** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **rise\_dead\_time** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **retrieveThreshold** ([**safety**](classsafety.md))
 * **reset\_H** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))

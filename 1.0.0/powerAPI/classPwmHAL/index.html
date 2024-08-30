@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -76,7 +76,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -3850,6 +3850,14 @@
 <td style="text-align: left;"><a href="#function-geteev"><strong>getEev</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function sets the external event linked to the timing unit used for the current mode.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-getfrequencymax"><strong>getFrequencyMax</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the maximum frequency of the selected timer in Hz.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-getfrequencymin"><strong>getFrequencyMin</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the minimum frequency of the selected timer in Hz.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">hrtim_pwm_mode_t</td>
 <td style="text-align: left;"><a href="#function-getmode"><strong>getMode</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the PWM mode (voltage or current mode)</em></td>
 </tr>
@@ -3866,8 +3874,20 @@
 <td style="text-align: left;"><a href="#function-getperiodevntrep"><strong>getPeriodEvntRep</strong></a> (hrtim_tu_t PWM_tu) <br><em>This function returns the repetition counter value.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#function-getperiodmax"><strong>getPeriodMax</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the maximum period of the selected timing unit.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint16_t</td>
+<td style="text-align: left;"><a href="#function-getperiodmin"><strong>getPeriodMin</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the period of the selected timing unit.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">uint32_t</td>
 <td style="text-align: left;"><a href="#function-getperiodus"><strong>getPeriodUs</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the period in µs of the selected timer.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint32_t</td>
+<td style="text-align: left;"><a href="#function-getresolutionps"><strong>getResolutionPs</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the resolution of the timing unit in picoseconds.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">hrtim_switch_convention_t</td>
@@ -3875,15 +3895,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-initfrequency-12"><strong>initFrequency</strong></a> (uint32_t init_frequency) <br><em>This function initialize the frequency.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-initfrequency-22"><strong>initFrequency</strong></a> (uint32_t init_frequency, uint32_t minimal_frequency) <br><em>This functions initialize the frequency and also sets the minimal reachable frequency.</em></td>
+<td style="text-align: left;"><a href="#function-initfixedfrequency"><strong>initFixedFrequency</strong></a> (uint32_t fixed_frequency) <br><em>This function initialize the PWM for fixed frequency applications.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-initunit"><strong>initUnit</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function initializes a timing unit.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-initvariablefrequency"><strong>initVariableFrequency</strong></a> (uint32_t initial_frequency, uint32_t minimal_frequency) <br><em>This functions initializes the PWM for variable frequency applications.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -4072,11 +4092,35 @@
 <p>external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EEV9 </p>
 <hr>
 
-<h3 id="function-getmode">function getMode</h3>
-<p><em>This function returns the PWM mode (voltage or current mode)</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getMode</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-getfrequencymax">function getFrequencyMax</h3>
+<p><em>This function returns the maximum frequency of the selected timer in Hz.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getFrequencyMax</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
+</ul>
+<hr>
+
+<h3 id="function-getfrequencymin">function getFrequencyMin</h3>
+<p><em>This function returns the minimum frequency of the selected timer in Hz.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getFrequencyMin</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
+</ul>
+<hr>
+
+<h3 id="function-getmode">function getMode</h3>
+<p><em>This function returns the PWM mode (voltage or current mode)</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getMode</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4090,9 +4134,9 @@
 
 <h3 id="function-getmodulation">function getModulation</h3>
 <p><em>This function returns the modulation type of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getModulation</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getModulation</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4104,23 +4148,23 @@
 
 <h3 id="function-getperiod">function getPeriod</h3>
 <p><em>This function returns the period of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriod</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriod</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p>the period value in uint16 </p>
+<p>the period value in number of clock cycles </p>
 <hr>
 
 <h3 id="function-getperiodevntrep">function getPeriodEvntRep</h3>
 <p><em>This function returns the repetition counter value.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4130,11 +4174,39 @@
 <p>repetition counter value </p>
 <hr>
 
+<h3 id="function-getperiodmax">function getPeriodMax</h3>
+<p><em>This function returns the maximum period of the selected timing unit.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodMax</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>the period value in number of clock cycles </p>
+<hr>
+
+<h3 id="function-getperiodmin">function getPeriodMin</h3>
+<p><em>This function returns the period of the selected timing unit.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodMin</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>the period value in number of clock cycles </p>
+<hr>
+
 <h3 id="function-getperiodus">function getPeriodUs</h3>
 <p><em>This function returns the period in µs of the selected timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodUs</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodUs</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4142,11 +4214,26 @@
 </ul>
 <hr>
 
+<h3 id="function-getresolutionps">function getResolutionPs</h3>
+<p><em>This function returns the resolution of the timing unit in picoseconds.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getResolutionPs</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</li>
+</ul>
+<p><strong>Note:</strong></p>
+<p>The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz 
+ PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz </p>
+<hr>
+
 <h3 id="function-getswitchconvention">function getSwitchConvention</h3>
 <p><em>This function returns the switching convention of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getSwitchConvention</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getSwitchConvention</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4156,41 +4243,25 @@
 <p>PWMx1 (high side convention) or PWMx2 (low-side convention) </p>
 <hr>
 
-<h3 id="function-initfrequency-12">function initFrequency [1/2]</h3>
-<p><em>This function initialize the frequency.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">init_frequency</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
+<h3 id="function-initfixedfrequency">function initFixedFrequency</h3>
+<p><em>This function initialize the PWM for fixed frequency applications.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFixedFrequency</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">fixed_frequency</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>init_frequency</code> frequency in Hz</li>
+<li><code>fixed_frequency</code> frequency to be fixed in Hz</li>
 </ul>
 <p><strong>Warning:</strong></p>
-<p>this function must be called BEFORE initialiazing any timing unit. the frequency initialized becomes the MINIMUM possible. use it BEFORE initialization of the timing unit. </p>
-<hr>
-
-<h3 id="function-initfrequency-22">function initFrequency [2/2]</h3>
-<p><em>This functions initialize the frequency and also sets the minimal reachable frequency.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">init_frequency</span><span class="p">,</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">minimal_frequency</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>init_frequency</code> frequency in Hz </li>
-<li><code>minimal_frequency</code> desired minimal frequency in Hz</li>
-</ul>
-<p><strong>Warning:</strong></p>
-<p>this function must be called BEFORE initialiazing any timing unit </p>
+<p>This function must be called BEFORE initialiazing any timing unit. The frequency will not vary during the operation of the power device. Use it for fixed frequencies only. </p>
 <hr>
 
 <h3 id="function-initunit">function initUnit</h3>
 <p><em>This function initializes a timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initUnit</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initUnit</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4206,12 +4277,28 @@
 <p>Ayoub Farah Hassan <a href="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</a> </p>
 <hr>
 
+<h3 id="function-initvariablefrequency">function initVariableFrequency</h3>
+<p><em>This functions initializes the PWM for variable frequency applications.</em> 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initVariableFrequency</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">initial_frequency</span><span class="p">,</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">minimal_frequency</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>initial_frequency</code> The initial value of the frequency in Hz </li>
+<li><code>minimal_frequency</code> The minimal value of the frequency in Hz</li>
+</ul>
+<p><strong>Warning:</strong></p>
+<p>This function must be called BEFORE initialiazing any timing unit. The user can vary the frequency during the operation of the power device. This may compromise the resolution of the PWM. you can check your resolution with the getResolutionPS function. </p>
+<hr>
+
 <h3 id="function-setadcdecimation">function setAdcDecimation</h3>
 <p><em>This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcDecimation</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">decimation</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcDecimation</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">decimation</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4224,10 +4311,10 @@
 
 <h3 id="function-setadcedgetrigger">function setAdcEdgeTrigger</h3>
 <p><em>This function sets the adc trig rollover mode for the selected timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="n">adc_edge_trigger</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="n">adc_edge_trigger</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4240,10 +4327,10 @@
 
 <h3 id="function-setadctrigger">function setAdcTrigger</h3>
 <p><em>This function sets the adc trigger linked to a timer unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTrigger</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4256,10 +4343,10 @@
 
 <h3 id="function-setadctriggerinstant">function setAdcTriggerInstant</h3>
 <p><em>This function sets the comparator value at which the ADC is trigered.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerInstant</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trig_val</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerInstant</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trig_val</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4270,10 +4357,10 @@
 
 <h3 id="function-setadctriggerpostscaler">function setAdcTriggerPostScaler</h3>
 <p><em>This function sets the PostScaler value for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerPostScaler</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ps_ratio</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerPostScaler</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ps_ratio</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4286,11 +4373,11 @@
 
 <h3 id="function-setdeadtime">function setDeadTime</h3>
 <p><em>This function sets the dead time for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDeadTime</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">rise_ns</span><span class="p">,</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">fall_ns</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDeadTime</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">rise_ns</span><span class="p">,</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">fall_ns</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4304,10 +4391,10 @@
 
 <h3 id="function-setdutycycle">function setDutyCycle</h3>
 <p><em>This function sets the duty cycle for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDutyCycle</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_cycle</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDutyCycle</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_cycle</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4318,10 +4405,10 @@
 
 <h3 id="function-seteev">function setEev</h3>
 <p><em>This function sets external event linked to the timing unit essential for the current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setEev</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">eev</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setEev</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">eev</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4334,9 +4421,9 @@
 
 <h3 id="function-setfrequency">function setFrequency</h3>
 <p><em>Change the frequency/period after it has been initialized.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setFrequency</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_update</span>
-<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setFrequency</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_update</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4348,10 +4435,10 @@
 
 <h3 id="function-setmode">function setMode</h3>
 <p><em>This function sets a special pwm mode for voltage or current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setMode</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setMode</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4364,10 +4451,10 @@
 
 <h3 id="function-setmodulation">function setModulation</h3>
 <p><em>This function sets the modulation mode for a given PWM unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setModulation</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">modulation</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setModulation</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">modulation</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4380,10 +4467,10 @@
 
 <h3 id="function-setperiodevntrep">function setPeriodEvntRep</h3>
 <p><em>This function sets the repetition counter to ISR period.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span><span class="p">,</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span>
-<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span><span class="p">,</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4394,10 +4481,10 @@
 
 <h3 id="function-setphaseshift">function setPhaseShift</h3>
 <p><em>This function sets the phase shift in respect to timer A for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPhaseShift</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">shift</span>
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPhaseShift</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">shift</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4410,10 +4497,10 @@
 
 <h3 id="function-setswitchconvention">function setSwitchConvention</h3>
 <p><em>This function sets the switch convention for a given PWM unit i.e. you decide which one of the output of the timer can be controlled with duty cycle.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setSwitchConvention</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">convention</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setSwitchConvention</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">convention</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4426,9 +4513,9 @@
 
 <h3 id="function-startdualoutput">function startDualOutput</h3>
 <p><em>This fonction starts both outputs of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startDualOutput</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startDualOutput</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4438,10 +4525,10 @@
 
 <h3 id="function-startsingleoutput">function startSingleOutput</h3>
 <p><em>This function starts only one output of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startSingleOutput</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
-<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startSingleOutput</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4452,9 +4539,9 @@
 
 <h3 id="function-stopdualoutput">function stopDualOutput</h3>
 <p><em>This function stops both outputs of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopDualOutput</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopDualOutput</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4464,10 +4551,10 @@
 
 <h3 id="function-stopsingleoutput">function stopSingleOutput</h3>
 <p><em>This function starts only one output of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopSingleOutput</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
-<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopSingleOutput</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>

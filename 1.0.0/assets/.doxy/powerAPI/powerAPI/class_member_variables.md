@@ -87,6 +87,10 @@
 
 ## m
 
+* **max\_frequency** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **max\_period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **min\_frequency** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **min\_period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **modulation** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
@@ -121,6 +125,7 @@
 * **reset\_data** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trigger\_source** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trig** ([**phase\_shift\_conf\_t**](structphase__shift__conf__t.md))
+* **resolution** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **rise\_dead\_time** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **reset\_H** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
 * **reset\_L** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
