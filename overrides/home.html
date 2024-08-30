@@ -39,24 +39,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex-basis: 50%;
+        flex-basis: 70%;
         flex-grow: 1;
         order: 0;
         padding-bottom: 1rem;
         margin-left: 25vh;
-        max-width: 22rem;
+        max-width: 24rem;
     }
 
     .tx-hero__image{
         overflow: hidden;
         flex-shrink: 1;
-        flex-basis: 50%;
+        flex-basis: 30%;
         margin-left: 4rem;
         order: 1;
     }
 
     .image_banner{
-        width: 125%;
+        width: 100%;
+    }
+
+    .container-row{
+        display: flex;
+        flex-direction: row;
     }
 
     .tx-hero .md-button {
@@ -238,19 +243,19 @@
 
 <!-- Main site entry button descriptions -->
 <section class="first-section-gradient">
-    <!-- <div class="md-grid md-typeset"> -->
-        <div class="tx-hero">
-        <!-- Custom Image -->
-            <div class="tx-hero__image">
-	            <img class="image_banner" src="{{ config.home_cover_image }}" draggable="false">
-            </div>
+    <div class="tx-hero md-typeset">
+    <!-- Custom Image -->
+        <div class="tx-hero__image">
+            <img class="image_banner" src="{{ config.home_cover_image }}" draggable="false">
+        </div>
 
-	<!-- Main Tagline -->
-            <div class="tx-hero__content">
-            <h1>{{ config.home_tagline }}</h1>
-            <p>{{ config.home_description }}</p>
+<!-- Main Tagline -->
+        <div class="tx-hero__content">
+        <h1>{{ config.home_tagline }}</h1>
+        <p>{{ config.home_description }}</p>
 
-        <!-- Added Buttons (up to 3) -->
+    <!-- Added Buttons (up to 3) -->
+        <div class="container-row">
             {%- if config.home_button1_name -%}
             <a href="{{ config.home_button1_url }}" title="Start Here" class="{{ config.home_button1_theme }}">
                 {{ config.home_button1_name }}
@@ -269,7 +274,7 @@
             </a>
             {%- endif -%}
             </div>
-        <!-- </div> -->
+        </div>
     </div>
 </section>
 
