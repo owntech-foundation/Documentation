@@ -388,9 +388,8 @@
     .tx-hero {
         display: flex;
         flex-flow: row;
-        margin: 1rem;
         color: var(--md-primary-bg-color);
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .tx-hero h1 {
@@ -400,10 +399,15 @@
     }
 
     .tx-hero__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         flex-basis: 50%;
         flex-grow: 1;
         order: 0;
         padding-bottom: 1rem;
+        margin-left: 25vh;
+        max-width: 22rem;
     }
 
     .tx-hero__image{
