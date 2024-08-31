@@ -379,6 +379,10 @@
         height: 100%;
     }
 
+    .md-typeset {
+        max-width: none;
+    }
+
     .first-section-gradient {
         align-items: center;
         padding-top: .0rem;
@@ -501,13 +505,14 @@
         .tx-hero {
         display: flex;
         flex-flow: row;
+        flex-flow: wrap;
         color: var(--md-primary-bg-color);
         }
 
         .tx-hero__image{
         overflow: hidden;
-        flex-basis: 40%;
-        order: 1;
+        flex-basis: 100%;
+        order: 0;
         }
 
         .tx-hero__content {
@@ -516,7 +521,6 @@
         order: 0;
         padding-bottom: 1rem;
         margin-left: 20px;
-        max-width: 24rem;
         }
 
         .tx-hero h1 {
