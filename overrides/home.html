@@ -43,7 +43,7 @@
         flex-grow: 1;
         order: 0;
         padding-bottom: 1rem;
-        margin-left: 45vh;
+        margin-left: 35vh;
         max-width: 24rem;
     }
 
@@ -129,7 +129,33 @@
         display: block;
     }
 
+    /**/
+    /*Adjusting Mobile UI */
+    /**/
+
     @media screen and (max-width:30em) {
+
+        .tx-hero {
+        display: flex;
+        flex-flow: row;
+        color: var(--md-primary-bg-color);
+        }
+
+        .tx-hero__image{
+        overflow: hidden;
+        flex-basis: 40%;
+        order: 1;
+        }
+
+        .tx-hero__content {
+        flex-basis: 60%;
+        flex-grow: 1;
+        order: 0;
+        padding-bottom: 1rem;
+        margin-left: 20px;
+        max-width: 24rem;
+        }
+
         .tx-hero h1 {
             font-size: 1.4rem
         }
