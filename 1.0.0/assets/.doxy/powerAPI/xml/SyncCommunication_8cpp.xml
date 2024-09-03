@@ -67,17 +67,17 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_SHIELD_TWIST_V1_4_1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinMode<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_MODE_ALTERNATE);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinSpeed<sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_SPEED_FREQ_VERY_HIGH);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinOutputType(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_OUTPUT_PUSHPULL);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinPull<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_PULL_NO);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetAFPin_0_7<sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_AF_12);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinMode<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_MODE_ALTERNATE);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinSpeed<sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_SPEED_FREQ_VERY_HIGH);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinOutputType(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_OUTPUT_PUSHPULL);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinPull<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_PULL_NO);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetAFPin_0_7<sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_AF_13);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinMode<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_MODE_ALTERNATE);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinSpeed<sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_SPEED_FREQ_VERY_HIGH);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinOutputType(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_OUTPUT_PUSHPULL);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinPull<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_PULL_NO);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetAFPin_0_7<sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_2,<sp/>LL_GPIO_AF_13);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinMode<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_MODE_ALTERNATE);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinSpeed<sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_SPEED_FREQ_VERY_HIGH);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinOutputType(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_OUTPUT_PUSHPULL);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetPinPull<sp/><sp/><sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_PULL_NO);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_GPIO_SetAFPin_0_7<sp/><sp/><sp/><sp/>(GPIOB,<sp/>LL_GPIO_PIN_6,<sp/>LL_GPIO_AF_12);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>LL_HRTIM_TIM_CounterEnable(HRTIM1,<sp/>LL_HRTIM_TIMER_MASTER);</highlight></codeline>
