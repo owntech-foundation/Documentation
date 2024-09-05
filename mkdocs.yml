@@ -277,7 +277,7 @@ home_button1_blurb: Start here                   # Short description of this but
 home_button2_name: Chat on Discord                     # Comment this parameter out to remove the button.
 home_button2_url: https://discord.com/invite/KAM8ukUYF5  # This path starts at your root mkdocs directory.
 home_button2_theme: md-button                     # Options: "md-button", "md-button md-button--primary"
-home_button2_icon: gear                           # Options: "people", "gear", "image"
+# home_button2_icon: gear                           # Options: "people", "gear", "image"
 home_button2_blurb: OwnTech Discord channel      # Short description of this button / section.
 
 
