@@ -2,13 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="SafetyAPI_8h" kind="file" language="C++">
     <compoundname>SafetyAPI.h</compoundname>
-    <innerclass refid="classsafety" prot="public">safety</innerclass>
+    <innerclass refid="classSafetyAPI" prot="public">SafetyAPI</innerclass>
     <sectiondef kind="var">
-      <memberdef kind="variable" id="SafetyAPI_8h_1a9e0b080deb5cda0c740c668a53df0d3d" prot="public" static="no" extern="yes" mutable="no">
-        <type><ref refid="classsafety" kindref="compound">safety</ref></type>
-        <definition>safety Safety</definition>
+      <memberdef kind="variable" id="SafetyAPI_8h_1a6d2ab4d84b85fc73d2cc74cfc1c8b3a6" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="classSafetyAPI" kindref="compound">SafetyAPI</ref></type>
+        <definition>SafetyAPI safety</definition>
         <argsstring></argsstring>
-        <name>Safety</name>
+        <name>safety</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="259" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" declline="259" declcolumn="15"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="241" column="18" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" declline="241" declcolumn="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -47,55 +47,55 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SAFETYAPI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAFETYAPI_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;arm_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ShieldAPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/safety_enum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="classsafety" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsafety" kindref="compound">safety</ref>{</highlight></codeline>
+<codeline lineno="37" refid="classSafetyAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSafetyAPI" kindref="compound">SafetyAPI</ref>{</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" kindref="member">init_shield</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kindref="member">init_shield</ref>();</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" kindref="member">init_shield</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kindref="member">init_shield</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1a74ab26d3ad584773d1e44b61f202406b" kindref="member">setChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" kindref="member">setChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1a281a7195b264a6c42947b4f02a21e271" kindref="member">unsetChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" kindref="member">unsetChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsafety_1aac97907a3261921145749577c75695f2" kindref="member">getChannelWatch</ref>(sensor_t<sp/><sp/>sensors_watch);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" kindref="member">getChannelWatch</ref>(sensor_t<sp/><sp/>sensors_watch);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1afdbff478f06aed861201f50ce6255599" kindref="member">setChannelReaction</ref>(safety_reaction_t<sp/>sensors_reaction);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" kindref="member">setChannelReaction</ref>(safety_reaction_t<sp/>sensors_reaction);</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_reaction_t<sp/><ref refid="classsafety_1a16b2849b2e40199f9ebf45fc8ce4e3d9" kindref="member">getChannelReaction</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_reaction_t<sp/><ref refid="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" kindref="member">getChannelReaction</ref>();</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1afc05f1ba6b855be36995942fd5d0c8e0" kindref="member">setChannelThresholdMax</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_max,<sp/>uint8_t<sp/>sensors_threshold_number);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" kindref="member">setChannelThresholdMax</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_max,<sp/>uint8_t<sp/>sensors_threshold_number);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1a67df559780c4c86b869cb3f39edfc2c2" kindref="member">setChannelThresholdMin</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_min,<sp/>uint8_t<sp/>sensors_threshold_number);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" kindref="member">setChannelThresholdMin</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_min,<sp/>uint8_t<sp/>sensors_threshold_number);</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classsafety_1a84e8a8b84530157cf79ff878ac065682" kindref="member">getChannelThresholdMax</ref>(sensor_t<sp/>sensors_threshold);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" kindref="member">getChannelThresholdMax</ref>(sensor_t<sp/>sensors_threshold);</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classsafety_1a7fb81fd29e741b9b903fe73a0eb60b43" kindref="member">getChannelThresholdMin</ref>(sensor_t<sp/>sensors_threshold);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" kindref="member">getChannelThresholdMin</ref>(sensor_t<sp/>sensors_threshold);</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a6cddb28067c7438a87e014596def40b9" kindref="member">getChannelError</ref>(sensor_t<sp/>sensors_error);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" kindref="member">getChannelError</ref>(sensor_t<sp/>sensors_error);</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1afb77e029ac7817874cb1635857d86b8a" kindref="member">enableSafetyApi</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" kindref="member">enableSafetyApi</ref>();</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1ae965ffc7ed12325b1d7703d902d3e3d4" kindref="member">disableSafetyApi</ref>();</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1a15e26ec4a881100062f0d94596de93b5" kindref="member">storeThreshold</ref>(sensor_t<sp/>sensor_threshold_store);</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classsafety_1a35fb7ff7a08c40f403bbdc84dcad94f7" kindref="member">retrieveThreshold</ref>(sensor_t<sp/>sensor_threshold_retrieve);</highlight></codeline>
-<codeline lineno="257"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classsafety" kindref="compound">safety</ref><sp/>Safety;</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"></highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SAFETY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" kindref="member">disableSafetyApi</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" kindref="member">storeThreshold</ref>(sensor_t<sp/>sensor_threshold_store);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" kindref="member">retrieveThreshold</ref>(sensor_t<sp/>sensor_threshold_retrieve);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI" kindref="compound">SafetyAPI</ref><sp/>safety;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SAFETYAPI_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h"/>
   </compounddef>

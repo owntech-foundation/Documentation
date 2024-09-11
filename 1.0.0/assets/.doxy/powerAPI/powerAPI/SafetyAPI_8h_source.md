@@ -27,15 +27,15 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-#ifndef SAFETY_H_
-#define SAFETY_H_
+#ifndef SAFETYAPI_H_
+#define SAFETYAPI_H_
 
 #include "arm_math.h"
 #include "ShieldAPI.h"
 #include "../src/safety_enum.h"
 
 
-class safety{
+class SafetyAPI{
 
     public:
 
@@ -67,15 +67,15 @@ class safety{
     void enableSafetyApi();
 
     void disableSafetyApi();
-
     int8_t storeThreshold(sensor_t sensor_threshold_store);
-
     int8_t retrieveThreshold(sensor_t sensor_threshold_retrieve);
+
+
 };
 
-extern safety Safety;
+extern SafetyAPI safety;
 
-#endif // SAFETY_H_
+#endif // SAFETYAPI_H_
 ```
 
 

@@ -55,13 +55,13 @@
 * **doFullDispatch** ([**DataAPI**](classDataAPI.md))
 * **disableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **disablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
+* **disableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
 * **dac** ([**SpinAPI**](classSpinAPI.md))
 * **data** ([**SpinAPI**](classSpinAPI.md))
 * **DEFAULT\_PRIORITY** ([**TaskAPI**](classTaskAPI.md))
 * **dac\_function** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **dst** ([**dma\_user\_data\_t**](structdma__user__data__t.md))
 * **duty\_cycle** ([**pwm\_conf\_t**](structpwm__conf__t.md))
-* **disableSafetyApi** ([**safety**](classsafety.md))
 
 
 ## e
@@ -71,8 +71,8 @@
 * **enableChannel** ([**DataAPI**](classDataAPI.md))
 * **enableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **enablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
+* **enableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
 * **external\_trigger** ([**pwm\_conf\_t**](structpwm__conf__t.md))
-* **enableSafetyApi** ([**safety**](classsafety.md))
 
 
 ## f
@@ -119,13 +119,13 @@
 * **getPeriodUs** ([**PwmHAL**](classPwmHAL.md))
 * **getResolutionPs** ([**PwmHAL**](classPwmHAL.md))
 * **getSwitchConvention** ([**PwmHAL**](classPwmHAL.md))
+* **getChannelError** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelReaction** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
 * **gpio** ([**SpinAPI**](classSpinAPI.md))
 * **getTimer4IncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
-* **getChannelError** ([**safety**](classsafety.md))
-* **getChannelReaction** ([**safety**](classsafety.md))
-* **getChannelThresholdMax** ([**safety**](classsafety.md))
-* **getChannelThresholdMin** ([**safety**](classsafety.md))
-* **getChannelWatch** ([**safety**](classsafety.md))
 * **get\_count** ([**timer\_driver\_api**](structtimer__driver__api.md))
 * **gpio\_conf** ([**timer\_hrtim\_t**](structtimer__hrtim__t.md))
 
@@ -145,9 +145,9 @@
 * **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
+* **init\_shield** ([**SafetyAPI**](classSafetyAPI.md))
 * **initMaster** ([**SyncCommunication**](classSyncCommunication.md))
 * **initSlave** ([**SyncCommunication**](classSyncCommunication.md))
-* **init\_shield** ([**safety**](classsafety.md))
 
 
 ## l
@@ -198,12 +198,12 @@
 * **retrieveConversionParametersFromMemory** ([**DataAPI**](classDataAPI.md))
 * **readPin** ([**GpioHAL**](classGpioHAL.md))
 * **resetPin** ([**GpioHAL**](classGpioHAL.md))
+* **retrieveThreshold** ([**SafetyAPI**](classSafetyAPI.md))
 * **reset\_data** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trigger\_source** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **reset\_trig** ([**phase\_shift\_conf\_t**](structphase__shift__conf__t.md))
 * **resolution** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **rise\_dead\_time** ([**pwm\_conf\_t**](structpwm__conf__t.md))
-* **retrieveThreshold** ([**safety**](classsafety.md))
 * **reset\_H** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
 * **reset\_L** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
 
@@ -247,6 +247,11 @@
 * **stopDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **stopSingleOutput** ([**PwmHAL**](classPwmHAL.md))
 * **startTransmission** ([**Rs485Communication**](classRs485Communication.md))
+* **setChannelReaction** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
+* **storeThreshold** ([**SafetyAPI**](classSafetyAPI.md))
 * **sensors** ([**ShieldAPI**](classShieldAPI.md))
 * **startBackground** ([**TaskAPI**](classTaskAPI.md))
 * **startCritical** ([**TaskAPI**](classTaskAPI.md))
@@ -263,11 +268,6 @@
 * **src** ([**dma\_user\_data\_t**](structdma__user__data__t.md))
 * **switch\_H** ([**gpio\_conf\_t**](structgpio__conf__t.md))
 * **switch\_L** ([**gpio\_conf\_t**](structgpio__conf__t.md))
-* **setChannelReaction** ([**safety**](classsafety.md))
-* **setChannelThresholdMax** ([**safety**](classsafety.md))
-* **setChannelThresholdMin** ([**safety**](classsafety.md))
-* **setChannelWatch** ([**safety**](classsafety.md))
-* **storeThreshold** ([**safety**](classsafety.md))
 * **set\_H** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
 * **set\_L** ([**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md))
 * **switch\_conv** ([**timer\_hrtim\_t**](structtimer__hrtim__t.md))
@@ -297,6 +297,7 @@
 
 ## u
 
+* **unsetChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
 * **uart** ([**SpinAPI**](classSpinAPI.md))
 * **usart1Init** ([**UartHAL**](classUartHAL.md))
 * **usart1ReadChar** ([**UartHAL**](classUartHAL.md))
@@ -304,7 +305,6 @@
 * **usart1WriteChar** ([**UartHAL**](classUartHAL.md))
 * **unit** ([**gpio\_conf\_t**](structgpio__conf__t.md))
 * **unit\_on** ([**pwm\_conf\_t**](structpwm__conf__t.md))
-* **unsetChannelWatch** ([**safety**](classsafety.md))
 
 
 ## v

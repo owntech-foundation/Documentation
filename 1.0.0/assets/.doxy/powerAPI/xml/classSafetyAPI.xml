@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
-  <compounddef id="classsafety" kind="class" language="C++" prot="public">
-    <compoundname>safety</compoundname>
+  <compounddef id="classSafetyAPI" kind="class" language="C++" prot="public">
+    <compoundname>SafetyAPI</compoundname>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classsafety_1a17cd2d2d73de1720b908191b1842882a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void safety::init_shield</definition>
+        <definition>void SafetyAPI::init_shield</definition>
         <argsstring>()</argsstring>
         <name>init_shield</name>
-        <qualifiedname>safety::init_shield</qualifiedname>
+        <qualifiedname>SafetyAPI::init_shield</qualifiedname>
         <briefdescription>
 <para>Initializes thresholds min/max with the default value from the device tree, if values were stored and found in the flash they will be used instead. All the sensors will be monitored to detect potential faults in voltage/current. </para>
         </briefdescription>
@@ -21,12 +21,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="48" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1ae172421bc94acb8245b187d2858eccf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void safety::init_shield</definition>
+        <definition>void SafetyAPI::init_shield</definition>
         <argsstring>(sensor_t *sensors_watch, uint8_t sensors_watch_number)</argsstring>
         <name>init_shield</name>
-        <qualifiedname>safety::init_shield</qualifiedname>
+        <qualifiedname>SafetyAPI::init_shield</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_watch</declname>
@@ -64,12 +64,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="61" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="38" bodyend="42"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a74ab26d3ad584773d1e44b61f202406b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::setChannelWatch</definition>
+        <definition>int8_t SafetyAPI::setChannelWatch</definition>
         <argsstring>(sensor_t *sensors_watch, uint8_t sensors_watch_number)</argsstring>
         <name>setChannelWatch</name>
-        <qualifiedname>safety::setChannelWatch</qualifiedname>
+        <qualifiedname>SafetyAPI::setChannelWatch</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_watch</declname>
@@ -107,12 +107,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="72" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="44" bodyend="48"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a281a7195b264a6c42947b4f02a21e271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::unsetChannelWatch</definition>
+        <definition>int8_t SafetyAPI::unsetChannelWatch</definition>
         <argsstring>(sensor_t *sensors_watch, uint8_t sensors_watch_number)</argsstring>
         <name>unsetChannelWatch</name>
-        <qualifiedname>safety::unsetChannelWatch</qualifiedname>
+        <qualifiedname>SafetyAPI::unsetChannelWatch</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_watch</declname>
@@ -150,12 +150,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="83" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="50" bodyend="54"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1aac97907a3261921145749577c75695f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool safety::getChannelWatch</definition>
+        <definition>bool SafetyAPI::getChannelWatch</definition>
         <argsstring>(sensor_t sensors_watch)</argsstring>
         <name>getChannelWatch</name>
-        <qualifiedname>safety::getChannelWatch</qualifiedname>
+        <qualifiedname>SafetyAPI::getChannelWatch</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensors_watch</declname>
@@ -201,12 +201,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="101" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="56" bodyend="60"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1afdbff478f06aed861201f50ce6255599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void safety::setChannelReaction</definition>
+        <definition>void SafetyAPI::setChannelReaction</definition>
         <argsstring>(safety_reaction_t sensors_reaction)</argsstring>
         <name>setChannelReaction</name>
-        <qualifiedname>safety::setChannelReaction</qualifiedname>
+        <qualifiedname>SafetyAPI::setChannelReaction</qualifiedname>
         <param>
           <type>safety_reaction_t</type>
           <declname>sensors_reaction</declname>
@@ -238,12 +238,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="114" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="62" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a16b2849b2e40199f9ebf45fc8ce4e3d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>safety_reaction_t</type>
-        <definition>safety_reaction_t safety::getChannelReaction</definition>
+        <definition>safety_reaction_t SafetyAPI::getChannelReaction</definition>
         <argsstring>()</argsstring>
         <name>getChannelReaction</name>
-        <qualifiedname>safety::getChannelReaction</qualifiedname>
+        <qualifiedname>SafetyAPI::getChannelReaction</qualifiedname>
         <briefdescription>
 <para>returns the reaction to do when encoutering an error. </para>
         </briefdescription>
@@ -256,12 +256,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="121" column="23" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="68" bodyend="72"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1afc05f1ba6b855be36995942fd5d0c8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::setChannelThresholdMax</definition>
+        <definition>int8_t SafetyAPI::setChannelThresholdMax</definition>
         <argsstring>(sensor_t *sensors_threshold, float32_t *threshold_max, uint8_t sensors_threshold_number)</argsstring>
         <name>setChannelThresholdMax</name>
-        <qualifiedname>safety::setChannelThresholdMax</qualifiedname>
+        <qualifiedname>SafetyAPI::setChannelThresholdMax</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_threshold</declname>
@@ -311,12 +311,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="133" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="74" bodyend="78"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a67df559780c4c86b869cb3f39edfc2c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::setChannelThresholdMin</definition>
+        <definition>int8_t SafetyAPI::setChannelThresholdMin</definition>
         <argsstring>(sensor_t *sensors_threshold, float32_t *threshold_min, uint8_t sensors_threshold_number)</argsstring>
         <name>setChannelThresholdMin</name>
-        <qualifiedname>safety::setChannelThresholdMin</qualifiedname>
+        <qualifiedname>SafetyAPI::setChannelThresholdMin</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_threshold</declname>
@@ -366,12 +366,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="145" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="80" bodyend="84"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a84e8a8b84530157cf79ff878ac065682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
-        <definition>float32_t safety::getChannelThresholdMax</definition>
+        <definition>float32_t SafetyAPI::getChannelThresholdMax</definition>
         <argsstring>(sensor_t sensors_threshold)</argsstring>
         <name>getChannelThresholdMax</name>
-        <qualifiedname>safety::getChannelThresholdMax</qualifiedname>
+        <qualifiedname>SafetyAPI::getChannelThresholdMax</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensors_threshold</declname>
@@ -417,12 +417,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="163" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="86" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a7fb81fd29e741b9b903fe73a0eb60b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
-        <definition>float32_t safety::getChannelThresholdMin</definition>
+        <definition>float32_t SafetyAPI::getChannelThresholdMin</definition>
         <argsstring>(sensor_t sensors_threshold)</argsstring>
         <name>getChannelThresholdMin</name>
-        <qualifiedname>safety::getChannelThresholdMin</qualifiedname>
+        <qualifiedname>SafetyAPI::getChannelThresholdMin</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensors_threshold</declname>
@@ -468,12 +468,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="181" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="92" bodyend="96"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a6cddb28067c7438a87e014596def40b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool safety::getChannelError</definition>
+        <definition>bool SafetyAPI::getChannelError</definition>
         <argsstring>(sensor_t sensors_error)</argsstring>
         <name>getChannelError</name>
-        <qualifiedname>safety::getChannelError</qualifiedname>
+        <qualifiedname>SafetyAPI::getChannelError</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensors_error</declname>
@@ -519,12 +519,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="199" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="98" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1afb77e029ac7817874cb1635857d86b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void safety::enableSafetyApi</definition>
+        <definition>void SafetyAPI::enableSafetyApi</definition>
         <argsstring>()</argsstring>
         <name>enableSafetyApi</name>
-        <qualifiedname>safety::enableSafetyApi</qualifiedname>
+        <qualifiedname>SafetyAPI::enableSafetyApi</qualifiedname>
         <briefdescription>
 <para>enable the safet API fault detection task </para>
         </briefdescription>
@@ -537,12 +537,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="207" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="104" bodyend="107"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1ae965ffc7ed12325b1d7703d902d3e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void safety::disableSafetyApi</definition>
+        <definition>void SafetyAPI::disableSafetyApi</definition>
         <argsstring>()</argsstring>
         <name>disableSafetyApi</name>
-        <qualifiedname>safety::disableSafetyApi</qualifiedname>
+        <qualifiedname>SafetyAPI::disableSafetyApi</qualifiedname>
         <briefdescription>
 <para>disable the safet API fault detection task </para>
         </briefdescription>
@@ -555,12 +555,12 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="214" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="109" bodyend="112"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a15e26ec4a881100062f0d94596de93b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::storeThreshold</definition>
+        <definition>int8_t SafetyAPI::storeThreshold</definition>
         <argsstring>(sensor_t sensor_threshold_store)</argsstring>
         <name>storeThreshold</name>
-        <qualifiedname>safety::storeThreshold</qualifiedname>
+        <qualifiedname>SafetyAPI::storeThreshold</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensor_threshold_store</declname>
@@ -574,27 +574,7 @@
 <parametername>sensor_threshold_store</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor for which we store the threshold in the NVS <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor for which we store the threshold in the NVS</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -604,14 +584,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="233" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="114" bodyend="118"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="223" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="114" bodyend="118"/>
       </memberdef>
-      <memberdef kind="function" id="classsafety_1a35fb7ff7a08c40f403bbdc84dcad94f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
-        <definition>int8_t safety::retrieveThreshold</definition>
+        <definition>int8_t SafetyAPI::retrieveThreshold</definition>
         <argsstring>(sensor_t sensor_threshold_retrieve)</argsstring>
         <name>retrieveThreshold</name>
-        <qualifiedname>safety::retrieveThreshold</qualifiedname>
+        <qualifiedname>SafetyAPI::retrieveThreshold</qualifiedname>
         <param>
           <type>sensor_t</type>
           <declname>sensor_threshold_retrieve</declname>
@@ -625,27 +605,7 @@
 <parametername>sensor_threshold_retrieve</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor for which we store the threshold in the NVS <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor for which we store the threshold in the NVS</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -655,31 +615,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="256" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="120" bodyend="124"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="236" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="119" bodyend="123"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" bodystart="37" bodyend="257"/>
+    <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" bodystart="37" bodyend="239"/>
     <listofallmembers>
-      <member refid="classsafety_1ae965ffc7ed12325b1d7703d902d3e3d4" prot="public" virt="non-virtual"><scope>safety</scope><name>disableSafetyApi</name></member>
-      <member refid="classsafety_1afb77e029ac7817874cb1635857d86b8a" prot="public" virt="non-virtual"><scope>safety</scope><name>enableSafetyApi</name></member>
-      <member refid="classsafety_1a6cddb28067c7438a87e014596def40b9" prot="public" virt="non-virtual"><scope>safety</scope><name>getChannelError</name></member>
-      <member refid="classsafety_1a16b2849b2e40199f9ebf45fc8ce4e3d9" prot="public" virt="non-virtual"><scope>safety</scope><name>getChannelReaction</name></member>
-      <member refid="classsafety_1a84e8a8b84530157cf79ff878ac065682" prot="public" virt="non-virtual"><scope>safety</scope><name>getChannelThresholdMax</name></member>
-      <member refid="classsafety_1a7fb81fd29e741b9b903fe73a0eb60b43" prot="public" virt="non-virtual"><scope>safety</scope><name>getChannelThresholdMin</name></member>
-      <member refid="classsafety_1aac97907a3261921145749577c75695f2" prot="public" virt="non-virtual"><scope>safety</scope><name>getChannelWatch</name></member>
-      <member refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" prot="public" virt="non-virtual"><scope>safety</scope><name>init_shield</name></member>
-      <member refid="classsafety_1ae172421bc94acb8245b187d2858eccf6" prot="public" virt="non-virtual"><scope>safety</scope><name>init_shield</name></member>
-      <member refid="classsafety_1a35fb7ff7a08c40f403bbdc84dcad94f7" prot="public" virt="non-virtual"><scope>safety</scope><name>retrieveThreshold</name></member>
-      <member refid="classsafety_1afdbff478f06aed861201f50ce6255599" prot="public" virt="non-virtual"><scope>safety</scope><name>setChannelReaction</name></member>
-      <member refid="classsafety_1afc05f1ba6b855be36995942fd5d0c8e0" prot="public" virt="non-virtual"><scope>safety</scope><name>setChannelThresholdMax</name></member>
-      <member refid="classsafety_1a67df559780c4c86b869cb3f39edfc2c2" prot="public" virt="non-virtual"><scope>safety</scope><name>setChannelThresholdMin</name></member>
-      <member refid="classsafety_1a74ab26d3ad584773d1e44b61f202406b" prot="public" virt="non-virtual"><scope>safety</scope><name>setChannelWatch</name></member>
-      <member refid="classsafety_1a15e26ec4a881100062f0d94596de93b5" prot="public" virt="non-virtual"><scope>safety</scope><name>storeThreshold</name></member>
-      <member refid="classsafety_1a281a7195b264a6c42947b4f02a21e271" prot="public" virt="non-virtual"><scope>safety</scope><name>unsetChannelWatch</name></member>
+      <member refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>disableSafetyApi</name></member>
+      <member refid="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>enableSafetyApi</name></member>
+      <member refid="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelError</name></member>
+      <member refid="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelReaction</name></member>
+      <member refid="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelThresholdMax</name></member>
+      <member refid="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelThresholdMin</name></member>
+      <member refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelWatch</name></member>
+      <member refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>init_shield</name></member>
+      <member refid="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>init_shield</name></member>
+      <member refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>retrieveThreshold</name></member>
+      <member refid="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelReaction</name></member>
+      <member refid="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelThresholdMax</name></member>
+      <member refid="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelThresholdMin</name></member>
+      <member refid="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelWatch</name></member>
+      <member refid="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>storeThreshold</name></member>
+      <member refid="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>unsetChannelWatch</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

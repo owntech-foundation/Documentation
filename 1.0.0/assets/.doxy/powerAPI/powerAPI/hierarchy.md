@@ -14,13 +14,13 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**LedHAL**](classLedHAL.md) 
 * **class** [**PwmHAL**](classPwmHAL.md) _Handles all pwm signals for the spin board._ 
 * **class** [**Rs485Communication**](classRs485Communication.md) 
+* **class** [**SafetyAPI**](classSafetyAPI.md) 
 * **class** [**ShieldAPI**](classShieldAPI.md) 
 * **class** [**SpinAPI**](classSpinAPI.md) _Contains all the elements linked to peripherals of the spin board._ 
 * **class** [**SyncCommunication**](classSyncCommunication.md) 
 * **class** [**TaskAPI**](classTaskAPI.md) 
 * **class** [**TimerHAL**](classTimerHAL.md) _Handles timer 4 for the SPIN board._ 
 * **class** [**UartHAL**](classUartHAL.md) _Handles usart 1 for the SPIN board._ 
-* **class** [**safety**](classsafety.md) 
 * **struct** [**adc\_hrtim\_conf\_t**](structadc__hrtim__conf__t.md) _Structure containing information to setup adc events, adc source links and adc triggers._ 
 * **struct** [**comp\_usage\_conf\_t**](structcomp__usage__conf__t.md) _Structure containing the status of the usage of comparators and their values._ 
 * **struct** [**dac\_driver\_api**](structdac__driver__api.md) 

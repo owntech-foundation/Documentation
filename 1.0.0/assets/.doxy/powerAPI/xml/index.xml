@@ -215,23 +215,23 @@
     <member refid="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" kind="function"><name>turnOnCommunication</name></member>
     <member refid="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" kind="function"><name>turnOffCommunication</name></member>
   </compound>
-  <compound refid="classsafety" kind="class"><name>safety</name>
-    <member refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" kind="function"><name>init_shield</name></member>
-    <member refid="classsafety_1ae172421bc94acb8245b187d2858eccf6" kind="function"><name>init_shield</name></member>
-    <member refid="classsafety_1a74ab26d3ad584773d1e44b61f202406b" kind="function"><name>setChannelWatch</name></member>
-    <member refid="classsafety_1a281a7195b264a6c42947b4f02a21e271" kind="function"><name>unsetChannelWatch</name></member>
-    <member refid="classsafety_1aac97907a3261921145749577c75695f2" kind="function"><name>getChannelWatch</name></member>
-    <member refid="classsafety_1afdbff478f06aed861201f50ce6255599" kind="function"><name>setChannelReaction</name></member>
-    <member refid="classsafety_1a16b2849b2e40199f9ebf45fc8ce4e3d9" kind="function"><name>getChannelReaction</name></member>
-    <member refid="classsafety_1afc05f1ba6b855be36995942fd5d0c8e0" kind="function"><name>setChannelThresholdMax</name></member>
-    <member refid="classsafety_1a67df559780c4c86b869cb3f39edfc2c2" kind="function"><name>setChannelThresholdMin</name></member>
-    <member refid="classsafety_1a84e8a8b84530157cf79ff878ac065682" kind="function"><name>getChannelThresholdMax</name></member>
-    <member refid="classsafety_1a7fb81fd29e741b9b903fe73a0eb60b43" kind="function"><name>getChannelThresholdMin</name></member>
-    <member refid="classsafety_1a6cddb28067c7438a87e014596def40b9" kind="function"><name>getChannelError</name></member>
-    <member refid="classsafety_1afb77e029ac7817874cb1635857d86b8a" kind="function"><name>enableSafetyApi</name></member>
-    <member refid="classsafety_1ae965ffc7ed12325b1d7703d902d3e3d4" kind="function"><name>disableSafetyApi</name></member>
-    <member refid="classsafety_1a15e26ec4a881100062f0d94596de93b5" kind="function"><name>storeThreshold</name></member>
-    <member refid="classsafety_1a35fb7ff7a08c40f403bbdc84dcad94f7" kind="function"><name>retrieveThreshold</name></member>
+  <compound refid="classSafetyAPI" kind="class"><name>SafetyAPI</name>
+    <member refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kind="function"><name>init_shield</name></member>
+    <member refid="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" kind="function"><name>init_shield</name></member>
+    <member refid="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" kind="function"><name>setChannelWatch</name></member>
+    <member refid="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" kind="function"><name>unsetChannelWatch</name></member>
+    <member refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" kind="function"><name>getChannelWatch</name></member>
+    <member refid="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" kind="function"><name>setChannelReaction</name></member>
+    <member refid="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" kind="function"><name>getChannelReaction</name></member>
+    <member refid="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" kind="function"><name>setChannelThresholdMax</name></member>
+    <member refid="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" kind="function"><name>setChannelThresholdMin</name></member>
+    <member refid="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" kind="function"><name>getChannelThresholdMax</name></member>
+    <member refid="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" kind="function"><name>getChannelThresholdMin</name></member>
+    <member refid="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" kind="function"><name>getChannelError</name></member>
+    <member refid="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" kind="function"><name>enableSafetyApi</name></member>
+    <member refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" kind="function"><name>disableSafetyApi</name></member>
+    <member refid="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" kind="function"><name>storeThreshold</name></member>
+    <member refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" kind="function"><name>retrieveThreshold</name></member>
   </compound>
   <compound refid="classShieldAPI" kind="class"><name>ShieldAPI</name>
     <member refid="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" kind="variable"><name>sensors</name></member>
@@ -721,10 +721,10 @@
     <member refid="safety__internal_8h_1adcbe16e9cbfc3df7bfe4ee1b2f6987e7" kind="function"><name>safety_task</name></member>
   </compound>
   <compound refid="SafetyAPI_8cpp" kind="file"><name>SafetyAPI.cpp</name>
-    <member refid="SafetyAPI_8cpp_1a9e0b080deb5cda0c740c668a53df0d3d" kind="variable"><name>Safety</name></member>
+    <member refid="SafetyAPI_8cpp_1a6d2ab4d84b85fc73d2cc74cfc1c8b3a6" kind="variable"><name>safety</name></member>
   </compound>
   <compound refid="SafetyAPI_8h" kind="file"><name>SafetyAPI.h</name>
-    <member refid="SafetyAPI_8h_1a9e0b080deb5cda0c740c668a53df0d3d" kind="variable"><name>Safety</name></member>
+    <member refid="SafetyAPI_8h_1a6d2ab4d84b85fc73d2cc74cfc1c8b3a6" kind="variable"><name>safety</name></member>
   </compound>
   <compound refid="ShieldAPI_8cpp" kind="file"><name>ShieldAPI.cpp</name>
     <member refid="ShieldAPI_8cpp_1a58006a969289e96ffcfc92e950acd44b" kind="variable"><name>shield</name></member>

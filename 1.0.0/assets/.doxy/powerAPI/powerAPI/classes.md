@@ -50,7 +50,7 @@
 
 ## s
 
-* [**safety**](classsafety.md)
+* [**SafetyAPI**](classSafetyAPI.md)
 * [**ShieldAPI**](classShieldAPI.md)
 * [**SpinAPI**](classSpinAPI.md)
 * [**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md)

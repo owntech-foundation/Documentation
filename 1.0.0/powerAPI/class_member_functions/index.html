@@ -2155,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classsafety/" class="md-nav__link">
+      <a href="../classsafety.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3912,7 +3912,7 @@
 <li><strong>doFullDispatch</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>disableAdcTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>disablePeriodEvnt</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
-<li><strong>disableSafetyApi</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
+<li><strong>disableSafetyApi</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 </ul>
 <h2 id="e">e</h2>
 <ul>
@@ -3921,7 +3921,7 @@
 <li><strong>enableChannel</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>enableAdcTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>enablePeriodEvnt</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
-<li><strong>enableSafetyApi</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
+<li><strong>enableSafetyApi</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 </ul>
 <h2 id="g">g</h2>
 <ul>
@@ -3959,12 +3959,12 @@
 <li><strong>getPeriodUs</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>getResolutionPs</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>getSwitchConvention</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
+<li><strong>getChannelError</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>getChannelReaction</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>getChannelThresholdMax</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>getChannelThresholdMin</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>getChannelWatch</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>getTimer4IncrementalEncoderValue</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
-<li><strong>getChannelError</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>getChannelReaction</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>getChannelThresholdMax</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>getChannelThresholdMin</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>getChannelWatch</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
 </ul>
 <h2 id="i">i</h2>
 <ul>
@@ -3975,9 +3975,9 @@
 <li><strong>initFixedFrequency</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>initUnit</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>initVariableFrequency</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
+<li><strong>init_shield</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>initMaster</strong> (<a href="../classSyncCommunication/"><strong>SyncCommunication</strong></a>)</li>
 <li><strong>initSlave</strong> (<a href="../classSyncCommunication/"><strong>SyncCommunication</strong></a>)</li>
-<li><strong>init_shield</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
 </ul>
 <h2 id="p">p</h2>
 <ul>
@@ -3989,7 +3989,7 @@
 <li><strong>retrieveConversionParametersFromMemory</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>readPin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>resetPin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
-<li><strong>retrieveThreshold</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
+<li><strong>retrieveThreshold</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 </ul>
 <h2 id="s">s</h2>
 <ul>
@@ -4029,6 +4029,11 @@
 <li><strong>stopDualOutput</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>stopSingleOutput</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>startTransmission</strong> (<a href="../classRs485Communication/"><strong>Rs485Communication</strong></a>)</li>
+<li><strong>setChannelReaction</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>setChannelThresholdMax</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>setChannelThresholdMin</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>setChannelWatch</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>storeThreshold</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>startBackground</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>startCritical</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>stopBackground</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
@@ -4036,11 +4041,6 @@
 <li><strong>suspendBackgroundMs</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>suspendBackgroundUs</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>startLogTimer4IncrementalEncoder</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
-<li><strong>setChannelReaction</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>setChannelThresholdMax</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>setChannelThresholdMin</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>setChannelWatch</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
-<li><strong>storeThreshold</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
 </ul>
 <h2 id="t">t</h2>
 <ul>
@@ -4055,11 +4055,11 @@
 </ul>
 <h2 id="u">u</h2>
 <ul>
+<li><strong>unsetChannelWatch</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>usart1Init</strong> (<a href="../classUartHAL/"><strong>UartHAL</strong></a>)</li>
 <li><strong>usart1ReadChar</strong> (<a href="../classUartHAL/"><strong>UartHAL</strong></a>)</li>
 <li><strong>usart1SwapRxTx</strong> (<a href="../classUartHAL/"><strong>UartHAL</strong></a>)</li>
 <li><strong>usart1WriteChar</strong> (<a href="../classUartHAL/"><strong>UartHAL</strong></a>)</li>
-<li><strong>unsetChannelWatch</strong> (<a href="../classsafety/"><strong>safety</strong></a>)</li>
 </ul>
 <h2 id="w">w</h2>
 <ul>

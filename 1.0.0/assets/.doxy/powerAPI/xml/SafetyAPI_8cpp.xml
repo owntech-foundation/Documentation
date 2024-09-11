@@ -3,11 +3,11 @@
   <compounddef id="SafetyAPI_8cpp" kind="file" language="C++">
     <compoundname>SafetyAPI.cpp</compoundname>
     <sectiondef kind="var">
-      <memberdef kind="variable" id="SafetyAPI_8cpp_1a9e0b080deb5cda0c740c668a53df0d3d" prot="public" static="no" mutable="no">
-        <type><ref refid="classsafety" kindref="compound">safety</ref></type>
-        <definition>safety Safety</definition>
+      <memberdef kind="variable" id="SafetyAPI_8cpp_1a6d2ab4d84b85fc73d2cc74cfc1c8b3a6" prot="public" static="no" mutable="no">
+        <type><ref refid="classSafetyAPI" kindref="compound">SafetyAPI</ref></type>
+        <definition>SafetyAPI safety</definition>
         <argsstring></argsstring>
-        <name>Safety</name>
+        <name>safety</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" line="31" column="8" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="31" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" line="31" column="11" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="31" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -50,100 +50,99 @@
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/safety_shield.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/safety_setting.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="classsafety" kindref="compound">safety</ref><sp/>Safety;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="classSafetyAPI" kindref="compound">SafetyAPI</ref><sp/>safety;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" kindref="member">safety::init_shield</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kindref="member">SafetyAPI::init_shield</ref>()</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_init_shield(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a17cd2d2d73de1720b908191b1842882a" kindref="member">safety::init_shield</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kindref="member">SafetyAPI::init_shield</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_init_shield(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_set_sensor_watch(sensors_watch,<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1a74ab26d3ad584773d1e44b61f202406b" kindref="member">safety::setChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" kindref="member">SafetyAPI::setChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>status<sp/>=<sp/><sp/>safety_set_sensor_watch(sensors_watch,<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1a281a7195b264a6c42947b4f02a21e271" kindref="member">safety::unsetChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" kindref="member">SafetyAPI::unsetChannelWatch</ref>(sensor_t*<sp/>sensors_watch,<sp/>uint8_t<sp/>sensors_watch_number)</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>status<sp/>=<sp/><sp/>safety_unset_sensor_watch(sensors_watch,<sp/>sensors_watch_number);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsafety_1aac97907a3261921145749577c75695f2" kindref="member">safety::getChannelWatch</ref>(sensor_t<sp/><sp/>sensors_watch)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" kindref="member">SafetyAPI::getChannelWatch</ref>(sensor_t<sp/><sp/>sensors_watch)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Is_watched<sp/>=<sp/>safety_get_sensor_watch(sensors_watch);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Is_watched;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1afdbff478f06aed861201f50ce6255599" kindref="member">safety::setChannelReaction</ref>(safety_reaction_t<sp/>sensors_reaction)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" kindref="member">SafetyAPI::setChannelReaction</ref>(safety_reaction_t<sp/>sensors_reaction)</highlight></codeline>
 <codeline lineno="63"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_set_sensor_reaction(sensors_reaction);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">safety_reaction_t<sp/><ref refid="classsafety_1a16b2849b2e40199f9ebf45fc8ce4e3d9" kindref="member">safety::getChannelReaction</ref>()</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">safety_reaction_t<sp/><ref refid="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" kindref="member">SafetyAPI::getChannelReaction</ref>()</highlight></codeline>
 <codeline lineno="69"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_reaction_t<sp/>sensors_reaction<sp/>=<sp/>safety_get_sensor_reaction();</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sensors_reaction;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1afc05f1ba6b855be36995942fd5d0c8e0" kindref="member">safety::setChannelThresholdMax</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_max,<sp/>uint8_t<sp/>sensors_threshold_number)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" kindref="member">SafetyAPI::setChannelThresholdMax</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_max,<sp/>uint8_t<sp/>sensors_threshold_number)</highlight></codeline>
 <codeline lineno="75"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ret<sp/>=<sp/><sp/>safety_set_sensor_threshold_max(sensors_threshold,<sp/>threshold_max,<sp/>sensors_threshold_number);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1a67df559780c4c86b869cb3f39edfc2c2" kindref="member">safety::setChannelThresholdMin</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_min,<sp/>uint8_t<sp/>sensors_threshold_number)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" kindref="member">SafetyAPI::setChannelThresholdMin</ref>(sensor_t<sp/>*sensors_threshold,<sp/>float32_t<sp/>*threshold_min,<sp/>uint8_t<sp/>sensors_threshold_number)</highlight></codeline>
 <codeline lineno="81"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ret<sp/>=<sp/><sp/>safety_set_sensor_threshold_min(sensors_threshold,<sp/>threshold_min,<sp/>sensors_threshold_number);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">float32_t<sp/><ref refid="classsafety_1a84e8a8b84530157cf79ff878ac065682" kindref="member">safety::getChannelThresholdMax</ref>(sensor_t<sp/>sensors_threshold)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">float32_t<sp/><ref refid="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" kindref="member">SafetyAPI::getChannelThresholdMax</ref>(sensor_t<sp/>sensors_threshold)</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/>threshold<sp/>=<sp/>safety_get_sensor_threshold_max(sensors_threshold);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>threshold;</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">float32_t<sp/><ref refid="classsafety_1a7fb81fd29e741b9b903fe73a0eb60b43" kindref="member">safety::getChannelThresholdMin</ref>(sensor_t<sp/>sensors_threshold)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">float32_t<sp/><ref refid="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" kindref="member">SafetyAPI::getChannelThresholdMin</ref>(sensor_t<sp/>sensors_threshold)</highlight></codeline>
 <codeline lineno="93"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/>threshold<sp/>=<sp/>safety_get_sensor_threshold_min(sensors_threshold);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>threshold;</highlight></codeline>
 <codeline lineno="96"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsafety_1a6cddb28067c7438a87e014596def40b9" kindref="member">safety::getChannelError</ref>(sensor_t<sp/>sensors_error)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" kindref="member">SafetyAPI::getChannelError</ref>(sensor_t<sp/>sensors_error)</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>error_status<sp/>=<sp/>safety_get_sensor_error(sensors_error);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>error_status;</highlight></codeline>
 <codeline lineno="102"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1afb77e029ac7817874cb1635857d86b8a" kindref="member">safety::enableSafetyApi</ref>()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" kindref="member">SafetyAPI::enableSafetyApi</ref>()</highlight></codeline>
 <codeline lineno="105"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_enable_task();</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsafety_1ae965ffc7ed12325b1d7703d902d3e3d4" kindref="member">safety::disableSafetyApi</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" kindref="member">SafetyAPI::disableSafetyApi</ref>()</highlight></codeline>
 <codeline lineno="110"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>safety_disable_task();</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1a15e26ec4a881100062f0d94596de93b5" kindref="member">safety::storeThreshold</ref>(sensor_t<sp/>sensor_threshold_store)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" kindref="member">SafetyAPI::storeThreshold</ref>(sensor_t<sp/>sensor_threshold_store)</highlight></codeline>
 <codeline lineno="115"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ret<sp/>=<sp/>safety_store_threshold_in_nvs(sensor_threshold_store);</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal">int8_t<sp/><ref refid="classsafety_1a35fb7ff7a08c40f403bbdc84dcad94f7" kindref="member">safety::retrieveThreshold</ref>(sensor_t<sp/>sensor_threshold_retrieve)</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ret<sp/>=<sp/>safety_retrieve_threshold_in_nvs(sensor_threshold_retrieve);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">int8_t<sp/><ref refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" kindref="member">SafetyAPI::retrieveThreshold</ref>(sensor_t<sp/>sensor_threshold_retrieve)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ret<sp/>=<sp/>safety_retrieve_threshold_in_nvs(sensor_threshold_retrieve);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp"/>
   </compounddef>

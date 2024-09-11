@@ -23,7 +23,7 @@
 * **doFullDispatch** ([**DataAPI**](classDataAPI.md))
 * **disableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **disablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
-* **disableSafetyApi** ([**safety**](classsafety.md))
+* **disableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
 
 
 ## e
@@ -33,7 +33,7 @@
 * **enableChannel** ([**DataAPI**](classDataAPI.md))
 * **enableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **enablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
-* **enableSafetyApi** ([**safety**](classsafety.md))
+* **enableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
 
 
 ## g
@@ -72,12 +72,12 @@
 * **getPeriodUs** ([**PwmHAL**](classPwmHAL.md))
 * **getResolutionPs** ([**PwmHAL**](classPwmHAL.md))
 * **getSwitchConvention** ([**PwmHAL**](classPwmHAL.md))
+* **getChannelError** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelReaction** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
+* **getChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
 * **getTimer4IncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
-* **getChannelError** ([**safety**](classsafety.md))
-* **getChannelReaction** ([**safety**](classsafety.md))
-* **getChannelThresholdMax** ([**safety**](classsafety.md))
-* **getChannelThresholdMin** ([**safety**](classsafety.md))
-* **getChannelWatch** ([**safety**](classsafety.md))
 
 
 ## i
@@ -89,9 +89,9 @@
 * **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
+* **init\_shield** ([**SafetyAPI**](classSafetyAPI.md))
 * **initMaster** ([**SyncCommunication**](classSyncCommunication.md))
 * **initSlave** ([**SyncCommunication**](classSyncCommunication.md))
-* **init\_shield** ([**safety**](classsafety.md))
 
 
 ## p
@@ -105,7 +105,7 @@
 * **retrieveConversionParametersFromMemory** ([**DataAPI**](classDataAPI.md))
 * **readPin** ([**GpioHAL**](classGpioHAL.md))
 * **resetPin** ([**GpioHAL**](classGpioHAL.md))
-* **retrieveThreshold** ([**safety**](classsafety.md))
+* **retrieveThreshold** ([**SafetyAPI**](classSafetyAPI.md))
 
 
 ## s
@@ -146,6 +146,11 @@
 * **stopDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **stopSingleOutput** ([**PwmHAL**](classPwmHAL.md))
 * **startTransmission** ([**Rs485Communication**](classRs485Communication.md))
+* **setChannelReaction** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
+* **setChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
+* **storeThreshold** ([**SafetyAPI**](classSafetyAPI.md))
 * **startBackground** ([**TaskAPI**](classTaskAPI.md))
 * **startCritical** ([**TaskAPI**](classTaskAPI.md))
 * **stopBackground** ([**TaskAPI**](classTaskAPI.md))
@@ -153,11 +158,6 @@
 * **suspendBackgroundMs** ([**TaskAPI**](classTaskAPI.md))
 * **suspendBackgroundUs** ([**TaskAPI**](classTaskAPI.md))
 * **startLogTimer4IncrementalEncoder** ([**TimerHAL**](classTimerHAL.md))
-* **setChannelReaction** ([**safety**](classsafety.md))
-* **setChannelThresholdMax** ([**safety**](classsafety.md))
-* **setChannelThresholdMin** ([**safety**](classsafety.md))
-* **setChannelWatch** ([**safety**](classsafety.md))
-* **storeThreshold** ([**safety**](classsafety.md))
 
 
 ## t
@@ -174,11 +174,11 @@
 
 ## u
 
+* **unsetChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
 * **usart1Init** ([**UartHAL**](classUartHAL.md))
 * **usart1ReadChar** ([**UartHAL**](classUartHAL.md))
 * **usart1SwapRxTx** ([**UartHAL**](classUartHAL.md))
 * **usart1WriteChar** ([**UartHAL**](classUartHAL.md))
-* **unsetChannelWatch** ([**safety**](classsafety.md))
 
 
 ## w

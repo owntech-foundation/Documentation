@@ -1,10 +1,10 @@
 
 
-# Class safety
+# Class SafetyAPI
 
 
 
-[**ClassList**](annotated.md) **>** [**safety**](classsafety.md)
+[**ClassList**](annotated.md) **>** [**SafetyAPI**](classSafetyAPI.md)
 
 
 
@@ -104,7 +104,7 @@
 
 _disable the safet API fault detection task_ 
 ```C++
-void safety::disableSafetyApi () 
+void SafetyAPI::disableSafetyApi () 
 ```
 
 
@@ -129,7 +129,7 @@ none
 
 _enable the safet API fault detection task_ 
 ```C++
-void safety::enableSafetyApi () 
+void SafetyAPI::enableSafetyApi () 
 ```
 
 
@@ -154,7 +154,7 @@ none
 
 _check if the sensor faced an error (went over/under threshold)_ 
 ```C++
-bool safety::getChannelError (
+bool SafetyAPI::getChannelError (
     sensor_t sensors_error
 ) 
 ```
@@ -199,7 +199,7 @@ true if the sensor faced an error, false if not
 
 _returns the reaction to do when encoutering an error._ 
 ```C++
-safety_reaction_t safety::getChannelReaction () 
+safety_reaction_t SafetyAPI::getChannelReaction () 
 ```
 
 
@@ -224,7 +224,7 @@ Open\_Circuit or Short\_Circuit
 
 _get the maximum threshold of the selected sensor_ 
 ```C++
-float32_t safety::getChannelThresholdMax (
+float32_t SafetyAPI::getChannelThresholdMax (
     sensor_t sensors_threshold
 ) 
 ```
@@ -269,7 +269,7 @@ the maximum threshold
 
 _get the minimum threshold of the selected sensor_ 
 ```C++
-float32_t safety::getChannelThresholdMin (
+float32_t SafetyAPI::getChannelThresholdMin (
     sensor_t sensors_threshold
 ) 
 ```
@@ -314,7 +314,7 @@ the minimum threshold
 
 _check if a sensor is being monitored or not._ 
 ```C++
-bool safety::getChannelWatch (
+bool SafetyAPI::getChannelWatch (
     sensor_t sensors_watch
 ) 
 ```
@@ -359,7 +359,7 @@ true if the sensor is being monitored, false if not
 
 _Initializes thresholds min/max with the default value from the device tree, if values were stored and found in the flash they will be used instead. All the sensors will be monitored to detect potential faults in voltage/current._ 
 ```C++
-void safety::init_shield () 
+void SafetyAPI::init_shield () 
 ```
 
 
@@ -384,7 +384,7 @@ none
 
 _Initializes thresholds min/max with the default value from the device tree, if values were stored and found in the flash they will be used instead. All the sensors will be monitored to detect potential faults in voltage/current._ 
 ```C++
-void safety::init_shield (
+void SafetyAPI::init_shield (
     sensor_t * sensors_watch,
     uint8_t sensors_watch_number
 ) 
@@ -420,7 +420,7 @@ none
 
 _store the current minimum and maximum threshold in the flash (non volatile memory)_ 
 ```C++
-int8_t safety::retrieveThreshold (
+int8_t SafetyAPI::retrieveThreshold (
     sensor_t sensor_threshold_retrieve
 ) 
 ```
@@ -432,18 +432,7 @@ int8_t safety::retrieveThreshold (
 **Parameters:**
 
 
-* `sensor_threshold_retrieve` the sensor for which we store the threshold in the NVS 
-  * V1\_LOW 
-  * V2\_LOW 
-  * V\_HIGH 
-  * I1\_LOW 
-  * I2\_LOW 
-  * I\_HIGH 
-  * TEMP\_SENSOR 
-  * EXTRA\_MEAS 
-  * ANALOG\_COMM
-
-
+* `sensor_threshold_retrieve` the sensor for which we store the threshold in the NVS
 
 
 
@@ -465,7 +454,7 @@ int8_t safety::retrieveThreshold (
 
 _Set the reaction to do if an error has been detected. Choose either open-circuit (both switches are opened and no power flows in the output) or short-circuit (high-side switch is opened, and low-side is closed maintaining the output in short-circuit)_ 
 ```C++
-void safety::setChannelReaction (
+void SafetyAPI::setChannelReaction (
     safety_reaction_t sensors_reaction
 ) 
 ```
@@ -503,7 +492,7 @@ none
 
 _set the maximum threshold for the sensors present in the list safety\_sensors._ 
 ```C++
-int8_t safety::setChannelThresholdMax (
+int8_t SafetyAPI::setChannelThresholdMax (
     sensor_t * sensors_threshold,
     float32_t * threshold_max,
     uint8_t sensors_threshold_number
@@ -541,7 +530,7 @@ int8_t safety::setChannelThresholdMax (
 
 _set the minimum threshold for the sensors present in the list safety\_sensors._ 
 ```C++
-int8_t safety::setChannelThresholdMin (
+int8_t SafetyAPI::setChannelThresholdMin (
     sensor_t * sensors_threshold,
     float32_t * threshold_min,
     uint8_t sensors_threshold_number
@@ -579,7 +568,7 @@ int8_t safety::setChannelThresholdMin (
 
 _Enables the monitoring of the selected sensors for safety._ 
 ```C++
-int8_t safety::setChannelWatch (
+int8_t SafetyAPI::setChannelWatch (
     sensor_t * sensors_watch,
     uint8_t sensors_watch_number
 ) 
@@ -615,7 +604,7 @@ int8_t safety::setChannelWatch (
 
 _store the current minimum and maximum threshold in the flash (non volatile memory)_ 
 ```C++
-int8_t safety::storeThreshold (
+int8_t SafetyAPI::storeThreshold (
     sensor_t sensor_threshold_store
 ) 
 ```
@@ -627,18 +616,7 @@ int8_t safety::storeThreshold (
 **Parameters:**
 
 
-* `sensor_threshold_store` the sensor for which we store the threshold in the NVS 
-  * V1\_LOW 
-  * V2\_LOW 
-  * V\_HIGH 
-  * I1\_LOW 
-  * I2\_LOW 
-  * I\_HIGH 
-  * TEMP\_SENSOR 
-  * EXTRA\_MEAS 
-  * ANALOG\_COMM
-
-
+* `sensor_threshold_store` the sensor for which we store the threshold in the NVS
 
 
 
@@ -660,7 +638,7 @@ int8_t safety::storeThreshold (
 
 _Disables the monitoring of the selected sensors for safety._ 
 ```C++
-int8_t safety::unsetChannelWatch (
+int8_t SafetyAPI::unsetChannelWatch (
     sensor_t * sensors_watch,
     uint8_t sensors_watch_number
 ) 

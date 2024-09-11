@@ -204,7 +204,7 @@
 
 * **send\_ctx** ([**thingset\_isotp.cpp**](thingset__isotp_8cpp.md))
 * **storage\_version\_in\_nvs** ([**nvs\_storage.c**](nvs__storage_8c.md))
-* **Safety** ([**SafetyAPI.cpp**](SafetyAPI_8cpp.md), [**SafetyAPI.h**](SafetyAPI_8h.md))
+* **safety** ([**SafetyAPI.cpp**](SafetyAPI_8cpp.md), [**SafetyAPI.h**](SafetyAPI_8h.md))
 * **shield** ([**ShieldAPI.cpp**](ShieldAPI_8cpp.md), [**ShieldAPI.h**](ShieldAPI_8h.md))
 * **spin** ([**SpinAPI.cpp**](SpinAPI_8cpp.md), [**SpinAPI.h**](SpinAPI_8h.md))
 * **source\_registers** ([**dma.cpp**](dma_8cpp.md))

@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**safety**](classsafety.md) | [**Safety**](#variable-safety)  <br> |
+|  [**SafetyAPI**](classSafetyAPI.md) | [**safety**](#variable-safety)  <br> |
 
 
 
@@ -85,11 +85,11 @@
 
 
 
-### variable Safety 
+### variable safety 
 
 
 ```C++
-safety Safety;
+SafetyAPI safety;
 ```
 
 
