@@ -4050,7 +4050,8 @@
 
   <h1>Environment Setup</h1>
 
-<p>If you use or wish to use Visual Studio Code, follow this tutorial to set up your work environment. It will use a “Blinky” (blinking LED) example which requires no other hardware than you OwnTech board.</p>
+<p>If you use or wish to use Visual Studio Code, follow this tutorial to set up your work environment.
+It will use a “Blinky” (blinking LED) example which requires no other hardware than your OwnTech board.</p>
 <h2 id="requirements">Requirements</h2>
 <p>Before we start, make sure your machine meets all the requirements below.</p>
 <div class="admonition tips">
@@ -4085,7 +4086,7 @@
 </ul>
 </li>
 <li><strong>CMake:</strong> If you do not have CMake installed, get it here <a href="https://cmake.org/download/">CMake Installer</a></li>
-<li>64 bit linux installation</li>
+<li>64 bit Linux distribution</li>
 <li>Write permission for the serial port (<code>/dev/ttyACM0</code>): See PlatformIO documentation which provides a <a href="https://docs.platformio.org/en/latest/core/installation/udev-rules.html">udev rules file</a></li>
 <li><strong>Internet connection</strong></li>
 </ul>
@@ -4097,13 +4098,13 @@
 <p>To use OwnTech's system, we will use:</p>
 <ul>
 <li><strong>Visual Studio Code</strong> - The platform or Integrated Development Environment we will use to write code.</li>
-<li><strong>PlatformIO</strong> - A Visual Studio Code plugin that is a toolbox for microcontrollers</li>
+<li><strong>PlatformIO</strong> - A Visual Studio Code extension that is a toolbox for microcontrollers</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Required Disk Space</p>
 <p>Make sure that you have more than 2GB on your hard drive so that PlatformIO can download all the required files without issues.</p>
 </div>
-<p>Here is how to setup the work environment:</p>
+<p>Here is how to set up this environment.</p>
 <h3 id="step-1-empty-folder">Step 1 - Empty folder</h3>
 <p>Create an empty folder in which you will work throughout the tutorials.</p>
 <div class="admonition warning">
@@ -4127,16 +4128,15 @@
 <p>An overview of VS Code user interface is available in their official <a href="https://code.visualstudio.com/docs/getstarted/userinterface">Get Started / User Interface</a> documentation.</p>
 <h3 id="step-3-install-platformio">Step 3 - Install PlatformIO</h3>
 <p>Launch Visual Studio Code.</p>
-<p>In the “Activity Bar”, located on the far left-hand side, click on the Extensions icon (1)
-{ .annotate } to open the VS Code Extensions manager in the Primary Side Bar.</p>
+<p class="annotate">In the “Activity Bar”, located on the far left-hand side, click on the Extensions icon (1)
+to open the VS Code Extensions manager in the Primary Side Bar.</p>
 <ol>
-<li>The icon looks like this: <img alt="extension_icon" src="../images/icon-extension.png" /></li>
+<li>The VS Code Extensions manager icon looks like this: <img alt="extension_icon" src="../images/icon-extension.png" /></li>
 </ol>
 <p>Using the search box in the Extensions Marketplace, search for the “PlatformIO IDE” extension and install it.</p>
 <p>Finally, restart Visual Studio Code when you are prompted to do so.</p>
 <p><img alt="PlatformIO installation" src="../images/fig1-platformio_installation.png" /></p>
-<p>Once installed, you should see that PlatformIO has appended its “alien head” icon (1)
-{ .annotate } to the Activity Bar.</p>
+<p class="annotate">Once installed, you should see that PlatformIO has appended its “alien head” icon (1) to the Activity Bar.</p>
 <ol>
 <li>The PlatformIO icon looks like this: <img alt="platformio_icon" src="../images/icon-platformio.png" /></li>
 </ol>
@@ -4153,7 +4153,7 @@ to open PlatformIO in the Primary Side Bar. It should contain:</p>
 </ul>
 <h3 id="step-5-clone-our-core-repository">Step 5 - Clone our Core repository</h3>
 <p>In PlatformIO's “Quick Access” view, select the “Miscelleanous / Clone Git Project” action.
-This will open a field in which you should enter the following Git reposity address:</p>
+This will open a field in which you should enter the following Git repository address:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://github.com/owntech-foundation/Core
 </code></pre></div>
 <p>PlatformIO will then ask you in which folder the project should be cloned.
@@ -4171,7 +4171,7 @@ as highlighted in the following screenshot:</p>
 <p><img alt="View of the main branch" src="../images/fig3-main_branch.png" /></p>
 <p>Now the project is successfully opened and you should see two tabs in the Editor area:</p>
 <ul>
-<li>the “PIO Home” tab thay we will not use here
+<li>the “PIO Home” tab that we will not use here
   (remark: PIO Home’s Devices tab can be used to check that your board is well detected once connected)</li>
 <li>the <code>platformio.ini</code> <a href="https://docs.platformio.org/en/latest/projectconf/index.html">Project Configuration File</a>,
   which is already well configured for the present example</li>
@@ -4207,7 +4207,7 @@ located in the <code>src</code> folder. VS Code file Explorer can be opened from
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="USB Connection of a SPIN board embeeded onto a TWIST board" src="../images/example-fig1-usb_connection.svg" /></p>
+<p><img align="left" alt="USB Connection of a SPIN board embedded onto a TWIST board" src="../images/example-fig1-usb_connection.svg" /></p>
 <ul>
 <li>Connect the SPIN board to your computer via the USB.</li>
 <li>Notice that the LED PWR must turn on.</li>
@@ -4226,7 +4226,7 @@ To do so, press the Upload icon (<code>→</code>, just to the right of the Buil
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Coffee time 2</p>
-<p>During your first upload, PlatformIO will automatically download the necessary depencies to send data to the SPIN board. Depending on your machine and your internet connection, this might take some time.</p>
+<p>During your first upload, PlatformIO will automatically download the necessary dependencies to send data to the SPIN board. Depending on your machine and your internet connection, this might take some time.</p>
 <p>Time to pour another coffee.</p>
 </div>
 <details class="bug">
@@ -4254,7 +4254,7 @@ The blinking period is set at the last line of the <code>loop_background_task()<
 (<code>1000</code> by default, expressed in ms).
 After saving the modified code, you will need to redo the Build and Upload steps.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p>From our exeprience, there are multiple types of errors that can block your compilation.</p>
+<p>From our experience, there are multiple types of errors that can block your compilation.</p>
 <p>Check the list below of possible issues</p>
 <details class="bug">
 <summary>Troubleshooting</summary>
@@ -4272,7 +4272,7 @@ After saving the modified code, you will need to redo the Build and Upload steps
 <li>You should preferably have your project folder as close as possible to the root</li>
 <li>Be sure the SPIN board PWR LED lights up correctly when connected to the USB</li>
 <li>Check your USB-C cable is working and can handle data</li>
-<li>Check your internet connectin is up and running</li>
+<li>Check your internet connection is up and running</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -4282,7 +4282,7 @@ After saving the modified code, you will need to redo the Build and Upload steps
 <li><strong>CMake:</strong> If you do not have CMake installed, get it here <a href="https://cmake.org/download/">CMake Installer</a></li>
 <li>Be sure the SPIN board PWR LED lights up correctly when connected to the USB</li>
 <li>Check your USB-C cable is working and can handle data</li>
-<li>Check your internet connectin is up and running</li>
+<li>Check your internet connection is up and running</li>
 <li>If you have a problem with <code>mcumgr</code>, please refer to the <a href="https://github.com/owntech-foundation/Core/issues/5">ongoing issue</a> to handle it.</li>
 </ul>
 </div>
@@ -4291,10 +4291,10 @@ After saving the modified code, you will need to redo the Build and Upload steps
 <li><strong>Git:</strong> If you do not have git installed, get it here <a href="https://git-scm.com/download/linux">git for Linux</a></li>
 <li><strong>Python3:</strong> If you do not have python3 installed, get it here <a href="https://docs.python-guide.org/starting/install3/linux/">Python3 Installers</a></li>
 <li><strong>CMake:</strong> If you do not have CMake installed, get it here <a href="https://cmake.org/download/">CMake Installer</a></li>
-<li>Check that your Linux is 64bits</li>
+<li>Check that your Linux is 64 bits</li>
 <li>Be sure the SPIN board PWR LED lights up correctly when connected to the USB</li>
 <li>Check your USB-C cable is working and can handle data</li>
-<li>Check your internet connectin is up and running</li>
+<li>Check your internet connection is up and running</li>
 </ul>
 </div>
 </div>
