@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#include" class="md-skip">
+        <a href="#quick-start-with-spin-data-api" class="md-skip">
           Skip to content
         </a>
       
@@ -2015,11 +2015,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-start-with-spin-data-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Spin Data API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start with Spin Data API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#include" class="md-nav__link">
     <span class="md-ellipsis">
       Include
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4088,11 +4121,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quick-start-with-spin-data-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Spin Data API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start with Spin Data API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#include" class="md-nav__link">
     <span class="md-ellipsis">
       Include
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4368,17 +4434,62 @@
 
 <div class="admonition note">
 <p>Data acquisition is the process of sampling signals that measure real-world physical conditions and converting the resulting samples into digital numeric values that can be manipulated by a computer.</p>
-<p>In the powerAPI context, the DataAPI helps the user retrieve the values sampled by the <a href="../adc/">ADC</a>.</p>
+<p>In the PowerAPI context, the DataAPI helps the user to easily configure the ADC and retrieve the acquired values.</p>
 <p>The Data API configures the DMAs to store the ADCs acquisitions for the Spin board, and dispatches them in per-channel buffers that can be read by the user. The module also provides functions to convert the raw values acquired by the sensors into values in the adequate unit.</p>
-<p>If using a shield such as Twist, channels are automatically made available for configuration and conversions functions are automatically calibrated using the device tree.</p>
+<p>If using a shield such as Twist, a dedicated interface for sensors configuration is made available by the <a href="../twistAPI/">Shield sensors API</a>.</p>
 </div>
-<h2 id="include">Include</h2>
+<h2 id="quick-start-with-spin-data-api">Quick start with Spin Data API</h2>
+<h3 id="include">Include</h3>
+<p>Data API is part of Spin API: it is made available by including the <code>SpinAPI.h</code> header. From there, a <code>spin.data</code> object is available to interact with the API.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;DataAPI.h&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
 </code></pre></div>
 </div>
-<p>To use the Data API, include <code>DataAPI.h</code> in your source file. From there, a <code>data</code> object is available to interact with the API.</p>
+<h3 id="setup-phase">Setup phase</h3>
+<p>To use Data API, the first stage is to indicate on which pin of the Spin board you want to acquire data. Not all pins can be used for that purpose: the pin must be linked to an ADC. Here is the list of pins that provide ADC capabilities:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SPIN v1.1.0</label><label for="__tabbed_1_2">SPIN v1.0.0</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img align="left" alt="SPIN_1_1_0_ADC_pinout_main" src="../images/SPIN_1.1.0_main_adc.png" width="451" />
+<img alt="SPIN_1_1_0_ADC_pinout_inner" src="images/SPIN_1.1.0_inner_adc.ppng" width="243" /></p>
+</div>
+<div class="tabbed-block">
+<p><img align="left" alt="SPIN_1_0_0_ADC_pinout_main" src="../images/SPIN_1.0.0_main_adc.png" width="451" />
+<img alt="SPIN_1_0_0_ADC_pinout_inner" src="../images/SPIN_1.0.0_inner_adc.png" width="243" /></p>
+</div>
+</div>
+</div>
+<p>To indicate that the value of a pin should be acquired, the acquisition must be enabled on this pin in the setup phase. This can be done using the <code>enableAcquisition()</code> function:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// Pins connected to a single ADC:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>spin.data.enableAcquisition(35); // Enable acquisition on pin 35 (will use ADC 2)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>spin.data.enableAcquisition(12); // Enable acquisition on pin 12 (will use ADC 5)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>// Pins connected to multiple ADCs:
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>spin.data.enableAcquisition(5, ADC_4); // Acquisition on pin 5 using ADC 4
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>spin.data.enableAcquisition(31); // Acquisition on pin 31 (will use ADC 1 by default)
+</code></pre></div>
+</div>
+<p>Note that providing the ADC number is not required. For pins connected to multiples ADC, the ADC with the lowest number will be used if no ADC is specified. Specifying an ADC number that is not available on the pin will result in an error.</p>
+<p>By default, the acquisitions are software-triggered, which means that when your program will want to acquire a measure, you'll have to trigger the acquisition. Other means of triggering the measure exists, notably periodic acquisitions, see <a href="../adc/#synchronous-with-pwms">detailed information</a>. If you need to change the trigger source, this must be done at this point.</p>
+<p>At the end of all the hardware configuration (including other modules), the Data API must be started using the <code>start()</code> function. Note that in case you use an <a href="../scheduling/">uninterruptible task</a>, you do not need to start the Data API manually, this will be done automatically when the uninterruptible task is started.</p>
+<h3 id="obtaining-data">Obtaining data</h3>
+<p>After the Data API has been started, it becomes possible to get data obtained from the enabled pins. Depending on the trigger source, you'll have to trigger the acquisition then read the value, or directly read the value.</p>
+<p>If software-trigged is used for an ADC (default configuration), the acquisition must first be triggered, then the value read. If the acquisition is configured to be periodic for ann ADC, directly read the value.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Sofware-triggered acquisition</label><label for="__tabbed_2_2">Periodic acquisition</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>spin.data.triggerAcquisition(ADC_2); // Trigger acquisitions of all pins linked to ADC 2
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>spin.data.getLatestValue(35); // Get value read on pin 35
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>spin.data.getLatestValue(35); // Get value read on pin 35
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="data-dispatching">Data dispatching</h2>
 <p>When using the control task (critical task) data are dispatched at the start, which means there are ready to be retrieved.</p>
 <p><img alt="data dispatch" src="../images/data_dispatch.svg" /></p>
@@ -4388,7 +4499,7 @@
 <p>After channels have been enabled (and optionnally conversion parameters have been set), there are two ways of starting the API, depending on your use of other OwnTech APIs. If your code uses an <a href="../scheduling/">uninterruptible task</a>, nothing more is required, the Data API will be started automatically when task is started. However, if you do not have an uninterruptible task in your code, you need to manually start the API by calling <code>data.start()</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Software triggered</label><label for="__tabbed_1_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Software triggered</label><label for="__tabbed_3_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -4413,33 +4524,33 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered ADC</label><label for="__tabbed_2_2">Hardware triggered ADC</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Software triggered ADC</label><label for="__tabbed_4_2">Hardware triggered ADC</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">data</span><span class="p">.</span><span class="n">triggerAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">data</span><span class="p">.</span><span class="n">triggerAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/* PWM unit initialization */</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcDecimation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">VOLTAGE_MODE</span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initUnit</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadTime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startDualOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="cm">/* ADC initialization */</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; HRTIM event 1</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; acquire 1 pin at each event</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">data</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cm">/* PWM unit initialization */</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcDecimation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">VOLTAGE_MODE</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initUnit</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadTime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startDualOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="cm">/* ADC initialization */</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; HRTIM event 1</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; acquire 1 pin at each event</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">data</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
 </code></pre></div>
 </div>
 </div>
@@ -4449,10 +4560,10 @@
 <p>Getting the last measured value to feed the control algorithm is super simple.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Get last value</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Get last value</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>data.getLatest(1, 5)
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>data.getLatest(1, 5)
 </code></pre></div>
 This will retrieve the last sampled value of ADC 1 pin 5.</p>
 </div>
@@ -4463,10 +4574,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 <p>DataAPI contains commodity functions to convert the raw binary measurement values in meaningful units.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Converting in volts</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Converting in volts</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>data.setParameters()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>data.setParameters()
 </code></pre></div>
 </div>
 </div>
@@ -4476,10 +4587,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 <p>DataAPI contains commodity function to retrieve an array of raw values that can be fed to a <a href="controlLibrary/controlLibrary/docs/use-filters">post processing filter</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Retrieve 5 values</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Retrieve 5 values</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>data.getRawValues()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>data.getRawValues()
 </code></pre></div>
 </div>
 </div>
@@ -4573,10 +4684,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-configurediscontinuousmode">function configureDiscontinuousMode</h3>
 <p><em>Set the discontinuous count for an ADC. By default, ADCs are not in discontinuous mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">dicontinuous_count</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">dicontinuous_count</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Note:</strong></p>
@@ -4590,10 +4701,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-configuretriggersource">function configureTriggerSource</h3>
 <p><em>Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is on HRTIM1, and ADC 3/4 is software-triggered.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">configureTriggerSource</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">adc_ev_src_t</span><span class="w"> </span><span class="n">trigger_source</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">configureTriggerSource</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">adc_ev_src_t</span><span class="w"> </span><span class="n">trigger_source</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
@@ -4605,10 +4716,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-convertvalue">function convertValue</h3>
 <p><em>Use this function to convert values obtained using matching data.getRawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">convertValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">raw_value</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">convertValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">raw_value</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled.</p>
@@ -4623,10 +4734,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-enableacquisition">function enableAcquisition</h3>
 <p><em>This function is used to enable acquisition on a Spin PIN with a given ADC.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">enableAcquisition</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="o">=</span><span class="n">DEFAULT_ADC</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">enableAcquisition</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span><span class="o">=</span><span class="n">DEFAULT_ADC</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>Not any pin can be used for acquisiton: the pin must be linked to a channel of the given ADC. Refer to Spin pinout image for PIN/ADC relations.</p>
@@ -4645,9 +4756,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-getconversionparametertype">function getConversionParameterType</h3>
 <p><em>Use this function to get the current conversion type for the chosen channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getConversionParameterType</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getConversionParameterType</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the channel is enabled.</p>
@@ -4661,10 +4772,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-getconversionparametervalue">function getConversionParameterValue</h3>
 <p><em>Use this function to get the current conversion parameteres for the chosen channel .</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getConversionParameterValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">parameter_t</span><span class="w"> </span><span class="n">parameter_name</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getConversionParameterValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">parameter_t</span><span class="w"> </span><span class="n">parameter_name</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the channel is enabled.</p>
@@ -4679,10 +4790,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-getlatestvalue">function getLatestValue</h3>
 <p><em>This function returns the latest acquired measure expressed in the relevant unit for the channel: Volts, Amperes, or Degree Celcius.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getLatestValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataValid</span><span class="o">=</span><span class="k">nullptr</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getLatestValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataValid</span><span class="o">=</span><span class="k">nullptr</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module must have been started, either explicitly or by starting the Uninterruptible task.</p>
@@ -4702,10 +4813,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-getrawvalues">function getRawValues</h3>
 <p><em>Function to access the acquired data for specified pin. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getRawValues</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getRawValues</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module must have been started, either explicitly or by starting the Uninterruptible task.</p>
@@ -4726,10 +4837,10 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-getvalues">function getValues</h3>
 <p><em>Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getValues</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">getValues</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Warning:</strong></p>
 <p>This is an expensive function. Calling this function trigger the conversion of all values acquired since the last call. If only the lastet value is required, it is advised to call <a href="../../../powerAPI/classDataAPI/#function-getlatestvalue"><strong>getLatestValue()</strong></a> instead. If multiple values are required, but not all, it is advised to call <a href="../../../powerAPI/classDataAPI/#function-getrawvalues"><strong>getRawValues()</strong></a> instead, then explicitely convert required values using <a href="../../../powerAPI/classDataAPI/#function-convertvalue"><strong>convertValue()</strong></a>.</p>
@@ -4748,9 +4859,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-peeklatestvalue">function peekLatestValue</h3>
 <p><em>Function to access the latest value available from a pin, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">peekLatestValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">peekLatestValue</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module must have been started, either explicitly or by starting the Uninterruptible task.</p>
@@ -4764,9 +4875,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-retrieveconversionparametersfrommemory">function retrieveConversionParametersFromMemory</h3>
 <p><em>Retrieved previously configured conversion parameters from persistent memory.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveConversionParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">retrieveConversionParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4778,11 +4889,11 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-setconversionparameterslinear">function setConversionParametersLinear</h3>
 <p><em>Use this function to tweak the conversion values for the channel if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersLinear</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersLinear</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span><span class="p">,</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the pin is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module must not have been started, neither explicitly nor by starting the Uninterruptible task.</p>
@@ -4796,13 +4907,13 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-setconversionparametersntcthermistor">function setConversionParametersNtcThermistor</h3>
 <p><em>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersNtcThermistor</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">r0</span><span class="p">,</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">rdiv</span><span class="p">,</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">t0</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">setConversionParametersNtcThermistor</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_num</span><span class="p">,</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">r0</span><span class="p">,</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">rdiv</span><span class="p">,</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">t0</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the sensor is enabled. The <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> must not have been started, neither explicitly nor by starting the Uninterruptible task.</p>
@@ -4818,7 +4929,7 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-start">function start</h3>
 <p><em>This functions manually starts the acquisition chain.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">start</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>If your code uses an uninterruptible task, you do not need to start Data Acquisition manually, it will automatically be started at the same time as the task as their internal behavior are intrinsically linked. If for some reason you have an uninterruptible task in your code, but do not want the Scheduling module to be in charge of Data Acquisition, you need to indicate it when starting the uninterruptible task. In that case, Data Acquisition must be manually started using this function. Note that in taht case, dispatch will use DMA interrupts which consumes a non-negligible amount of processor time and it is not advised.</p>
@@ -4832,7 +4943,7 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-started">function started</h3>
 <p><em>Checks if the module is already started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">started</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>true is the module has been started, false otherwise. </p>
@@ -4840,7 +4951,7 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-stop">function stop</h3>
 <p><em>Stops the module if it is started.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">stop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">stop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Returns:</strong></p>
 <p>0 if everything went well, -1 if there was an error. Error is triggered when trying to stop Data API while it was not started. </p>
@@ -4848,9 +4959,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-storeconversionparametersinmemory">function storeConversionParametersInMemory</h3>
 <p><em>Store the currently configured conversion parameters of a given channel in persistent memory.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeConversionParametersInMemory</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">storeConversionParametersInMemory</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin_number</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4862,9 +4973,9 @@ This will retrieve the last sampled value of ADC 1 pin 5.</p>
 
 <h3 id="function-triggeracquisition">function triggerAcquisition</h3>
 <p><em>Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DataAPI</span><span class="o">::</span><span class="n">triggerAcquisition</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Note:</strong></p>
 <p>This function can't be called before the at least one channel is enabled on the ADC and the <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>
@@ -5073,7 +5184,7 @@ It provides variants of the functions that take Twist sensors as parameters inst
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
