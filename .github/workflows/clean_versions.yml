@@ -8,6 +8,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Get branch name from repository_dispatch event
+        if: ${{ github.event_name == 'repository_dispatch' }}
+        run: |
+          branch_name="${{ github.event.client_payload.version }}"
+          echo "Triggered by branch: $branch_name"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # fetch all commits/branches, fixes fast forward issue of mike tool
       - name: Install python packages
         run: pip install mkdocs-material mkdoxy pillow cairosvg mkdocs-macros-plugin mike
       - name: Upgrade Jinja2
