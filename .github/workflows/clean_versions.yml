@@ -1,4 +1,4 @@
-name: Manual generation for OwnTech Documentation Center
+name: Clean docs branches
 on:
   workflow_dispatch:
 
@@ -8,5 +8,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    -  name: Clear all docs versions (do not uncomment except if you know what u'r doing)
-       run: mike delete dev
+      - name: Install python packages
+        run: pip install mkdocs-material mkdoxy pillow cairosvg mkdocs-macros-plugin mike
+      - name: Upgrade Jinja2
+        run: pip install Jinja2 --upgrade
+      - name: Print mkdocs version
+        run: mkdocs --version
+      - name: Make sure git user.name is configured because it is used by mike versioning tool.
+        run: git config --global user.name "${{github.actor}}"
+      - name: Make sure git user.email is configured
+        run: git config --global user.email "${{github.actor}}@users.noreply.github.com" 
+      - name: Clear all docs versions (do not uncomment except if you know what u'r doing)
+        run: mike delete dev
