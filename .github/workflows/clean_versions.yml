@@ -31,5 +31,5 @@ jobs:
         run: mike delete dev --push
       - name: List all docs current branches
         run: mike list
-      - name: Set default branch
+      - name: Set default branch --push
         run: mike set-default latest
