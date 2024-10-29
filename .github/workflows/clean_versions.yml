@@ -27,5 +27,9 @@ jobs:
         run: git config --global user.name "${{github.actor}}"
       - name: Make sure git user.email is configured
         run: git config --global user.email "${{github.actor}}@users.noreply.github.com" 
+      - name: List all docs current branches
+        run: mike list
+      - name: Set default branch
+        run: mike set-default default
       - name: Clear all docs versions (do not uncomment except if you know what u'r doing)
         run: mike delete dev
