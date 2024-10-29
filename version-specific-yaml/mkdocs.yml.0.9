@@ -1,0 +1,133 @@
+INHERIT: mkdocs-common.yml
+
+
+nav:
+    - Home:
+        - index.md
+    - Getting Started:
+        - Environment Setup: core/docs/environment_setup.md
+        - First Example: core/docs/first_example.md
+        - OwnPlot Setup: core/docs/ownplot_setup.md
+        - MATLAB:
+          - Getting started: Matlab/docs/getting_started.md
+          - First compilation: Matlab/docs/first_compilation_with_matlab.md
+          - Open loop: Matlab/docs/open_loop_buck.md
+          - Closed loop: Matlab/docs/closed_loop_buck.md
+    - Examples:
+        - Home: examples/docs/home.md
+        - SPIN:
+            - ADC:
+                - Software triggered measurement: examples/SPIN/ADC/adc_software_trigger/README.md
+                - Synchronous measurements: examples/SPIN/ADC/adc_hrtim_trigger/README.md
+            - DAC:
+                - Signal generation: examples/SPIN/DAC/signal_generation/README.md
+            - LED:
+                - Blinky: examples/SPIN/LED/blinky/README.md
+            - PWM:
+                - Duty cycle control: examples/SPIN/PWM/duty_cycle_setting/README.md
+                - Phase shift control: examples/SPIN/PWM/phase_shift/README.md
+                - Multiple PWM operation: examples/SPIN/PWM/multiple_pwm/README.md
+            - Timer:
+                - Incremental encoder: examples/SPIN/TIMER/incremental_encoder/README.md
+        - TWIST:
+            - DC DC topology examples:
+                - Buck voltage mode: examples/TWIST/DC_DC/buck_voltage_mode/README.md
+                - Buck current mode: examples/TWIST/DC_DC/buck_current_mode/README.md
+                - Boost voltage mode: examples/TWIST/DC_DC/boost_voltage_mode/README.md
+                - Interleaved Buck: examples/TWIST/DC_DC/interleaved/README.md
+            - Microgrid examples:
+                - AC client server: examples/TWIST/Microgrid/AC_client_server/README.md
+                - AC peer to peer: examples/TWIST/Microgrid/AC_peer_to_peer/README.md
+                - DC client server: examples/TWIST/Microgrid/DC_client_server/README.md
+                - DC droop: examples/TWIST/Microgrid/DC_droop/README.md
+            - DC AC topology examples:
+                - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
+                - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
+    - Power API:
+        - Home: core/docs/powerAPI.md
+        - Bootloader: bootloader/docs/getting_started.md
+        - SPIN API:
+            - Class: powerAPI/classSpinAPI.md
+            - ADC: core/docs/adc.md
+            - COMP: powerAPI/classCompHAL.md
+            - DAC: core/docs/dac.md
+            - GPIO: core/docs/gpio.md
+            - LED: powerAPI/classLedHAL.md
+            - PWM: core/docs/pwm.md
+            - TIMER: powerAPI/classTimerHAL.md
+            - UART: powerAPI/classUartHAL.md
+            - VERSION: powerAPI/classVersionHAL.md
+        - TWIST API: core/docs/twistAPI.md
+        - Data API: core/docs/dataAPI.md
+        - Task API: core/docs/scheduling.md
+        - Communication API:
+            - Class: powerAPI/classCommunicationAPI.md
+            - Analog Communication: powerAPI/classAnalogCommunication.md
+            - RS485: powerAPI/classRs485Communication.md
+            - CAN: powerAPI/classCanCommunication.md
+            - Real Time Sync: powerAPI/classSyncCommunication.md
+        - Safety API: powerAPI/classsafety.md
+    - Control Library:
+        - Getting started: controlLibrary/docs/getting-started.md
+        - Controller:
+          - Generic Controller:
+            - Principle: controlLibrary/docs/controller.md
+            - API : controlLibrary/classController.md
+          - PID:
+            - Use: controlLibrary/docs/use-pid.md
+            - API : controlLibrary/classPid.md
+            - Parameters API: controlLibrary/structPidParams.md
+          - Proportional Resonant (PR):
+            - Use: controlLibrary/docs/use-pr.md
+            - API : controlLibrary/classPr.md
+            - Parameters API: controlLibrary/structPrParams.md
+          - RST:
+            - Use: controlLibrary/docs/use-rst.md
+            - API : controlLibrary/classRST.md
+            - Parameters API: controlLibrary/structRstParams.md
+        - Filters:
+          - Intro: controlLibrary/docs/use-filters.md
+          - 1st order Low Pass Filter:
+            - Use: controlLibrary/docs/use-firstorder.md
+            - API: controlLibrary/classLowPassFirstOrderFilter.md
+          - Notch Filter:
+            - Use: controlLibrary/docs/use-notchfilter.md
+            - API: controlLibrary/classNotchFilter.md
+          - Phase Lock Loop (PLL):
+            - Use: controlLibrary/docs/use-pll.md
+            - API : controlLibrary/classPllSinus.md
+            - PllDatas API: controlLibrary/structPllDatas.md
+
+    - MATLAB:
+        - Getting started: Matlab/docs/getting_started.md
+        - First compilation: Matlab/docs/first_compilation_with_matlab.md
+        - Open loop: Matlab/docs/open_loop_buck.md
+        - Closed loop: Matlab/docs/closed_loop_buck.md
+
+    - OwnModels:
+        - Getting started with PLECS: OwnModels/docs/getting_started.md
+        - Open loop example: OwnModels/docs/first_example.md
+        - Voltage mode example: OwnModels/docs/voltage_mode_simulation.md
+
+
+    # - Hardware:
+    #     - TWIST: twist/docs/getting_started.md
+    #     - TWIST Sparse: twist/getting_started.md
+
+    - OwnPlot:
+        - OwnPlot/docs/index.md
+        - User Manual:
+            - OwnPlot/docs/user-manual/home.md
+            - Getting Started:
+                - Setup: OwnPlot/docs/user-manual/setup.md
+                - Dev board demo code: OwnPlot/docs/user-manual/dev-board-demo.md
+                - My First Port: OwnPlot/docs/user-manual/first-steps.md
+            - Components:
+                - Tabs: OwnPlot/docs/user-manual/components/tabs.md
+                - Terminal: OwnPlot/docs/user-manual/components/terminal.md
+                - Plotter: OwnPlot/docs/user-manual/components/plotter.md
+            - Troubleshooting: OwnPlot/docs/user-manual/troubleshooting.md
+        - Developer Manual:
+            - OwnPlot/docs/dev-manual/home.md
+            - Architecture: OwnPlot/docs/dev-manual/arch.md
+
