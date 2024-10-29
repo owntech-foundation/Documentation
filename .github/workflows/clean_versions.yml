@@ -1,0 +1,12 @@
+name: Manual generation for OwnTech Documentation Center
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    -  name: Clear all docs versions (do not uncomment except if you know what u'r doing)
+       run: mike delete dev
