@@ -13,10 +13,6 @@
         <link rel="canonical" href="https://docs.owntech.org/1.0.0/core/docs/taskAPI/">
       
       
-        <link rel="prev" href="../shieldAPI/">
-      
-      
-        <link rel="next" href="../../../powerAPI/classCommunicationAPI/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Task API - OwnTech Documentation Center</title>
+        <title>taskAPI - OwnTech Documentation Center</title>
       
     
     
@@ -126,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task API
+              taskAPI
             
           </span>
         </div>
@@ -275,12 +271,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../powerAPI/" class="md-tabs__link">
           
   
@@ -1608,28 +1602,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1640,7 +1629,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Power API
@@ -1755,11 +1744,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataAPI/" class="md-nav__link">
+      <a href="../adc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Data API
+    ADC
   </span>
   
 
@@ -1916,6 +1905,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../powerAPI/classVersionHAL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VERSION
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1931,11 +1941,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../shieldAPI/" class="md-nav__link">
+      <a href="../twistAPI.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Shield API
+    TWIST API
   </span>
   
 
@@ -1949,28 +1959,31 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+    <li class="md-nav__item">
+      <a href="../dataAPI/" class="md-nav__link">
+        
   
   <span class="md-ellipsis">
-    Task API
+    Data API
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1979,243 +1992,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
-    <span class="md-ellipsis">
-      Include
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploying-a-real-time-control-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploying a real time control task
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying a real time control task">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-control-task-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      The control task sources
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The control task sources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-pwm-carrier" class="md-nav__link">
-    <span class="md-ellipsis">
-      The PWM carrier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#independant-timer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Independant timer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization sequence
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#non-time-critical-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non time critical tasks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Non time critical tasks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#priority-between-critical-and-non-critical-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Priority between critical and non-critical task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-periodicity-of-non-critical-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pseudo periodicity of non-critical task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-sequence_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization sequence
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class-taskapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class TaskAPI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class TaskAPI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Functions Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-createbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function createBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-createcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function createCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundms" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundMs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundus" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundUs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2238,10 +2014,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2252,8 +2028,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Communication API
           </label>
@@ -4532,44 +4308,6 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
         <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../shieldAPI/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shield API">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Shield API
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../../powerAPI/classCommunicationAPI/" class="md-footer__link md-footer__link--next" aria-label="Next: Class">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Class
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4686,7 +4424,7 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
