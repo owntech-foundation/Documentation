@@ -18,6 +18,7 @@ extra:
       - manage
   version:
       provider: mike
+      alias: true
   ownplot:
     version: 0.6.1
   social:
