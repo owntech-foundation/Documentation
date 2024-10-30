@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.owntech.org/1.0.0/core/docs/scheduling/">
+        <link rel="canonical" href="https://docs.owntech.org/1.0.0/core/docs/shieldAPI/">
       
       
-        <link rel="prev" href="../dataAPI/">
+        <link rel="prev" href="../../../powerAPI/classUartHAL/">
       
       
-        <link rel="next" href="../../../powerAPI/classCommunicationAPI/">
+        <link rel="next" href="../taskAPI/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Task API - OwnTech Documentation Center</title>
+        <title>Shield API - OwnTech Documentation Center</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#include" class="md-skip">
+        <a href="#features" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task API
+              Shield API
             
           </span>
         </div>
@@ -1755,11 +1755,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../adc/" class="md-nav__link">
+      <a href="../dataAPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ADC
+    Data API
   </span>
   
 
@@ -1916,72 +1916,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../powerAPI/classVersionHAL.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VERSION
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../twistAPI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TWIST API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dataAPI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data API
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2005,7 +1942,7 @@
           
   
   <span class="md-ellipsis">
-    Task API
+    Shield API
   </span>
   
 
@@ -2016,7 +1953,7 @@
         
   
   <span class="md-ellipsis">
-    Task API
+    Shield API
   </span>
   
 
@@ -2036,58 +1973,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Include
+      Features
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploying-a-real-time-control-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploying a real time control task
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying a real time control task">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-control-task-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      The control task sources
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The control task sources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-pwm-carrier" class="md-nav__link">
-    <span class="md-ellipsis">
-      The PWM carrier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#independant-timer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Independant timer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#initialization-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       Initialization sequence
@@ -2095,44 +1989,30 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#non-time-critical-tasks" class="md-nav__link">
+  <a href="#voltage-mode-and-current-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Non time critical tasks
+      Voltage mode and Current mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Non time critical tasks">
+    <nav class="md-nav" aria-label="Voltage mode and Current mode">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#priority-between-critical-and-non-critical-task" class="md-nav__link">
+  <a href="#voltage-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority between critical and non-critical task
+      Voltage mode
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pseudo-periodicity-of-non-critical-task" class="md-nav__link">
+  <a href="#current-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Pseudo periodicity of non-critical task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-sequence_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization sequence
+      Current mode
     </span>
   </a>
   
@@ -2144,101 +2024,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-taskapi" class="md-nav__link">
+  <a href="#snippets-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Class TaskAPI
+      Snippets examples
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class TaskAPI">
+    <nav class="md-nav" aria-label="Snippets examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
+  <a href="#buck-topology" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions
+      Buck topology
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Functions Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
+    <nav class="md-nav" aria-label="Buck topology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-createbackground" class="md-nav__link">
+  <a href="#2-legs-with-the-same-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      function createBackground
+      2 legs with the same configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-createcritical" class="md-nav__link">
+  <a href="#2-independant-leg-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      function createCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundms" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundMs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundus" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundUs
+      2 independant leg operations
     </span>
   </a>
   
@@ -2246,6 +2063,24 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boost-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boost topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverter-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverter topology
+    </span>
+  </a>
   
 </li>
         
@@ -2269,6 +2104,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../taskAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -2280,10 +2136,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2294,8 +2150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Communication API
           </label>
@@ -4043,58 +3899,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Include
+      Features
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploying-a-real-time-control-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploying a real time control task
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying a real time control task">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-control-task-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      The control task sources
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The control task sources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-pwm-carrier" class="md-nav__link">
-    <span class="md-ellipsis">
-      The PWM carrier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#independant-timer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Independant timer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#initialization-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       Initialization sequence
@@ -4102,44 +3915,30 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#non-time-critical-tasks" class="md-nav__link">
+  <a href="#voltage-mode-and-current-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Non time critical tasks
+      Voltage mode and Current mode
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Non time critical tasks">
+    <nav class="md-nav" aria-label="Voltage mode and Current mode">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#priority-between-critical-and-non-critical-task" class="md-nav__link">
+  <a href="#voltage-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority between critical and non-critical task
+      Voltage mode
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pseudo-periodicity-of-non-critical-task" class="md-nav__link">
+  <a href="#current-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Pseudo periodicity of non-critical task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-sequence_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization sequence
+      Current mode
     </span>
   </a>
   
@@ -4151,101 +3950,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-taskapi" class="md-nav__link">
+  <a href="#snippets-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Class TaskAPI
+      Snippets examples
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class TaskAPI">
+    <nav class="md-nav" aria-label="Snippets examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
+  <a href="#buck-topology" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions
+      Buck topology
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Functions Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
+    <nav class="md-nav" aria-label="Buck topology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-createbackground" class="md-nav__link">
+  <a href="#2-legs-with-the-same-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      function createBackground
+      2 legs with the same configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-createcritical" class="md-nav__link">
+  <a href="#2-independant-leg-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      function createCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-startcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function startCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopbackground" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopBackground
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-stopcritical" class="md-nav__link">
-    <span class="md-ellipsis">
-      function stopCritical
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundms" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundMs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-suspendbackgroundus" class="md-nav__link">
-    <span class="md-ellipsis">
-      function suspendBackgroundUs
+      2 independant leg operations
     </span>
   </a>
   
@@ -4253,6 +3989,24 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boost-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boost topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverter-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverter topology
+    </span>
+  </a>
   
 </li>
         
@@ -4276,269 +4030,256 @@
                   
 
 
+  <h1>Shield API</h1>
+
 <div class="admonition note">
-<p>PowerAPI is meant to deploy easily Real-time programs that must guarantee response within specified time constraints.
-In that context, scheduling is the action of asigning computing ressources to perform tasks.</p>
+<p>This API is designed to work with the TWIST hardware, providing a set of functions to manage and control the output power.</p>
 </div>
-<h2 id="include">Include</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;TaskAPI.h&gt;
-</code></pre></div>
-Make sure that Task API is included</p>
-</div>
-<h2 id="deploying-a-real-time-control-task">Deploying a real time control task</h2>
-<p>Having a periodical code execution is key to real time applications. It is easy to spawn one using the TaskAPI.</p>
-<h3 id="the-control-task-sources">The control task sources</h3>
-<p>You can have different <strong>source</strong> calling the control task.</p>
-<p>The control task is synchronous, it means that it is called at fixed period. So we need some kind of timer calling the control, this timer is considered as the <strong>source</strong>. There are two sources : <br />
-- The PWM carrier<br />
-- An independant timer   </p>
-<h4 id="the-pwm-carrier">The PWM carrier</h4>
-<p>The carrier has a period called the <strong>switching period</strong>, we can use it to call the control task after a fixed number of switching period. </p>
-<p><img alt="PWM control task" src="../images/pwm_source_task.svg" /></p>
-<p>On the figure above, the switching period is 5µs (200Khz) and we call the control every 10 switching cycle so 50µs (20Khz).</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>There are limitations when using this method : <br />
-    - You need to start the a PWM to start the control task<br />
-    - You can only have control period which are multiple of the switching period<br />
-    - You can not have a control period inferior to the switching period  </p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Synchronizing the control task period with PWM period can be usefull when you try to synchronize PWM between several SPIN or TWIST, in that case the control task is also synchronized between the board.  </p>
-</div>
-<h4 id="independant-timer">Independant timer</h4>
-<p>A simple timer not related to the PWM can be used to compute the control task period. We choose one of the MCU timer (the <code>timer 6</code>), to which we give our control period and this timer will call the control task each period.  </p>
-<p><img alt="timer source" src="../images/timer_source_task.svg" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>With an independant timer you can choose any value in µs as the control period, there is not the same limitation as the PWM source.  </p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The disavantage of such method is that since it is independant from the PWM you can't have synchronization between several control task modules.</p>
-</div>
-<h3 id="initialization-sequence">Initialization sequence</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Periodic task based on PWM source</label><label for="__tabbed_1_2">Periodic task based on Timer6</label></div>
+<h2 id="features">Features</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1. Create the critical task and link it to the function to be called and choose hrtim as the source source. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_hrtim);</code></a><br />
-2. Start the critical function.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startcritical"><code>task.startCritical()</code></a>  </p>
+<p><img align="left" alt="TWIST schema" src="../images/TWIST_illustration.svg" width="200" /><br />
+- <strong>Versatile Control Modes</strong>: The API supports both voltage and peak current control modes, allowing you to choose the best option for your specific application.<br />
+- <strong>Independent Leg Operation</strong>: Each of the two legs can operate independently with different topologies, such as boost or buck, offering greater flexibility in power management.<br />
+- <strong>Configure different paramaters</strong> for power electronics (dead time, phase shift)<br />
+- <strong>Simplified ADC value retrieval</strong><br />
+- Refer to <a href="https://github.com/owntech-foundation/TWIST">TWIST hardware specifications</a> for more detail on TWIST board.  </p>
+</div>
+</div>
+</div>
+<h2 id="initialization-sequence">Initialization sequence</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Voltage mode with all the legs</label><label for="__tabbed_2_2">Voltage mode with only LEG1</label><label for="__tabbed_2_3">Current mode with all the legs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+2. Choose the wished topology : buck, boost. You can select all the legs to be in the same topology or choose a specific configuration for each one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallbuck"><code>twist.initAllBuck()</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallboost"><code>twist.initAllBoost()</code></a>  </p>
+<p><details><summary>Optional steps</summary>
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br />
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br />
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br />
+</details></p>
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
+7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldutycycle"><code>twist.setAllDutyCycle(duty_cycle)</code></a> <br />
+8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startall"><code>twist.startAll()</code></a>   </p>
 </div>
 <div class="tabbed-block">
-<p>1. Create the critical task and link it to the function to be called and choose tim6 as the source.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_tim6);</code></a><br />
-2. Start the critical function.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startcritical"><code>task.startCritical()</code></a>  </p>
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+2. Choose the wished topology : buck, boost <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initlegbuck"><code>twist.initLegBuck(LEG1/LEG2)</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initlegboost"><code>twist.initLegBoost(LEG1/LEG2)</code></a>  </p>
+<p><details><summary>Optional steps</summary>
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegadcdecim"><code>twist.setLegAdcDecim(LEG1/LEG2, decim)</code></a><br />
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdeadtime"><code>twist.setLegDeadTime(LEG1/LEG2,rise_deadTime_ns, fall_deadTime_ns)</code></a><br />
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegphaseshift"><code>twist.setLegPhaseShift(LEG1/LEG2, ps_degree)</code></a><br />
+</details></p>
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
+7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdutycycle"><code>twist.setLegDutyCycle(LEG1/LEG2, duty_cycle)</code></a><br />
+8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startleg"><code>twist.startLeg(LEG1/LEG2)</code></a>  </p>
+</div>
+<div class="tabbed-block">
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+2. Choose the wished topology : buck, boost. You can select all the legs to be in the same topology or choose a specific configuration for each one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallbuck"><code>twist.initAllBuck(CURRENT_MODE)</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallboost"><code>twist.initAllBoost()</code></a>  </p>
+<p><details><summary>Optional steps</summary>
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br />
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br />
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br />
+</details></p>
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
+7. Set the slope compensation to control the output current<a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallslopecompensation"><code>twist.setAllSlopeCompensation(1.4, 1.0)</code></a> <br />
+8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startall"><code>twist.startAll()</code></a>   </p>
 </div>
 </div>
 </div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only buck topology is supported for current mode control currently.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">20kHz Periodic task based on PWM</label><label for="__tabbed_2_2">10kHz Periodic task based on Timer6</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Voltage mode with all the legs</label><label for="__tabbed_3_2">Voltage mode with only LEG1</label><label for="__tabbed_3_3">Current mode with all the legs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    task.createCritical(my_critical_function, 50, source_hrtim); 
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    task.startCritical();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">twist</span><span class="p">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">shield_TWIST_V1_3</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">twist</span><span class="p">.</span><span class="n">initAllBuck</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllAdcDecim</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllDeadTime</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllPhaseShift</span><span class="p">(</span><span class="mi">180</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">data</span><span class="p">.</span><span class="n">enableTwistDefaultChannels</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    task.createCritical(my_critical_function, 100, source_tim6);
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    task.startCritical();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">twist</span><span class="p">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">shield_TWIST_V1_3</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">twist</span><span class="p">.</span><span class="n">initLegBuck</span><span class="p">(</span><span class="n">LEG1</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">twist</span><span class="p">.</span><span class="n">setLegAdcDecim</span><span class="p">(</span><span class="n">LEG1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">twist</span><span class="p">.</span><span class="n">setLegDeadTime</span><span class="p">(</span><span class="n">LEG1</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">twist</span><span class="p">.</span><span class="n">setLegPhaseShift</span><span class="p">(</span><span class="n">LEG1</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">data</span><span class="p">.</span><span class="n">enableTwistDefaultChannels</span><span class="p">();</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">twist</span><span class="p">.</span><span class="n">setLegDutyCycle</span><span class="p">(</span><span class="n">LEG1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">twist</span><span class="p">.</span><span class="n">startLeg</span><span class="p">(</span><span class="n">LEG1</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">twist</span><span class="p">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">shield_TWIST_V1_3</span><span class="p">);</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">twist</span><span class="p">.</span><span class="n">initAllBuck</span><span class="p">(</span><span class="n">CURRENT_MODE</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllAdcDecim</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllDeadTime</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllPhaseShift</span><span class="p">(</span><span class="mi">180</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">data</span><span class="p">.</span><span class="n">enableTwistDefaultChannels</span><span class="p">();</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">twist</span><span class="p">.</span><span class="n">setAllSlopeCompensation</span><span class="p">(</span><span class="mf">1.4</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Having a control Task is required for <a href="adc/#synchronous-with-pwms">synchronous measurements</a> to work correctly.</p>
+<h2 id="voltage-mode-and-current-mode">Voltage mode and Current mode</h2>
+<p>There is two different way to control the power delivered by TWIST : voltage and current mode. </p>
+<h3 id="voltage-mode">Voltage mode</h3>
+<p>Voltage mode is a traditional and widely-used approach in power electronics, where the output voltage is regulated by controlling the duty cycle. The duty cycle is a crucial parameter that determines the proportion of time a switch (such as a transistor) is active during a complete switching period. By adjusting the duty cycle, you can effectively manage the power delivered to a load.</p>
+<p>A higher duty cycle indicates that the switch remains on for a more extended period, resulting in increased power delivery to the load. Conversely, a lower duty cycle means the switch is on for a shorter duration, thereby reducing the power supplied. Consequently, the average power and voltage applied to the load can be precisely controlled by fine-tuning the duty cycle.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"> Voltage mode PWM schematic </label><label for="__tabbed_4_2"> Voltage mode PWM waveform </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="voltage mode PWM" src="../images/voltage_mode_schema.svg" /></p>
 </div>
-<h2 id="non-time-critical-tasks">Non time critical tasks</h2>
-<p>In the powerAPI, non time critical tasks are refered as background tasks.</p>
-<h3 id="priority-between-critical-and-non-critical-task">Priority between critical and non-critical task</h3>
-<p>The control task has priority over any other task. It will preempts any background task. The control task can not be preempted. That is why it is also refered as an uninteruptible task.</p>
-<p><img alt="task priority" src="../images/task_priority.svg" /></p>
-<h3 id="pseudo-periodicity-of-non-critical-task">Pseudo periodicity of non-critical task</h3>
-<p>Non-critical tasks aren't synchronous, meaning they're not recurring at regular intervals. Instead, they operate in a pseudo-periodic manner: we can temporarily halt them for a specific duration, during which they remain inactive.  Below, in the illustration we suspend the background task for a period of 500ms. After 500ms we can execute again the background task, but we need to end the control task to do that (the critical task is uninteruptible).</p>
-<p><img alt="" src="../images/task_pseudo_periodic.svg" /></p>
-<h3 id="initialization-sequence_1">Initialization sequence</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>1. Create the background task and link it to the function to be called. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createbackground"><code>task.createBackground(function)</code></a> <br />
-2. Start the background function. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startbackground"><code>task.startCritical()</code></a>  </p>
+<div class="tabbed-block">
+<p><img alt="voltage mode PWM waveform" src="../images/changing_duty_cycle.gif" /></p>
 </div>
+</div>
+</div>
+<h3 id="current-mode">Current mode</h3>
+<p>In peak current mode control,  we monitors the current flowing through the power switch. Once the current reaches a predetermined peak value, we promptly turns off the power switch. This mechanism helps maintain a constant output voltage by regulating the current flow.</p>
+<p>In this setup, a clock signal determines the switching frequency and triggers the switch to close. The controller then sends a reference peak current value. When the inductor's current reaches this reference value, the switch opens.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"> Current mode schematic </label><label for="__tabbed_5_2"> Current mode waveform </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/current_mode_schema.svg" width="600" />  </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/current_mode_pwm_scheme.svg" width="600" />  </p>
+</div>
+</div>
+</div>
+<p>However, using a constant peak current reference can lead to subharmonic oscillations. To prevent this issue, we employ a technique called slope compensation. Instead of a constant value, the peak current reference is a sawtooth waveform. The final schematic with slope compensation is shown below:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"> Final current mode schematic </label><label for="__tabbed_6_2">Final current mode waveform </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/current_mode_schema_final.svg" width="600" />  </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/current_mode_pwm_scheme_final.svg" /></p>
+</div>
+</div>
+</div>
+<p>The sawtooth signal <code>Slope compensation</code> is generated with the function <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallslopecompensation"><code>twist.setAllSlopeCompensation</code></a> or <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallslopecompensation"><code>twist.setLegSlopeCompensation</code></a>. These functions set the slope compensation based on the input parameters.  for example <code>twist.setAllSlopeCompensation(1.4, 1.0)</code> generates a sawtooth signal ranging from 1.4V to 1.0V. You can create a sawtooth signal between 2.048V and 0V as well.</p>
+<p>This sawtooth signal is then compared with the ADC's current value. When selecting the sawtooth parameters, it's essential to consider the conversion of current to voltage.</p>
+<p>On the TWIST board, a voltage value of 1.024V on the ADC corresponds to a current of 0A. The system has a gain of 100mV per ampere, meaning that for each ampere increase in current, the voltage value increases by 100 millivolts. </p>
+<h2 id="snippets-examples">Snippets examples</h2>
+<h3 id="buck-topology">Buck topology</h3>
+<h4 id="2-legs-with-the-same-configuration">2 legs with the same configuration</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"> Connection </label><label for="__tabbed_7_2"> Schematic </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_buck_conf.svg" width="400" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_buck_schematic.svg" /></p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initAllBuck</span><span class="p">();</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">setAllDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="2-independant-leg-operations">2 independant leg operations</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"> Connection </label><label for="__tabbed_8_2"> Schematic </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_buck_2leg_conf.svg" width="400" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_buck_2leg_schematic.svg" /></p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initLegBuck</span><span class="p">(</span><span class="n">LEG1</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initLegBuck</span><span class="p">(</span><span class="n">LEG2</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">setLegDutyCycle</span><span class="p">(</span><span class="n">LEG1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">setLegDutyCycle</span><span class="p">(</span><span class="n">LEG2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="boost-topology">Boost topology</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1"> Connection </label><label for="__tabbed_9_2"> Schematic </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_boost_conf.svg" width="400" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_boost_schematic.svg" /></p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initAllBoost</span><span class="p">();</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">setAllDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="inverter-topology">Inverter topology</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1"> Connection </label><label for="__tabbed_10_2"> Schematic </label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_inverter_conf.svg" width="400" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../images/twist_inverter_schematic.svg" /></p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initLegBuck</span><span class="p">(</span><span class="n">LEG1</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">initLegBoost</span><span class="p">(</span><span class="n">LEG2</span><span class="p">);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">setAllDutyCycle</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Spawning a background task</label><label for="__tabbed_3_2">Making it pseudo periodic</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    void my_background_function(){
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        do_stuff();
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    }
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    task.createBackground(my_background_function);
+<p>Check the following examples for an application :<br />
+    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_voltage_mode/">Voltage mode buck</a><br />
+    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_current_mode/">Current mode buck</a><br />
+    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/boost_voltage_mode/">Voltage mode boost</a>  </p>
+</div>
+<div style="border: 4px dotted red">
+    <h3 class="doxy-error"><b>MkDoxy Error: </b>Incorrect class configuration</h3>
+<p>Did not find Class with name: `TwistAPI`</p>
+<details>
+<summary>Available classes:</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="l l-Scalar l-Scalar-Plain">AnalogCommunication</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="l l-Scalar l-Scalar-Plain">CanCommunication</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="l l-Scalar l-Scalar-Plain">CommunicationAPI</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="l l-Scalar l-Scalar-Plain">CompHAL</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="l l-Scalar l-Scalar-Plain">DacHAL</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="l l-Scalar l-Scalar-Plain">DataAPI</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="l l-Scalar l-Scalar-Plain">GpioHAL</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="l l-Scalar l-Scalar-Plain">LedHAL</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="l l-Scalar l-Scalar-Plain">PwmHAL</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="l l-Scalar l-Scalar-Plain">Rs485Communication</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="l l-Scalar l-Scalar-Plain">SafetyAPI</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="l l-Scalar l-Scalar-Plain">ShieldAPI</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="l l-Scalar l-Scalar-Plain">SpinAPI</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="l l-Scalar l-Scalar-Plain">SyncCommunication</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="l l-Scalar l-Scalar-Plain">TaskAPI</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="l l-Scalar l-Scalar-Plain">TimerHAL</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="l l-Scalar l-Scalar-Plain">UartHAL</span>
 </code></pre></div>
-In that case <code>do_stuff()</code> will execute continuously each time the processor is not occupied by the critical task.</p>
-</div>
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    void my_background_function(){
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        do_stuff();
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        suspendBackgroundUs(500);
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    }
+</details>
+<details>
+<summary>Snippet</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.powerAPI.class</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TwistAPI</span>
 </code></pre></div>
-In that case after executing <code>do_stuff();</code> the task will be suspended for 500us and resumed after. It creates a pseudo periodical task, runs every 500us + the time taken to execute <code>do_stuff()</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<h1 id="class-taskapi">Class TaskAPI</h1>
-<p><a href="../../../powerAPI/annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../../../powerAPI/classTaskAPI/"><strong>TaskAPI</strong></a></p>
-<h2 id="public-functions">Public Functions</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">int8_t</td>
-<td style="text-align: left;"><a href="#function-createbackground"><strong>createBackground</strong></a> (task_function_t routine) <br><em>Creates a background task. Background tasks are asynchronous tasks that run in the background when there is no critical task running.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">int8_t</td>
-<td style="text-align: left;"><a href="#function-createcritical"><strong>createCritical</strong></a> (task_function_t periodic_task, uint32_t task_period_us, scheduling_interrupt_source_t int_source=source_hrtim) <br><em>Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-startbackground"><strong>startBackground</strong></a> (uint8_t task_number) <br><em>Use this function to start a previously defined background task using its task number.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-startcritical"><strong>startCritical</strong></a> (bool manage_data_acquisition=true) <br><em>Use this function to start a previously defined a critical task.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-stopbackground"><strong>stopBackground</strong></a> (uint8_t task_number) <br><em>Use this function to stop a previously started background task using its task number.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-stopcritical"><strong>stopCritical</strong></a> () <br><em>Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling</em> <a href="../../../powerAPI/classTaskAPI/#function-startcritical"><em><strong>startCritical()</strong></em></a> <em>again.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-suspendbackgroundms"><strong>suspendBackgroundMs</strong></a> (uint32_t duration_ms) <br><em>This function allows to suspend a background task for a specified duration expressed in milliseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-suspendbackgroundus"><strong>suspendBackgroundUs</strong></a> (uint32_t duration_us) <br><em>This function allows to suspend a background task for a specified duration expressed in microseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-createbackground">function createBackground</h3>
-<p><em>Creates a background task. Background tasks are asynchronous tasks that run in the background when there is no critical task running.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createBackground</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">task_function_t</span><span class="w"> </span><span class="n">routine</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>routine</code> Pointer to the void(void) function that will act as the task main function. </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>Number assigned to the task. Will be -1 if max number of asynchronous task has been reached. In such a case, the task definition is ignored. Increase maximum number of asynchronous tasks in prj.conf if required. </p>
-<hr>
-
-<h3 id="function-createcritical">function createCritical</h3>
-<p><em>Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createCritical</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">task_function_t</span><span class="w"> </span><span class="n">periodic_task</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">task_period_us</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">scheduling_interrupt_source_t</span><span class="w"> </span><span class="n">int_source</span><span class="o">=</span><span class="n">source_hrtim</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p><strong>Note:</strong></p>
-<p>If the HRTIM is used to trigger the task (which is the default behavior), then the HRTIM must have been configured <em>before</em> calling this function.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>periodic_task</code> Pointer to the void(void) function to be executed periodically. </li>
-<li><code>task_period_us</code> Period of the function in µs. Allowed range: 1 to 6553 µs. If interrupt source is HRTIM, this value <em>must</em> be an integer multiple of the HRTIM period. </li>
-<li><code>int_source</code> Interrupt source that triggers the task. By default, the HRTIM is the source, but this optional parameter can be provided to set TIM6 as the source in case the HRTIM is not used or if the task can't be correlated to an HRTIM event. Allowed values are source_hrtim and source_tim6. </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>0 if everything went well, -1 if there was an error defining the task. An error can occur notably when an uninterruptible task has already been defined previously. </p>
-<hr>
-
-<h3 id="function-startbackground">function startBackground</h3>
-<p><em>Use this function to start a previously defined background task using its task number.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startBackground</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">task_number</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p>Background tasks are asynchronous tasks that run in the background when there is no critical task running.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>task_number</code> Number of the task to start, obtained using the defineAsynchronousTask() function. </li>
-</ul>
-<hr>
-
-<h3 id="function-startcritical">function startCritical</h3>
-<p><em>Use this function to start a previously defined a critical task.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startCritical</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">manage_data_acquisition</span><span class="o">=</span><span class="nb">true</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p>A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task.</p>
-<p>If no value is provided for the parameter and Data Acquisition has not been started yet, Scheduling will automatically start Data Acquisition. Thus, make sure all ADC configuration has been carried out before starting the uninterruptible task.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>manage_data_acquisition</code> Set to false if you want the Scheduling module to not be in charge of Data Acquisition scheduling. If set to false, Data Acquisition has to be manually started if you want to use it. </li>
-</ul>
-<hr>
-
-<h3 id="function-stopbackground">function stopBackground</h3>
-<p><em>Use this function to stop a previously started background task using its task number.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopBackground</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">task_number</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p>Background tasks are asynchronous tasks that run in the background when there is no critical task running. The task can be then resumed by calling startAsynchronousTask() again.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>task_number</code> Number of the task to start, obtained using the defineAsynchronousTask() function. </li>
-</ul>
-<hr>
-
-<h3 id="function-stopcritical">function stopCritical</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopCritical</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div>
-<hr>
-
-<h3 id="function-suspendbackgroundms">function suspendBackgroundMs</h3>
-<p><em>This function allows to suspend a background task for a specified duration expressed in milliseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundMs</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">duration_ms</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p>DO NOT use this function in a critical task! </p>
-<hr>
-
-<h3 id="function-suspendbackgroundus">function suspendBackgroundUs</h3>
-<p><em>This function allows to suspend a background task for a specified duration expressed in microseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundUs</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">duration_us</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
-<p>DO NOT use this function in a critical task! </p>
-<hr>
-
-<hr />
-<p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h</code></p>
+</details>
 
 
 
@@ -4578,7 +4319,7 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../dataAPI/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data API">
+          <a href="../../../powerAPI/classUartHAL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UART">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4588,20 +4329,20 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
                 Previous
               </span>
               <div class="md-ellipsis">
-                Data API
+                UART
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../powerAPI/classCommunicationAPI/" class="md-footer__link md-footer__link--next" aria-label="Next: Class">
+          <a href="../taskAPI/" class="md-footer__link md-footer__link--next" aria-label="Next: Task API">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Class
+                Task API
               </div>
             </div>
             <div class="md-footer__button md-icon">
