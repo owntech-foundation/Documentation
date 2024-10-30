@@ -56,8 +56,8 @@ nav:
             - PWM: core/docs/pwm.md
             - TIMER: powerAPI/classTimerHAL.md
             - UART: powerAPI/classUartHAL.md
-        - TWIST API: core/docs/twistAPI.md
-        - Task API: core/docs/scheduling.md
+        - Shield API: core/docs/shieldAPI.md
+        - Task API: core/docs/taskAPI.md
         - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
             - Analog Communication: powerAPI/classAnalogCommunication.md
