@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -4009,7 +4009,7 @@ Default slot0 size is <code>0x100000</code>, but it can change as per applicatio
 <p>For Zephyr images, <code>--pad-header</code> is not needed as it already has the padding for MCUboot
 header.</p>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>This is the basic signing needed for adding MCUboot headers and trailers.
 For signing with a crypto key and guarantee the authenticity of the image being booted, see the
 section <a href="#mcuboot-image-signature-verification">MCUboot image signature verification</a> below.</em></p>
@@ -4114,7 +4114,7 @@ configuration to burn keys to efuse together:</p>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>CONFIG_SECURE_BOOT_FLASH_ENC_KEYS_BURN_TOGETHER=1
 </code></pre></div>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>On development phase is recommended add the following configuration in order to keep the debugging
 enabled and also to avoid any unrecoverable/permanent state change:</em></p>
 <h2 id="config_secure_boot_allow_jtag1-config_secure_flash_uart_bootloader_allow_cache1-options-for-enabling-efuse-emulation-in-flash-config_efuse_virtual1-config_efuse_virtual_keep_in_flash1"><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>CONFIG_SECURE_BOOT_ALLOW_JTAG=1
@@ -4125,7 +4125,7 @@ enabled and also to avoid any unrecoverable/permanent state change:</em></p>
 <a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>CONFIG_EFUSE_VIRTUAL_KEEP_IN_FLASH=1
 </code></pre></div></h2>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>You can disable UART Download Mode by adding the following configuration:</em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>CONFIG_SECURE_DISABLE_ROM_DL_MODE=1
 </code></pre></div>
@@ -4146,7 +4146,7 @@ the use of Download Mode functions to simple flash read, write and erase operati
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>espsecure.py<span class="w"> </span>sign_data<span class="w"> </span>--version<span class="w"> </span><span class="m">2</span><span class="w"> </span>--keyfile<span class="w"> </span>&lt;BOOTLOADER_SIGNING_KEY.pem&gt;<span class="w"> </span>-o<span class="w"> </span>&lt;BOOTLOADER_BIN_OUT&gt;<span class="w"> </span>&lt;BOOTLOADER_BIN_IN&gt;
 </code></pre></div>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>Once the bootloader is flashed and the device resets, the </em><em>first boot will enable Secure Boot</em><em>
 and the bootloader and key </em><em>no longer can be modified</em><em>. So </em><em>ENSURE</em><em> that both bootloader and
 key are correct and you did not forget anything before flashing.</em></p>
@@ -4212,7 +4212,7 @@ burning on the device, all read and write operations are decrypted/encrypted in 
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT=1
 </code></pre></div>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>On development phase is strongly recommended adding the following configuration in order to keep
 the debugging enabled and also to avoid any unrecoverable/permanent state change:</em></p>
 <h2 id="config_secure_flash_uart_bootloader_allow_enc1-config_secure_flash_uart_bootloader_allow_dec1-config_secure_flash_uart_bootloader_allow_cache1-config_secure_boot_allow_jtag1-options-for-enabling-efuse-emulation-in-flash-config_efuse_virtual1-config_efuse_virtual_keep_in_flash1"><div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>CONFIG_SECURE_FLASH_UART_BOOTLOADER_ALLOW_ENC=1
@@ -4225,7 +4225,7 @@ the debugging enabled and also to avoid any unrecoverable/permanent state change
 <a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>CONFIG_EFUSE_VIRTUAL_KEEP_IN_FLASH=1
 </code></pre></div></h2>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>Unless the recommended flags for <strong>DEVELOPMENT MODE</strong> were enabled, the actions made by Flash
 Encryption process are <strong>PERMANENT</strong>.</em> \
 <em>Once the bootloader is flashed and the device resets, the <strong>first boot will enable Flash
@@ -4275,7 +4275,7 @@ the SPI Flash. Also ensure that the <strong>UART ROM Download Mode is not disabl
 <p>Burn the key into the device's eFuse (keep a copy on the host), this action can be done <strong>only
 once</strong>:</p>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>eFuse emulation in Flash configuration options do not have any effect, so if the key burning
 command below is used, it will actually burn the physical eFuse.</em></p>
 <hr />
@@ -4477,7 +4477,7 @@ More information about the USB pins and hardware configuration:</p>
 <a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a>CONFIG_ESP_SERIAL_BOOT_DETECT_DELAY_S=5
 </code></pre></div>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>When working with Flash Encryption enabled, <code>CONFIG_ESP_MCUBOOT_ERASE_PROGRESSIVELY</code> must be
 <strong>disabled</strong>, although it is recommended for common Serial Recovery usage</em></p>
 <hr />
@@ -4493,7 +4493,7 @@ More information about the USB pins and hardware configuration:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>mcumgr<span class="w"> </span>-c<span class="w"> </span>esp<span class="w"> </span>reset
 </code></pre></div></p>
 <hr />
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong><em>ATTENTION</em></strong></p>
 <p><em>Serial recovery mode uploads the image to the PRIMARY_SLOT, therefore if the upload process gets
 interrupted the image may be corrupted and unable to boot</em></p>
 <hr />
@@ -5012,7 +5012,7 @@ application.</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
