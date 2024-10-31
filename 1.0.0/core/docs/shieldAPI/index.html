@@ -2089,6 +2089,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#class-shieldapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class ShieldAPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class ShieldAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-static-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-static-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Attributes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-ngnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable ngnd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4015,6 +4081,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#class-shieldapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class ShieldAPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class ShieldAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-static-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-static-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Attributes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-ngnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable ngnd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4029,8 +4161,6 @@
                 
                   
 
-
-  <h1>Shield API</h1>
 
 <div class="admonition note">
 <p>This API is designed to work with the TWIST hardware, providing a set of functions to manage and control the output power.</p>
@@ -4244,14 +4374,153 @@
     - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_current_mode/">Current mode buck</a>
     - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/boost_voltage_mode/">Voltage mode boost</a></p>
 </div>
-<p>::: doxy.ShieldAPI.class
-name: ShieldAPI</p>
-<p>::: doxy.SensorsAPI.class
-name: SensorsAPI</p>
-<p>::: doxy.PowerAPI.class
-name: PowerAPI</p>
-<p>::: doxy.NgndHAL.class
-name: NgndHAL</p>
+<h1 id="class-shieldapi">Class ShieldAPI</h1>
+<p><a href="../../../powerAPI/annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../../../powerAPI/classShieldAPI/"><strong>ShieldAPI</strong></a></p>
+<h2 id="public-static-attributes">Public Static Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">NgndHAL</td>
+<td style="text-align: left;"><a href="#variable-ngnd"><strong>ngnd</strong></a>  <br><em>Contains all the function of the NGND switch compatible with TWISTs prior to 1.4.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">PowerAPI</td>
+<td style="text-align: left;"><a href="#variable-power"><strong>power</strong></a>  <br><em>Contains all the functions to drive shield power capabilities.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">SensorsAPI</td>
+<td style="text-align: left;"><a href="#variable-sensors"><strong>sensors</strong></a>  <br><em>Contains all the functions to interact with shield sensors.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
+<h3 id="variable-ngnd">variable ngnd</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">NgndHAL</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">ngnd</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-power">variable power</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">PowerAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">power</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-sensors">variable sensors</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">SensorsAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">sensors</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h</code></p>
+<div style="border: 4px dotted red">
+    <h3 class="doxy-error"><b>MkDoxy Error: </b>Incorrect class configuration</h3>
+<p>Did not find Class with name: `SensorsAPI`</p>
+<details>
+<summary>Available classes:</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="l l-Scalar l-Scalar-Plain">AnalogCommunication</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="l l-Scalar l-Scalar-Plain">CanCommunication</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="l l-Scalar l-Scalar-Plain">CommunicationAPI</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="l l-Scalar l-Scalar-Plain">CompHAL</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="l l-Scalar l-Scalar-Plain">DacHAL</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="l l-Scalar l-Scalar-Plain">DataAPI</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="l l-Scalar l-Scalar-Plain">GpioHAL</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="l l-Scalar l-Scalar-Plain">LedHAL</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="l l-Scalar l-Scalar-Plain">PwmHAL</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="l l-Scalar l-Scalar-Plain">Rs485Communication</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="l l-Scalar l-Scalar-Plain">SafetyAPI</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="l l-Scalar l-Scalar-Plain">ShieldAPI</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="l l-Scalar l-Scalar-Plain">SpinAPI</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="l l-Scalar l-Scalar-Plain">SyncCommunication</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="l l-Scalar l-Scalar-Plain">TaskAPI</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="l l-Scalar l-Scalar-Plain">TimerHAL</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="l l-Scalar l-Scalar-Plain">UartHAL</span>
+</code></pre></div>
+</details>
+<details>
+<summary>Snippet</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.powerAPI.class</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SensorsAPI</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+<div style="border: 4px dotted red">
+    <h3 class="doxy-error"><b>MkDoxy Error: </b>Incorrect class configuration</h3>
+<p>Did not find Class with name: `PowerAPI`</p>
+<details>
+<summary>Available classes:</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="l l-Scalar l-Scalar-Plain">AnalogCommunication</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="l l-Scalar l-Scalar-Plain">CanCommunication</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="l l-Scalar l-Scalar-Plain">CommunicationAPI</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="l l-Scalar l-Scalar-Plain">CompHAL</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="l l-Scalar l-Scalar-Plain">DacHAL</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="l l-Scalar l-Scalar-Plain">DataAPI</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="l l-Scalar l-Scalar-Plain">GpioHAL</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="l l-Scalar l-Scalar-Plain">LedHAL</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="l l-Scalar l-Scalar-Plain">PwmHAL</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="l l-Scalar l-Scalar-Plain">Rs485Communication</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="l l-Scalar l-Scalar-Plain">SafetyAPI</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="l l-Scalar l-Scalar-Plain">ShieldAPI</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="l l-Scalar l-Scalar-Plain">SpinAPI</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="l l-Scalar l-Scalar-Plain">SyncCommunication</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="l l-Scalar l-Scalar-Plain">TaskAPI</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="l l-Scalar l-Scalar-Plain">TimerHAL</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="l l-Scalar l-Scalar-Plain">UartHAL</span>
+</code></pre></div>
+</details>
+<details>
+<summary>Snippet</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.powerAPI.class</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PowerAPI</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+<div style="border: 4px dotted red">
+    <h3 class="doxy-error"><b>MkDoxy Error: </b>Incorrect class configuration</h3>
+<p>Did not find Class with name: `NgndHAL`</p>
+<details>
+<summary>Available classes:</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="l l-Scalar l-Scalar-Plain">AnalogCommunication</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="l l-Scalar l-Scalar-Plain">CanCommunication</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="l l-Scalar l-Scalar-Plain">CommunicationAPI</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="l l-Scalar l-Scalar-Plain">CompHAL</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="l l-Scalar l-Scalar-Plain">DacHAL</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="l l-Scalar l-Scalar-Plain">DataAPI</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="l l-Scalar l-Scalar-Plain">GpioHAL</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="l l-Scalar l-Scalar-Plain">LedHAL</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="l l-Scalar l-Scalar-Plain">PwmHAL</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="l l-Scalar l-Scalar-Plain">Rs485Communication</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="l l-Scalar l-Scalar-Plain">SafetyAPI</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="l l-Scalar l-Scalar-Plain">ShieldAPI</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="l l-Scalar l-Scalar-Plain">SpinAPI</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="l l-Scalar l-Scalar-Plain">SyncCommunication</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="l l-Scalar l-Scalar-Plain">TaskAPI</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="l l-Scalar l-Scalar-Plain">TimerHAL</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="l l-Scalar l-Scalar-Plain">UartHAL</span>
+</code></pre></div>
+</details>
+<details>
+<summary>Snippet</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.powerAPI.class</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NgndHAL</span>
+</code></pre></div>
+</details>
 
 
 
