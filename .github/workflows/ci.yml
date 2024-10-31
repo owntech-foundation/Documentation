@@ -108,10 +108,14 @@ jobs:
 
       - name: Configure navigation menu for version 0.9
         if: ${{ github.event.client_payload.version == 'main' }}
-        run: rm $GITHUB_WORKSPACE/mkdocs.yml && cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs.yml.0.9 $GITHUB_WORKSPACE/mkdocs.yml
+        run: |
+          rm $GITHUB_WORKSPACE/mkdocs.yml
+          cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs.yml.0.9 $GITHUB_WORKSPACE/mkdocs.yml
       - name: Configure navigation menu for version 1.0
         if: ${{ github.event.client_payload.version == 'v1.0.0-rc' }}
-        run: rm $GITHUB_WORKSPACE/mkdocs.yml && cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs.yml.1.0 $GITHUB_WORKSPACE/mkdocs.yml
+        run: |
+          rm $GITHUB_WORKSPACE/mkdocs.yml
+          cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs.yml.1.0 $GITHUB_WORKSPACE/mkdocs.yml
 
       - name: Print mkdocs version
         run: mkdocs --version
