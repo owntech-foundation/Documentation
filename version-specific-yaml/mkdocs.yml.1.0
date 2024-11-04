@@ -56,7 +56,11 @@ nav:
             - PWM: core/docs/pwm.md
             - TIMER: powerAPI/classTimerHAL.md
             - UART: powerAPI/classUartHAL.md
-        - Shield API: core/docs/shieldAPI.md
+        - Shield API:
+            - General Information: core/docs/shieldAPI.md
+            - Sensors: core/docs/shield_sensors.md
+            - Power: powerAPI/classPowerAPI.md
+            - NGND: powerAPI/classNgndHAL.md
         - Task API: core/docs/taskAPI.md
         - Communication API:
             - Class: powerAPI/classCommunicationAPI.md
