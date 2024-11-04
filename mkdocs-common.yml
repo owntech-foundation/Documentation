@@ -76,7 +76,7 @@ plugins:
           full-doc: True # if you want to generate full documentation
 #          template-dir: template-custom
           doxy-cfg: # standard doxygen configuration (key: value)
-            FILE_PATTERNS: "*/public_api/*.c */public_api/*.cpp */public_api/*.h* */owntech_communication/zephyr/src/* */owntech_spin_api/zephyr/src/*" # specify file patterns to filter out
+            FILE_PATTERNS: "*/public_api/*.c */public_api/*.cpp */public_api/*.h* */owntech_communication/zephyr/src/* */owntech_spin_api/zephyr/src/* */owntech_shield_api/zephyr/src/*" # specify file patterns to filter out
             RECURSIVE: True # recursive search in source directories
             SHOW_NAMESPACES: False # don't show namespaces in documentation
             ENABLE_PREPROCESSING: False
