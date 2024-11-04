@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classSensorsAPI" kind="class" language="C++" prot="public">
+    <compoundname>SensorsAPI</compoundname>
+    <innerclass refid="unionSensorsAPI_1_1int2float" prot="private">SensorsAPI::int2float</innerclass>
+    <innerclass refid="structSensorsAPI_1_1sensor__dt__data__t" prot="private">SensorsAPI::sensor_dt_data_t</innerclass>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1e" prot="private" static="no" strong="no">
+        <type></type>
+        <name>conv_type_string_t</name>
+        <qualifiedname>SensorsAPI::conv_type_string_t</qualifiedname>
+        <enumvalue id="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eac04fb91194a548c84aeaca32ad3ea961" prot="private">
+          <name>LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eacd50385105ac6788eeb02a341674220d" prot="private">
+          <name>THERMISTANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="103" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="104" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classSensorsAPI_1a75ceaf931af377aad5ceebbdad718c81" prot="private" static="yes" mutable="no">
+        <type>sensor_dt_data_t</type>
+        <definition>SensorsAPI::sensor_dt_data_t SensorsAPI::dt_sensors_props</definition>
+        <argsstring>[]</argsstring>
+        <name>dt_sensors_props</name>
+        <qualifiedname>SensorsAPI::dt_sensors_props</qualifiedname>
+        <initializer>=
+{
+	DT_FOREACH_STATUS_OKAY(shield_sensors, SUBSENSOR_WRITE_PROP)
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="478" column="25" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1ae54cef44b91ce9e44c3359ed8477bce7" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorsAPI::available_sensors_count</definition>
+        <argsstring>[ADC_COUNT]</argsstring>
+        <name>available_sensors_count</name>
+        <qualifiedname>SensorsAPI::available_sensors_count</qualifiedname>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="479" column="16" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1af43d9b0fdc87711436da8757b8d20f61" prot="private" static="yes" mutable="no">
+        <type>sensor_dt_data_t **</type>
+        <definition>SensorsAPI::sensor_dt_data_t ** SensorsAPI::available_sensors_props</definition>
+        <argsstring>[ADC_COUNT]</argsstring>
+        <name>available_sensors_props</name>
+        <qualifiedname>SensorsAPI::available_sensors_props</qualifiedname>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="480" column="25" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1aa11e85fdc9315af9189de6afb0a6f29b" prot="private" static="yes" mutable="no">
+        <type>sensor_dt_data_t *</type>
+        <definition>SensorsAPI::sensor_dt_data_t * SensorsAPI::enabled_sensors</definition>
+        <argsstring>[]</argsstring>
+        <name>enabled_sensors</name>
+        <qualifiedname>SensorsAPI::enabled_sensors</qualifiedname>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="481" column="25" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1a1f7daca03ecf76d43fa7b2c734a10e4b" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorsAPI::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <qualifiedname>SensorsAPI::initialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="482" column="13" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1a0f18405be0e826070b5c90f58703ed66" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorsAPI::temp_mux_in_1</definition>
+        <argsstring></argsstring>
+        <name>temp_mux_in_1</name>
+        <qualifiedname>SensorsAPI::temp_mux_in_1</qualifiedname>
+        <initializer>= DT_PROP(DT_NODELABEL(temp), mux_spin_pin_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="485" column="18" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensorsAPI_1a80acb78ab9015731d12f1e12c0af1539" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorsAPI::temp_mux_in_2</definition>
+        <argsstring></argsstring>
+        <name>temp_mux_in_2</name>
+        <qualifiedname>SensorsAPI::temp_mux_in_2</qualifiedname>
+        <initializer>= DT_PROP(DT_NODELABEL(temp), mux_spin_pin_2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="486" column="18" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="486" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSensorsAPI_1a1c6ba0632fafc3f1bce2ee7070f314e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensorsAPI::enableSensor</definition>
+        <argsstring>(sensor_t sensor_name, adc_t adc_number)</argsstring>
+        <name>enableSensor</name>
+        <qualifiedname>SensorsAPI::enableSensor</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>adc_t</type>
+          <declname>adc_number</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to enable a shield sensor for acquisition by a given ADC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function requires the presence of an &quot;shielde-sensor&quot; node in the shield device-tree.</para>
+</simplesect>
+<simplesect kind="note"><para>This function must be called <emphasis>before</emphasis> ADC is started.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the sensor using enumeration sensor_t. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ADC which should be used for acquisition.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the sensor was correctly enabled, negative value if there was an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="144" column="8" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="124" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a9d1d137a205c370cc1e292877f622b41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t *</type>
+        <definition>uint16_t * SensorsAPI::getRawValues</definition>
+        <argsstring>(sensor_t sensor_name, uint32_t &amp;number_of_values_acquired)</argsstring>
+        <name>getRawValues</name>
+        <qualifiedname>SensorsAPI::getRawValues</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>number_of_values_acquired</declname>
+        </param>
+        <briefdescription>
+<para>Function to access the acquired data for specified sensor. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled and the <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module is started, either explicitly or by starting the Uninterruptible task.</para>
+</simplesect>
+<simplesect kind="note"><para>When calling this function, it invalidates the buffer returned by a previous call to the same function. However, different sensors buffers are independent from each other.</para>
+</simplesect>
+<simplesect kind="note"><para>When using this functions, the user is responsible for data conversion. Use matching spin.data.convert*() function for this purpose.</para>
+</simplesect>
+<simplesect kind="note"><para>When using this function, DO NOT use the function to get the latest converted value for the same sensor as this function will clear the buffer and disregard all values but the latest.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor from which to obtain values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_values_acquired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pass an uint32_t variable. This variable will be updated with the number of values that are present in the returned buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a buffer in which the acquired values are stored. If number_of_values_acquired is 0, do not try to access the buffer as it may be nullptr. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="181" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a31cc6ec96dd47c5e8a1027ee0cbc9183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t *</type>
+        <definition>float32_t * SensorsAPI::getValues</definition>
+        <argsstring>(sensor_t sensor_name, uint32_t &amp;number_of_values_acquired)</argsstring>
+        <name>getValues</name>
+        <qualifiedname>SensorsAPI::getValues</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>number_of_values_acquired</declname>
+        </param>
+        <briefdescription>
+<para>Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is an expensive function. Calling this function trigger the conversion of all values acquired since the last call. If only the lastet value is required, it is advised to call <ref refid="classSensorsAPI_1a554e0e3b5fc76658e0ec064bd2623a67" kindref="member">getLatestValue()</ref> instead. If multiple values are required, but not all, it is advised to call <ref refid="classSensorsAPI_1a9d1d137a205c370cc1e292877f622b41" kindref="member">getRawValues()</ref> instead, then explicitely convert required values using convertValue().</para>
+</simplesect>
+<simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must have been started, either explicitly or by starting the Uninterruptible task.</para>
+</simplesect>
+<simplesect kind="note"><para>When calling this function, it invalidates the array returned by a previous call to the same function. However, different channels buffers are independent from each other.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor from which to obtain values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_values_acquired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pass an uint32_t variable. This variable will be updated with the number of values that are present in the returned buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to an array in which the acquired values are stored. If number_of_values_acquired is 0, do not try to access the buffer as it may be nullptr. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="217" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="165" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a52ef4b1aa39fedd739705d0189209e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::peekLatestValue</definition>
+        <argsstring>(sensor_t sensor_name)</argsstring>
+        <name>peekLatestValue</name>
+        <qualifiedname>SensorsAPI::peekLatestValue</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <briefdescription>
+<para>Function to access the latest value available from the sensor, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled and the <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module is started, either explicitly or by starting the Uninterruptible task.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor from which to obtain value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Latest available value available from the given sensor. If there was no value acquired by this sensor yet, return value is NO_VALUE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="236" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a554e0e3b5fc76658e0ec064bd2623a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::getLatestValue</definition>
+        <argsstring>(sensor_t sensor_name, uint8_t *dataValid=nullptr)</argsstring>
+        <name>getLatestValue</name>
+        <qualifiedname>SensorsAPI::getLatestValue</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataValid</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celcius. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled and the <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module is started, either explicitly or by starting the Uninterruptible task.</para>
+</simplesect>
+<simplesect kind="note"><para>When using this functions, you loose the ability to access raw values using spin.data.get*RawValues() function for the matching sensor, as spin.data.get*() function clears the buffer on each call.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor from which to obtain value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dataValid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an uint8_t variable. This parameter is facultative. If this parameter is provided, it will be updated to indicate information about spin.data. Possible values for this parameter will be:<itemizedlist>
+<listitem><para>DATA_IS_OK if returned data is a newly acquired data,</para>
+</listitem><listitem><para>DATA_IS_OLD if returned data has already been provided before (no new data available since latest time this function was called),</para>
+</listitem><listitem><para>DATA_IS_MISSING if returned data is NO_VALUE.</para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Latest measure acquired by the sensor. If no value was acquired by this sensor yet, return value is NO_VALUE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="266" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a0e2e7c54b3134595cff62f4f10d9dd0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::convertRawValue</definition>
+        <argsstring>(sensor_t sensor_name, uint16_t raw_value)</argsstring>
+        <name>convertRawValue</name>
+        <qualifiedname>SensorsAPI::convertRawValue</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>raw_value</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to convert values obtained using matching spin.data.get*RawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor from which the value originates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw value obtained from which the value originates</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted value in the relevant unit. Returns ERROR_CHANNEL_NOT_FOUND if the sensor is not active. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="281" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="183" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a5b553e786e125505a3d6935923eb8934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::setConversionParametersLinear</definition>
+        <argsstring>(sensor_t sensor_name, float32_t gain, float32_t offset)</argsstring>
+        <name>setConversionParametersLinear</name>
+        <qualifiedname>SensorsAPI::setConversionParametersLinear</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>gain</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to tweak the conversion values for any linear sensor if default values are not accurate enough. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to set conversion values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain to be applied (multiplied) to the sensor raw value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to be applied (added) to the sensor value after gain has been applied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="296" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="189" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1acde5b18e9628754b4aa1f40d1f9e481f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::setConversionParametersNtcThermistor</definition>
+        <argsstring>(sensor_t sensor_name, float32_t r0, float32_t b, float32_t rdiv, float32_t t0)</argsstring>
+        <name>setConversionParametersNtcThermistor</name>
+        <qualifiedname>SensorsAPI::setConversionParametersNtcThermistor</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>r0</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>rdiv</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>t0</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to set conversion values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">r0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The NTC resistance at a reference temperature. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sensibility coefficient of the resistance to temperature. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rdiv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bridge dividor resistance used to condition the NTC. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference temperature of the thermistor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="312" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="202" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a332d4356c33eb67e7ad70bbceefb4372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::retrieveStoredParameterValue</definition>
+        <argsstring>(sensor_t sensor_name, parameter_t parameter_name)</argsstring>
+        <name>retrieveStoredParameterValue</name>
+        <qualifiedname>SensorsAPI::retrieveStoredParameterValue</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <param>
+          <type>parameter_t</type>
+          <declname>parameter_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion parameteres for the chosen sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to get a conversion parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">parameter_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Paramater to be retreived: <computeroutput>gain</computeroutput> or <computeroutput>offset</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="322" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="215" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>conversion_type_t</type>
+        <definition>conversion_type_t SensorsAPI::retrieveStoredConversionType</definition>
+        <argsstring>(sensor_t sensor_name)</argsstring>
+        <name>retrieveStoredConversionType</name>
+        <qualifiedname>SensorsAPI::retrieveStoredConversionType</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to get the current conversion type for the chosen sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to get a conversion parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="331" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="221" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1af635b05026bef4d4db643fb1249c6974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensorsAPI::storeParametersInMemory</definition>
+        <argsstring>(sensor_t sensor_name)</argsstring>
+        <name>storeParametersInMemory</name>
+        <qualifiedname>SensorsAPI::storeParametersInMemory</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to write the gain and offset parameters of the board to is non-volatile memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function should be called after updating the parameters using setParameters.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to save the values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="340" column="8" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="233" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a6f2d78e501b02ada4ac3f2788bf475ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensorsAPI::retrieveParametersFromMemory</definition>
+        <argsstring>(sensor_t sensor_name)</argsstring>
+        <name>retrieveParametersFromMemory</name>
+        <qualifiedname>SensorsAPI::retrieveParametersFromMemory</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <briefdescription>
+<para>Use this function to read the gain and offset parameters of the board to is non-volatile memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the shield sensor to save the values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn&apos;t match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="352" column="8" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="227" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a83b5ce3ec4e927c2f9389750a2332fbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::enableDefaultOwnverterSensors</definition>
+        <argsstring>()</argsstring>
+        <name>enableDefaultOwnverterSensors</name>
+        <qualifiedname>SensorsAPI::enableDefaultOwnverterSensors</qualifiedname>
+        <briefdescription>
+<para>This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - V1, V2, V3, VH, VN <linebreak/>
+ ADC2: - I1, I2, I3, IH, T. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events. All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called. It also configures the gpios that control the MUX that chooses which temperature will be measured.</para>
+</simplesect>
+<simplesect kind="note"><para>This function must be called <emphasis>before</emphasis> ADC is started. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="373" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="241" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1adea080dbc74df8fc4166064f28554a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::setOwnverterTempMeas</definition>
+        <argsstring>(ownverter_temp_sensor_t temperature_sensor)</argsstring>
+        <name>setOwnverterTempMeas</name>
+        <qualifiedname>SensorsAPI::setOwnverterTempMeas</qualifiedname>
+        <param>
+          <type>ownverter_temp_sensor_t</type>
+          <declname>temperature_sensor</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the gpios attached to the MUX to control which measurement will be performed. The logic is: IN1 IN2 TEMP 1 T F TEMP 2 F T TEMP 3 T T. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">temperature_sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the temperature sensor to trigger. Can be either TEMP_1, TEMP_2 or TEMP_3.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function will decide which value will be read automatically by the ADC2 to which the temperature of the Ownverter is linked. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="390" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="282" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a00bda5650aef00b33df2aaf30e958efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::enableDefaultTwistSensors</definition>
+        <argsstring>()</argsstring>
+        <name>enableDefaultTwistSensors</name>
+        <qualifiedname>SensorsAPI::enableDefaultTwistSensors</qualifiedname>
+        <briefdescription>
+<para>This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - I1_LOW ADC2: - I2_LOW. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>V1_LOW - V2_LOW</para>
+</listitem><listitem><para>V_HIGH - I_HIGH</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events. All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called.</para>
+</simplesect>
+<simplesect kind="note"><para>This function must be called <emphasis>before</emphasis> ADC is started. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="411" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="301" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a8cab93e63da26425b8c92871747b696f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::setTwistSensorsUserCalibrationFactors</definition>
+        <argsstring>()</argsstring>
+        <name>setTwistSensorsUserCalibrationFactors</name>
+        <qualifiedname>SensorsAPI::setTwistSensorsUserCalibrationFactors</qualifiedname>
+        <briefdescription>
+<para>Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board. <linebreak/>
+ After the parameters have been inputed, they will be stored in Spin Non-Volatile memory so that they are automatically applied on subsequent boots. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function requires a console to interact with the user. The board must be connected to a computer using USB to display the console.</para>
+</simplesect>
+<simplesect kind="note"><para>This function can&apos;t be called before <emphasis>all</emphasis> Twist sensors have been enabled (you can use <ref refid="classSensorsAPI_1a00bda5650aef00b33df2aaf30e958efb" kindref="member">enableDefaultTwistSensors()</ref> for that purpose). The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="430" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="350" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a1577482ecd599fcd7083ef896821780d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::triggerTwistTempMeas</definition>
+        <argsstring>(sensor_t temperature_sensor)</argsstring>
+        <name>triggerTwistTempMeas</name>
+        <qualifiedname>SensorsAPI::triggerTwistTempMeas</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>temperature_sensor</declname>
+        </param>
+        <briefdescription>
+<para>Manually triggers the temperature measurement of the Twist board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">temperature_sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the temperature sensor to trigger. Can be either TEMP_SENSOR_1 or TEMP_SENSOR_2.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function must be called to trigger a conversion of the ADC to which the sensor is linked. It must be called BEFORE reading a new measurement. Account for delays in the measurement. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="442" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="341" bodyend="348"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSensorsAPI_1af3ee5e40a384ce94f35369f53fdd57c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref></type>
+        <definition>sensor_info_t SensorsAPI::getEnabledSensorInfo</definition>
+        <argsstring>(sensor_t sensor_name)</argsstring>
+        <name>getEnabledSensorInfo</name>
+        <qualifiedname>SensorsAPI::getEnabledSensorInfo</qualifiedname>
+        <param>
+          <type>sensor_t</type>
+          <declname>sensor_name</declname>
+        </param>
+        <briefdescription>
+<para>This function returns a structure containing information about an enabled sensor from a sensor name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sensor_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the sensor as defined in the device tree.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Structure containing the ADC number, channel number and pin number for the given sensor name, or (0, 0, 0) if sensor name doesn&apos;t exist or hasn&apos;t been configured. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="460" column="15" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="468" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a06a4d8fdb13e6e534600060a90b680f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::buildSensorListFromDeviceTree</definition>
+        <argsstring>()</argsstring>
+        <name>buildSensorListFromDeviceTree</name>
+        <qualifiedname>SensorsAPI::buildSensorListFromDeviceTree</qualifiedname>
+        <briefdescription>
+<para>Builds the list of device-tree defined sensors for each ADC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="465" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="487" bodyend="632"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a6a98486f283d49d18549a20a24f13335" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorsAPI::getLineFromConsole</definition>
+        <argsstring>(char *buffer, uint8_t buffer_size)</argsstring>
+        <name>getLineFromConsole</name>
+        <qualifiedname>SensorsAPI::getLineFromConsole</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>buffer_size</declname>
+        </param>
+        <briefdescription>
+<para>Function to retraive a line from console. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="470" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="635" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensorsAPI_1a03e69024f1f0119f80b11bfc68f2948a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::getCalibrationCoefficients</definition>
+        <argsstring>(const char *physicalParameter, const char *gainOrOffset)</argsstring>
+        <name>getCalibrationCoefficients</name>
+        <qualifiedname>SensorsAPI::getCalibrationCoefficients</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>physicalParameter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>gainOrOffset</declname>
+        </param>
+        <briefdescription>
+<para>Function to ask user about a coefficient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="475" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="670" bodyend="702"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="90" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="91" bodyend="490"/>
+    <listofallmembers>
+      <member refid="classSensorsAPI_1ae54cef44b91ce9e44c3359ed8477bce7" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>available_sensors_count</name></member>
+      <member refid="classSensorsAPI_1af43d9b0fdc87711436da8757b8d20f61" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>available_sensors_props</name></member>
+      <member refid="classSensorsAPI_1a06a4d8fdb13e6e534600060a90b680f9" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>buildSensorListFromDeviceTree</name></member>
+      <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1e" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>conv_type_string_t</name></member>
+      <member refid="classSensorsAPI_1a0e2e7c54b3134595cff62f4f10d9dd0f" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>convertRawValue</name></member>
+      <member refid="classSensorsAPI_1a75ceaf931af377aad5ceebbdad718c81" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>dt_sensors_props</name></member>
+      <member refid="classSensorsAPI_1aa11e85fdc9315af9189de6afb0a6f29b" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>enabled_sensors</name></member>
+      <member refid="classSensorsAPI_1a83b5ce3ec4e927c2f9389750a2332fbc" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>enableDefaultOwnverterSensors</name></member>
+      <member refid="classSensorsAPI_1a00bda5650aef00b33df2aaf30e958efb" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>enableDefaultTwistSensors</name></member>
+      <member refid="classSensorsAPI_1a1c6ba0632fafc3f1bce2ee7070f314e2" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>enableSensor</name></member>
+      <member refid="classSensorsAPI_1a03e69024f1f0119f80b11bfc68f2948a" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>getCalibrationCoefficients</name></member>
+      <member refid="classSensorsAPI_1af3ee5e40a384ce94f35369f53fdd57c7" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>getEnabledSensorInfo</name></member>
+      <member refid="classSensorsAPI_1a554e0e3b5fc76658e0ec064bd2623a67" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>getLatestValue</name></member>
+      <member refid="classSensorsAPI_1a6a98486f283d49d18549a20a24f13335" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>getLineFromConsole</name></member>
+      <member refid="classSensorsAPI_1a9d1d137a205c370cc1e292877f622b41" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>getRawValues</name></member>
+      <member refid="classSensorsAPI_1a31cc6ec96dd47c5e8a1027ee0cbc9183" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>getValues</name></member>
+      <member refid="classSensorsAPI_1a1f7daca03ecf76d43fa7b2c734a10e4b" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>initialized</name></member>
+      <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eac04fb91194a548c84aeaca32ad3ea961" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>LINEAR</name></member>
+      <member refid="classSensorsAPI_1a52ef4b1aa39fedd739705d0189209e3f" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>peekLatestValue</name></member>
+      <member refid="classSensorsAPI_1a6f2d78e501b02ada4ac3f2788bf475ca" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>retrieveParametersFromMemory</name></member>
+      <member refid="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>retrieveStoredConversionType</name></member>
+      <member refid="classSensorsAPI_1a332d4356c33eb67e7ad70bbceefb4372" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>retrieveStoredParameterValue</name></member>
+      <member refid="classSensorsAPI_1a5b553e786e125505a3d6935923eb8934" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>setConversionParametersLinear</name></member>
+      <member refid="classSensorsAPI_1acde5b18e9628754b4aa1f40d1f9e481f" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>setConversionParametersNtcThermistor</name></member>
+      <member refid="classSensorsAPI_1adea080dbc74df8fc4166064f28554a4e" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>setOwnverterTempMeas</name></member>
+      <member refid="classSensorsAPI_1a8cab93e63da26425b8c92871747b696f" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>setTwistSensorsUserCalibrationFactors</name></member>
+      <member refid="classSensorsAPI_1af635b05026bef4d4db643fb1249c6974" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>storeParametersInMemory</name></member>
+      <member refid="classSensorsAPI_1a0f18405be0e826070b5c90f58703ed66" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>temp_mux_in_1</name></member>
+      <member refid="classSensorsAPI_1a80acb78ab9015731d12f1e12c0af1539" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>temp_mux_in_2</name></member>
+      <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eacd50385105ac6788eeb02a341674220d" prot="private" virt="non-virtual"><scope>SensorsAPI</scope><name>THERMISTANCE</name></member>
+      <member refid="classSensorsAPI_1a1577482ecd599fcd7083ef896821780d" prot="public" virt="non-virtual"><scope>SensorsAPI</scope><name>triggerTwistTempMeas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

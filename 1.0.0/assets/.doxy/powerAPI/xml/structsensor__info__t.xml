@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structsensor__info__t" kind="struct" language="C++" prot="public">
+    <compoundname>sensor_info_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensor__info__t_1ae7a2989135c4e9a8682847b49fe665c7" prot="public" static="no" mutable="no">
+        <type>adc_t</type>
+        <definition>adc_t sensor_info_t::adc_num</definition>
+        <argsstring></argsstring>
+        <name>adc_num</name>
+        <qualifiedname>sensor_info_t::adc_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="73" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__info__t_1aebb2c4b4c9b95ae531a8e3b151b5601f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sensor_info_t::channel_num</definition>
+        <argsstring></argsstring>
+        <name>channel_num</name>
+        <qualifiedname>sensor_info_t::channel_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="74" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__info__t_1aa9e7449bc7d663008a669b639c938236" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sensor_info_t::pin_num</definition>
+        <argsstring></argsstring>
+        <name>pin_num</name>
+        <qualifiedname>sensor_info_t::pin_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="75" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsensor__info__t_1a7fa3f60bb898799bf0ee545ccff69cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sensor_info_t::sensor_info_t</definition>
+        <argsstring>(adc_t adc_num, uint8_t channel_num, uint8_t pin_num)</argsstring>
+        <name>sensor_info_t</name>
+        <qualifiedname>sensor_info_t::sensor_info_t</qualifiedname>
+        <param>
+          <type>adc_t</type>
+          <declname>adc_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="66" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="66" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="64" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="65" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structsensor__info__t_1ae7a2989135c4e9a8682847b49fe665c7" prot="public" virt="non-virtual"><scope>sensor_info_t</scope><name>adc_num</name></member>
+      <member refid="structsensor__info__t_1aebb2c4b4c9b95ae531a8e3b151b5601f" prot="public" virt="non-virtual"><scope>sensor_info_t</scope><name>channel_num</name></member>
+      <member refid="structsensor__info__t_1aa9e7449bc7d663008a669b639c938236" prot="public" virt="non-virtual"><scope>sensor_info_t</scope><name>pin_num</name></member>
+      <member refid="structsensor__info__t_1a7fa3f60bb898799bf0ee545ccff69cfd" prot="public" virt="non-virtual"><scope>sensor_info_t</scope><name>sensor_info_t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

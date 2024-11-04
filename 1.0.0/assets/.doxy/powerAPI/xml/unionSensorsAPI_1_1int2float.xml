@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="unionSensorsAPI_1_1int2float" kind="union" language="C++" prot="private">
+    <compoundname>SensorsAPI::int2float</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionSensorsAPI_1_1int2float_1a3e22f325b6ae7a04831a0aa4b54f368a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SensorsAPI::int2float::raw_value</definition>
+        <argsstring></argsstring>
+        <name>raw_value</name>
+        <qualifiedname>SensorsAPI::int2float::raw_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="99" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionSensorsAPI_1_1int2float_1aeef4af571fac36beb05164d5ffe39233" prot="public" static="no" mutable="no">
+        <type>float32_t</type>
+        <definition>float32_t SensorsAPI::int2float::float_value</definition>
+        <argsstring></argsstring>
+        <name>float_value</name>
+        <qualifiedname>SensorsAPI::int2float::float_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="100" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="97" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="98" bodyend="101"/>
+    <listofallmembers>
+      <member refid="unionSensorsAPI_1_1int2float_1aeef4af571fac36beb05164d5ffe39233" prot="public" virt="non-virtual"><scope>SensorsAPI::int2float</scope><name>float_value</name></member>
+      <member refid="unionSensorsAPI_1_1int2float_1a3e22f325b6ae7a04831a0aa4b54f368a" prot="public" virt="non-virtual"><scope>SensorsAPI::int2float</scope><name>raw_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

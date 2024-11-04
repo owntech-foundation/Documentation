@@ -10,7 +10,7 @@
         <name>SensorsAPI</name>
         <qualifiedname>DataAPI::SensorsAPI</qualifiedname>
         <param>
-          <type>SensorsAPI</type>
+          <type><ref refid="classSensorsAPI" kindref="compound">SensorsAPI</ref></type>
         </param>
         <briefdescription>
         </briefdescription>

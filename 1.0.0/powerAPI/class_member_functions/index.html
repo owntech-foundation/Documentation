@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -3737,6 +3737,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#c" class="md-nav__link">
     <span class="md-ellipsis">
       c
@@ -3851,6 +3860,10 @@
 
 
 <h1 id="class-member-functions">Class Member Functions</h1>
+<h2 id="b">b</h2>
+<ul>
+<li><strong>buildSensorListFromDeviceTree</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+</ul>
 <h2 id="c">c</h2>
 <ul>
 <li><strong>currentModeInit</strong> (<a href="../classDacHAL/"><strong>DacHAL</strong></a>)</li>
@@ -3858,9 +3871,12 @@
 <li><strong>configureTriggerSource</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>convertValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>configurePin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
+<li><strong>connectCapacitor</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>connectDriver</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>configurePeriodEvnt</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>configure</strong> (<a href="../classRs485Communication/"><strong>Rs485Communication</strong></a>)</li>
 <li><strong>configureCustom</strong> (<a href="../classRs485Communication/"><strong>Rs485Communication</strong></a>)</li>
+<li><strong>convertRawValue</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>createBackground</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>createCritical</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 </ul>
@@ -3868,6 +3884,8 @@
 <ul>
 <li><strong>disableChannel</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>doFullDispatch</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>disconnectCapacitor</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>disconnectDriver</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>disableAdcTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>disablePeriodEvnt</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>disableSafetyApi</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
@@ -3880,6 +3898,9 @@
 <li><strong>enableAdcTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>enablePeriodEvnt</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>enableSafetyApi</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>enableDefaultOwnverterSensors</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>enableDefaultTwistSensors</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>enableSensor</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 </ul>
 <h2 id="g">g</h2>
 <ul>
@@ -3898,9 +3919,9 @@
 <li><strong>getConversionParameterValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>getCurrentAdcForPin</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>getDefaultAdcForPin</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>getLatestValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>getRawValues</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>getValues</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>getLatestValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>getRawValues</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>getValues</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>getGpioDevice</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>getPinNumber</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>getAdcEdgeTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
@@ -3922,6 +3943,9 @@
 <li><strong>getChannelThresholdMax</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>getChannelThresholdMin</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>getChannelWatch</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>getCalibrationCoefficients</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>getEnabledSensorInfo</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>getLineFromConsole</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>getTimer4IncrementalEncoderValue</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
 </ul>
 <h2 id="i">i</h2>
@@ -3930,6 +3954,9 @@
 <li><strong>initialize</strong> (<a href="../classCompHAL/"><strong>CompHAL</strong></a>, <a href="../classLedHAL/"><strong>LedHAL</strong></a>)</li>
 <li><strong>initConstValue</strong> (<a href="../classDacHAL/"><strong>DacHAL</strong></a>)</li>
 <li><strong>initializeAllAdcs</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>initBoost</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>initBuck</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>initMode</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>initFixedFrequency</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>initUnit</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>initVariableFrequency</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
@@ -3940,7 +3967,7 @@
 <h2 id="p">p</h2>
 <ul>
 <li><strong>peekChannel</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>peekLatestValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>peekLatestValue</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 </ul>
 <h2 id="r">r</h2>
 <ul>
@@ -3948,6 +3975,9 @@
 <li><strong>readPin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>resetPin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>retrieveThreshold</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>retrieveParametersFromMemory</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>retrieveStoredConversionType</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>retrieveStoredParameterValue</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 </ul>
 <h2 id="s">s</h2>
 <ul>
@@ -3959,28 +3989,32 @@
 <li><strong>setCtrlReference</strong> (<a href="../classCanCommunication/"><strong>CanCommunication</strong></a>)</li>
 <li><strong>setConstValue</strong> (<a href="../classDacHAL/"><strong>DacHAL</strong></a>)</li>
 <li><strong>slopeCompensation</strong> (<a href="../classDacHAL/"><strong>DacHAL</strong></a>)</li>
-<li><strong>setConversionParametersLinear</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>setConversionParametersNtcThermistor</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>setConversionParametersLinear</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>setConversionParametersNtcThermistor</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>setDispatchMethod</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>setRepetitionsBetweenDispatches</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>start</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>start</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>started</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
-<li><strong>stop</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>stop</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>, <a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>storeConversionParametersInMemory</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>setPin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
+<li><strong>setAdcDecim</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>setDeadTime</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>, <a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
+<li><strong>setDutyCycle</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>, <a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
+<li><strong>setPhaseShift</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>, <a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
+<li><strong>setSlopeCompensation</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>setTriggerValue</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
+<li><strong>spinNumberToTu</strong> (<a href="../classPowerAPI/"><strong>PowerAPI</strong></a>)</li>
 <li><strong>setAdcDecimation</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setAdcEdgeTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setAdcTrigger</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setAdcTriggerInstant</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setAdcTriggerPostScaler</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
-<li><strong>setDeadTime</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
-<li><strong>setDutyCycle</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setEev</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setFrequency</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setMode</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setModulation</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setPeriodEvntRep</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
-<li><strong>setPhaseShift</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>setSwitchConvention</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>startDualOutput</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
 <li><strong>startSingleOutput</strong> (<a href="../classPwmHAL/"><strong>PwmHAL</strong></a>)</li>
@@ -3992,6 +4026,9 @@
 <li><strong>setChannelThresholdMin</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>setChannelWatch</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
 <li><strong>storeThreshold</strong> (<a href="../classSafetyAPI/"><strong>SafetyAPI</strong></a>)</li>
+<li><strong>setOwnverterTempMeas</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>setTwistSensorsUserCalibrationFactors</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>storeParametersInMemory</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>startBackground</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>startCritical</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>stopBackground</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
@@ -3999,16 +4036,18 @@
 <li><strong>suspendBackgroundMs</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>suspendBackgroundUs</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
 <li><strong>startLogTimer4IncrementalEncoder</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
+<li><strong>sensor_info_t</strong> (<a href="../structsensor__info__t/"><strong>sensor_info_t</strong></a>)</li>
 </ul>
 <h2 id="t">t</h2>
 <ul>
 <li><strong>triggerAcquisition</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>togglePin</strong> (<a href="../classGpioHAL/"><strong>GpioHAL</strong></a>)</li>
 <li><strong>toggle</strong> (<a href="../classLedHAL/"><strong>LedHAL</strong></a>)</li>
-<li><strong>turnOff</strong> (<a href="../classLedHAL/"><strong>LedHAL</strong></a>)</li>
-<li><strong>turnOn</strong> (<a href="../classLedHAL/"><strong>LedHAL</strong></a>)</li>
+<li><strong>turnOff</strong> (<a href="../classLedHAL/"><strong>LedHAL</strong></a>, <a href="../classNgndHAL/"><strong>NgndHAL</strong></a>)</li>
+<li><strong>turnOn</strong> (<a href="../classLedHAL/"><strong>LedHAL</strong></a>, <a href="../classNgndHAL/"><strong>NgndHAL</strong></a>)</li>
 <li><strong>turnOffCommunication</strong> (<a href="../classRs485Communication/"><strong>Rs485Communication</strong></a>)</li>
 <li><strong>turnOnCommunication</strong> (<a href="../classRs485Communication/"><strong>Rs485Communication</strong></a>)</li>
+<li><strong>triggerTwistTempMeas</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>timer4Initialize</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
 </ul>
 <h2 id="u">u</h2>

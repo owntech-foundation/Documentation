@@ -12,9 +12,14 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
 * **class** [**DataAPI**](classDataAPI.md)     
 * **class** [**GpioHAL**](classGpioHAL.md)     
 * **class** [**LedHAL**](classLedHAL.md)     
+* **class** [**NgndHAL**](classNgndHAL.md)     
+* **class** [**PowerAPI**](classPowerAPI.md)     
 * **class** [**PwmHAL**](classPwmHAL.md) _Handles all pwm signals for the spin board._     
 * **class** [**Rs485Communication**](classRs485Communication.md)     
 * **class** [**SafetyAPI**](classSafetyAPI.md)     
+* **class** [**SensorsAPI**](classSensorsAPI.md)     
+* **union** [**int2float**](unionSensorsAPI_1_1int2float.md)     
+* **struct** [**sensor\_dt\_data\_t**](structSensorsAPI_1_1sensor__dt__data__t.md)     
 * **class** [**ShieldAPI**](classShieldAPI.md)     
 * **class** [**SpinAPI**](classSpinAPI.md) _Contains all the elements linked to peripherals of the spin board._     
 * **class** [**SyncCommunication**](classSyncCommunication.md)     
@@ -29,6 +34,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
 * **struct** [**gpio\_conf\_t**](structgpio__conf__t.md) _Structure containing all the information of the gpio linked to a given timing unit._     
 * **struct** [**phase\_shift\_conf\_t**](structphase__shift__conf__t.md) _Structure containing all the data regarding phase shifting for a given timing unit._     
 * **struct** [**pwm\_conf\_t**](structpwm__conf__t.md) _Structure containing all the data regarding the pwm of a given timing unit._     
+* **struct** [**sensor\_info\_t**](structsensor__info__t.md)     
 * **struct** [**switch\_conv\_conf\_t**](structswitch__conv__conf__t.md) _Structure describing the switching convention of a given timing unit._     
 * **struct** [**timer\_config\_t**](structtimer__config__t.md)     
 * **struct** [**timer\_driver\_api**](structtimer__driver__api.md)     

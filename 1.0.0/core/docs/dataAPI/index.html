@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -4594,7 +4594,7 @@
 <p>Data acquisition is the process of sampling signals that measure real-world physical conditions and converting the resulting samples into digital numeric values that can be manipulated by a computer.</p>
 <p>In the PowerAPI context, the DataAPI helps the user to easily configure the ADC and retrieve the acquired values.</p>
 <p>The Data API configures the DMAs to store the ADCs acquisitions for the Spin board, and dispatches them in per-channel buffers that can be read by the user. The module also provides functions to convert the raw values acquired by the sensors into values in the adequate unit.</p>
-<p>If using a shield such as Twist, a dedicated interface for sensors configuration is made available by the <a href="twistAPI.md">Shield sensors API</a>.</p>
+<p>If using a shield such as Twist, a dedicated interface for sensors configuration is made available by the <a href="../shield_sensors/">Shield sensors API</a>.</p>
 </div>
 <h2 id="quick-start-with-spin-data-api">Quick start with Spin Data API</h2>
 <p>Note that if you use a shield on the Spin board, you can use the functions provided by the shield API : <code>shield.sensors</code>, which provides the an API similar as this one, but with also more specialized functions that take into consideration shield specificities: sensors accessible by name rather than by using the pin number, initial conversions factors for raw values adapted depending on the sensors, etc.</p>

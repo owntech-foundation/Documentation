@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -3918,10 +3918,15 @@
 <ul>
 <li><strong>analog</strong> (<a href="../classCommunicationAPI/"><strong>CommunicationAPI</strong></a>)</li>
 <li><strong>adcInitialized</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>available_sensors_count</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>available_sensors_props</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>adc_number</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>adc_reg_addr</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 <li><strong>adc_event</strong> (<a href="../structadc__hrtim__conf__t/"><strong>adc_hrtim_conf_t</strong></a>)</li>
 <li><strong>adc_rollover</strong> (<a href="../structadc__hrtim__conf__t/"><strong>adc_hrtim_conf_t</strong></a>)</li>
 <li><strong>adc_source</strong> (<a href="../structadc__hrtim__conf__t/"><strong>adc_hrtim_conf_t</strong></a>)</li>
 <li><strong>adc_trigger</strong> (<a href="../structadc__hrtim__conf__t/"><strong>adc_hrtim_conf_t</strong></a>)</li>
+<li><strong>adc_num</strong> (<a href="../structsensor__info__t/"><strong>sensor_info_t</strong></a>)</li>
 <li><strong>adc_hrtim</strong> (<a href="../structtimer__hrtim__t/"><strong>timer_hrtim_t</strong></a>)</li>
 </ul>
 <h2 id="c">c</h2>
@@ -3931,6 +3936,8 @@
 <li><strong>converted_values_buffer</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>current_adc</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
 <li><strong>current_rank</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>channel_number</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>conversion_type</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 <li><strong>comp</strong> (<a href="../classSpinAPI/"><strong>SpinAPI</strong></a>)</li>
 <li><strong>cmp1</strong> (<a href="../structcomp__usage__conf__t/"><strong>comp_usage_conf_t</strong></a>)</li>
 <li><strong>cmp1_value</strong> (<a href="../structcomp__usage__conf__t/"><strong>comp_usage_conf_t</strong></a>)</li>
@@ -3943,6 +3950,7 @@
 <li><strong>channel</strong> (<a href="../structdma__user__data__t/"><strong>dma_user_data_t</strong></a>)</li>
 <li><strong>compare_tu</strong> (<a href="../structphase__shift__conf__t/"><strong>phase_shift_conf_t</strong></a>)</li>
 <li><strong>ckpsc</strong> (<a href="../structpwm__conf__t/"><strong>pwm_conf_t</strong></a>)</li>
+<li><strong>channel_num</strong> (<a href="../structsensor__info__t/"><strong>sensor_info_t</strong></a>)</li>
 <li><strong>convention</strong> (<a href="../structswitch__conv__conf__t/"><strong>switch_conv_conf_t</strong></a>)</li>
 <li><strong>config</strong> (<a href="../structtimer__driver__api/"><strong>timer_driver_api</strong></a>)</li>
 <li><strong>comp_usage</strong> (<a href="../structtimer__hrtim__t/"><strong>timer_hrtim_t</strong></a>)</li>
@@ -3950,6 +3958,13 @@
 <h2 id="d">d</h2>
 <ul>
 <li><strong>dispatch_method</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>dt_sensors_props</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>default_b</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>default_gain</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>default_offset</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>default_r0</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>default_rdiv</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
+<li><strong>default_t0</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 <li><strong>dac</strong> (<a href="../classSpinAPI/"><strong>SpinAPI</strong></a>)</li>
 <li><strong>data</strong> (<a href="../classSpinAPI/"><strong>SpinAPI</strong></a>)</li>
 <li><strong>DEFAULT_PRIORITY</strong> (<a href="../classTaskAPI/"><strong>TaskAPI</strong></a>)</li>
@@ -3959,6 +3974,7 @@
 </ul>
 <h2 id="e">e</h2>
 <ul>
+<li><strong>enabled_sensors</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>external_trigger</strong> (<a href="../structpwm__conf__t/"><strong>pwm_conf_t</strong></a>)</li>
 </ul>
 <h2 id="f">f</h2>
@@ -3981,6 +3997,8 @@
 <h2 id="i">i</h2>
 <ul>
 <li><strong>is_started</strong> (<a href="../classDataAPI/"><strong>DataAPI</strong></a>)</li>
+<li><strong>initialized</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>is_differential</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 </ul>
 <h2 id="l">l</h2>
 <ul>
@@ -3997,6 +4015,7 @@
 </ul>
 <h2 id="n">n</h2>
 <ul>
+<li><strong>name</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 <li><strong>ngnd</strong> (<a href="../classShieldAPI/"><strong>ShieldAPI</strong></a>)</li>
 </ul>
 <h2 id="o">o</h2>
@@ -4006,6 +4025,7 @@
 </ul>
 <h2 id="p">p</h2>
 <ul>
+<li><strong>pin_number</strong> (<a href="../structSensorsAPI_1_1sensor__dt__data__t/"><strong>SensorsAPI::sensor_dt_data_t</strong></a>)</li>
 <li><strong>power</strong> (<a href="../classShieldAPI/"><strong>ShieldAPI</strong></a>)</li>
 <li><strong>pwm</strong> (<a href="../classSpinAPI/"><strong>SpinAPI</strong></a>)</li>
 <li><strong>pinconfigure</strong> (<a href="../structdac__driver__api/"><strong>dac_driver_api</strong></a>)</li>
@@ -4013,6 +4033,7 @@
 <li><strong>period</strong> (<a href="../structpwm__conf__t/"><strong>pwm_conf_t</strong></a>)</li>
 <li><strong>pwm_mode</strong> (<a href="../structpwm__conf__t/"><strong>pwm_conf_t</strong></a>)</li>
 <li><strong>pwm_tu</strong> (<a href="../structpwm__conf__t/"><strong>pwm_conf_t</strong></a>)</li>
+<li><strong>pin_num</strong> (<a href="../structsensor__info__t/"><strong>sensor_info_t</strong></a>)</li>
 <li><strong>phase_shift</strong> (<a href="../structtimer__hrtim__t/"><strong>timer_hrtim_t</strong></a>)</li>
 <li><strong>pwm_conf</strong> (<a href="../structtimer__hrtim__t/"><strong>timer_hrtim_t</strong></a>)</li>
 </ul>
@@ -4048,6 +4069,8 @@
 </ul>
 <h2 id="t">t</h2>
 <ul>
+<li><strong>temp_mux_in_1</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
+<li><strong>temp_mux_in_2</strong> (<a href="../classSensorsAPI/"><strong>SensorsAPI</strong></a>)</li>
 <li><strong>timer</strong> (<a href="../classSpinAPI/"><strong>SpinAPI</strong></a>)</li>
 <li><strong>timer4init</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>
 <li><strong>timer4started</strong> (<a href="../classTimerHAL/"><strong>TimerHAL</strong></a>)</li>

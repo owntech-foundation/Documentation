@@ -136,6 +136,10 @@
     <member refid="classGpioHAL_1aca3dbbb1e6cbf4c0ec6dc3d931722598" kind="function"><name>getPinNumber</name></member>
     <member refid="classGpioHAL_1a8308cf97155d9148a397b645e3e9aaed" kind="function"><name>getGpioDevice</name></member>
   </compound>
+  <compound refid="unionSensorsAPI_1_1int2float" kind="union"><name>SensorsAPI::int2float</name>
+    <member refid="unionSensorsAPI_1_1int2float_1a3e22f325b6ae7a04831a0aa4b54f368a" kind="variable"><name>raw_value</name></member>
+    <member refid="unionSensorsAPI_1_1int2float_1aeef4af571fac36beb05164d5ffe39233" kind="variable"><name>float_value</name></member>
+  </compound>
   <compound refid="classLedHAL" kind="class"><name>LedHAL</name>
     <member refid="classLedHAL_1aceaab2df22bde836c86c0ec8c5f6042b" kind="variable"><name>ledInitialized</name></member>
     <member refid="classLedHAL_1a10341b6fa2fd6b047c6ae079ecd0e74a" kind="function"><name>turnOn</name></member>
@@ -143,10 +147,32 @@
     <member refid="classLedHAL_1a1568cc368fd3b8821d412603fe4cfff8" kind="function"><name>toggle</name></member>
     <member refid="classLedHAL_1adc8db5102ef7072973a1f65ba3669024" kind="function"><name>initialize</name></member>
   </compound>
+  <compound refid="classNgndHAL" kind="class"><name>NgndHAL</name>
+    <member refid="classNgndHAL_1ac68efaad48a7f458df854ce15d29ed00" kind="function"><name>turnOn</name></member>
+    <member refid="classNgndHAL_1a8c6942db4f9e3738db58ab89eb7bd293" kind="function"><name>turnOff</name></member>
+  </compound>
   <compound refid="structphase__shift__conf__t" kind="struct"><name>phase_shift_conf_t</name>
     <member refid="structphase__shift__conf__t_1a594e7e01c8783edf560d33b876ede9a1" kind="variable"><name>value</name></member>
     <member refid="structphase__shift__conf__t_1a734e6c9ed110f5f873a721aa8f5e624a" kind="variable"><name>compare_tu</name></member>
     <member refid="structphase__shift__conf__t_1ade6e4f8c95f4b0c94c5d9b9fd1b292f5" kind="variable"><name>reset_trig</name></member>
+  </compound>
+  <compound refid="classPowerAPI" kind="class"><name>PowerAPI</name>
+    <member refid="classPowerAPI_1aab8dedde3cfc699c6619475708e63ea9" kind="function"><name>spinNumberToTu</name></member>
+    <member refid="classPowerAPI_1abc8fef65d23bef0c99f126dd2573fde3" kind="function"><name>initMode</name></member>
+    <member refid="classPowerAPI_1a4ba345b7c6691d0f4fdf2e547d9d2422" kind="function"><name>setDutyCycle</name></member>
+    <member refid="classPowerAPI_1abfb00fe45a04ef128e1ec734559e43a0" kind="function"><name>start</name></member>
+    <member refid="classPowerAPI_1a327ca39eb545213ff3201518c01f1dfe" kind="function"><name>stop</name></member>
+    <member refid="classPowerAPI_1aad16833a793449732c379047d7a765d0" kind="function"><name>connectCapacitor</name></member>
+    <member refid="classPowerAPI_1a32fc0e1db758d17bedbe22d1adc5b20a" kind="function"><name>disconnectCapacitor</name></member>
+    <member refid="classPowerAPI_1a3e02864cb637506fcde7e563d48c1a8b" kind="function"><name>connectDriver</name></member>
+    <member refid="classPowerAPI_1a89cb699e02b7136c9b00d5152e1d044d" kind="function"><name>disconnectDriver</name></member>
+    <member refid="classPowerAPI_1a7173c11ed985462663b6b76b4f2609e3" kind="function"><name>setTriggerValue</name></member>
+    <member refid="classPowerAPI_1ac621d3511a7584ec6781920d1d966665" kind="function"><name>setPhaseShift</name></member>
+    <member refid="classPowerAPI_1a646d84a6ffa8a83e9cf209e4c6efaff1" kind="function"><name>setSlopeCompensation</name></member>
+    <member refid="classPowerAPI_1a38b4ff1bd2f2fe1ed8ad88d0ee1fa658" kind="function"><name>setDeadTime</name></member>
+    <member refid="classPowerAPI_1a762963be2eda26a77facd81070efacfb" kind="function"><name>setAdcDecim</name></member>
+    <member refid="classPowerAPI_1a845b9c1008aa86deac765ca73ed381f1" kind="function"><name>initBuck</name></member>
+    <member refid="classPowerAPI_1a89a40dc093a20d11620549c601ccabe3" kind="function"><name>initBoost</name></member>
   </compound>
   <compound refid="structpwm__conf__t" kind="struct"><name>pwm_conf_t</name>
     <member refid="structpwm__conf__t_1a1aaedeb83af04630de2d0a3728af0b9c" kind="variable"><name>pwm_tu</name></member>
@@ -232,6 +258,60 @@
     <member refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" kind="function"><name>disableSafetyApi</name></member>
     <member refid="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" kind="function"><name>storeThreshold</name></member>
     <member refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" kind="function"><name>retrieveThreshold</name></member>
+  </compound>
+  <compound refid="structSensorsAPI_1_1sensor__dt__data__t" kind="struct"><name>SensorsAPI::sensor_dt_data_t</name>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1afadbf17aa3c7af61847139f3df06018c" kind="variable"><name>name</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1ae8af2a63448afefd8820d7e903db94c4" kind="variable"><name>adc_number</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1ab4e4a939ebb3b78ab8923569c10440dc" kind="variable"><name>channel_number</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a812ee98a33ac0eaa8d525a175755ec0f" kind="variable"><name>pin_number</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a782d1a7802aa7c1b72f1d911f90c8c80" kind="variable"><name>is_differential</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1acf257f843cf94a8304af3fc19dce7d09" kind="variable"><name>adc_reg_addr</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a9c6dadb9842b426c9f0391548da72ace" kind="variable"><name>conversion_type</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a41a3d679e1101368dae1aafe42bf21c9" kind="variable"><name>default_gain</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1aa7e0e79bd97840dbbcae4e15ec77c510" kind="variable"><name>default_offset</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a640e737982212ea36dd06795e62b209a" kind="variable"><name>default_r0</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1a77c242361f8016f7ec8b214e9580be51" kind="variable"><name>default_b</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1acaabec4b2936ae896fa1b98a1c8a1a1d" kind="variable"><name>default_rdiv</name></member>
+    <member refid="structSensorsAPI_1_1sensor__dt__data__t_1adcbd32a0fecefc18aec5d26b26358984" kind="variable"><name>default_t0</name></member>
+  </compound>
+  <compound refid="structsensor__info__t" kind="struct"><name>sensor_info_t</name>
+    <member refid="structsensor__info__t_1ae7a2989135c4e9a8682847b49fe665c7" kind="variable"><name>adc_num</name></member>
+    <member refid="structsensor__info__t_1aebb2c4b4c9b95ae531a8e3b151b5601f" kind="variable"><name>channel_num</name></member>
+    <member refid="structsensor__info__t_1aa9e7449bc7d663008a669b639c938236" kind="variable"><name>pin_num</name></member>
+    <member refid="structsensor__info__t_1a7fa3f60bb898799bf0ee545ccff69cfd" kind="function"><name>sensor_info_t</name></member>
+  </compound>
+  <compound refid="classSensorsAPI" kind="class"><name>SensorsAPI</name>
+    <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1e" kind="enum"><name>conv_type_string_t</name></member>
+    <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eac04fb91194a548c84aeaca32ad3ea961" kind="enumvalue"><name>LINEAR</name></member>
+    <member refid="classSensorsAPI_1a0ee2f1d6baae998ba4cf7fed194a0a1eacd50385105ac6788eeb02a341674220d" kind="enumvalue"><name>THERMISTANCE</name></member>
+    <member refid="classSensorsAPI_1a75ceaf931af377aad5ceebbdad718c81" kind="variable"><name>dt_sensors_props</name></member>
+    <member refid="classSensorsAPI_1ae54cef44b91ce9e44c3359ed8477bce7" kind="variable"><name>available_sensors_count</name></member>
+    <member refid="classSensorsAPI_1af43d9b0fdc87711436da8757b8d20f61" kind="variable"><name>available_sensors_props</name></member>
+    <member refid="classSensorsAPI_1aa11e85fdc9315af9189de6afb0a6f29b" kind="variable"><name>enabled_sensors</name></member>
+    <member refid="classSensorsAPI_1a1f7daca03ecf76d43fa7b2c734a10e4b" kind="variable"><name>initialized</name></member>
+    <member refid="classSensorsAPI_1a0f18405be0e826070b5c90f58703ed66" kind="variable"><name>temp_mux_in_1</name></member>
+    <member refid="classSensorsAPI_1a80acb78ab9015731d12f1e12c0af1539" kind="variable"><name>temp_mux_in_2</name></member>
+    <member refid="classSensorsAPI_1a1c6ba0632fafc3f1bce2ee7070f314e2" kind="function"><name>enableSensor</name></member>
+    <member refid="classSensorsAPI_1a9d1d137a205c370cc1e292877f622b41" kind="function"><name>getRawValues</name></member>
+    <member refid="classSensorsAPI_1a31cc6ec96dd47c5e8a1027ee0cbc9183" kind="function"><name>getValues</name></member>
+    <member refid="classSensorsAPI_1a52ef4b1aa39fedd739705d0189209e3f" kind="function"><name>peekLatestValue</name></member>
+    <member refid="classSensorsAPI_1a554e0e3b5fc76658e0ec064bd2623a67" kind="function"><name>getLatestValue</name></member>
+    <member refid="classSensorsAPI_1a0e2e7c54b3134595cff62f4f10d9dd0f" kind="function"><name>convertRawValue</name></member>
+    <member refid="classSensorsAPI_1a5b553e786e125505a3d6935923eb8934" kind="function"><name>setConversionParametersLinear</name></member>
+    <member refid="classSensorsAPI_1acde5b18e9628754b4aa1f40d1f9e481f" kind="function"><name>setConversionParametersNtcThermistor</name></member>
+    <member refid="classSensorsAPI_1a332d4356c33eb67e7ad70bbceefb4372" kind="function"><name>retrieveStoredParameterValue</name></member>
+    <member refid="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" kind="function"><name>retrieveStoredConversionType</name></member>
+    <member refid="classSensorsAPI_1af635b05026bef4d4db643fb1249c6974" kind="function"><name>storeParametersInMemory</name></member>
+    <member refid="classSensorsAPI_1a6f2d78e501b02ada4ac3f2788bf475ca" kind="function"><name>retrieveParametersFromMemory</name></member>
+    <member refid="classSensorsAPI_1a83b5ce3ec4e927c2f9389750a2332fbc" kind="function"><name>enableDefaultOwnverterSensors</name></member>
+    <member refid="classSensorsAPI_1adea080dbc74df8fc4166064f28554a4e" kind="function"><name>setOwnverterTempMeas</name></member>
+    <member refid="classSensorsAPI_1a00bda5650aef00b33df2aaf30e958efb" kind="function"><name>enableDefaultTwistSensors</name></member>
+    <member refid="classSensorsAPI_1a8cab93e63da26425b8c92871747b696f" kind="function"><name>setTwistSensorsUserCalibrationFactors</name></member>
+    <member refid="classSensorsAPI_1a1577482ecd599fcd7083ef896821780d" kind="function"><name>triggerTwistTempMeas</name></member>
+    <member refid="classSensorsAPI_1af3ee5e40a384ce94f35369f53fdd57c7" kind="function"><name>getEnabledSensorInfo</name></member>
+    <member refid="classSensorsAPI_1a06a4d8fdb13e6e534600060a90b680f9" kind="function"><name>buildSensorListFromDeviceTree</name></member>
+    <member refid="classSensorsAPI_1a6a98486f283d49d18549a20a24f13335" kind="function"><name>getLineFromConsole</name></member>
+    <member refid="classSensorsAPI_1a03e69024f1f0119f80b11bfc68f2948a" kind="function"><name>getCalibrationCoefficients</name></member>
   </compound>
   <compound refid="classShieldAPI" kind="class"><name>ShieldAPI</name>
     <member refid="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" kind="variable"><name>sensors</name></member>
@@ -732,6 +812,68 @@
   <compound refid="ShieldAPI_8h" kind="file"><name>ShieldAPI.h</name>
     <member refid="ShieldAPI_8h_1a58006a969289e96ffcfc92e950acd44b" kind="variable"><name>shield</name></member>
   </compound>
+  <compound refid="NgndHAL_8cpp" kind="file"><name>NgndHAL.cpp</name>
+    <member refid="NgndHAL_8cpp_1ab90988dc19056315c9fc8f827efc1899" kind="variable"><name>ngnd_switch</name></member>
+  </compound>
+  <compound refid="NgndHAL_8h" kind="file"><name>NgndHAL.h</name>
+  </compound>
+  <compound refid="Power_8cpp" kind="file"><name>Power.cpp</name>
+  </compound>
+  <compound refid="Power_8h" kind="file"><name>Power.h</name>
+    <member refid="Power_8h_1a48d53d330c5450e13451d2804668ff53" kind="enum"><name>leg_t</name></member>
+    <member refid="Power_8h_1a48d53d330c5450e13451d2804668ff53a27fc47307d6e13d26305f3269e13f5ad" kind="enumvalue"><name>DT_FOREACH_CHILD_STATUS_OKAY</name></member>
+  </compound>
+  <compound refid="power__init_8cpp" kind="file"><name>power_init.cpp</name>
+    <member refid="power__init_8cpp_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
+    <member refid="power__init_8cpp_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
+    <member refid="power__init_8cpp_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
+    <member refid="power__init_8cpp_1a00f52754a48a9124d6f8b17ffb698403" kind="variable"><name>dt_adc</name></member>
+    <member refid="power__init_8cpp_1a2ca9bf00ef5fb28f3f2403a2227e94cd" kind="variable"><name>dt_adc_decim</name></member>
+    <member refid="power__init_8cpp_1a60173017a742f6585796a0d28c31e840" kind="variable"><name>dt_modulation</name></member>
+    <member refid="power__init_8cpp_1a9ac881906f17a19920c21edac0a9b697" kind="variable"><name>dt_edge_trigger</name></member>
+    <member refid="power__init_8cpp_1ad05a5b8effeb238c758abf8d69f341ef" kind="variable"><name>dt_rising_deadtime</name></member>
+    <member refid="power__init_8cpp_1aa7ad37cd94fe3f84d1e3f6f12ce22ddd" kind="variable"><name>dt_falling_deadtime</name></member>
+    <member refid="power__init_8cpp_1a382bf0e47722e398be2e1e4843500ae2" kind="variable"><name>dt_phase_shift</name></member>
+    <member refid="power__init_8cpp_1af89c37eb525d41c2a29fa66027805b40" kind="variable"><name>dt_leg_count</name></member>
+    <member refid="power__init_8cpp_1a318e8e1e06f5de547a0449de990c03ed" kind="variable"><name>dt_output1_inactive</name></member>
+    <member refid="power__init_8cpp_1a09bd91e539131159af49e0740e317cf6" kind="variable"><name>dt_output2_inactive</name></member>
+    <member refid="power__init_8cpp_1a4e8edef338a05f6d2e91673bb387bf34" kind="variable"><name>dt_current_pin</name></member>
+    <member refid="power__init_8cpp_1ad15b84d9315536f06ceee54cc40664e6" kind="variable"><name>dt_pin_driver</name></member>
+    <member refid="power__init_8cpp_1aa0beaabbf271695045860ca02dec00f5" kind="variable"><name>dt_pin_capacitor</name></member>
+  </compound>
+  <compound refid="power__init_8h" kind="file"><name>power_init.h</name>
+    <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590d" kind="enum"><name>cm_dac_t</name></member>
+    <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590da8308ee8ce4d834a47f9309087d4f5722" kind="enumvalue"><name>CM_DAC_NONE</name></member>
+    <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590da9591efd5f2d8ada76011926f036b12b6" kind="enumvalue"><name>CM_DAC1</name></member>
+    <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590da9cf1b5fc136e68031cbccb2a558ad347" kind="enumvalue"><name>CM_DAC3</name></member>
+    <member refid="power__init_8h_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
+    <member refid="power__init_8h_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
+    <member refid="power__init_8h_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
+    <member refid="power__init_8h_1a00f52754a48a9124d6f8b17ffb698403" kind="variable"><name>dt_adc</name></member>
+    <member refid="power__init_8h_1a2ca9bf00ef5fb28f3f2403a2227e94cd" kind="variable"><name>dt_adc_decim</name></member>
+    <member refid="power__init_8h_1a60173017a742f6585796a0d28c31e840" kind="variable"><name>dt_modulation</name></member>
+    <member refid="power__init_8h_1a9ac881906f17a19920c21edac0a9b697" kind="variable"><name>dt_edge_trigger</name></member>
+    <member refid="power__init_8h_1ad05a5b8effeb238c758abf8d69f341ef" kind="variable"><name>dt_rising_deadtime</name></member>
+    <member refid="power__init_8h_1aa7ad37cd94fe3f84d1e3f6f12ce22ddd" kind="variable"><name>dt_falling_deadtime</name></member>
+    <member refid="power__init_8h_1a382bf0e47722e398be2e1e4843500ae2" kind="variable"><name>dt_phase_shift</name></member>
+    <member refid="power__init_8h_1af89c37eb525d41c2a29fa66027805b40" kind="variable"><name>dt_leg_count</name></member>
+    <member refid="power__init_8h_1a318e8e1e06f5de547a0449de990c03ed" kind="variable"><name>dt_output1_inactive</name></member>
+    <member refid="power__init_8h_1a09bd91e539131159af49e0740e317cf6" kind="variable"><name>dt_output2_inactive</name></member>
+    <member refid="power__init_8h_1a4e8edef338a05f6d2e91673bb387bf34" kind="variable"><name>dt_current_pin</name></member>
+    <member refid="power__init_8h_1ad15b84d9315536f06ceee54cc40664e6" kind="variable"><name>dt_pin_driver</name></member>
+    <member refid="power__init_8h_1aa0beaabbf271695045860ca02dec00f5" kind="variable"><name>dt_pin_capacitor</name></member>
+  </compound>
+  <compound refid="Sensors_8cpp" kind="file"><name>Sensors.cpp</name>
+  </compound>
+  <compound refid="Sensors_8h" kind="file"><name>Sensors.h</name>
+    <member refid="Sensors_8h_1a7db4018819078870576bf80126e7804d" kind="enum"><name>sensor_t</name></member>
+    <member refid="Sensors_8h_1a7db4018819078870576bf80126e7804da61f3cdb1e9876b4bf994cad621cb3dd8" kind="enumvalue"><name>UNDEFINED_SENSOR</name></member>
+    <member refid="Sensors_8h_1a7db4018819078870576bf80126e7804da4019476b139508bcdee7741eb5fecf96" kind="enumvalue"><name>DT_FOREACH_STATUS_OKAY</name></member>
+    <member refid="Sensors_8h_1a55cf508217bed7633852a00f6287583d" kind="enum"><name>ownverter_temp_sensor_t</name></member>
+    <member refid="Sensors_8h_1a55cf508217bed7633852a00f6287583da20594d63c82a921fa0385245044e8bf3" kind="enumvalue"><name>TEMP_1</name></member>
+    <member refid="Sensors_8h_1a55cf508217bed7633852a00f6287583dafefbe063ec1ff3c2f719a97c6355455c" kind="enumvalue"><name>TEMP_2</name></member>
+    <member refid="Sensors_8h_1a55cf508217bed7633852a00f6287583daca2f8114d6ff9e5f1c880171126926c3" kind="enumvalue"><name>TEMP_3</name></member>
+  </compound>
   <compound refid="SpinAPI_8cpp" kind="file"><name>SpinAPI.cpp</name>
     <member refid="SpinAPI_8cpp_1a8fba8acc6a1c184480b1fc10c802f547" kind="variable"><name>spin</name></member>
   </compound>
@@ -1074,6 +1216,8 @@
   <compound refid="dir_7b157175519ef7e5ecaa80a64fe5f6a3" kind="dir"><name>docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api</name>
   </compound>
   <compound refid="dir_1a412f239039e530bef8001f48cd80a4" kind="dir"><name>docs/core/zephyr/modules/owntech_communication/zephyr/src</name>
+  </compound>
+  <compound refid="dir_cc8f80e4cf83a61a7635b2e9633862a2" kind="dir"><name>docs/core/zephyr/modules/owntech_shield_api/zephyr/src</name>
   </compound>
   <compound refid="dir_b0a9bfd1c37d418dc07d30cb79a776da" kind="dir"><name>docs/core/zephyr/modules/owntech_spin_api/zephyr/src</name>
   </compound>

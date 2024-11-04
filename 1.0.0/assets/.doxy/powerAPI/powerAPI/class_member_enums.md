@@ -2,6 +2,11 @@
 # Class Member Enums
 
 
-Nothing related to **Class Member Enums** found.
+
+## c
+
+* **conv\_type\_string\_t** ([**SensorsAPI**](classSensorsAPI.md))
+
+
 
 

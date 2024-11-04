@@ -37,9 +37,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  NgndHAL | [**ngnd**](#variable-ngnd)  <br>_Contains all the function of the NGND switch compatible with TWISTs prior to 1.4._  |
-|  PowerAPI | [**power**](#variable-power)  <br>_Contains all the functions to drive shield power capabilities._  |
-|  SensorsAPI | [**sensors**](#variable-sensors)  <br>_Contains all the functions to interact with shield sensors._  |
+|  [**NgndHAL**](classNgndHAL.md) | [**ngnd**](#variable-ngnd)  <br>_Contains all the function of the NGND switch compatible with TWISTs prior to 1.4._  |
+|  [**PowerAPI**](classPowerAPI.md) | [**power**](#variable-power)  <br>_Contains all the functions to drive shield power capabilities._  |
+|  [**SensorsAPI**](classSensorsAPI.md) | [**sensors**](#variable-sensors)  <br>_Contains all the functions to interact with shield sensors._  |
 
 
 

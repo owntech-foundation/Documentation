@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_cc8f80e4cf83a61a7635b2e9633862a2" kind="dir">
+    <compoundname>docs/core/zephyr/modules/owntech_shield_api/zephyr/src</compoundname>
+    <innerfile refid="NgndHAL_8cpp">NgndHAL.cpp</innerfile>
+    <innerfile refid="NgndHAL_8h">NgndHAL.h</innerfile>
+    <innerfile refid="Power_8cpp">Power.cpp</innerfile>
+    <innerfile refid="Power_8h">Power.h</innerfile>
+    <innerfile refid="power__init_8cpp">power_init.cpp</innerfile>
+    <innerfile refid="power__init_8h">power_init.h</innerfile>
+    <innerfile refid="Sensors_8cpp">Sensors.cpp</innerfile>
+    <innerfile refid="Sensors_8h">Sensors.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/"/>
+  </compounddef>
+</doxygen>

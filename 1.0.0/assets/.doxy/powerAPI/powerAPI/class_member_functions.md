@@ -3,6 +3,11 @@
 
 
 
+## b
+
+* **buildSensorListFromDeviceTree** ([**SensorsAPI**](classSensorsAPI.md))
+
+
 ## c
 
 * **currentModeInit** ([**DacHAL**](classDacHAL.md))
@@ -10,9 +15,12 @@
 * **configureTriggerSource** ([**DataAPI**](classDataAPI.md))
 * **convertValue** ([**DataAPI**](classDataAPI.md))
 * **configurePin** ([**GpioHAL**](classGpioHAL.md))
+* **connectCapacitor** ([**PowerAPI**](classPowerAPI.md))
+* **connectDriver** ([**PowerAPI**](classPowerAPI.md))
 * **configurePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
 * **configure** ([**Rs485Communication**](classRs485Communication.md))
 * **configureCustom** ([**Rs485Communication**](classRs485Communication.md))
+* **convertRawValue** ([**SensorsAPI**](classSensorsAPI.md))
 * **createBackground** ([**TaskAPI**](classTaskAPI.md))
 * **createCritical** ([**TaskAPI**](classTaskAPI.md))
 
@@ -21,6 +29,8 @@
 
 * **disableChannel** ([**DataAPI**](classDataAPI.md))
 * **doFullDispatch** ([**DataAPI**](classDataAPI.md))
+* **disconnectCapacitor** ([**PowerAPI**](classPowerAPI.md))
+* **disconnectDriver** ([**PowerAPI**](classPowerAPI.md))
 * **disableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **disablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
 * **disableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
@@ -34,6 +44,9 @@
 * **enableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **enablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
 * **enableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
+* **enableDefaultOwnverterSensors** ([**SensorsAPI**](classSensorsAPI.md))
+* **enableDefaultTwistSensors** ([**SensorsAPI**](classSensorsAPI.md))
+* **enableSensor** ([**SensorsAPI**](classSensorsAPI.md))
 
 
 ## g
@@ -53,9 +66,9 @@
 * **getConversionParameterValue** ([**DataAPI**](classDataAPI.md))
 * **getCurrentAdcForPin** ([**DataAPI**](classDataAPI.md))
 * **getDefaultAdcForPin** ([**DataAPI**](classDataAPI.md))
-* **getLatestValue** ([**DataAPI**](classDataAPI.md))
-* **getRawValues** ([**DataAPI**](classDataAPI.md))
-* **getValues** ([**DataAPI**](classDataAPI.md))
+* **getLatestValue** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
+* **getRawValues** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
+* **getValues** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
 * **getGpioDevice** ([**GpioHAL**](classGpioHAL.md))
 * **getPinNumber** ([**GpioHAL**](classGpioHAL.md))
 * **getAdcEdgeTrigger** ([**PwmHAL**](classPwmHAL.md))
@@ -77,6 +90,9 @@
 * **getChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
 * **getChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
 * **getChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
+* **getCalibrationCoefficients** ([**SensorsAPI**](classSensorsAPI.md))
+* **getEnabledSensorInfo** ([**SensorsAPI**](classSensorsAPI.md))
+* **getLineFromConsole** ([**SensorsAPI**](classSensorsAPI.md))
 * **getTimer4IncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
 
 
@@ -86,6 +102,9 @@
 * **initialize** ([**CompHAL**](classCompHAL.md), [**LedHAL**](classLedHAL.md))
 * **initConstValue** ([**DacHAL**](classDacHAL.md))
 * **initializeAllAdcs** ([**DataAPI**](classDataAPI.md))
+* **initBoost** ([**PowerAPI**](classPowerAPI.md))
+* **initBuck** ([**PowerAPI**](classPowerAPI.md))
+* **initMode** ([**PowerAPI**](classPowerAPI.md))
 * **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
@@ -97,7 +116,7 @@
 ## p
 
 * **peekChannel** ([**DataAPI**](classDataAPI.md))
-* **peekLatestValue** ([**DataAPI**](classDataAPI.md))
+* **peekLatestValue** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
 
 
 ## r
@@ -106,6 +125,9 @@
 * **readPin** ([**GpioHAL**](classGpioHAL.md))
 * **resetPin** ([**GpioHAL**](classGpioHAL.md))
 * **retrieveThreshold** ([**SafetyAPI**](classSafetyAPI.md))
+* **retrieveParametersFromMemory** ([**SensorsAPI**](classSensorsAPI.md))
+* **retrieveStoredConversionType** ([**SensorsAPI**](classSensorsAPI.md))
+* **retrieveStoredParameterValue** ([**SensorsAPI**](classSensorsAPI.md))
 
 
 ## s
@@ -118,28 +140,32 @@
 * **setCtrlReference** ([**CanCommunication**](classCanCommunication.md))
 * **setConstValue** ([**DacHAL**](classDacHAL.md))
 * **slopeCompensation** ([**DacHAL**](classDacHAL.md))
-* **setConversionParametersLinear** ([**DataAPI**](classDataAPI.md))
-* **setConversionParametersNtcThermistor** ([**DataAPI**](classDataAPI.md))
+* **setConversionParametersLinear** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
+* **setConversionParametersNtcThermistor** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
 * **setDispatchMethod** ([**DataAPI**](classDataAPI.md))
 * **setRepetitionsBetweenDispatches** ([**DataAPI**](classDataAPI.md))
-* **start** ([**DataAPI**](classDataAPI.md))
+* **start** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md))
 * **started** ([**DataAPI**](classDataAPI.md))
-* **stop** ([**DataAPI**](classDataAPI.md))
+* **stop** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md))
 * **storeConversionParametersInMemory** ([**DataAPI**](classDataAPI.md))
 * **setPin** ([**GpioHAL**](classGpioHAL.md))
+* **setAdcDecim** ([**PowerAPI**](classPowerAPI.md))
+* **setDeadTime** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
+* **setDutyCycle** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
+* **setPhaseShift** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
+* **setSlopeCompensation** ([**PowerAPI**](classPowerAPI.md))
+* **setTriggerValue** ([**PowerAPI**](classPowerAPI.md))
+* **spinNumberToTu** ([**PowerAPI**](classPowerAPI.md))
 * **setAdcDecimation** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcEdgeTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcTriggerInstant** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcTriggerPostScaler** ([**PwmHAL**](classPwmHAL.md))
-* **setDeadTime** ([**PwmHAL**](classPwmHAL.md))
-* **setDutyCycle** ([**PwmHAL**](classPwmHAL.md))
 * **setEev** ([**PwmHAL**](classPwmHAL.md))
 * **setFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **setMode** ([**PwmHAL**](classPwmHAL.md))
 * **setModulation** ([**PwmHAL**](classPwmHAL.md))
 * **setPeriodEvntRep** ([**PwmHAL**](classPwmHAL.md))
-* **setPhaseShift** ([**PwmHAL**](classPwmHAL.md))
 * **setSwitchConvention** ([**PwmHAL**](classPwmHAL.md))
 * **startDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **startSingleOutput** ([**PwmHAL**](classPwmHAL.md))
@@ -151,6 +177,9 @@
 * **setChannelThresholdMin** ([**SafetyAPI**](classSafetyAPI.md))
 * **setChannelWatch** ([**SafetyAPI**](classSafetyAPI.md))
 * **storeThreshold** ([**SafetyAPI**](classSafetyAPI.md))
+* **setOwnverterTempMeas** ([**SensorsAPI**](classSensorsAPI.md))
+* **setTwistSensorsUserCalibrationFactors** ([**SensorsAPI**](classSensorsAPI.md))
+* **storeParametersInMemory** ([**SensorsAPI**](classSensorsAPI.md))
 * **startBackground** ([**TaskAPI**](classTaskAPI.md))
 * **startCritical** ([**TaskAPI**](classTaskAPI.md))
 * **stopBackground** ([**TaskAPI**](classTaskAPI.md))
@@ -158,6 +187,7 @@
 * **suspendBackgroundMs** ([**TaskAPI**](classTaskAPI.md))
 * **suspendBackgroundUs** ([**TaskAPI**](classTaskAPI.md))
 * **startLogTimer4IncrementalEncoder** ([**TimerHAL**](classTimerHAL.md))
+* **sensor\_info\_t** ([**sensor\_info\_t**](structsensor__info__t.md))
 
 
 ## t
@@ -165,10 +195,11 @@
 * **triggerAcquisition** ([**DataAPI**](classDataAPI.md))
 * **togglePin** ([**GpioHAL**](classGpioHAL.md))
 * **toggle** ([**LedHAL**](classLedHAL.md))
-* **turnOff** ([**LedHAL**](classLedHAL.md))
-* **turnOn** ([**LedHAL**](classLedHAL.md))
+* **turnOff** ([**LedHAL**](classLedHAL.md), [**NgndHAL**](classNgndHAL.md))
+* **turnOn** ([**LedHAL**](classLedHAL.md), [**NgndHAL**](classNgndHAL.md))
 * **turnOffCommunication** ([**Rs485Communication**](classRs485Communication.md))
 * **turnOnCommunication** ([**Rs485Communication**](classRs485Communication.md))
+* **triggerTwistTempMeas** ([**SensorsAPI**](classSensorsAPI.md))
 * **timer4Initialize** ([**TimerHAL**](classTimerHAL.md))
 
 

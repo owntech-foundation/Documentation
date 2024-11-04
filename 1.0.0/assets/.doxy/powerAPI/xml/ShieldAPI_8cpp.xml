@@ -54,11 +54,11 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><ref refid="classShieldAPI" kindref="compound">ShieldAPI</ref><sp/>shield;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">PowerAPI<sp/><ref refid="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" kindref="member">ShieldAPI::power</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">SensorsAPI<sp/><ref refid="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" kindref="member">ShieldAPI::sensors</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="classPowerAPI" kindref="compound">PowerAPI</ref><sp/><ref refid="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" kindref="member">ShieldAPI::power</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="classSensorsAPI" kindref="compound">SensorsAPI</ref><sp/><ref refid="classShieldAPI_1a66e0b678e852d4f944f0a1c891843760" kindref="member">ShieldAPI::sensors</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_NGND_DRIVER</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">NgndHAL<sp/><ref refid="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" kindref="member">ShieldAPI::ngnd</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="classNgndHAL" kindref="compound">NgndHAL</ref><sp/><ref refid="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" kindref="member">ShieldAPI::ngnd</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.cpp"/>

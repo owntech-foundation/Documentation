@@ -31,6 +31,7 @@
 * **can\_dev** ([**thingset\_isotp.cpp**](thingset__isotp_8cpp.md), [**thingset\_pub\_sub.cpp**](thingset__pub__sub_8cpp.md))
 * **ctrl\_filter** ([**thingset\_pub\_sub.cpp**](thingset__pub__sub_8cpp.md))
 * **current\_storage\_version** ([**nvs\_storage.c**](nvs__storage_8c.md))
+* **cm\_dac\_t** ([**power\_init.h**](power__init_8h.md))
 * **CHANNELS\_PER\_ADC** ([**DataAPI.h**](DataAPI_8h.md))
 * **command\_flag** ([**UartHAL.cpp**](UartHAL_8cpp.md))
 * **conversion\_parameters** ([**data\_conversion.cpp**](data__conversion_8cpp.md))
@@ -61,6 +62,21 @@
 * **dac\_pin\_config\_t** ([**dac.h**](dac_8h.md))
 * **dac\_polarity\_t** ([**dac.h**](dac_8h.md))
 * **dac\_trigger\_t** ([**dac.h**](dac_8h.md))
+* **dt\_adc** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_adc\_decim** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_current\_pin** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_edge\_trigger** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_falling\_deadtime** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_leg\_count** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_modulation** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_output1\_inactive** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_output2\_inactive** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_phase\_shift** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_pin\_capacitor** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_pin\_driver** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_pwm\_pin** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_pwm\_x1\_high** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **dt\_rising\_deadtime** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
 * **dac1** ([**DacHAL.cpp**](DacHAL_8cpp.md))
 * **dac2** ([**DacHAL.cpp**](DacHAL_8cpp.md), [**hardware\_auto\_configuration.cpp**](hardware__auto__configuration_8cpp.md))
 * **dac3** ([**DacHAL.cpp**](DacHAL_8cpp.md))
@@ -140,6 +156,7 @@
 
 ## l
 
+* **leg\_t** ([**Power.h**](Power_8h.md))
 * **led\_pin\_spec** ([**LedHAL.cpp**](LedHAL_8cpp.md))
 * **leg\_operation\_t** ([**PwmHAL.h**](PwmHAL_8h.md))
 
@@ -153,11 +170,13 @@
 ## n
 
 * **nvs\_category\_t** ([**nvs\_storage.h**](nvs__storage_8h.md))
+* **ngnd\_switch** ([**NgndHAL.cpp**](NgndHAL_8cpp.md))
 * **NO\_VALUE** ([**DataAPI.h**](DataAPI_8h.md))
 
 
 ## o
 
+* **ownverter\_temp\_sensor\_t** ([**Sensors.h**](Sensors_8h.md))
 * **OUTPUT** ([**GpioHAL.cpp**](GpioHAL_8cpp.md), [**GpioHAL.h**](GpioHAL_8h.md))
 
 
@@ -206,6 +225,7 @@
 * **storage\_version\_in\_nvs** ([**nvs\_storage.c**](nvs__storage_8c.md))
 * **safety** ([**SafetyAPI.cpp**](SafetyAPI_8cpp.md), [**SafetyAPI.h**](SafetyAPI_8h.md))
 * **shield** ([**ShieldAPI.cpp**](ShieldAPI_8cpp.md), [**ShieldAPI.h**](ShieldAPI_8h.md))
+* **sensor\_t** ([**Sensors.h**](Sensors_8h.md))
 * **spin** ([**SpinAPI.cpp**](SpinAPI_8cpp.md), [**SpinAPI.h**](SpinAPI_8h.md))
 * **source\_registers** ([**dma.cpp**](dma_8cpp.md))
 * **source\_triggers** ([**dma.cpp**](dma_8cpp.md))
@@ -219,6 +239,7 @@
 * **ts** ([**thingset\_isotp.cpp**](thingset__isotp_8cpp.md), [**thingset\_pub\_sub.cpp**](thingset__pub__sub_8cpp.md))
 * **tx\_addr** ([**thingset\_isotp.cpp**](thingset__isotp_8cpp.md))
 * **tu\_channel** ([**hrtim.h**](hrtim_8h.md))
+* **timer\_frequency** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
 * **timer4** ([**TimerHAL.cpp**](TimerHAL_8cpp.md))
 * **task** ([**TaskAPI.cpp**](TaskAPI_8cpp.md), [**TaskAPI.h**](TaskAPI_8h.md))
 * **task\_function\_t** ([**TaskAPI.h**](TaskAPI_8h.md))
