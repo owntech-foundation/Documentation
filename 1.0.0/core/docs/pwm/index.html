@@ -2033,6 +2033,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#class-pwmhal" class="md-nav__link">
     <span class="md-ellipsis">
       Class PwmHAL
@@ -4565,6 +4574,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#class-pwmhal" class="md-nav__link">
     <span class="md-ellipsis">
       Class PwmHAL
@@ -5032,7 +5050,7 @@
 <p class="admonition-title">Note</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
 </code></pre></div>
-Make sure that SPIN API is included to use PwmHAL </p>
+Make sure that SPIN API is included to use PwmHAL</p>
 </div>
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note pre-initialization">
@@ -5041,18 +5059,18 @@ Make sure that SPIN API is included to use PwmHAL </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered</label><label for="__tabbed_2_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br />
-2. Set wich output (1 or 2) will be controlled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br />
-3.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br />
-4.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a>  </p>
+<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a>
+2. Set wich output (1 or 2) will be controlled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a>
+3.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a>
+4.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a></p>
 </div>
 <div class="tabbed-block">
-<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br />
-2. Set ow which edge (up/down) to trigger adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcEdgeTrigger(PWMx, edgeTrigUp/edgeTrigDwn)</code></a><br />
-3. Set the division of the number of trigger in a fixed period <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcdecimation"><code>spin.pwm.setAdcDecimation(PWMx, DecimValue)</code></a><br />
-4. Set wich output (1 or 2) will be constrolled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br />
-5.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br />
-6.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a>  </p>
+<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a>
+2. Set ow which edge (up/down) to trigger adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcEdgeTrigger(PWMx, edgeTrigUp/edgeTrigDwn)</code></a>
+3. Set the division of the number of trigger in a fixed period <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcdecimation"><code>spin.pwm.setAdcDecimation(PWMx, DecimValue)</code></a>
+4. Set wich output (1 or 2) will be constrolled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a>
+5.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a>
+6.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a></p>
 </div>
 </div>
 </div>
@@ -5064,20 +5082,20 @@ Make sure that SPIN API is included to use PwmHAL </p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>Set the rising/falling dead time. Can be changed before/after init : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdeadtime"><code>spin.pwm.setDeadTime(PWMx, rise, fall)</code></a>  </li>
-<li>Set an initial value for the  duty cycle <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdutycycle"><code>spin.pwm.setDutyCycle(0.5)</code></a>  </li>
-<li>Start the PWM, either start both outout or just one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startdualoutput"><code>spin.pwm.startDualOutput(PWMx)</code></a> / <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startsingleoutput"><code>spin.pwm.startSingleOutput(PWMx, PWMx1/PWMx2)</code></a>      </li>
-<li>if ADC hardware triggered : <a href="adc/#initialization-sequence">follow ADC init sequence</a>  </li>
+<li>Set the rising/falling dead time. Can be changed before/after init : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdeadtime"><code>spin.pwm.setDeadTime(PWMx, rise, fall)</code></a></li>
+<li>Set an initial value for the  duty cycle <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdutycycle"><code>spin.pwm.setDutyCycle(0.5)</code></a></li>
+<li>Start the PWM, either start both outout or just one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startdualoutput"><code>spin.pwm.startDualOutput(PWMx)</code></a> / <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startsingleoutput"><code>spin.pwm.startSingleOutput(PWMx, PWMx1/PWMx2)</code></a></li>
+<li>if ADC hardware triggered : <a href="adc/#initialization-sequence">follow ADC init sequence</a></li>
 </ol>
 </div>
 <div class="tabbed-block">
 <ol>
-<li>Set the rising/falling dead time. Can be changed before/after init : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdeadtime"><code>spin.pwm.setDeadTime(PWMx, rise, fall)</code></a>  </li>
-<li>Set wich ADC trigger to link to PWM unit <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcTrigger(PWMx, ADCtrig)</code></a>  </li>
-<li>Enable the adc trigger <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-enableadctrigger"><code>spin.pwm.enableAdcTrigger</code></a>  </li>
-<li>Set an initial value for the  duty cycle <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdutycycle"><code>spin.pwm.setDutyCycle(0.5)</code></a>  </li>
-<li>Start the PWM, either start both outout or just one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startdualoutput"><code>spin.pwm.startDualOutput(PWMx)</code></a> / <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startsingleoutput"><code>spin.pwm.startSingleOutput(PWMx, PWMx1/PWMx2)</code></a>      </li>
-<li>if ADC hardware triggered : <a href="adc/#initialization-sequence">follow ADC init sequence</a>  </li>
+<li>Set the rising/falling dead time. Can be changed before/after init : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdeadtime"><code>spin.pwm.setDeadTime(PWMx, rise, fall)</code></a></li>
+<li>Set wich ADC trigger to link to PWM unit <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcTrigger(PWMx, ADCtrig)</code></a></li>
+<li>Enable the adc trigger <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-enableadctrigger"><code>spin.pwm.enableAdcTrigger</code></a></li>
+<li>Set an initial value for the  duty cycle <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setdutycycle"><code>spin.pwm.setDutyCycle(0.5)</code></a></li>
+<li>Start the PWM, either start both outout or just one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startdualoutput"><code>spin.pwm.startDualOutput(PWMx)</code></a> / <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-startsingleoutput"><code>spin.pwm.startSingleOutput(PWMx, PWMx1/PWMx2)</code></a></li>
+<li>if ADC hardware triggered : <a href="adc/#initialization-sequence">follow ADC init sequence</a></li>
 </ol>
 </div>
 </div>
@@ -5088,7 +5106,7 @@ Make sure that SPIN API is included to use PwmHAL </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Software triggered</label><label for="__tabbed_4_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initFixedFrequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">);</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initFixedFrequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">);</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setSwitchConvention</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">PWMx1</span><span class="p">);</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">VOLTAGE_MODE</span><span class="p">);</span>
@@ -5099,7 +5117,7 @@ Make sure that SPIN API is included to use PwmHAL </p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initFixedFrequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">);</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">initFixedFrequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">);</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setSwitchConvention</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">PWMx1</span><span class="p">);</span>
@@ -5117,18 +5135,18 @@ Make sure that SPIN API is included to use PwmHAL </p>
 </div>
 </div>
 <h2 id="how-it-works">How it works</h2>
-<p>To generate a PWM you need two signals, a variable high frequency signals called the carrier and a constant signal called the duty cycle. </p>
+<p>To generate a PWM you need two signals, a variable high frequency signals called the carrier and a constant signal called the duty cycle.</p>
 <h3 id="carrier-signal-and-pwm-resolution">Carrier signal and PWM resolution</h3>
 <p>The carrier signal is usually a counter in the form of a sawtooth or triangle wave. The frequency of the PWM is given by the max value of that counter. It means that the minimal duty cycle step of phase step, is proportional to the frequency of the signal.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Here is a counter incrementing from 0 to 27200.
 <img alt="PWM carrier" src="../images/Carrier_PWM.svg" /></p>
-<p>The increment between each step is made at the PWM resolution which is here 184ps, so the carrier gets from 0 to 27200 in 5µs so a frequency of 200kHz.<br />
-In other words the smallest step is 1/27200 or 0.0037% of the period. </p>
+<p>The increment between each step is made at the PWM resolution which is here 184ps, so the carrier gets from 0 to 27200 in 5µs so a frequency of 200kHz.
+In other words the smallest step is 1/27200 or 0.0037% of the period.</p>
 </div>
 <h3 id="duty-cycle">Duty cycle</h3>
-<p>The duty cycle is a constant value compared to the carrier. </p>
+<p>The duty cycle is a constant value compared to the carrier.</p>
 <p><img alt="Duty cycle" src="../images/changing_duty_cycle.gif" /></p>
 <p>When the carrier is superior to the duty cycle, the logic output is at high level. On the contrary, when the carrier is inferior to the duty cycle the the output logic is low level. A PWM signal is thus a sqarewave signal with a frequency (the <strong>switching frequency</strong>) being fixed by the carrier.</p>
 <p>Varying the duty cycle is how to vary the output of the PWM.</p>
@@ -5153,12 +5171,12 @@ In other words the smallest step is 1/27200 or 0.0037% of the period. </p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="single_output_pwm" src="../images/single_output_pwm.svg" width="800" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT1</span><span class="p">);</span><span class="w">    </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT1</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p><img alt="single_output_pwm2" src="../images/single_output_pwm2.svg" width="800" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT2</span><span class="p">);</span><span class="w">    </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT2</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -5191,8 +5209,8 @@ In other words the smallest step is 1/27200 or 0.0037% of the period. </p>
 <h3 id="phase-shift">Phase Shift</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>PWMA is defined as the phase reference. It can not be phase shifted. 
-If you are not using PWMA, you can define any PWM channel as the reference by setting its phase shift to 0°<br />
+<p>PWMA is defined as the phase reference. It can not be phase shifted.
+If you are not using PWMA, you can define any PWM channel as the reference by setting its phase shift to 0°
 NB: Phase reference is 0°.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">20% Phase Shift</label><label for="__tabbed_8_2">80% Phase Shift</label><label for="__tabbed_8_3">How it works</label></div>
@@ -5258,19 +5276,20 @@ NB: Phase reference is 0°.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>See this examples for more details :  </p>
+<p>See this examples for more details :</p>
 <ul>
 <li>
-<p><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/PWM/duty_cycle_setting/">How to control duty cycle of a PWM unit</a>  </p>
+<p><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/PWM/duty_cycle_setting/">How to control duty cycle of a PWM unit</a></p>
 </li>
 <li>
-<p><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/ADC/adc_hrtim_trigger/">How to set the trigger instant by linking adc trigger to PWM unit</a>  </p>
+<p><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/ADC/adc_hrtim_trigger/">How to set the trigger instant by linking adc trigger to PWM unit</a></p>
 </li>
 <li>
 <p><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/PWM/phase_shift/">Managing phase shift between two PWM units</a></p>
 </li>
 </ul>
 </div>
+<h2 id="api-reference">API Reference</h2>
 <h1 id="class-pwmhal">Class PwmHAL</h1>
 <p><a href="../../../powerAPI/annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../../../powerAPI/classPwmHAL/"><strong>PwmHAL</strong></a></p>
 <p><em>Handles all pwm signals for the spin board.</em> <a href="#detailed-description">More...</a></p>
