@@ -85,7 +85,7 @@ jobs:
       - name: Configure navigation menu for version 0.9
         run: |
           rm $GITHUB_WORKSPACE/mkdocs.yml
-          cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs.yml.0.9 $GITHUB_WORKSPACE/mkdocs.yml
+          cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs_0.9.yml $GITHUB_WORKSPACE/mkdocs.yml
 
       - name: Print mkdocs version
         run: mkdocs --version

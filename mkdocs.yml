@@ -1,3 +1,9 @@
+#
+# NOTE: this file is a dummy file to ensure there always is a mkdocs.yml
+# file. In the generation process, this file is replaced with one from
+# the folder version-specific-yaml.
+#
+
 INHERIT: mkdocs-common.yml
 
 
