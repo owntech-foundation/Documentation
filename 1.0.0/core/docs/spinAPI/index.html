@@ -4186,6 +4186,12 @@
 <div class="admonition note">
 <p>Spin API is an entry point to access APIs and peripheral HALs dedicated for interaction with the Spin board</p>
 </div>
+<p>To work with Spin API, include the following file in your code:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
+</code></pre></div>
+</div>
 <h2 id="detailed-documentation-on-available-api-classes">Detailed documentation on available API classes:</h2>
 <ul>
 <li><a href="../dataAPI/">Data API</a></li>
@@ -4252,42 +4258,42 @@
 </table>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
 <h3 id="variable-comp">variable comp</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">CompHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">comp</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">CompHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">comp</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-dac">variable dac</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DacHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">dac</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DacHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">dac</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data">variable data</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DataAPI</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">DataAPI</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-gpio">variable gpio</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">GpioHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">gpio</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">GpioHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">gpio</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-led">variable led</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">LedHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">led</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">LedHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">led</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-pwm">variable pwm</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">PwmHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">pwm</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">PwmHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">pwm</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-timer">variable timer</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">TimerHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">timer</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">TimerHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">timer</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-uart">variable uart</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">UartHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">uart</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">UartHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">uart</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 

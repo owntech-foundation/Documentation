@@ -4355,7 +4355,7 @@ Acquiring data without a shield is done using <a href="../dataAPI/">Data API</a>
 <p>For example, if you want to access the V1_LOW sensor from the Twist shield using Data API, you would have to consult the pinout of the shield and identify that it is connected to pin 29 of the Spin, then write:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>spin.data.enableAcquisition(29);
 </code></pre></div>
-However, using Shield sensor API, you just have to write;
+However, using Shield sensor API, you just have to write:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>shield.sensors.enableAcquisition(V1_LOW);
 </code></pre></div></p>
 <p>Everything else should be used similarly as Data API, just replace <code>spin.data</code> by <code>shield.sensors</code> in your code, then use the sensor name instead of the pin number as a parameter for the functions.</p>

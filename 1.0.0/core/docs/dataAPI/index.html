@@ -4903,28 +4903,28 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <p>If you use Data API in one of these cases, the Data API must be started using the <code>start()</code> function. This call must only be made at the end of all the hardware configuration (including other modules).</p>
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <p>If you want specific ADC behavior (trigger sources, discontinuous mode, etc.), you may want to configure the ADCs using the lower-level <a href="../adc/">ADC API</a> first. Then, you can enable channels that you want to acquire.</p>
-<p>After channels have been enabled, the conversion parameters can be set so that raw values can be automatically converted to the relevant unit. This is done using the <code>data.setParameters()</code> function.</p>
-<p>After channels have been enabled (and optionnally conversion parameters have been set), there are two ways of starting the API, depending on your use of other OwnTech APIs. If your code uses an <a href="scheduling.md">uninterruptible task</a>, nothing more is required, the Data API will be started automatically when task is started. However, if you do not have an uninterruptible task in your code, you need to manually start the API by calling <code>data.start()</code>.</p>
+<p>After channels have been enabled, the conversion parameters can be set so that raw values can be automatically converted to the relevant unit. This is done using the <code>spin.data.setParameters()</code> function.</p>
+<p>After channels have been enabled (and optionnally conversion parameters have been set), there are two ways of starting the API, depending on your use of other OwnTech APIs. If your code uses an <a href="scheduling.md">uninterruptible task</a>, nothing more is required, the Data API will be started automatically when task is started. However, if you do not have an uninterruptible task in your code, you need to manually start the API by calling <code>spin.data.start()</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Software triggered</label><label for="__tabbed_7_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>data.enableAcquisition()</code></a></li>
-<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>data.setParameters()</code></a></li>
-<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>data.start()</code></a></li>
-<li>Trigger an initial adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-enablechannel"><code>data.triggerAcquisition(ADCx)</code></a></li>
-<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>data.getRawValues()</code></a></li>
+<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
+<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>spin.data.setParameters()</code></a></li>
+<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>spin.data.start()</code></a></li>
+<li>Trigger an initial adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-enablechannel"><code>spin.data.triggerAcquisition(ADCx)</code></a></li>
+<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>spin.data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>spin.data.getRawValues()</code></a></li>
 </ol>
 </div>
 <div class="tabbed-block">
 <ol>
 <li><a href="https://owntech-foundation.github.io/Documentation/core/docs/pwm/">Make sure PWM engine is initialized</a></li>
-<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>data.enableAcquisition()</code></a></li>
-<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>data.setParameters()</code></a></li>
-<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>data.start()</code></a></li>
-<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>data.getRawValues()</code></a></li>
+<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
+<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>spin.data.setParameters()</code></a></li>
+<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>spin.data.start()</code></a></li>
+<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>spin.data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>spin.data.getRawValues()</code></a></li>
 </ol>
 </div>
 </div>
@@ -4935,9 +4935,10 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Software triggered ADC</label><label for="__tabbed_8_2">Hardware triggered ADC</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">data</span><span class="p">.</span><span class="n">triggerAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">ADC_1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Enable acquisition on pin 5 using ADC 1</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">triggerAcquisition</span><span class="p">(</span><span class="n">ADC_1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Trigger acquisition for ADC 1</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">getLatestValue</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Get latest value acquired for pin 5</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4954,11 +4955,11 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startDualOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 <a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
 <a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="cm">/* ADC initialization */</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; HRTIM event 1</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; acquire 1 pin at each event</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">data</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatest</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; Pin 5</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="n">ADC_1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; HRTIM event 1</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="n">ADC_1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 1 ; acquire 1 pin at each event</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">enableAcquisition</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">ADC_1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 5 using ADC 1</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">spin</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">adc_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getLatestValue</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 5</span>
 </code></pre></div>
 </div>
 </div>
@@ -4971,7 +4972,7 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Get latest value</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>data.getLatest(1, 5)
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>spin.data.getLatest(5)
 </code></pre></div>
 This will retrieve the latest sampled value of ADC 1 pin 5.</p>
 </div>
@@ -4985,7 +4986,7 @@ This will retrieve the latest sampled value of ADC 1 pin 5.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Converting in volts</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>data.setParameters()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>spin.data.setParameters()
 </code></pre></div>
 </div>
 </div>
@@ -4998,7 +4999,7 @@ This will retrieve the latest sampled value of ADC 1 pin 5.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Retrieve 5 values</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>data.getRawValues()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>spin.data.getRawValues()
 </code></pre></div>
 </div>
 </div>
