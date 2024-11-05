@@ -66,7 +66,7 @@ nav:
             - RS485: powerAPI/classRs485Communication.md
             - CAN: powerAPI/classCanCommunication.md
             - Real Time Sync: powerAPI/classSyncCommunication.md
-        - Safety API: powerAPI/classsafety.md
+        - Safety API: powerAPI/classSafetyAPI.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
         - Controller:
