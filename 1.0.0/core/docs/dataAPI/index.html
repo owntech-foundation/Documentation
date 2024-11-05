@@ -4838,7 +4838,8 @@ In this example, for each trigger action, the ADC1 will measure channel 2, then 
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Sequence order is given by <code>spin.adc.enableChannel()</code> order.</p>
+<p>The sequence order is given by the order in which the <code>spin.adc.enableChannel()</code> function is called.
+E.g., in the above case, the acquisition order would be pin 2, then 3, then 1.</p>
 </div>
 <h3 id="the-different-event-and-trigger-of-adchrtim">The different event and trigger of ADC/HRTIM</h3>
 <p>You might have seen that there are differents variables referencing adc trigger :</p>
@@ -4848,7 +4849,7 @@ In this example, for each trigger action, the ADC1 will measure channel 2, then 
 There is <code>hrtim_eevx</code> or <code>ADCTRIG_x</code>, let's see the role of each of them.</p>
 <h4 id="adctrig_x">ADCTRIG_x</h4>
 <p>In the PWM API, four signals can serve as ADC triggers, initiating ADC conversions: ADC_TRIG1, ADC_TRIG2, ADC_TRIG3, and ADC_TRIG4.</p>
-<p>The PWM is produced by a carrier (see <a href="https://owntech-foundation.github.io/Documentation/core/docs/pwm/">here</a>) by using a comparator to compare a specific constant value with the carrier, we can generate an event when enabling a trigger on the PWM. For instance :</p>
+<p>The PWM is produced by a carrier (see <a href="../pwm/">here</a>) by using a comparator to compare a specific constant value with the carrier, we can generate an event when enabling a trigger on the PWM. For instance :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
@@ -4911,20 +4912,20 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
-<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>spin.data.setParameters()</code></a></li>
-<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>spin.data.start()</code></a></li>
-<li>Trigger an initial adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-enablechannel"><code>spin.data.triggerAcquisition(ADCx)</code></a></li>
-<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>spin.data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>spin.data.getRawValues()</code></a></li>
+<li>Enable acquisition on the pins you want: <a href="#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
+<li>Define acquisition conversion parameters, e.g. using <a href="#function-setconversionparameterslinear"><code>spin.data.setConversionParametersLinear()</code></a></li>
+<li>Start data dispatching <a href="#function-start"><code>spin.data.start()</code></a></li>
+<li>Trigger an initial adc conversion <a href="#function-triggeracquisition"><code>spin.data.triggerAcquisition(ADCx)</code></a></li>
+<li>Retrieve values : <a href="#function-getlatestvalue"><code>spin.data.getLatestValue()</code></a> or <a href="#function-getrawvalues"><code>spin.data.getRawValues()</code></a></li>
 </ol>
 </div>
 <div class="tabbed-block">
 <ol>
-<li><a href="https://owntech-foundation.github.io/Documentation/core/docs/pwm/">Make sure PWM engine is initialized</a></li>
-<li>Enable acquisition on the pins you want: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
-<li>Define acquisition conversion parameter: <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-setparameters-22"><code>spin.data.setParameters()</code></a></li>
-<li>start data dispatching <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-start"><code>spin.data.start()</code></a></li>
-<li>Retrieve values : <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getlatest-12"><code>spin.data.getLatest()</code></a> or <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-getrawvalues-12"><code>spin.data.getRawValues()</code></a></li>
+<li><a href="../pwm/">Make sure PWM engine is initialized</a></li>
+<li>Enable acquisition on the pins you want: <a href="#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
+<li>Define acquisition conversion parameters, e.g. using <a href="#function-setconversionparameterslinear"><code>spin.data.setConversionParametersLinear()</code></a></li>
+<li>Start data dispatching <a href="#function-start"><code>spin.data.start()</code></a></li>
+<li>Retrieve values : <a href="#function-getlatestvalue"><code>spin.data.getLatestValue()</code></a> or <a href="#function-getrawvalues"><code>spin.data.getRawValues()</code></a></li>
 </ol>
 </div>
 </div>
