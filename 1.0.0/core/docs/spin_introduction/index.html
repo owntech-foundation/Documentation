@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://docs.owntech.org/1.0.0/core/docs/dac/">
+        <link rel="canonical" href="https://docs.owntech.org/1.0.0/core/docs/spin_introduction/">
       
       
-        <link rel="prev" href="../../../powerAPI/classCompHAL/">
+        <link rel="prev" href="../../../bootloader/docs/getting_started/">
       
       
-        <link rel="next" href="../gpio/">
+        <link rel="next" href="../spin_dataAPI/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>DAC - OwnTech Documentation Center</title>
+        <title>Introduction - OwnTech Documentation Center</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#initialization-sequence" class="md-skip">
+        <a href="#detailed-documentation-on-available-api-classes" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DAC
+              Introduction
             
           </span>
         </div>
@@ -1733,69 +1733,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../spinAPI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dataAPI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../powerAPI/classCompHAL/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    COMP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1810,7 +1747,7 @@
           
   
   <span class="md-ellipsis">
-    DAC
+    Introduction
   </span>
   
 
@@ -1821,7 +1758,7 @@
         
   
   <span class="md-ellipsis">
-    DAC
+    Introduction
   </span>
   
 
@@ -1841,18 +1778,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initialization-sequence" class="md-nav__link">
+  <a href="#detailed-documentation-on-available-api-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialization sequence
+      Detailed documentation on available API classes:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conversion-from-numerical-to-analog-value" class="md-nav__link">
+  <a href="#detailed-documentation-on-hardware-abstraction-layer-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Conversion from numerical to analog value
+      Detailed documentation on Hardware Abstraction Layer classes:
     </span>
   </a>
   
@@ -1868,65 +1805,101 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-dachal" class="md-nav__link">
+  <a href="#class-spinapi" class="md-nav__link">
     <span class="md-ellipsis">
-      Class DacHAL
+      Class SpinAPI
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class DacHAL">
+    <nav class="md-nav" aria-label="Class SpinAPI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
+  <a href="#public-static-attributes" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions
+      Public Static Attributes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
+  <a href="#public-static-attributes-documentation" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions Documentation
+      Public Static Attributes Documentation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Public Functions Documentation">
+    <nav class="md-nav" aria-label="Public Static Attributes Documentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-currentmodeinit" class="md-nav__link">
+  <a href="#variable-comp" class="md-nav__link">
     <span class="md-ellipsis">
-      function currentModeInit
+      variable comp
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-initconstvalue" class="md-nav__link">
+  <a href="#variable-dac" class="md-nav__link">
     <span class="md-ellipsis">
-      function initConstValue
+      variable dac
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setconstvalue" class="md-nav__link">
+  <a href="#variable-data" class="md-nav__link">
     <span class="md-ellipsis">
-      function setConstValue
+      variable data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-slopecompensation" class="md-nav__link">
+  <a href="#variable-gpio" class="md-nav__link">
     <span class="md-ellipsis">
-      function slopeCompensation
+      variable gpio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable led
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable pwm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable timer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable uart
     </span>
   </a>
   
@@ -1958,11 +1931,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../gpio/" class="md-nav__link">
+      <a href="../spin_dataAPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    GPIO
+    Data API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../powerAPI/classCompHAL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparators HAL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spin_dac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital to Analog Converters HAL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spin_gpio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Purpose Inputs/Outputs HAL
   </span>
   
 
@@ -1983,7 +2019,7 @@
         
   
   <span class="md-ellipsis">
-    LED
+    LED HAL
   </span>
   
 
@@ -2000,11 +2036,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../pwm/" class="md-nav__link">
+      <a href="../spin_pwm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    PWM
+    PWM HAL
   </span>
   
 
@@ -2025,7 +2061,7 @@
         
   
   <span class="md-ellipsis">
-    TIMER
+    Timers HAL
   </span>
   
 
@@ -2046,7 +2082,7 @@
         
   
   <span class="md-ellipsis">
-    UART
+    UART HAL
   </span>
   
 
@@ -2109,7 +2145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shieldAPI/" class="md-nav__link">
+      <a href="../shield_introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2134,7 +2170,7 @@
         
   
   <span class="md-ellipsis">
-    Power
+    Power API
   </span>
   
 
@@ -2155,7 +2191,7 @@
         
   
   <span class="md-ellipsis">
-    Sensors
+    Sensors API
   </span>
   
 
@@ -2176,7 +2212,7 @@
         
   
   <span class="md-ellipsis">
-    NGND
+    NGND HAL
   </span>
   
 
@@ -2200,16 +2236,62 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../taskAPI/" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Task API
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Task API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2260,11 +2342,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../powerAPI/classCommunicationAPI/" class="md-nav__link">
+      <a href="../communication_introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Class
+    Introduction
   </span>
   
 
@@ -2372,16 +2454,62 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../powerAPI/classSafetyAPI/" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Safety API
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Safety API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety_introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3995,18 +4123,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initialization-sequence" class="md-nav__link">
+  <a href="#detailed-documentation-on-available-api-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialization sequence
+      Detailed documentation on available API classes:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conversion-from-numerical-to-analog-value" class="md-nav__link">
+  <a href="#detailed-documentation-on-hardware-abstraction-layer-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Conversion from numerical to analog value
+      Detailed documentation on Hardware Abstraction Layer classes:
     </span>
   </a>
   
@@ -4022,65 +4150,101 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-dachal" class="md-nav__link">
+  <a href="#class-spinapi" class="md-nav__link">
     <span class="md-ellipsis">
-      Class DacHAL
+      Class SpinAPI
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class DacHAL">
+    <nav class="md-nav" aria-label="Class SpinAPI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
+  <a href="#public-static-attributes" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions
+      Public Static Attributes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
+  <a href="#public-static-attributes-documentation" class="md-nav__link">
     <span class="md-ellipsis">
-      Public Functions Documentation
+      Public Static Attributes Documentation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Public Functions Documentation">
+    <nav class="md-nav" aria-label="Public Static Attributes Documentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-currentmodeinit" class="md-nav__link">
+  <a href="#variable-comp" class="md-nav__link">
     <span class="md-ellipsis">
-      function currentModeInit
+      variable comp
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-initconstvalue" class="md-nav__link">
+  <a href="#variable-dac" class="md-nav__link">
     <span class="md-ellipsis">
-      function initConstValue
+      variable dac
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setconstvalue" class="md-nav__link">
+  <a href="#variable-data" class="md-nav__link">
     <span class="md-ellipsis">
-      function setConstValue
+      variable data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-slopecompensation" class="md-nav__link">
+  <a href="#variable-gpio" class="md-nav__link">
     <span class="md-ellipsis">
-      function slopeCompensation
+      variable gpio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable led
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable pwm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable timer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-uart" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable uart
     </span>
   </a>
   
@@ -4112,36 +4276,36 @@
 
 
 <div class="admonition note">
-<p>A Digital-to-Analog Converter (DAC) transforms digital signals into analog signals by mapping digital values to specific voltages. This process effectively creates continuous analog waveforms from discrete digital data. DACs play a vital role in electronic systems by enabling the generation of diverse waveforms.</p>
+<p>Spin API is an entry point to access APIs and peripheral HALs dedicated for interaction with the Spin board</p>
 </div>
-<h2 id="initialization-sequence">Initialization sequence</h2>
+<p>To work with Spin API, include the following file in your code:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>1. First start by calling the initialization function of the DAC <a href="https://owntech-foundation.github.io/Documentation/core/docs/dac/#function-initconstvalue"><code>spin.dac.initConsValue(DAC_NUM)</code></a>. <br />
-2. Second enter the integer value to send to the DAC <a href="https://owntech-foundation.github.io/Documentation/core/docs/dac/#function-setconstvalue"><code>spin.dac.setConstValue(DAC_NUM, DAC_CHAN, DAC_VALUE)</code></a>  </p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">dac</span><span class="p">.</span><span class="n">initConstValue</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// DAC 2 initialization</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">dac</span><span class="p">.</span><span class="n">setConstValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
 </code></pre></div>
 </div>
-<h2 id="conversion-from-numerical-to-analog-value">Conversion from numerical to analog value</h2>
-<p>The value we can send to the DAC is an integer between 0 and 4096, this value is then converted to voltage between 0 and 2.048V.
-For example : </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">dac</span><span class="p">.</span><span class="n">setConstValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">);</span>
-</code></pre></div>
-Generate a 1.024V signal.</p>
-<p><img alt="dac value" src="../images/dac_value.svg" /></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>For a pratical example of the DAC see the example : 
-    - <a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/DAC/signal_generation/">Signal generation</a></p>
-</div>
+<h2 id="detailed-documentation-on-available-api-classes">Detailed documentation on available API classes:</h2>
+<ul>
+<li><a href="dataAPI.md">Data API</a></li>
+</ul>
+<h2 id="detailed-documentation-on-hardware-abstraction-layer-classes">Detailed documentation on Hardware Abstraction Layer classes:</h2>
+<ul>
+<li><a href="https://owntech-foundation.github.io/Documentation/powerAPI/classCompHAL">Comparator HAL</a></li>
+<li><a href="dac.md">Digital Analog converter HAL</a></li>
+<li><a href="gpio.md">General-Purpose Input Output HAL</a></li>
+<li><a href="https://owntech-foundation.github.io/Documentation/powerAPI/classLedHAL">LEDs HAL</a></li>
+<li><a href="pwm.md">PWM HAL</a></li>
+<li><a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTimerHAL">Timer HAL</a></li>
+<li><a href="https://owntech-foundation.github.io/Documentation/powerAPI/classUartHAL">UART HAL</a></li>
+</ul>
 <h2 id="api-reference">API Reference</h2>
-<h1 id="class-dachal">Class DacHAL</h1>
-<p><a href="../../../powerAPI/annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../../../powerAPI/classDacHAL/"><strong>DacHAL</strong></a></p>
-<h2 id="public-functions">Public Functions</h2>
+<h1 id="class-spinapi">Class SpinAPI</h1>
+<p><a href="../../../powerAPI/annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../../../powerAPI/classSpinAPI/"><strong>SpinAPI</strong></a></p>
+<p><em>Contains all the elements linked to peripherals of the spin board.</em> </p>
+<ul>
+<li><code>#include &lt;SpinAPI.h&gt;</code></li>
+</ul>
+<h2 id="public-static-attributes">Public Static Attributes</h2>
 <table>
 <thead>
 <tr>
@@ -4151,59 +4315,82 @@ Generate a 1.024V signal.</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-currentmodeinit"><strong>currentModeInit</strong></a> (uint8_t dac_number, hrtim_tu_t tu_src) <br></td>
+<td style="text-align: right;"><a href="../../../powerAPI/classCompHAL/"><strong>CompHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-comp"><strong>comp</strong></a>  <br><em>Contains all the function of the STM32 comparator used with the current mode.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-initconstvalue"><strong>initConstValue</strong></a> (uint8_t dac_number) <br></td>
+<td style="text-align: right;"><a href="../../../powerAPI/classDacHAL/"><strong>DacHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-dac"><strong>dac</strong></a>  <br><em>Contains all the function of the STM32 DAC used to generate signals and handle the current mode.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setconstvalue"><strong>setConstValue</strong></a> (uint8_t dac_number, uint8_t channel, uint32_t const_value) <br></td>
+<td style="text-align: right;"><a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a></td>
+<td style="text-align: left;"><a href="#variable-data"><strong>data</strong></a>  <br><em>Data acquisition from SPIN ADCs.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-slopecompensation"><strong>slopeCompensation</strong></a> (uint8_t dac_number, float32_t peak_voltage, float32_t low_voltage) <br></td>
+<td style="text-align: right;"><a href="../../../powerAPI/classGpioHAL/"><strong>GpioHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-gpio"><strong>gpio</strong></a>  <br><em>Contains all the functions for the spin gpio.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../../../powerAPI/classLedHAL/"><strong>LedHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-led"><strong>led</strong></a>  <br><em>Contains all the function of the embedded LED.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../../../powerAPI/classPwmHAL/"><strong>PwmHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-pwm"><strong>pwm</strong></a>  <br><em>Contains all the function of the STM32 hrtim PWM generator.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../../../powerAPI/classTimerHAL/"><strong>TimerHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-timer"><strong>timer</strong></a>  <br><em>Contains all the function of the STM32 Timer4 functions that handle the encoder.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../../../powerAPI/classUartHAL/"><strong>UartHAL</strong></a></td>
+<td style="text-align: left;"><a href="#variable-uart"><strong>uart</strong></a>  <br><em>Contains all the function of the STM32 Usart1 functions.</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-currentmodeinit">function currentModeInit</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DacHAL</span><span class="o">::</span><span class="n">currentModeInit</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dac_number</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">tu_src</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span>
+<h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
+<h3 id="variable-comp">variable comp</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">CompHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">comp</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
-<h3 id="function-initconstvalue">function initConstValue</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DacHAL</span><span class="o">::</span><span class="n">initConstValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dac_number</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span>
+<h3 id="variable-dac">variable dac</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DacHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">dac</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
-<h3 id="function-setconstvalue">function setConstValue</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DacHAL</span><span class="o">::</span><span class="n">setConstValue</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dac_number</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">const_value</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"> </span>
+<h3 id="variable-data">variable data</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">DataAPI</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">data</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
-<h3 id="function-slopecompensation">function slopeCompensation</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">DacHAL</span><span class="o">::</span><span class="n">slopeCompensation</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dac_number</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">peak_voltage</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">low_voltage</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span><span class="w"> </span>
+<h3 id="variable-gpio">variable gpio</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">GpioHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">gpio</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-led">variable led</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">LedHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">led</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-pwm">variable pwm</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">PwmHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">pwm</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-timer">variable timer</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">TimerHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">timer</span><span class="p">;</span>
+</code></pre></div>
+<hr>
+
+<h3 id="variable-uart">variable uart</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">UartHAL</span><span class="w"> </span><span class="n">SpinAPI</span><span class="o">::</span><span class="n">uart</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <hr />
-<p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h</code></p>
+<p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h</code></p>
 
 
 
@@ -4243,7 +4430,7 @@ Generate a 1.024V signal.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../powerAPI/classCompHAL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: COMP">
+          <a href="../../../bootloader/docs/getting_started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bootloader">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4253,20 +4440,20 @@ Generate a 1.024V signal.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                COMP
+                Bootloader
               </div>
             </div>
           </a>
         
         
           
-          <a href="../gpio/" class="md-footer__link md-footer__link--next" aria-label="Next: GPIO">
+          <a href="../spin_dataAPI/" class="md-footer__link md-footer__link--next" aria-label="Next: Data API">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                GPIO
+                Data API
               </div>
             </div>
             <div class="md-footer__button md-icon">
