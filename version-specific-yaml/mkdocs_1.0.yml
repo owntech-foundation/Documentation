@@ -47,28 +47,30 @@ nav:
         - Home: core/docs/powerAPI.md
         - Bootloader: bootloader/docs/getting_started.md
         - SPIN API:
-            - Introduction: core/docs/spinAPI.md
-            - Data API: core/docs/dataAPI.md
-            - COMP: powerAPI/classCompHAL.md
-            - DAC: core/docs/dac.md
-            - GPIO: core/docs/gpio.md
+            - Introduction: core/docs/spin_introduction.md
+            - Data API: core/docs/spin_dataAPI.md
+            - Comparators: powerAPI/classCompHAL.md
+            - DAC: core/docs/spin_dac.md
+            - GPIO: core/docs/spin_gpio.md
             - LED: powerAPI/classLedHAL.md
-            - PWM: core/docs/pwm.md
-            - TIMER: powerAPI/classTimerHAL.md
+            - PWM: core/docs/spin_pwm.md
+            - Timers: powerAPI/classTimerHAL.md
             - UART: powerAPI/classUartHAL.md
         - Shield API:
-            - Introduction: core/docs/shieldAPI.md
+            - Introduction: core/docs/shield_introduction.md
             - Power: powerAPI/classPowerAPI.md
             - Sensors: core/docs/shield_sensors.md
             - NGND: powerAPI/classNgndHAL.md
-        - Task API: core/docs/taskAPI.md
+        - Task API:
+            - Introduction: core/docs/task_introduction.md
         - Communication API:
-            - Class: powerAPI/classCommunicationAPI.md
+            - Introduction: core/docs/communication_introduction.md
             - Analog Communication: powerAPI/classAnalogCommunication.md
             - RS485: powerAPI/classRs485Communication.md
             - CAN: powerAPI/classCanCommunication.md
             - Real Time Sync: powerAPI/classSyncCommunication.md
-        - Safety API: powerAPI/classSafetyAPI.md
+        - Safety API:
+            - Introduction: core/docs/safety_introduction.md
     - Control Library:
         - Getting started: controlLibrary/docs/getting-started.md
         - Controller:
