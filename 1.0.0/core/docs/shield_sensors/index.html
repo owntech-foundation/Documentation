@@ -4439,11 +4439,11 @@
 
 <div class="admonition note">
 <p>Shield sensors is an API that allows to access sensors from a Spin shield easily.
-Acquiring data without a shield is done using <a href="dataAPI.md">Data API</a>, but Shield sensors API builds on Data API to provide access to sensors by name as well as automatically configuring the parameters for the raw data conversion.</p>
+Acquiring data without a shield is done using <a href="../spin_dataAPI/">Data API</a>, but Shield sensors API builds on Data API to provide access to sensors by name as well as automatically configuring the parameters for the raw data conversion.</p>
 </div>
 <h2 id="quick-start-with-shield-sensor-api">Quick start with Shield sensor API</h2>
 <p>To enable the Twist Shield channels, indicate which shield you are using by editing the file <code>platformio.ini</code> to define the <code>board_shield=</code> and <code>board_shield_version=</code> commands. From there, the Shield sensors API will be available simply by including <code>ShieldAPI.h</code> in your code.</p>
-<p>Using shield sensor API is done quite similarly to the <a href="dataAPI.md">Data API</a>. The difference is that you do not have to know which pin a sensor is connected to.</p>
+<p>Using shield sensor API is done quite similarly to the <a href="../spin_dataAPI/">Data API</a>. The difference is that you do not have to know which pin a sensor is connected to.</p>
 <p>For example, if you want to access the V1_LOW sensor from the Twist shield using Data API, you would have to consult the pinout of the shield and identify that it is connected to pin 29 of the Spin, then write:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>spin.data.enableAcquisition(29);
 </code></pre></div>

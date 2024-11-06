@@ -4834,7 +4834,7 @@
 </div>
 <p>Note that providing the ADC number is not required. For pins connected to multiples ADC, the ADC with the lowest number will be used if no ADC is specified. Specifying an ADC number that is not available on the pin will result in an error.</p>
 <p>By default, the acquisitions are software-triggered, which means that when your program will want to acquire a measure, you'll have to trigger the acquisition. Other means of triggering the measure exists, notably periodic acquisitions, see <a href="../adc/#synchronous-with-pwms">detailed information</a>. If you need to change the trigger source, this must be done at this point.</p>
-<p>At the end of all the hardware configuration (including other modules), the Data API must be started using the <code>start()</code> function. Note that in case you use an <a href="scheduling.md">uninterruptible task</a>, you do not need to start the Data API manually, this will be done automatically when the uninterruptible task is started.</p>
+<p>At the end of all the hardware configuration (including other modules), the Data API must be started using the <code>start()</code> function. Note that in case you use an <a href="../task_introduction/">uninterruptible task</a>, you do not need to start the Data API manually, this will be done automatically when the uninterruptible task is started.</p>
 <h3 id="obtaining-data">Obtaining data</h3>
 <p>After the Data API has been started, it becomes possible to get data obtained from the enabled pins. Depending on the trigger source, you'll have to trigger the acquisition then read the value, or directly read the value.</p>
 <p>If software-trigged is used for an ADC (default configuration), the acquisition must first be triggered, then the value read. If the acquisition is configured to be periodic for ann ADC, directly read the value.</p>
@@ -4949,7 +4949,7 @@ E.g., in the above case, the acquisition order would be pin 2, then 3, then 1.</
 There is <code>hrtim_eevx</code> or <code>ADCTRIG_x</code>, let's see the role of each of them.</p>
 <h4 id="adctrig_x">ADCTRIG_x</h4>
 <p>In the PWM API, four signals can serve as ADC triggers, initiating ADC conversions: ADC_TRIG1, ADC_TRIG2, ADC_TRIG3, and ADC_TRIG4.</p>
-<p>The PWM is produced by a carrier (see <a href="pwm.md">here</a>) by using a comparator to compare a specific constant value with the carrier, we can generate an event when enabling a trigger on the PWM. For instance :</p>
+<p>The PWM is produced by a carrier (see <a href="../spin_pwm/">here</a>) by using a comparator to compare a specific constant value with the carrier, we can generate an event when enabling a trigger on the PWM. For instance :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
@@ -4991,12 +4991,12 @@ Only acquire one pin in the sequence at each trigger. The next trigger will acqu
 <p><img alt="data dispatch" src="../images/data_dispatch.svg" /></p>
 <p>Data dispatching is an internal mechanism of Data API, that transfers Data from the internal buffers controlled by the DMA to user-level buffers that can be retreived by the <code>get***()</code> functions. If dispatching is not done, the user will not be able to retrive values, and the <code>get***()</code> functions will return no value.</p>
 <p>The dispatch is done automatically and the in most cases, the user does not have to worry about it. However, in some cases, the user may want to know when this is done.</p>
-<p>If you use an <a href="scheduling.md">uninterruptible task</a> to manage the converter on a fast loop, the dispatch is automatically done just before each call of the task.</p>
+<p>If you use an <a href="../task_introduction/">uninterruptible task</a> to manage the converter on a fast loop, the dispatch is automatically done just before each call of the task.</p>
 <p>If you do not have an uninterruptible task however, then the dispatch will be done once all enabled acquisitions for an ADC have been done.
 This means that if you configure ADC 1 with one acquisition and ADC 3 with two acquisitions, the data for a pin controlled by the ADC 1 will be available at each acquisition, while the data for a pin controlled by the ADC 3 will only be available every time it has acquired two values.</p>
 <h3 id="api-start">API start</h3>
 <p>The Data API must be started after all configuration has been carried out. However, in most common cases, this will happen automatically.
-If you use an <a href="scheduling.md">uninterruptible task</a> to manage the converter on a fast loop, the Data API is automatically started when the task is started.</p>
+If you use an <a href="../task_introduction/">uninterruptible task</a> to manage the converter on a fast loop, the Data API is automatically started when the task is started.</p>
 <p>The cases where you have to manually start the Data API are the following:
 * No uninterruptible task defined in the program,
 * An uninterruptible task is defined, but its start function is called with a value <code>false</code> for its parameter.</p>
@@ -5005,7 +5005,7 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <p>If you want specific ADC behavior (trigger sources, discontinuous mode, etc.), you may want to configure the ADCs using the lower-level <a href="../adc/">ADC API</a> first. Then, you can enable channels that you want to acquire.</p>
 <p>After channels have been enabled, the conversion parameters can be set so that raw values can be automatically converted to the relevant unit. This is done using the <code>spin.data.setParameters()</code> function.</p>
-<p>After channels have been enabled (and optionnally conversion parameters have been set), there are two ways of starting the API, depending on your use of other OwnTech APIs. If your code uses an <a href="scheduling.md">uninterruptible task</a>, nothing more is required, the Data API will be started automatically when task is started. However, if you do not have an uninterruptible task in your code, you need to manually start the API by calling <code>spin.data.start()</code>.</p>
+<p>After channels have been enabled (and optionnally conversion parameters have been set), there are two ways of starting the API, depending on your use of other OwnTech APIs. If your code uses an <a href="../task_introduction/">uninterruptible task</a>, nothing more is required, the Data API will be started automatically when task is started. However, if you do not have an uninterruptible task in your code, you need to manually start the API by calling <code>spin.data.start()</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Software triggered</label><label for="__tabbed_7_2">Hardware triggered</label></div>
@@ -5021,7 +5021,7 @@ If you use an <a href="scheduling.md">uninterruptible task</a> to manage the con
 </div>
 <div class="tabbed-block">
 <ol>
-<li><a href="pwm.md">Make sure PWM engine is initialized</a></li>
+<li><a href="../spin_pwm/">Make sure PWM engine is initialized</a></li>
 <li>Enable acquisition on the pins you want: <a href="#function-enableacquisition"><code>spin.data.enableAcquisition()</code></a></li>
 <li>Define acquisition conversion parameters, e.g. using <a href="#function-setconversionparameterslinear"><code>spin.data.setConversionParametersLinear()</code></a></li>
 <li>Start data dispatching <a href="#function-start"><code>spin.data.start()</code></a></li>
@@ -5094,7 +5094,7 @@ This will retrieve the latest sampled value of ADC 1 pin 5.</p>
 </div>
 </div>
 <h2 id="get-an-array-of-values">Get an array of values</h2>
-<p>DataAPI contains commodity function to retrieve an array of raw values that can be fed to a <a href="controlLibrary/controlLibrary/docs/use-filters">post processing filter</a>.</p>
+<p>DataAPI contains commodity function to retrieve an array of raw values that can be fed to a <a href="https://owntech-foundation.github.io/Documentation/controlLibrary/docs/use-filters">post processing filter</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Retrieve 5 values</label></div>

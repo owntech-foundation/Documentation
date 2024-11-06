@@ -3972,6 +3972,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#modulation-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulation impact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rising-edge-falling-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rising Edge / Falling edge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurment-trigger-instant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurment trigger instant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-pwm-period-between-acquisition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of PWM period between acquisition
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4008,7 +4044,7 @@
 </ol>
 </div>
 <div class="tabbed-block">
-<p>1. <a href="pwm/#initialization-sequence">Make sure PWM engine is initialized</a>
+<p>1. <a href="../spin_pwm/#initialization-sequence">Make sure PWM engine is initialized</a>
 2. Link an adc trigger event to the ADC <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-configuretriggersource"><code>spin.adc.configureTriggerSource(ADCx, TRIG)</code></a>
 3. Set continuous/discontinuous conversion mode. Optional : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-configurediscontinuousmode"><code>spin.adc.configureDiscontinuousMode(x, 0/1)</code></a>
 4.  Define acquisition sequence by enabling adc channel : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classAdcHAL/#function-enablechannel"><code>spin.adc.enableChannel(ADCx, channelx)</code></a>
@@ -4098,144 +4134,113 @@ To retrieve measurement values please refer to DataAPI</p>
 </div>
 <h3 id="source-adc-and-pwm-channel">Source ADC and PWM channel</h3>
 <p>ADC1 and ADC2 can be associated with PWM channels at will.</p>
-<div style="border: 4px dotted red">
-    <h3 class="doxy-error"><b>MkDoxy Error: </b>Incorrect class method configuration</h3>
-<p>Did not find Class with name: `AdcHAL` and method: `void configureDiscontinuousMode (uint8_t adc_number, uint32_t dicontinuous_count)`</p>
-<details>
-<summary>Available classes and methods:</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="l l-Scalar l-Scalar-Plain">AnalogCommunication</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="l l-Scalar l-Scalar-Plain">CanCommunication</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="l l-Scalar l-Scalar-Plain">CommunicationAPI</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="l l-Scalar l-Scalar-Plain">CompHAL</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="l l-Scalar l-Scalar-Plain">DacHAL</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="l l-Scalar l-Scalar-Plain">DataAPI</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="l l-Scalar l-Scalar-Plain">GpioHAL</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="l l-Scalar l-Scalar-Plain">LedHAL</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="l l-Scalar l-Scalar-Plain">NgndHAL</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="l l-Scalar l-Scalar-Plain">PowerAPI</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="l l-Scalar l-Scalar-Plain">PwmHAL</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="l l-Scalar l-Scalar-Plain">Rs485Communication</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="l l-Scalar l-Scalar-Plain">SafetyAPI</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="l l-Scalar l-Scalar-Plain">SensorsAPI</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="l l-Scalar l-Scalar-Plain">ShieldAPI</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="l l-Scalar l-Scalar-Plain">SpinAPI</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="l l-Scalar l-Scalar-Plain">SyncCommunication</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="l l-Scalar l-Scalar-Plain">TaskAPI</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="l l-Scalar l-Scalar-Plain">TimerHAL</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="l l-Scalar l-Scalar-Plain">UartHAL</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">ADC1 and PWMA</label><label for="__tabbed_4_2">ADC1 and PWMC</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
-</details>
-<details>
-<summary>Snippet</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">::</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxy.powerAPI.class.method</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdcHAL</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">void configureDiscontinuousMode (uint8_t adc_number, uint32_t dicontinuous_count)</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="left_aligned_ADC_PWM_C" src="../images/left_aligned_ADC_PWM_C.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">);</span>
 </code></pre></div>
-</details>
-
-
-
-
-
-
-=== "ADC1 and PWMA"
-    ![left_aligned_ADC_50](images/left_aligned_ADC_50.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+</div>
+</div>
+</div>
+<h3 id="modulation-impact">Modulation impact</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hardware trigger depends on PWM modulation.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Left Aligned Modulation</label><label for="__tabbed_5_2">Center aligned modulation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
-
-=== "ADC1 and PWMC"
-    ![left_aligned_ADC_PWM_C](images/left_aligned_ADC_PWM_C.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
-
-### Modulation impact
-
-!!! note
-    Hardware trigger depends on PWM modulation.
-
-=== "Left Aligned Modulation"
-    ![left_aligned_ADC_50](images/left_aligned_ADC_50.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+</div>
+</div>
+</div>
+<h3 id="rising-edge-falling-edge">Rising Edge / Falling edge</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only applies to center aligned modulation.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Rising Edge</label><label for="__tabbed_6_2">Falling Edge</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
-
-=== "Center aligned modulation"
-    ![center_aligned_ADC_rising_edge](images/center_aligned_ADC_rising_edge.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="center_aligned_ADC_falling_edge" src="../images/center_aligned_ADC_falling_edge.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_down</span><span class="p">);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
-
-### Rising Edge / Falling edge
-
-!!! note
-    This only applies to center aligned modulation.
-
-=== "Rising Edge"
-    ![center_aligned_ADC_rising_edge](images/center_aligned_ADC_rising_edge.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+</div>
+</div>
+</div>
+<h3 id="measurment-trigger-instant">Measurment trigger instant</h3>
+<p>Trigger timing can be defined or changed dynamically.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">20% Duty cycle</label><label for="__tabbed_7_2">80% Duty cycle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="left_aligned_ADC_20" src="../images/left_aligned_ADC_20.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
 </code></pre></div>
-
-=== "Falling Edge"
-    ![center_aligned_ADC_falling_edge](images/center_aligned_ADC_falling_edge.svg){ width=800 }
-
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_down</span><span class="p">);</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="left_aligned_ADC_80" src="../images/left_aligned_ADC_80.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
 </code></pre></div>
-
-
-### Measurment trigger instant
-
-Trigger timing can be defined or changed dynamically.
-
-=== "20% Duty cycle"
-    ![left_aligned_ADC_20](images/left_aligned_ADC_20.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
+</div>
+</div>
+</div>
+<h3 id="number-of-pwm-period-between-acquisition">Number of PWM period between acquisition</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is relevant if more than one measurement is taken with the same ADC.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">With 2 periods</label><label for="__tabbed_8_2">With 4 periods</label><label for="__tabbed_8_3">Without interuptions</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="sparse_sampling_2" src="../images/sparse_sampling_2.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
-
-=== "80% Duty cycle"
-    ![left_aligned_ADC_80](images/left_aligned_ADC_80.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="sparse_sampling_4" src="../images/sparse_sampling_4.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
 </code></pre></div>
-
-### Number of PWM period between acquisition
-
-!!! note
-    This is relevant if more than one measurement is taken with the same ADC.
-
-=== "With 2 periods"
-    ![sparse_sampling_2](images/sparse_sampling_2.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<p><img alt="left_aligned_continuous_sampling" src="../images/left_aligned_continuous_sampling.svg" width="800" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
-
-=== "With 4 periods"
-    ![sparse_sampling_4](images/sparse_sampling_4.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
-</code></pre></div>
-
-=== "Without interuptions"
-    ![left_aligned_continuous_sampling](images/left_aligned_continuous_sampling.svg){ width=800 }
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div>
-!!! example
-    see the following example for an application :
-
-    - [PWM trigerred ADC](https://owntech-foundation.github.io/Documentation/examples/SPIN/ADC/adc_hrtim_trigger/)
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>see the following example for an application :</p>
+<ul>
+<li><a href="https://owntech-foundation.github.io/Documentation/examples/SPIN/ADC/adc_hrtim_trigger/">PWM trigerred ADC</a></li>
+</ul>
+</div>
 
 
 
