@@ -132,7 +132,6 @@ conversion_type_t conversion_types[ADC_COUNT][CHANNELS_PER_ADC];
 
 ### variable max\_parameters\_count 
 
-
 ```C++
 const uint8_t max_parameters_count;
 ```
@@ -299,6 +298,7 @@ Current value of the given parameter.
 
 ### function data\_conversion\_init 
 
+_Initialize data conversion._ 
 ```C++
 void data_conversion_init () 
 ```

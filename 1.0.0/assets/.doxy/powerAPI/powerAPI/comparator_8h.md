@@ -88,7 +88,6 @@
 
 ### function comparator1\_init 
 
-
 ```C++
 void comparator1_init () 
 ```

@@ -365,6 +365,7 @@ This will only be applied when ADC is started. If ADC is already started, it mus
 
 ### function adc\_start 
 
+_Starts all configured ADCs._ 
 ```C++
 void adc_start () 
 ```
@@ -378,6 +379,7 @@ void adc_start ()
 
 ### function adc\_stop 
 
+_Stops all configured ADCs._ 
 ```C++
 void adc_stop () 
 ```

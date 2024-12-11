@@ -87,7 +87,7 @@ _all parameters to define the proportional resonant controller._ [More...](#deta
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

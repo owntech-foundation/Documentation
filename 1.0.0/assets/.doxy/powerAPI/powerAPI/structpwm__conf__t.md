@@ -36,6 +36,7 @@ _Structure containing all the data regarding the pwm of a given timing unit._
 
 | Type | Name |
 | ---: | :--- |
+|  hrtim\_burst\_clk\_t | [**burst\_clk**](#variable-burst_clk)  <br> |
 |  uint8\_t | [**ckpsc**](#variable-ckpsc)  <br> |
 |  uint16\_t | [**duty\_cycle**](#variable-duty_cycle)  <br> |
 |  hrtim\_external\_trigger\_t | [**external\_trigger**](#variable-external_trigger)  <br> |
@@ -98,6 +99,19 @@ _Structure containing all the data regarding the pwm of a given timing unit._
 
 ## Public Attributes Documentation
 
+
+
+
+### variable burst\_clk 
+
+```C++
+hrtim_burst_clk_t pwm_conf_t::burst_clk;
+```
+
+
+
+
+<hr>
 
 
 

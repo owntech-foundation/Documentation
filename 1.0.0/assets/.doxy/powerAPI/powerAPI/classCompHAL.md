@@ -81,7 +81,7 @@ _Handles comparator 1 and 3 of the SPIN board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

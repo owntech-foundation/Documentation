@@ -382,6 +382,32 @@
 <codeline lineno="380"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hrtim_get_resolution_ps(pwmX);</highlight></codeline>
 <codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" kindref="member">PwmHAL::initBurstMode</ref>()</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_burst_mode_init();</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" kindref="member">PwmHAL::setBurstMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bm_cmp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bm_per)</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_burst_set(bm_cmp,<sp/>bm_per);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" kindref="member">PwmHAL::startBurstMode</ref>()</highlight></codeline>
+<codeline lineno="396"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_burst_start();</highlight></codeline>
+<codeline lineno="398"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1ad07800b09483f157769f22690ca51a65" kindref="member">PwmHAL::stopBurstMode</ref>()</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_burst_stop();</highlight></codeline>
+<codeline lineno="403"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" kindref="member">PwmHAL::deInitBurstMode</ref>()</highlight></codeline>
+<codeline lineno="406"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_burst_dis();</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp"/>
   </compounddef>

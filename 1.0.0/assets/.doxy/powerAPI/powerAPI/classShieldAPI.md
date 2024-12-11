@@ -89,6 +89,7 @@
 
 ### variable ngnd 
 
+_Contains all the function of the NGND switch compatible with TWISTs prior to 1.4._ 
 ```C++
 NgndHAL ShieldAPI::ngnd;
 ```
@@ -102,6 +103,7 @@ NgndHAL ShieldAPI::ngnd;
 
 ### variable power 
 
+_Contains all the functions to drive shield power capabilities._ 
 ```C++
 PowerAPI ShieldAPI::power;
 ```
@@ -115,6 +117,7 @@ PowerAPI ShieldAPI::power;
 
 ### variable sensors 
 
+_Contains all the functions to interact with shield sensors._ 
 ```C++
 SensorsAPI ShieldAPI::sensors;
 ```

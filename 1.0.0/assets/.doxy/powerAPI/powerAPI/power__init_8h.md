@@ -107,7 +107,6 @@
 
 ### enum cm\_dac\_t 
 
-
 ```C++
 enum cm_dac_t {
     CM_DAC_NONE = 0,
@@ -131,7 +130,6 @@ Enum to define which DAC to use for current mode
 
 ### variable dt\_adc 
 
-
 ```C++
 hrtim_adc_trigger_t dt_adc[];
 ```
@@ -148,7 +146,6 @@ Define an array 'dt\_adc' of type 'hrtim\_adc\_trigger\_t' and initialize it wit
 
 
 ### variable dt\_adc\_decim 
-
 
 ```C++
 uint32_t dt_adc_decim[];
@@ -167,7 +164,6 @@ Define an array 'dt\_adc\_decim' of type 'uint32\_t' and initialize it with an a
 
 ### variable dt\_current\_pin 
 
-
 ```C++
 uint16_t dt_current_pin[];
 ```
@@ -184,7 +180,6 @@ Define an array 'dt\_current\_pin' of type 'uint16' and initialize it with an ar
 
 
 ### variable dt\_edge\_trigger 
-
 
 ```C++
 hrtim_adc_edgetrigger_t dt_edge_trigger[];
@@ -203,7 +198,6 @@ Define an array 'dt\_rollover' of type 'hrtim\_adc\_rollover\_t' and initialize 
 
 ### variable dt\_falling\_deadtime 
 
-
 ```C++
 uint16_t dt_falling_deadtime[];
 ```
@@ -220,7 +214,6 @@ Define an array 'dt\_falling\_deadtime' of type 'uint16\_t' and initialize it wi
 
 
 ### variable dt\_leg\_count 
-
 
 ```C++
 uint8_t dt_leg_count;
@@ -239,7 +232,6 @@ Define a variable 'dt\_leg\_count' and initialize it with the count of children 
 
 ### variable dt\_modulation 
 
-
 ```C++
 hrtim_cnt_t dt_modulation[];
 ```
@@ -256,7 +248,6 @@ Define an array 'dt\_modulation' of type 'hrtim\_cnt\_t' and initialize it with 
 
 
 ### variable dt\_output1\_inactive 
-
 
 ```C++
 uint8_t dt_output1_inactive[];
@@ -275,7 +266,6 @@ Define an array 'dt\_output1\_inactive' of type 'uint8\_t' and initialize it wit
 
 ### variable dt\_output2\_inactive 
 
-
 ```C++
 uint8_t dt_output2_inactive[];
 ```
@@ -292,7 +282,6 @@ Define an array 'dt\_output2\_inactive' of type 'uint8\_t' and initialize it wit
 
 
 ### variable dt\_phase\_shift 
-
 
 ```C++
 int16_t dt_phase_shift[];
@@ -311,7 +300,6 @@ Define an array 'dt\_phase\_shift' of type 'int16\_t' and initialize it with an 
 
 ### variable dt\_pin\_capacitor 
 
-
 ```C++
 uint16_t dt_pin_capacitor[];
 ```
@@ -328,7 +316,6 @@ Define an array 'dt\_pin\_driver' of type 'uint16' and initialize it with an arr
 
 
 ### variable dt\_pin\_driver 
-
 
 ```C++
 uint16_t dt_pin_driver[];
@@ -347,7 +334,6 @@ Define an array 'dt\_pin\_driver' of type 'uint16' and initialize it with an arr
 
 ### variable dt\_pwm\_pin 
 
-
 ```C++
 uint16_t dt_pwm_pin[];
 ```
@@ -364,7 +350,6 @@ Define an array 'dt\_pwm\_pin' of type 'hrtim\_tu\_number\_t' and initialize it 
 
 
 ### variable dt\_pwm\_x1\_high 
-
 
 ```C++
 uint16_t dt_pwm_x1_high[];
@@ -383,7 +368,6 @@ Define an array 'dt\_pwm\_x1\_high' and initialize it with an array of 'timing\_
 
 ### variable dt\_rising\_deadtime 
 
-
 ```C++
 uint16_t dt_rising_deadtime[];
 ```
@@ -400,7 +384,6 @@ Define an array 'dt\_rising\_deadtime' of type 'uint16\_t' and initialize it wit
 
 
 ### variable timer\_frequency 
-
 
 ```C++
 uint32_t timer_frequency;

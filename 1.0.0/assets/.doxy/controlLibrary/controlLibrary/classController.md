@@ -100,7 +100,7 @@
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -274,6 +274,7 @@ virtual int8_t Controller::init (
 
 ### function reset 
 
+_reset internal states and the last command of the controller._ 
 ```C++
 virtual void Controller::reset (
     void

@@ -88,6 +88,7 @@
 
 ### function turnOff 
 
+_Turns the NGND switch OFF. It is used with versions of the TWIST board prior to 1.4._ 
 ```C++
 void NgndHAL::turnOff () 
 ```
@@ -101,6 +102,7 @@ void NgndHAL::turnOff ()
 
 ### function turnOn 
 
+_Turns the NGND switch ON. It is used with versions of the TWIST board prior to 1.4._ 
 ```C++
 void NgndHAL::turnOn () 
 ```

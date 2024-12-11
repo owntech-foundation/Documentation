@@ -134,7 +134,6 @@ size_t buffers_sizes[5];
 
 ### variable dma1 
 
-
 ```C++
 const struct device* dma1;
 ```
@@ -275,7 +274,6 @@ Number of acquired data modulo buffer size.
 
 
 ### function \_dma\_callback 
-
 
 ```C++
 static void _dma_callback (

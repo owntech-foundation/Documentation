@@ -137,6 +137,16 @@ public:
      uint32_t getFrequencyMax(hrtim_tu_number_t pwmX);
 
      uint32_t getResolutionPs(hrtim_tu_number_t pwmX);
+
+     void initBurstMode();
+
+     void setBurstMode(int bm_cmp, int bm_per);
+
+     void startBurstMode();
+
+     void stopBurstMode();
+
+     void deInitBurstMode();
 };
 
 #endif // PWMHAL_H_

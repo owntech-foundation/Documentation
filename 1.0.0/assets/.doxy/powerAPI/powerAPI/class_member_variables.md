@@ -19,6 +19,11 @@
 * **adc\_hrtim** ([**timer\_hrtim\_t**](structtimer__hrtim__t.md))
 
 
+## b
+
+* **burst\_clk** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+
+
 ## c
 
 * **can** ([**CommunicationAPI**](classCommunicationAPI.md))

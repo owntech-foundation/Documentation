@@ -155,7 +155,6 @@ struct isotp_msg_id rx_addr;
 
 ### variable ts 
 
-
 ```C++
 ThingSet ts;
 ```

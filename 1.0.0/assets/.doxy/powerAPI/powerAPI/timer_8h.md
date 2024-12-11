@@ -190,7 +190,6 @@ typedef void(* timer_callback_t) ();
 
 ### function timer\_config 
 
-
 ```C++
 static inline void timer_config (
     const struct device * dev,
@@ -221,7 +220,6 @@ Configure the timer dev using given configuration structure config.
 
 
 ### function timer\_get\_count 
-
 
 ```C++
 static inline uint32_t timer_get_count (
@@ -259,7 +257,6 @@ Current value of the timer internal counter.
 
 ### function timer\_start 
 
-
 ```C++
 static inline void timer_start (
     const struct device * dev
@@ -288,7 +285,6 @@ Start the timer dev. If timer is configured to provide a perdiodic interrupt, it
 
 
 ### function timer\_stop 
-
 
 ```C++
 static inline void timer_stop (

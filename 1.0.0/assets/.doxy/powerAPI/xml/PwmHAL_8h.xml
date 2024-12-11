@@ -191,9 +191,19 @@
 <codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" kindref="member">getFrequencyMax</ref>(hrtim_tu_number_t<sp/>pwmX);</highlight></codeline>
 <codeline lineno="411"><highlight class="normal"></highlight></codeline>
 <codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classPwmHAL_1a326698f2520eed1637959c67da21fb55" kindref="member">getResolutionPs</ref>(hrtim_tu_number_t<sp/>pwmX);</highlight></codeline>
-<codeline lineno="433"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="434"><highlight class="normal"></highlight></codeline>
-<codeline lineno="435"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PWMHAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" kindref="member">initBurstMode</ref>();</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" kindref="member">setBurstMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bm_cmp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bm_per);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" kindref="member">startBurstMode</ref>();</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1ad07800b09483f157769f22690ca51a65" kindref="member">stopBurstMode</ref>();</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" kindref="member">deInitBurstMode</ref>();</highlight></codeline>
+<codeline lineno="465"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PWMHAL_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h"/>
   </compounddef>

@@ -197,6 +197,7 @@ the size of transmission\_buffer and reception\_buffer must be the same
 
 ### function startTransmission 
 
+_start a transmission i.e. you send what is contained in the transmission buffer_ 
 ```C++
 void Rs485Communication::startTransmission () 
 ```
@@ -210,6 +211,7 @@ void Rs485Communication::startTransmission ()
 
 ### function turnOffCommunication 
 
+_Turn off the RS485._ 
 ```C++
 void Rs485Communication::turnOffCommunication () 
 ```

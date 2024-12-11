@@ -92,7 +92,6 @@
 
 ### variable shield 
 
-
 ```C++
 ShieldAPI shield;
 ```

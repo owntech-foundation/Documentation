@@ -136,6 +136,16 @@ void hrtim_phase_shift_set(hrtim_tu_number_t tu_number, uint16_t shift);
 
 void hrtim_dt_init(hrtim_tu_number_t tu_number);
 
+void hrtim_burst_mode_init(void);
+
+void hrtim_burst_set(int bm_cmp, int bm_per);
+
+void hrtim_burst_start(void);
+
+void hrtim_burst_stop(void);
+
+void hrtim_burst_dis(void);
+
 void hrtim_cnt_en(hrtim_tu_number_t tu_number);
 
 void hrtim_cnt_dis(hrtim_tu_number_t tu_number);

@@ -124,6 +124,7 @@
 * **hrtim\_adc\_source\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_adc\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_adc\_trigger\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
+* **hrtim\_burst\_clk\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_callback\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_cmp\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))
 * **hrtim\_cnt\_t** ([**hrtim\_enum.h**](hrtim__enum_8h.md))

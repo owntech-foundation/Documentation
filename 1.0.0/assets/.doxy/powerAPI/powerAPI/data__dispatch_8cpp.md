@@ -213,7 +213,6 @@ uint16_t* dma_secondary_buffers[ADC_COUNT];
 
 ### variable enabled\_channels\_count 
 
-
 ```C++
 uint8_t* enabled_channels_count;
 ```
@@ -351,6 +350,7 @@ void data_dispatch_do_dispatch (
 
 ### function data\_dispatch\_do\_full\_dispatch 
 
+_Function to proceed to all chanels dispatch when it is done at uninterruptible task start._ 
 ```C++
 void data_dispatch_do_full_dispatch () 
 ```

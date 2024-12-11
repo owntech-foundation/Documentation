@@ -230,6 +230,7 @@ Current value of the given parameter.
 
 ### function data\_conversion\_init 
 
+_Initialize data conversion._ 
 ```C++
 void data_conversion_init () 
 ```

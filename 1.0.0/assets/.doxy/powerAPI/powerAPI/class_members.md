@@ -22,6 +22,7 @@
 ## b
 
 * **buildSensorListFromDeviceTree** ([**SensorsAPI**](classSensorsAPI.md))
+* **burst\_clk** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
 ## c
@@ -72,6 +73,7 @@
 * **doFullDispatch** ([**DataAPI**](classDataAPI.md))
 * **disconnectCapacitor** ([**PowerAPI**](classPowerAPI.md))
 * **disconnectDriver** ([**PowerAPI**](classPowerAPI.md))
+* **deInitBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **disableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **disablePeriodEvnt** ([**PwmHAL**](classPwmHAL.md))
 * **disableSafetyApi** ([**SafetyAPI**](classSafetyAPI.md))
@@ -178,6 +180,7 @@
 * **initBoost** ([**PowerAPI**](classPowerAPI.md))
 * **initBuck** ([**PowerAPI**](classPowerAPI.md))
 * **initMode** ([**PowerAPI**](classPowerAPI.md))
+* **initBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
@@ -284,14 +287,17 @@
 * **setAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcTriggerInstant** ([**PwmHAL**](classPwmHAL.md))
 * **setAdcTriggerPostScaler** ([**PwmHAL**](classPwmHAL.md))
+* **setBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **setEev** ([**PwmHAL**](classPwmHAL.md))
 * **setFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **setMode** ([**PwmHAL**](classPwmHAL.md))
 * **setModulation** ([**PwmHAL**](classPwmHAL.md))
 * **setPeriodEvntRep** ([**PwmHAL**](classPwmHAL.md))
 * **setSwitchConvention** ([**PwmHAL**](classPwmHAL.md))
+* **startBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **startDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **startSingleOutput** ([**PwmHAL**](classPwmHAL.md))
+* **stopBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **stopDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **stopSingleOutput** ([**PwmHAL**](classPwmHAL.md))
 * **startTransmission** ([**Rs485Communication**](classRs485Communication.md))

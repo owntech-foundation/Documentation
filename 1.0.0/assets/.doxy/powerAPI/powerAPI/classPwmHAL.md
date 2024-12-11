@@ -53,6 +53,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 |  void | [**configurePeriodEvnt**](#function-configureperiodevnt) (hrtim\_tu\_t PWM\_tu, uint32\_t repetition, hrtim\_callback\_t callback) <br>_This function configures the interrupt on repetition counter._  |
+|  void | [**deInitBurstMode**](#function-deinitburstmode) () <br>_This function deinit burst mode._  |
 |  void | [**disableAdcTrigger**](#function-disableadctrigger) (hrtim\_tu\_number\_t tu\_number) <br>_This function disables the adc trigger for the selected timing unit._  |
 |  void | [**disablePeriodEvnt**](#function-disableperiodevnt) (hrtim\_tu\_t PWM\_tu) <br>_This function disables the interrupt on repetition counter._  |
 |  void | [**enableAdcTrigger**](#function-enableadctrigger) (hrtim\_tu\_number\_t tu\_number) <br>_This function enables the adc trigger for the selected timing unit._  |
@@ -71,6 +72,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  uint32\_t | [**getPeriodUs**](#function-getperiodus) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period in µs of the selected timer._  |
 |  uint32\_t | [**getResolutionPs**](#function-getresolutionps) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the resolution of the timing unit in picoseconds._  |
 |  hrtim\_switch\_convention\_t | [**getSwitchConvention**](#function-getswitchconvention) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the switching convention of the selected timing unit._  |
+|  void | [**initBurstMode**](#function-initburstmode) () <br>_This function initialize burst mode._  |
 |  void | [**initFixedFrequency**](#function-initfixedfrequency) (uint32\_t fixed\_frequency) <br>_This function initialize the PWM for fixed frequency applications._  |
 |  void | [**initUnit**](#function-initunit) (hrtim\_tu\_number\_t pwmX) <br>_This function initializes a timing unit._  |
 |  void | [**initVariableFrequency**](#function-initvariablefrequency) (uint32\_t initial\_frequency, uint32\_t minimal\_frequency) <br>_This functions initializes the PWM for variable frequency applications._  |
@@ -79,6 +81,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**setAdcTrigger**](#function-setadctrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_trigger\_t adc\_trig) <br>_This function sets the adc trigger linked to a timer unit._  |
 |  void | [**setAdcTriggerInstant**](#function-setadctriggerinstant) (hrtim\_tu\_number\_t pwmX, float32\_t trig\_val) <br>_This function sets the comparator value at which the ADC is trigered._  |
 |  void | [**setAdcTriggerPostScaler**](#function-setadctriggerpostscaler) (hrtim\_tu\_number\_t pwmX, uint32\_t ps\_ratio) <br>_This function sets the PostScaler value for the selected timing unit._  |
+|  void | [**setBurstMode**](#function-setburstmode) (int bm\_cmp, int bm\_per) <br>_This function sets burst mode parameters._  |
 |  void | [**setDeadTime**](#function-setdeadtime) (hrtim\_tu\_number\_t pwmX, uint16\_t rise\_ns, uint16\_t fall\_ns) <br>_This function sets the dead time for the selected timing unit._  |
 |  void | [**setDutyCycle**](#function-setdutycycle) (hrtim\_tu\_number\_t pwmX, float32\_t duty\_cycle) <br>_This function sets the duty cycle for the selected timing unit._  |
 |  void | [**setEev**](#function-seteev) (hrtim\_tu\_number\_t pwmX, hrtim\_external\_trigger\_t eev) <br>_This function sets external event linked to the timing unit essential for the current mode._  |
@@ -88,8 +91,10 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**setPeriodEvntRep**](#function-setperiodevntrep) (hrtim\_tu\_t PWM\_tu, uint32\_t repetition) <br>_This function sets the repetition counter to ISR period._  |
 |  void | [**setPhaseShift**](#function-setphaseshift) (hrtim\_tu\_number\_t pwmX, int16\_t shift) <br>_This function sets the phase shift in respect to timer A for the selected timing unit._  |
 |  void | [**setSwitchConvention**](#function-setswitchconvention) (hrtim\_tu\_number\_t pwmX, hrtim\_switch\_convention\_t convention) <br>_This function sets the switch convention for a given PWM unit i.e. you decide which one of the output of the timer can be controlled with duty cycle._  |
+|  void | [**startBurstMode**](#function-startburstmode) () <br>_This function starts burst mode._  |
 |  void | [**startDualOutput**](#function-startdualoutput) (hrtim\_tu\_number\_t pwmX) <br>_This fonction starts both outputs of the selected HRTIM channel._  |
 |  void | [**startSingleOutput**](#function-startsingleoutput) (hrtim\_tu\_number\_t tu, hrtim\_output\_number\_t output) <br>_This function starts only one output of the selected HRTIM channel._  |
+|  void | [**stopBurstMode**](#function-stopburstmode) () <br>_This function stops burst mode._  |
 |  void | [**stopDualOutput**](#function-stopdualoutput) (hrtim\_tu\_number\_t pwmX) <br>_This function stops both outputs of the selected HRTIM channel._  |
 |  void | [**stopSingleOutput**](#function-stopsingleoutput) (hrtim\_tu\_number\_t tu, hrtim\_output\_number\_t output) <br>_This function starts only one output of the selected HRTIM channel._  |
 
@@ -120,7 +125,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -165,6 +170,20 @@ void PwmHAL::configurePeriodEvnt (
 
 
         
+
+<hr>
+
+
+
+### function deInitBurstMode 
+
+_This function deinit burst mode._ 
+```C++
+void PwmHAL::deInitBurstMode () 
+```
+
+
+
 
 <hr>
 
@@ -702,9 +721,7 @@ uint32_t PwmHAL::getResolutionPs (
 
 **Note:**
 
-The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz 
- PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz 
- 
+The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz 
 
 
 
@@ -745,6 +762,20 @@ PWMx1 (high side convention) or PWMx2 (low-side convention)
 
 
         
+
+<hr>
+
+
+
+### function initBurstMode 
+
+_This function initialize burst mode._ 
+```C++
+void PwmHAL::initBurstMode () 
+```
+
+
+
 
 <hr>
 
@@ -1038,6 +1069,35 @@ void PwmHAL::setAdcTriggerPostScaler (
 
 this function must be called after initialiazing a timing unit, and before enabling the adc trigger 
 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setBurstMode 
+
+_This function sets burst mode parameters._ 
+```C++
+void PwmHAL::setBurstMode (
+    int bm_cmp,
+    int bm_per
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `bm_cmp` Number of period of PWM off 
+* `bm_per` Total number of PWM period 
 
 
 
@@ -1358,6 +1418,20 @@ this function must be called before the timer initialization
 
 
 
+### function startBurstMode 
+
+_This function starts burst mode._ 
+```C++
+void PwmHAL::startBurstMode () 
+```
+
+
+
+
+<hr>
+
+
+
 ### function startDualOutput 
 
 _This fonction starts both outputs of the selected HRTIM channel._ 
@@ -1409,6 +1483,20 @@ void PwmHAL::startSingleOutput (
 
 
         
+
+<hr>
+
+
+
+### function stopBurstMode 
+
+_This function stops burst mode._ 
+```C++
+void PwmHAL::stopBurstMode () 
+```
+
+
+
 
 <hr>
 

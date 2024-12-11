@@ -191,6 +191,7 @@
     <member refid="structpwm__conf__t_1a894655812d74f6f5ef6fb4c641d55d58" kind="variable"><name>resolution</name></member>
     <member refid="structpwm__conf__t_1aa728c152b00638e760fdcaa082a3bcea" kind="variable"><name>pwm_mode</name></member>
     <member refid="structpwm__conf__t_1ae3c9bc310758dd584b5539824c0dda31" kind="variable"><name>external_trigger</name></member>
+    <member refid="structpwm__conf__t_1a1dbeecebbefc333d9efe76160fdfec8e" kind="variable"><name>burst_clk</name></member>
   </compound>
   <compound refid="classPwmHAL" kind="class"><name>PwmHAL</name>
     <member refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" kind="function"><name>initUnit</name></member>
@@ -233,6 +234,11 @@
     <member refid="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" kind="function"><name>getFrequencyMin</name></member>
     <member refid="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" kind="function"><name>getFrequencyMax</name></member>
     <member refid="classPwmHAL_1a326698f2520eed1637959c67da21fb55" kind="function"><name>getResolutionPs</name></member>
+    <member refid="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" kind="function"><name>initBurstMode</name></member>
+    <member refid="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" kind="function"><name>setBurstMode</name></member>
+    <member refid="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" kind="function"><name>startBurstMode</name></member>
+    <member refid="classPwmHAL_1ad07800b09483f157769f22690ca51a65" kind="function"><name>stopBurstMode</name></member>
+    <member refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" kind="function"><name>deInitBurstMode</name></member>
   </compound>
   <compound refid="classRs485Communication" kind="class"><name>Rs485Communication</name>
     <member refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" kind="function"><name>configure</name></member>
@@ -643,6 +649,11 @@
     <member refid="hrtim_8h_1afb07bc408499fcc59cadbd41624375eb" kind="function"><name>hrtim_duty_cycle_set</name></member>
     <member refid="hrtim_8h_1ab50bc547a70fece1701a652290231bd5" kind="function"><name>hrtim_phase_shift_set</name></member>
     <member refid="hrtim_8h_1acd059b1d01a67b0b5c84b31521bbbe76" kind="function"><name>hrtim_dt_init</name></member>
+    <member refid="hrtim_8h_1a96da212ea26098e6fd2395e6dea79a1c" kind="function"><name>hrtim_burst_mode_init</name></member>
+    <member refid="hrtim_8h_1a243cf891b3085c9d044e1c1f7b7fd53c" kind="function"><name>hrtim_burst_set</name></member>
+    <member refid="hrtim_8h_1a43e90b107d21726c4d558291d737f0b5" kind="function"><name>hrtim_burst_start</name></member>
+    <member refid="hrtim_8h_1a94bd84e5ae37448ac131715517e27a80" kind="function"><name>hrtim_burst_stop</name></member>
+    <member refid="hrtim_8h_1a04b8adeffacec036f712140e529c3fef" kind="function"><name>hrtim_burst_dis</name></member>
     <member refid="hrtim_8h_1ab33a9a08036cbdfff2b63d390ac0d1e9" kind="function"><name>hrtim_cnt_en</name></member>
     <member refid="hrtim_8h_1a5a61508c2cb1df40bc5f869b3d79a9ca" kind="function"><name>hrtim_cnt_dis</name></member>
     <member refid="hrtim_8h_1a16a948ae1f25f4e06ce963fc696a132b" kind="function"><name>hrtim_rst_evt_en</name></member>
@@ -790,6 +801,13 @@
     <member refid="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442b" kind="enum"><name>hrtim_cnt_t</name></member>
     <member refid="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442ba8815a2e4174a883a84c52f623abca0ee" kind="enumvalue"><name>Lft_aligned</name></member>
     <member refid="hrtim__enum_8h_1a349bf39fa5eedf732c2a7138fe85442ba5c841ec18d04dd1d7145a24ce2d308c9" kind="enumvalue"><name>UpDwn</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6c" kind="enum"><name>hrtim_burst_clk_t</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6caa01f3bfcd887d74579d4aa3a670e47ca" kind="enumvalue"><name>BURST_TIMA</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6cac0b7dc8c451c8ded9154aaea20d2ccdc" kind="enumvalue"><name>BURST_TIMB</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6cae37a6e1b65c67733dbeb433a24a63fec" kind="enumvalue"><name>BURST_TIMC</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6cae7c8665f3dcd0417bd6e5bf2dabb1670" kind="enumvalue"><name>BURST_TIMD</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6ca956afd27fdde5e7dc1359943db060778" kind="enumvalue"><name>BURST_TIME</name></member>
+    <member refid="hrtim__enum_8h_1afe18e907e129bfa32336e92024448e6ca99262ef2822a99da2ca58d9e7d04a83c" kind="enumvalue"><name>BURST_TIMF</name></member>
     <member refid="hrtim__enum_8h_1a1e46077558f9b641a9a5f373fa4af59a" kind="typedef"><name>hrtim_callback_t</name></member>
     <member refid="hrtim__enum_8h_1a083f1b534cd9560062de5ff4a03daa1a" kind="variable"><name>HRTIM_CHANNELS</name></member>
     <member refid="hrtim__enum_8h_1a79feb2e77b1b416b4e9fdbcf51c6eee9" kind="variable"><name>HRTIM_PRESCALER_RESOLUTION_PS</name></member>

@@ -90,6 +90,7 @@
 
 ### variable analog 
 
+_Contains all the function for analog communication._ 
 ```C++
 AnalogCommunication CommunicationAPI::analog;
 ```
@@ -103,6 +104,7 @@ AnalogCommunication CommunicationAPI::analog;
 
 ### variable can 
 
+_Contains all the function for can communication._ 
 ```C++
 CanCommunication CommunicationAPI::can;
 ```
@@ -116,6 +118,7 @@ CanCommunication CommunicationAPI::can;
 
 ### variable rs485 
 
+_Contains all the function for rs485 communication._ 
 ```C++
 Rs485Communication CommunicationAPI::rs485;
 ```
@@ -129,6 +132,7 @@ Rs485Communication CommunicationAPI::rs485;
 
 ### variable sync 
 
+_Contains all the function for sync communication._ 
 ```C++
 SyncCommunication CommunicationAPI::sync;
 ```

@@ -84,7 +84,7 @@ _Handles usart 1 for the SPIN board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -105,6 +105,7 @@ Use this element to initialize and send messages via usart 1
 
 ### function usart1Init 
 
+_Library initialization function for the usart communication. This function is declared on the private section of the .c file._ 
 ```C++
 void UartHAL::usart1Init () 
 ```
@@ -143,6 +144,7 @@ This function returns a single char which is waiting to be treated if no char is
 
 ### function usart1SwapRxTx 
 
+_This function swaps the usart RX and TX pins. It should be called in conjunction with a board version setup._ 
 ```C++
 void UartHAL::usart1SwapRxTx () 
 ```

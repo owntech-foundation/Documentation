@@ -1448,15 +1448,114 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz <linebreak/>
- PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz <linebreak/>
- </para>
+<simplesect kind="note"><para>The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="432" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="379" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::initBurstMode</definition>
+        <argsstring>()</argsstring>
+        <name>initBurstMode</name>
+        <qualifiedname>PwmHAL::initBurstMode</qualifiedname>
+        <briefdescription>
+<para>This function initialize burst mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="438" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="385" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::setBurstMode</definition>
+        <argsstring>(int bm_cmp, int bm_per)</argsstring>
+        <name>setBurstMode</name>
+        <qualifiedname>PwmHAL::setBurstMode</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>bm_cmp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bm_per</declname>
+        </param>
+        <briefdescription>
+<para>This function sets burst mode parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bm_cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of period of PWM off </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bm_per</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of PWM period </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="446" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::startBurstMode</definition>
+        <argsstring>()</argsstring>
+        <name>startBurstMode</name>
+        <qualifiedname>PwmHAL::startBurstMode</qualifiedname>
+        <briefdescription>
+<para>This function starts burst mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="452" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1ad07800b09483f157769f22690ca51a65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::stopBurstMode</definition>
+        <argsstring>()</argsstring>
+        <name>stopBurstMode</name>
+        <qualifiedname>PwmHAL::stopBurstMode</qualifiedname>
+        <briefdescription>
+<para>This function stops burst mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="458" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PwmHAL::deInitBurstMode</definition>
+        <argsstring>()</argsstring>
+        <name>deInitBurstMode</name>
+        <qualifiedname>PwmHAL::deInitBurstMode</qualifiedname>
+        <briefdescription>
+<para>This function deinit burst mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="464" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="405" bodyend="408"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1467,9 +1566,10 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="433"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="465"/>
     <listofallmembers>
       <member refid="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>configurePeriodEvnt</name></member>
+      <member refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>deInitBurstMode</name></member>
       <member refid="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>disableAdcTrigger</name></member>
       <member refid="classPwmHAL_1a87f02068cb744707860185045c86819f" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>disablePeriodEvnt</name></member>
       <member refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>enableAdcTrigger</name></member>
@@ -1488,6 +1588,7 @@
       <member refid="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getPeriodUs</name></member>
       <member refid="classPwmHAL_1a326698f2520eed1637959c67da21fb55" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getResolutionPs</name></member>
       <member refid="classPwmHAL_1a6e4cef4b010a4f01fc8f66f3dc4c0f96" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getSwitchConvention</name></member>
+      <member refid="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initBurstMode</name></member>
       <member refid="classPwmHAL_1aea02fe19f0e4bb1ed9c590cbc6d4d6a9" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initFixedFrequency</name></member>
       <member refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initUnit</name></member>
       <member refid="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initVariableFrequency</name></member>
@@ -1496,6 +1597,7 @@
       <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTrigger</name></member>
       <member refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerInstant</name></member>
       <member refid="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerPostScaler</name></member>
+      <member refid="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setBurstMode</name></member>
       <member refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setDeadTime</name></member>
       <member refid="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setDutyCycle</name></member>
       <member refid="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setEev</name></member>
@@ -1505,8 +1607,10 @@
       <member refid="classPwmHAL_1a350644c31ccf6b662c2f450f27118c56" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setPeriodEvntRep</name></member>
       <member refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setPhaseShift</name></member>
       <member refid="classPwmHAL_1a9c8a6859818c4a5d4cb808003757ccd2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setSwitchConvention</name></member>
+      <member refid="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>startBurstMode</name></member>
       <member refid="classPwmHAL_1ac2900f6b49f6110a4b1aadacf120201a" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>startDualOutput</name></member>
       <member refid="classPwmHAL_1a68b7bb1265a2b9af98cbd66d8c3252af" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>startSingleOutput</name></member>
+      <member refid="classPwmHAL_1ad07800b09483f157769f22690ca51a65" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>stopBurstMode</name></member>
       <member refid="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>stopDualOutput</name></member>
       <member refid="classPwmHAL_1af87a7e0c7647bee04c2401cd404d779e" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>stopSingleOutput</name></member>
     </listofallmembers>

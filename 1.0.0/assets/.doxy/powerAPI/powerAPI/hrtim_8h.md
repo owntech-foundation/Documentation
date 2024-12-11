@@ -74,6 +74,11 @@
 |  void | [**hrtim\_adc\_trigger\_dis**](#function-hrtim_adc_trigger_dis) (hrtim\_tu\_number\_t tu\_number) <br>_Disbables a ADCx trigger event._  |
 |  void | [**hrtim\_adc\_trigger\_en**](#function-hrtim_adc_trigger_en) (hrtim\_tu\_number\_t tu\_number) <br>_Configures and enables an ADC trigger event._  |
 |  void | [**hrtim\_adc\_trigger\_set\_postscaler**](#function-hrtim_adc_trigger_set_postscaler) (hrtim\_tu\_number\_t tu\_number, uint32\_t ps\_ratio) <br>_Sets the HRTIM event postsaler. Postscaler ratio indicates how many potential events will be ignored between two events which are effectively generated._  |
+|  void | [**hrtim\_burst\_dis**](#function-hrtim_burst_dis) (void) <br>_Disable burst mode._  |
+|  void | [**hrtim\_burst\_mode\_init**](#function-hrtim_burst_mode_init) (void) <br>_Initialize burst mode This mode permits to skip one or multiple PWM periods by idling the output on a low state. It is used in light load conditions to minimize switching losses._  |
+|  void | [**hrtim\_burst\_set**](#function-hrtim_burst_set) (int bm\_cmp, int bm\_per) <br>_Set burst mode parameters._  |
+|  void | [**hrtim\_burst\_start**](#function-hrtim_burst_start) (void) <br>_Starts burst mode. Burst mode won't stop until hrtim\_burst\_stop is called._  |
+|  void | [**hrtim\_burst\_stop**](#function-hrtim_burst_stop) (void) <br>_Stops burst mode._  |
 |  void | [**hrtim\_change\_frequency**](#function-hrtim_change_frequency) (uint32\_t new\_frequency) <br>_Change the frequency/period after it has been initialized._  |
 |  void | [**hrtim\_cmpl\_pwm\_out1**](#function-hrtim_cmpl_pwm_out1) (hrtim\_tu\_number\_t tu\_number) <br>_Activates OUT 1 (switch H) with a given switching convention._  |
 |  void | [**hrtim\_cmpl\_pwm\_out2**](#function-hrtim_cmpl_pwm_out2) (hrtim\_tu\_number\_t tu\_number) <br>_Activates OUT 2 (switch L) with a given switching convention._  |
@@ -645,6 +650,99 @@ void hrtim_adc_trigger_set_postscaler (
 
 
 
+### function hrtim\_burst\_dis 
+
+_Disable burst mode._ 
+```C++
+void hrtim_burst_dis (
+    void
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function hrtim\_burst\_mode\_init 
+
+_Initialize burst mode This mode permits to skip one or multiple PWM periods by idling the output on a low state. It is used in light load conditions to minimize switching losses._ 
+```C++
+void hrtim_burst_mode_init (
+    void
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function hrtim\_burst\_set 
+
+_Set burst mode parameters._ 
+```C++
+void hrtim_burst_set (
+    int bm_cmp,
+    int bm_per
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `bm_cmp` number of periods idle: 
+* `bm_per` total number of period during a cycle (idle and active) 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function hrtim\_burst\_start 
+
+_Starts burst mode. Burst mode won't stop until hrtim\_burst\_stop is called._ 
+```C++
+void hrtim_burst_start (
+    void
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function hrtim\_burst\_stop 
+
+_Stops burst mode._ 
+```C++
+void hrtim_burst_stop (
+    void
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function hrtim\_change\_frequency 
 
 _Change the frequency/period after it has been initialized._ 
@@ -1055,6 +1153,7 @@ void hrtim_frequency_set (
 
 ### function hrtim\_get\_apb2\_clock 
 
+_Gets the APB2 clock._ 
 ```C++
 int hrtim_get_apb2_clock () 
 ```
