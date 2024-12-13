@@ -28,7 +28,8 @@ jobs:
           path: docs/bootloader
           sparse-checkout: |
             docs/getting_started.md
-            docs/images
+            docs/images/*
+          sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
