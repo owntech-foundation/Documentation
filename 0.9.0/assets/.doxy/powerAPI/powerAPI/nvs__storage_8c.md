@@ -109,7 +109,6 @@
 
 ### variable current\_storage\_version 
 
-
 ```C++
 const uint16_t current_storage_version;
 ```

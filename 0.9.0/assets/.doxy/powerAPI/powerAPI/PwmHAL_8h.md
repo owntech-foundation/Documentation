@@ -93,7 +93,6 @@
 
 ### enum inverter\_modulation\_t 
 
-
 ```C++
 enum inverter_modulation_t {
     unipolar,
@@ -113,7 +112,6 @@ Inverter leg operation type.
 
 
 ### enum leg\_operation\_t 
-
 
 ```C++
 enum leg_operation_t {

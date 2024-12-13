@@ -82,7 +82,7 @@ _Handles timer 4 for the SPIN board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -128,6 +128,7 @@ An uint32 value of the counter which corresponds to the step of the system.
 
 ### function startLogTimer4IncrementalEncoder 
 
+_Launches the timer4 which is adapted for reading an encoder._ 
 ```C++
 void TimerHAL::startLogTimer4IncrementalEncoder () 
 ```

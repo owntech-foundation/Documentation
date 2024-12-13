@@ -85,7 +85,7 @@
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 timer\_enable\_irq : set to 1 to enable interrupt on timer overflow. timer\_enable\_encoder : set to 1 for timer to act as an incremental coder counter.

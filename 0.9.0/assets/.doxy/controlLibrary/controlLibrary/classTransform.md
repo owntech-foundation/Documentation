@@ -86,7 +86,7 @@ _static class to group methods helping translation between reference frames_ [Mo
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 mainly 3 reference frames:
@@ -105,6 +105,7 @@ mainly 3 reference frames:
 
 ### function clarke 
 
+_transform a_ [_**three\_phase\_t**_](structthree__phase__t.md) _vector to a_[_**clarke\_t**_](structclarke__t.md) _vector._
 ```C++
 static clarke_t Transform::clarke (
     three_phase_t Xabc
@@ -120,6 +121,7 @@ static clarke_t Transform::clarke (
 
 ### function clarke\_inverse 
 
+_transform a_ [_**clarke\_t**_](structclarke__t.md) _vector to a_[_**three\_phase\_t**_](structthree__phase__t.md) _vector._
 ```C++
 static three_phase_t Transform::clarke_inverse (
     clarke_t Xabo
@@ -135,6 +137,7 @@ static three_phase_t Transform::clarke_inverse (
 
 ### function rotation\_to\_clarke 
 
+_make a_  _rotation which transform a_[_**dqo\_t**_](structdqo__t.md) _vector to a_[_**clarke\_t**_](structclarke__t.md) _vector._
 ```C++
 static clarke_t Transform::rotation_to_clarke (
     dqo_t Xdqo,
@@ -151,6 +154,7 @@ static clarke_t Transform::rotation_to_clarke (
 
 ### function rotation\_to\_dqo 
 
+_make a -_  _rotation which transform a_[_**clarke\_t**_](structclarke__t.md) _vector to a_[_**dqo\_t**_](structdqo__t.md) _vector._
 ```C++
 static dqo_t Transform::rotation_to_dqo (
     clarke_t Xabo,
@@ -167,6 +171,7 @@ static dqo_t Transform::rotation_to_dqo (
 
 ### function to\_dqo 
 
+_transform a_ [_**three\_phase\_t**_](structthree__phase__t.md) _vector to a_[_**dqo\_t**_](structdqo__t.md) _vector._
 ```C++
 static dqo_t Transform::to_dqo (
     three_phase_t Xabc,
@@ -183,6 +188,7 @@ static dqo_t Transform::to_dqo (
 
 ### function to\_threephase 
 
+_transform a_ [_**dqo\_t**_](structdqo__t.md) _vector to a_[_**three\_phase\_t**_](structthree__phase__t.md) _vector._
 ```C++
 static three_phase_t Transform::to_threephase (
     dqo_t Xdqo,

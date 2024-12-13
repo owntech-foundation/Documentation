@@ -87,7 +87,6 @@
 
 ### variable twist 
 
-
 ```C++
 TwistAPI twist;
 ```

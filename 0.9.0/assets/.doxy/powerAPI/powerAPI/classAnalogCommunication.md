@@ -114,6 +114,7 @@ Analog value (A value between 0 and 4096)
 
 ### function init 
 
+_Initializing analog communication (ADC and DAC)_ 
 ```C++
 static void AnalogCommunication::init () 
 ```

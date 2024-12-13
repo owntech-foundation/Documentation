@@ -127,6 +127,7 @@ Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.f
 
 ### function initSlave 
 
+_initialization synchronization as SLAVE, the slave receive the synchronization pulsle._ 
 ```C++
 static void SyncCommunication::initSlave (
     board_version_t board_version

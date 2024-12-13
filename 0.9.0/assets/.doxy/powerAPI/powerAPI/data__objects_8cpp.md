@@ -229,7 +229,6 @@ float32_t i_high_value;
 
 ### variable manufacturer 
 
-
 ```C++
 const char manufacturer[];
 ```
@@ -334,7 +333,6 @@ float32_t v_high_value;
 
 
 ### variable data\_objects 
-
 
 ```C++
 ThingSetDataObject data_objects[];

@@ -1050,6 +1050,7 @@ void hrtim_frequency_set (
 
 ### function hrtim\_get\_apb2\_clock 
 
+_Gets the APB2 clock._ 
 ```C++
 int hrtim_get_apb2_clock () 
 ```

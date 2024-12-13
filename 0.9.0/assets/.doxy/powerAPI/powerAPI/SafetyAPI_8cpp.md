@@ -87,7 +87,6 @@
 
 ### variable Safety 
 
-
 ```C++
 safety Safety;
 ```

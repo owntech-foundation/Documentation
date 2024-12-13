@@ -101,6 +101,7 @@
 
 ### function enableCan 
 
+_Enable can._ 
 ```C++
 void CanCommunication::enableCan () 
 ```

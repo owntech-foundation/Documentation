@@ -89,7 +89,7 @@ _Handles the ADC for the spin board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -311,6 +311,7 @@ Number of enabled channels on the given ADC.
 
 ### function startAllAdcs 
 
+_Start all configured ADCs._ 
 ```C++
 void AdcHAL::startAllAdcs () 
 ```
@@ -324,6 +325,7 @@ void AdcHAL::startAllAdcs ()
 
 ### function stopAllAdcs 
 
+_Stop all configured ADCs._ 
 ```C++
 void AdcHAL::stopAllAdcs () 
 ```

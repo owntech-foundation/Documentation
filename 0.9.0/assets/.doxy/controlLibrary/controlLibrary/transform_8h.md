@@ -111,7 +111,6 @@ const float32_t SQRT3_DIV_2;
 
 ### variable SQRT3\_INVERSE 
 
-
 ```C++
 const float32_t SQRT3_INVERSE;
 ```

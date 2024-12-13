@@ -87,7 +87,7 @@ _a class to implement the Finite Impulse Response filter behaviour_ [More...](#d
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

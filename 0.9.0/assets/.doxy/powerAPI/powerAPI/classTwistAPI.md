@@ -113,6 +113,7 @@
 
 ### function connectAllCapacitor 
 
+_Connect the electrolyt capacitor to all the legs._ 
 ```C++
 void TwistAPI::connectAllCapacitor () 
 ```
@@ -153,6 +154,7 @@ void TwistAPI::connectLegCapacitor (
 
 ### function disconnectAllCapacitor 
 
+_disconnect the electrolyt capacitor to all the legs._ 
 ```C++
 void TwistAPI::disconnectAllCapacitor () 
 ```
@@ -193,6 +195,7 @@ void TwistAPI::disconnectLegCapacitor (
 
 ### function initAllBoost 
 
+_Initialise all the legs for boost topology, current mode is not supported for boost._ 
 ```C++
 void TwistAPI::initAllBoost () 
 ```
@@ -765,6 +768,7 @@ You need to call this function BEFORE initializing a leg, after that it is not p
 
 ### function startAll 
 
+_Start power output for all legs._ 
 ```C++
 void TwistAPI::startAll () 
 ```
@@ -808,6 +812,7 @@ This function initiates the power output for a specified leg by starting the PWM
 
 ### function stopAll 
 
+_Stop power output for all legs._ 
 ```C++
 void TwistAPI::stopAll () 
 ```

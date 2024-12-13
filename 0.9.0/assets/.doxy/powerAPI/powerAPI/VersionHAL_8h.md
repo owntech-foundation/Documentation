@@ -92,7 +92,6 @@
 
 ### enum board\_version\_t 
 
-
 ```C++
 enum board_version_t {
     nucleo_G474RE,

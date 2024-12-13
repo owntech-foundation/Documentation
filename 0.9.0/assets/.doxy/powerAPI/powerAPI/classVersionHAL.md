@@ -82,7 +82,7 @@ _Handles the versioning for the spin board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

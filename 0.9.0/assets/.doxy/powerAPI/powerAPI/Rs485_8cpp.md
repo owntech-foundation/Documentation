@@ -475,7 +475,6 @@ Reload DMA TX buffer. This functions enable TX channel to start sending the data
 
 ### function \_dma\_callback\_rx 
 
-
 ```C++
 static void _dma_callback_rx () 
 ```
@@ -492,7 +491,6 @@ DMA callback RX clear reception flag, then call user functions
 
 
 ### function \_dma\_callback\_tx 
-
 
 ```C++
 static void _dma_callback_tx (

@@ -87,7 +87,6 @@
 
 ### variable communication 
 
-
 ```C++
 CommunicationAPI communication;
 ```

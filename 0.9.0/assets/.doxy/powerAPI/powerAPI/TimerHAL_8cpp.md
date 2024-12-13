@@ -87,7 +87,6 @@
 
 ### variable timer4 
 
-
 ```C++
 const struct device* timer4;
 ```

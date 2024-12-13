@@ -113,7 +113,6 @@
 
 ### variable broadcast\_time 
 
-
 ```C++
 uint16_t broadcast_time;
 ```

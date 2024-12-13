@@ -211,7 +211,6 @@ const float32_t NO_VALUE;
 
 ### variable data 
 
-
 ```C++
 DataAPI data;
 ```

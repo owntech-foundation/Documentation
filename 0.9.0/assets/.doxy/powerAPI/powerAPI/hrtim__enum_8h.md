@@ -140,6 +140,7 @@ enum hrtim_adc_edgetrigger_t {
 
 ### enum hrtim\_adc\_event\_t 
 
+_HRTIM ADC event update._ 
 ```C++
 enum hrtim_adc_event_t {
     PWMA_UPDT = LL_HRTIM_ADCTRIG_UPDATE_TIMER_A,
@@ -192,6 +193,7 @@ prioritize cmp3, cmp4 and cmp2 might be used for current mode, and cmp1 for duty
 
 ### enum hrtim\_adc\_t 
 
+_HRTIM ADC trigger registers definition._ 
 ```C++
 enum hrtim_adc_t {
     ADC1R = 1,
@@ -210,6 +212,7 @@ enum hrtim_adc_t {
 
 ### enum hrtim\_adc\_trigger\_t 
 
+_HRTIM ADC trigger._ 
 ```C++
 enum hrtim_adc_trigger_t {
     ADCTRIG_1 = LL_HRTIM_ADCTRIG_1,
@@ -229,6 +232,7 @@ enum hrtim_adc_trigger_t {
 
 ### typedef hrtim\_callback\_t 
 
+_callback function_ 
 ```C++
 typedef void(* hrtim_callback_t) ();
 ```
@@ -242,6 +246,7 @@ typedef void(* hrtim_callback_t) ();
 
 ### enum hrtim\_cmp\_t 
 
+_HRTIM comparators definition._ 
 ```C++
 enum hrtim_cmp_t {
     CMP1xR = 1,
@@ -265,6 +270,7 @@ enum hrtim_cmp_t {
 
 ### enum hrtim\_cnt\_t 
 
+_HRTIM counting mode setting._ 
 ```C++
 enum hrtim_cnt_t {
     Lft_aligned = LL_HRTIM_COUNTING_MODE_UP,
@@ -280,7 +286,6 @@ enum hrtim_cnt_t {
 
 
 ### enum hrtim\_comp\_usage\_t 
-
 
 ```C++
 enum hrtim_comp_usage_t {
@@ -302,6 +307,7 @@ comparator usage for a timing unit
 
 ### enum hrtim\_external\_trigger\_t 
 
+_External eventcoming from comparator used for current mode._ 
 ```C++
 enum hrtim_external_trigger_t {
     EEV1 = LL_HRTIM_OUTPUTRESET_EEV_1,
@@ -325,6 +331,7 @@ enum hrtim_external_trigger_t {
 
 ### enum hrtim\_gpio\_clock\_number\_t 
 
+_HRTIM gpio clock units definition._ 
 ```C++
 enum hrtim_gpio_clock_number_t {
     CLK_GPIOA = LL_AHB2_GRP1_PERIPH_GPIOA,
@@ -342,6 +349,7 @@ enum hrtim_gpio_clock_number_t {
 
 ### enum hrtim\_out\_t 
 
+_timing unit output 1 or 2_ 
 ```C++
 enum hrtim_out_t {
     OUT1 = 1,
@@ -374,6 +382,7 @@ enum hrtim_output_number_t {
 
 ### enum hrtim\_output\_reset\_t 
 
+_HRTIM output reset units definition._ 
 ```C++
 enum hrtim_output_reset_t {
     RST_NONE = LL_HRTIM_OUTPUTRESET_NONE,
@@ -394,6 +403,7 @@ enum hrtim_output_reset_t {
 
 ### enum hrtim\_output\_set\_t 
 
+_HRTIM output set units definition._ 
 ```C++
 enum hrtim_output_set_t {
     SET_NONE = LL_HRTIM_OUTPUTSET_NONE,
@@ -414,6 +424,7 @@ enum hrtim_output_set_t {
 
 ### enum hrtim\_output\_units\_t 
 
+_HRTIM output units definition._ 
 ```C++
 enum hrtim_output_units_t {
     PWMA1 = LL_HRTIM_OUTPUT_TA1,
@@ -440,6 +451,7 @@ enum hrtim_output_units_t {
 
 ### enum hrtim\_pwm\_mode\_t 
 
+_Special PWM mode for current mode._ 
 ```C++
 enum hrtim_pwm_mode_t {
     VOLTAGE_MODE = 0,
@@ -456,6 +468,7 @@ enum hrtim_pwm_mode_t {
 
 ### enum hrtim\_reset\_trig\_t 
 
+_HRTIM reset trig source definitions._ 
 ```C++
 enum hrtim_reset_trig_t {
     MSTR_PER = LL_HRTIM_RESETTRIG_MASTER_PER,
@@ -476,6 +489,7 @@ enum hrtim_reset_trig_t {
 
 ### enum hrtim\_switch\_convention\_t 
 
+_HRTIM TU switch convention PWMx1 : control high-side mosfet PWMx2 : control low-side mosfet._ 
 ```C++
 enum hrtim_switch_convention_t {
     PWMx1 = 0,
@@ -492,6 +506,7 @@ enum hrtim_switch_convention_t {
 
 ### enum hrtim\_tu\_ON\_OFF\_t 
 
+_describe if a timing unit has been initialized_ 
 ```C++
 enum hrtim_tu_ON_OFF_t {
     UNIT_ON = true,
@@ -508,6 +523,7 @@ enum hrtim_tu_ON_OFF_t {
 
 ### enum hrtim\_tu\_number\_t 
 
+_HRTIM timing units number definition._ 
 ```C++
 enum hrtim_tu_number_t {
     PWMA = 0,
@@ -528,6 +544,7 @@ enum hrtim_tu_number_t {
 
 ### enum hrtim\_tu\_t 
 
+_HRTIM timing units definition._ 
 ```C++
 enum hrtim_tu_t {
     TIMA = LL_HRTIM_TIMER_A,

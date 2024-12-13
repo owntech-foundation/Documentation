@@ -259,6 +259,7 @@ Background tasks are asynchronous tasks that run in the background when there is
 
 ### function stopCritical 
 
+_Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling_ [_**startCritical()**_](classTaskAPI.md#function-startcritical) _again._
 ```C++
 void TaskAPI::stopCritical () 
 ```

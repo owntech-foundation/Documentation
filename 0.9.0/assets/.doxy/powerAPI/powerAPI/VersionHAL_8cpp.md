@@ -87,7 +87,6 @@
 
 ### variable spin 
 
-
 ```C++
 SpinAPI spin;
 ```

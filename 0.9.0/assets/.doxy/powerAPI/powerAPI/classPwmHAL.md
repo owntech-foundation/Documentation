@@ -115,7 +115,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

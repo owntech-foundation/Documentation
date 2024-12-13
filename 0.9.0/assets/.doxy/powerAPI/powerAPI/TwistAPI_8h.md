@@ -134,7 +134,6 @@ enum twist_version_t {
 
 ### variable twist 
 
-
 ```C++
 TwistAPI twist;
 ```

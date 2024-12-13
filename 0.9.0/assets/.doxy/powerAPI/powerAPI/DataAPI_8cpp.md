@@ -87,7 +87,6 @@
 
 ### variable data 
 
-
 ```C++
 DataAPI data;
 ```

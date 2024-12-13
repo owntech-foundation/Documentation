@@ -160,7 +160,7 @@ See [Controller](classController.md)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 out = Kp \* (error + 1 / Ti \* error / s + 1 / (1 + Td / N \* s) \* Td \* s \* error )
@@ -254,6 +254,7 @@ Implements [*Controller::init*](classController.md#function-init)
 
 ### function reset [1/2]
 
+_reset internal states and the last command of the controller._ 
 ```C++
 virtual void Pid::reset () override
 ```

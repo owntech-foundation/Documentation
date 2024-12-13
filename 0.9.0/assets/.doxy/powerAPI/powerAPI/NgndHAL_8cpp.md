@@ -87,7 +87,6 @@
 
 ### variable ngnd\_switch 
 
-
 ```C++
 const struct device* ngnd_switch;
 ```

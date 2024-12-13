@@ -159,7 +159,7 @@ See [Controller](classController.md)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 It uses 3 [**Fir**](classFir.md) :
@@ -255,6 +255,7 @@ Implements [*Controller::init*](classController.md#function-init)
 
 ### function reset 
 
+_reset internal states and the last command of the controller._ 
 ```C++
 virtual void RST::reset (
     void
