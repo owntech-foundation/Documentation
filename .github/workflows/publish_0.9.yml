@@ -26,7 +26,7 @@ jobs:
           repository: owntech-foundation/bootloader
           ref: docs
           path: docs/bootloader
-          sparse-checkout:
+          sparse-checkout: |
             docs/getting_started.md
             docs/images
 
