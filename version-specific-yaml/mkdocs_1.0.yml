@@ -101,6 +101,8 @@ nav:
             - Use: controlLibrary/docs/use-pll.md
             - API : controlLibrary/classPllSinus.md
             - PllDatas API: controlLibrary/structPllDatas.md
+          - Second Order Generalized Integrator PLL (SOGI PLL):
+            - Use: controlLibrary/docs/use-sogi.md
 
     - MATLAB:
         - Getting started: Matlab/docs/getting_started.md
