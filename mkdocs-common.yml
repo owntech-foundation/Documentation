@@ -69,6 +69,7 @@ theme:
 plugins:
   - search
   - macros
+  - drawio
   - mkdoxy:
       projects:
         powerAPI: # name of project must be alphanumeric + numbers (without spaces)
