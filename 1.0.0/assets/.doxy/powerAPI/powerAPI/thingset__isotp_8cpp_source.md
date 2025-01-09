@@ -14,6 +14,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 #include <zephyr/canbus/isotp.h>
 #include "thingset.h"
 #include "CommunicationAPI.h"

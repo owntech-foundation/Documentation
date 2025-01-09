@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef UARTHAL_H_
 #define UARTHAL_H_
 

@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 // Zephyr
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>

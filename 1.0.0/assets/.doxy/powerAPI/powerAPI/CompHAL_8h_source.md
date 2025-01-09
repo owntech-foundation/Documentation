@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef COMPHAL_H_
 #define COMPHAL_H_
 

@@ -14,6 +14,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 #include "data_objects.h"
 
 #include <zephyr/kernel.h>

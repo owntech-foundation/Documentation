@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef HRTIM_ENUM_H_
 #define HRTIM_ENUM_H_
 

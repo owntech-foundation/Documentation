@@ -27,6 +27,9 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
+
 #ifndef NGNDHAL_H_
 #define NGNDHAL_H_
 

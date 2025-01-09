@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 #ifndef SHIELDAPI_H_
 #define SHIELDAPI_H_
 

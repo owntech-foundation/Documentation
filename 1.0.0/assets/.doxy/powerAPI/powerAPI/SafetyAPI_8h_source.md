@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef SAFETYAPI_H_
 #define SAFETYAPI_H_
 

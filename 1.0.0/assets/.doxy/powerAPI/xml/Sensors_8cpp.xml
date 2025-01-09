@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="Sensors_8cpp" kind="file" language="C++">
     <compoundname>Sensors.cpp</compoundname>
     <briefdescription>
@@ -26,6 +26,9 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stdlib</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
@@ -40,7 +43,7 @@
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="comment">//<sp/>Device-tree<sp/>related<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Device-tree<sp/>related<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
@@ -85,7 +88,7 @@
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Auto-populated<sp/>array<sp/>containing<sp/>available<sp/>sensors</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>extracted<sp/>from<sp/>the<sp/>device<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
@@ -114,7 +117,7 @@
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="comment">//<sp/>Public<sp/>functions<sp/>accessible<sp/>only<sp/>when<sp/>using<sp/>a<sp/>power<sp/>shield</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>functions<sp/>accessible<sp/>only<sp/>when<sp/>using<sp/>a<sp/>power<sp/>shield</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal">int8_t<sp/><ref refid="classSensorsAPI_1a1c6ba0632fafc3f1bce2ee7070f314e2" kindref="member">SensorsAPI::enableSensor</ref>(sensor_t<sp/>sensor_name,<sp/>adc_t<sp/>adc_num)</highlight></codeline>
@@ -148,43 +151,43 @@
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>enabled_sensors[sensor_index]<sp/>=<sp/>sensor_prop;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataAPI::enableChannel(sensor_info.adc_num,<sp/>sensor_info.channel_num);</highlight></codeline>
 <codeline lineno="157"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal">uint16_t*<sp/><ref refid="classSensorsAPI_1a9d1d137a205c370cc1e292877f622b41" kindref="member">SensorsAPI::getRawValues</ref>(sensor_t<sp/>sensor_name,<sp/>uint32_t&amp;<sp/>number_of_values_acquired)</highlight></codeline>
 <codeline lineno="160"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataAPI::getChannelRawValues(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>number_of_values_acquired);</highlight></codeline>
 <codeline lineno="163"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
 <codeline lineno="165"><highlight class="normal">float32_t*<sp/><ref refid="classSensorsAPI_1a31cc6ec96dd47c5e8a1027ee0cbc9183" kindref="member">SensorsAPI::getValues</ref>(sensor_t<sp/>sensor_name,<sp/>uint32_t&amp;<sp/>number_of_values_acquired)</highlight></codeline>
 <codeline lineno="166"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataAPI::getChannelValues(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>number_of_values_acquired);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
 <codeline lineno="171"><highlight class="normal">float32_t<sp/><ref refid="classSensorsAPI_1a52ef4b1aa39fedd739705d0189209e3f" kindref="member">SensorsAPI::peekLatestValue</ref>(sensor_t<sp/>sensor_name)</highlight></codeline>
 <codeline lineno="172"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataAPI::peekChannel(sensor_info.adc_num,<sp/>sensor_info.channel_num);</highlight></codeline>
 <codeline lineno="175"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>
 <codeline lineno="177"><highlight class="normal">float32_t<sp/><ref refid="classSensorsAPI_1a554e0e3b5fc76658e0ec064bd2623a67" kindref="member">SensorsAPI::getLatestValue</ref>(sensor_t<sp/>sensor_name,<sp/>uint8_t*<sp/>dataValid)</highlight></codeline>
 <codeline lineno="178"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataAPI::getChannelLatest(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>dataValid);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight></codeline>
 <codeline lineno="183"><highlight class="normal">float32_t<sp/><ref refid="classSensorsAPI_1a0e2e7c54b3134595cff62f4f10d9dd0f" kindref="member">SensorsAPI::convertRawValue</ref>(sensor_t<sp/>sensor_name,<sp/>uint16_t<sp/>raw_value)</highlight></codeline>
 <codeline lineno="184"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_conversion_convert_raw_value(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>raw_value);</highlight></codeline>
 <codeline lineno="187"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"></highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensorsAPI_1a5b553e786e125505a3d6935923eb8934" kindref="member">SensorsAPI::setConversionParametersLinear</ref>(sensor_t<sp/>sensor_name,<sp/>float32_t<sp/>gain,<sp/>float32_t<sp/>offset)</highlight></codeline>
 <codeline lineno="190"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_type_t<sp/>sensor_conv_type<sp/>=<sp/><ref refid="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" kindref="member">retrieveStoredConversionType</ref>(sensor_name);<sp/></highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verifies<sp/>the<sp/>conversion<sp/>is<sp/>of<sp/>type<sp/>linear<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -197,7 +200,7 @@
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensorsAPI_1acde5b18e9628754b4aa1f40d1f9e481f" kindref="member">SensorsAPI::setConversionParametersNtcThermistor</ref>(sensor_t<sp/>sensor_name,<sp/>float32_t<sp/>r0,<sp/>float32_t<sp/>b,<sp/>float32_t<sp/>rdiv,<sp/>float32_t<sp/>t0)</highlight></codeline>
 <codeline lineno="203"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);<sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);<sp/><sp/></highlight></codeline>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_type_t<sp/>sensor_conv_type<sp/>=<sp/><ref refid="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" kindref="member">retrieveStoredConversionType</ref>(sensor_name);<sp/></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sensor_conv_type<sp/>==<sp/>conversion_therm){</highlight></codeline>
@@ -210,25 +213,25 @@
 <codeline lineno="214"><highlight class="normal"></highlight></codeline>
 <codeline lineno="215"><highlight class="normal">float32_t<sp/><ref refid="classSensorsAPI_1a332d4356c33eb67e7ad70bbceefb4372" kindref="member">SensorsAPI::retrieveStoredParameterValue</ref>(sensor_t<sp/>sensor_name,<sp/>parameter_t<sp/>parameter_name)</highlight></codeline>
 <codeline lineno="216"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_conversion_get_parameter(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>parameter_name);</highlight></codeline>
 <codeline lineno="219"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
 <codeline lineno="221"><highlight class="normal">conversion_type_t<sp/><ref refid="classSensorsAPI_1aca167a3cd9d295caf786d0b9a53ecb3d" kindref="member">SensorsAPI::retrieveStoredConversionType</ref>(sensor_t<sp/>sensor_name)</highlight></codeline>
 <codeline lineno="222"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_conversion_get_conversion_type(sensor_info.adc_num,<sp/>sensor_info.channel_num);</highlight></codeline>
 <codeline lineno="225"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"></highlight></codeline>
 <codeline lineno="227"><highlight class="normal">int8_t<sp/><ref refid="classSensorsAPI_1a6f2d78e501b02ada4ac3f2788bf475ca" kindref="member">SensorsAPI::retrieveParametersFromMemory</ref>(sensor_t<sp/>sensor_name)</highlight></codeline>
 <codeline lineno="228"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_conversion_retrieve_channel_parameters_from_nvs(sensor_info.adc_num,<sp/>sensor_info.channel_num);</highlight></codeline>
 <codeline lineno="231"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight></codeline>
 <codeline lineno="233"><highlight class="normal">int8_t<sp/><ref refid="classSensorsAPI_1af635b05026bef4d4db643fb1249c6974" kindref="member">SensorsAPI::storeParametersInMemory</ref>(sensor_t<sp/>sensor_name)</highlight></codeline>
 <codeline lineno="234"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(sensor_name);</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_conversion_store_channel_parameters_in_nvs(sensor_info.adc_num,<sp/>sensor_info.channel_num);</highlight></codeline>
 <codeline lineno="237"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight></codeline>
@@ -383,7 +386,7 @@
 <codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>t0[1]<sp/><sp/><sp/>=<sp/>getCalibrationCoefficients(</highlight><highlight class="stringliteral">&quot;Temp2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;t0&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="388"><highlight class="normal"></highlight></codeline>
 <codeline lineno="389"><highlight class="normal"></highlight></codeline>
-<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(V_HIGH);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info_t<sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(V_HIGH);</highlight></codeline>
 <codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>data_conversion_set_conversion_parameters_linear(sensor_info.adc_num,<sp/>sensor_info.channel_num,<sp/>gains[0],<sp/>offsets[0]);</highlight></codeline>
 <codeline lineno="392"><highlight class="normal"></highlight></codeline>
 <codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_info<sp/>=<sp/>getEnabledSensorInfo(V1_LOW);</highlight></codeline>
@@ -472,11 +475,11 @@
 <codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_dt_data_t*<sp/>sensor_prop<sp/>=<sp/>enabled_sensors[sensor_index];</highlight></codeline>
 <codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sensor_prop<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref>((adc_t)sensor_prop-&gt;adc_number,<sp/>sensor_prop-&gt;channel_number,<sp/>sensor_prop-&gt;pin_number);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sensor_info_t((adc_t)sensor_prop-&gt;adc_number,<sp/>sensor_prop-&gt;channel_number,<sp/>sensor_prop-&gt;pin_number);</highlight></codeline>
 <codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsensor__info__t" kindref="compound">sensor_info_t</ref>(DEFAULT_ADC,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sensor_info_t(DEFAULT_ADC,<sp/>0,<sp/>0);</highlight></codeline>
 <codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="485"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="486"><highlight class="normal"></highlight></codeline>

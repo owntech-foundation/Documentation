@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="dir_47b8019f52d29447200a9fe029247d2f" kind="dir">
     <compoundname>docs/core/zephyr/modules/owntech_flash_driver</compoundname>
     <innerdir refid="dir_b20d16dae1dc20106d56014478318b72">docs/core/zephyr/modules/owntech_flash_driver/zephyr</innerdir>

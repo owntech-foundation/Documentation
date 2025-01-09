@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef COMPARATOR_H_
 #define COMPARATOR_H_
 

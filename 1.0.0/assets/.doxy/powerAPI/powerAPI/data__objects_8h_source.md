@@ -14,8 +14,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 #ifndef DATA_OBJECTS_H_
 #define DATA_OBJECTS_H_
+
 
 #include <stdint.h>
 #include <string.h>

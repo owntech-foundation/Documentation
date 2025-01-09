@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef POWER_INIT_H_
 #define POWER_INIT_H_
 

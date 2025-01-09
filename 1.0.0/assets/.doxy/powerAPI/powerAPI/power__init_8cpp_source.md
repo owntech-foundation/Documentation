@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #include "power_init.h"
 
 uint32_t timer_frequency = DT_PROP(POWER_SHIELD_ID, default_frequency);

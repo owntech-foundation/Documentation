@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 #ifndef NGND_H_
 #define NGND_H_
 

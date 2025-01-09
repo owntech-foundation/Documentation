@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 // STM 32 LL
 #include <stm32_ll_lpuart.h>
 

@@ -37,7 +37,7 @@ class Controller
 {
     public:
     virtual int8_t init(params_T parameters) = 0; //ref + mesure
-
+ 
     virtual void reset(void) = 0;
 
     virtual void calculate(void) = 0; 

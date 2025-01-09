@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef COMMUNICATIONAPI_H
 #define COMMUNICATIONAPI_H
 

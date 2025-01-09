@@ -27,6 +27,9 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
+
 #ifndef LEDHAL_H_
 #define LEDHAL_H_
 

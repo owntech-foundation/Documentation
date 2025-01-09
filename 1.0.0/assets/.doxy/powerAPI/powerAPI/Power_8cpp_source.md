@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #include "power_init.h"
 #include "Power.h"
 #include "SpinAPI.h"
@@ -95,7 +96,7 @@ void PowerAPI::initMode(leg_t leg,                                             \
         /* Configure ADC rollover in center aligned mode */
         spin.pwm.setAdcEdgeTrigger(spinNumberToTu(dt_pwm_pin[i]),              \
                                 dt_edge_trigger[i]);
-
+         
         if (leg_mode == CURRENT_MODE)
         {
             if (dt_current_pin[i] == CM_DAC3)

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="rst_8h" kind="file" language="C++">
     <compoundname>rst.h</compoundname>
     <includes refid="controller_8h" local="yes">controller.h</includes>
@@ -78,9 +78,9 @@
 <codeline lineno="62"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="classRST" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRST" kindref="compound">RST</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classController" kindref="compound">Controller</ref>&lt;float32_t,<sp/>float32_t,<sp/>float32_t,<sp/>RstParams&gt;<sp/>{</highlight></codeline>
+<codeline lineno="80" refid="classRST" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RST:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classController" kindref="compound">Controller</ref>&lt;float32_t,<sp/>float32_t,<sp/>float32_t,<sp/>RstParams&gt;<sp/>{</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRST" kindref="compound">RST</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>RST()<sp/>{};</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90" refid="classRST_1a3f5c93c0d833d1a4d81c3ad467d5a8ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classRST_1a3f5c93c0d833d1a4d81c3ad467d5a8ec" kindref="member">init</ref>(<ref refid="structRstParams" kindref="compound">RstParams</ref><sp/>p)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>

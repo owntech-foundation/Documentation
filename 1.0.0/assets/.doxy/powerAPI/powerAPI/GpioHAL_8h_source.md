@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef GPIOHAL_H_
 #define GPIOHAL_H_
 

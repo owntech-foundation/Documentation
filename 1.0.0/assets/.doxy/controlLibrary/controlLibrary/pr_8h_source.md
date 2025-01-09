@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGLPV2.1
  */
 
+
 #include "controller.h"
 #include "fir.h"
 
@@ -48,6 +49,7 @@ public:
     int8_t init(PrParams p);
 
     void calculate(void);
+
 
     void reset(void);
 

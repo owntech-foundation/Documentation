@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -3966,69 +3966,70 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cm"> * SPDX-License-Identifier: LGPL-2.1</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cm"> */</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="cp">#ifndef POWER_H_</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="cp">#define POWER_H_</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;zephyr/kernel.h&gt;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;arm_math.h&quot;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hrtim_enum.h&quot;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="cp">#define LEG_TOKEN(node_id) DT_STRING_TOKEN(node_id, leg_name),</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cm">/* All the leg with okay status in the device tree */</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">{</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="n">DT_FOREACH_CHILD_STATUS_OKAY</span><span class="p">(</span><span class="n">DT_NODELABEL</span><span class="p">(</span><span class="n">powershield</span><span class="p">),</span><span class="w"> </span><span class="n">LEG_TOKEN</span><span class="p">)</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">ALL</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="p">}</span><span class="w"> </span><span class="n">leg_t</span><span class="p">;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="k">class</span><span class="w"> </span><span class="nc">PowerAPI</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">{</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="cm">/* return timing unit from spin pin number */</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">spinNumberToTu</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">spin_number</span><span class="p">);</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">initMode</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                            </span>\
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">                     </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">leg_convention</span><span class="p">,</span><span class="w">              </span>\
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">                     </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="p">);</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDutyCycle</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_leg</span><span class="p">);</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="cp">#ifndef POWER_H_</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="cp">#define POWER_H_</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;zephyr/kernel.h&gt;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;arm_math.h&quot;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hrtim_enum.h&quot;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cp">#define LEG_TOKEN(node_id) DT_STRING_TOKEN(node_id, leg_name),</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="cm">/* All the leg with okay status in the device tree */</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">{</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">DT_FOREACH_CHILD_STATUS_OKAY</span><span class="p">(</span><span class="n">DT_NODELABEL</span><span class="p">(</span><span class="n">powershield</span><span class="p">),</span><span class="w"> </span><span class="n">LEG_TOKEN</span><span class="p">)</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="n">ALL</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="p">}</span><span class="w"> </span><span class="n">leg_t</span><span class="p">;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">class</span><span class="w"> </span><span class="nc">PowerAPI</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="p">{</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="cm">/* return timing unit from spin pin number */</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">spinNumberToTu</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">spin_number</span><span class="p">);</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">initMode</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                            </span>\
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">                     </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">leg_convention</span><span class="p">,</span><span class="w">              </span>\
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">                     </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="p">);</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDutyCycle</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_leg</span><span class="p">);</span>
 <a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectCapacitor</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnectCapacitor</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
-<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectDriver</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnectDriver</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
-<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setTriggerValue</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trigger_value</span><span class="p">);</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>
-<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPhaseShift</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">phase_shift</span><span class="p">);</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
-<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSlopeCompensation</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                </span>\
-<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">                                 </span><span class="n">float32_t</span><span class="w"> </span><span class="n">set_voltage</span><span class="p">,</span><span class="w">                     </span>\
-<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">                                 </span><span class="n">float32_t</span><span class="w"> </span><span class="n">reset_voltage</span><span class="p">);</span>
-<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>
-<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDeadTime</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                             </span>\
-<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">                        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_rising_dt</span><span class="p">,</span><span class="w">                              </span>\
-<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">                        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_falling_dt</span><span class="p">);</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>
-<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAdcDecim</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">adc_decim</span><span class="p">);</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
-<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initBuck</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOLTAGE_MODE</span><span class="p">);</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
-<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initBoost</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>
-<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="p">};</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>
-<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="cp">#endif </span><span class="c1">// POWER_H_</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectCapacitor</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnectCapacitor</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectDriver</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">disconnectDriver</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setTriggerValue</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trigger_value</span><span class="p">);</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPhaseShift</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">phase_shift</span><span class="p">);</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSlopeCompensation</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                </span>\
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">                                 </span><span class="n">float32_t</span><span class="w"> </span><span class="n">set_voltage</span><span class="p">,</span><span class="w">                     </span>\
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">                                 </span><span class="n">float32_t</span><span class="w"> </span><span class="n">reset_voltage</span><span class="p">);</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDeadTime</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w">                                             </span>\
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">                        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_rising_dt</span><span class="p">,</span><span class="w">                              </span>\
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">                        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_falling_dt</span><span class="p">);</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAdcDecim</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">adc_decim</span><span class="p">);</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initBuck</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOLTAGE_MODE</span><span class="p">);</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initBoost</span><span class="p">(</span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">);</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="p">};</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="cp">#endif </span><span class="c1">// POWER_H_</span>
 </code></pre></div>
 
 
@@ -4184,7 +4185,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

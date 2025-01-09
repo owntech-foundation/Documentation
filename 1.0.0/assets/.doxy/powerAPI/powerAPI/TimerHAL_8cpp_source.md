@@ -27,6 +27,9 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
+
 // Current file header
 #include "TimerHAL.h"
 

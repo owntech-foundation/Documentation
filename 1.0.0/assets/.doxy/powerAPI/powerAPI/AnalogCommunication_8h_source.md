@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef ANALOGCOMMUNICATION_H_
 #define ANALOGCOMMUNICATION_H_
 
