@@ -31,6 +31,17 @@ jobs:
             docs/images/*
           sparse-checkout-cone-mode: false
 
+      - name: Checkout OwnTech Twist repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/twist
+          ref: docs
+          path: docs/twist
+          sparse-checkout: |
+            docs/getting_started_V1.4.1.md
+            docs/getting_started_V1.3.md
+          sparse-checkout-cone-mode: false
+
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
         with:
