@@ -14,10 +14,12 @@ document$.subscribe(function() {
             console.log(`callback triggered version changed to ${versionDropdown.value}`);
             var selectedVersion = versionDropdown.value;
 
-            if (currentPath.endsWith('/')) {
-                currentPath = currentPath.slice(0, -1);
+            var pathString = window.location.pathname;
+            if (pathString.endsWith('/')) {
+                pathString = pathString.slice(0, -1);
             }
 
+            currentPath = pathString.split('/');
             currentPath.pop(); // Remove the current file
             currentPath.push(selectedVersion);
 
