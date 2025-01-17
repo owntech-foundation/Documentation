@@ -1,6 +1,3 @@
-To ensure that the version-select dropdown reflects the current version from the URL, you can update the dropdown's value based on the last segment of the URL path when the page loads. Here's how you can modify the script:
-Updated Code:
-
 document$.subscribe(function() {
 
     var versionDropdown = document.getElementById('version-select');
