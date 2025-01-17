@@ -4123,9 +4123,44 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
+                  <!--
+  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
 
 
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+
+
+<!-- Version Selector (Conditional) -->
+
+
+<!-- Page content -->
 <h1 id="closed-loop-buck">Closed loop buck</h1>
 <p>After the open-loop mode, the aim of this tutorial is to show you how you can implement a buck voltage control using simulink and owntech library.</p>
 <p>You can delete all the data store variable related to the duty_cycle that we have created in the open loop section. Enter inside the block closed_loop_task, and with the association of the block “constant”, “sum” and “discrete PID controller” from the simulink library, <code>set leg duty</code> and <code>get data</code> from owntech library you can create the following schema :</p>
@@ -4138,6 +4173,7 @@
 <p><img alt="ownplot_setting" src="../Images/ownplot_setting.PNG" /></p>
 <p>When enabling the matlab_mode, the output voltage will be fixed to 15V.</p>
 
+<!-- Source file information -->
 
 
 
@@ -4145,11 +4181,16 @@
 
 
 
+
+
+<!-- Was this page helpful? -->
 
   
 
 
 
+
+<!-- Comment system -->
 
                 
               </article>
