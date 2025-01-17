@@ -103,7 +103,10 @@ nav:
             - PllDatas API: controlLibrary/structPllDatas.md
           - Second Order Generalized Integrator PLL (SOGI PLL):
             - Use: controlLibrary/docs/use-sogi.md
-
+            
+    - Hardware:
+        - TWIST: twist/docs/getting_started_V1_4_1.md
+        
     - MATLAB:
         - Getting started: Matlab/docs/getting_started.md
         - First compilation: Matlab/docs/first_compilation_with_matlab.md
