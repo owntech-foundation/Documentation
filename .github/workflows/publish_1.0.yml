@@ -40,6 +40,7 @@ jobs:
           sparse-checkout: |
             docs/getting_started_V1_4_1.md
             docs/getting_started_V1_3.md
+            docs/getting_started_V1_2.md
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech Control library repo
