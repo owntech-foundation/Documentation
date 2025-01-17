@@ -58,26 +58,26 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**P0**](#variable-p0)   = = 0x0<br> |
-|  const uint8\_t | [**P1**](#variable-p1)   = = 0x1<br> |
-|  const uint8\_t | [**P10**](#variable-p10)   = = 0xA<br> |
-|  const uint8\_t | [**P11**](#variable-p11)   = = 0xB<br> |
-|  const uint8\_t | [**P12**](#variable-p12)   = = 0xC<br> |
-|  const uint8\_t | [**P13**](#variable-p13)   = = 0xD<br> |
-|  const uint8\_t | [**P14**](#variable-p14)   = = 0xE<br> |
-|  const uint8\_t | [**P15**](#variable-p15)   = = 0xF<br> |
-|  const uint8\_t | [**P2**](#variable-p2)   = = 0x2<br> |
-|  const uint8\_t | [**P3**](#variable-p3)   = = 0x3<br> |
-|  const uint8\_t | [**P4**](#variable-p4)   = = 0x4<br> |
-|  const uint8\_t | [**P5**](#variable-p5)   = = 0x5<br> |
-|  const uint8\_t | [**P6**](#variable-p6)   = = 0x6<br> |
-|  const uint8\_t | [**P7**](#variable-p7)   = = 0x7<br> |
-|  const uint8\_t | [**P8**](#variable-p8)   = = 0x8<br> |
-|  const uint8\_t | [**P9**](#variable-p9)   = = 0x9<br> |
-|  const uint8\_t | [**PA**](#variable-pa)   = = 0x80 \| 0x00<br> |
-|  const uint8\_t | [**PB**](#variable-pb)   = = 0x80 \| 0x10<br> |
-|  const uint8\_t | [**PC**](#variable-pc)   = = 0x80 \| 0x20<br> |
-|  const uint8\_t | [**PD**](#variable-pd)   = = 0x80 \| 0x30<br> |
+|  const uint8\_t | [**P0**](#variable-p0)   = `0x0`<br> |
+|  const uint8\_t | [**P1**](#variable-p1)   = `0x1`<br> |
+|  const uint8\_t | [**P10**](#variable-p10)   = `0xA`<br> |
+|  const uint8\_t | [**P11**](#variable-p11)   = `0xB`<br> |
+|  const uint8\_t | [**P12**](#variable-p12)   = `0xC`<br> |
+|  const uint8\_t | [**P13**](#variable-p13)   = `0xD`<br> |
+|  const uint8\_t | [**P14**](#variable-p14)   = `0xE`<br> |
+|  const uint8\_t | [**P15**](#variable-p15)   = `0xF`<br> |
+|  const uint8\_t | [**P2**](#variable-p2)   = `0x2`<br> |
+|  const uint8\_t | [**P3**](#variable-p3)   = `0x3`<br> |
+|  const uint8\_t | [**P4**](#variable-p4)   = `0x4`<br> |
+|  const uint8\_t | [**P5**](#variable-p5)   = `0x5`<br> |
+|  const uint8\_t | [**P6**](#variable-p6)   = `0x6`<br> |
+|  const uint8\_t | [**P7**](#variable-p7)   = `0x7`<br> |
+|  const uint8\_t | [**P8**](#variable-p8)   = `0x8`<br> |
+|  const uint8\_t | [**P9**](#variable-p9)   = `0x9`<br> |
+|  const uint8\_t | [**PA**](#variable-pa)   = `0x80 \| 0x00`<br> |
+|  const uint8\_t | [**PB**](#variable-pb)   = `0x80 \| 0x10`<br> |
+|  const uint8\_t | [**PC**](#variable-pc)   = `0x80 \| 0x20`<br> |
+|  const uint8\_t | [**PD**](#variable-pd)   = `0x80 \| 0x30`<br> |
 
 
 

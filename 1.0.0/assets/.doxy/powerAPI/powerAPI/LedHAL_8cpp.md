@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  struct gpio\_dt\_spec | [**led\_pin\_spec**](#variable-led_pin_spec)   = = GPIO\_DT\_SPEC\_GET(DT\_ALIAS(led0), gpios)<br> |
+|  struct gpio\_dt\_spec | [**led\_pin\_spec**](#variable-led_pin_spec)   = `GPIO\_DT\_SPEC\_GET(DT\_ALIAS(led0), gpios)`<br> |
 
 
 

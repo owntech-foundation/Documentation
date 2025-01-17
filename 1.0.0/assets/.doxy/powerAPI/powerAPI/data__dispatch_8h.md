@@ -40,8 +40,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**CHANNELS\_BUFFERS\_SIZE**](#variable-channels_buffers_size)   = = 32<br> |
-|  const uint16\_t | [**PEEK\_NO\_VALUE**](#variable-peek_no_value)   = = 0xFFFF<br> |
+|  const uint8\_t | [**CHANNELS\_BUFFERS\_SIZE**](#variable-channels_buffers_size)   = `32`<br> |
+|  const uint16\_t | [**PEEK\_NO\_VALUE**](#variable-peek_no_value)   = `0xFFFF`<br> |
 
 
 

@@ -35,37 +35,22 @@
 
 | Type | Name |
 | ---: | :--- |
-|  hrtim\_adc\_trigger\_t | [**dt\_adc**](#variable-dt_adc)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_ADC)}<br> |
-|  uint32\_t | [**dt\_adc\_decim**](#variable-dt_adc_decim)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_ADC\_DECIM)}<br> |
-|  uint16\_t | [**dt\_current\_pin**](#variable-dt_current_pin)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_CURRENT\_PIN)}<br> |
-|  hrtim\_adc\_edgetrigger\_t | [**dt\_edge\_trigger**](#variable-dt_edge_trigger)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_EDGE\_TRIGGER)}<br> |
-|  uint16\_t | [**dt\_falling\_deadtime**](#variable-dt_falling_deadtime)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_FALLING\_DT)}<br> |
-|  uint8\_t | [**dt\_leg\_count**](#variable-dt_leg_count)   = =
-    DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_COUNTER)<br> |
-|  hrtim\_cnt\_t | [**dt\_modulation**](#variable-dt_modulation)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_MODULATION)}<br> |
-|  uint8\_t | [**dt\_output1\_inactive**](#variable-dt_output1_inactive)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_OUTPUT1)}<br> |
-|  uint8\_t | [**dt\_output2\_inactive**](#variable-dt_output2_inactive)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_OUTPUT2)}<br> |
-|  int16\_t | [**dt\_phase\_shift**](#variable-dt_phase_shift)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_PHASE)}<br> |
-|  uint16\_t | [**dt\_pin\_capacitor**](#variable-dt_pin_capacitor)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_CAPACITOR\_PIN)}<br> |
-|  uint16\_t | [**dt\_pin\_driver**](#variable-dt_pin_driver)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_DRIVER\_PIN)}<br> |
-|  uint16\_t | [**dt\_pwm\_pin**](#variable-dt_pwm_pin)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_PWM\_PIN)}<br> |
-|  uint16\_t | [**dt\_pwm\_x1\_high**](#variable-dt_pwm_x1_high)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_PWM\_X1\_HIGH)}<br> |
-|  uint16\_t | [**dt\_rising\_deadtime**](#variable-dt_rising_deadtime)   = =
-    {DT\_FOREACH\_CHILD\_STATUS\_OKAY(POWER\_SHIELD\_ID, LEG\_RISING\_DT)}<br> |
-|  uint32\_t | [**timer\_frequency**](#variable-timer_frequency)   = = DT\_PROP(POWER\_SHIELD\_ID, default\_frequency)<br> |
+|  hrtim\_adc\_trigger\_t | [**dt\_adc**](#variable-dt_adc)   = `/* multi line expression */`<br> |
+|  uint32\_t | [**dt\_adc\_decim**](#variable-dt_adc_decim)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_current\_pin**](#variable-dt_current_pin)   = `/* multi line expression */`<br> |
+|  hrtim\_adc\_edgetrigger\_t | [**dt\_edge\_trigger**](#variable-dt_edge_trigger)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_falling\_deadtime**](#variable-dt_falling_deadtime)   = `/* multi line expression */`<br> |
+|  uint8\_t | [**dt\_leg\_count**](#variable-dt_leg_count)   = `/* multi line expression */`<br> |
+|  hrtim\_cnt\_t | [**dt\_modulation**](#variable-dt_modulation)   = `/* multi line expression */`<br> |
+|  uint8\_t | [**dt\_output1\_inactive**](#variable-dt_output1_inactive)   = `/* multi line expression */`<br> |
+|  uint8\_t | [**dt\_output2\_inactive**](#variable-dt_output2_inactive)   = `/* multi line expression */`<br> |
+|  int16\_t | [**dt\_phase\_shift**](#variable-dt_phase_shift)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_pin\_capacitor**](#variable-dt_pin_capacitor)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_pin\_driver**](#variable-dt_pin_driver)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_pwm\_pin**](#variable-dt_pwm_pin)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_pwm\_x1\_high**](#variable-dt_pwm_x1_high)   = `/* multi line expression */`<br> |
+|  uint16\_t | [**dt\_rising\_deadtime**](#variable-dt_rising_deadtime)   = `/* multi line expression */`<br> |
+|  uint32\_t | [**timer\_frequency**](#variable-timer_frequency)   = `DT\_PROP(POWER\_SHIELD\_ID, default\_frequency)`<br> |
 
 
 

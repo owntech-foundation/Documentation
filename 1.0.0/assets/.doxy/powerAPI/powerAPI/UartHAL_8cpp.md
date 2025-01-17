@@ -38,8 +38,8 @@
 | Type | Name |
 | ---: | :--- |
 |  char | [**buf\_req**](#variable-buf_req)  <br> |
-|  bool | [**command\_flag**](#variable-command_flag)   = = false<br> |
-|  const struct device \* | [**uart\_dev**](#variable-uart_dev)   = = DEVICE\_DT\_GET(DT\_NODELABEL(usart1))<br> |
+|  bool | [**command\_flag**](#variable-command_flag)   = `false`<br> |
+|  const struct device \* | [**uart\_dev**](#variable-uart_dev)   = `DEVICE\_DT\_GET(DT\_NODELABEL(usart1))`<br> |
 
 
 

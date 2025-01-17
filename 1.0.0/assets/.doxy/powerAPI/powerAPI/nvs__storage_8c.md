@@ -37,14 +37,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint16\_t | [**current\_storage\_version**](#variable-current_storage_version)   = = 0x0001<br> |
-|  struct nvs\_fs | [**fs**](#variable-fs)   = =
-{
-	.offset       = FIXED\_PARTITION\_OFFSET(NVS\_PARTITION),
-	.flash\_device = FIXED\_PARTITION\_DEVICE(NVS\_PARTITION)
-}<br> |
-|  bool | [**initialized**](#variable-initialized)   = = false<br> |
-|  uint16\_t | [**storage\_version\_in\_nvs**](#variable-storage_version_in_nvs)   = = 0<br> |
+|  const uint16\_t | [**current\_storage\_version**](#variable-current_storage_version)   = `0x0001`<br> |
+|  struct nvs\_fs | [**fs**](#variable-fs)   = `/* multi line expression */`<br> |
+|  bool | [**initialized**](#variable-initialized)   = `false`<br> |
+|  uint16\_t | [**storage\_version\_in\_nvs**](#variable-storage_version_in_nvs)   = `0`<br> |
 
 
 

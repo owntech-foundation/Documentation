@@ -45,8 +45,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const float32\_t | [**SQRT3\_DIV\_2**](#variable-sqrt3_div_2)   = = 0.8660254F<br> |
-|  const float32\_t | [**SQRT3\_INVERSE**](#variable-sqrt3_inverse)   = = 0.57735026F<br> |
+|  const float32\_t | [**SQRT3\_DIV\_2**](#variable-sqrt3_div_2)   = `0.8660254F`<br> |
+|  const float32\_t | [**SQRT3\_INVERSE**](#variable-sqrt3_inverse)   = `0.57735026F`<br> |
 
 
 

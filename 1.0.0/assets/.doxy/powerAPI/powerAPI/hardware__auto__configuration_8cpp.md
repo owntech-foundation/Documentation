@@ -37,8 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**cdc\_acm\_console**](#variable-cdc_acm_console)   = = DEVICE\_DT\_GET(CDC\_ACM\_DEVICE)<br> |
-|  const struct device \* | [**dac2**](#variable-dac2)   = = DEVICE\_DT\_GET(DAC2\_DEVICE)<br>_This file automatically performs some hardware configuration using Zephyr macros. Configuration done in this file is low-level peripheral configuration required for OwnTech board to operate, do not mess with it unless you are absolutely sure of what you're doing. This file does not contain any public function._  |
+|  const struct device \* | [**cdc\_acm\_console**](#variable-cdc_acm_console)   = `DEVICE\_DT\_GET(CDC\_ACM\_DEVICE)`<br> |
+|  const struct device \* | [**dac2**](#variable-dac2)   = `DEVICE\_DT\_GET(DAC2\_DEVICE)`<br>_This file automatically performs some hardware configuration using Zephyr macros. Configuration done in this file is low-level peripheral configuration required for OwnTech board to operate, do not mess with it unless you are absolutely sure of what you're doing. This file does not contain any public function._  |
 
 
 

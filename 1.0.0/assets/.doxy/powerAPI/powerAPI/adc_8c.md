@@ -37,11 +37,11 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint32\_t | [**adc\_discontinuous\_mode**](#variable-adc_discontinuous_mode)   = = {0}<br> |
-|  adc\_ev\_src\_t | [**adc\_trigger\_sources**](#variable-adc_trigger_sources)   = = {0}<br> |
-|  bool | [**enable\_dma**](#variable-enable_dma)   = = {0}<br> |
-|  uint32\_t | [**enabled\_channels**](#variable-enabled_channels)   = = {0}<br> |
-|  uint32\_t | [**enabled\_channels\_count**](#variable-enabled_channels_count)   = = {0}<br> |
+|  uint32\_t | [**adc\_discontinuous\_mode**](#variable-adc_discontinuous_mode)   = `{0}`<br> |
+|  adc\_ev\_src\_t | [**adc\_trigger\_sources**](#variable-adc_trigger_sources)   = `{0}`<br> |
+|  bool | [**enable\_dma**](#variable-enable_dma)   = `{0}`<br> |
+|  uint32\_t | [**enabled\_channels**](#variable-enabled_channels)   = `{0}`<br> |
+|  uint32\_t | [**enabled\_channels\_count**](#variable-enabled_channels_count)   = `{0}`<br> |
 
 
 

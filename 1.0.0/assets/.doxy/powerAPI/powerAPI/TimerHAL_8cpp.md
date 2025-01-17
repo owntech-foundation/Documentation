@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**timer4**](#variable-timer4)   = = DEVICE\_DT\_GET(TIMER4\_DEVICE)<br> |
+|  const struct device \* | [**timer4**](#variable-timer4)   = `DEVICE\_DT\_GET(TIMER4\_DEVICE)`<br> |
 
 
 

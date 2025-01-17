@@ -42,25 +42,11 @@
 
 | Type | Name |
 | ---: | :--- |
-|  size\_t | [**buffers\_sizes**](#variable-buffers_sizes)   = = {0}<br> |
-|  const struct device \* | [**dma1**](#variable-dma1)   = = DEVICE\_DT\_GET(DT\_NODELABEL(dma1))<br> |
-|  const uint32\_t | [**source\_registers**](#variable-source_registers)   = =
-{
-	(uint32\_t)(&(ADC1-&gt;DR)),
-	(uint32\_t)(&(ADC2-&gt;DR)),
-	(uint32\_t)(&(ADC3-&gt;DR)),
-	(uint32\_t)(&(ADC4-&gt;DR)),
-	(uint32\_t)(&(ADC5-&gt;DR))
-}<br> |
-|  const uint32\_t | [**source\_triggers**](#variable-source_triggers)   = =
-{
-	LL\_DMAMUX\_REQ\_ADC1,
-	LL\_DMAMUX\_REQ\_ADC2,
-	LL\_DMAMUX\_REQ\_ADC3,
-	LL\_DMAMUX\_REQ\_ADC4,
-	LL\_DMAMUX\_REQ\_ADC5
-}<br> |
-|  [**dma\_user\_data\_t**](structdma__user__data__t.md) | [**user\_data**](#variable-user_data)   = = {0}<br> |
+|  size\_t | [**buffers\_sizes**](#variable-buffers_sizes)   = `{0}`<br> |
+|  const struct device \* | [**dma1**](#variable-dma1)   = `DEVICE\_DT\_GET(DT\_NODELABEL(dma1))`<br> |
+|  const uint32\_t | [**source\_registers**](#variable-source_registers)   = `/* multi line expression */`<br> |
+|  const uint32\_t | [**source\_triggers**](#variable-source_triggers)   = `/* multi line expression */`<br> |
+|  [**dma\_user\_data\_t**](structdma__user__data__t.md) | [**user\_data**](#variable-user_data)   = `{0}`<br> |
 
 
 

@@ -47,19 +47,19 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**DATA\_IS\_MISSING**](#variable-data_is_missing)   = = 2<br> |
-|  const uint8\_t | [**DATA\_IS\_OK**](#variable-data_is_ok)   = = 0<br> |
-|  const uint8\_t | [**DATA\_IS\_OLD**](#variable-data_is_old)   = = 1<br> |
-|  const float32\_t | [**NO\_VALUE**](#variable-no_value)   = = -10000<br> |
+|  const uint8\_t | [**DATA\_IS\_MISSING**](#variable-data_is_missing)   = `2`<br> |
+|  const uint8\_t | [**DATA\_IS\_OK**](#variable-data_is_ok)   = `0`<br> |
+|  const uint8\_t | [**DATA\_IS\_OLD**](#variable-data_is_old)   = `1`<br> |
+|  const float32\_t | [**NO\_VALUE**](#variable-no_value)   = `-10000`<br> |
 
 
 ## Public Static Attributes
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**ADC\_COUNT**](#variable-adc_count)   = = 5<br> |
-|  const uint8\_t | [**CHANNELS\_PER\_ADC**](#variable-channels_per_adc)   = = 19<br> |
-|  const uint8\_t | [**PIN\_COUNT**](#variable-pin_count)   = = 59<br> |
+|  const uint8\_t | [**ADC\_COUNT**](#variable-adc_count)   = `5`<br> |
+|  const uint8\_t | [**CHANNELS\_PER\_ADC**](#variable-channels_per_adc)   = `19`<br> |
+|  const uint8\_t | [**PIN\_COUNT**](#variable-pin_count)   = `59`<br> |
 
 
 

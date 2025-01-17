@@ -35,21 +35,21 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint16\_t | [**can\_node\_addr**](#variable-can_node_addr)   = = 0x60<br> |
-|  bool | [**ctrl\_enable**](#variable-ctrl_enable)   = = false<br> |
-|  char | [**device\_id**](#variable-device_id)   = ="Twist"<br> |
-|  const char | [**device\_type**](#variable-device_type)   = = "Synchronous Buck"<br> |
-|  const char | [**firmware\_version**](#variable-firmware_version)   = = "0.0.1"<br> |
-|  const char | [**hardware\_version**](#variable-hardware_version)   = = "0.9"<br> |
-|  float32\_t | [**i1\_low\_value**](#variable-i1_low_value)   = = 0<br> |
-|  float32\_t | [**i2\_low\_value**](#variable-i2_low_value)   = = 0<br> |
-|  float32\_t | [**i\_high\_value**](#variable-i_high_value)   = = 0<br> |
-|  const char | [**manufacturer**](#variable-manufacturer)   = = "OwnTech"<br> |
-|  float32\_t | [**reference\_value**](#variable-reference_value)   = = 0<br> |
-|  float32\_t | [**temp\_value**](#variable-temp_value)   = = 0<br> |
-|  float32\_t | [**v1\_low\_value**](#variable-v1_low_value)   = = 0<br> |
-|  float32\_t | [**v2\_low\_value**](#variable-v2_low_value)   = = 0<br> |
-|  float32\_t | [**v\_high\_value**](#variable-v_high_value)   = = 0<br> |
+|  uint16\_t | [**can\_node\_addr**](#variable-can_node_addr)   = `0x60`<br> |
+|  bool | [**ctrl\_enable**](#variable-ctrl_enable)   = `false`<br> |
+|  char | [**device\_id**](#variable-device_id)   = `"Twist"`<br> |
+|  const char | [**device\_type**](#variable-device_type)   = `"Synchronous Buck"`<br> |
+|  const char | [**firmware\_version**](#variable-firmware_version)   = `"0.0.1"`<br> |
+|  const char | [**hardware\_version**](#variable-hardware_version)   = `"0.9"`<br> |
+|  float32\_t | [**i1\_low\_value**](#variable-i1_low_value)   = `0`<br> |
+|  float32\_t | [**i2\_low\_value**](#variable-i2_low_value)   = `0`<br> |
+|  float32\_t | [**i\_high\_value**](#variable-i_high_value)   = `0`<br> |
+|  const char | [**manufacturer**](#variable-manufacturer)   = `"OwnTech"`<br> |
+|  float32\_t | [**reference\_value**](#variable-reference_value)   = `0`<br> |
+|  float32\_t | [**temp\_value**](#variable-temp_value)   = `0`<br> |
+|  float32\_t | [**v1\_low\_value**](#variable-v1_low_value)   = `0`<br> |
+|  float32\_t | [**v2\_low\_value**](#variable-v2_low_value)   = `0`<br> |
+|  float32\_t | [**v\_high\_value**](#variable-v_high_value)   = `0`<br> |
 
 
 ## Public Static Attributes

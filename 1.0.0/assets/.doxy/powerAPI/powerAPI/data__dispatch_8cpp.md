@@ -37,16 +37,16 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint16\_t \*\*\*\* | [**adc\_channel\_buffers**](#variable-adc_channel_buffers)   = = nullptr<br> |
-|  uint32\_t \*\* | [**buffers\_data\_count**](#variable-buffers_data_count)   = = nullptr<br> |
-|  uint8\_t \*\* | [**current\_buffer**](#variable-current_buffer)   = = nullptr<br> |
-|  uint8\_t | [**current\_dma\_buffer**](#variable-current_dma_buffer)   = = {0}<br> |
+|  uint16\_t \*\*\*\* | [**adc\_channel\_buffers**](#variable-adc_channel_buffers)   = `nullptr`<br> |
+|  uint32\_t \*\* | [**buffers\_data\_count**](#variable-buffers_data_count)   = `nullptr`<br> |
+|  uint8\_t \*\* | [**current\_buffer**](#variable-current_buffer)   = `nullptr`<br> |
+|  uint8\_t | [**current\_dma\_buffer**](#variable-current_dma_buffer)   = `{0}`<br> |
 |  dispatch\_t | [**dispatch\_type**](#variable-dispatch_type)  <br> |
-|  size\_t | [**dma\_buffer\_sizes**](#variable-dma_buffer_sizes)   = = {0}<br> |
-|  uint16\_t \* | [**dma\_main\_buffers**](#variable-dma_main_buffers)   = = {0}<br> |
-|  uint16\_t \* | [**dma\_secondary\_buffers**](#variable-dma_secondary_buffers)   = = {0}<br> |
-|  uint8\_t \* | [**enabled\_channels\_count**](#variable-enabled_channels_count)   = = nullptr<br> |
-|  uint16\_t \*\* | [**peek\_memory**](#variable-peek_memory)   = = nullptr<br> |
+|  size\_t | [**dma\_buffer\_sizes**](#variable-dma_buffer_sizes)   = `{0}`<br> |
+|  uint16\_t \* | [**dma\_main\_buffers**](#variable-dma_main_buffers)   = `{0}`<br> |
+|  uint16\_t \* | [**dma\_secondary\_buffers**](#variable-dma_secondary_buffers)   = `{0}`<br> |
+|  uint8\_t \* | [**enabled\_channels\_count**](#variable-enabled_channels_count)   = `nullptr`<br> |
+|  uint16\_t \*\* | [**peek\_memory**](#variable-peek_memory)   = `nullptr`<br> |
 
 
 

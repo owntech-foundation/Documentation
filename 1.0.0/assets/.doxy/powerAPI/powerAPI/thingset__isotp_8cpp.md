@@ -36,28 +36,17 @@
 | Type | Name |
 | ---: | :--- |
 |  uint16\_t | [**can\_node\_addr**](#variable-can_node_addr)  <br> |
-|  const struct isotp\_fc\_opts | [**fc\_opts**](#variable-fc_opts)   = = {
-    .bs = 8,                
-    .stmin = 1              
-}<br> |
-|  struct isotp\_msg\_id | [**rx\_addr**](#variable-rx_addr)   = = {
-    .id\_type = CAN\_EXTENDED\_IDENTIFIER,
-    .use\_ext\_addr = 0,      
-    .use\_fixed\_addr = 1,    
-}<br> |
+|  const struct isotp\_fc\_opts | [**fc\_opts**](#variable-fc_opts)   = `/* multi line expression */`<br> |
+|  struct isotp\_msg\_id | [**rx\_addr**](#variable-rx_addr)   = `/* multi line expression */`<br> |
 |  ThingSet | [**ts**](#variable-ts)  <br> |
-|  struct isotp\_msg\_id | [**tx\_addr**](#variable-tx_addr)   = = {
-    .id\_type = CAN\_EXTENDED\_IDENTIFIER,
-    .use\_ext\_addr = 0,      
-    .use\_fixed\_addr = 1,    
-}<br> |
+|  struct isotp\_msg\_id | [**tx\_addr**](#variable-tx_addr)   = `/* multi line expression */`<br> |
 
 
 ## Public Static Attributes
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**can\_dev**](#variable-can_dev)   = = DEVICE\_DT\_GET(DT\_NODELABEL(can1))<br> |
+|  const struct device \* | [**can\_dev**](#variable-can_dev)   = `DEVICE\_DT\_GET(DT\_NODELABEL(can1))`<br> |
 |  struct isotp\_recv\_ctx | [**recv\_ctx**](#variable-recv_ctx)  <br> |
 |  struct isotp\_send\_ctx | [**send\_ctx**](#variable-send_ctx)  <br> |
 

@@ -39,7 +39,7 @@
 | ---: | :--- |
 |  float32\_t \* | [**conversion\_parameters**](#variable-conversion_parameters)  <br> |
 |  conversion\_type\_t | [**conversion\_types**](#variable-conversion_types)  <br> |
-|  const uint8\_t | [**max\_parameters\_count**](#variable-max_parameters_count)   = = 2<br> |
+|  const uint8\_t | [**max\_parameters\_count**](#variable-max_parameters_count)   = `2`<br> |
 
 
 
