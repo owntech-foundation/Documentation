@@ -7,7 +7,7 @@ document$.subscribe(function() {
         if (currentPath[0] === "") {
             currentPath.shift(); // Remove the leading empty element if present
         }
-        var currentVersion = currentPath[currentPath.length - 1]; // Last segment of the path
+        var currentVersion = currentPath[currentPath.length - 2]; 
         versionDropdown.value = currentVersion;
 
         versionDropdown.addEventListener('change', function() {
@@ -25,8 +25,6 @@ document$.subscribe(function() {
 
             // Reconstruct the new path
             var newPath = '/' + currentPath.join('/');
-            
-            console.log(`Navigating to new path: ${newPath}`);
             window.location.pathname = newPath;
         });
     }
