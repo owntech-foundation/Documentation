@@ -6,7 +6,6 @@ document$.subscribe(function() {
     var versionDropdown = document.getElementById('version-select');
     if (versionDropdown) {
         versionDropdown.addEventListener('change', function() {
-            console.log("callback triggered version changed to ${versionDropdown.value});
             var selectedVersion = versionDropdown.value;
             var currentPath = window.location.pathname.split('/');
             currentPath.pop();  // Remove current file
