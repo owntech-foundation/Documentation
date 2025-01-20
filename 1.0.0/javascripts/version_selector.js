@@ -13,11 +13,11 @@ document$.subscribe(function() {
                     aliasText: "Latest"
                 },
                 "1.3.0": {
-                    buttonText: "1.3",
+                    buttonText: "1.3.0",
                     aliasText: "Stable"
                 },
                 "1.2.0": {
-                    buttonText: "1.2",
+                    buttonText: "1.2.0",
                     aliasText: "Stable"
                 }
             };
