@@ -1,6 +1,6 @@
-import { requestJSON } from "~/browser";
-import { configuration } from "~/_";
-import { Version } from "~/templates";
+// import { requestJSON } from "~/browser";
+// import { configuration } from "~/_";
+// import { Version } from "~/templates";
 
 async function getCurrentVersion() {
   const config = configuration();
