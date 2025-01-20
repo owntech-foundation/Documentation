@@ -43,6 +43,26 @@ jobs:
             docs/getting_started_V1_2.md
           sparse-checkout-cone-mode: false
 
+      - name: Checkout OwnTech SPIN repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/spin
+          ref: SPIN-V1.2
+          path: docs/spin
+          sparse-checkout: |
+            docs/getting_started.md
+          sparse-checkout-cone-mode: false
+
+      - name: Checkout OwnTech OWNVERTER repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/ownverter
+          ref: dev
+          path: docs/ownverter
+          sparse-checkout: |
+            docs/getting_started.md
+          sparse-checkout-cone-mode: false
+
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
         with:
