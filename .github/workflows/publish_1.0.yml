@@ -38,7 +38,7 @@ jobs:
           ref: TWIST-V1.4.X
           path: docs/twistV14
           sparse-checkout: |
-            docs/getting_started_V1_4_1.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech Twist V1_3 repo
@@ -48,7 +48,7 @@ jobs:
           ref: TWIST-V1.3
           path: docs/twistV13
           sparse-checkout: |
-            docs/getting_started_V1_3.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech Twist V1_2 repo
@@ -58,15 +58,17 @@ jobs:
           ref: TWIST-V1.2
           path: docs/twistV12
           sparse-checkout: |
-            docs/getting_started_V1_2.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Remove unecessary twist folder
         run: |
-          mkdir docs/twist
-          mv docs/twistV14/docs/getting_started_V1_4_1.md docs/twist/getting_started_V1_4_1.md
-          mv docs/twistV13/docs/getting_started_V1_3.md docs/twist/getting_started_V1_3.md
-          mv docs/twistV12/docs/getting_started_V1_2.md docs/twist/getting_started_V1_2.md
+          mkdir docs/twist/1.4.1
+          mkdir docs/twist/1.3.0
+          mkdir docs/twist/1.2.0
+          mv docs/twistV14/docs/getting_started.md docs/twist/1.4.1/getting_started.md
+          mv docs/twistV13/docs/getting_started.md docs/twist/1.3.0/getting_started.md
+          mv docs/twistV12/docs/getting_started.md docs/twist/1.2.0/getting_started.md
           rm -rf docs/twistV14
           rm -rf docs/twistV13
           rm -rf docs/twistV12
@@ -78,7 +80,7 @@ jobs:
           ref: SPIN-V1.2
           path: docs/spinV12
           sparse-checkout: |
-            docs/getting_started_V1_2.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech SPIN V1_1 repo
@@ -88,7 +90,7 @@ jobs:
           ref: SPIN-V1.1
           path: docs/spinV11
           sparse-checkout: |
-            docs/getting_started_V1_1.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech SPIN V1_0 repo
@@ -98,15 +100,17 @@ jobs:
           ref: SPIN-V1.0
           path: docs/spinV10
           sparse-checkout: |
-            docs/getting_started_V1_0.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
 
       - name: Remove unecessary spin folder
         run: |
-          mkdir docs/spin
-          mv docs/spinV12/docs/getting_started_V1_2.md docs/spin/getting_started_V1_2.md
-          mv docs/spinV11/docs/getting_started_V1_1.md docs/spin/getting_started_V1_1.md
-          mv docs/spinV10/docs/getting_started_V1_0.md docs/spin/getting_started_V1_0.md
+          mkdir docs/spin/1.2.0
+          mkdir docs/spin/1.1.0
+          mkdir docs/spin/1.0.0
+          mv docs/spinV12/docs/getting_started.md docs/spin/1.2.0/getting_started.md
+          mv docs/spinV11/docs/getting_started.md docs/spin/1.1.0/getting_started.md
+          mv docs/spinV10/docs/getting_started.md docs/spin/1.0.0/getting_started.md
           rm -rf docs/spinV12
           rm -rf docs/spinV11
           rm -rf docs/spinV10
@@ -118,8 +122,14 @@ jobs:
           ref: dev
           path: docs/ownverterV10
           sparse-checkout: |
-            docs/getting_started_V1_0.md
+            docs/getting_started.md
           sparse-checkout-cone-mode: false
+
+      - name: Remove unecessary ownverter folder
+        run: |
+          mkdir docs/ownverter/1.0.0
+          mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
+          rm -rf docs/ownverterV10
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
