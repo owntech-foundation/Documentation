@@ -37,13 +37,41 @@
 {% endif %}
 
 <!-- Version Selector (Conditional) -->
+
+{% if 'twist/docs' in page.file.src_path %}  
+<div class="md-version">
+  <button class="md-version__current" aria-label="Select version">1.4.1
+    <span class="md-version__alias">Latest</span>
+  </button>
+  <ul class="md-version__list">
+    <li class="md-version__item">
+      <a href="https://docs.owntech.org/1.0.0/twist/docs/getting_started_V1_4_1/" class="md-version__link">1.4.1
+        <span class="md-version__alias">Latest</span>
+      </a>
+    </li>
+    <li class="md-version__item">
+      <a href="https://docs.owntech.org/1.0.0/twist/docs/getting_started_V1_3/" class="md-version__link">1.3
+        <span class="md-version__alias">stable</span>
+      </a>
+    </li>
+    <li class="md-version__item">
+      <a href="https://docs.owntech.org/1.0.0/twist/docs/getting_started_V1_2/" class="md-version__link">1.2
+        <span class="md-version__alias">stable</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endif %}
+
+
+<!-- 
 {% if 'twist/docs' in page.file.src_path %}  
 <select id="version-select">
       <option value="getting_started_V1_4_1">TWIST v1.4.1</option>
       <option value="getting_started_V1_3">TWIST v1.3</option>
       <option value="getting_started_V1_2">TWIST v1.2</option>
   </select>
-{% endif %}
+{% endif %} -->
 
 <!-- Page content -->
 {{ page.content }}
