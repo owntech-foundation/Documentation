@@ -38,9 +38,9 @@
 
 <!-- Version Selector (Conditional) -->
 
-{% if 'twist/docs' in page.file.src_path %}  
+{% if 'twist/' in page.file.src_path %}  
 <div class="md-version">
-  <button class="md-version__current" aria-label="Select version">1.4.1
+  <button id="versionButton" class="md-version__current" aria-label="Select version">1.4.1
     <span class="md-version__alias">Latest</span>
   </button>
   <ul class="md-version__list" style="list-style-type: none; z-index: 1000;">    
@@ -63,9 +63,9 @@
 </div>
 {% endif %}
 
-{% if 'spin/docs' in page.file.src_path %}  
+{% if 'spin/' in page.file.src_path %}  
 <div class="md-version">
-  <button class="md-version__current" aria-label="Select version">1.2
+  <button id="versionButton" class="md-version__current" aria-label="Select version">1.2
     <span class="md-version__alias">Latest</span>
   </button>
   <ul class="md-version__list" style="list-style-type: none; z-index: 1000;">    
@@ -89,9 +89,9 @@
 {% endif %}
 
 
-{% if 'ownverter/docs' in page.file.src_path %}  
+{% if 'ownverter/' in page.file.src_path %}  
 <div class="md-version">
-  <button class="md-version__current" aria-label="Select version">1.0
+  <button id="versionButton" class="md-version__current" aria-label="Select version">1.0
     <span class="md-version__alias">Latest</span>
   </button>
   <ul class="md-version__list" style="list-style-type: none; z-index: 1000;">    
@@ -104,15 +104,6 @@
 </div>
 {% endif %}
 
-
-<!-- 
-{% if 'twist/docs' in page.file.src_path %}  
-<select id="version-select">
-      <option value="getting_started_V1_4_1">TWIST v1.4.1</option>
-      <option value="getting_started_V1_3">TWIST v1.3</option>
-      <option value="getting_started_V1_2">TWIST v1.2</option>
-  </select>
-{% endif %} -->
 
 <!-- Page content -->
 {{ page.content }}
