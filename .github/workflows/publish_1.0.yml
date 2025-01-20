@@ -36,7 +36,7 @@ jobs:
         with:
           repository: owntech-foundation/twist
           ref: TWIST-V1.4.X
-          path: docs/twist
+          path: docs/twistV14
           sparse-checkout: |
             docs/getting_started_V1_4_1.md
           sparse-checkout-cone-mode: false
@@ -46,7 +46,7 @@ jobs:
         with:
           repository: owntech-foundation/twist
           ref: TWIST-V1.3
-          path: docs/twist
+          path: docs/twistV13
           sparse-checkout: |
             docs/getting_started_V1_3.md
           sparse-checkout-cone-mode: false
@@ -56,17 +56,27 @@ jobs:
         with:
           repository: owntech-foundation/twist
           ref: TWIST-V1.2
-          path: docs/twist
+          path: docs/twistV12
           sparse-checkout: |
             docs/getting_started_V1_2.md
           sparse-checkout-cone-mode: false
+
+      - name: Remove unecessary twist folder
+        run: |
+          mkdir docs/twist
+          mv docs/twistV14/docs/getting_started_V1_4_1.md docs/twist/getting_started_V1_4_1.md
+          mv docs/twistV13/docs/getting_started_V1_3.md docs/twist/getting_started_V1_3.md
+          mv docs/twistV12/docs/getting_started_V1_2.md docs/twist/getting_started_V1_2.md
+          rm -rf docs/twistV14
+          rm -rf docs/twistV13
+          rm -rf docs/twistV12
 
       - name: Checkout OwnTech SPIN V1_2 repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/spin
           ref: SPIN-V1.2
-          path: docs/spin
+          path: docs/spinV12
           sparse-checkout: |
             docs/getting_started_V1_2.md
           sparse-checkout-cone-mode: false
@@ -76,7 +86,7 @@ jobs:
         with:
           repository: owntech-foundation/spin
           ref: SPIN-V1.1
-          path: docs/spin
+          path: docs/spinV11
           sparse-checkout: |
             docs/getting_started_V1_1.md
           sparse-checkout-cone-mode: false
@@ -86,17 +96,27 @@ jobs:
         with:
           repository: owntech-foundation/spin
           ref: SPIN-V1.0
-          path: docs/spin
+          path: docs/spinV10
           sparse-checkout: |
             docs/getting_started_V1_0.md
           sparse-checkout-cone-mode: false
+
+      - name: Remove unecessary spin folder
+        run: |
+          mkdir docs/spin
+          mv docs/spinV12/docs/getting_started_V1_2.md docs/spin/getting_started_V1_2.md
+          mv docs/spinV11/docs/getting_started_V1_1.md docs/spin/getting_started_V1_1.md
+          mv docs/spinV10/docs/getting_started_V1_0.md docs/spin/getting_started_V1_0.md
+          rm -rf docs/spinV12
+          rm -rf docs/spinV11
+          rm -rf docs/spinV10
 
       - name: Checkout OwnTech OWNVERTER repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/ownverter
           ref: dev
-          path: docs/ownverter
+          path: docs/ownverterV10
           sparse-checkout: |
             docs/getting_started_V1_0.md
           sparse-checkout-cone-mode: false
