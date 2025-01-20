@@ -16,8 +16,10 @@ async function getCurrentVersion() {
   return current;
 }
 
-getCurrentVersion().then(current => {
-  console.log("Current version:", current);
+document$.subscribe(function() {
+  getCurrentVersion().then(current => {
+    console.log("Current version:", current);
+  });
 });
 
 
