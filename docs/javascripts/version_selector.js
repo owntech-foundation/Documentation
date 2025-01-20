@@ -2,25 +2,25 @@
 // import { configuration } from "~/_";
 // import { Version } from "~/templates";
 
-async function getCurrentVersion() {
-  const config = configuration();
-  const versions = await requestJSON<Version[]>(new URL("../versions.json", config.base)).toPromise();
+// async function getCurrentVersion() {
+//   const config = configuration();
+//   const versions = await requestJSON<Version[]>(new URL("../versions.json", config.base)).toPromise();
 
-  // Extract current version from the base URL
-  const [, currentVersion] = config.base.match(/([^/]+)\/?$/) || [];
+//   // Extract current version from the base URL
+//   const [, currentVersion] = config.base.match(/([^/]+)\/?$/) || [];
   
-  const current = versions.find(({ version, aliases }) => (
-    version === currentVersion || aliases.includes(currentVersion)
-  )) || versions[0];  // Default to the first version if no match is found
+//   const current = versions.find(({ version, aliases }) => (
+//     version === currentVersion || aliases.includes(currentVersion)
+//   )) || versions[0];  // Default to the first version if no match is found
 
-  return current;
-}
+//   return current;
+// }
 
-document$.subscribe(function() {
-  getCurrentVersion().then(current => {
-    console.log("Current version:", current);
-  });
-});
+// document$.subscribe(function() {
+//   getCurrentVersion().then(current => {
+//     console.log("Current version:", current);
+//   });
+// });
 
 
 
