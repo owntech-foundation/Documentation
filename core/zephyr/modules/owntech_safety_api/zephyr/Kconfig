@@ -1,3 +1,0 @@
-config OWNTECH_SAFETY_API
-	bool "Enable OwnTech safety measures to protect the board"
-	default y

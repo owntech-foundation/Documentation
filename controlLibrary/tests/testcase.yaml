@@ -1,5 +1,0 @@
-tests:
-# section.subsection
-  lib.control:
-    # platform: board@revision
-    platform_allow: nucleo_g474re native_posix
