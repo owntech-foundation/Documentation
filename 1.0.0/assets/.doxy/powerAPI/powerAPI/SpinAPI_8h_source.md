@@ -34,14 +34,11 @@
 
 #include "../src/CompHAL.h"
 #include "../src/DacHAL.h"
+#include "../src/DataAPI.h"
 #include "../src/GpioHAL.h"
 #include "../src/LedHAL.h"
 #include "../src/PwmHAL.h"
 #include "../src/TimerHAL.h"
-
-#ifdef CONFIG_OWNTECH_DATA_API
-#include "../src/DataAPI.h"
-#endif
 
 #ifdef CONFIG_OWNTECH_UART_API
 #include "../src/UartHAL.h"
@@ -74,9 +71,7 @@ public:
 
     static TimerHAL timer;
 
-#ifdef CONFIG_OWNTECH_DATA_API
     static DataAPI data;
-#endif
 
 };
 

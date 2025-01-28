@@ -95,7 +95,7 @@
     <member refid="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" kind="function"><name>storeConversionParametersInMemory</name></member>
     <member refid="classDataAPI_1a866cf1113a45f2a7b52421ac2fb72582" kind="function"><name>retrieveConversionParametersFromMemory</name></member>
     <member refid="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" kind="function"><name>configureDiscontinuousMode</name></member>
-    <member refid="classDataAPI_1a0bcaaf297fd0644f2aee31723069a2e2" kind="function"><name>configureTriggerSource</name></member>
+    <member refid="classDataAPI_1a145c0e66e99fbf0a9952e667e1317fbb" kind="function"><name>configureTriggerSource</name></member>
     <member refid="classDataAPI_1a822cc100b16375e9ece808a5e73cac14" kind="function"><name>initializeAllAdcs</name></member>
     <member refid="classDataAPI_1a17250468115f01f7c6646d856ef63824" kind="function"><name>enableChannel</name></member>
     <member refid="classDataAPI_1a622cd08c0d6e2dfd203fd1625c4a572d" kind="function"><name>disableChannel</name></member>
@@ -216,8 +216,8 @@
     <member refid="classPwmHAL_1ac8fcec5ce72f926bc256febbb217b674" kind="function"><name>getPeriodMax</name></member>
     <member refid="classPwmHAL_1a700ab0f6086bce6c05b98322033df1e3" kind="function"><name>getPeriodMin</name></member>
     <member refid="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" kind="function"><name>setAdcTriggerPostScaler</name></member>
-    <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" kind="function"><name>setAdcTrigger</name></member>
-    <member refid="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" kind="function"><name>getAdcTrigger</name></member>
+    <member refid="classPwmHAL_1a6cbe6d557cb17ccace03754e251b7657" kind="function"><name>setAdcTrigger</name></member>
+    <member refid="classPwmHAL_1a4529a1ed58869c303ebeb753de119d22" kind="function"><name>getAdcTrigger</name></member>
     <member refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" kind="function"><name>enableAdcTrigger</name></member>
     <member refid="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" kind="function"><name>disableAdcTrigger</name></member>
     <member refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" kind="function"><name>setAdcTriggerInstant</name></member>
@@ -414,6 +414,11 @@
     <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03ab8be16f947888876795ed19f76f6b4f6" kind="enumvalue"><name>hrtim_ev2</name></member>
     <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a360459d8af5f1342d1ac52974984c1c3" kind="enumvalue"><name>hrtim_ev3</name></member>
     <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a9c3007e23b15c3f3983197d71f60c8c9" kind="enumvalue"><name>hrtim_ev4</name></member>
+    <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a0c7efa3a2f95fca02e7695d86b85e120" kind="enumvalue"><name>hrtim_ev5</name></member>
+    <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a4da3003127098ff800230522b25cacd9" kind="enumvalue"><name>hrtim_ev6</name></member>
+    <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a212c785c9caa1b9039b10066c34f9ce8" kind="enumvalue"><name>hrtim_ev7</name></member>
+    <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a45c4b9a243a89b890133b39c54b83fc8" kind="enumvalue"><name>hrtim_ev8</name></member>
+    <member refid="adc_8h_1a703e6b265d154b949aef16f1ac227e03a8050a68140c6cd89215c1113f8137b57" kind="enumvalue"><name>hrtim_ev9</name></member>
     <member refid="adc_8h_1acedc1303769999451f980fe50f98f250" kind="function"><name>adc_configure_trigger_source</name></member>
     <member refid="adc_8h_1a6962239e7177122285b590c09030a952" kind="function"><name>adc_configure_discontinuous_mode</name></member>
     <member refid="adc_8h_1abb2103539ae8b8cf3d9289983abc4948" kind="function"><name>adc_add_channel</name></member>
@@ -742,6 +747,11 @@
     <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa07160feb6201c8b4a0eb126b7b43d1f0" kind="enumvalue"><name>ADCTRIG_2</name></member>
     <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aaa99b62aeefd0e6e75c2456446fea455d" kind="enumvalue"><name>ADCTRIG_3</name></member>
     <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aacb1a506e97bd02060a1fdd338cbbd67a" kind="enumvalue"><name>ADCTRIG_4</name></member>
+    <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa0b9118986c6166aad721d96d65c9fa7b" kind="enumvalue"><name>ADCTRIG_5</name></member>
+    <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa4bb2bcde7c604aec5ce793b5992beb93" kind="enumvalue"><name>ADCTRIG_6</name></member>
+    <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aad9aa65887697a4eb43a2ca2df44b4046" kind="enumvalue"><name>ADCTRIG_7</name></member>
+    <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa2409860b347fdbf5043716141abdd6b4" kind="enumvalue"><name>ADCTRIG_8</name></member>
+    <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa2cf0fead5a2661228d5c615b928d70a1" kind="enumvalue"><name>ADCTRIG_9</name></member>
     <member refid="hrtim__enum_8h_1a07ed5767e2be1678320716ef2ee37c8aa2bb41c5f71dee6ca0e69471fad306a22" kind="enumvalue"><name>ADCTRIG_NONE</name></member>
     <member refid="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094c" kind="enum"><name>hrtim_adc_event_t</name></member>
     <member refid="hrtim__enum_8h_1a597ca36d87dd3143d43e07db985f094cae29e29ee0aa091132fe3ce9dfb4ca041" kind="enumvalue"><name>PWMA_UPDT</name></member>
@@ -845,7 +855,7 @@
     <member refid="power__init_8cpp_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
     <member refid="power__init_8cpp_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
     <member refid="power__init_8cpp_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
-    <member refid="power__init_8cpp_1a00f52754a48a9124d6f8b17ffb698403" kind="variable"><name>dt_adc</name></member>
+    <member refid="power__init_8cpp_1afaa3ac268ff9363bcc90466c0f0cd4c3" kind="variable"><name>dt_adc</name></member>
     <member refid="power__init_8cpp_1a2ca9bf00ef5fb28f3f2403a2227e94cd" kind="variable"><name>dt_adc_decim</name></member>
     <member refid="power__init_8cpp_1a60173017a742f6585796a0d28c31e840" kind="variable"><name>dt_modulation</name></member>
     <member refid="power__init_8cpp_1a9ac881906f17a19920c21edac0a9b697" kind="variable"><name>dt_edge_trigger</name></member>
@@ -867,7 +877,7 @@
     <member refid="power__init_8h_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
     <member refid="power__init_8h_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
     <member refid="power__init_8h_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
-    <member refid="power__init_8h_1a00f52754a48a9124d6f8b17ffb698403" kind="variable"><name>dt_adc</name></member>
+    <member refid="power__init_8h_1afaa3ac268ff9363bcc90466c0f0cd4c3" kind="variable"><name>dt_adc</name></member>
     <member refid="power__init_8h_1a2ca9bf00ef5fb28f3f2403a2227e94cd" kind="variable"><name>dt_adc_decim</name></member>
     <member refid="power__init_8h_1a60173017a742f6585796a0d28c31e840" kind="variable"><name>dt_modulation</name></member>
     <member refid="power__init_8h_1a9ac881906f17a19920c21edac0a9b697" kind="variable"><name>dt_edge_trigger</name></member>
@@ -1002,6 +1012,9 @@
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172ae2c2b7b21e22e66c73894b8b1423b332" kind="enumvalue"><name>ADC_3</name></member>
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172a02dd8ff053e7f4a2e090b55f4cab2238" kind="enumvalue"><name>ADC_4</name></member>
     <member refid="DataAPI_8h_1ab5113ca051a141a913191b4f55501172a2fff1c2f268d83011737ff7ac38370c0" kind="enumvalue"><name>ADC_5</name></member>
+    <member refid="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1" kind="enum"><name>trigger_source_t</name></member>
+    <member refid="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1a9d8ae365caa1b8695e43f3cfe10510ae" kind="enumvalue"><name>TRIG_SOFTWARE</name></member>
+    <member refid="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1ab02163f2286777bb300ec5e2790846e7" kind="enumvalue"><name>TRIG_PWM</name></member>
     <member refid="DataAPI_8h_1a0f6f26beb5fa3e14ed5ec7b06b5ad239" kind="enum"><name>DispatchMethod_t</name></member>
     <member refid="DataAPI_8h_1a0f6f26beb5fa3e14ed5ec7b06b5ad239a1367c215f4bda7d40a195a39c8f160f1" kind="enumvalue"><name>on_dma_interrupt</name></member>
     <member refid="DataAPI_8h_1a0f6f26beb5fa3e14ed5ec7b06b5ad239a9c47ef9d44d85ee3d47e518eae38071f" kind="enumvalue"><name>externally_triggered</name></member>

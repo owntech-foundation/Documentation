@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../spin/1.2.0/getting_started/" class="md-tabs__link">
+        <a href="../../spin/1.2.0/getting_started.md" class="md-tabs__link">
           
   
   Hardware
@@ -3344,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spin/1.2.0/getting_started/" class="md-nav__link">
+      <a href="../../spin/1.2.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../twist/1.4.1/getting_started/" class="md-nav__link">
+      <a href="../../twist/1.4.1/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ownverter/1.0.0/getting_started/" class="md-nav__link">
+      <a href="../../ownverter/1.0.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4183,7 +4183,7 @@
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_771164b9325b04f1442f7a3ffa8ecb89/"><strong>core</strong></a> <strong>&gt;</strong> <a href="../dir_09002e7ce91f09aeb040dfd1861a47f4/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_6d0fb8ab814c517e7f155fb837e32f72/"><strong>modules</strong></a> <strong>&gt;</strong> <a href="../dir_e0b0ebd8181eadf56b45f70b679dd6ce/"><strong>owntech_adc_driver</strong></a> <strong>&gt;</strong> <a href="../dir_fc55e1a77480d908ce2594a494dae021/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_1a23096fc67cd9ffce086a2218b577f7/"><strong>public_api</strong></a> <strong>&gt;</strong> <a href="../adc_8c/"><strong>adc.c</strong></a></p>
 <p><a href="../adc_8c/">Go to the documentation of this file</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2021-2023 LAAS-CNRS</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2021-2024 LAAS-CNRS</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> *</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> *   This program is free software: you can redistribute it and/or modify</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm"> *   it under the terms of the GNU Lesser General Public License as published by</span>
@@ -4381,44 +4381,59 @@
 <a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev4</span><span class="p">:</span>
 <a id="__codelineno-0-198" name="__codelineno-0-198" href="#__codelineno-0-198"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG4</span><span class="p">;</span>
 <a id="__codelineno-0-199" name="__codelineno-0-199" href="#__codelineno-0-199"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">software</span><span class="p">:</span>
-<a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span>
-<a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_SOFTWARE</span><span class="p">;</span>
-<a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-0-204" name="__codelineno-0-204" href="#__codelineno-0-204"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a>
-<a id="__codelineno-0-206" name="__codelineno-0-206" href="#__codelineno-0-206"></a><span class="w">            </span><span class="n">adc_core_configure_trigger_source</span><span class="p">(</span><span class="n">adc_num</span><span class="p">,</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_RISING</span><span class="p">,</span><span class="w"> </span><span class="n">trig</span><span class="p">);</span>
-<a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a>
-<a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a><span class="w">    </span><span class="c1">// Start ADCs</span>
-<a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a>
-<a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">NUMBER_OF_ADCS</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a><span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc_num</span><span class="mi">-1</span><span class="p">;</span>
-<a id="__codelineno-0-215" name="__codelineno-0-215" href="#__codelineno-0-215"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">adc_trigger_sources</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">software</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-0-216" name="__codelineno-0-216" href="#__codelineno-0-216"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-0-217" name="__codelineno-0-217" href="#__codelineno-0-217"></a><span class="w">            </span><span class="n">adc_core_start</span><span class="p">(</span><span class="n">adc_num</span><span class="p">,</span><span class="w"> </span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]);</span>
-<a id="__codelineno-0-218" name="__codelineno-0-218" href="#__codelineno-0-218"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-219" name="__codelineno-0-219" href="#__codelineno-0-219"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a><span class="p">}</span>
-<a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a>
-<a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a><span class="kt">void</span><span class="w"> </span><span class="nf">adc_stop</span><span class="p">()</span>
-<a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a><span class="p">{</span>
-<a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">NUMBER_OF_ADCS</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a><span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc_num</span><span class="mi">-1</span><span class="p">;</span>
-<a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">adc_trigger_sources</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">software</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-0-228" name="__codelineno-0-228" href="#__codelineno-0-228"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-0-229" name="__codelineno-0-229" href="#__codelineno-0-229"></a><span class="w">            </span><span class="n">adc_core_stop</span><span class="p">(</span><span class="n">adc_num</span><span class="p">);</span>
-<a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a><span class="p">}</span>
-<a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a>
-<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a><span class="kt">void</span><span class="w"> </span><span class="nf">adc_trigger_software_conversion</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_of_acquisitions</span><span class="p">)</span>
-<a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a><span class="p">{</span>
-<a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a><span class="w">    </span><span class="n">adc_core_start</span><span class="p">(</span><span class="n">adc_number</span><span class="p">,</span><span class="w"> </span><span class="n">number_of_acquisitions</span><span class="p">);</span>
-<a id="__codelineno-0-237" name="__codelineno-0-237" href="#__codelineno-0-237"></a><span class="p">}</span>
+<a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev5</span><span class="p">:</span>
+<a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG5</span><span class="p">;</span>
+<a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev6</span><span class="p">:</span>
+<a id="__codelineno-0-204" name="__codelineno-0-204" href="#__codelineno-0-204"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG6</span><span class="p">;</span>
+<a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-206" name="__codelineno-0-206" href="#__codelineno-0-206"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev7</span><span class="p">:</span>
+<a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG7</span><span class="p">;</span>
+<a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev8</span><span class="p">:</span>
+<a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG8</span><span class="p">;</span>
+<a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">hrtim_ev9</span><span class="p">:</span>
+<a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_HRTIM_TRG9</span><span class="p">;</span>
+<a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-215" name="__codelineno-0-215" href="#__codelineno-0-215"></a><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">software</span><span class="p">:</span>
+<a id="__codelineno-0-216" name="__codelineno-0-216" href="#__codelineno-0-216"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-0-217" name="__codelineno-0-217" href="#__codelineno-0-217"></a><span class="w">                </span><span class="n">trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_SOFTWARE</span><span class="p">;</span>
+<a id="__codelineno-0-218" name="__codelineno-0-218" href="#__codelineno-0-218"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-219" name="__codelineno-0-219" href="#__codelineno-0-219"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a>
+<a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a><span class="w">            </span><span class="n">adc_core_configure_trigger_source</span><span class="p">(</span><span class="n">adc_num</span><span class="p">,</span><span class="w"> </span><span class="n">LL_ADC_REG_TRIG_EXT_RISING</span><span class="p">,</span><span class="w"> </span><span class="n">trig</span><span class="p">);</span>
+<a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a>
+<a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a><span class="w">    </span><span class="c1">// Start ADCs</span>
+<a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a>
+<a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">NUMBER_OF_ADCS</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-228" name="__codelineno-0-228" href="#__codelineno-0-228"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-229" name="__codelineno-0-229" href="#__codelineno-0-229"></a><span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc_num</span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">adc_trigger_sources</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">software</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a><span class="w">            </span><span class="n">adc_core_start</span><span class="p">(</span><span class="n">adc_num</span><span class="p">,</span><span class="w"> </span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]);</span>
+<a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a><span class="p">}</span>
+<a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a>
+<a id="__codelineno-0-237" name="__codelineno-0-237" href="#__codelineno-0-237"></a><span class="kt">void</span><span class="w"> </span><span class="nf">adc_stop</span><span class="p">()</span>
+<a id="__codelineno-0-238" name="__codelineno-0-238" href="#__codelineno-0-238"></a><span class="p">{</span>
+<a id="__codelineno-0-239" name="__codelineno-0-239" href="#__codelineno-0-239"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">NUMBER_OF_ADCS</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">adc_num</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-0-240" name="__codelineno-0-240" href="#__codelineno-0-240"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-241" name="__codelineno-0-241" href="#__codelineno-0-241"></a><span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc_num</span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-0-242" name="__codelineno-0-242" href="#__codelineno-0-242"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">enabled_channels_count</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">adc_trigger_sources</span><span class="p">[</span><span class="n">adc_index</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">software</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-0-243" name="__codelineno-0-243" href="#__codelineno-0-243"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-244" name="__codelineno-0-244" href="#__codelineno-0-244"></a><span class="w">            </span><span class="n">adc_core_stop</span><span class="p">(</span><span class="n">adc_num</span><span class="p">);</span>
+<a id="__codelineno-0-245" name="__codelineno-0-245" href="#__codelineno-0-245"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-246" name="__codelineno-0-246" href="#__codelineno-0-246"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-247" name="__codelineno-0-247" href="#__codelineno-0-247"></a><span class="p">}</span>
+<a id="__codelineno-0-248" name="__codelineno-0-248" href="#__codelineno-0-248"></a>
+<a id="__codelineno-0-249" name="__codelineno-0-249" href="#__codelineno-0-249"></a><span class="kt">void</span><span class="w"> </span><span class="nf">adc_trigger_software_conversion</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_of_acquisitions</span><span class="p">)</span>
+<a id="__codelineno-0-250" name="__codelineno-0-250" href="#__codelineno-0-250"></a><span class="p">{</span>
+<a id="__codelineno-0-251" name="__codelineno-0-251" href="#__codelineno-0-251"></a><span class="w">    </span><span class="n">adc_core_start</span><span class="p">(</span><span class="n">adc_number</span><span class="p">,</span><span class="w"> </span><span class="n">number_of_acquisitions</span><span class="p">);</span>
+<a id="__codelineno-0-252" name="__codelineno-0-252" href="#__codelineno-0-252"></a><span class="p">}</span>
 </code></pre></div>
 
 <!-- Source file information -->

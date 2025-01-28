@@ -27,7 +27,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="date"><para>2023 </para>
+<simplesect kind="date"><para>2024 </para>
 </simplesect>
 <simplesect kind="author"><para>Luiz Villa <ulink url="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</ulink> </para>
 </simplesect>
@@ -521,7 +521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="189" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="331" bodyend="336"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="189" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="379" bodyend="384"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_pwm_mode_t</type>
@@ -554,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="199" column="23" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="338" bodyend="341"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="199" column="23" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="386" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a9ed91c1b966e9372f134f25925ecab09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -597,7 +597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="209" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="343" bodyend="348"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="209" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="391" bodyend="396"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_external_trigger_t</type>
@@ -628,7 +628,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="217" column="31" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="350" bodyend="353"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="217" column="31" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="398" bodyend="401"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a84947b82459f9b57ea20d8e096c2b98f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_cnt_t</type>
@@ -828,10 +828,10 @@
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="268" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="245" bodyend="248"/>
       </memberdef>
-      <memberdef kind="function" id="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPwmHAL_1a6cbe6d557cb17ccace03754e251b7657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PwmHAL::setAdcTrigger</definition>
-        <argsstring>(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig)</argsstring>
+        <argsstring>(hrtim_tu_number_t pwmX, adc_t adc)</argsstring>
         <name>setAdcTrigger</name>
         <qualifiedname>PwmHAL::setAdcTrigger</qualifiedname>
         <param>
@@ -839,8 +839,8 @@
           <declname>pwmX</declname>
         </param>
         <param>
-          <type>hrtim_adc_trigger_t</type>
-          <declname>adc_trig</declname>
+          <type>adc_t</type>
+          <declname>adc</declname>
         </param>
         <briefdescription>
 <para>This function sets the adc trigger linked to a timer unit. </para>
@@ -856,10 +856,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername direction="in">adc_trig</parametername>
+<parametername direction="in">adc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4</para>
+<para>adc - ADC_1, ADC_2, ADC_3, ADC_4 or ADC_5</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -869,21 +869,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="278" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="319" bodyend="324"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="278" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="319" bodyend="351"/>
       </memberdef>
-      <memberdef kind="function" id="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>hrtim_adc_trigger_t</type>
-        <definition>hrtim_adc_trigger_t PwmHAL::getAdcTrigger</definition>
-        <argsstring>(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig)</argsstring>
+      <memberdef kind="function" id="classPwmHAL_1a4529a1ed58869c303ebeb753de119d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>adc_t</type>
+        <definition>adc_t PwmHAL::getAdcTrigger</definition>
+        <argsstring>(hrtim_tu_number_t pwmX)</argsstring>
         <name>getAdcTrigger</name>
         <qualifiedname>PwmHAL::getAdcTrigger</qualifiedname>
         <param>
           <type>hrtim_tu_number_t</type>
           <declname>pwmX</declname>
-        </param>
-        <param>
-          <type>hrtim_adc_trigger_t</type>
-          <declname>adc_trig</declname>
         </param>
         <briefdescription>
 <para>This function returns the adc trigger linked to a timer unit. </para>
@@ -898,13 +894,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4 </para>
+<simplesect kind="return"><para>adc - ADC_1, ADC_2, ADC_3, ADC_4, ADC_5 or UNKNOWN_ADC if the ADC trigger was not configured for this timing unit. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="286" column="26" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="326" bodyend="329"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="288" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="353" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -935,7 +931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="295" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="250" bodyend="264"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="297" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="250" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a3a1764fe6979d17e934f01791a1a8759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -964,7 +960,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="302" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="272" bodyend="275"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="304" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="272" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1005,7 +1001,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="310" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="266" bodyend="270"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="312" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="266" bodyend="270"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1048,7 +1044,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="320" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="307" bodyend="312"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="322" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="307" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>hrtim_adc_edgetrigger_t</type>
@@ -1079,7 +1075,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="328" column="30" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="314" bodyend="317"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="330" column="30" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="314" bodyend="317"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1122,7 +1118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="340" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="355" bodyend="362"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="342" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="403" bodyend="410"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a87f02068cb744707860185045c86819f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1151,7 +1147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="347" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="287" bodyend="290"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="349" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="287" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a350644c31ccf6b662c2f450f27118c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1192,7 +1188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="355" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="292" bodyend="295"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="357" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="292" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a18e7d18b48641e091ec414b85fe22342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1223,7 +1219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="363" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="297" bodyend="300"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="365" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="297" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1276,7 +1272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="372" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="277" bodyend="280"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="374" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="277" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1305,7 +1301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="379" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="282" bodyend="285"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="381" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="282" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a116866358e313d5425d5510ee4488df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1334,7 +1330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="386" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="302" bodyend="305"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="388" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="302" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1ac0f1af4b33a998900bd8ccb2268ceb9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1365,7 +1361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="394" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="364" bodyend="367"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="396" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="412" bodyend="415"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1394,7 +1390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="402" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="374" bodyend="377"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="404" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="422" bodyend="425"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1423,7 +1419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="410" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="369" bodyend="372"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="412" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="417" bodyend="420"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a326698f2520eed1637959c67da21fb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -1454,7 +1450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="432" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="379" bodyend="382"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="434" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="427" bodyend="430"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a7e9f87c6802c3a69a324c87ccbb8021d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1469,7 +1465,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="438" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="385" bodyend="388"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="440" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="433" bodyend="436"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1510,7 +1506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="446" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="390" bodyend="393"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="448" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="438" bodyend="441"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a0f6a1c2984beedc1ead9b2111013d556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1525,7 +1521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="452" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="395" bodyend="398"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="454" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="443" bodyend="446"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1ad07800b09483f157769f22690ca51a65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1540,7 +1536,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="458" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="400" bodyend="403"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="460" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="448" bodyend="451"/>
       </memberdef>
       <memberdef kind="function" id="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1555,7 +1551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="464" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="405" bodyend="408"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="466" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.cpp" bodystart="453" bodyend="456"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1566,7 +1562,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="465"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" line="60" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h" bodystart="61" bodyend="467"/>
     <listofallmembers>
       <member refid="classPwmHAL_1a5fe0a6f146efcc74d113c98b5e0b9499" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>configurePeriodEvnt</name></member>
       <member refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>deInitBurstMode</name></member>
@@ -1575,7 +1571,7 @@
       <member refid="classPwmHAL_1afe92650407b6600dff96dcbc45fcd3bf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>enableAdcTrigger</name></member>
       <member refid="classPwmHAL_1a4de7e5072911ef0066258f8426a8d2ad" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>enablePeriodEvnt</name></member>
       <member refid="classPwmHAL_1add731e413e7dbec507aabd5e121461cf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcEdgeTrigger</name></member>
-      <member refid="classPwmHAL_1a9f3646646e5e29978e3254e922b794eb" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcTrigger</name></member>
+      <member refid="classPwmHAL_1a4529a1ed58869c303ebeb753de119d22" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getAdcTrigger</name></member>
       <member refid="classPwmHAL_1adff079e739e876b5b6e10bfb04ca7408" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getEev</name></member>
       <member refid="classPwmHAL_1a9d140712c24a919ea471e040cb4aee18" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getFrequencyMax</name></member>
       <member refid="classPwmHAL_1adaf957e99991d75c976adfc0dd8068b2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>getFrequencyMin</name></member>
@@ -1594,7 +1590,7 @@
       <member refid="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>initVariableFrequency</name></member>
       <member refid="classPwmHAL_1a57ad82936322d09ea21d8136b4a99adf" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcDecimation</name></member>
       <member refid="classPwmHAL_1aac2c7e1b0850373ef8be41cc6cc795f4" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcEdgeTrigger</name></member>
-      <member refid="classPwmHAL_1a932bbb5fb33ced22976eaa7fdf1d153c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTrigger</name></member>
+      <member refid="classPwmHAL_1a6cbe6d557cb17ccace03754e251b7657" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTrigger</name></member>
       <member refid="classPwmHAL_1a4b426a6025a2189f49cabeb9fea8f718" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerInstant</name></member>
       <member refid="classPwmHAL_1a0eca11286114ba4f2ecb01791c10599c" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setAdcTriggerPostScaler</name></member>
       <member refid="classPwmHAL_1a624bfb5956ddc092d99e31e0f44265c2" prot="public" virt="non-virtual"><scope>PwmHAL</scope><name>setBurstMode</name></member>

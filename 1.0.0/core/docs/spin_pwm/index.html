@@ -317,7 +317,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../spin/1.2.0/getting_started/" class="md-tabs__link">
+        <a href="../../../spin/1.2.0/getting_started.md" class="md-tabs__link">
           
   
   Hardware
@@ -3984,7 +3984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spin/1.2.0/getting_started/" class="md-nav__link">
+      <a href="../../../spin/1.2.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4005,7 +4005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../twist/1.4.1/getting_started/" class="md-nav__link">
+      <a href="../../../twist/1.4.1/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4026,7 +4026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ownverter/1.0.0/getting_started/" class="md-nav__link">
+      <a href="../../../ownverter/1.0.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5739,8 +5739,8 @@ NB: Phase reference is 0°.</p>
 <td style="text-align: left;"><a href="#function-getadcedgetrigger"><strong>getAdcEdgeTrigger</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the adc trigger rollover mode for the selected timer.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">hrtim_adc_trigger_t</td>
-<td style="text-align: left;"><a href="#function-getadctrigger"><strong>getAdcTrigger</strong></a> (hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig) <br><em>This function returns the adc trigger linked to a timer unit.</em></td>
+<td style="text-align: right;">adc_t</td>
+<td style="text-align: left;"><a href="#function-getadctrigger"><strong>getAdcTrigger</strong></a> (hrtim_tu_number_t pwmX) <br><em>This function returns the adc trigger linked to a timer unit.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">hrtim_external_trigger_t</td>
@@ -5816,7 +5816,7 @@ NB: Phase reference is 0°.</p>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setadctrigger"><strong>setAdcTrigger</strong></a> (hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig) <br><em>This function sets the adc trigger linked to a timer unit.</em></td>
+<td style="text-align: left;"><a href="#function-setadctrigger"><strong>setAdcTrigger</strong></a> (hrtim_tu_number_t pwmX, adc_t adc) <br><em>This function sets the adc trigger linked to a timer unit.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -5984,17 +5984,16 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getadctrigger">function getAdcTrigger</h3>
 <p><em>This function returns the adc trigger linked to a timer unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcTrigger</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">adc_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p>adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4 </p>
+<p>adc - ADC_1, ADC_2, ADC_3, ADC_4, ADC_5 or UNKNOWN_ADC if the ADC trigger was not configured for this timing unit. </p>
 <hr>
 
 <h3 id="function-geteev">function getEev</h3>
@@ -6192,7 +6191,7 @@ NB: Phase reference is 0°.</p>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</li>
 </ul>
 <p><strong>Date:</strong></p>
-<p>2023 </p>
+<p>2024 </p>
 <p><strong>Author:</strong></p>
 <p>Luiz Villa <a href="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</a> </p>
 <p><strong>Author:</strong></p>
@@ -6253,13 +6252,13 @@ NB: Phase reference is 0°.</p>
 <p><em>This function sets the adc trigger linked to a timer unit.</em> 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
-<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc</span>
 <a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
-<li><code>adc_trig</code> adc trigger - ADCTRIG_1, ADCTRIG_2, ADCTRIG_3 et ADCTRIG_4</li>
+<li><code>adc</code> adc - ADC_1, ADC_2, ADC_3, ADC_4 or ADC_5</li>
 </ul>
 <p><strong>Warning:</strong></p>
 <p>Call this function BEFORE enabling the adc trigger and AFTER initializing the selected timer </p>

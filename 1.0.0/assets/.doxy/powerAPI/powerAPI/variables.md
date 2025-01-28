@@ -241,6 +241,7 @@
 * **tx\_addr** ([**thingset\_isotp.cpp**](thingset__isotp_8cpp.md))
 * **tu\_channel** ([**hrtim.h**](hrtim_8h.md))
 * **timer\_frequency** ([**power\_init.cpp**](power__init_8cpp.md), [**power\_init.h**](power__init_8h.md))
+* **trigger\_source\_t** ([**DataAPI.h**](DataAPI_8h.md))
 * **timer4** ([**TimerHAL.cpp**](TimerHAL_8cpp.md))
 * **task** ([**TaskAPI.cpp**](TaskAPI_8cpp.md), [**TaskAPI.h**](TaskAPI_8h.md))
 * **task\_function\_t** ([**TaskAPI.h**](TaskAPI_8h.md))

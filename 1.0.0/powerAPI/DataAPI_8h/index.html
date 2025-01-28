@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../spin/1.2.0/getting_started/" class="md-tabs__link">
+        <a href="../../spin/1.2.0/getting_started.md" class="md-tabs__link">
           
   
   Hardware
@@ -3344,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spin/1.2.0/getting_started/" class="md-nav__link">
+      <a href="../../spin/1.2.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../twist/1.4.1/getting_started/" class="md-nav__link">
+      <a href="../../twist/1.4.1/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ownverter/1.0.0/getting_started/" class="md-nav__link">
+      <a href="../../ownverter/1.0.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4203,6 +4203,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enum-trigger_source_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum trigger_source_t
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4397,6 +4406,10 @@
 <td style="text-align: right;">enum uint8_t</td>
 <td style="text-align: left;"><a href="#enum-parameter_t"><strong>parameter_t</strong></a>  <br></td>
 </tr>
+<tr>
+<td style="text-align: right;">enum uint8_t</td>
+<td style="text-align: left;"><a href="#enum-trigger_source_t"><strong>trigger_source_t</strong></a>  <br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-attributes">Public Attributes</h2>
@@ -4475,46 +4488,54 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">parameter_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">gain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">r0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">rdiv</span><span class="w"> </span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="mi">4</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">r0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">rdiv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">};</span>
+</code></pre></div>
+<hr>
+
+<h3 id="enum-trigger_source_t">enum trigger_source_t</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">trigger_source_t</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">TRIG_SOFTWARE</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">TRIG_PWM</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">};</span>
 </code></pre></div>
 <hr>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-data_is_missing">variable DATA_IS_MISSING</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_MISSING</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_MISSING</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data_is_ok">variable DATA_IS_OK</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OK</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OK</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-data_is_old">variable DATA_IS_OLD</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OLD</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DATA_IS_OLD</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-no_value">variable NO_VALUE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">NO_VALUE</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">NO_VALUE</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
 <h3 id="variable-adc_count">variable ADC_COUNT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ADC_COUNT</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ADC_COUNT</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-channels_per_adc">variable CHANNELS_PER_ADC</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CHANNELS_PER_ADC</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CHANNELS_PER_ADC</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 
 <h3 id="variable-pin_count">variable PIN_COUNT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">PIN_COUNT</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">PIN_COUNT</span><span class="p">;</span>
 </code></pre></div>
 <hr>
 

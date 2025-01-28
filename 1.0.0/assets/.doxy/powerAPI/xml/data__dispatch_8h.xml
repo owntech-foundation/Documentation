@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="62" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="119" bodyend="202" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="62" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="62" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="120" bodyend="203" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="62" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1a8ee29e42025c0a494cf4ac1e9f2fa959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="71" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="204" bodyend="268" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="71" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="71" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="205" bodyend="269" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="71" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1acefeb0a090afb5be43e2cbae17c0263e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="77" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="270" bodyend="276" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="77" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="77" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="271" bodyend="277" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="77" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1a60c7faf2a9c6784fda863ebf8d564301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="97" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="282" bodyend="311" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="97" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="97" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="283" bodyend="312" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="97" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1ac9d1c5171b4f3bb37046bde6c0b58777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="112" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="313" bodyend="337" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="112" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="112" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="314" bodyend="338" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="112" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

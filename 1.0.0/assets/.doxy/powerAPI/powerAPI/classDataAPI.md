@@ -52,7 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |  void | [**configureDiscontinuousMode**](#function-configurediscontinuousmode) (adc\_t adc\_number, uint32\_t dicontinuous\_count) <br>_Set the discontinuous count for an ADC. By default, ADCs are not in discontinuous mode._  |
-|  void | [**configureTriggerSource**](#function-configuretriggersource) (adc\_t adc\_number, adc\_ev\_src\_t trigger\_source) <br>_Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is on HRTIM1, and ADC 3/4 is software-triggered._  |
+|  void | [**configureTriggerSource**](#function-configuretriggersource) (adc\_t adc\_number, trigger\_source\_t trigger\_source) <br>_Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is on HRTIM1, and ADC 3/4 is software-triggered._  |
 |  float32\_t | [**convertValue**](#function-convertvalue) (uint8\_t pin\_number, uint16\_t raw\_value) <br>_Use this function to convert values obtained using matching data.getRawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius._  |
 |  int8\_t | [**enableAcquisition**](#function-enableacquisition) (uint8\_t pin\_number, adc\_t adc\_number=DEFAULT\_ADC) <br>_This function is used to enable acquisition on a Spin PIN with a given ADC._  |
 |  conversion\_type\_t | [**getConversionParameterType**](#function-getconversionparametertype) (uint8\_t pin\_number) <br>_Use this function to get the current conversion type for the chosen channel._  |
@@ -147,7 +147,7 @@ _Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is
 ```C++
 void DataAPI::configureTriggerSource (
     adc_t adc_number,
-    adc_ev_src_t trigger_source
+    trigger_source_t trigger_source
 ) 
 ```
 

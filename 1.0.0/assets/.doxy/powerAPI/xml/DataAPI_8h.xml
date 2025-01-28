@@ -25,7 +25,7 @@
         </enumvalue>
         <enumvalue id="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a20eb91018c3024df2ae3582f6e8e662c" prot="public">
           <name>r0</name>
-          <initializer>= 1</initializer>
+          <initializer>= 3</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -33,7 +33,7 @@
         </enumvalue>
         <enumvalue id="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56aa06b03e4cd5c7c464c513a95a7fcf9bf" prot="public">
           <name>b</name>
-          <initializer>= 2</initializer>
+          <initializer>= 4</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -41,7 +41,7 @@
         </enumvalue>
         <enumvalue id="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56a53538eeb67ae48d5d5fc6ada568fb3a3" prot="public">
           <name>rdiv</name>
-          <initializer>=3</initializer>
+          <initializer>= 5</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -49,7 +49,7 @@
         </enumvalue>
         <enumvalue id="DataAPI_8h_1acf2e25c3b66f5416e12556ff8651dd56af64e2e410920640816113ba4b024b166" prot="public">
           <name>t0</name>
-          <initializer>=4</initializer>
+          <initializer>= 6</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="51" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="52" bodyend="60"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="48" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="49" bodyend="56"/>
       </memberdef>
       <memberdef kind="enum" id="DataAPI_8h_1ab5113ca051a141a913191b4f55501172" prot="public" static="no" strong="no">
         <type>int8_t</type>
@@ -128,7 +128,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="62" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="63" bodyend="71"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="58" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="59" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="enum" id="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>trigger_source_t</name>
+        <enumvalue id="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1a9d8ae365caa1b8695e43f3cfe10510ae" prot="public">
+          <name>TRIG_SOFTWARE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DataAPI_8h_1a93cc15bce8b36bbc833dedeaa20c06c1ab02163f2286777bb300ec5e2790846e7" prot="public">
+          <name>TRIG_PWM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="69" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="enum" id="DataAPI_8h_1a0f6f26beb5fa3e14ed5ec7b06b5ad239" prot="public" static="no" strong="yes">
         <type></type>
@@ -153,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="73" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="74" bodyend="77"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="75" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="76" bodyend="79"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -169,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="82" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="82" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="84" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1af95fc64b7f662828e4e9064e98cf1103" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -183,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="83" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="83" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="85" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1a71dc98775c84164ddbea6b8d806e36ee" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -197,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="84" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="84" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="86" column="22" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1a94c1ca90b86d8f2fc712c7f502e5a5cd" prot="public" static="no" mutable="no">
         <type>const float32_t</type>
@@ -211,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="87" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="87" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="89" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1aa2d38fef56b37efc350a8d33ca783d52" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -225,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="91" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="91" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="93" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1aa17a18779a2a33294650d0e56eb53aa9" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -239,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="92" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="92" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="94" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="DataAPI_8h_1a4fdbe4c4b4e4ede5065de16b4965d47e" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -253,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="93" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="93" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="95" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="95" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -295,136 +320,138 @@
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ARM<sp/>CMSIS<sp/>library</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Other<sp/>modules<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;adc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Current<sp/>module<sp/>private<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;./data/data_conversion.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Current<sp/>module<sp/>private<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;./data/data_conversion.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Type<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Type<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>uint8_t</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>gain<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>offset<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>r0<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>rdiv<sp/>=3,</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>t0=4</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}<sp/>parameter_t;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>int8_t</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>UNKNOWN_ADC<sp/>=<sp/>-1,</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFAULT_ADC<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_1<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_2<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_3<sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_4<sp/>=<sp/>4,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_5<sp/>=<sp/>5</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">}<sp/>adc_t;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>DispatchMethod_t</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>on_dma_interrupt,</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>externally_triggered</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>ADC_COUNT<sp/>=<sp/>5;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PIN_COUNT<sp/>=<sp/>59;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>CHANNELS_PER_ADC<sp/>=<sp/>19;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Define<sp/>&quot;no<sp/>value&quot;<sp/>as<sp/>an<sp/>impossible,<sp/>out<sp/>of<sp/>range<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>NO_VALUE<sp/>=<sp/>-10000;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CHANNEL_OFF<sp/>-5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CHANNEL_NOT_FOUND<sp/>-2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_OK<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_OLD<sp/><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_MISSING<sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Static<sp/>class<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98" refid="classDataAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDataAPI" kindref="compound">DataAPI</ref></highlight></codeline>
-<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>specific<sp/>extenal<sp/>members<sp/>to<sp/>access<sp/>private<sp/>members<sp/>of<sp/>this<sp/>class</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SensorsAPI;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>user_task_proxy();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scheduling_start_uninterruptible_synchronous_task(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>gain<sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>offset<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>r0<sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>rdiv<sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>t0<sp/><sp/><sp/><sp/><sp/>=<sp/>6</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/>parameter_t;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>int8_t</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>UNKNOWN_ADC<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>DEFAULT_ADC<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_1<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_2<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_3<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_4<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ADC_5<sp/>=<sp/>5</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/>adc_t;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>TRIG_SOFTWARE,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>TRIG_PWM</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/>trigger_source_t;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>DispatchMethod_t</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>on_dma_interrupt,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>externally_triggered</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>ADC_COUNT<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>PIN_COUNT<sp/>=<sp/>59;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>CHANNELS_PER_ADC<sp/>=<sp/>19;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Define<sp/>&quot;no<sp/>value&quot;<sp/>as<sp/>an<sp/>impossible,<sp/>out<sp/>of<sp/>range<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>NO_VALUE<sp/>=<sp/>-10000;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CHANNEL_OFF<sp/>-5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR_CHANNEL_NOT_FOUND<sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_OK<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_OLD<sp/><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>DATA_IS_MISSING<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Static<sp/>class<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classDataAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDataAPI" kindref="compound">DataAPI</ref></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>specific<sp/>extenal<sp/>members<sp/>to<sp/>access<sp/>private<sp/>members<sp/>of<sp/>this<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SensorsAPI;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>user_task_proxy();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scheduling_start_uninterruptible_synchronous_task(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a2cb56a6f6f652e2ad9216d52bafb9c2a" kindref="member">enableAcquisition</ref>(uint8_t<sp/>pin_number,<sp/>adc_t<sp/>adc_number<sp/>=<sp/>DEFAULT_ADC);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" kindref="member">start</ref>();</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" kindref="member">started</ref>();</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" kindref="member">stop</ref>();</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" kindref="member">triggerAcquisition</ref>(adc_t<sp/>adc_number);</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t*<sp/><ref refid="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" kindref="member">getRawValues</ref>(uint8_t<sp/>pin_number,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t*<sp/><ref refid="classDataAPI_1aed44259775058a42eccd5603a4137d81" kindref="member">getValues</ref>(uint8_t<sp/>pin_number,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a71c77e8ada7b064600e89a1e1a827ba4" kindref="member">peekLatestValue</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"></highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" kindref="member">getLatestValue</ref>(uint8_t<sp/>pin_number,<sp/>uint8_t*<sp/>dataValid<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"></highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" kindref="member">convertValue</ref>(uint8_t<sp/>pin_number,<sp/>uint16_t<sp/>raw_value);</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"></highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a55bc18d5cbcb646fa0dca4cad6d83d6c" kindref="member">setConversionParametersLinear</ref>(uint8_t<sp/>pin_number,<sp/>float32_t<sp/>gain,<sp/>float32_t<sp/>offset);</highlight></codeline>
-<codeline lineno="350"><highlight class="normal"></highlight></codeline>
-<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a8400bb28ffd38fea3edac8963bc59a7a" kindref="member">setConversionParametersNtcThermistor</ref>(uint8_t<sp/>pin_num,<sp/>float32_t<sp/>r0,<sp/>float32_t<sp/>b,<sp/>float32_t<sp/>rdiv,<sp/>float32_t<sp/>t0);</highlight></codeline>
-<codeline lineno="366"><highlight class="normal"></highlight></codeline>
-<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a5d5fed98f96043bf30ade4b0004a9596" kindref="member">getConversionParameterValue</ref>(uint8_t<sp/>pin_number,<sp/>parameter_t<sp/>parameter_name);</highlight></codeline>
-<codeline lineno="378"><highlight class="normal"></highlight></codeline>
-<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_type_t<sp/><ref refid="classDataAPI_1a2d129bb41de793a9ba79e33cd7bf858f" kindref="member">getConversionParameterType</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="389"><highlight class="normal"></highlight></codeline>
-<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" kindref="member">storeConversionParametersInMemory</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="400"><highlight class="normal"></highlight></codeline>
-<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a866cf1113a45f2a7b52421ac2fb72582" kindref="member">retrieveConversionParametersFromMemory</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="414"><highlight class="normal"></highlight></codeline>
-<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" kindref="member">configureDiscontinuousMode</ref>(adc_t<sp/>adc_number,<sp/>uint32_t<sp/>dicontinuous_count);</highlight></codeline>
-<codeline lineno="430"><highlight class="normal"></highlight></codeline>
-<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a0bcaaf297fd0644f2aee31723069a2e2" kindref="member">configureTriggerSource</ref>(adc_t<sp/>adc_number,<sp/>adc_ev_src_t<sp/>trigger_source);</highlight></codeline>
-<codeline lineno="443"><highlight class="normal"></highlight></codeline>
-<codeline lineno="444"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeAllAdcs();</highlight></codeline>
-<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int8_t<sp/>enableChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disableChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
-<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t*<sp/>getChannelRawValues(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
-<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t*<sp/>getChannelValues(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
-<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t<sp/>peekChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t<sp/>getChannelLatest(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint8_t*<sp/>dataValid<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>getChannelRank(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>getChannelNumber(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>shield_pin);</highlight></codeline>
-<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>getDefaultAdcForPin(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>getCurrentAdcForPin(uint8_t<sp/>pin_number);</highlight></codeline>
-<codeline lineno="456"><highlight class="normal"></highlight></codeline>
-<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>members<sp/>accessed<sp/>by<sp/>external<sp/>friend<sp/>members</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRepetitionsBetweenDispatches(uint32_t<sp/>repetition);</highlight></codeline>
-<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setDispatchMethod(DispatchMethod_t<sp/>dispatch_method);</highlight></codeline>
-<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>doFullDispatch();</highlight></codeline>
-<codeline lineno="461"><highlight class="normal"></highlight></codeline>
-<codeline lineno="462"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_started;</highlight></codeline>
-<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>adcInitialized;</highlight></codeline>
-<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>channels_ranks[ADC_COUNT][CHANNELS_PER_ADC];</highlight></codeline>
-<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>current_rank[ADC_COUNT];</highlight></codeline>
-<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DispatchMethod_t<sp/>dispatch_method;</highlight></codeline>
-<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>repetition_count_between_dispatches;</highlight></codeline>
-<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>current_adc[PIN_COUNT];</highlight></codeline>
-<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t***<sp/>converted_values_buffer;</highlight></codeline>
-<codeline lineno="471"><highlight class="normal"></highlight></codeline>
-<codeline lineno="472"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a2cb56a6f6f652e2ad9216d52bafb9c2a" kindref="member">enableAcquisition</ref>(uint8_t<sp/>pin_number,<sp/>adc_t<sp/>adc_number<sp/>=<sp/>DEFAULT_ADC);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" kindref="member">started</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" kindref="member">triggerAcquisition</ref>(adc_t<sp/>adc_number);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t*<sp/><ref refid="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" kindref="member">getRawValues</ref>(uint8_t<sp/>pin_number,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t*<sp/><ref refid="classDataAPI_1aed44259775058a42eccd5603a4137d81" kindref="member">getValues</ref>(uint8_t<sp/>pin_number,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a71c77e8ada7b064600e89a1e1a827ba4" kindref="member">peekLatestValue</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" kindref="member">getLatestValue</ref>(uint8_t<sp/>pin_number,<sp/>uint8_t*<sp/>dataValid<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" kindref="member">convertValue</ref>(uint8_t<sp/>pin_number,<sp/>uint16_t<sp/>raw_value);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a55bc18d5cbcb646fa0dca4cad6d83d6c" kindref="member">setConversionParametersLinear</ref>(uint8_t<sp/>pin_number,<sp/>float32_t<sp/>gain,<sp/>float32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a8400bb28ffd38fea3edac8963bc59a7a" kindref="member">setConversionParametersNtcThermistor</ref>(uint8_t<sp/>pin_num,<sp/>float32_t<sp/>r0,<sp/>float32_t<sp/>b,<sp/>float32_t<sp/>rdiv,<sp/>float32_t<sp/>t0);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/><ref refid="classDataAPI_1a5d5fed98f96043bf30ade4b0004a9596" kindref="member">getConversionParameterValue</ref>(uint8_t<sp/>pin_number,<sp/>parameter_t<sp/>parameter_name);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_type_t<sp/><ref refid="classDataAPI_1a2d129bb41de793a9ba79e33cd7bf858f" kindref="member">getConversionParameterType</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" kindref="member">storeConversionParametersInMemory</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a866cf1113a45f2a7b52421ac2fb72582" kindref="member">retrieveConversionParametersFromMemory</ref>(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" kindref="member">configureDiscontinuousMode</ref>(adc_t<sp/>adc_number,<sp/>uint32_t<sp/>dicontinuous_count);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1a145c0e66e99fbf0a9952e667e1317fbb" kindref="member">configureTriggerSource</ref>(adc_t<sp/>adc_number,<sp/>trigger_source_t<sp/>trigger_source);</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initializeAllAdcs();</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int8_t<sp/>enableChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disableChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t*<sp/>getChannelRawValues(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t*<sp/>getChannelValues(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t<sp/>peekChannel(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t<sp/>getChannelLatest(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num,<sp/>uint8_t*<sp/>dataValid<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>getChannelRank(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>getChannelNumber(adc_t<sp/>adc_number,<sp/>uint8_t<sp/>shield_pin);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>getDefaultAdcForPin(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>getCurrentAdcForPin(uint8_t<sp/>pin_number);</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>members<sp/>accessed<sp/>by<sp/>external<sp/>friend<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRepetitionsBetweenDispatches(uint32_t<sp/>repetition);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setDispatchMethod(DispatchMethod_t<sp/>dispatch_method);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>doFullDispatch();</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_started;</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>adcInitialized;</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>channels_ranks[ADC_COUNT][CHANNELS_PER_ADC];</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>current_rank[ADC_COUNT];</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DispatchMethod_t<sp/>dispatch_method;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>repetition_count_between_dispatches;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>adc_t<sp/>current_adc[PIN_COUNT];</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>float32_t***<sp/>converted_values_buffer;</highlight></codeline>
 <codeline lineno="473"><highlight class="normal"></highlight></codeline>
-<codeline lineno="474"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATAAPI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATAAPI_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h"/>
   </compounddef>

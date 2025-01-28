@@ -62,19 +62,17 @@
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><ref refid="classDacHAL" kindref="compound">DacHAL</ref><sp/><ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">SpinAPI::dac</ref>;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><ref refid="classCompHAL" kindref="compound">CompHAL</ref><sp/><ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">SpinAPI::comp</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="classDataAPI" kindref="compound">DataAPI</ref><sp/><ref refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" kindref="member">SpinAPI::data</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><ref refid="classPwmHAL" kindref="compound">PwmHAL</ref><sp/><ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">SpinAPI::pwm</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="classCompHAL" kindref="compound">CompHAL</ref><sp/><ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">SpinAPI::comp</ref>;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_UART_API</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><ref refid="classUartHAL" kindref="compound">UartHAL</ref><sp/><ref refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" kindref="member">SpinAPI::uart</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><ref refid="classTimerHAL" kindref="compound">TimerHAL</ref><sp/><ref refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" kindref="member">SpinAPI::timer</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="classPwmHAL" kindref="compound">PwmHAL</ref><sp/><ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">SpinAPI::pwm</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_UART_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="classUartHAL" kindref="compound">UartHAL</ref><sp/><ref refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" kindref="member">SpinAPI::uart</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_DATA_API</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><ref refid="classDataAPI" kindref="compound">DataAPI</ref><sp/><ref refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" kindref="member">SpinAPI::data</ref>;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="classTimerHAL" kindref="compound">TimerHAL</ref><sp/><ref refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" kindref="member">SpinAPI::timer</ref>;</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.cpp"/>
   </compounddef>

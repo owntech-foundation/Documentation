@@ -39,6 +39,7 @@
 | enum  | [**DispatchMethod\_t**](#enum-dispatchmethod_t)  <br> |
 | enum int8\_t | [**adc\_t**](#enum-adc_t)  <br> |
 | enum uint8\_t | [**parameter\_t**](#enum-parameter_t)  <br> |
+| enum uint8\_t | [**trigger\_source\_t**](#enum-trigger_source_t)  <br> |
 
 
 
@@ -150,10 +151,26 @@ enum adc_t {
 enum parameter_t {
     gain = 1,
     offset = 2,
-    r0 = 1,
-    b = 2,
-    rdiv =3,
-    t0 =4
+    r0 = 3,
+    b = 4,
+    rdiv = 5,
+    t0 = 6
+};
+```
+
+
+
+
+<hr>
+
+
+
+### enum trigger\_source\_t 
+
+```C++
+enum trigger_source_t {
+    TRIG_SOFTWARE,
+    TRIG_PWM
 };
 ```
 

@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../spin/1.2.0/getting_started/" class="md-tabs__link">
+        <a href="../../spin/1.2.0/getting_started.md" class="md-tabs__link">
           
   
   Hardware
@@ -3344,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spin/1.2.0/getting_started/" class="md-nav__link">
+      <a href="../../spin/1.2.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../twist/1.4.1/getting_started/" class="md-nav__link">
+      <a href="../../twist/1.4.1/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ownverter/1.0.0/getting_started/" class="md-nav__link">
+      <a href="../../ownverter/1.0.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4183,7 +4183,7 @@
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_771164b9325b04f1442f7a3ffa8ecb89/"><strong>core</strong></a> <strong>&gt;</strong> <a href="../dir_09002e7ce91f09aeb040dfd1861a47f4/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_6d0fb8ab814c517e7f155fb837e32f72/"><strong>modules</strong></a> <strong>&gt;</strong> <a href="../dir_87330bcbf7fe698536ea5946c1b90585/"><strong>owntech_spin_api</strong></a> <strong>&gt;</strong> <a href="../dir_83abe2f3de580445b50d57f614c989e1/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_b0a9bfd1c37d418dc07d30cb79a776da/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../PwmHAL_8h/"><strong>PwmHAL.h</strong></a></p>
 <p><a href="../PwmHAL_8h/">Go to the documentation of this file</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2022-2023 LAAS-CNRS</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2022-2024 LAAS-CNRS</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> *</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> *   This program is free software: you can redistribute it and/or modify</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm"> *   it under the terms of the GNU Lesser General Public License as published by</span>
@@ -4212,7 +4212,7 @@
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arm_math.h&gt;</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
 <a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">// OwnTech API</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;adc.h&quot;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DataAPI.h&quot;</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hrtim_enum.h&quot;</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
 <a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span>
@@ -4277,9 +4277,9 @@
 <a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>
 <a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="w">     </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ps_ratio</span><span class="p">);</span>
 <a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
-<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="w">     </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">);</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="w">     </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc</span><span class="p">);</span>
 <a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>
-<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a><span class="w">     </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="nf">getAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">);</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a><span class="w">     </span><span class="n">adc_t</span><span class="w"> </span><span class="nf">getAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">);</span>
 <a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>
 <a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="w">     </span><span class="kt">void</span><span class="w"> </span><span class="nf">enableAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span><span class="p">);</span>
 <a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>

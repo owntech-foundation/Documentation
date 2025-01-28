@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  hrtim\_adc\_trigger\_t | [**dt\_adc**](#variable-dt_adc)   = `/* multi line expression */`<br> |
+|  adc\_t | [**dt\_adc**](#variable-dt_adc)   = `/* multi line expression */`<br> |
 |  uint32\_t | [**dt\_adc\_decim**](#variable-dt_adc_decim)   = `/* multi line expression */`<br> |
 |  uint16\_t | [**dt\_current\_pin**](#variable-dt_current_pin)   = `/* multi line expression */`<br> |
 |  hrtim\_adc\_edgetrigger\_t | [**dt\_edge\_trigger**](#variable-dt_edge_trigger)   = `/* multi line expression */`<br> |
@@ -103,12 +103,12 @@
 ### variable dt\_adc 
 
 ```C++
-hrtim_adc_trigger_t dt_adc[];
+adc_t dt_adc[];
 ```
 
 
 
-Define an array 'dt\_adc' of type 'hrtim\_adc\_trigger\_t' and initialize it with an array of 'adc\_trigger' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array 'dt\_adc' of type 'adc\_t' and initialize it with an array of 'adc' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
 
 
         
@@ -382,6 +382,13 @@ Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.f
 **Author:**
 
 Jean Alinei [jean.alinei@owntech.org](mailto:jean.alinei@owntech.org) 
+
+
+
+
+**Author:**
+
+Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
 
 
 

@@ -311,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../spin/1.2.0/getting_started/" class="md-tabs__link">
+        <a href="../../spin/1.2.0/getting_started.md" class="md-tabs__link">
           
   
   Hardware
@@ -3344,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spin/1.2.0/getting_started/" class="md-nav__link">
+      <a href="../../spin/1.2.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../twist/1.4.1/getting_started/" class="md-nav__link">
+      <a href="../../twist/1.4.1/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ownverter/1.0.0/getting_started/" class="md-nav__link">
+      <a href="../../ownverter/1.0.0/getting_started.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4183,7 +4183,7 @@
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_771164b9325b04f1442f7a3ffa8ecb89/"><strong>core</strong></a> <strong>&gt;</strong> <a href="../dir_09002e7ce91f09aeb040dfd1861a47f4/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_6d0fb8ab814c517e7f155fb837e32f72/"><strong>modules</strong></a> <strong>&gt;</strong> <a href="../dir_87330bcbf7fe698536ea5946c1b90585/"><strong>owntech_spin_api</strong></a> <strong>&gt;</strong> <a href="../dir_83abe2f3de580445b50d57f614c989e1/"><strong>zephyr</strong></a> <strong>&gt;</strong> <a href="../dir_b0a9bfd1c37d418dc07d30cb79a776da/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../PwmHAL_8cpp/"><strong>PwmHAL.cpp</strong></a></p>
 <p><a href="../PwmHAL_8cpp/">Go to the documentation of this file</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2021-2023 LAAS-CNRS</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Copyright (c) 2021-2024 LAAS-CNRS</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> *</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> *   This program is free software: you can redistribute it and/or modify</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm"> *   it under the terms of the GNU Lesser General Public License as published by</span>
@@ -4494,96 +4494,144 @@
 <a id="__codelineno-0-310" name="__codelineno-0-310" href="#__codelineno-0-310"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_adc_rollover_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
 <a id="__codelineno-0-311" name="__codelineno-0-311" href="#__codelineno-0-311"></a><span class="p">}</span>
 <a id="__codelineno-0-312" name="__codelineno-0-312" href="#__codelineno-0-312"></a>
-<a id="__codelineno-0-313" name="__codelineno-0-313" href="#__codelineno-0-313"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">)</span>
+<a id="__codelineno-0-313" name="__codelineno-0-313" href="#__codelineno-0-313"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc</span><span class="p">)</span>
 <a id="__codelineno-0-314" name="__codelineno-0-314" href="#__codelineno-0-314"></a><span class="p">{</span>
-<a id="__codelineno-0-315" name="__codelineno-0-315" href="#__codelineno-0-315"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
-<a id="__codelineno-0-316" name="__codelineno-0-316" href="#__codelineno-0-316"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
-<a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a><span class="w">    </span><span class="n">hrtim_adc_triger_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">);</span>
-<a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a><span class="p">}</span>
-<a id="__codelineno-0-319" name="__codelineno-0-319" href="#__codelineno-0-319"></a>
-<a id="__codelineno-0-320" name="__codelineno-0-320" href="#__codelineno-0-320"></a><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="nf">PwmHAL::getAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">)</span>
-<a id="__codelineno-0-321" name="__codelineno-0-321" href="#__codelineno-0-321"></a><span class="p">{</span>
-<a id="__codelineno-0-322" name="__codelineno-0-322" href="#__codelineno-0-322"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_adc_triger_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
-<a id="__codelineno-0-323" name="__codelineno-0-323" href="#__codelineno-0-323"></a><span class="p">}</span>
-<a id="__codelineno-0-324" name="__codelineno-0-324" href="#__codelineno-0-324"></a>
-<a id="__codelineno-0-325" name="__codelineno-0-325" href="#__codelineno-0-325"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setMode</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span>
-<a id="__codelineno-0-326" name="__codelineno-0-326" href="#__codelineno-0-326"></a><span class="p">{</span>
-<a id="__codelineno-0-327" name="__codelineno-0-327" href="#__codelineno-0-327"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
-<a id="__codelineno-0-328" name="__codelineno-0-328" href="#__codelineno-0-328"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
-<a id="__codelineno-0-329" name="__codelineno-0-329" href="#__codelineno-0-329"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
-<a id="__codelineno-0-330" name="__codelineno-0-330" href="#__codelineno-0-330"></a><span class="p">}</span>
-<a id="__codelineno-0-331" name="__codelineno-0-331" href="#__codelineno-0-331"></a>
-<a id="__codelineno-0-332" name="__codelineno-0-332" href="#__codelineno-0-332"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="nf">PwmHAL::getMode</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
-<a id="__codelineno-0-333" name="__codelineno-0-333" href="#__codelineno-0-333"></a><span class="p">{</span>
-<a id="__codelineno-0-334" name="__codelineno-0-334" href="#__codelineno-0-334"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_pwm_mode_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
-<a id="__codelineno-0-335" name="__codelineno-0-335" href="#__codelineno-0-335"></a><span class="p">}</span>
-<a id="__codelineno-0-336" name="__codelineno-0-336" href="#__codelineno-0-336"></a>
-<a id="__codelineno-0-337" name="__codelineno-0-337" href="#__codelineno-0-337"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setEev</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">eev</span><span class="p">)</span>
-<a id="__codelineno-0-338" name="__codelineno-0-338" href="#__codelineno-0-338"></a><span class="p">{</span>
-<a id="__codelineno-0-339" name="__codelineno-0-339" href="#__codelineno-0-339"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
-<a id="__codelineno-0-340" name="__codelineno-0-340" href="#__codelineno-0-340"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
-<a id="__codelineno-0-341" name="__codelineno-0-341" href="#__codelineno-0-341"></a><span class="w">    </span><span class="n">hrtim_eev_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">eev</span><span class="p">);</span>
-<a id="__codelineno-0-342" name="__codelineno-0-342" href="#__codelineno-0-342"></a><span class="p">}</span>
+<a id="__codelineno-0-315" name="__codelineno-0-315" href="#__codelineno-0-315"></a><span class="w">    </span><span class="c1">// Get trigger depending on ADC number,</span>
+<a id="__codelineno-0-316" name="__codelineno-0-316" href="#__codelineno-0-316"></a><span class="w">    </span><span class="c1">// and make sure the ADC is correct.</span>
+<a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">;</span>
+<a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a><span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">adc</span><span class="p">)</span>
+<a id="__codelineno-0-319" name="__codelineno-0-319" href="#__codelineno-0-319"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-320" name="__codelineno-0-320" href="#__codelineno-0-320"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADC_1</span><span class="p">:</span>
+<a id="__codelineno-0-321" name="__codelineno-0-321" href="#__codelineno-0-321"></a><span class="w">            </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">;</span>
+<a id="__codelineno-0-322" name="__codelineno-0-322" href="#__codelineno-0-322"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-323" name="__codelineno-0-323" href="#__codelineno-0-323"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADC_2</span><span class="p">:</span>
+<a id="__codelineno-0-324" name="__codelineno-0-324" href="#__codelineno-0-324"></a><span class="w">            </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADCTRIG_3</span><span class="p">;</span>
+<a id="__codelineno-0-325" name="__codelineno-0-325" href="#__codelineno-0-325"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-326" name="__codelineno-0-326" href="#__codelineno-0-326"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADC_3</span><span class="p">:</span>
+<a id="__codelineno-0-327" name="__codelineno-0-327" href="#__codelineno-0-327"></a><span class="w">            </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADCTRIG_5</span><span class="p">;</span>
+<a id="__codelineno-0-328" name="__codelineno-0-328" href="#__codelineno-0-328"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-329" name="__codelineno-0-329" href="#__codelineno-0-329"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADC_4</span><span class="p">:</span>
+<a id="__codelineno-0-330" name="__codelineno-0-330" href="#__codelineno-0-330"></a><span class="w">            </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADCTRIG_7</span><span class="p">;</span>
+<a id="__codelineno-0-331" name="__codelineno-0-331" href="#__codelineno-0-331"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-332" name="__codelineno-0-332" href="#__codelineno-0-332"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADC_5</span><span class="p">:</span>
+<a id="__codelineno-0-333" name="__codelineno-0-333" href="#__codelineno-0-333"></a><span class="w">            </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADCTRIG_9</span><span class="p">;</span>
+<a id="__codelineno-0-334" name="__codelineno-0-334" href="#__codelineno-0-334"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-335" name="__codelineno-0-335" href="#__codelineno-0-335"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">UNKNOWN_ADC</span><span class="p">:</span>
+<a id="__codelineno-0-336" name="__codelineno-0-336" href="#__codelineno-0-336"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">DEFAULT_ADC</span><span class="p">:</span>
+<a id="__codelineno-0-337" name="__codelineno-0-337" href="#__codelineno-0-337"></a><span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-0-338" name="__codelineno-0-338" href="#__codelineno-0-338"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-0-339" name="__codelineno-0-339" href="#__codelineno-0-339"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-340" name="__codelineno-0-340" href="#__codelineno-0-340"></a>
+<a id="__codelineno-0-341" name="__codelineno-0-341" href="#__codelineno-0-341"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
+<a id="__codelineno-0-342" name="__codelineno-0-342" href="#__codelineno-0-342"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
 <a id="__codelineno-0-343" name="__codelineno-0-343" href="#__codelineno-0-343"></a>
-<a id="__codelineno-0-344" name="__codelineno-0-344" href="#__codelineno-0-344"></a><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="nf">PwmHAL::getEev</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
-<a id="__codelineno-0-345" name="__codelineno-0-345" href="#__codelineno-0-345"></a><span class="p">{</span>
-<a id="__codelineno-0-346" name="__codelineno-0-346" href="#__codelineno-0-346"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_eev_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
-<a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a><span class="p">}</span>
-<a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a>
-<a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setAdcDecimation</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">decimation</span><span class="p">)</span>
-<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a><span class="p">{</span>
-<a id="__codelineno-0-351" name="__codelineno-0-351" href="#__codelineno-0-351"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">decimation</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
-<a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a><span class="w">        </span><span class="n">decimation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
-<a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">decimation</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-354" name="__codelineno-0-354" href="#__codelineno-0-354"></a><span class="w">        </span><span class="n">decimation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_set_postscaler</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">decimation</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-0-356" name="__codelineno-0-356" href="#__codelineno-0-356"></a><span class="p">}</span>
-<a id="__codelineno-0-357" name="__codelineno-0-357" href="#__codelineno-0-357"></a>
-<a id="__codelineno-0-358" name="__codelineno-0-358" href="#__codelineno-0-358"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setFrequency</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_update</span><span class="p">)</span>
-<a id="__codelineno-0-359" name="__codelineno-0-359" href="#__codelineno-0-359"></a><span class="p">{</span>
-<a id="__codelineno-0-360" name="__codelineno-0-360" href="#__codelineno-0-360"></a><span class="w">    </span><span class="n">hrtim_change_frequency</span><span class="p">(</span><span class="n">frequency_update</span><span class="p">);</span>
-<a id="__codelineno-0-361" name="__codelineno-0-361" href="#__codelineno-0-361"></a><span class="p">}</span>
-<a id="__codelineno-0-362" name="__codelineno-0-362" href="#__codelineno-0-362"></a>
-<a id="__codelineno-0-363" name="__codelineno-0-363" href="#__codelineno-0-363"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getFrequencyMax</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
-<a id="__codelineno-0-364" name="__codelineno-0-364" href="#__codelineno-0-364"></a><span class="p">{</span>
-<a id="__codelineno-0-365" name="__codelineno-0-365" href="#__codelineno-0-365"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_max_frequency</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
-<a id="__codelineno-0-366" name="__codelineno-0-366" href="#__codelineno-0-366"></a><span class="p">}</span>
-<a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a>
-<a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getFrequencyMin</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
-<a id="__codelineno-0-369" name="__codelineno-0-369" href="#__codelineno-0-369"></a><span class="p">{</span>
-<a id="__codelineno-0-370" name="__codelineno-0-370" href="#__codelineno-0-370"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_min_frequency</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-344" name="__codelineno-0-344" href="#__codelineno-0-344"></a><span class="w">    </span><span class="n">hrtim_adc_triger_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">adc_trig</span><span class="p">);</span>
+<a id="__codelineno-0-345" name="__codelineno-0-345" href="#__codelineno-0-345"></a><span class="p">}</span>
+<a id="__codelineno-0-346" name="__codelineno-0-346" href="#__codelineno-0-346"></a>
+<a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a><span class="n">adc_t</span><span class="w"> </span><span class="nf">PwmHAL::getAdcTrigger</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a><span class="p">{</span>
+<a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hrtim_adc_triger_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a>
+<a id="__codelineno-0-351" name="__codelineno-0-351" href="#__codelineno-0-351"></a><span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">adc_trig</span><span class="p">)</span>
+<a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADCTRIG_1</span><span class="p">:</span>
+<a id="__codelineno-0-354" name="__codelineno-0-354" href="#__codelineno-0-354"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ADC_1</span><span class="p">;</span>
+<a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-356" name="__codelineno-0-356" href="#__codelineno-0-356"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADCTRIG_3</span><span class="p">:</span>
+<a id="__codelineno-0-357" name="__codelineno-0-357" href="#__codelineno-0-357"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ADC_2</span><span class="p">;</span>
+<a id="__codelineno-0-358" name="__codelineno-0-358" href="#__codelineno-0-358"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-359" name="__codelineno-0-359" href="#__codelineno-0-359"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADCTRIG_5</span><span class="p">:</span>
+<a id="__codelineno-0-360" name="__codelineno-0-360" href="#__codelineno-0-360"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ADC_3</span><span class="p">;</span>
+<a id="__codelineno-0-361" name="__codelineno-0-361" href="#__codelineno-0-361"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-362" name="__codelineno-0-362" href="#__codelineno-0-362"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADCTRIG_7</span><span class="p">:</span>
+<a id="__codelineno-0-363" name="__codelineno-0-363" href="#__codelineno-0-363"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ADC_4</span><span class="p">;</span>
+<a id="__codelineno-0-364" name="__codelineno-0-364" href="#__codelineno-0-364"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-365" name="__codelineno-0-365" href="#__codelineno-0-365"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">ADCTRIG_9</span><span class="p">:</span>
+<a id="__codelineno-0-366" name="__codelineno-0-366" href="#__codelineno-0-366"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ADC_5</span><span class="p">;</span>
+<a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a><span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-0-369" name="__codelineno-0-369" href="#__codelineno-0-369"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">UNKNOWN_ADC</span><span class="p">;</span>
+<a id="__codelineno-0-370" name="__codelineno-0-370" href="#__codelineno-0-370"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-371" name="__codelineno-0-371" href="#__codelineno-0-371"></a><span class="p">}</span>
 <a id="__codelineno-0-372" name="__codelineno-0-372" href="#__codelineno-0-372"></a>
-<a id="__codelineno-0-373" name="__codelineno-0-373" href="#__codelineno-0-373"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getResolutionPs</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-373" name="__codelineno-0-373" href="#__codelineno-0-373"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setMode</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span>
 <a id="__codelineno-0-374" name="__codelineno-0-374" href="#__codelineno-0-374"></a><span class="p">{</span>
-<a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_resolution_ps</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
-<a id="__codelineno-0-376" name="__codelineno-0-376" href="#__codelineno-0-376"></a><span class="p">}</span>
-<a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a>
-<a id="__codelineno-0-378" name="__codelineno-0-378" href="#__codelineno-0-378"></a>
-<a id="__codelineno-0-379" name="__codelineno-0-379" href="#__codelineno-0-379"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::initBurstMode</span><span class="p">()</span>
-<a id="__codelineno-0-380" name="__codelineno-0-380" href="#__codelineno-0-380"></a><span class="p">{</span>
-<a id="__codelineno-0-381" name="__codelineno-0-381" href="#__codelineno-0-381"></a><span class="w">    </span><span class="n">hrtim_burst_mode_init</span><span class="p">();</span>
-<a id="__codelineno-0-382" name="__codelineno-0-382" href="#__codelineno-0-382"></a><span class="p">}</span>
-<a id="__codelineno-0-383" name="__codelineno-0-383" href="#__codelineno-0-383"></a>
-<a id="__codelineno-0-384" name="__codelineno-0-384" href="#__codelineno-0-384"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setBurstMode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">bm_cmp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bm_per</span><span class="p">)</span>
-<a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a><span class="p">{</span>
-<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a><span class="w">    </span><span class="n">hrtim_burst_set</span><span class="p">(</span><span class="n">bm_cmp</span><span class="p">,</span><span class="w"> </span><span class="n">bm_per</span><span class="p">);</span>
-<a id="__codelineno-0-387" name="__codelineno-0-387" href="#__codelineno-0-387"></a><span class="p">}</span>
-<a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a>
-<a id="__codelineno-0-389" name="__codelineno-0-389" href="#__codelineno-0-389"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::startBurstMode</span><span class="p">()</span>
-<a id="__codelineno-0-390" name="__codelineno-0-390" href="#__codelineno-0-390"></a><span class="p">{</span>
-<a id="__codelineno-0-391" name="__codelineno-0-391" href="#__codelineno-0-391"></a><span class="w">    </span><span class="n">hrtim_burst_start</span><span class="p">();</span>
-<a id="__codelineno-0-392" name="__codelineno-0-392" href="#__codelineno-0-392"></a><span class="p">}</span>
-<a id="__codelineno-0-393" name="__codelineno-0-393" href="#__codelineno-0-393"></a>
-<a id="__codelineno-0-394" name="__codelineno-0-394" href="#__codelineno-0-394"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::stopBurstMode</span><span class="p">()</span>
-<a id="__codelineno-0-395" name="__codelineno-0-395" href="#__codelineno-0-395"></a><span class="p">{</span>
-<a id="__codelineno-0-396" name="__codelineno-0-396" href="#__codelineno-0-396"></a><span class="w">    </span><span class="n">hrtim_burst_stop</span><span class="p">();</span>
-<a id="__codelineno-0-397" name="__codelineno-0-397" href="#__codelineno-0-397"></a><span class="p">}</span>
-<a id="__codelineno-0-398" name="__codelineno-0-398" href="#__codelineno-0-398"></a>
-<a id="__codelineno-0-399" name="__codelineno-0-399" href="#__codelineno-0-399"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::deInitBurstMode</span><span class="p">()</span>
-<a id="__codelineno-0-400" name="__codelineno-0-400" href="#__codelineno-0-400"></a><span class="p">{</span>
-<a id="__codelineno-0-401" name="__codelineno-0-401" href="#__codelineno-0-401"></a><span class="w">    </span><span class="n">hrtim_burst_dis</span><span class="p">();</span>
-<a id="__codelineno-0-402" name="__codelineno-0-402" href="#__codelineno-0-402"></a><span class="p">}</span>
+<a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
+<a id="__codelineno-0-376" name="__codelineno-0-376" href="#__codelineno-0-376"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
+<a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+<a id="__codelineno-0-378" name="__codelineno-0-378" href="#__codelineno-0-378"></a><span class="p">}</span>
+<a id="__codelineno-0-379" name="__codelineno-0-379" href="#__codelineno-0-379"></a>
+<a id="__codelineno-0-380" name="__codelineno-0-380" href="#__codelineno-0-380"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="nf">PwmHAL::getMode</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-381" name="__codelineno-0-381" href="#__codelineno-0-381"></a><span class="p">{</span>
+<a id="__codelineno-0-382" name="__codelineno-0-382" href="#__codelineno-0-382"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_pwm_mode_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-383" name="__codelineno-0-383" href="#__codelineno-0-383"></a><span class="p">}</span>
+<a id="__codelineno-0-384" name="__codelineno-0-384" href="#__codelineno-0-384"></a>
+<a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setEev</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">eev</span><span class="p">)</span>
+<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a><span class="p">{</span>
+<a id="__codelineno-0-387" name="__codelineno-0-387" href="#__codelineno-0-387"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hrtim_get_status</span><span class="p">(</span><span class="n">pwmX</span><span class="p">))</span>
+<a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a><span class="w">        </span><span class="n">hrtim_init_default_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// initialize default parameters before</span>
+<a id="__codelineno-0-389" name="__codelineno-0-389" href="#__codelineno-0-389"></a><span class="w">    </span><span class="n">hrtim_eev_set</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">eev</span><span class="p">);</span>
+<a id="__codelineno-0-390" name="__codelineno-0-390" href="#__codelineno-0-390"></a><span class="p">}</span>
+<a id="__codelineno-0-391" name="__codelineno-0-391" href="#__codelineno-0-391"></a>
+<a id="__codelineno-0-392" name="__codelineno-0-392" href="#__codelineno-0-392"></a><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="nf">PwmHAL::getEev</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-393" name="__codelineno-0-393" href="#__codelineno-0-393"></a><span class="p">{</span>
+<a id="__codelineno-0-394" name="__codelineno-0-394" href="#__codelineno-0-394"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_eev_get</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-395" name="__codelineno-0-395" href="#__codelineno-0-395"></a><span class="p">}</span>
+<a id="__codelineno-0-396" name="__codelineno-0-396" href="#__codelineno-0-396"></a>
+<a id="__codelineno-0-397" name="__codelineno-0-397" href="#__codelineno-0-397"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setAdcDecimation</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">decimation</span><span class="p">)</span>
+<a id="__codelineno-0-398" name="__codelineno-0-398" href="#__codelineno-0-398"></a><span class="p">{</span>
+<a id="__codelineno-0-399" name="__codelineno-0-399" href="#__codelineno-0-399"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">decimation</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
+<a id="__codelineno-0-400" name="__codelineno-0-400" href="#__codelineno-0-400"></a><span class="w">        </span><span class="n">decimation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
+<a id="__codelineno-0-401" name="__codelineno-0-401" href="#__codelineno-0-401"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">decimation</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-402" name="__codelineno-0-402" href="#__codelineno-0-402"></a><span class="w">        </span><span class="n">decimation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-403" name="__codelineno-0-403" href="#__codelineno-0-403"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_set_postscaler</span><span class="p">(</span><span class="n">pwmX</span><span class="p">,</span><span class="w"> </span><span class="n">decimation</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-404" name="__codelineno-0-404" href="#__codelineno-0-404"></a><span class="p">}</span>
+<a id="__codelineno-0-405" name="__codelineno-0-405" href="#__codelineno-0-405"></a>
+<a id="__codelineno-0-406" name="__codelineno-0-406" href="#__codelineno-0-406"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setFrequency</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_update</span><span class="p">)</span>
+<a id="__codelineno-0-407" name="__codelineno-0-407" href="#__codelineno-0-407"></a><span class="p">{</span>
+<a id="__codelineno-0-408" name="__codelineno-0-408" href="#__codelineno-0-408"></a><span class="w">    </span><span class="n">hrtim_change_frequency</span><span class="p">(</span><span class="n">frequency_update</span><span class="p">);</span>
+<a id="__codelineno-0-409" name="__codelineno-0-409" href="#__codelineno-0-409"></a><span class="p">}</span>
+<a id="__codelineno-0-410" name="__codelineno-0-410" href="#__codelineno-0-410"></a>
+<a id="__codelineno-0-411" name="__codelineno-0-411" href="#__codelineno-0-411"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getFrequencyMax</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-412" name="__codelineno-0-412" href="#__codelineno-0-412"></a><span class="p">{</span>
+<a id="__codelineno-0-413" name="__codelineno-0-413" href="#__codelineno-0-413"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_max_frequency</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-414" name="__codelineno-0-414" href="#__codelineno-0-414"></a><span class="p">}</span>
+<a id="__codelineno-0-415" name="__codelineno-0-415" href="#__codelineno-0-415"></a>
+<a id="__codelineno-0-416" name="__codelineno-0-416" href="#__codelineno-0-416"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getFrequencyMin</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-417" name="__codelineno-0-417" href="#__codelineno-0-417"></a><span class="p">{</span>
+<a id="__codelineno-0-418" name="__codelineno-0-418" href="#__codelineno-0-418"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_min_frequency</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-419" name="__codelineno-0-419" href="#__codelineno-0-419"></a><span class="p">}</span>
+<a id="__codelineno-0-420" name="__codelineno-0-420" href="#__codelineno-0-420"></a>
+<a id="__codelineno-0-421" name="__codelineno-0-421" href="#__codelineno-0-421"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PwmHAL::getResolutionPs</span><span class="p">(</span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">)</span>
+<a id="__codelineno-0-422" name="__codelineno-0-422" href="#__codelineno-0-422"></a><span class="p">{</span>
+<a id="__codelineno-0-423" name="__codelineno-0-423" href="#__codelineno-0-423"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hrtim_get_resolution_ps</span><span class="p">(</span><span class="n">pwmX</span><span class="p">);</span>
+<a id="__codelineno-0-424" name="__codelineno-0-424" href="#__codelineno-0-424"></a><span class="p">}</span>
+<a id="__codelineno-0-425" name="__codelineno-0-425" href="#__codelineno-0-425"></a>
+<a id="__codelineno-0-426" name="__codelineno-0-426" href="#__codelineno-0-426"></a>
+<a id="__codelineno-0-427" name="__codelineno-0-427" href="#__codelineno-0-427"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::initBurstMode</span><span class="p">()</span>
+<a id="__codelineno-0-428" name="__codelineno-0-428" href="#__codelineno-0-428"></a><span class="p">{</span>
+<a id="__codelineno-0-429" name="__codelineno-0-429" href="#__codelineno-0-429"></a><span class="w">    </span><span class="n">hrtim_burst_mode_init</span><span class="p">();</span>
+<a id="__codelineno-0-430" name="__codelineno-0-430" href="#__codelineno-0-430"></a><span class="p">}</span>
+<a id="__codelineno-0-431" name="__codelineno-0-431" href="#__codelineno-0-431"></a>
+<a id="__codelineno-0-432" name="__codelineno-0-432" href="#__codelineno-0-432"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::setBurstMode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">bm_cmp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bm_per</span><span class="p">)</span>
+<a id="__codelineno-0-433" name="__codelineno-0-433" href="#__codelineno-0-433"></a><span class="p">{</span>
+<a id="__codelineno-0-434" name="__codelineno-0-434" href="#__codelineno-0-434"></a><span class="w">    </span><span class="n">hrtim_burst_set</span><span class="p">(</span><span class="n">bm_cmp</span><span class="p">,</span><span class="w"> </span><span class="n">bm_per</span><span class="p">);</span>
+<a id="__codelineno-0-435" name="__codelineno-0-435" href="#__codelineno-0-435"></a><span class="p">}</span>
+<a id="__codelineno-0-436" name="__codelineno-0-436" href="#__codelineno-0-436"></a>
+<a id="__codelineno-0-437" name="__codelineno-0-437" href="#__codelineno-0-437"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::startBurstMode</span><span class="p">()</span>
+<a id="__codelineno-0-438" name="__codelineno-0-438" href="#__codelineno-0-438"></a><span class="p">{</span>
+<a id="__codelineno-0-439" name="__codelineno-0-439" href="#__codelineno-0-439"></a><span class="w">    </span><span class="n">hrtim_burst_start</span><span class="p">();</span>
+<a id="__codelineno-0-440" name="__codelineno-0-440" href="#__codelineno-0-440"></a><span class="p">}</span>
+<a id="__codelineno-0-441" name="__codelineno-0-441" href="#__codelineno-0-441"></a>
+<a id="__codelineno-0-442" name="__codelineno-0-442" href="#__codelineno-0-442"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::stopBurstMode</span><span class="p">()</span>
+<a id="__codelineno-0-443" name="__codelineno-0-443" href="#__codelineno-0-443"></a><span class="p">{</span>
+<a id="__codelineno-0-444" name="__codelineno-0-444" href="#__codelineno-0-444"></a><span class="w">    </span><span class="n">hrtim_burst_stop</span><span class="p">();</span>
+<a id="__codelineno-0-445" name="__codelineno-0-445" href="#__codelineno-0-445"></a><span class="p">}</span>
+<a id="__codelineno-0-446" name="__codelineno-0-446" href="#__codelineno-0-446"></a>
+<a id="__codelineno-0-447" name="__codelineno-0-447" href="#__codelineno-0-447"></a><span class="kt">void</span><span class="w"> </span><span class="nf">PwmHAL::deInitBurstMode</span><span class="p">()</span>
+<a id="__codelineno-0-448" name="__codelineno-0-448" href="#__codelineno-0-448"></a><span class="p">{</span>
+<a id="__codelineno-0-449" name="__codelineno-0-449" href="#__codelineno-0-449"></a><span class="w">    </span><span class="n">hrtim_burst_dis</span><span class="p">();</span>
+<a id="__codelineno-0-450" name="__codelineno-0-450" href="#__codelineno-0-450"></a><span class="p">}</span>
 </code></pre></div>
 
 <!-- Source file information -->

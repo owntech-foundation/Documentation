@@ -59,7 +59,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**enableAdcTrigger**](#function-enableadctrigger) (hrtim\_tu\_number\_t tu\_number) <br>_This function enables the adc trigger for the selected timing unit._  |
 |  void | [**enablePeriodEvnt**](#function-enableperiodevnt) (hrtim\_tu\_t PWM\_tu) <br>_This function enables the interrupt on repetition counter._  |
 |  hrtim\_adc\_edgetrigger\_t | [**getAdcEdgeTrigger**](#function-getadcedgetrigger) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the adc trigger rollover mode for the selected timer._  |
-|  hrtim\_adc\_trigger\_t | [**getAdcTrigger**](#function-getadctrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_trigger\_t adc\_trig) <br>_This function returns the adc trigger linked to a timer unit._  |
+|  adc\_t | [**getAdcTrigger**](#function-getadctrigger) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the adc trigger linked to a timer unit._  |
 |  hrtim\_external\_trigger\_t | [**getEev**](#function-geteev) (hrtim\_tu\_number\_t pwmX) <br>_This function sets the external event linked to the timing unit used for the current mode._  |
 |  uint32\_t | [**getFrequencyMax**](#function-getfrequencymax) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the maximum frequency of the selected timer in Hz._  |
 |  uint32\_t | [**getFrequencyMin**](#function-getfrequencymin) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the minimum frequency of the selected timer in Hz._  |
@@ -78,7 +78,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**initVariableFrequency**](#function-initvariablefrequency) (uint32\_t initial\_frequency, uint32\_t minimal\_frequency) <br>_This functions initializes the PWM for variable frequency applications._  |
 |  void | [**setAdcDecimation**](#function-setadcdecimation) (hrtim\_tu\_number\_t pwmX, uint32\_t decimation) <br>_This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger._  |
 |  void | [**setAdcEdgeTrigger**](#function-setadcedgetrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_edgetrigger\_t adc\_edge\_trigger) <br>_This function sets the adc trig rollover mode for the selected timer._  |
-|  void | [**setAdcTrigger**](#function-setadctrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_trigger\_t adc\_trig) <br>_This function sets the adc trigger linked to a timer unit._  |
+|  void | [**setAdcTrigger**](#function-setadctrigger) (hrtim\_tu\_number\_t pwmX, adc\_t adc) <br>_This function sets the adc trigger linked to a timer unit._  |
 |  void | [**setAdcTriggerInstant**](#function-setadctriggerinstant) (hrtim\_tu\_number\_t pwmX, float32\_t trig\_val) <br>_This function sets the comparator value at which the ADC is trigered._  |
 |  void | [**setAdcTriggerPostScaler**](#function-setadctriggerpostscaler) (hrtim\_tu\_number\_t pwmX, uint32\_t ps\_ratio) <br>_This function sets the PostScaler value for the selected timing unit._  |
 |  void | [**setBurstMode**](#function-setburstmode) (int bm\_cmp, int bm\_per) <br>_This function sets burst mode parameters._  |
@@ -342,9 +342,8 @@ Rollover mode - EdgeTrigger\_up, EdgeTrigger\_down, EdgeTrigger\_Both
 
 _This function returns the adc trigger linked to a timer unit._ 
 ```C++
-hrtim_adc_trigger_t PwmHAL::getAdcTrigger (
-    hrtim_tu_number_t pwmX,
-    hrtim_adc_trigger_t adc_trig
+adc_t PwmHAL::getAdcTrigger (
+    hrtim_tu_number_t pwmX
 ) 
 ```
 
@@ -361,7 +360,7 @@ hrtim_adc_trigger_t PwmHAL::getAdcTrigger (
 
 **Returns:**
 
-adc trigger - ADCTRIG\_1, ADCTRIG\_2, ADCTRIG\_3 et ADCTRIG\_4 
+adc - ADC\_1, ADC\_2, ADC\_3, ADC\_4, ADC\_5 or UNKNOWN\_ADC if the ADC trigger was not configured for this timing unit. 
 
 
 
@@ -837,7 +836,7 @@ void PwmHAL::initUnit (
 
 **Date:**
 
-2023 
+2024 
 
 
 
@@ -984,7 +983,7 @@ _This function sets the adc trigger linked to a timer unit._
 ```C++
 void PwmHAL::setAdcTrigger (
     hrtim_tu_number_t pwmX,
-    hrtim_adc_trigger_t adc_trig
+    adc_t adc
 ) 
 ```
 
@@ -996,7 +995,7 @@ void PwmHAL::setAdcTrigger (
 
 
 * `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `adc_trig` adc trigger - ADCTRIG\_1, ADCTRIG\_2, ADCTRIG\_3 et ADCTRIG\_4
+* `adc` adc - ADC\_1, ADC\_2, ADC\_3, ADC\_4 or ADC\_5
 
 
 

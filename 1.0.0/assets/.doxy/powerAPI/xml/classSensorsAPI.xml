@@ -766,7 +766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="411" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="301" bodyend="339"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="411" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="301" bodyend="338"/>
       </memberdef>
       <memberdef kind="function" id="classSensorsAPI_1a8cab93e63da26425b8c92871747b696f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -787,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="430" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="350" bodyend="462"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="430" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="349" bodyend="461"/>
       </memberdef>
       <memberdef kind="function" id="classSensorsAPI_1a1577482ecd599fcd7083ef896821780d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -818,7 +818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="442" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="341" bodyend="348"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="442" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="340" bodyend="347"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -851,7 +851,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="460" column="15" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="468" bodyend="485"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="460" column="15" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="467" bodyend="484"/>
       </memberdef>
       <memberdef kind="function" id="classSensorsAPI_1a06a4d8fdb13e6e534600060a90b680f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -866,7 +866,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="465" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="487" bodyend="632"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="465" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="486" bodyend="631"/>
       </memberdef>
       <memberdef kind="function" id="classSensorsAPI_1a6a98486f283d49d18549a20a24f13335" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -889,7 +889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="470" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="635" bodyend="668"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="470" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="634" bodyend="667"/>
       </memberdef>
       <memberdef kind="function" id="classSensorsAPI_1a03e69024f1f0119f80b11bfc68f2948a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -912,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="475" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="670" bodyend="702"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="475" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.cpp" bodystart="669" bodyend="701"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

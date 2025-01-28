@@ -33,6 +33,7 @@
 
 #include <zephyr/kernel.h>
 #include "hrtim.h"
+#include "SpinAPI.h"
 
 #define LEG_PWM_PIN(node_id)    DT_PROP_BY_IDX(node_id, pwm_pin_num, 0),
 
@@ -40,7 +41,7 @@
 
 #define LEG_CURRENT_PIN(node_id)    DT_PROP_OR(node_id, current_pin_num, 0),
 
-#define LEG_ADC(node_id)    DT_STRING_TOKEN(node_id, default_adc_trigger),
+#define LEG_ADC(node_id)    DT_STRING_TOKEN(node_id, default_adc),
 
 #define LEG_EDGE_TRIGGER(node_id)   DT_STRING_TOKEN(node_id, default_edge_trigger),
 
@@ -84,7 +85,7 @@ extern uint16_t dt_pwm_pin[];
 
 extern uint16_t dt_pwm_x1_high[];
 
-extern hrtim_adc_trigger_t dt_adc[];
+extern adc_t dt_adc[];
 
 extern uint32_t dt_adc_decim[];
 

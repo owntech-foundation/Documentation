@@ -42,9 +42,6 @@
 // ARM CMSIS library
 #include <arm_math.h>
 
-// Other modules includes
-#include "adc.h"
-
 // Current module private functions
 #include "./data/data_conversion.h"
 
@@ -53,13 +50,12 @@
 
 typedef enum : uint8_t
 {
-    gain = 1,
+    gain   = 1,
     offset = 2,
-    r0 = 1,
-    b = 2,
-    rdiv =3,
-    t0=4
-
+    r0     = 3,
+    b      = 4,
+    rdiv   = 5,
+    t0     = 6
 } parameter_t;
 
 typedef enum : int8_t
@@ -72,6 +68,12 @@ typedef enum : int8_t
     ADC_4 = 4,
     ADC_5 = 5
 } adc_t;
+
+typedef enum : uint8_t
+{
+    TRIG_SOFTWARE,
+    TRIG_PWM
+} trigger_source_t;
 
 enum class DispatchMethod_t
 {
@@ -139,7 +141,7 @@ public:
 
     void configureDiscontinuousMode(adc_t adc_number, uint32_t dicontinuous_count);
 
-    void configureTriggerSource(adc_t adc_number, adc_ev_src_t trigger_source);
+    void configureTriggerSource(adc_t adc_number, trigger_source_t trigger_source);
 
 private:
     static void initializeAllAdcs();

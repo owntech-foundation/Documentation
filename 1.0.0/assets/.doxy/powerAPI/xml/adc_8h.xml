@@ -46,13 +46,53 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="adc_8h_1a703e6b265d154b949aef16f1ac227e03a0c7efa3a2f95fca02e7695d86b85e120" prot="public">
+          <name>hrtim_ev5</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="adc_8h_1a703e6b265d154b949aef16f1ac227e03a4da3003127098ff800230522b25cacd9" prot="public">
+          <name>hrtim_ev6</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="adc_8h_1a703e6b265d154b949aef16f1ac227e03a212c785c9caa1b9039b10066c34f9ce8" prot="public">
+          <name>hrtim_ev7</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="adc_8h_1a703e6b265d154b949aef16f1ac227e03a45c4b9a243a89b890133b39c54b83fc8" prot="public">
+          <name>hrtim_ev8</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="adc_8h_1a703e6b265d154b949aef16f1ac227e03a8050a68140c6cd89215c1113f8137b57" prot="public">
+          <name>hrtim_ev9</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="54" column="1" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" bodystart="55" bodyend="61"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="54" column="1" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" bodystart="55" bodyend="66"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -98,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="77" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="58" bodyend="65" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="77" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="82" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="58" bodyend="65" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="82" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a6962239e7177122285b590c09030a952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="90" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="67" bodyend="73" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="90" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="95" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="67" bodyend="73" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="95" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1abb2103539ae8b8cf3d9289983abc4948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -183,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="105" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="75" bodyend="87" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="105" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="110" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="75" bodyend="87" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="110" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1ab9594262be9a690becb6ab78d356e180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -224,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="121" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="89" bodyend="111" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="121" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="126" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="89" bodyend="111" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="126" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a193ab1274deaf0a4685d830fb16a5ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -254,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="129" column="10" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="113" bodyend="121" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="129" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="134" column="10" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="113" bodyend="121" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="134" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a244cdd15c09b9235c5f892cf6e17e543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -298,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="142" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="123" bodyend="129" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="142" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="147" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="123" bodyend="129" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="147" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1aeaf45f9b1d6544d926ba47b2b175f004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -312,7 +352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="148" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="131" bodyend="233" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="148" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="153" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="131" bodyend="248" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="153" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a92d4b3d1bd95c7cb3f61269ca2d87bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -326,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="153" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="235" bodyend="245" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="153" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="158" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="250" bodyend="260" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="158" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a6958d91487f2d7fcaed66d1a6b1c1442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -359,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="164" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="247" bodyend="250" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="164" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" line="169" column="6" bodyfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.c" bodystart="262" bodyend="265" declfile="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h" declline="169" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -368,7 +408,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2024<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -411,36 +451,41 @@
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev2<sp/>=<sp/>2,</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev3<sp/>=<sp/>3,</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev4<sp/>=<sp/>4,</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">}<sp/>adc_ev_src_t;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>API</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_trigger_source(uint8_t<sp/>adc_number,<sp/>adc_ev_src_t<sp/>trigger_source);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_discontinuous_mode(uint8_t<sp/>adc_number,<sp/>uint32_t<sp/>discontinuous_count);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_add_channel(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_remove_channel(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal">uint32_t<sp/>adc_get_enabled_channels_count(uint8_t<sp/>adc_number);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_use_dma(uint8_t<sp/>adc_number,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_dma);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_start();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev5<sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev6<sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev7<sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev8<sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>hrtim_ev9<sp/>=<sp/>9</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/>adc_ev_src_t;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_trigger_source(uint8_t<sp/>adc_number,<sp/>adc_ev_src_t<sp/>trigger_source);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_discontinuous_mode(uint8_t<sp/>adc_number,<sp/>uint32_t<sp/>discontinuous_count);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_add_channel(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_remove_channel(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">uint32_t<sp/>adc_get_enabled_channels_count(uint8_t<sp/>adc_number);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_configure_use_dma(uint8_t<sp/>adc_number,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_dma);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_stop();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_start();</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_trigger_software_conversion(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>number_of_acquisitions);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_stop();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>adc_trigger_software_conversion(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>number_of_acquisitions);</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ADC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ADC_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_adc_driver/zephyr/public_api/adc.h"/>
   </compounddef>

@@ -106,7 +106,12 @@ enum adc_ev_src_t {
     hrtim_ev1 = 1,
     hrtim_ev2 = 2,
     hrtim_ev3 = 3,
-    hrtim_ev4 = 4
+    hrtim_ev4 = 4,
+    hrtim_ev5 = 5,
+    hrtim_ev6 = 6,
+    hrtim_ev7 = 7,
+    hrtim_ev8 = 8,
+    hrtim_ev9 = 9
 };
 ```
 

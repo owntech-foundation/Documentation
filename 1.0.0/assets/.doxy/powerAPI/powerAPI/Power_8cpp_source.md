@@ -96,7 +96,7 @@ void PowerAPI::initMode(leg_t leg,                                             \
         /* Configure ADC rollover in center aligned mode */
         spin.pwm.setAdcEdgeTrigger(spinNumberToTu(dt_pwm_pin[i]),              \
                                 dt_edge_trigger[i]);
-         
+
         if (leg_mode == CURRENT_MODE)
         {
             if (dt_current_pin[i] == CM_DAC3)
@@ -128,15 +128,17 @@ void PowerAPI::initMode(leg_t leg,                                             \
                                         dt_rising_deadtime[i],                \
                                         dt_falling_deadtime[i]);
 
-        if (dt_adc[i] != ADCTRIG_NONE)
+        if (dt_adc[i] != UNKNOWN_ADC)
         {
             spin.pwm.setAdcDecimation(spinNumberToTu(dt_pwm_pin[i]),          \
-                                                 dt_adc_decim[i]);
+                                      dt_adc_decim[i]);
 
             spin.pwm.setAdcTrigger(spinNumberToTu(dt_pwm_pin[i]),             \
-                                              dt_adc[i]);
+                                   dt_adc[i]);
 
             spin.pwm.enableAdcTrigger(spinNumberToTu(dt_pwm_pin[i]));
+
+            spin.data.configureTriggerSource(dt_adc[i], TRIG_PWM);
         }
 
         if (leg_mode == CURRENT_MODE)
@@ -588,7 +590,6 @@ void PowerAPI::initBoost(leg_t leg)
         }
     }
 }
-
 ```
 
 

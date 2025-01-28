@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-2024 LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -38,7 +38,7 @@
 #include <arm_math.h>
 
 // OwnTech API
-#include "adc.h"
+#include "DataAPI.h"
 #include "hrtim_enum.h"
 
 typedef enum
@@ -103,9 +103,9 @@ public:
 
      void setAdcTriggerPostScaler(hrtim_tu_number_t pwmX, uint32_t ps_ratio);
 
-     void setAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
+     void setAdcTrigger(hrtim_tu_number_t pwmX, adc_t adc);
 
-     hrtim_adc_trigger_t getAdcTrigger(hrtim_tu_number_t pwmX, hrtim_adc_trigger_t adc_trig);
+     adc_t getAdcTrigger(hrtim_tu_number_t pwmX);
 
      void enableAdcTrigger(hrtim_tu_number_t tu_number);
 

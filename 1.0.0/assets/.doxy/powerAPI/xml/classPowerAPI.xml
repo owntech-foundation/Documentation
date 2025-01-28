@@ -22,11 +22,13 @@
 </simplesect>
 <simplesect kind="author"><para>Jean Alinei <ulink url="mailto:jean.alinei@owntech.org">jean.alinei@owntech.org</ulink> </para>
 </simplesect>
+<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="50" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="32" bodyend="62"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="50" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="33" bodyend="63"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -89,7 +91,7 @@
 <para>Choose which DAC controls the leg in current mode</para>
 <para>Only relevant for twist and ownverter hardware, to enable optocouplers for MOSFET driver and connection to electrolytic capacitor</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="64" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="64" bodyend="194"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="64" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="65" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a4ba345b7c6691d0f4fdf2e547d9d2422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="79" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="197" bodyend="231"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="79" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="200" bodyend="234"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1abfb00fe45a04ef128e1ec734559e43a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +164,7 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to enable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="93" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="233" bodyend="271"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="93" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="236" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a327ca39eb545213ff3201518c01f1dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -192,7 +194,7 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to disable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="100" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="273" bodyend="304"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="100" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="276" bodyend="307"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1aad16833a793449732c379047d7a765d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="109" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="308" bodyend="332"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="109" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="311" bodyend="335"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a32fc0e1db758d17bedbe22d1adc5b20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -254,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="118" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="334" bodyend="358"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="118" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="337" bodyend="361"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a3e02864cb637506fcde7e563d48c1a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -285,7 +287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="128" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="364" bodyend="387"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="128" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="367" bodyend="390"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a89cb699e02b7136c9b00d5152e1d044d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -316,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="138" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="389" bodyend="412"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="138" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="392" bodyend="415"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a7173c11ed985462663b6b76b4f2609e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -358,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="150" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="451" bodyend="483"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="150" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="454" bodyend="486"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1ac621d3511a7584ec6781920d1d966665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="158" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="485" bodyend="506"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="158" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="488" bodyend="509"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a646d84a6ffa8a83e9cf209e4c6efaff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -454,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="171" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="416" bodyend="449"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="171" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="419" bodyend="452"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a38b4ff1bd2f2fe1ed8ad88d0ee1fa658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -507,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="182" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="508" bodyend="532"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="182" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="511" bodyend="535"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a762963be2eda26a77facd81070efacfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -549,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="198" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="535" bodyend="556"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="198" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="538" bodyend="559"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a845b9c1008aa86deac765ca73ed381f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -591,7 +593,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="207" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="559" bodyend="589"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="207" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="562" bodyend="592"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a89a40dc093a20d11620549c601ccabe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -620,7 +622,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="215" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="591" bodyend="621"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="215" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="594" bodyend="624"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

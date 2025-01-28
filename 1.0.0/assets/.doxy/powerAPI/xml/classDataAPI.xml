@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="101" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="101" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="103" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classDataAPI_1aaf0811e412708fc111d5c121f97cd9c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="102" column="13"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="104" column="13"/>
       </memberdef>
       <memberdef kind="friend" id="classDataAPI_1a3a4c04db9ff8cba7f3b4606264d63177" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="103" column="13"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="105" column="13"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="463" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="463" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="465" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="465" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1acd293f6108985afa29d7ebbc5a968124" prot="private" static="yes" mutable="no">
         <type>bool</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="464" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="464" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="466" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="466" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a0a1fc6398661eddab3c662cb75292a65" prot="private" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="465" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="47" bodyend="47"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="467" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1aa0c1000fc5ea7ae9a92e18878bbc7906" prot="private" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="466" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="48" bodyend="48"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="468" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1ae19ede93eb2655a763eeaf83ea0420a4" prot="private" static="yes" mutable="no">
         <type>DispatchMethod_t</type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="467" column="25" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="467" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="469" column="25" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="469" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a0d949a03948434ebfbfa3c7f5de23412" prot="private" static="yes" mutable="no">
         <type>uint32_t</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="468" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="468" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="470" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="470" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a70ac94ae0b2ea1f35afdcc236d1b7214" prot="private" static="yes" mutable="no">
         <type>adc_t</type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="469" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="54" bodyend="54"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="471" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="55" bodyend="55"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1acd0b5c25cdf42a94a60811e2fead798b" prot="private" static="yes" mutable="no">
         <type>float32_t ***</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="470" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="470" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="472" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="472" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -234,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="130" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="63" bodyend="88"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="132" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="64" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4656e02f0227660869d5167f456fedfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="162" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="90" bodyend="125"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="164" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="91" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="177" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="127" bodyend="130"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="179" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="128" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="186" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="132" bodyend="160"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="188" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="133" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="199" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="162" bodyend="177"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="201" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="163" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="235" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="179" bodyend="196"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="237" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="180" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aed44259775058a42eccd5603a4137d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t *</type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="271" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="198" bodyend="215"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="273" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="199" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a71c77e8ada7b064600e89a1e1a827ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -466,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="290" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="217" bodyend="232"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="292" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="218" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -519,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="320" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="234" bodyend="257"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="322" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="235" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -564,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="334" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="259" bodyend="274"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="336" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="260" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a55bc18d5cbcb646fa0dca4cad6d83d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -619,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="349" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="276" bodyend="291"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="351" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="277" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a8400bb28ffd38fea3edac8963bc59a7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -698,7 +698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="365" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="293" bodyend="308"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="367" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="294" bodyend="309"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a5d5fed98f96043bf30ade4b0004a9596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -743,7 +743,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="377" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="311" bodyend="326"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="379" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="312" bodyend="327"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a2d129bb41de793a9ba79e33cd7bf858f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>conversion_type_t</type>
@@ -776,7 +776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="388" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="328" bodyend="343"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="390" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="329" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -807,7 +807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="399" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="345" bodyend="360"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="401" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="346" bodyend="361"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a866cf1113a45f2a7b52421ac2fb72582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -838,7 +838,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="413" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="363" bodyend="378"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="415" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="364" bodyend="379"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -882,12 +882,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="429" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="380" bodyend="394"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="431" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="381" bodyend="395"/>
       </memberdef>
-      <memberdef kind="function" id="classDataAPI_1a0bcaaf297fd0644f2aee31723069a2e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classDataAPI_1a145c0e66e99fbf0a9952e667e1317fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DataAPI::configureTriggerSource</definition>
-        <argsstring>(adc_t adc_number, adc_ev_src_t trigger_source)</argsstring>
+        <argsstring>(adc_t adc_number, trigger_source_t trigger_source)</argsstring>
         <name>configureTriggerSource</name>
         <qualifiedname>DataAPI::configureTriggerSource</qualifiedname>
         <param>
@@ -895,7 +895,7 @@
           <declname>adc_number</declname>
         </param>
         <param>
-          <type>adc_ev_src_t</type>
+          <type>trigger_source_t</type>
           <declname>trigger_source</declname>
         </param>
         <briefdescription>
@@ -924,7 +924,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="442" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="396" bodyend="410"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="444" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="397" bodyend="446"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -940,7 +940,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="445" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="416" bodyend="429"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="447" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="452" bodyend="465"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a17250468115f01f7c6646d856ef63824" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -962,7 +962,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="446" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="431" bodyend="465"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="448" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="467" bodyend="501"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a622cd08c0d6e2dfd203fd1625c4a572d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -984,7 +984,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="447" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="467" bodyend="481"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="449" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="503" bodyend="517"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ae2b5b30e95e12b8dfd1355c3f333e47a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -1010,7 +1010,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="448" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="483" bodyend="499"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="450" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="519" bodyend="535"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ab65ad2330b4d88cfdeedb4953adc006b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t *</type>
@@ -1036,7 +1036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="449" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="501" bodyend="549"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="451" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="537" bodyend="585"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a858c28b0348ceeddf5644b8ae2f391d6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -1058,7 +1058,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="450" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="551" bodyend="571"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="452" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="587" bodyend="607"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6dda412bdb465bcf3af90c92ed334084" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -1085,7 +1085,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="451" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="573" bodyend="633"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="453" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="609" bodyend="669"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6988b0a34c4d0c8ed07390149c4017b5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1107,7 +1107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="452" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="635" bodyend="644"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="454" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="671" bodyend="680"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a0685587c4707fa473d617c5d76c9851a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1129,7 +1129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="453" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="646" bodyend="802"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="455" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="682" bodyend="838"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1af1778d91d3a60fa1b2fabbb2309d5f4e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>adc_t</type>
@@ -1147,7 +1147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="454" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="804" bodyend="852"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="456" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="840" bodyend="888"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6c9f265ac1228509939b821b0014dcc6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>adc_t</type>
@@ -1165,7 +1165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="455" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="854" bodyend="867"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="457" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="890" bodyend="903"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa73130020e80ffb99f43201e317a53eb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1183,7 +1183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="458" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="869" bodyend="872"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="460" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="905" bodyend="908"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1abb9623a77e9c1924413f39488814e8b8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1201,7 +1201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="459" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="874" bodyend="877"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="461" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="910" bodyend="913"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a3bb778d3044d6f2c8b41b33ae07c48e5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1215,19 +1215,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="460" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="879" bodyend="882"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="462" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="915" bodyend="918"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="98" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="99" bodyend="472"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="100" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="101" bodyend="474"/>
     <listofallmembers>
       <member refid="classDataAPI_1acd293f6108985afa29d7ebbc5a968124" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>adcInitialized</name></member>
       <member refid="classDataAPI_1a0a1fc6398661eddab3c662cb75292a65" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>channels_ranks</name></member>
       <member refid="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>configureDiscontinuousMode</name></member>
-      <member refid="classDataAPI_1a0bcaaf297fd0644f2aee31723069a2e2" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>configureTriggerSource</name></member>
+      <member refid="classDataAPI_1a145c0e66e99fbf0a9952e667e1317fbb" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>configureTriggerSource</name></member>
       <member refid="classDataAPI_1acd0b5c25cdf42a94a60811e2fead798b" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>converted_values_buffer</name></member>
       <member refid="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>convertValue</name></member>
       <member refid="classDataAPI_1a70ac94ae0b2ea1f35afdcc236d1b7214" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>current_adc</name></member>
