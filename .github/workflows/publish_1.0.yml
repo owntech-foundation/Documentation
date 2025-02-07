@@ -39,8 +39,13 @@ jobs:
           path: docs/twistV14
           sparse-checkout: |
             docs/getting_started.md
+            docs/images/
             docs/images/*
           sparse-checkout-cone-mode: false
+
+      - name: Debug Image Directory
+        run: ls -R docs/twistV14/docs/images
+
 
       - name: Checkout OwnTech Twist V1_3 repo
         uses: actions/checkout@v4
@@ -128,7 +133,8 @@ jobs:
           path: docs/ownverterV10
           sparse-checkout: |
             docs/getting_started.md
-            docs/images/*
+            Images/
+            Images/*
           sparse-checkout-cone-mode: false
 
       - name: Remove unecessary ownverter folder
@@ -137,7 +143,7 @@ jobs:
           mkdir docs/ownverter/1.0.0
           mkdir docs/ownverter/1.0.0/images
           mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
-          mv docs/ownverterV10/docs/images/* docs/ownverter/1.0.0/images/
+          mv docs/ownverterV10/Images/* docs/ownverter/Images/
           rm -rf docs/ownverterV10
 
       - name: Checkout OwnTech Control library repo
