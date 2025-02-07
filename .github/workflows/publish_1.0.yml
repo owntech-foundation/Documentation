@@ -133,8 +133,8 @@ jobs:
           path: docs/ownverterV10
           sparse-checkout: |
             docs/getting_started.md
-            Images/
-            Images/*
+            docs/images/
+            docs/images/*
           sparse-checkout-cone-mode: false
 
       - name: Remove unecessary ownverter folder
