@@ -141,9 +141,9 @@ jobs:
         run: |
           mkdir docs/ownverter
           mkdir docs/ownverter/1.0.0
-          mkdir docs/ownverter/1.0.0/images
+          mkdir docs/ownverter/1.0.0/docs/images/
           mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
-          mv docs/ownverterV10/Images/* docs/ownverter/Images/
+          mv docs/ownverterV10/docs/images/* docs/ownverter/1.0.0/docs/images
           rm -rf docs/ownverterV10
 
       - name: Checkout OwnTech Control library repo
