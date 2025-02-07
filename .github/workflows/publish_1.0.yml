@@ -66,9 +66,11 @@ jobs:
         run: |
           mkdir docs/twist
           mkdir docs/twist/1.4.1
+          mkdir docs/twist/1.4.1/images
           mkdir docs/twist/1.3.0
           mkdir docs/twist/1.2.0
           mv docs/twistV14/docs/getting_started.md docs/twist/1.4.1/getting_started.md
+          mv docs/twistV14/docs/images/* docs/twist/1.4.1/images
           mv docs/twistV13/docs/getting_started.md docs/twist/1.3.0/getting_started.md
           mv docs/twistV12/docs/getting_started.md docs/twist/1.2.0/getting_started.md
           rm -rf docs/twistV14
@@ -133,7 +135,9 @@ jobs:
         run: |
           mkdir docs/ownverter
           mkdir docs/ownverter/1.0.0
+          mkdir docs/ownverter/1.0.0/images
           mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
+          mv docs/ownverterV10/docs/images/* docs/ownverter/1.0.0/images/
           rm -rf docs/ownverterV10
 
       - name: Checkout OwnTech Control library repo
