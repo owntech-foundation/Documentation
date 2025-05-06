@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core
-          ref: v1.0.0-rc
+          ref: v1.0.0
           path: docs/core
 
       - name: Checkout OwnTech Bootloader repo
