@@ -2,9 +2,9 @@ document$.subscribe(function() {
     var versionButton = document.getElementById('versionButton');
     if (versionButton) {
         // Set the dropdown to match the current URL's version on page load
-        var currentPath = window.location.pathname.split('/');
-        var currentVersion = currentPath[currentPath.length - 3]; 
-        var currentBoard = currentPath[currentPath.length - 4]; 
+        var currentPath = window.location.pathname.split('/').filter(p => p);
+        var currentVersion = currentPath[currentPath.length - 2]; 
+        var currentBoard = currentPath[currentPath.length - 3]; 
         var versions = {};
         if (currentBoard == "twist") {
             versions = {
