@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -34,7 +34,6 @@
 #include <zephyr/drivers/gpio.h>
 
 
-// Public constants
 
 extern const struct device* const GPIO_A;
 extern const struct device* const GPIO_B;
@@ -45,7 +44,7 @@ extern const gpio_flags_t INPUT;
 extern const gpio_flags_t INPUT_PULLUP;
 extern const gpio_flags_t OUTPUT;
 
-// 0x80 is used to indicate nucleo-style pin
+/* 0x80 is used to indicate nucleo-style pin */
 static const uint8_t PA = 0x80 | 0x00;
 static const uint8_t PB = 0x80 | 0x10;
 static const uint8_t PC = 0x80 | 0x20;
@@ -69,7 +68,6 @@ static const uint8_t P14 = 0xE;
 static const uint8_t P15 = 0xF;
 
 
-// Public types
 
 typedef enum : uint8_t
 {
@@ -128,7 +126,6 @@ typedef enum : uint8_t
 } pin_t;
 
 
-// Class definition
 
 class GpioHAL
 {
@@ -148,11 +145,13 @@ public:
 
 private:
     gpio_pin_t getPinNumber(uint8_t pin);
+
+
     const struct device* getGpioDevice(uint8_t pin);
 
 };
 
-#endif // GPIOHAL_H_
+#endif /* GPIOHAL_H_ */
 ```
 
 

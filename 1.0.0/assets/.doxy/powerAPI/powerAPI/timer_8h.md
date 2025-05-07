@@ -29,19 +29,19 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**timer\_config\_t**](structtimer__config__t.md) <br> |
-| struct | [**timer\_driver\_api**](structtimer__driver__api.md) <br> |
+| struct | [**timer\_config\_t**](structtimer__config__t.md) <br>_Timer\_enable\_irq : set to 1 to enable interrupt on timer overflow. timer\_enable\_encoder: set to 1 for timer to act as an incremental coder counter._  |
+| struct | [**timer\_driver\_api**](structtimer__driver__api.md) <br>_Driver API structure for timer devices._  |
 
 
 ## Public Types
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**pin\_mode\_t**](#enum-pin_mode_t)  <br> |
-| typedef void(\* | [**timer\_api\_config**](#typedef-timer_api_config)  <br> |
-| typedef uint32\_t(\* | [**timer\_api\_get\_count**](#typedef-timer_api_get_count)  <br> |
-| typedef void(\* | [**timer\_api\_start**](#typedef-timer_api_start)  <br> |
-| typedef void(\* | [**timer\_api\_stop**](#typedef-timer_api_stop)  <br> |
+| enum  | [**pin\_mode\_t**](#enum-pin_mode_t)  <br>_Enumeration for GPIO pin pull configurations._  |
+| typedef void(\* | [**timer\_api\_config**](#typedef-timer_api_config)  <br>_Function pointer type for timer configuration._  |
+| typedef uint32\_t(\* | [**timer\_api\_get\_count**](#typedef-timer_api_get_count)  <br>_Function pointer type for reading the timer count value._  |
+| typedef void(\* | [**timer\_api\_start**](#typedef-timer_api_start)  <br>_Function pointer type for starting the timer._  |
+| typedef void(\* | [**timer\_api\_stop**](#typedef-timer_api_stop)  <br>_Function pointer type for stopping the timer._  |
 | typedef void(\* | [**timer\_callback\_t**](#typedef-timer_callback_t)  <br> |
 
 
@@ -69,10 +69,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**timer\_config**](#function-timer_config) (const struct device \* dev, const struct [**timer\_config\_t**](structtimer__config__t.md) \* config) <br> |
-|  uint32\_t | [**timer\_get\_count**](#function-timer_get_count) (const struct device \* dev) <br> |
-|  void | [**timer\_start**](#function-timer_start) (const struct device \* dev) <br> |
-|  void | [**timer\_stop**](#function-timer_stop) (const struct device \* dev) <br> |
+|  void | [**timer\_config**](#function-timer_config) (const struct device \* dev, const struct [**timer\_config\_t**](structtimer__config__t.md) \* config) <br>_Configure the timer dev using given configuration structure config._  |
+|  uint32\_t | [**timer\_get\_count**](#function-timer_get_count) (const struct device \* dev) <br>_Get the current timer counter value._  |
+|  void | [**timer\_start**](#function-timer_start) (const struct device \* dev) <br>_Start the timer dev._  |
+|  void | [**timer\_stop**](#function-timer_stop) (const struct device \* dev) <br>_Stop the timer dev._  |
 
 
 
@@ -106,6 +106,7 @@
 
 ### enum pin\_mode\_t 
 
+_Enumeration for GPIO pin pull configurations._ 
 ```C++
 enum pin_mode_t {
     no_pull,
@@ -116,6 +117,18 @@ enum pin_mode_t {
 
 
 
+This enum defines the available pull modes that can be applied to a GPIO input pin.
+
+
+
+* `no_pull` disables pull-up or pull-down resistors.
+* `pull_up` enables an internal pull-up resistor.
+* `pull_down` enables an internal pull-down resistor. 
+
+
+
+
+        
 
 <hr>
 
@@ -123,12 +136,31 @@ enum pin_mode_t {
 
 ### typedef timer\_api\_config 
 
+_Function pointer type for timer configuration._ 
 ```C++
 typedef void(* timer_api_config) (const struct device *dev, const struct timer_config_t *config);
 ```
 
 
 
+API 
+
+
+This function configures the hardware timer using the provided settings.
+
+
+
+
+**Parameters:**
+
+
+* `dev` Pointer to the timer device. 
+* `config` Pointer to the timer configuration structure. 
+
+
+
+
+        
 
 <hr>
 
@@ -136,12 +168,34 @@ typedef void(* timer_api_config) (const struct device *dev, const struct timer_c
 
 ### typedef timer\_api\_get\_count 
 
+_Function pointer type for reading the timer count value._ 
 ```C++
 typedef uint32_t(* timer_api_get_count) (const struct device *dev);
 ```
 
 
 
+This function returns the current counter value of the timer.
+
+
+
+
+**Parameters:**
+
+
+* `dev` Pointer to the timer device.
+
+
+
+**Returns:**
+
+The current timer count. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -149,12 +203,27 @@ typedef uint32_t(* timer_api_get_count) (const struct device *dev);
 
 ### typedef timer\_api\_start 
 
+_Function pointer type for starting the timer._ 
 ```C++
 typedef void(* timer_api_start) (const struct device *dev);
 ```
 
 
 
+This function starts the timer associated with the given device.
+
+
+
+
+**Parameters:**
+
+
+* `dev` Pointer to the timer device. 
+
+
+
+
+        
 
 <hr>
 
@@ -162,12 +231,27 @@ typedef void(* timer_api_start) (const struct device *dev);
 
 ### typedef timer\_api\_stop 
 
+_Function pointer type for stopping the timer._ 
 ```C++
 typedef void(* timer_api_stop) (const struct device *dev);
 ```
 
 
 
+This function stops the timer associated with the given device.
+
+
+
+
+**Parameters:**
+
+
+* `dev` Pointer to the timer device. 
+
+
+
+
+        
 
 <hr>
 
@@ -181,6 +265,10 @@ typedef void(* timer_callback_t) ();
 
 
 
+Configuration structure 
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -190,6 +278,7 @@ typedef void(* timer_callback_t) ();
 
 ### function timer\_config 
 
+_Configure the timer dev using given configuration structure config._ 
 ```C++
 static inline void timer_config (
     const struct device * dev,
@@ -197,9 +286,6 @@ static inline void timer_config (
 ) 
 ```
 
-
-
-Configure the timer dev using given configuration structure config.
 
 
 
@@ -221,15 +307,13 @@ Configure the timer dev using given configuration structure config.
 
 ### function timer\_get\_count 
 
+_Get the current timer counter value._ 
 ```C++
 static inline uint32_t timer_get_count (
     const struct device * dev
 ) 
 ```
 
-
-
-Get the current timer counter value.
 
 
 
@@ -257,6 +341,7 @@ Current value of the timer internal counter.
 
 ### function timer\_start 
 
+_Start the timer dev._ 
 ```C++
 static inline void timer_start (
     const struct device * dev
@@ -265,7 +350,7 @@ static inline void timer_start (
 
 
 
-Start the timer dev. If timer is configured to provide a perdiodic interrupt, it will also enable it.
+If timer is configured to provide a periodic interrupt, it will also enable it.
 
 
 
@@ -286,6 +371,7 @@ Start the timer dev. If timer is configured to provide a perdiodic interrupt, it
 
 ### function timer\_stop 
 
+_Stop the timer dev._ 
 ```C++
 static inline void timer_stop (
     const struct device * dev
@@ -294,7 +380,7 @@ static inline void timer_stop (
 
 
 
-Stop the timer dev. If timer is configured to provide a perdiodic interrupt, it will also disable it.
+If timer is configured to provide a periodic interrupt, it will also disable it.
 
 
 

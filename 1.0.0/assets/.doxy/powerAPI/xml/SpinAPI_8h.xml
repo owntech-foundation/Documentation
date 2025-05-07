@@ -12,15 +12,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Jean Alinei <ulink url="mailto:jean.alinei@owntech.org">jean.alinei@owntech.org</ulink> </para>
-</simplesect>
-</para>
+<para>Public object to interact with the class </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="106" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" declline="106" declcolumn="16"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" line="109" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.cpp" bodystart="31" bodyend="-1" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h" declline="109" declcolumn="16"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -29,7 +25,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -47,6 +43,13 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2024</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>@author<sp/>Luiz<sp/>Villa<sp/>&lt;luiz.villa@laas.fr&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SPINAPI_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -79,29 +82,28 @@
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66" refid="classSpinAPI_1a364caad396647bf4376c4a773dca73c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classLedHAL" kindref="compound">LedHAL</ref><sp/><ref refid="classSpinAPI_1a364caad396647bf4376c4a773dca73c1" kindref="member">led</ref>;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDacHAL" kindref="compound">DacHAL</ref><sp/><ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCompHAL" kindref="compound">CompHAL</ref><sp/><ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL" kindref="compound">PwmHAL</ref><sp/><ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_UART_API</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classUartHAL" kindref="compound">UartHAL</ref><sp/><ref refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" kindref="member">uart</ref>;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93" refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classTimerHAL" kindref="compound">TimerHAL</ref><sp/><ref refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" kindref="member">timer</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98" refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDataAPI" kindref="compound">DataAPI</ref><sp/><ref refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" kindref="member">data</ref>;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72" refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDacHAL" kindref="compound">DacHAL</ref><sp/><ref refid="classSpinAPI_1afb2086dd4155f5bf3b1908702f85b7cf" kindref="member">dac</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCompHAL" kindref="compound">CompHAL</ref><sp/><ref refid="classSpinAPI_1a53d5d1b01d1fe00da7b8c2aeb1a21958" kindref="member">comp</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classPwmHAL" kindref="compound">PwmHAL</ref><sp/><ref refid="classSpinAPI_1a7d0d63caabf3ff3ccc973ba5af334082" kindref="member">pwm</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_UART_API</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classUartHAL" kindref="compound">UartHAL</ref><sp/><ref refid="classSpinAPI_1aa03347792fc57dfe280c31b2dce0aa4d" kindref="member">uart</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classTimerHAL" kindref="compound">TimerHAL</ref><sp/><ref refid="classSpinAPI_1a7cb9c45933632d3e522581867c158420" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDataAPI" kindref="compound">DataAPI</ref><sp/><ref refid="classSpinAPI_1a0423c3dffc43fe87ae37ca4e90c266a7" kindref="member">data</ref>;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>object<sp/>to<sp/>interact<sp/>with<sp/>the<sp/>class</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classSpinAPI" kindref="compound">SpinAPI</ref><sp/>spin;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SPINAPI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classSpinAPI" kindref="compound">SpinAPI</ref><sp/>spin;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SPINAPI_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/public_api/SpinAPI.h"/>
   </compounddef>

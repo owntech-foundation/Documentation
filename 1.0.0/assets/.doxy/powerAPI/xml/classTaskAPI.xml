@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classTaskAPI" kind="class" language="C++" prot="public">
     <compoundname>TaskAPI</compoundname>
+    <includes refid="TaskAPI_8h" local="no">TaskAPI.h</includes>
     <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="classTaskAPI_1aed57f64fd1ebfd9b0bd03eeb3b1fd635" prot="private" static="yes" mutable="no">
         <type>const int</type>
@@ -13,15 +14,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2023 </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-</para>
+<para>Static variables </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="183" column="18" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" bodystart="183" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="199" column="18" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" bodystart="199" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -45,17 +42,31 @@
           <defval>source_hrtim</defval>
         </param>
         <briefdescription>
-<para>Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running. </para>
+<para>Creates a time critical task. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>If the HRTIM is used to trigger the task (which is the default behavior), then the HRTIM must have been configured <emphasis>before</emphasis> calling this function.</para>
+<para><verbatim>   A critical task is an Uninterruptible Synchronous Task
+   that uses a precise timer to execute a periodic,
+   non-interruptable user task.
+
+   Use this function to define such a task.
+
+   Only one task of this kind can be defined.
+
+   This function can be used to redefine (replace) a
+   previously defined uninterruptible synchronous task,
+   but the previously defined task must have been suspended
+   (or never started). An error will be returned if the
+   previously defined task is still running.
+</verbatim></para>
+<para><simplesect kind="note"><para>If the <computeroutput>HRTIM</computeroutput> is used to trigger the task (which is the default behavior), then the <computeroutput>HRTIM</computeroutput> must have been configured <emphasis>before</emphasis> calling this function.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>periodic_task</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the void(void) function to be executed periodically. </para>
+<para>Pointer to the void(void) function to be executed periodically.</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -63,7 +74,7 @@
 <parametername>task_period_us</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Period of the function in µs. Allowed range: 1 to 6553 µs. If interrupt source is HRTIM, this value <emphasis>must</emphasis> be an integer multiple of the HRTIM period. </para>
+<para>Period of the function in µs. Allowed range: 1 to 6553 µs. If interrupt source is <computeroutput>HRTIM</computeroutput>, this value <emphasis>must</emphasis> be an integer multiple of the <computeroutput>HRTIM</computeroutput> period.</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -71,17 +82,17 @@
 <parametername>int_source</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Interrupt source that triggers the task. By default, the HRTIM is the source, but this optional parameter can be provided to set TIM6 as the source in case the HRTIM is not used or if the task can&apos;t be correlated to an HRTIM event. Allowed values are source_hrtim and source_tim6. </para>
+<para>Interrupt source that triggers the task. By default, the <computeroutput>HRTIM</computeroutput> is the source, but this optional parameter can be provided to set TIM6 as the source in case the <computeroutput>HRTIM</computeroutput> is not used or if the task can&apos;t be correlated to an <computeroutput>HRTIM</computeroutput> event. Allowed values are source_hrtim and source_tim6.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if everything went well, -1 if there was an error defining the task. An error can occur notably when an uninterruptible task has already been defined previously. </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if everything went well, <computeroutput>-1</computeroutput> if there was an error defining the task.</para>
 </simplesect>
-</para>
+An error can occur notably when an uninterruptible task has already been defined previously. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="83" column="8" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="52" bodyend="56"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="95" column="8" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="49" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1aa2a253e51328a5238e873cf7c5a9c485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -98,7 +109,7 @@
 <para>Use this function to start a previously defined a critical task. </para>
         </briefdescription>
         <detaileddescription>
-<para>A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task.</para>
+<para>A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptable user task.</para>
 <para>If no value is provided for the parameter and Data Acquisition has not been started yet, Scheduling will automatically start Data Acquisition. Thus, make sure all ADC configuration has been carried out before starting the uninterruptible task.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -113,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="103" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="58" bodyend="61"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="119" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="59" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1a85738b38142159d1e5638e2e659772d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,13 +133,13 @@
         <name>stopCritical</name>
         <qualifiedname>TaskAPI::stopCritical</qualifiedname>
         <briefdescription>
-<para>Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling <ref refid="classTaskAPI_1aa2a253e51328a5238e873cf7c5a9c485" kindref="member">startCritical()</ref> again. </para>
+<para>Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptable user task. The task can be then resumed by calling <ref refid="classTaskAPI_1aa2a253e51328a5238e873cf7c5a9c485" kindref="member">startCritical()</ref> again. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="112" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="63" bodyend="66"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="128" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="64" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1a6f2330d3b5ff507e4ea4e49a67b52e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -159,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="130" column="8" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="73" bodyend="76"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="146" column="8" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1a900beb4cbf0eaef5da81d4af1a5ee2bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -189,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="142" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="78" bodyend="81"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="158" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="79" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1abfa1beb72530562674e4240a3268876f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -219,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="156" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="83" bodyend="86"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="172" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="84" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1a53bfefe0bd4bb85cb672a61cf33fb8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="167" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="90" bodyend="93"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="183" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="91" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classTaskAPI_1a2d3253dcdfd51f66e290e53476f467e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,14 +270,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="178" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="95" bodyend="98"/>
+        <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="194" column="6" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.cpp" bodystart="96" bodyend="99"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Static class definition </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="47" column="1" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" bodystart="48" bodyend="185"/>
+    <location file="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" line="50" column="1" bodyfile="docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h" bodystart="51" bodyend="201"/>
     <listofallmembers>
       <member refid="classTaskAPI_1a6f2330d3b5ff507e4ea4e49a67b52e57" prot="public" virt="non-virtual"><scope>TaskAPI</scope><name>createBackground</name></member>
       <member refid="classTaskAPI_1af1b06cdd5723218373beb6427c8b89da" prot="public" virt="non-virtual"><scope>TaskAPI</scope><name>createCritical</name></member>

@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,19 +27,24 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ */
 
 
 
 #ifndef DACHAL_H_
 #define DACHAL_H_
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// ARM lib
+/* ARM lib */
 #include <arm_math.h>
 
-//OwnTech Modules
+/* OwnTech Modules */
 #include "hrtim_enum.h"
 
 
@@ -47,14 +52,20 @@ class DacHAL
 {
 public:
     void initConstValue(uint8_t dac_number);
-    void setConstValue(uint8_t dac_number, uint8_t channel, uint32_t const_value);
-    void slopeCompensation(uint8_t dac_number, float32_t peak_voltage, float32_t low_voltage);
+
+    void setConstValue(uint8_t dac_number,
+                       uint8_t channel,
+                       uint32_t const_value);
+                    
+    void slopeCompensation(uint8_t dac_number,
+                           float32_t peak_voltage,
+                           float32_t low_voltage);
+
     void currentModeInit(uint8_t dac_number, hrtim_tu_t tu_src);
 };
 
 
-
-#endif // DAC_HAL_H_
+#endif /* DAC_HAL_H_ */
 ```
 
 

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="389" column="27" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="389" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="496" column="27" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="496" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structadc__hrtim__conf__t_1ae2418b156739e753a529874016397f08" prot="public" static="no" mutable="no">
         <type>hrtim_adc_source_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="390" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="390" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="497" column="28" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="497" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structadc__hrtim__conf__t_1ac77a6f09f94ae757bf2f215897e9f867" prot="public" static="no" mutable="no">
         <type>hrtim_adc_trigger_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="391" column="29" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="391" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="498" column="29" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="498" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structadc__hrtim__conf__t_1a5da8eca16b1453a3ce58c253423ddefb" prot="public" static="no" mutable="no">
         <type>hrtim_adc_edgetrigger_t</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="392" column="33" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="392" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="499" column="33" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="499" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -66,7 +66,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="387" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="388" bodyend="393"/>
+    <location file="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" line="494" column="5" bodyfile="docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h" bodystart="495" bodyend="500"/>
     <listofallmembers>
       <member refid="structadc__hrtim__conf__t_1ae418d1bee76e0d87f9332b2f66832d9a" prot="public" virt="non-virtual"><scope>adc_hrtim_conf_t</scope><name>adc_event</name></member>
       <member refid="structadc__hrtim__conf__t_1a5da8eca16b1453a3ce58c253423ddefb" prot="public" virt="non-virtual"><scope>adc_hrtim_conf_t</scope><name>adc_rollover</name></member>

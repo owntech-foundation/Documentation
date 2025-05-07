@@ -36,12 +36,20 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Defines the possible speeds for the RS485: </para>
         </briefdescription>
         <detaileddescription>
+<para><itemizedlist>
+<listitem><para><computeroutput>SPEED_2M</computeroutput>: 2Mbits/s speed communication</para>
+</listitem><listitem><para><computeroutput>SPEED_5M</computeroutput>: 5Mbits/s speed communication</para>
+</listitem><listitem><para><computeroutput>SPEED_10M</computeroutput>: 10Mbits/s speed communication</para>
+</listitem><listitem><para><computeroutput>SPEED_20M</computeroutput>: 20Mbits/s speed communication </para>
+</listitem></itemizedlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="33" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" bodystart="33" bodyend="38"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="46" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" bodystart="46" bodyend="51"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -50,7 +58,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -68,6 +76,11 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2024</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RS485COMMUNICATION_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RS485COMMUNICATION_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -76,33 +89,38 @@
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_2M,<sp/><sp/></highlight><highlight class="comment">//<sp/>2Mbits/s<sp/>speed<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_5M,<sp/><sp/></highlight><highlight class="comment">//<sp/>5Mbits/s<sp/>speed<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_10M,<sp/></highlight><highlight class="comment">//<sp/>10Mbits/s<sp/>speed<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_20M,<sp/></highlight><highlight class="comment">//<sp/>20Mbits/s<sp/>speed<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}rs485_speed_t;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Static<sp/>class<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="classRs485Communication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRs485Communication" kindref="compound">Rs485Communication</ref></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>public<sp/>:</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" kindref="member">configure</ref>(uint8_t<sp/>*transmission_bufer,<sp/>uint8_t<sp/>*reception_buffer,<sp/>uint16_t<sp/>data_size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*user_function)(),<sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rs485_speed_t<sp/>data_speed<sp/>=<sp/>SPEED_10M);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1a4c2daa5920b8c30cdb36ffff58eeda5a" kindref="member">configureCustom</ref>(uint8_t<sp/>*transmission_bufer,<sp/>uint8_t<sp/>*reception_buffer,<sp/>uint16_t<sp/>data_size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*user_function)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/>uint32_t<sp/>baudrate,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>oversampling_8);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_2M,<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_5M,<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_10M,<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>SPEED_20M,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}rs485_speed_t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classRs485Communication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRs485Communication" kindref="compound">Rs485Communication</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>public<sp/>:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1ab31abe0e40fbbef418391773f3b06855" kindref="member">configure</ref>(uint8_t<sp/>*transmission_buffer,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*reception_buffer,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>data_size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*user_function)(),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rs485_speed_t<sp/>data_speed<sp/>=<sp/>SPEED_10M);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1ab05a6351f7409bf58ad1367c5bbfe11a" kindref="member">startTransmission</ref>();</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" kindref="member">turnOnCommunication</ref>();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" kindref="member">turnOffCommunication</ref>();</highlight></codeline>
-<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RS485COMMUNICATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1a93c8fcf04c4b8afb628f382ff374d843" kindref="member">configureCustom</ref>(uint8_t<sp/>*transmission_buffer,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*reception_buffer,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>data_size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*user_function)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>baudrate,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>oversampling_8);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1ab05a6351f7409bf58ad1367c5bbfe11a" kindref="member">startTransmission</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" kindref="member">turnOnCommunication</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" kindref="member">turnOffCommunication</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>RS485COMMUNICATION_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h"/>
   </compounddef>

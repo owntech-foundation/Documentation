@@ -9,9 +9,16 @@
 		zephyr,can-primary = &fdcan2;
 	};
 
+	pcb: pcb{
+		compatible= "shield-pcb";
+		shield-name = "OWNVERTER";
+		shield-version = "v1.0.0";
+	};
+
 	powershield: power-shield{
         compatible = "power-leg";
         default-frequency = <200000>;
+        min-frequency = <200000>;
         leg1: leg1{
             leg-name = "LEG1";
 			pwms = <&pwma 1 0>, <&pwma 2 0>;
@@ -370,9 +377,9 @@
 &fdcan2 {
 	pinctrl-0 = <&fdcan2_rx_pb5 &fdcan2_tx_pb6>;
 	pinctrl-names = "default";
-	bus-speed = <500000>;
+	bitrate = <500000>;
 	sample-point = <875>;
-	bus-speed-data = <500000>;
+	bitrate-data = <500000>;
 	sample-point-data = <875>;
 	status = "okay";
 	transceiver0: can-phy0 {

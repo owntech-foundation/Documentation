@@ -3,30 +3,29 @@
   <compounddef id="classSafetyAPI" kind="class" language="C++" prot="public">
     <compoundname>SafetyAPI</compoundname>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a6bec8a0e30be9c82e393421bda45c8a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void SafetyAPI::init_shield</definition>
+        <definition>void SafetyAPI::initShield</definition>
         <argsstring>()</argsstring>
-        <name>init_shield</name>
-        <qualifiedname>SafetyAPI::init_shield</qualifiedname>
+        <name>initShield</name>
+        <qualifiedname>SafetyAPI::initShield</qualifiedname>
         <briefdescription>
-<para>Initializes thresholds min/max with the default value from the device tree, if values were stored and found in the flash they will be used instead. All the sensors will be monitored to detect potential faults in voltage/current. </para>
+<para>Initializes thresholds min/max with the default value from the device tree. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>none </para>
-</simplesect>
-</para>
+<para>If values were stored and found in the flash they will be used instead.</para>
+<para>All the sensors will be monitored to detect potential faults in voltage/current. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="48" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="33" bodyend="36"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="51" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classSafetyAPI_1a81bcfe16b6c0a8d6a3c3840d1ae9fab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void SafetyAPI::init_shield</definition>
+        <definition>void SafetyAPI::initShield</definition>
         <argsstring>(sensor_t *sensors_watch, uint8_t sensors_watch_number)</argsstring>
-        <name>init_shield</name>
-        <qualifiedname>SafetyAPI::init_shield</qualifiedname>
+        <name>initShield</name>
+        <qualifiedname>SafetyAPI::initShield</qualifiedname>
         <param>
           <type>sensor_t *</type>
           <declname>sensors_watch</declname>
@@ -36,33 +35,36 @@
           <declname>sensors_watch_number</declname>
         </param>
         <briefdescription>
-<para>Initializes thresholds min/max with the default value from the device tree, if values were stored and found in the flash they will be used instead. All the sensors will be monitored to detect potential faults in voltage/current. </para>
+<para>Initializes thresholds min/max with the default value from the device tree. </para>
         </briefdescription>
         <detaileddescription>
+<para>If values were stored and found in the flash they will be used instead.</para>
+<para>All the sensors will be monitored to detect potential faults in voltage/current.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sensors_watch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the sensors to watch. The variables in the list can be : V1_LOW, V2_LOW, V_HIGH, I1_LOW, I2_LOW, I_HIGH, TEMP_SENSOR, EXTRA_MEAS, ANALOG_COMM </para>
+<para>A list of the sensors to watch. The variables names can be: <linebreak/>
+</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sensors_watch_number</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The number of sensors present in the list sensors_watch.</para>
+<para>The number of sensors present in the list sensors_watch. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>none </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="61" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="38" bodyend="42"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="73" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="38" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -87,10 +89,13 @@
 <parametername>sensors_watch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the sensors to watch. The variables in the list can be : V1_LOW, V2_LOW, V_HIGH, I1_LOW, I2_LOW, I_HIGH, TEMP_SENSOR, EXTRA_MEAS, ANALOG_COMM </para>
+<para>A list of the sensors to watch. The variables names can be: <linebreak/>
+</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sensors_watch_number</parametername>
 </parameternamelist>
@@ -99,13 +104,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if sucessfull, or -1 if there was an error </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful, or <computeroutput>-1</computeroutput> if there was an error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="72" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="44" bodyend="48"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="89" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="45" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -130,10 +135,13 @@
 <parametername>sensors_watch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the sensors to unwatch. The variables in the list can be : V1_LOW, V2_LOW, V_HIGH, I1_LOW, I2_LOW, I_HIGH, TEMP_SENSOR, EXTRA_MEAS, ANALOG_COMM </para>
+<para>A list of the sensors to watch. The variables names can be: <linebreak/>
+</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>sensors_watch_number</parametername>
 </parameternamelist>
@@ -142,13 +150,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if sucessfull, or -1 if there was an error </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful, or <computeroutput>-1</computeroutput> if there was an error </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="83" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="50" bodyend="54"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="106" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="52" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -169,37 +177,18 @@
 <parametername>sensors_watch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor to check <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor to check within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true if the sensor is being monitored, false if not </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the sensor is being monitored, <computeroutput>false</computeroutput> if not </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="101" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="56" bodyend="60"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="119" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="60" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +201,7 @@
           <declname>sensors_reaction</declname>
         </param>
         <briefdescription>
-<para>Set the reaction to do if an error has been detected. Choose either open-circuit (both switches are opened and no power flows in the output) or short-circuit (high-side switch is opened, and low-side is closed maintaining the output in short-circuit) </para>
+<para>Set the reaction to do if an error has been detected. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -220,23 +209,19 @@
 <parametername>sensors_reaction</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the reaction to do <itemizedlist>
-<listitem><para>Open_Circuit </para>
-</listitem>
-<listitem><para>Short_Circuit</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the reaction to do:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>none </para>
-</simplesect>
+<itemizedlist>
+<listitem><para><computeroutput>Open_Circuit</computeroutput>: both switches are opened and no power flows to the output</para>
+</listitem><listitem><para><computeroutput>Short_Circuit</computeroutput>: high-side switch is opened, and low-side is closed maintaining the output in short-circuit. Useful in motor control. </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="114" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="62" bodyend="66"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="134" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="66" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a01279a47493f445a4cb61e0426cd182e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>safety_reaction_t</type>
@@ -245,7 +230,7 @@
         <name>getChannelReaction</name>
         <qualifiedname>SafetyAPI::getChannelReaction</qualifiedname>
         <briefdescription>
-<para>returns the reaction to do when encoutering an error. </para>
+<para>returns the reaction to do when encountering an error. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>Open_Circuit or Short_Circuit </para>
@@ -254,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="121" column="23" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="68" bodyend="72"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="141" column="23" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="72" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -275,7 +260,7 @@
           <declname>sensors_threshold_number</declname>
         </param>
         <briefdescription>
-<para>set the maximum threshold for the sensors present in the list safety_sensors. </para>
+<para>Set the maximum threshold for the sensors present in the list safety_sensors. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -283,15 +268,18 @@
 <parametername>sensors_threshold</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the sensors to set the threshold. The variables in the list can be : V1_LOW, V2_LOW, V_HIGH, I1_LOW, I2_LOW, I_HIGH, TEMP_SENSOR, EXTRA_MEAS, ANALOG_COMM </para>
+<para>A list of the sensors to watch. The variables names can be: <linebreak/>
+</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold_max</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the maximum threshold to apply to the sensors in safety_sensors. </para>
+<para>A list of the maximum threshold to apply to the sensors in safety_sensors.</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -303,13 +291,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if sucessfull, or -1 if not. </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful, or <computeroutput>-1</computeroutput> if not. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="133" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="74" bodyend="78"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="161" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="78" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1af2b2143a6f926e13afb45f26a82cc7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -330,7 +318,7 @@
           <declname>sensors_threshold_number</declname>
         </param>
         <briefdescription>
-<para>set the minimum threshold for the sensors present in the list safety_sensors. </para>
+<para>Set the minimum threshold for the sensors present in the list safety_sensors. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -338,15 +326,18 @@
 <parametername>sensors_threshold</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the sensors to set the threshold. The variables in the list can be : V1_LOW, V2_LOW, V_HIGH, I1_LOW, I2_LOW, I_HIGH, TEMP_SENSOR, EXTRA_MEAS, ANALOG_COMM </para>
+<para>A list of the sensors to watch. The variables names can be: <linebreak/>
+</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>threshold_min</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A list of the minimum threshold to apply to the sensors in safety_sensors. </para>
+<para>A list of the minimum threshold to apply to the sensors in safety_sensors.</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -354,17 +345,17 @@
 <parametername>sensors_threshold_number</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the number of sensors present in the list sensor_threshold</para>
+<para>The number of sensors present in the list sensor_threshold</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if sucessfull, or -1 if not. </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful, or <computeroutput>-1</computeroutput> if not. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="145" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="80" bodyend="84"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="183" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="88" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -377,7 +368,7 @@
           <declname>sensors_threshold</declname>
         </param>
         <briefdescription>
-<para>get the maximum threshold of the selected sensor </para>
+<para>Get the maximum threshold of the selected sensor. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -385,37 +376,18 @@
 <parametername>sensors_threshold</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor to check <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor to check within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the maximum threshold </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><simplesect kind="return"><para>the maximum threshold </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="163" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="86" bodyend="90"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="197" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="98" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -428,7 +400,7 @@
           <declname>sensors_threshold</declname>
         </param>
         <briefdescription>
-<para>get the minimum threshold of the selected sensor </para>
+<para>Get the minimum threshold of the selected sensor. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -436,37 +408,18 @@
 <parametername>sensors_threshold</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor to check <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor to check within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>the minimum threshold </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><simplesect kind="return"><para>The minimum threshold </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="181" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="92" bodyend="96"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="209" column="15" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="104" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a4ce185c3da7fc38084c2962a05b5dbc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -479,7 +432,7 @@
           <declname>sensors_error</declname>
         </param>
         <briefdescription>
-<para>check if the sensor faced an error (went over/under threshold) </para>
+<para>Check if the sensor faced an error (went over/under threshold) </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -487,37 +440,18 @@
 <parametername>sensors_error</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor to check <itemizedlist>
-<listitem><para>V1_LOW </para>
-</listitem>
-<listitem><para>V2_LOW </para>
-</listitem>
-<listitem><para>V_HIGH </para>
-</listitem>
-<listitem><para>I1_LOW </para>
-</listitem>
-<listitem><para>I2_LOW </para>
-</listitem>
-<listitem><para>I_HIGH </para>
-</listitem>
-<listitem><para>TEMP_SENSOR </para>
-</listitem>
-<listitem><para>EXTRA_MEAS </para>
-</listitem>
-<listitem><para>ANALOG_COMM</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>the sensor to check within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true if the sensor faced an error, false if not </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><simplesect kind="return"><para>True if the sensor faced an error, false if not </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="199" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="98" bodyend="102"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="221" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="110" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -526,16 +460,13 @@
         <name>enableSafetyApi</name>
         <qualifiedname>SafetyAPI::enableSafetyApi</qualifiedname>
         <briefdescription>
-<para>enable the safet API fault detection task </para>
+<para>Enables the safety API fault detection task. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>none </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="207" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="104" bodyend="107"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="227" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -544,16 +475,13 @@
         <name>disableSafetyApi</name>
         <qualifiedname>SafetyAPI::disableSafetyApi</qualifiedname>
         <briefdescription>
-<para>disable the safet API fault detection task </para>
+<para>Disables the safety API fault detection task. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>none </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="214" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="109" bodyend="112"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="232" column="10" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1aec8951ae95d1fb56b3ba6fd811950119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -566,7 +494,7 @@
           <declname>sensor_threshold_store</declname>
         </param>
         <briefdescription>
-<para>store the current minimum and maximum threshold in the flash (non volatile memory) </para>
+<para>Store the current minimum and maximum threshold in the flash (non volatile memory) </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -574,17 +502,27 @@
 <parametername>sensor_threshold_store</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor for which we store the threshold in the NVS</para>
+<para>the sensor to store the threshold in the NVS within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correcly stored, -1 if there was an error. </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_threshold_store</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sensor for which we store the threshold in the NVS</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if parameters were correctly stored, <computeroutput>-1</computeroutput> if there was an error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="223" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="114" bodyend="118"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="250" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="126" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -597,7 +535,7 @@
           <declname>sensor_threshold_retrieve</declname>
         </param>
         <briefdescription>
-<para>store the current minimum and maximum threshold in the flash (non volatile memory) </para>
+<para>Retrieves the current minimum and maximum threshold stored in the flash (non volatile memory) </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -605,24 +543,31 @@
 <parametername>sensor_threshold_retrieve</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the sensor for which we store the threshold in the NVS</para>
+<para>the sensor to retrieve the threshold stored in the NVS within the possible names:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn&apos;t match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested sensor </para>
+<computeroutput>V1_LOW</computeroutput>,<computeroutput>V2_LOW</computeroutput>, <computeroutput>V_HIGH</computeroutput>, <computeroutput>I1_LOW</computeroutput>,<computeroutput>I2_LOW</computeroutput>,<computeroutput>I_HIGH</computeroutput>, <computeroutput>TEMP_SENSOR</computeroutput>, <computeroutput>EXTRA_MEAS</computeroutput>, <computeroutput>ANALOG_COMM</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if parameters were correctly retrieved, negative value if there was an error:</para>
 </simplesect>
+<itemizedlist>
+<listitem><para><computeroutput>-1</computeroutput>: NVS is empty</para>
+</listitem><listitem><para><computeroutput>-2</computeroutput>: NVS contains data, but their version doesn&apos;t match current version</para>
+</listitem><listitem><para><computeroutput>-3</computeroutput>: NVS data is corrupted</para>
+</listitem><listitem><para><computeroutput>-4</computeroutput>: NVS contains data, but not for the requested sensor </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="236" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="119" bodyend="123"/>
+        <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="274" column="12" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.cpp" bodystart="131" bodyend="135"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" bodystart="37" bodyend="239"/>
+    <location file="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_safety_api/zephyr/public_api/SafetyAPI.h" bodystart="37" bodyend="277"/>
     <listofallmembers>
       <member refid="classSafetyAPI_1aaae5328105933683184031f7cbf3355a" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>disableSafetyApi</name></member>
       <member refid="classSafetyAPI_1a2870f884ad8bfabfac7d1fa6c0727bec" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>enableSafetyApi</name></member>
@@ -631,8 +576,8 @@
       <member refid="classSafetyAPI_1ac47d7d78d95dd9552b2469c741e8b22f" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelThresholdMax</name></member>
       <member refid="classSafetyAPI_1a7eb703ca003a0da4a47fd97c8e04def5" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelThresholdMin</name></member>
       <member refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>getChannelWatch</name></member>
-      <member refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>init_shield</name></member>
-      <member refid="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>init_shield</name></member>
+      <member refid="classSafetyAPI_1a6bec8a0e30be9c82e393421bda45c8a5" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>initShield</name></member>
+      <member refid="classSafetyAPI_1a81bcfe16b6c0a8d6a3c3840d1ae9fab3" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>initShield</name></member>
       <member refid="classSafetyAPI_1ae3bbc3c4ecab3b16f91e6817da074508" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>retrieveThreshold</name></member>
       <member refid="classSafetyAPI_1a6f224b5c0fd69eb08971a6f20ac15049" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelReaction</name></member>
       <member refid="classSafetyAPI_1abc3da76870ab8b6773440d66c47896a7" prot="public" virt="non-virtual"><scope>SafetyAPI</scope><name>setChannelThresholdMax</name></member>

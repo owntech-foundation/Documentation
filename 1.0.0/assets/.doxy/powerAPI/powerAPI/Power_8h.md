@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**leg\_t**](#enum-leg_t)  <br> |
+| enum  | [**leg\_t**](#enum-leg_t)  <br>_Parses all the legs with okay status in the device tree and fills this type def._  |
 
 
 
@@ -92,6 +92,7 @@
 
 ### enum leg\_t 
 
+_Parses all the legs with okay status in the device tree and fills this type def._ 
 ```C++
 enum leg_t {
     DT_FOREACH_CHILD_STATUS_OKAY =(DT_NODELABEL(powershield), LEG_TOKEN)
@@ -101,6 +102,14 @@ enum leg_t {
 
 
 
+
+* `LEG1` to `LEG5` - values supported by the SPIN
+* `ALL` - Applies the function to all legs in the list 
+
+
+
+
+        
 
 <hr>
 

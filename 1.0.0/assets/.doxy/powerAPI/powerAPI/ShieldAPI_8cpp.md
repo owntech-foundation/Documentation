@@ -93,28 +93,7 @@ ShieldAPI shield;
 
 
 
-
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Jean Alinei [jean.alinei@owntech.org](mailto:jean.alinei@owntech.org) 
-
-
-
+Public object to interact with the class 
 
 
         

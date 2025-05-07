@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2023 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,16 +27,29 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief Data dispatch is intended at dispatching ADCs
+ * acquired data from DMA buffers to per-channel buffers.
+ * User can then request the data of a specific channel.
+ *
+ * It uses double-buffering, holding 2 buffers for each
+ * enabled channel of each ADC, one being filled and one
+ * made available to the user.
+ */
 
 #ifndef DATA_DISPATCH_H_
 #define DATA_DISPATCH_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
 
-// Constants
+/* Constants */
 
 const uint16_t PEEK_NO_VALUE = 0xFFFF;
 const uint8_t CHANNELS_BUFFERS_SIZE = 32;
@@ -49,12 +62,15 @@ void data_dispatch_do_dispatch(uint8_t adc_number);
 
 void data_dispatch_do_full_dispatch();
 
-uint16_t* data_dispatch_get_acquired_values(uint8_t adc_number, uint8_t channel_rank, uint32_t& number_of_values_acquired);
+uint16_t* data_dispatch_get_acquired_values(uint8_t adc_number,
+                                            uint8_t channel_rank,
+                                            uint32_t& number_of_values_acquired);
 
-uint16_t data_dispatch_peek_acquired_value(uint8_t adc_number, uint8_t channel_rank);
+uint16_t data_dispatch_peek_acquired_value(uint8_t adc_number,
+                                           uint8_t channel_rank);
 
 
-#endif // DATA_DISPATCH_H_
+#endif /* DATA_DISPATCH_H_ */
 ```
 
 

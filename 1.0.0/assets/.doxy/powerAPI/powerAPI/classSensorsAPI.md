@@ -51,21 +51,21 @@
 
 | Type | Name |
 | ---: | :--- |
-|  float32\_t | [**convertRawValue**](#function-convertrawvalue) (sensor\_t sensor\_name, uint16\_t raw\_value) <br>_Use this function to convert values obtained using matching spin.data.get\*RawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius._  |
-|  void | [**enableDefaultOwnverterSensors**](#function-enabledefaultownvertersensors) () <br>_This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - V1, V2, V3, VH, VN_  _ADC2: - I1, I2, I3, IH, T._ |
-|  void | [**enableDefaultTwistSensors**](#function-enabledefaulttwistsensors) () <br>_This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - I1\_LOW ADC2: - I2\_LOW._  |
+|  float32\_t | [**convertRawValue**](#function-convertrawvalue) (sensor\_t sensor\_name, uint16\_t raw\_value) <br>_Use this function to convert values obtained using matching spin.data.get\*RawValues() function._  |
+|  void | [**enableDefaultOwnverterSensors**](#function-enabledefaultownvertersensors) () <br>_This function is used to enable acquisition of all voltage/current sensors on the OwnVerter shield._  |
+|  void | [**enableDefaultTwistSensors**](#function-enabledefaulttwistsensors) () <br>_This function is used to enable acquisition of all voltage/current sensors on the Twist shield._  |
 |  int8\_t | [**enableSensor**](#function-enablesensor) (sensor\_t sensor\_name, adc\_t adc\_number) <br>_This function is used to enable a shield sensor for acquisition by a given ADC._  |
-|  float32\_t | [**getLatestValue**](#function-getlatestvalue) (sensor\_t sensor\_name, uint8\_t \* dataValid=nullptr) <br>_This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celcius._  |
-|  uint16\_t \* | [**getRawValues**](#function-getrawvalues) (sensor\_t sensor\_name, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified sensor. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._  |
-|  float32\_t \* | [**getValues**](#function-getvalues) (sensor\_t sensor\_name, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._  |
-|  float32\_t | [**peekLatestValue**](#function-peeklatestvalue) (sensor\_t sensor\_name) <br>_Function to access the latest value available from the sensor, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started._  |
+|  float32\_t | [**getLatestValue**](#function-getlatestvalue) (sensor\_t sensor\_name, uint8\_t \* dataValid=nullptr) <br>_This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celsius._  |
+|  uint16\_t \* | [**getRawValues**](#function-getrawvalues) (sensor\_t sensor\_name, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified sensor._  |
+|  float32\_t \* | [**getValues**](#function-getvalues) (sensor\_t sensor\_name, uint32\_t & number\_of\_values\_acquired) <br>_Function to access the acquired data for specified pin._  |
+|  float32\_t | [**peekLatestValue**](#function-peeklatestvalue) (sensor\_t sensor\_name) <br>_Function to access the latest value available from the sensor._  |
 |  int8\_t | [**retrieveParametersFromMemory**](#function-retrieveparametersfrommemory) (sensor\_t sensor\_name) <br>_Use this function to read the gain and offset parameters of the board to is non-volatile memory._  |
 |  conversion\_type\_t | [**retrieveStoredConversionType**](#function-retrievestoredconversiontype) (sensor\_t sensor\_name) <br>_Use this function to get the current conversion type for the chosen sensor._  |
-|  float32\_t | [**retrieveStoredParameterValue**](#function-retrievestoredparametervalue) (sensor\_t sensor\_name, parameter\_t parameter\_name) <br>_Use this function to get the current conversion parameteres for the chosen sensor._  |
+|  float32\_t | [**retrieveStoredParameterValue**](#function-retrievestoredparametervalue) (sensor\_t sensor\_name, parameter\_t parameter\_name) <br>_Use this function to get the current conversion parameters for the chosen sensor._  |
 |  void | [**setConversionParametersLinear**](#function-setconversionparameterslinear) (sensor\_t sensor\_name, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for any linear sensor if default values are not accurate enough._  |
 |  void | [**setConversionParametersNtcThermistor**](#function-setconversionparametersntcthermistor) (sensor\_t sensor\_name, float32\_t r0, float32\_t b, float32\_t rdiv, float32\_t t0) <br>_Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough._  |
-|  void | [**setOwnverterTempMeas**](#function-setownvertertempmeas) (ownverter\_temp\_sensor\_t temperature\_sensor) <br>_This function sets the gpios attached to the MUX to control which measurement will be performed. The logic is: IN1 IN2 TEMP 1 T F TEMP 2 F T TEMP 3 T T._  |
-|  void | [**setTwistSensorsUserCalibrationFactors**](#function-settwistsensorsusercalibrationfactors) () <br>_Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board._  _After the parameters have been inputed, they will be stored in Spin Non-Volatile memory so that they are automatically applied on subsequent boots._ |
+|  void | [**setOwnverterTempMeas**](#function-setownvertertempmeas) (ownverter\_temp\_sensor\_t temperature\_sensor) <br>_This function sets the GPIOs attached to the MUX to control which temperature sensor will be measured._  |
+|  void | [**setTwistSensorsUserCalibrationFactors**](#function-settwistsensorsusercalibrationfactors) () <br>_Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board._  |
 |  int8\_t | [**storeParametersInMemory**](#function-storeparametersinmemory) (sensor\_t sensor\_name) <br>_Use this function to write the gain and offset parameters of the board to is non-volatile memory._  |
 |  void | [**triggerTwistTempMeas**](#function-triggertwisttempmeas) (sensor\_t temperature\_sensor) <br>_Manually triggers the temperature measurement of the Twist board._  |
 
@@ -103,7 +103,7 @@
 
 ### function convertRawValue 
 
-_Use this function to convert values obtained using matching spin.data.get\*RawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius._ 
+_Use this function to convert values obtained using matching spin.data.get\*RawValues() function._ 
 ```C++
 float32_t SensorsAPI::convertRawValue (
     sensor_t sensor_name,
@@ -113,11 +113,14 @@ float32_t SensorsAPI::convertRawValue (
 
 
 
+Conversion will be done to relevant unit for the data: Volts, Amperes, or Degree Celsius.
+
+
 
 
 **Note:**
 
-This function can't be called before the sensor is enabled.
+This function can NOT be called before the sensor is enabled.
 
 
 
@@ -132,10 +135,10 @@ This function can't be called before the sensor is enabled.
 
 **Returns:**
 
-Converted value in the relevant unit. Returns ERROR\_CHANNEL\_NOT\_FOUND if the sensor is not active. 
+Converted value in the relevant unit.
 
 
-
+Returns `ERROR_CHANNEL_NOT_FOUND` if the sensor is not active. 
 
 
         
@@ -146,7 +149,7 @@ Converted value in the relevant unit. Returns ERROR\_CHANNEL\_NOT\_FOUND if the 
 
 ### function enableDefaultOwnverterSensors 
 
-_This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - V1, V2, V3, VH, VN_  _ADC2: - I1, I2, I3, IH, T._
+_This function is used to enable acquisition of all voltage/current sensors on the OwnVerter shield._ 
 ```C++
 void SensorsAPI::enableDefaultOwnverterSensors () 
 ```
@@ -157,7 +160,31 @@ void SensorsAPI::enableDefaultOwnverterSensors ()
 
 **Note:**
 
-This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events. All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called. It also configures the gpios that control the MUX that chooses which temperature will be measured.
+ADCs are triggered simultaneously.
+
+
+
+
+**Note:**
+
+Sensors are attributed to ADC1 and ADC2 as follows:
+
+
+
+* `ADC1_LIST[5]`: [`V1_LOW`,`V2_LOW`, `I3_LOW`, `V_HIGH`, `V_NEUTR` ] 
+
+* `ADC2_LIST[5]`: [`I1_LOW`,`I2_LOW`, `V3_LOW`, `I_HIGH`, `TEMP_SENSOR`]
+
+
+
+
+This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events.
+
+
+All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called.
+
+
+It also configures the gpios that control the MUX that chooses which temperature will be measured.
 
 
 
@@ -178,7 +205,7 @@ This function must be called _before_ ADC is started.
 
 ### function enableDefaultTwistSensors 
 
-_This function is used to enable acquisition of all voltage/current sensors on the Twist shield. Sensors are attributed as follows: ADC1: - I1\_LOW ADC2: - I2\_LOW._ 
+_This function is used to enable acquisition of all voltage/current sensors on the Twist shield._ 
 ```C++
 void SensorsAPI::enableDefaultTwistSensors () 
 ```
@@ -186,24 +213,32 @@ void SensorsAPI::enableDefaultTwistSensors ()
 
 
 
-* V1\_LOW - V2\_LOW
-* V\_HIGH - I\_HIGH
 
+**Note:**
 
+ADCs are triggered simultaneously.
 
 
 
 
 **Note:**
 
-This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events. All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called.
+Sensors are attributed to ADC1 and ADC2 as follows:
+
+
+
+* `ADC1_LIST[3]`: [`V1_LOW`,`V2_LOW`,`V_HIGH`] 
+
+* `ADC2_LIST[3]`: [`I1_LOW`,`I2_LOW`,`I_HIGH`]This function will configure ADC 1 and 2 to be automatically triggered by the HRTIM, so the board must be configured as a power converted to enable HRTIM events.All other ADCs remain software triggered, thus will only be acquired when triggerAcquisition() is called.
 
 
 
 
-**Note:**
 
-This function must be called _before_ ADC is started. 
+
+**Warning:**
+
+This function must be called `before` ADC is started. 
 
 
 
@@ -231,14 +266,14 @@ int8_t SensorsAPI::enableSensor (
 
 **Note:**
 
-This function requires the presence of an "shielde-sensor" node in the shield device-tree.
+This function requires the presence of an "shield-sensor" node in the shield device-tree.
 
 
 
 
 **Note:**
 
-This function must be called _before_ ADC is started.
+This function must be called `before` ADC is started.
 
 
 
@@ -253,10 +288,10 @@ This function must be called _before_ ADC is started.
 
 **Returns:**
 
-0 if the sensor was correctly enabled, negative value if there was an error. 
+0 if the sensor was correctly enabled, negative value if there was an error.
 
 
-
+Public functions accessible only when using a power shield 
 
 
         
@@ -267,7 +302,7 @@ This function must be called _before_ ADC is started.
 
 ### function getLatestValue 
 
-_This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celcius._ 
+_This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celsius._ 
 ```C++
 float32_t SensorsAPI::getLatestValue (
     sensor_t sensor_name,
@@ -281,7 +316,7 @@ float32_t SensorsAPI::getLatestValue (
 
 **Note:**
 
-This function can't be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
+This function can NOT be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
 
 
 
@@ -297,10 +332,22 @@ When using this functions, you loose the ability to access raw values using spin
 
 
 * `sensor_name` Name of the shield sensor from which to obtain value. 
-* `dataValid` Pointer to an uint8\_t variable. This parameter is facultative. If this parameter is provided, it will be updated to indicate information about spin.data. Possible values for this parameter will be:
-  * DATA\_IS\_OK if returned data is a newly acquired data,
-  * DATA\_IS\_OLD if returned data has already been provided before (no new data available since latest time this function was called),
-  * DATA\_IS\_MISSING if returned data is NO\_VALUE.
+* `dataValid` Pointer to an `uint8_t` variable.
+
+This parameter is optional.
+
+
+If this parameter is provided, it will be updated to indicate information about spin.data.
+
+
+Possible values for this parameter will be:
+
+
+
+* `DATA_IS_OK` if returned data is a newly acquired data,
+* `DATA_IS_OLD` if returned data has already been provided before (no new data available since latest time this function was called),
+* `DATA_IS_MISSING` if returned data is `NO_VALUE`.
+
 
 
 
@@ -308,10 +355,10 @@ When using this functions, you loose the ability to access raw values using spin
 
 **Returns:**
 
-Latest measure acquired by the sensor. If no value was acquired by this sensor yet, return value is NO\_VALUE. 
+Latest measure acquired by the sensor.
 
 
-
+If no value was acquired by this sensor yet, return value is `NO_VALUE`. 
 
 
         
@@ -322,7 +369,7 @@ Latest measure acquired by the sensor. If no value was acquired by this sensor y
 
 ### function getRawValues 
 
-_Function to access the acquired data for specified sensor. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._ 
+_Function to access the acquired data for specified sensor._ 
 ```C++
 uint16_t * SensorsAPI::getRawValues (
     sensor_t sensor_name,
@@ -334,23 +381,32 @@ uint16_t * SensorsAPI::getRawValues (
 
 
 
-**Note:**
-
-This function can't be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
-
 
 
 
 **Note:**
 
-When calling this function, it invalidates the buffer returned by a previous call to the same function. However, different sensors buffers are independent from each other.
+This function can NOT be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
 
 
 
 
 **Note:**
 
-When using this functions, the user is responsible for data conversion. Use matching spin.data.convert\*() function for this purpose.
+When calling this function, it invalidates the buffer returned by a previous call to the same function.
+
+
+However, different sensors buffers are independent from each other.
+
+
+
+
+**Note:**
+
+When using this functions, the user is responsible for data conversion.
+
+
+Use matching spin.data.convert\*() function for this purpose.
 
 
 
@@ -366,7 +422,7 @@ When using this function, DO NOT use the function to get the latest converted va
 
 
 * `sensor_name` Name of the shield sensor from which to obtain values. 
-* `number_of_values_acquired` Pass an uint32\_t variable. This variable will be updated with the number of values that are present in the returned buffer.
+* `number_of_values_acquired` Pass an `uint32_t` variable. 
 
 
 
@@ -386,7 +442,7 @@ Pointer to a buffer in which the acquired values are stored. If number\_of\_valu
 
 ### function getValues 
 
-_Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer._ 
+_Function to access the acquired data for specified pin._ 
 ```C++
 float32_t * SensorsAPI::getValues (
     sensor_t sensor_name,
@@ -398,23 +454,29 @@ float32_t * SensorsAPI::getValues (
 
 
 
+
+
+
 **Warning:**
 
-This is an expensive function. Calling this function trigger the conversion of all values acquired since the last call. If only the lastet value is required, it is advised to call [**getLatestValue()**](classSensorsAPI.md#function-getlatestvalue) instead. If multiple values are required, but not all, it is advised to call [**getRawValues()**](classSensorsAPI.md#function-getrawvalues) instead, then explicitely convert required values using convertValue().
+This is an expensive function. 
 
 
 
 
 **Note:**
 
-This function can't be called before the pin is enabled. The [**DataAPI**](classDataAPI.md) module must have been started, either explicitly or by starting the Uninterruptible task.
+This function can NOT be called before the pin is enabled. 
 
 
 
 
 **Note:**
 
-When calling this function, it invalidates the array returned by a previous call to the same function. However, different channels buffers are independent from each other.
+When calling this function, it invalidates the array returned by a previous call to the same function.
+
+
+However, different channels buffers are independent from each other.
 
 
 
@@ -423,13 +485,13 @@ When calling this function, it invalidates the array returned by a previous call
 
 
 * `sensor_name` Name of the shield sensor from which to obtain values. 
-* `number_of_values_acquired` Pass an uint32\_t variable. This variable will be updated with the number of values that are present in the returned buffer.
+* `number_of_values_acquired` Pass an `uint32_t` variable. This variable will be updated with the number of values that are present in the returned buffer.
 
 
 
 **Returns:**
 
-Pointer to an array in which the acquired values are stored. If number\_of\_values\_acquired is 0, do not try to access the buffer as it may be nullptr. 
+Pointer to an array in which the acquired values are stored.  
 
 
 
@@ -443,7 +505,7 @@ Pointer to an array in which the acquired values are stored. If number\_of\_valu
 
 ### function peekLatestValue 
 
-_Function to access the latest value available from the sensor, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started._ 
+_Function to access the latest value available from the sensor._ 
 ```C++
 float32_t SensorsAPI::peekLatestValue (
     sensor_t sensor_name
@@ -454,9 +516,12 @@ float32_t SensorsAPI::peekLatestValue (
 
 
 
+
+
+
 **Note:**
 
-This function can't be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
+This function can NOT be called before the sensor is enabled and the [**DataAPI**](classDataAPI.md) module is started, either explicitly or by starting the Uninterruptible task.
 
 
 
@@ -470,7 +535,7 @@ This function can't be called before the sensor is enabled and the [**DataAPI**]
 
 **Returns:**
 
-Latest available value available from the given sensor. If there was no value acquired by this sensor yet, return value is NO\_VALUE. 
+Latest available value available from the given sensor. If there was no value acquired by this sensor yet, return value is `NO_VALUE`. 
 
 
 
@@ -504,8 +569,14 @@ int8_t SensorsAPI::retrieveParametersFromMemory (
 
 **Returns:**
 
-0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn't match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel 
+`0` if parameters were correctly retrieved,negative value if there was an error:
 
+
+
+* `-1`: NVS is empty
+* `-2`: NVS contains data, but their version doesn't match current version
+* `-3`: NVS data is corrupted
+* `-4`: NVS contains data, but not for the requested channel 
 
 
 
@@ -531,7 +602,7 @@ conversion_type_t SensorsAPI::retrieveStoredConversionType (
 
 **Note:**
 
-This function can't be called before the sensor is enabled.
+This function can NOT be called before the sensor is enabled.
 
 
 
@@ -552,7 +623,7 @@ This function can't be called before the sensor is enabled.
 
 ### function retrieveStoredParameterValue 
 
-_Use this function to get the current conversion parameteres for the chosen sensor._ 
+_Use this function to get the current conversion parameters for the chosen sensor._ 
 ```C++
 float32_t SensorsAPI::retrieveStoredParameterValue (
     sensor_t sensor_name,
@@ -566,7 +637,7 @@ float32_t SensorsAPI::retrieveStoredParameterValue (
 
 **Note:**
 
-This function can't be called before the sensor is enabled.
+This function can NOT be called before the sensor is enabled.
 
 
 
@@ -575,7 +646,7 @@ This function can't be called before the sensor is enabled.
 
 
 * `sensor_name` Name of the shield sensor to get a conversion parameter. 
-* `parameter_name` Paramater to be retreived: `gain` or `offset`. 
+* `parameter_name` Paramater to be retrieved: `gain` or `offset`. 
 
 
 
@@ -603,7 +674,7 @@ void SensorsAPI::setConversionParametersLinear (
 
 **Note:**
 
-This function can't be called before the sensor is enabled. The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task.
+This function can NOT be called before the sensor is enabled. 
 
 
 
@@ -643,7 +714,7 @@ void SensorsAPI::setConversionParametersNtcThermistor (
 
 **Note:**
 
-This function can't be called before the sensor is enabled. The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task.
+This function can NOT be called before the sensor is enabled. 
 
 
 
@@ -654,7 +725,7 @@ This function can't be called before the sensor is enabled. The [**DataAPI**](cl
 * `sensor_name` Name of the shield sensor to set conversion values. 
 * `r0` The NTC resistance at a reference temperature. 
 * `b` The sensibility coefficient of the resistance to temperature. 
-* `rdiv` The bridge dividor resistance used to condition the NTC. 
+* `rdiv` The bridge divider resistance used to condition the NTC. 
 * `t0` The reference temperature of the thermistor. 
 
 
@@ -668,7 +739,7 @@ This function can't be called before the sensor is enabled. The [**DataAPI**](cl
 
 ### function setOwnverterTempMeas 
 
-_This function sets the gpios attached to the MUX to control which measurement will be performed. The logic is: IN1 IN2 TEMP 1 T F TEMP 2 F T TEMP 3 T T._ 
+_This function sets the GPIOs attached to the MUX to control which temperature sensor will be measured._ 
 ```C++
 void SensorsAPI::setOwnverterTempMeas (
     ownverter_temp_sensor_t temperature_sensor
@@ -682,16 +753,27 @@ void SensorsAPI::setOwnverterTempMeas (
 **Parameters:**
 
 
-* `temperature_sensor` Name of the temperature sensor to trigger. Can be either TEMP\_1, TEMP\_2 or TEMP\_3.
+* `temperature_sensor` Name of the temperature sensor to trigger: `TEMP_1`, `TEMP_2`, `TEMP_3`
 
 
 
 **Note:**
 
-This function will decide which value will be read automatically by the ADC2 to which the temperature of the Ownverter is linked. 
+This function will decide which value will be read automatically by the ADC2 to which the temperature of the Ownverter is linked.
+
+
+The logic is:
 
 
 
+* `TEMP_1: IN1 = T IN2 = F`
+* `TEMP_2: IN1 = F IN2 = T`
+* `TEMP_3: IN1 = T IN2 = T`
+
+
+
+
+Please refer to the OwnVerter documentation and repository for more details 
 
 
         
@@ -702,28 +784,31 @@ This function will decide which value will be read automatically by the ADC2 to 
 
 ### function setTwistSensorsUserCalibrationFactors 
 
-_Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board._  _After the parameters have been inputed, they will be stored in Spin Non-Volatile memory so that they are automatically applied on subsequent boots._
+_Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board._ 
 ```C++
 void SensorsAPI::setTwistSensorsUserCalibrationFactors () 
 ```
 
 
 
-
-
-**Note:**
-
-This function requires a console to interact with the user. The board must be connected to a computer using USB to display the console.
+After the parameters have been set, they will be stored in Spin Non-Volatile memory so that they are automatically applied on subsequent boots.
 
 
 
 
 **Note:**
 
-This function can't be called before _all_ Twist sensors have been enabled (you can use [**enableDefaultTwistSensors()**](classSensorsAPI.md#function-enabledefaulttwistsensors) for that purpose). The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task. 
+This function requires a console to interact with the user. 
 
 
 
+
+**Note:**
+
+This function can NOT be called before _all_ Twist sensors have been enabled (you can use [**enableDefaultTwistSensors()**](classSensorsAPI.md#function-enabledefaulttwistsensors) for that purpose).
+
+
+The [**DataAPI**](classDataAPI.md) must not have been started, neither explicitly nor by starting the Uninterruptible task. 
 
 
         
@@ -782,16 +867,19 @@ void SensorsAPI::triggerTwistTempMeas (
 **Parameters:**
 
 
-* `temperature_sensor` Name of the temperature sensor to trigger. Can be either TEMP\_SENSOR\_1 or TEMP\_SENSOR\_2.
+* `temperature_sensor` Name of the temperature sensor to trigger: `TEMP_SENSOR_1`, `TEMP_SENSOR_2`
 
 
 
 **Note:**
 
-This function must be called to trigger a conversion of the ADC to which the sensor is linked. It must be called BEFORE reading a new measurement. Account for delays in the measurement. 
+This function must be called to trigger a conversion of the ADC to which the sensor is linked.
 
 
+It must be called `BEFORE` reading a new measurement.
 
+
+Account for delays in the measurement. 
 
 
         

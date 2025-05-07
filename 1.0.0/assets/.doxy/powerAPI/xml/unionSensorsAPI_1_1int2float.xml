@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="99" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="99" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="97" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="unionSensorsAPI_1_1int2float_1aeef4af571fac36beb05164d5ffe39233" prot="public" static="no" mutable="no">
         <type>float32_t</type>
@@ -29,14 +29,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="100" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="100" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="98" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="98" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Private types definitions </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="97" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="98" bodyend="101"/>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="95" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="96" bodyend="99"/>
     <listofallmembers>
       <member refid="unionSensorsAPI_1_1int2float_1aeef4af571fac36beb05164d5ffe39233" prot="public" virt="non-virtual"><scope>SensorsAPI::int2float</scope><name>float_value</name></member>
       <member refid="unionSensorsAPI_1_1int2float_1a3e22f325b6ae7a04831a0aa4b54f368a" prot="public" virt="non-virtual"><scope>SensorsAPI::int2float</scope><name>raw_value</name></member>

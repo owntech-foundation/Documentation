@@ -51,9 +51,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**toggle**](#function-toggle) () <br> |
-|  void | [**turnOff**](#function-turnoff) () <br> |
-|  void | [**turnOn**](#function-turnon) () <br> |
+|  void | [**toggle**](#function-toggle) () <br>_Toggle the LED state._  |
+|  void | [**turnOff**](#function-turnoff) () <br>_Turn the LED off._  |
+|  void | [**turnOn**](#function-turnon) () <br>_Turn the LED on._  |
 
 
 
@@ -89,12 +89,20 @@
 
 ### function toggle 
 
+_Toggle the LED state._ 
 ```C++
 void LedHAL::toggle () 
 ```
 
 
 
+Changes the LED state from on to off or vice versa.
+
+
+Performs lazy initialization if not already done. 
+
+
+        
 
 <hr>
 
@@ -102,12 +110,17 @@ void LedHAL::toggle ()
 
 ### function turnOff 
 
+_Turn the LED off._ 
 ```C++
 void LedHAL::turnOff () 
 ```
 
 
 
+Ensures the LED is initialized, then sets the output state to inactive. 
+
+
+        
 
 <hr>
 
@@ -115,12 +128,17 @@ void LedHAL::turnOff ()
 
 ### function turnOn 
 
+_Turn the LED on._ 
 ```C++
 void LedHAL::turnOn () 
 ```
 
 
 
+Ensures the LED is initialized, then sets the output state to active. 
+
+
+        
 
 <hr>
 

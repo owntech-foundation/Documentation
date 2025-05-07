@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,19 +27,25 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ */
 
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
 
-// Current file header
+/* Current file header */
 #include "LedHAL.h"
 
 
 bool LedHAL::ledInitialized = false;
 
-static struct gpio_dt_spec led_pin_spec = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+static struct gpio_dt_spec led_pin_spec =
+                            GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
 
 void LedHAL::initialize()

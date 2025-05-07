@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2023 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,21 +27,34 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief  This file provides DMA configuration to automatically
+ *         store ADC acquisitions in a provided buffer.
+ *         DMA 1 is used for all acquisitions, with channel n
+ *         acquiring values from ADC n.
+ */
 
 #ifndef DMA_H_
 #define DMA_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
 
-void dma_configure_adc_acquisition(uint8_t adc_number, bool disable_interrupts, uint16_t* buffer, size_t buffer_size);
+void dma_configure_adc_acquisition(uint8_t adc_number,
+                                   bool disable_interrupts,
+                                   uint16_t* buffer,
+                                   size_t buffer_size);
 
-uint32_t dma_get_retreived_data_count(uint8_t adc_number);
+uint32_t dma_get_retrieved_data_count(uint8_t adc_number);
 
 
-#endif // DMA_H_
+#endif /* DMA_H_ */
 ```
 
 

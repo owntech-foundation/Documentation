@@ -11,18 +11,28 @@
     <member refid="classAnalogCommunication_1a5c8f7bf0809b5f91baf3f96785cc9cf8" kind="function"><name>getAnalogCommValue</name></member>
     <member refid="classAnalogCommunication_1a02653f7a85f104cf78b45da094b10c77" kind="function"><name>setAnalogCommValue</name></member>
   </compound>
+  <compound refid="structcan__control__work__data" kind="struct"><name>can_control_work_data</name>
+    <member refid="structcan__control__work__data_1a0fba192c1ffc36f26301ba6f97bce0b6" kind="variable"><name>work</name></member>
+    <member refid="structcan__control__work__data_1a8084ff7e2eb54bdaa4be12340173a04f" kind="variable"><name>buf</name></member>
+    <member refid="structcan__control__work__data_1a18f7133e77f4db9f7bb72213015444e7" kind="variable"><name>buf_len</name></member>
+  </compound>
   <compound refid="classCanCommunication" kind="class"><name>CanCommunication</name>
+    <member refid="classCanCommunication_1addd5df0961e7e5c392c481ec1f004c30" kind="variable"><name>ts_can_inst</name></member>
     <member refid="classCanCommunication_1aec54b8f97eac1fbf6d23ff4284d13a6b" kind="function"><name>getCanNodeAddr</name></member>
+    <member refid="classCanCommunication_1ab7cd9de2c337672dbfe7e8f72356cdb6" kind="function"><name>setCanNodeAddr</name></member>
     <member refid="classCanCommunication_1ad374d1be9d21030f994f23c1e96515ed" kind="function"><name>getCtrlEnable</name></member>
     <member refid="classCanCommunication_1aa32cb313aead86639b8782fd490ab271" kind="function"><name>getCtrlReference</name></member>
-    <member refid="classCanCommunication_1a653b575b3ad8a43be2c2800f9644722a" kind="function"><name>getBroadcastPeriod</name></member>
+    <member refid="classCanCommunication_1aa545d6f6bdc5ba86a70dc05d2ffa4af5" kind="function"><name>getStartStopState</name></member>
     <member refid="classCanCommunication_1a89588a42bbb16f577926d0d18f95d79c" kind="function"><name>getControlPeriod</name></member>
-    <member refid="classCanCommunication_1ab7cd9de2c337672dbfe7e8f72356cdb6" kind="function"><name>setCanNodeAddr</name></member>
     <member refid="classCanCommunication_1abadaaf081a84cb52d735827863a96df8" kind="function"><name>setCtrlEnable</name></member>
     <member refid="classCanCommunication_1ab669c7adb48ddfde85765e8ff059e682" kind="function"><name>setCtrlReference</name></member>
-    <member refid="classCanCommunication_1aa335f6e4246bce217f42d8bf1f3bbe4c" kind="function"><name>setBroadcastPeriod</name></member>
-    <member refid="classCanCommunication_1a383984596e4065a99fe541b9736aaad9" kind="function"><name>setControlPeriod</name></member>
-    <member refid="classCanCommunication_1a4bbea499a4c2d68a4561ba1b95cf676b" kind="function"><name>enableCan</name></member>
+    <member refid="classCanCommunication_1aa5d737a5bacd505293349c2ddf8703c0" kind="function"><name>startSlaveDevice</name></member>
+    <member refid="classCanCommunication_1a871571f8578f56c4fccc07ab77163b71" kind="function"><name>stopSlaveDevice</name></member>
+    <member refid="classCanCommunication_1ad0d1f8df2a1a3c7b1013b7f5044bf64b" kind="function"><name>setControlPeriod</name></member>
+    <member refid="classCanCommunication_1a7b504fbe4d15cda013880ed270248fba" kind="function"><name>getBroadcastEnable</name></member>
+    <member refid="classCanCommunication_1a653b575b3ad8a43be2c2800f9644722a" kind="function"><name>getBroadcastPeriod</name></member>
+    <member refid="classCanCommunication_1a2ba80f7124ecf98e4f5cef2ab137f97f" kind="function"><name>setBroadcastEnable</name></member>
+    <member refid="classCanCommunication_1a039371244c3f49911c7974759d151eaf" kind="function"><name>setBroadcastPeriod</name></member>
   </compound>
   <compound refid="classCommunicationAPI" kind="class"><name>CommunicationAPI</name>
     <member refid="classCommunicationAPI_1a23af9a759f00d48b93b5b1a4e7ce40b4" kind="variable"><name>analog</name></member>
@@ -158,8 +168,9 @@
   </compound>
   <compound refid="classPowerAPI" kind="class"><name>PowerAPI</name>
     <member refid="classPowerAPI_1aab8dedde3cfc699c6619475708e63ea9" kind="function"><name>spinNumberToTu</name></member>
-    <member refid="classPowerAPI_1abc8fef65d23bef0c99f126dd2573fde3" kind="function"><name>initMode</name></member>
-    <member refid="classPowerAPI_1a4ba345b7c6691d0f4fdf2e547d9d2422" kind="function"><name>setDutyCycle</name></member>
+    <member refid="classPowerAPI_1ad739c8a08fd7dd34f8021efdefb8af65" kind="function"><name>initMode</name></member>
+    <member refid="classPowerAPI_1ab97f7c8f7d402c4bb03164ab3b727fe6" kind="function"><name>setDutyCycle</name></member>
+    <member refid="classPowerAPI_1a9f5b62159fab5ff12d69719a38fd2cab" kind="function"><name>setDutyCycleRaw</name></member>
     <member refid="classPowerAPI_1abfb00fe45a04ef128e1ec734559e43a0" kind="function"><name>start</name></member>
     <member refid="classPowerAPI_1a327ca39eb545213ff3201518c01f1dfe" kind="function"><name>stop</name></member>
     <member refid="classPowerAPI_1aad16833a793449732c379047d7a765d0" kind="function"><name>connectCapacitor</name></member>
@@ -168,8 +179,17 @@
     <member refid="classPowerAPI_1a89cb699e02b7136c9b00d5152e1d044d" kind="function"><name>disconnectDriver</name></member>
     <member refid="classPowerAPI_1a7173c11ed985462663b6b76b4f2609e3" kind="function"><name>setTriggerValue</name></member>
     <member refid="classPowerAPI_1ac621d3511a7584ec6781920d1d966665" kind="function"><name>setPhaseShift</name></member>
-    <member refid="classPowerAPI_1a646d84a6ffa8a83e9cf209e4c6efaff1" kind="function"><name>setSlopeCompensation</name></member>
-    <member refid="classPowerAPI_1a38b4ff1bd2f2fe1ed8ad88d0ee1fa658" kind="function"><name>setDeadTime</name></member>
+    <member refid="classPowerAPI_1aefac45bc651f02988a3026107296ff7a" kind="function"><name>setSlopeCompensation</name></member>
+    <member refid="classPowerAPI_1a644907d4a0a3c37dcae74a02191ddb2d" kind="function"><name>setDeadTime</name></member>
+    <member refid="classPowerAPI_1ab3058e34a4de223accdcbb486a98e9e0" kind="function"><name>setDutyCycleMin</name></member>
+    <member refid="classPowerAPI_1a5f1e72717f47889516e71312342ede66" kind="function"><name>setDutyCycleMinRaw</name></member>
+    <member refid="classPowerAPI_1a0008776d3b7d21ddf48dbf8b91b815fc" kind="function"><name>setDutyCycleMaxRaw</name></member>
+    <member refid="classPowerAPI_1ab440553ac940e65333e87668558ef713" kind="function"><name>setDutyCycleMax</name></member>
+    <member refid="classPowerAPI_1afdb256eeb1712cca4f29a1a058dec491" kind="function"><name>getDutyCycleMax</name></member>
+    <member refid="classPowerAPI_1a7ab3d46481116817c82ad67e15f9851c" kind="function"><name>getDutyCycleMaxRaw</name></member>
+    <member refid="classPowerAPI_1a1ff82e4ab6b1b29cf1c4fe7bd1b507e6" kind="function"><name>getDutyCycleMin</name></member>
+    <member refid="classPowerAPI_1a155cc8dd11411597071358cb9a24fd03" kind="function"><name>getDutyCycleMinRaw</name></member>
+    <member refid="classPowerAPI_1a656e1f9509448702534f3e0aa121f640" kind="function"><name>getPeriod</name></member>
     <member refid="classPowerAPI_1a762963be2eda26a77facd81070efacfb" kind="function"><name>setAdcDecim</name></member>
     <member refid="classPowerAPI_1a845b9c1008aa86deac765ca73ed381f1" kind="function"><name>initBuck</name></member>
     <member refid="classPowerAPI_1a89a40dc093a20d11620549c601ccabe3" kind="function"><name>initBoost</name></member>
@@ -189,11 +209,20 @@
     <member refid="structpwm__conf__t_1ac961245ebce3d6276babea18bae72207" kind="variable"><name>unit_on</name></member>
     <member refid="structpwm__conf__t_1a20ca10fb1cb21738627bb4cf98588a54" kind="variable"><name>ckpsc</name></member>
     <member refid="structpwm__conf__t_1a894655812d74f6f5ef6fb4c641d55d58" kind="variable"><name>resolution</name></member>
+    <member refid="structpwm__conf__t_1a353b606adab7e1da14aca8ed962912db" kind="variable"><name>duty_min</name></member>
+    <member refid="structpwm__conf__t_1ac11df9881209e255ead644faa5ea2ab2" kind="variable"><name>duty_max</name></member>
+    <member refid="structpwm__conf__t_1ab5e425abe5abcb1f65bde8a494f5b7f9" kind="variable"><name>duty_min_user</name></member>
+    <member refid="structpwm__conf__t_1a2e6e68148909673cafac68c266b39960" kind="variable"><name>duty_max_user</name></member>
+    <member refid="structpwm__conf__t_1aad99dd2e4bc821a75f9009ba88aa8d63" kind="variable"><name>duty_min_user_float</name></member>
+    <member refid="structpwm__conf__t_1adc156e1f1f5665780049cc31dd158e27" kind="variable"><name>duty_max_user_float</name></member>
+    <member refid="structpwm__conf__t_1ab4e0c75b8b49b6d7efaa1ec116b25ed4" kind="variable"><name>duty_swap</name></member>
     <member refid="structpwm__conf__t_1aa728c152b00638e760fdcaa082a3bcea" kind="variable"><name>pwm_mode</name></member>
     <member refid="structpwm__conf__t_1ae3c9bc310758dd584b5539824c0dda31" kind="variable"><name>external_trigger</name></member>
     <member refid="structpwm__conf__t_1a1dbeecebbefc333d9efe76160fdfec8e" kind="variable"><name>burst_clk</name></member>
   </compound>
   <compound refid="classPwmHAL" kind="class"><name>PwmHAL</name>
+    <member refid="classPwmHAL_1a754756b12d99c2f349ca9133f65f66d3" kind="variable"><name>swap_state</name></member>
+    <member refid="classPwmHAL_1aab092d00d456bcdaf311e2310fe5e8ab" kind="variable"><name>period</name></member>
     <member refid="classPwmHAL_1ada626c5c7319c8205df8596331d688fb" kind="function"><name>initUnit</name></member>
     <member refid="classPwmHAL_1ac2900f6b49f6110a4b1aadacf120201a" kind="function"><name>startDualOutput</name></member>
     <member refid="classPwmHAL_1a8bb44e5995a78e17a6545498184758e2" kind="function"><name>stopDualOutput</name></member>
@@ -205,6 +234,7 @@
     <member refid="classPwmHAL_1a15228ce45c2ffc13faf5b245975f06f8" kind="function"><name>initVariableFrequency</name></member>
     <member refid="classPwmHAL_1ab009fd531152f6d3a49742521feaf8e4" kind="function"><name>setDeadTime</name></member>
     <member refid="classPwmHAL_1aafab44228a26febf53e40b09aa0d58eb" kind="function"><name>setDutyCycle</name></member>
+    <member refid="classPwmHAL_1a4e55773837017da4f50de4fa9dd1fd55" kind="function"><name>setDutyCycleRaw</name></member>
     <member refid="classPwmHAL_1a983afd187fcd21d980a5fbd9836588a6" kind="function"><name>setPhaseShift</name></member>
     <member refid="classPwmHAL_1a3d02888d0a34aad51c5b5011c927ec15" kind="function"><name>setMode</name></member>
     <member refid="classPwmHAL_1a3170ba7199d9b31f2d8655f2373c2683" kind="function"><name>getMode</name></member>
@@ -241,15 +271,15 @@
     <member refid="classPwmHAL_1a87b314a43c49ce9536c2bb70a4ee2a02" kind="function"><name>deInitBurstMode</name></member>
   </compound>
   <compound refid="classRs485Communication" kind="class"><name>Rs485Communication</name>
-    <member refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" kind="function"><name>configure</name></member>
-    <member refid="classRs485Communication_1a4c2daa5920b8c30cdb36ffff58eeda5a" kind="function"><name>configureCustom</name></member>
+    <member refid="classRs485Communication_1ab31abe0e40fbbef418391773f3b06855" kind="function"><name>configure</name></member>
+    <member refid="classRs485Communication_1a93c8fcf04c4b8afb628f382ff374d843" kind="function"><name>configureCustom</name></member>
     <member refid="classRs485Communication_1ab05a6351f7409bf58ad1367c5bbfe11a" kind="function"><name>startTransmission</name></member>
     <member refid="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" kind="function"><name>turnOnCommunication</name></member>
     <member refid="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" kind="function"><name>turnOffCommunication</name></member>
   </compound>
   <compound refid="classSafetyAPI" kind="class"><name>SafetyAPI</name>
-    <member refid="classSafetyAPI_1a4ffde1ebf01e32c530b55f0f914d0135" kind="function"><name>init_shield</name></member>
-    <member refid="classSafetyAPI_1a1b738659fdbbbbb7a3777f36efed39d0" kind="function"><name>init_shield</name></member>
+    <member refid="classSafetyAPI_1a6bec8a0e30be9c82e393421bda45c8a5" kind="function"><name>initShield</name></member>
+    <member refid="classSafetyAPI_1a81bcfe16b6c0a8d6a3c3840d1ae9fab3" kind="function"><name>initShield</name></member>
     <member refid="classSafetyAPI_1a74576c06dc386dcfd1e4fb0ed4dca9c1" kind="function"><name>setChannelWatch</name></member>
     <member refid="classSafetyAPI_1a2b4cc5d76f9791f333759156e7482a4f" kind="function"><name>unsetChannelWatch</name></member>
     <member refid="classSafetyAPI_1a5adb3469c0e7caa333d6b83af1af846f" kind="function"><name>getChannelWatch</name></member>
@@ -336,10 +366,10 @@
   </compound>
   <compound refid="structswitch__conv__conf__t" kind="struct"><name>switch_conv_conf_t</name>
     <member refid="structswitch__conv__conf__t_1a701a344367d55a8c64f9db8eb3b003d1" kind="variable"><name>convention</name></member>
-    <member refid="structswitch__conv__conf__t_1ad274575699bceab162310382d03ffd5f" kind="variable"><name>set_H</name></member>
-    <member refid="structswitch__conv__conf__t_1a6400aeb5d0e94aca38bd4e3991f06ce2" kind="variable"><name>reset_H</name></member>
-    <member refid="structswitch__conv__conf__t_1abe8d9b2b7424e5947bd1c924dd3c1868" kind="variable"><name>set_L</name></member>
-    <member refid="structswitch__conv__conf__t_1a1d1e31142983f96e9086cbcfb4efb390" kind="variable"><name>reset_L</name></member>
+    <member refid="structswitch__conv__conf__t_1a868490b8ffebd054fdf23691809a1427" kind="variable"><name>set_H</name></member>
+    <member refid="structswitch__conv__conf__t_1a36e28ebdc48c6953e30c66f8f98cc68d" kind="variable"><name>reset_H</name></member>
+    <member refid="structswitch__conv__conf__t_1ae251c3fe30c9c0c3911dcd0295a52dc9" kind="variable"><name>set_L</name></member>
+    <member refid="structswitch__conv__conf__t_1a0db34ddc171f768faaaa000f2611acce" kind="variable"><name>reset_L</name></member>
   </compound>
   <compound refid="classSyncCommunication" kind="class"><name>SyncCommunication</name>
     <member refid="classSyncCommunication_1a8a5316e02be007aed366fea31211e226" kind="function"><name>initMaster</name></member>
@@ -381,9 +411,11 @@
   <compound refid="classTimerHAL" kind="class"><name>TimerHAL</name>
     <member refid="classTimerHAL_1a180d4121e89a3523852733d3e4d19857" kind="variable"><name>timer4init</name></member>
     <member refid="classTimerHAL_1a094f82bd39f3f0bc01f155240baedd33" kind="variable"><name>timer4started</name></member>
-    <member refid="classTimerHAL_1acbfc32c30a3f6544091515c4088e9ffe" kind="function"><name>startLogTimer4IncrementalEncoder</name></member>
-    <member refid="classTimerHAL_1a6c64f087b3df77f9c4e3f276199be880" kind="function"><name>getTimer4IncrementalEncoderValue</name></member>
-    <member refid="classTimerHAL_1a276ec58d52de04a5c7505c17214eca31" kind="function"><name>timer4Initialize</name></member>
+    <member refid="classTimerHAL_1a9582d5607c8fffc4d38a3dce4de07338" kind="variable"><name>timer3init</name></member>
+    <member refid="classTimerHAL_1a27c815c2586864840024d6c5e1fc6439" kind="variable"><name>timer3started</name></member>
+    <member refid="classTimerHAL_1afbd9b8c7210a0010459e5c7e5b619ce0" kind="function"><name>startLogIncrementalEncoder</name></member>
+    <member refid="classTimerHAL_1ae9eb17c15822f2edebaff9149ef014bb" kind="function"><name>getIncrementalEncoderValue</name></member>
+    <member refid="classTimerHAL_1ac7f554c86532cf875ed030ff3199d633" kind="function"><name>Initialize</name></member>
   </compound>
   <compound refid="classUartHAL" kind="class"><name>UartHAL</name>
     <member refid="classUartHAL_1adc6225c7a0204a7d830dc956d2725b71" kind="function"><name>usart1Init</name></member>
@@ -440,36 +472,29 @@
   <compound refid="AnalogCommunication_8h" kind="file"><name>AnalogCommunication.h</name>
   </compound>
   <compound refid="CanCommunication_8cpp" kind="file"><name>CanCommunication.cpp</name>
-    <member refid="CanCommunication_8cpp_1ade40b926144f47bc149081008762b485" kind="variable"><name>broadcast_time</name></member>
-    <member refid="CanCommunication_8cpp_1a3ce4a3dffec97c8397b33d6dc4a0100c" kind="variable"><name>control_time</name></member>
+    <member refid="CanCommunication_8cpp_1a590a7e072da2cf3c249d9002ae0aee63" kind="variable"><name>live_reporting_enable</name></member>
+    <member refid="CanCommunication_8cpp_1a9ecb7b3db52c53d766a290debd2bfc1f" kind="variable"><name>live_reporting_period</name></member>
+    <member refid="CanCommunication_8cpp_1ac9eedf02458c16b49687b4d36c58e11f" kind="variable"><name>start_stop</name></member>
+    <member refid="CanCommunication_8cpp_1ad9bf8649c8b02e9da1da33c5f544bce8" kind="variable"><name>reference_value</name></member>
   </compound>
   <compound refid="CanCommunication_8h" kind="file"><name>CanCommunication.h</name>
   </compound>
-  <compound refid="data__objects_8cpp" kind="file"><name>data_objects.cpp</name>
-    <member refid="data__objects_8cpp_1a992dba930a51c6ad048e7ef656fd3487" kind="variable"><name>manufacturer</name></member>
-    <member refid="data__objects_8cpp_1a5f80855c207a19fde104dfe94c13ad47" kind="variable"><name>device_type</name></member>
-    <member refid="data__objects_8cpp_1abac3a4cec4c79b1f24553aaefe1d9939" kind="variable"><name>hardware_version</name></member>
-    <member refid="data__objects_8cpp_1a85b54e4d05c33685b2d4230da42d3c53" kind="variable"><name>firmware_version</name></member>
-    <member refid="data__objects_8cpp_1afe10322036eadc4f4b9e97b454b7f6f2" kind="variable"><name>device_id</name></member>
-    <member refid="data__objects_8cpp_1af76069726c1a56793322ac75220b953f" kind="variable"><name>v1_low_value</name></member>
-    <member refid="data__objects_8cpp_1a1c25b6778bebf9d3e2acee951418dd2d" kind="variable"><name>v2_low_value</name></member>
-    <member refid="data__objects_8cpp_1a73862c1d46af3258a6354f68d025a9d5" kind="variable"><name>v_high_value</name></member>
-    <member refid="data__objects_8cpp_1ac610e5346ef04b15af25ef8a5ee661d2" kind="variable"><name>i1_low_value</name></member>
-    <member refid="data__objects_8cpp_1afa585f83ebc8d45455b42866d997e89b" kind="variable"><name>i2_low_value</name></member>
-    <member refid="data__objects_8cpp_1a77df1efae1fffd02a97e8af98e1bcba6" kind="variable"><name>i_high_value</name></member>
-    <member refid="data__objects_8cpp_1afc716029ff5dc80789a2c0cdfdea6735" kind="variable"><name>temp_value</name></member>
-    <member refid="data__objects_8cpp_1ad9bf8649c8b02e9da1da33c5f544bce8" kind="variable"><name>reference_value</name></member>
-    <member refid="data__objects_8cpp_1a5472d034365d310ea206ae2cc03979a1" kind="variable"><name>ctrl_enable</name></member>
-    <member refid="data__objects_8cpp_1a8a276838f7559c00693c59b0de674f95" kind="variable"><name>can_node_addr</name></member>
-    <member refid="data__objects_8cpp_1a1322f3e8a03cbd7af126c0a28a27470a" kind="variable"><name>data_objects</name></member>
-    <member refid="data__objects_8cpp_1aecbda2d075166ba7165d5017d63c2d0a" kind="function"><name>dataObjectsUpdateMeasures</name></member>
-    <member refid="data__objects_8cpp_1a34b4b6f25fb21741f10532b380489d51" kind="function"><name>ts</name></member>
-  </compound>
   <compound refid="data__objects_8h" kind="file"><name>data_objects.h</name>
-    <member refid="data__objects_8h_1a5472d034365d310ea206ae2cc03979a1" kind="variable"><name>ctrl_enable</name></member>
-    <member refid="data__objects_8h_1a8a276838f7559c00693c59b0de674f95" kind="variable"><name>can_node_addr</name></member>
+    <member refid="data__objects_8h_1a678f7ca1a797050dc8be342be24cf824" kind="variable"><name>manufacturer</name></member>
+    <member refid="data__objects_8h_1a0959366b990caf9b22efb1b35da18d7d" kind="variable"><name>device_type</name></member>
+    <member refid="data__objects_8h_1ac618bca5b60db60880f6c135f132f7b4" kind="variable"><name>hardware_version</name></member>
+    <member refid="data__objects_8h_1aee51da6de8f3d8455dbbeb8c3be0bee5" kind="variable"><name>firmware_version</name></member>
     <member refid="data__objects_8h_1ad9bf8649c8b02e9da1da33c5f544bce8" kind="variable"><name>reference_value</name></member>
-    <member refid="data__objects_8h_1aecbda2d075166ba7165d5017d63c2d0a" kind="function"><name>dataObjectsUpdateMeasures</name></member>
+    <member refid="data__objects_8h_1ac9eedf02458c16b49687b4d36c58e11f" kind="variable"><name>start_stop</name></member>
+    <member refid="data__objects_8h_1adcec825167b3bec06a274b2f3c2cead6" kind="function"><name>THINGSET_ADD_GROUP</name></member>
+    <member refid="data__objects_8h_1a93f72e750c9895cbe44bcde958592aaa" kind="function"><name>THINGSET_ADD_ITEM_STRING</name></member>
+    <member refid="data__objects_8h_1a527cd279dc7854a4d88d39ddf1648c5f" kind="function"><name>THINGSET_ADD_ITEM_STRING</name></member>
+    <member refid="data__objects_8h_1a71741744de50484546550fef01411f25" kind="function"><name>THINGSET_ADD_ITEM_STRING</name></member>
+    <member refid="data__objects_8h_1a30288ee4dfef8f3798962345c5b43d05" kind="function"><name>THINGSET_ADD_ITEM_STRING</name></member>
+    <member refid="data__objects_8h_1a7e7c383022c0f67140c40f43b17a22bb" kind="function"><name>THINGSET_ADD_SUBSET</name></member>
+    <member refid="data__objects_8h_1a03d64b60f1209b439a8e4ee8925b60af" kind="function"><name>THINGSET_ADD_GROUP</name></member>
+    <member refid="data__objects_8h_1aa6d9d6d3207e5bae13f703084bec1bbb" kind="function"><name>THINGSET_ADD_ITEM_FLOAT</name></member>
+    <member refid="data__objects_8h_1a2321fe6cd2b5a492754b1d64647bc30d" kind="function"><name>THINGSET_ADD_ITEM_BOOL</name></member>
   </compound>
   <compound refid="Rs485_8cpp" kind="file"><name>Rs485.cpp</name>
     <member refid="Rs485_8cpp_1a1522a7ea5fc08dd46ccd4a007dcaaa14" kind="variable"><name>dma1</name></member>
@@ -527,33 +552,14 @@
   </compound>
   <compound refid="SyncCommunication_8h" kind="file"><name>SyncCommunication.h</name>
   </compound>
-  <compound refid="thingset__isotp_8cpp" kind="file"><name>thingset_isotp.cpp</name>
-    <member refid="thingset__isotp_8cpp_1a8e52c22ac650fcc01ad5c7d69c53d2ae" kind="variable"><name>ts</name></member>
-    <member refid="thingset__isotp_8cpp_1a8a276838f7559c00693c59b0de674f95" kind="variable"><name>can_node_addr</name></member>
-    <member refid="thingset__isotp_8cpp_1a4e454acccb5074ba0697514fc4270776" kind="variable"><name>can_dev</name></member>
-    <member refid="thingset__isotp_8cpp_1aee317e2ccf1dec703647e6207554d4b0" kind="variable"><name>fc_opts</name></member>
-    <member refid="thingset__isotp_8cpp_1aa500dad885fd7c27f9aee47dc8b77d4b" kind="variable"><name>rx_addr</name></member>
-    <member refid="thingset__isotp_8cpp_1a86a5476a2dbca95379c1204db85c4809" kind="variable"><name>tx_addr</name></member>
-    <member refid="thingset__isotp_8cpp_1ad0d0f6d0ca16076b1a4e2b11df4ed9a9" kind="variable"><name>recv_ctx</name></member>
-    <member refid="thingset__isotp_8cpp_1a7b0a16afc1c1f3f3a2df60096fb43abd" kind="variable"><name>send_ctx</name></member>
-    <member refid="thingset__isotp_8cpp_1a7db4f29a9732798ba3195a5bd3799211" kind="function"><name>send_complete_cb</name></member>
-    <member refid="thingset__isotp_8cpp_1a933f8d67c8664d812b757809eaa13361" kind="function"><name>can_isotp_thread</name></member>
-    <member refid="thingset__isotp_8cpp_1ac68844c87b3fea7fbb2aa61710ceb21e" kind="function"><name>K_THREAD_DEFINE</name></member>
-  </compound>
-  <compound refid="thingset__pub__sub_8cpp" kind="file"><name>thingset_pub_sub.cpp</name>
-    <member refid="thingset__pub__sub_8cpp_1a8e52c22ac650fcc01ad5c7d69c53d2ae" kind="variable"><name>ts</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a8a276838f7559c00693c59b0de674f95" kind="variable"><name>can_node_addr</name></member>
-    <member refid="thingset__pub__sub_8cpp_1ade40b926144f47bc149081008762b485" kind="variable"><name>broadcast_time</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a3ce4a3dffec97c8397b33d6dc4a0100c" kind="variable"><name>control_time</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a4e454acccb5074ba0697514fc4270776" kind="variable"><name>can_dev</name></member>
-    <member refid="thingset__pub__sub_8cpp_1ab0e8a13ecafa0b977d41beecc1838193" kind="variable"><name>ctrl_filter</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a395b9547c7f22f7c9067d97a55e15e27" kind="function"><name>CAN_MSGQ_DEFINE</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a326908aff597b292afa2935d27b8e34c" kind="function"><name>can_pub_isr</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a8c4f587bffa57ecb786b8ef4542ccffb" kind="function"><name>can_pub_send</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a1888c0e967e827a640fa14e98f79c241" kind="function"><name>send_ts_can_pub_message</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a2826a4ac3a277ac592cded67b76b1988" kind="function"><name>update_ts_data_nodes</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a1785fea4783474cc5aeb635b1ce94b3e" kind="function"><name>can_pubsub_thread</name></member>
-    <member refid="thingset__pub__sub_8cpp_1a4286389bab3885a2a6c2566857cd8168" kind="function"><name>K_THREAD_DEFINE</name></member>
+  <compound refid="thingset__can_8c" kind="file"><name>thingset_can.c</name>
+    <member refid="thingset__can_8c_1a31df84ce5b84f7e04db8cdcd55f03312" kind="variable"><name>ts</name></member>
+    <member refid="thingset__can_8c_1a00c2b20bd670d3ceedb613bf9e4cf6b8" kind="variable"><name>can_work_data</name></member>
+    <member refid="thingset__can_8c_1accd10cb6db21c43956fef978bebbcbd4" kind="function"><name>LOG_MODULE_REGISTER</name></member>
+    <member refid="thingset__can_8c_1af698b702d8cb543cb5d9459baf79cda2" kind="function"><name>can_control_work_handler</name></member>
+    <member refid="thingset__can_8c_1aab4738a19ee51124220594775b61ce63" kind="function"><name>can_control_rx_handler</name></member>
+    <member refid="thingset__can_8c_1ab144629356ba94597954463afe6511d5" kind="function"><name>can_control_init</name></member>
+    <member refid="thingset__can_8c_1af2ef5c015d6cf863bf7311ca40adca6e" kind="function"><name>SYS_INIT</name></member>
   </compound>
   <compound refid="comparator_8c" kind="file"><name>comparator.c</name>
     <member refid="comparator_8c_1a113ca65e3a8ec781560d1f67c02e5653" kind="function"><name>comparator1_init</name></member>
@@ -641,8 +647,7 @@
     <member refid="hrtim_8h_1a61d48f0ff6772e883ceb198003c68edd" kind="function"><name>hrtim_get_min_frequency</name></member>
     <member refid="hrtim_8h_1a98067bd24e22f18b4399aa0eb297fbbe" kind="function"><name>hrtim_set_switch_convention</name></member>
     <member refid="hrtim_8h_1afc65f5b375f47305d116b4663a02821f" kind="function"><name>hrtim_get_switch_convention</name></member>
-    <member refid="hrtim_8h_1acd62d83382ae3c19848034b8ba21fe00" kind="function"><name>hrtim_cmpl_pwm_out1</name></member>
-    <member refid="hrtim_8h_1a16a347bd8643190ec474a9caf6912b15" kind="function"><name>hrtim_cmpl_pwm_out2</name></member>
+    <member refid="hrtim_8h_1a74c58d614dffa456e9c26290563ee40c" kind="function"><name>hrtim_cmpl_pwm_out</name></member>
     <member refid="hrtim_8h_1a4545279553facff6316ee64d2117b0c6" kind="function"><name>hrtim_frequency_set</name></member>
     <member refid="hrtim_8h_1ab6e465c9014bfc4b81cff2726827ae9b" kind="function"><name>hrtim_period_get</name></member>
     <member refid="hrtim_8h_1ade0093fd39a6279114c47358df1fb6d2" kind="function"><name>hrtim_period_Master_get</name></member>
@@ -676,11 +681,12 @@
     <member refid="hrtim_8h_1a58ac4aa23e6db07a53e10903cc38bd77" kind="function"><name>DualDAC_init</name></member>
     <member refid="hrtim_8h_1a54d6c998327d43767d0565b0e07cd6e0" kind="function"><name>hrtim_pwm_mode_set</name></member>
     <member refid="hrtim_8h_1a3a93a479f426d32c4d370a9706ddf973" kind="function"><name>hrtim_pwm_mode_get</name></member>
-    <member refid="hrtim_8h_1a4808eca151864af294fff76a9dd6a5a7" kind="function"><name>hrtim_adc_triger_set</name></member>
-    <member refid="hrtim_8h_1aca88caf294365cb56e9ae0ea0359d6c0" kind="function"><name>hrtim_adc_triger_get</name></member>
+    <member refid="hrtim_8h_1a5886a8eeab9e731f4360df90bc8a2280" kind="function"><name>hrtim_adc_trigger_set</name></member>
+    <member refid="hrtim_8h_1a3dcde4030306bfca2659ebbb54f66e2c" kind="function"><name>hrtim_adc_trigger_get</name></member>
     <member refid="hrtim_8h_1a20ef1290f7ec12dbfd0468ab9d6f8915" kind="function"><name>hrtim_eev_set</name></member>
     <member refid="hrtim_8h_1ad6eeb07361ae6b0b9965d56bae228b07" kind="function"><name>hrtim_eev_get</name></member>
     <member refid="hrtim_8h_1a9630ccd98dc0e5c73c09297e40f90156" kind="function"><name>hrtim_change_frequency</name></member>
+    <member refid="hrtim_8h_1ac54098747cd752226305da843d5b0652" kind="function"><name>hrtim_output_hot_swap</name></member>
   </compound>
   <compound refid="hrtim__enum_8h" kind="file"><name>hrtim_enum.h</name>
     <member refid="hrtim__enum_8h_1a76946e643313982de590b6f6a729ba96" kind="enum"><name>hrtim_tu_t</name></member>
@@ -821,6 +827,8 @@
     <member refid="hrtim__enum_8h_1a1e46077558f9b641a9a5f373fa4af59a" kind="typedef"><name>hrtim_callback_t</name></member>
     <member refid="hrtim__enum_8h_1a083f1b534cd9560062de5ff4a03daa1a" kind="variable"><name>HRTIM_CHANNELS</name></member>
     <member refid="hrtim__enum_8h_1a79feb2e77b1b416b4e9fdbcf51c6eee9" kind="variable"><name>HRTIM_PRESCALER_RESOLUTION_PS</name></member>
+    <member refid="hrtim__enum_8h_1a2a15617def7150227f76a4b8b6111d1c" kind="variable"><name>HRTIM_MIN_PER_and_CMP_REG_VALUES</name></member>
+    <member refid="hrtim__enum_8h_1a278b350f46a604a3e773b633e1676d6f" kind="variable"><name>HRTIM_MAX_PER_and_CMP_REG_VALUES</name></member>
   </compound>
   <compound refid="ngnd_8h" kind="file"><name>ngnd.h</name>
     <member refid="ngnd_8h_1a0401d76c218af50b6f30ec4cd0a6d6bf" kind="function"><name>ngnd_set</name></member>
@@ -853,6 +861,7 @@
   </compound>
   <compound refid="power__init_8cpp" kind="file"><name>power_init.cpp</name>
     <member refid="power__init_8cpp_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
+    <member refid="power__init_8cpp_1a908406a56ddc51e93aab0aad6d50b002" kind="variable"><name>timer_min_frequency</name></member>
     <member refid="power__init_8cpp_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
     <member refid="power__init_8cpp_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
     <member refid="power__init_8cpp_1afaa3ac268ff9363bcc90466c0f0cd4c3" kind="variable"><name>dt_adc</name></member>
@@ -875,6 +884,7 @@
     <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590da9591efd5f2d8ada76011926f036b12b6" kind="enumvalue"><name>CM_DAC1</name></member>
     <member refid="power__init_8h_1a328b1f25788569fd0374200b0a50590da9cf1b5fc136e68031cbccb2a558ad347" kind="enumvalue"><name>CM_DAC3</name></member>
     <member refid="power__init_8h_1ad228fa3902f8d73a6a41babf42ba6903" kind="variable"><name>timer_frequency</name></member>
+    <member refid="power__init_8h_1a908406a56ddc51e93aab0aad6d50b002" kind="variable"><name>timer_min_frequency</name></member>
     <member refid="power__init_8h_1a1c344a26ae0bf86917f3bb08e11b8f5c" kind="variable"><name>dt_pwm_pin</name></member>
     <member refid="power__init_8h_1a94d897e0a8e5e6789d1daa678099af2d" kind="variable"><name>dt_pwm_x1_high</name></member>
     <member refid="power__init_8h_1afaa3ac268ff9363bcc90466c0f0cd4c3" kind="variable"><name>dt_adc</name></member>
@@ -988,11 +998,11 @@
     <member refid="dma_8cpp_1a3ba468c5d8144fdad6d0101ed1f9bf6c" kind="variable"><name>user_data</name></member>
     <member refid="dma_8cpp_1a7b362bfd6ae4a79b61e9e6668e497dc3" kind="function"><name>_dma_callback</name></member>
     <member refid="dma_8cpp_1a4d9ff95693fb3417f4a9dd9070130458" kind="function"><name>dma_configure_adc_acquisition</name></member>
-    <member refid="dma_8cpp_1a7268e58e1ba181811027596191c18016" kind="function"><name>dma_get_retreived_data_count</name></member>
+    <member refid="dma_8cpp_1a42ea20714daecbd0886513b897b52d4f" kind="function"><name>dma_get_retrieved_data_count</name></member>
   </compound>
   <compound refid="dma_8h" kind="file"><name>dma.h</name>
     <member refid="dma_8h_1a4d9ff95693fb3417f4a9dd9070130458" kind="function"><name>dma_configure_adc_acquisition</name></member>
-    <member refid="dma_8h_1a7268e58e1ba181811027596191c18016" kind="function"><name>dma_get_retreived_data_count</name></member>
+    <member refid="dma_8h_1a42ea20714daecbd0886513b897b52d4f" kind="function"><name>dma_get_retrieved_data_count</name></member>
   </compound>
   <compound refid="DataAPI_8cpp" kind="file"><name>DataAPI.cpp</name>
   </compound>
@@ -1153,8 +1163,12 @@
   </compound>
   <compound refid="TimerHAL_8cpp" kind="file"><name>TimerHAL.cpp</name>
     <member refid="TimerHAL_8cpp_1a30ce026a03a3f99021d6b6e72e87c2aa" kind="variable"><name>timer4</name></member>
+    <member refid="TimerHAL_8cpp_1ac244bc214b64732d416ced3478a80de6" kind="variable"><name>timer3</name></member>
   </compound>
   <compound refid="TimerHAL_8h" kind="file"><name>TimerHAL.h</name>
+    <member refid="TimerHAL_8h_1a27e79c357cbc209b2381730563d89aa2" kind="enum"><name>timernumber_t</name></member>
+    <member refid="TimerHAL_8h_1a27e79c357cbc209b2381730563d89aa2a2a815be8dbcb2f8c8f9abb53b441b041" kind="enumvalue"><name>TIMER3</name></member>
+    <member refid="TimerHAL_8h_1a27e79c357cbc209b2381730563d89aa2a355d56fa51f1cbf3b5151d14b278f9e3" kind="enumvalue"><name>TIMER4</name></member>
   </compound>
   <compound refid="UartHAL_8cpp" kind="file"><name>UartHAL.cpp</name>
     <member refid="UartHAL_8cpp_1a660f23134aaae43c9ff2c6096fa59342" kind="variable"><name>uart_dev</name></member>

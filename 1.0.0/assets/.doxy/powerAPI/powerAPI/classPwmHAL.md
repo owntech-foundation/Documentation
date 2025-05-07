@@ -76,7 +76,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**initFixedFrequency**](#function-initfixedfrequency) (uint32\_t fixed\_frequency) <br>_This function initialize the PWM for fixed frequency applications._  |
 |  void | [**initUnit**](#function-initunit) (hrtim\_tu\_number\_t pwmX) <br>_This function initializes a timing unit._  |
 |  void | [**initVariableFrequency**](#function-initvariablefrequency) (uint32\_t initial\_frequency, uint32\_t minimal\_frequency) <br>_This functions initializes the PWM for variable frequency applications._  |
-|  void | [**setAdcDecimation**](#function-setadcdecimation) (hrtim\_tu\_number\_t pwmX, uint32\_t decimation) <br>_This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger._  |
+|  void | [**setAdcDecimation**](#function-setadcdecimation) (hrtim\_tu\_number\_t pwmX, uint32\_t decimation) <br>_This function sets the number of event which will be ignored between two events.ie. you divide the number of trigger in a fixed period._  |
 |  void | [**setAdcEdgeTrigger**](#function-setadcedgetrigger) (hrtim\_tu\_number\_t pwmX, hrtim\_adc\_edgetrigger\_t adc\_edge\_trigger) <br>_This function sets the adc trig rollover mode for the selected timer._  |
 |  void | [**setAdcTrigger**](#function-setadctrigger) (hrtim\_tu\_number\_t pwmX, adc\_t adc) <br>_This function sets the adc trigger linked to a timer unit._  |
 |  void | [**setAdcTriggerInstant**](#function-setadctriggerinstant) (hrtim\_tu\_number\_t pwmX, float32\_t trig\_val) <br>_This function sets the comparator value at which the ADC is trigered._  |
@@ -84,6 +84,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**setBurstMode**](#function-setburstmode) (int bm\_cmp, int bm\_per) <br>_This function sets burst mode parameters._  |
 |  void | [**setDeadTime**](#function-setdeadtime) (hrtim\_tu\_number\_t pwmX, uint16\_t rise\_ns, uint16\_t fall\_ns) <br>_This function sets the dead time for the selected timing unit._  |
 |  void | [**setDutyCycle**](#function-setdutycycle) (hrtim\_tu\_number\_t pwmX, float32\_t duty\_cycle) <br>_This function sets the duty cycle for the selected timing unit._  |
+|  void | [**setDutyCycleRaw**](#function-setdutycycleraw) (hrtim\_tu\_number\_t pwmX, uint16\_t duty\_cycle) <br>_Sets the duty cycle for the selected timing unit using an unsigned integer._  |
 |  void | [**setEev**](#function-seteev) (hrtim\_tu\_number\_t pwmX, hrtim\_external\_trigger\_t eev) <br>_This function sets external event linked to the timing unit essential for the current mode._  |
 |  void | [**setFrequency**](#function-setfrequency) (uint32\_t frequency\_update) <br>_Change the frequency/period after it has been initialized._  |
 |  void | [**setMode**](#function-setmode) (hrtim\_tu\_number\_t pwmX, hrtim\_pwm\_mode\_t mode) <br>_This function sets a special pwm mode for voltage or current mode._  |
@@ -92,7 +93,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  void | [**setPhaseShift**](#function-setphaseshift) (hrtim\_tu\_number\_t pwmX, int16\_t shift) <br>_This function sets the phase shift in respect to timer A for the selected timing unit._  |
 |  void | [**setSwitchConvention**](#function-setswitchconvention) (hrtim\_tu\_number\_t pwmX, hrtim\_switch\_convention\_t convention) <br>_This function sets the switch convention for a given PWM unit i.e. you decide which one of the output of the timer can be controlled with duty cycle._  |
 |  void | [**startBurstMode**](#function-startburstmode) () <br>_This function starts burst mode._  |
-|  void | [**startDualOutput**](#function-startdualoutput) (hrtim\_tu\_number\_t pwmX) <br>_This fonction starts both outputs of the selected HRTIM channel._  |
+|  void | [**startDualOutput**](#function-startdualoutput) (hrtim\_tu\_number\_t pwmX) <br>_This function starts both outputs of the selected HRTIM channel._  |
 |  void | [**startSingleOutput**](#function-startsingleoutput) (hrtim\_tu\_number\_t tu, hrtim\_output\_number\_t output) <br>_This function starts only one output of the selected HRTIM channel._  |
 |  void | [**stopBurstMode**](#function-stopburstmode) () <br>_This function stops burst mode._  |
 |  void | [**stopDualOutput**](#function-stopdualoutput) (hrtim\_tu\_number\_t pwmX) <br>_This function stops both outputs of the selected HRTIM channel._  |
@@ -162,9 +163,9 @@ void PwmHAL::configurePeriodEvnt (
 **Parameters:**
 
 
-* `PWM_tu` PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF 
-* `repetition` number of repetition before the interruption on repetition counter event 
-* `callback` function to call each interupt 
+* `PWM_tu` PWM Unit:`TIMA`,`TIMB`,`TIMC`,`TIMD`,`TIME`,`TIMF`
+* `repetition` Number of repetition before the interruption on repetition counter event 
+* `callback` Function to call each interupt 
 
 
 
@@ -205,7 +206,7 @@ void PwmHAL::disableAdcTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -232,7 +233,7 @@ void PwmHAL::disablePeriodEvnt (
 **Parameters:**
 
 
-* `PWM_tu` PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF 
+* `PWM_tu` PWM Unit:`TIMA`,`TIMB`,`TIMC`,`TIMD`,`TIME`,`TIMF` 
 
 
 
@@ -259,13 +260,13 @@ void PwmHAL::enableAdcTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 
 
 
 **Warning:**
 
-call this function only AFTER setting the adc trigger and initializing the chosen timer 
+Call this function only AFTER setting the adc trigger and initializing the chosen timer 
 
 
 
@@ -293,7 +294,7 @@ void PwmHAL::enablePeriodEvnt (
 **Parameters:**
 
 
-* `PWM_tu` PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF 
+* `PWM_tu` PWM Unit:`TIMA`,`TIMB`,`TIMC`,`TIMD`,`TIME`,`TIMF` 
 
 
 
@@ -320,13 +321,13 @@ hrtim_adc_edgetrigger_t PwmHAL::getAdcEdgeTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 
 
 
 **Returns:**
 
-Rollover mode - EdgeTrigger\_up, EdgeTrigger\_down, EdgeTrigger\_Both 
+Rollover mode: `EdgeTrigger_up`, `EdgeTrigger_down`, `EdgeTrigger_Both` 
 
 
 
@@ -354,16 +355,16 @@ adc_t PwmHAL::getAdcTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
 **Returns:**
 
-adc - ADC\_1, ADC\_2, ADC\_3, ADC\_4, ADC\_5 or UNKNOWN\_ADC if the ADC trigger was not configured for this timing unit. 
+ADC number: `ADC_1`,`ADC_2`,`ADC_3`,`ADC_4`,`ADC_5` or
 
 
-
+`UNKNOWN_ADC` if the ADC trigger was not configured for this timing unit. 
 
 
         
@@ -388,14 +389,9 @@ hrtim_external_trigger_t PwmHAL::getEev (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-
-
-
-**Returns:**
-
-external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EEV9 
-
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `eev` external event trigger: 
+ `EEV1`,`EEV2`,`EEV3`,`EEV4`,`EEV5`,`EEV6`,`EEV7`,`EEV8`,`EEV9` 
 
 
 
@@ -422,7 +418,7 @@ uint32_t PwmHAL::getFrequencyMax (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -449,7 +445,7 @@ uint32_t PwmHAL::getFrequencyMin (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -476,20 +472,20 @@ hrtim_pwm_mode_t PwmHAL::getMode (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 
 
 
 **Returns:**
 
-PWM mode - VOLTAGE\_MODE or CURRENT\_MODE
+PWM mode: `VOLTAGE_MODE` or `CURRENT_MODE` 
 
 
 
 
 **Warning:**
 
-this function must be called before initialiazing a timing unit 
+This function must be called before initializing a timing unit 
 
 
 
@@ -517,13 +513,13 @@ hrtim_cnt_t PwmHAL::getModulation (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 
 
 
 **Returns:**
 
-Lft\_aligned or UpDwn (center aligned) 
+The type of modulation `Lft_aligned` or `UpDwn` (center aligned) 
 
 
 
@@ -551,7 +547,7 @@ uint16_t PwmHAL::getPeriod (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -585,7 +581,7 @@ uint32_t PwmHAL::getPeriodEvntRep (
 **Parameters:**
 
 
-* `PWM_tu` PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF 
+* `PWM_tu` PWM Unit:`TIMA`,`TIMB`,`TIMC`,`TIMD`,`TIME`,`TIMF`
 
 
 
@@ -619,7 +615,7 @@ uint16_t PwmHAL::getPeriodMax (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -653,7 +649,7 @@ uint16_t PwmHAL::getPeriodMin (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -687,7 +683,7 @@ uint32_t PwmHAL::getPeriodUs (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -714,14 +710,27 @@ uint32_t PwmHAL::getResolutionPs (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 
 
 
 **Note:**
 
-The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized. For an HRTIM frequency of =170MHz: PRSCL = 0 : fHRTIM x 32 = 4.608 GHz - Res: 184 ps - Min PWM f: 83.0 kHz PRSCL = 1 : fHRTIM x 16 = 2.304 GHz - Res: 368 ps - Min PWM f: 41.5 kHz PRSCL = 2 : fHRTIM x 8 = 1.152 GHz - Res: 735 ps - Min PWM f: 20.8 kHz PRSCL = 3 : fHRTIM x 4 = 576 MHz - Res: 1470 ps - Min PWM f: 10.4 kHz PRSCL = 4 : fHRTIM x 2 = 288 MHz - Res: 2940 ps - Min PWM f: 5.2 kHz PRSCL = 5 : fHRTIM X 1 = 144 MHz - Res: 5880 ps - Min PWM f: 2.6 kHz PRSCL = 6 : fHRTIM / 2 = 72 MHz - Res:11760 ps - Min PWM f: 1.3 kHz PRSCL = 7 : fHRTIM / 4 = 36 MHz - Res:23530 ps - Min PWM f: 0.65 kHz 
+The resolution of the PWM depends on the prescaler that is automatically calculated when the master unit is initialized.
 
+
+For an HRTIM frequency of =170MHz:
+
+
+
+* `PRSCL = 0`: `fHRTIM x 32 = 4.608 GHz` - `Res:00184 ps - Min PWM f: 83.00 kHz`
+* `PRSCL = 1`: `fHRTIM x 16 = 2.304 GHz` - `Res:00368 ps - Min PWM f: 41.50 kHz`
+* `PRSCL = 2`: `fHRTIM x 08 = 1.152 GHz` - `Res:00735 ps - Min PWM f: 20.80 kHz`
+* `PRSCL = 3`: `fHRTIM x 04 = 0.576 GHz` - `Res:01470 ps - Min PWM f: 10.40 kHz`
+* `PRSCL = 4`: `fHRTIM x 02 = 0.288 GHz` - `Res:02940 ps - Min PWM f: 05.20 kHz`
+* `PRSCL = 5`: `fHRTIM x 01 = 0.144 GHz` - `Res:05880 ps - Min PWM f: 02.60 kHz`
+* `PRSCL = 6`: `fHRTIM / 02 = 0.072 GHz` - `Res:11760 ps - Min PWM f: 01.30 kHz`
+* `PRSCL = 7`: `fHRTIM / 04 = 0.036 GHz` - `Res:23530 ps - Min PWM f: 00.65 kHz` 
 
 
 
@@ -748,14 +757,18 @@ hrtim_switch_convention_t PwmHAL::getSwitchConvention (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
 **Returns:**
 
-PWMx1 (high side convention) or PWMx2 (low-side convention) 
+Returns the switch convention :
 
+
+
+* `PWMx1`: `BUCK` convention, switch HIGH
+* `PWMx2`: `BOOST` convention, switch LOW 
 
 
 
@@ -802,10 +815,13 @@ void PwmHAL::initFixedFrequency (
 
 **Warning:**
 
-This function must be called BEFORE initialiazing any timing unit. The frequency will not vary during the operation of the power device. Use it for fixed frequencies only. 
+This function must be called BEFORE initializing any timing unit.
 
 
+The frequency will not vary during the operation of the power device.
 
+
+Use it for fixed frequencies only. 
 
 
         
@@ -830,35 +846,7 @@ void PwmHAL::initUnit (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF
-
-
-
-**Date:**
-
-2024 
-
-
-
-
-**Author:**
-
-Luiz Villa [luiz.villa@laas.fr](mailto:luiz.villa@laas.fr) 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -893,10 +881,16 @@ void PwmHAL::initVariableFrequency (
 
 **Warning:**
 
-This function must be called BEFORE initialiazing any timing unit. The user can vary the frequency during the operation of the power device. This may compromise the resolution of the PWM. you can check your resolution with the getResolutionPS function. 
+This function must be called BEFORE initializing any timing unit.
 
 
+The user can vary the frequency during the operation of the power device.
 
+
+This may compromise the resolution of the PWM.
+
+
+You can check your resolution with the getResolutionPS function. 
 
 
         
@@ -907,7 +901,7 @@ This function must be called BEFORE initialiazing any timing unit. The user can 
 
 ### function setAdcDecimation 
 
-_This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger._ 
+_This function sets the number of event which will be ignored between two events.ie. you divide the number of trigger in a fixed period._ 
 ```C++
 void PwmHAL::setAdcDecimation (
     hrtim_tu_number_t pwmX,
@@ -917,13 +911,23 @@ void PwmHAL::setAdcDecimation (
 
 
 
+For example if :
+
+
+
+* `decimation = 1`, nothing changes but with
+* `decimation = 2`, you have twice less adc trigger
+
+
+
+
 
 
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `decimation` decimation/post-scaler - a number between 1 and 32
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
+* `decimation` decimation/post-scaler: a number between 1 and 32
 
 
 
@@ -958,14 +962,14 @@ void PwmHAL::setAdcEdgeTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `adc_edge_trigger` Rollover mode - EdgeTrigger\_up, EdgeTrigger\_down, EdgeTrigger\_Both
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
+* `adc_edge_trigger` Rollover mode: `EdgeTrigger_up`, `EdgeTrigger_down`, `EdgeTrigger_Both`
 
 
 
 **Warning:**
 
-this function must be called BEFORE initialiazing the selected timing unit 
+This function must be called BEFORE initialiazing the selected timing unit 
 
 
 
@@ -994,14 +998,15 @@ void PwmHAL::setAdcTrigger (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `adc` adc - ADC\_1, ADC\_2, ADC\_3, ADC\_4 or ADC\_5
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `adc` ADC number: `ADC_1`,`ADC_2`,`ADC_3`,`ADC_4`,`ADC_5` 
+ 
 
 
 
 **Warning:**
 
-Call this function BEFORE enabling the adc trigger and AFTER initializing the selected timer 
+Call this function:  
 
 
 
@@ -1030,8 +1035,8 @@ void PwmHAL::setAdcTriggerInstant (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `trig_val` a value between 0 and 1 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
+* `trig_val` a float value between 0 and 1 
 
 
 
@@ -1059,14 +1064,14 @@ void PwmHAL::setAdcTriggerPostScaler (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 * `ps_ratio` post scaler ratio
 
 
 
 **Warning:**
 
-this function must be called after initialiazing a timing unit, and before enabling the adc trigger 
+This function must be called after initialiazing a timing unit, and before enabling the adc trigger 
 
 
 
@@ -1125,7 +1130,7 @@ void PwmHAL::setDeadTime (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
 * `rise_ns` rising edge dead time in ns 
 * `falling_ns` falling edge dead time in ns
 
@@ -1162,8 +1167,37 @@ void PwmHAL::setDutyCycle (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 * `value` duty cycle value 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setDutyCycleRaw 
+
+_Sets the duty cycle for the selected timing unit using an unsigned integer._ 
+```C++
+void PwmHAL::setDutyCycleRaw (
+    hrtim_tu_number_t pwmX,
+    uint16_t duty_cycle
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `value` duty cycle value as an unsigned integer 
 
 
 
@@ -1191,14 +1225,15 @@ void PwmHAL::setEev (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `eev` external event trigger - EEV1,EEV2, EEV3, EEV3, EEV4, EEV5, EEV6, EEV7, EEV8, EEV9
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `eev` external event trigger: 
+ `EEV1`,`EEV2`,`EEV3`,`EEV4`,`EEV5`,`EEV6`,`EEV7`,`EEV8`,`EEV9` 
 
 
 
 **Warning:**
 
-this function must be called before initialiazing a timing unit 
+this function must be called before initializing a timing unit 
 
 
 
@@ -1232,10 +1267,10 @@ void PwmHAL::setFrequency (
 
 **Warning:**
 
-The new frequency can't be inferior to the the one set in the initialization step Use it AFTER the initialization of the timing unit. 
+The new frequency can't be inferior to the the one set in the initialization step.
 
 
-
+Use it AFTER the initialization of the timing unit. 
 
 
         
@@ -1261,14 +1296,14 @@ void PwmHAL::setMode (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `mode` PWM mode - VOLTAGE\_MODE or CURRENT\_MODE
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
+* `mode` PWM mode: `VOLTAGE_MODE` or `CURRENT_MODE`
 
 
 
 **Warning:**
 
-this function must be called BEFORE initialiazing the selected timing unit 
+This function must be called BEFORE initializing the selected timing unit 
 
 
 
@@ -1297,8 +1332,8 @@ void PwmHAL::setModulation (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `modulation` PWM Modulation - Lft\_aligned or UpDwn
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `modulation` PWM Modulation: `Lft_aligned` or `UpDwn`
 
 
 
@@ -1333,8 +1368,8 @@ void PwmHAL::setPeriodEvntRep (
 **Parameters:**
 
 
-* `PWM_tu` PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF 
-* `repetition` number of repetition before the interruption on repetition counter event 
+* `PWM_tu` PWM Unit:`TIMA`,`TIMB`,`TIMC`,`TIMD`,`TIME`,`TIMF`
+* `repetition` Number of repetition before the interruption on repetition counter event 
 
 
 
@@ -1362,14 +1397,14 @@ void PwmHAL::setPhaseShift (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `shift` phase shift value ° between -360 and 360
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF`
+* `shift` phase shift value in DEGREES (between `-360` and `360`)
 
 
 
 **Warning:**
 
-use this function AFTER setting the frequency and initializing the chosen timer 
+Use this function AFTER setting the frequency and initializing the chosen timer 
 
 
 
@@ -1398,8 +1433,16 @@ void PwmHAL::setSwitchConvention (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
-* `convention` PWM Switch to be driven by the duty cycle. The other will be complementary - PWMx1 or PWMx2
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `convention` PWM Switch to be driven by the duty cycle: 
+
+
+
+* `PWMx1`: `BUCK` convention, switch HIGH
+* `PWMx2`: `BOOST` convention, switch LOW
+
+
+
 
 
 
@@ -1433,7 +1476,7 @@ void PwmHAL::startBurstMode ()
 
 ### function startDualOutput 
 
-_This fonction starts both outputs of the selected HRTIM channel._ 
+_This function starts both outputs of the selected HRTIM channel._ 
 ```C++
 void PwmHAL::startDualOutput (
     hrtim_tu_number_t pwmX
@@ -1447,7 +1490,7 @@ void PwmHAL::startDualOutput (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -1475,8 +1518,8 @@ void PwmHAL::startSingleOutput (
 **Parameters:**
 
 
-* `tu` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF 
-* `output` output to disable - TIMING\_OUTPUT1, TIMING\_OUTPUT2 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `output` output to disable: `TIMING_OUTPUT1`,`TIMING_OUTPUT2` 
 
 
 
@@ -1517,7 +1560,7 @@ void PwmHAL::stopDualOutput (
 **Parameters:**
 
 
-* `pwmX` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
 
 
 
@@ -1545,8 +1588,8 @@ void PwmHAL::stopSingleOutput (
 **Parameters:**
 
 
-* `tu` PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF 
-* `output` output to disable - TIMING\_OUTPUT1, TIMING\_OUTPUT2 
+* `pwmX` PWM Unit: `PWMA`,`PWMB`,`PWMC`,`PWMD`,`PWME`,`PWMF` 
+* `output` output to disable: `TIMING_OUTPUT1`,`TIMING_OUTPUT2` 
 
 
 

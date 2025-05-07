@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021-2023 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -38,10 +38,10 @@
 #define TU_DEFAULT_PERIOD (27200U) /* default period for 200kHz in bits */
 
 /**
- * @brief   HRTIM have 5 or 6 timing units
+ * @brief   HRTIM has 5 or 6 timing units
  */
 #ifdef HRTIM_MCR_TFCEN
-#define HRTIM_STU_NUMOF (6U) /**< number of slave timing units */
+#define HRTIM_STU_NUMOF (6U) /* number of slave timing units */
 #else
 #define HRTIM_STU_NUMOF (5U)
 #endif
@@ -52,31 +52,55 @@ extern "C"
 #endif
 
 /**
- * @brief   Timinig unit configuration - aggregates all the structures.
+ * @brief   Timing unit configuration that aggregates all the structures: 
+ *
+ *  - `pwm_conf` = Pulse Width Modulation Configuration
+ *
+ *  - `phase_shift` = Phase shift configuration           
+ *
+ *  - `gpio_conf` = Configuration of the gpio                         
+ *
+ *  - `switch_conv` = Switch Convention                   
+ *
+ *  - `adc_hrtim` = ADC - HRTIM setup                   
+ *
+ *  - `comp_usage` = Usage of comp1 to comp4             
  */
 typedef struct
 {
-    pwm_conf_t pwm_conf;            /* Pulse Width Modulation Configuration */
-    phase_shift_conf_t phase_shift; /* Phase shift configuration */
-    gpio_conf_t gpio_conf;          /* Pulse width */
-    switch_conv_conf_t switch_conv; /* Switch Convention */
-    adc_hrtim_conf_t adc_hrtim;     /* ADC - HRTIM setup*/
-    comp_usage_conf_t comp_usage;   /* Usage of comp1 to comp4 */
+    pwm_conf_t pwm_conf;            
+    phase_shift_conf_t phase_shift;            
+    gpio_conf_t gpio_conf;          
+    switch_conv_conf_t switch_conv; 
+    adc_hrtim_conf_t adc_hrtim;     
+    comp_usage_conf_t comp_usage;   
 } timer_hrtim_t;
 
 extern timer_hrtim_t *tu_channel[HRTIM_STU_NUMOF];
 
-/////////////////////////////
-////// fUNCTIONS
+/* Public Functions */
 
 /**
- * @brief   Gets the APB2 clock
+ * @brief Get the current APB2 clock frequency used by HRTIM.
+ *
+ * This function retrieves the prescaler value configured for the APB2 bus
+ * and returns the effective clock frequency driving the HRTIM peripheral.
+ *
+ * - Reads the APB2 prescaler from RCC configuration.
+ *
+ * - Calculates the actual APB2 clock by dividing the system clock by the
+ *   prescaler value.
+ *
+ * @return The APB2 clock frequency in Hz.
+ *
  */
 int hrtim_get_apb2_clock();
 
 /**
- * @brief this function initalize all the default parameters for each timing unit structure
- * @warning this function must be called before changing any timing unit parameters (frequency, phase_shift)
+ * @brief This function initialize all the default parameters
+ *        for each timing unit structure
+ * @warning This function must be called before
+ *          changing any timing unit parameters (frequency, phase_shift)
  */
 void hrtim_init_default_all();
 
@@ -84,26 +108,16 @@ void hrtim_init_default_all();
  * @brief   Initializes a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @return    timing unit period
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @return Timing unit period in clock pulses
  */
 uint16_t hrtim_tu_init(hrtim_tu_number_t tu_number);
 
 /**
  * @brief Returns if the timer was initialized with default value or not
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @return   true or false
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @return   `true` or `false`
  */
 hrtim_tu_ON_OFF_t hrtim_get_status(hrtim_tu_number_t tu_number);
 
@@ -111,25 +125,15 @@ hrtim_tu_ON_OFF_t hrtim_get_status(hrtim_tu_number_t tu_number);
  * @brief   Initializes the gpio elements of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_tu_gpio_init(hrtim_tu_number_t tu_number);
 
 /**
- * @brief   Disables the output of a given timingg unit
+ * @brief   Disables the output of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_out_dis(hrtim_tu_number_t tu_number);
 
@@ -137,12 +141,7 @@ void hrtim_out_dis(hrtim_tu_number_t tu_number);
  * @brief   Enables the output of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_out_en(hrtim_tu_number_t tu_number);
 
@@ -150,37 +149,17 @@ void hrtim_out_en(hrtim_tu_number_t tu_number);
  * @brief   Enables only one output of a given timing unit
  *
  * @param[in] PWM_OUT        Output pin to be chosen:
- *            @arg @ref PWMA1
- *            @arg @ref PWMA2
- *            @arg @ref PWMB1
- *            @arg @ref PWMB2
- *            @arg @ref PWMC1
- *            @arg @ref PWMC2
- *            @arg @ref PWMD1
- *            @arg @ref PWMD2
- *            @arg @ref PWME1
- *            @arg @ref PWME2
- *            @arg @ref PWMF1
- *            @arg @ref PWMF2
+ *                     `PWMA1`,`PWMA2`,`PWMB1`,`PWMB2`,`PWMC1`,`PWMC2`,
+ *                     `PWMD1`,`PWMD2`,`PWME1`,`PWME2`,`PWMF1`,`PWMF2`
  */
 void hrtim_out_en_single(hrtim_output_units_t PWM_OUT);
 
 /**
  * @brief   Disables only one output of a given timing unit
  *
- * @param[in] PWM_OUT        Output pin to be chosen:
- *            @arg @ref PWMA1
- *            @arg @ref PWMA2
- *            @arg @ref PWMB1
- *            @arg @ref PWMB2
- *            @arg @ref PWMC1
- *            @arg @ref PWMC2
- *            @arg @ref PWMD1
- *            @arg @ref PWMD2
- *            @arg @ref PWME1
- *            @arg @ref PWME2
- *            @arg @ref PWMF1
- *            @arg @ref PWMF2
+ * @param[in] PWM_OUT  Output pin to be chosen: 
+ *                     `PWMA1`,`PWMA2`,`PWMB1`,`PWMB2`,`PWMC1`,`PWMC2`,
+ *                     `PWMD1`,`PWMD2`,`PWME1`,`PWME2`,`PWMF1`,`PWMF2`
  */
 void hrtim_out_dis_single(hrtim_output_units_t PWM_OUT);
 
@@ -188,15 +167,8 @@ void hrtim_out_dis_single(hrtim_output_units_t PWM_OUT);
  * @brief   Sets the switching convention of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @param[in] modulation        modulation:
- *            @arg @ref Lft_aligned = LL_HRTIM_COUNTING_MODE_UP,
- *            @arg @ref UpDwn = LL_HRTIM_COUNTING_MODE_UP_DOWN
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @param[in] modulation        modulation: `Lft_aligned`, `UpDwn`
  */
 void hrtim_set_modulation(hrtim_tu_number_t tu_number, hrtim_cnt_t modulation);
 
@@ -204,15 +176,8 @@ void hrtim_set_modulation(hrtim_tu_number_t tu_number, hrtim_cnt_t modulation);
  * @brief   Gets the switching convention of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @return    modulation:
- *            @arg @ref Lft_aligned,
- *            @arg @ref UpDwn
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @return    Modulation type: `Lft_aligned`, `UpDwn`
  */
 hrtim_cnt_t hrtim_get_modulation(hrtim_tu_number_t tu_number);
 
@@ -220,12 +185,7 @@ hrtim_cnt_t hrtim_get_modulation(hrtim_tu_number_t tu_number);
  * @brief   Gets the time resolution for a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    resolution in picoseconds
  */
 uint32_t hrtim_get_resolution_ps(hrtim_tu_number_t tu_number);
@@ -234,12 +194,7 @@ uint32_t hrtim_get_resolution_ps(hrtim_tu_number_t tu_number);
  * @brief   Gets the maximum period of the timing unit in number of clock cycles
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    period in number of clock cycles
  */
 uint16_t hrtim_get_max_period(hrtim_tu_number_t tu_number);
@@ -248,12 +203,7 @@ uint16_t hrtim_get_max_period(hrtim_tu_number_t tu_number);
  * @brief   Gets the minimum period of the timing unit in number of clock cycles
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    period in number of clock cycles
  */
 uint16_t hrtim_get_min_period(hrtim_tu_number_t tu_number);
@@ -263,12 +213,7 @@ uint16_t hrtim_get_min_period(hrtim_tu_number_t tu_number);
  * @brief   Gets the minimum frequency of the timing unit in Hertz
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    frequency in Hertz
  */
 uint32_t hrtim_get_max_frequency(hrtim_tu_number_t tu_number);
@@ -277,12 +222,7 @@ uint32_t hrtim_get_max_frequency(hrtim_tu_number_t tu_number);
  * @brief   Gets the minimum frequency of the timing unit in Hertz
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    frequency in Hertz
  */
 uint32_t hrtim_get_min_frequency(hrtim_tu_number_t tu_number);
@@ -293,70 +233,38 @@ uint32_t hrtim_get_min_frequency(hrtim_tu_number_t tu_number);
  * @brief   Sets the switching convention of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @param[in] convention        Switching convention:
- *            @arg @ref PWMx1
- *            @arg @ref PWMx2
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @param[in] convention        Switching convention: `PWMx1`, `PWMx2`
  */
-void hrtim_set_switch_convention(hrtim_tu_number_t tu_number, hrtim_switch_convention_t convention);
+void hrtim_set_switch_convention(hrtim_tu_number_t tu_number,
+                                 hrtim_switch_convention_t convention);
 
 /**
  * @brief   Gets the switching convention of a given timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @return    Switching convention of the given time unit
- *            @arg @ref HIGH = 0,
- *            @arg @ref LOW = 1
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @return    Switching convention of the given time unit: `PWMx1=0`, `PWMx2=1`
  */
-hrtim_switch_convention_t hrtim_get_switch_convention(hrtim_tu_number_t tu_number);
+hrtim_switch_convention_t hrtim_get_switch_convention(
+    hrtim_tu_number_t tu_number
+);
 
 /**
- * @brief   Activates OUT 1 (switch H) with a given switching convention
+ * @brief   Activates OUT 1 and 2 (switch H and L) with 
+ *          a given switching convention
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
-void hrtim_cmpl_pwm_out1(hrtim_tu_number_t tu_number);
+void hrtim_cmpl_pwm_out(hrtim_tu_number_t tu_number);
 
-/**
- * @brief   Activates OUT 2 (switch L) with a given switching convention
- *
- * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- */
-void hrtim_cmpl_pwm_out2(hrtim_tu_number_t tu_number);
 
 /**
  * @brief   Sets the frequency of a given timing unit in Hz
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] tu_number        Timing unit number:
  */
 void hrtim_frequency_set(uint32_t frequency_set, uint32_t frequency_min);
@@ -365,12 +273,7 @@ void hrtim_frequency_set(uint32_t frequency_set, uint32_t frequency_min);
  * @brief   Returns the period of a given timing unit in number of clock cycles
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    Period of the timing unit
  */
 uint16_t hrtim_period_get(hrtim_tu_number_t tu_number);
@@ -386,12 +289,7 @@ uint16_t hrtim_period_Master_get();
  * @brief   Returns the period of a given timing unit in microseconds
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @return    Period of the timing unit in microseconds
  */
 uint32_t hrtim_period_get_us(hrtim_tu_number_t tu_number);
@@ -406,23 +304,19 @@ uint32_t hrtim_period_Master_get_us();
 /**
  * @brief   Sets one of the four comparators of the HRTIM master timer
  *
- * @param[in] cmp       Master comparators:
- *            @arg @ref CMP1xR = 1,
- *            @arg @ref CMP2xR = 2,
- *            @arg @ref CMP3xR = 3,
- *            @arg @ref CMP4xR = 4
- * @param[in] value        Comparator new value to set:
+ * @param[in] tu_number Timing unit number:
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @param[in] cmp       Master comparators: `CMP1xR`,`CMP2xR`,`CMP3xR`,`CMP4xR`
+ * @param[in] value        Comparator new value to set
  */
-void hrtim_tu_cmp_set(hrtim_tu_number_t tu_number, hrtim_cmp_t cmp, uint16_t value);
+void hrtim_tu_cmp_set(hrtim_tu_number_t tu_number,
+                      hrtim_cmp_t cmp,
+                      uint16_t value);
 
 /**
  * @brief   Sets one of the four comparators of the HRTIM master timer
  *
- * @param[in] cmp       Master comparators:
- *            @arg @ref MCMP1R = 1,
- *            @arg @ref MCMP2R = 2
- *            @arg @ref MCMP3R = 3,
- *            @arg @ref MCMP4R = 4
+ * @param[in] cmp       Master comparators: `MCMP1R`,`MCMP2R`,`MCMP3R`,`MCMP4R`
  * @param[in] value        Comparator new value to set:
  */
 void hrtim_master_cmp_set(hrtim_cmp_t cmp, uint16_t value);
@@ -432,27 +326,19 @@ void hrtim_master_cmp_set(hrtim_cmp_t cmp, uint16_t value);
  *          outputs.
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- * @param[in] rise_ns        The desired dead time of the rising edge in nano second
- * @param[in] fall_ns        The desired dead time of the falling edge in nano second
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * @param[in] rise_ns  The desired dead time of the rising edge in nano second
+ * @param[in] fall_ns  The desired dead time of the falling edge in nano second
  */
-void hrtim_dt_set(hrtim_tu_number_t tu_number, uint16_t rise_ns, uint16_t fall_ns);
+void hrtim_dt_set(hrtim_tu_number_t tu_number,
+                  uint16_t rise_ns,
+                  uint16_t fall_ns);
 
 /**
  * @brief   Updates the duty cycle of a timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] value        The desired duty cycle value
  */
 void hrtim_duty_cycle_set(hrtim_tu_number_t tu_number, uint16_t value);
@@ -461,12 +347,7 @@ void hrtim_duty_cycle_set(hrtim_tu_number_t tu_number, uint16_t value);
  * @brief   Shifts the PWM of a timing unit
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] shift        The desired phase shift value
  */
 void hrtim_phase_shift_set(hrtim_tu_number_t tu_number, uint16_t shift);
@@ -475,12 +356,7 @@ void hrtim_phase_shift_set(hrtim_tu_number_t tu_number, uint16_t shift);
  * @brief   Initialize the dead-time for the PWM
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_dt_init(hrtim_tu_number_t tu_number);
 
@@ -520,12 +396,7 @@ void hrtim_burst_dis(void);
  * @brief   Enables a timing unit counter
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_cnt_en(hrtim_tu_number_t tu_number);
 
@@ -533,12 +404,7 @@ void hrtim_cnt_en(hrtim_tu_number_t tu_number);
  * @brief   Disables a timing unit counter
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_cnt_dis(hrtim_tu_number_t tu_number);
 
@@ -546,19 +412,9 @@ void hrtim_cnt_dis(hrtim_tu_number_t tu_number);
  * @brief   Enables a timer counter reset event
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] evt        Reset EVent:
- *            @arg @ref MSTR_PER  = LL_HRTIM_RESETTRIG_MASTER_PER,
- *            @arg @ref MSTR_CMP1 = LL_HRTIM_RESETTRIG_MASTER_CMP1,
- *            @arg @ref MSTR_CMP2 = LL_HRTIM_RESETTRIG_MASTER_CMP2,
- *            @arg @ref MSTR_CMP3 = LL_HRTIM_RESETTRIG_MASTER_CMP3,
- *            @arg @ref MSTR_CMP4 = LL_HRTIM_RESETTRIG_MASTER_CMP4,
- *            @arg @ref PWMA_CMP2 = LL_HRTIM_RESETTRIG_OTHER1_CMP2
+ * - `MSTR_PER`,`MSTR_CMP1`,`MSTR_CMP2`,`MSTR_CMP3`,`MSTR_CMP4`,`PWMA_CMP2` 
  */
 void hrtim_rst_evt_en(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
 
@@ -566,19 +422,9 @@ void hrtim_rst_evt_en(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
  * @brief   Disables a timer counter reset event
  *
  * @param[in] tu_number        Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] evt        Reset EVent:
- *            @arg @ref MSTR_PER  = LL_HRTIM_RESETTRIG_MASTER_PER,
- *            @arg @ref MSTR_CMP1 = LL_HRTIM_RESETTRIG_MASTER_CMP1,
- *            @arg @ref MSTR_CMP2 = LL_HRTIM_RESETTRIG_MASTER_CMP2,
- *            @arg @ref MSTR_CMP3 = LL_HRTIM_RESETTRIG_MASTER_CMP3,
- *            @arg @ref MSTR_CMP4 = LL_HRTIM_RESETTRIG_MASTER_CMP4,
- *            @arg @ref PWMA_CMP2 = LL_HRTIM_RESETTRIG_OTHER1_CMP2
+ * - `MSTR_PER`,`MSTR_CMP1`,`MSTR_CMP2`,`MSTR_CMP3`,`MSTR_CMP4`,`PWMA_CMP2` 
  */
 void hrtim_rst_evt_dis(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
 
@@ -589,18 +435,14 @@ void hrtim_rst_evt_dis(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
  *
  * @param[in] ps_ratio  Post scaler ratio (0 = no post scaler, default)
  */
-void hrtim_adc_trigger_set_postscaler(hrtim_tu_number_t tu_number, uint32_t ps_ratio);
+void hrtim_adc_trigger_set_postscaler(hrtim_tu_number_t tu_number,
+                                      uint32_t ps_ratio);
 
 /**
  * @brief   Configures and enables an ADC trigger event.
  *
  * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_adc_trigger_en(hrtim_tu_number_t tu_number);
 
@@ -608,122 +450,77 @@ void hrtim_adc_trigger_en(hrtim_tu_number_t tu_number);
  * @brief   Disbables a ADCx trigger event
  *
  * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_adc_trigger_dis(hrtim_tu_number_t tu_number);
 
 /**
  * @brief   Configures the adc rollover mode
  *
- * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ * @param tu_number Timing unit number:
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  *
- * @param[in] adc_rollover rollover mode
- *            @arg @ref EdgeTrigger_up
- *            @arg @ref EdgeTrigger_down
- *            @arg @ref EdgeTrigger_Both
+ * @param adc_rollover rollover mode:
+ *            `EdgeTrigger_up`,`EdgeTrigger_down`,`EdgeTrigger_Both`
  */
-void hrtim_adc_rollover_set(hrtim_tu_number_t tu_number, hrtim_adc_edgetrigger_t adc_rollover);
+void hrtim_adc_rollover_set(hrtim_tu_number_t tu_number,
+                            hrtim_adc_edgetrigger_t adc_rollover);
 
 /**
  * @brief   Returns the adc rollover mode
  *
  * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  *
  * @return    adc_rollover rollover mode :
- *            @arg @ref EdgeTrigger_up
- *            @arg @ref EdgeTrigger_down
- *            @arg @ref EdgeTrigger_Both
+ *            `EdgeTrigger_up`,`EdgeTrigger_down`,`EdgeTrigger_Both`
  */
 hrtim_adc_edgetrigger_t hrtim_adc_rollover_get(hrtim_tu_number_t tu_number);
 
 /**
  * @brief Configures interrupt on repetition counter for the chosen timing unit
  * @param tu_src timing unit which will be the source for the ISR:
- *         @arg @ref MSTR
- *         @arg @ref TIMA
- *         @arg @ref TIMB
- *         @arg @ref TIMC
- *         @arg @ref TIMD
- *         @arg @ref TIME
- *         @arg @ref TIMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param repetition value between 1 and 256 for the repetition counter:
  *        period of the event wrt. periods of the HRTIM.
  *        E.g. when set to 10, one event will be triggered every 10 HRTIM period.
  * @param callback Pointer to a void(void) function that will be called
  *        when the event is triggerred.
  */
-void hrtim_PeriodicEvent_configure(hrtim_tu_t tu, uint32_t repetition, hrtim_callback_t callback);
+void hrtim_PeriodicEvent_configure(hrtim_tu_t tu,
+                                   uint32_t repetition,
+                                   hrtim_callback_t callback);
 
 /**
  * @brief Enables interrupt on repetition counter for the chosen timing unit.
  *        The periodic event configuration must have been done previously.
  * @param tu_src timing unit which will be the source for the ISR:
- *         @arg @ref MSTR
- *         @arg @ref TIMA
- *         @arg @ref TIMB
- *         @arg @ref TIMC
- *         @arg @ref TIMD
- *         @arg @ref TIME
- *         @arg @ref TIMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_PeriodicEvent_en(hrtim_tu_t tu);
 
 /**
  * @brief Disables interrupt on repetition counter for the chosen timing unit
  * @param tu_src timing unit which will be the source for the ISR:
- *         @arg @ref MSTR
- *         @arg @ref TIMA
- *         @arg @ref TIMB
- *         @arg @ref TIMC
- *         @arg @ref TIMD
- *         @arg @ref TIME
- *         @arg @ref TIMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  */
 void hrtim_PeriodicEvent_dis(hrtim_tu_t tu);
 
 /**
  * @brief Changes the repetition counter value to control the ISR interrupt
  * @param tu_src timing unit which will be the source for the ISR:
- *         @arg @ref MSTR
- *         @arg @ref TIMA
- *         @arg @ref TIMB
- *         @arg @ref TIMC
- *         @arg @ref TIMD
- *         @arg @ref TIME
- *         @arg @ref TIMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param repetion value between 1 and 256 for the repetition counter:
- * period of the event wrt. periods of the HRTIM.
+ * period of the event write periods of the HRTIM.
  * E.g. when set to 10, one event will be triggered every 10 HRTIM period.
  */
 void hrtim_PeriodicEvent_SetRep(hrtim_tu_t tu, uint32_t repetition);
 
 /**
  * @brief Gets the current value of the repetition counter.
- * @param tu_src timing unit which will be the source for the ISR
- *         @arg @ref MSTR
- *         @arg @ref TIMA
- *         @arg @ref TIMB
- *         @arg @ref TIMC
- *         @arg @ref TIMD
- *         @arg @ref TIME
- *         @arg @ref TIMF
+ * @param tu timing unit which will be the source for the ISR
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * 
  * @return Value between 1 and 256 for the repetition counter:
  * period of the event wrt. periods of the HRTIM.
  */
@@ -734,30 +531,25 @@ uint32_t hrtim_PeriodicEvent_GetRep(hrtim_tu_t tu);
  *          will trigger the step (Decrement/Increment of sawtooth) and the reset
  *          (return to initial value).
  *
- * @param[in] tu  timing unit
+ * @param[in] tu  Timing unit number: 
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
+ * 
  */
 void DualDAC_init(hrtim_tu_number_t tu);
 
 /**
  * @brief Sets the pwm mode : voltage or current mode
  *
- * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ * @param tu_number Timing unit number: 
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  *
- * @param[in] mode  pwm mode:
- *            @arg @ref VOLTAGE_MODE
- *            @arg @ref CURRENT_MODE
+ * @param[in] mode  pwm mode: `VOLTAGE_MODE`, `CURRENT_MODE`
  */
 void hrtim_pwm_mode_set(hrtim_tu_number_t tu_number, hrtim_pwm_mode_t mode);
 
 /**
  * @brief  Returns timing unit pwm mode
- * @return CURRENT_MODE or VOLTAGE_MODE
+ * @return `CURRENT_MODE` or `VOLTAGE_MODE`
  */
 hrtim_pwm_mode_t hrtim_pwm_mode_get(hrtim_tu_number_t tu_number);
 
@@ -765,79 +557,56 @@ hrtim_pwm_mode_t hrtim_pwm_mode_get(hrtim_tu_number_t tu_number);
  * @brief Sets the adc trigger number for a timing unit
  *
  * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
- *
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  * @param[in] adc_trig  pwm mode:
- *            @arg @ref ADCTRIG_1
- *            @arg @ref ADCTRIG_2
- *            @arg @ref ADCTRIG_3
- *            @arg @ref ADCTRIG_4
+ *                      `ADCTRIG_1`, `ADCTRIG_2`, `ADCTRIG_3`, `ADCTRIG_4`
  */
-void hrtim_adc_triger_set(hrtim_tu_number_t tu_number, hrtim_adc_trigger_t adc_trig);
+void hrtim_adc_trigger_set(hrtim_tu_number_t tu_number,
+                           hrtim_adc_trigger_t adc_trig);
 
 /**
  * @brief Returns the adc trigger
- * @return
- *            @arg @ref ADCTRIG_1 = ADC trigger 1,
- *            @arg @ref ADCTRIG_2 = ADC trigger 2,
- *            @arg @ref ADCTRIG_3 = ADC trigger 3,
- *            @arg @ref ADCTRIG_4 = ADC trigger 4
+ * @return `ADCTRIG_1`, `ADCTRIG_2`, `ADCTRIG_3`, `ADCTRIG_4`
  */
-hrtim_adc_trigger_t hrtim_adc_triger_get(hrtim_tu_number_t tu_number);
+hrtim_adc_trigger_t hrtim_adc_trigger_get(hrtim_tu_number_t tu_number);
 
 /**
  * @brief Sets the external event used in current mode for a timing unit
  *
  * @param[in] tu_number Timing unit number:
- *            @arg @ref PWMA
- *            @arg @ref PWMB
- *            @arg @ref PWMC
- *            @arg @ref PWMD
- *            @arg @ref PWME
- *            @arg @ref PWMF
+ *                  `MSTR`, `TIMA`, `TIMB`, `TIMC`, `TIMD`, `TIME`, `TIMF`
  *
  * @param[in] adc_trig  pwm mode:
- *            @arg @ref EEV1
- *            @arg @ref EEV2
- *            @arg @ref EEV3
- *            @arg @ref EEV4
- *            @arg @ref EEV5
- *            @arg @ref EEV6
- *            @arg @ref EEV7
- *            @arg @ref EEV8
- *            @arg @ref EEV9
+ * `EEV1`,`EEV2`,`EEV3`,`EEV4`,`EEV5`,`EEV6`,`EEV7`,`EEV8`,`EEV9`
  */
 void hrtim_eev_set(hrtim_tu_number_t tu_number, hrtim_external_trigger_t eev);
 
 /**
  * @brief Returns the external event trigger used in current mode
+ * 
  * @return
- *            @arg @ref EEV1 = external event 1,
- *            @arg @ref EEV2 = external event 2,
- *            @arg @ref EEV3 = external event 3,
- *            @arg @ref EEV4 = external event 4,
- *            @arg @ref EEV5 = external event 5,
- *            @arg @ref EEV6 = external event 6,
- *            @arg @ref EEV7 = external event 7,
- *            @arg @ref EEV8 = external event 8,
- *            @arg @ref EEV9 = external event 9
+ * `EEV1`,`EEV2`,`EEV3`,`EEV4`,`EEV5`,`EEV6`,`EEV7`,`EEV8`,`EEV9`
  */
 hrtim_external_trigger_t hrtim_eev_get(hrtim_tu_number_t tu_number);
 
 /**
  * @brief Change the frequency/period after it has been initialized.
  * @param[in] new_frequency The new frequency in Hz
- * @warning the new frequency can't be inferior to the the one set in the initialization step
-*/
+ * @warning The new frequency can't be inferior to the the one set
+ *          in the initialization step.
+ */
 void hrtim_change_frequency(uint32_t new_frequency);
+
+
+/**
+ * @brief Hot swaps the output channels for the timing unit.
+ * @param[in] tu_number the timing unit to swap the outputs
+ * @note The variable pwm_swap holds the new swap state.
+ */
+void hrtim_output_hot_swap(hrtim_tu_number_t tu_number);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // HRTIM_H_
+#endif /* HRTIM_H_ */

@@ -16,26 +16,17 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Jean Alinei <ulink url="mailto:jean.alinei@owntech.org">jean.alinei@owntech.org</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="50" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="33" bodyend="63"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="57" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="33" bodyend="63"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classPowerAPI_1abc8fef65d23bef0c99f126dd2573fde3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPowerAPI_1ad739c8a08fd7dd34f8021efdefb8af65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PowerAPI::initMode</definition>
-        <argsstring>(leg_t leg, \ hrtim_switch_convention_t leg_convention, \ hrtim_pwm_mode_t leg_mode)</argsstring>
+        <argsstring>(leg_t leg, hrtim_switch_convention_t leg_convention, hrtim_pwm_mode_t leg_mode)</argsstring>
         <name>initMode</name>
         <qualifiedname>PowerAPI::initMode</qualifiedname>
         <param>
@@ -43,11 +34,11 @@
           <declname>leg</declname>
         </param>
         <param>
-          <type>\ hrtim_switch_convention_t</type>
+          <type>hrtim_switch_convention_t</type>
           <declname>leg_convention</declname>
         </param>
         <param>
-          <type>\ hrtim_pwm_mode_t</type>
+          <type>hrtim_pwm_mode_t</type>
           <declname>leg_mode</declname>
         </param>
         <briefdescription>
@@ -60,7 +51,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg to initialize </para>
+<para>The leg to initialize:<computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -68,7 +59,7 @@
 <parametername>leg_convention</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>PWM Switch to be driven by the duty cycle. The other will be complementary - PWMx1 or PWMx2 </para>
+<para>PWM Switch to be driven by the duty cycle: <computeroutput>PWMx1</computeroutput>, <computeroutput>PWMx2</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -76,7 +67,7 @@
 <parametername>leg_mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>PWM mode - VOLTAGE_MODE or CURRENT_MODE </para>
+<para>PWM mode: <computeroutput>VOLTAGE_MODE</computeroutput>, <computeroutput>CURRENT_MODE</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -91,12 +82,12 @@
 <para>Choose which DAC controls the leg in current mode</para>
 <para>Only relevant for twist and ownverter hardware, to enable optocouplers for MOSFET driver and connection to electrolytic capacitor</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="64" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="65" bodyend="197"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="72" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="65" bodyend="203"/>
       </memberdef>
-      <memberdef kind="function" id="classPowerAPI_1a4ba345b7c6691d0f4fdf2e547d9d2422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPowerAPI_1ab97f7c8f7d402c4bb03164ab3b727fe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PowerAPI::setDutyCycle</definition>
-        <argsstring>(leg_t leg, float32_t duty_leg)</argsstring>
+        <argsstring>(leg_t leg, float32_t duty_value)</argsstring>
         <name>setDutyCycle</name>
         <qualifiedname>PowerAPI::setDutyCycle</qualifiedname>
         <param>
@@ -105,27 +96,28 @@
         </param>
         <param>
           <type>float32_t</type>
-          <declname>duty_leg</declname>
+          <declname>duty_value</declname>
         </param>
         <briefdescription>
 <para>Set the duty cycle for a specific leg&apos;s power control. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the duty cycle for the power control of a specified leg. The duty cycle determines the ON/OFF ratio of the power signal for the leg.</para>
+<para>This function sets the duty cycle for the power control of a specified leg.</para>
+<para>The duty cycle determines the ON/OFF ratio of the power signal for the leg.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which to set the duty cycle. </para>
+<para>The leg for which to set the duty cycle: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>duty_leg</parametername>
+<parametername>duty_value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The duty cycle value to set (a floating-point number between 0.1 and 0.9). </para>
+<para>The duty cycle value to set (a floating-point number between <computeroutput>0.1</computeroutput> and <computeroutput>0.9</computeroutput>). </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -133,7 +125,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="79" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="200" bodyend="234"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="89" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="206" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a9f5b62159fab5ff12d69719a38fd2cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerAPI::setDutyCycleRaw</definition>
+        <argsstring>(leg_t leg, uint16_t duty_value)</argsstring>
+        <name>setDutyCycleRaw</name>
+        <qualifiedname>PowerAPI::setDutyCycleRaw</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>duty_value</declname>
+        </param>
+        <briefdescription>
+<para>Set the duty cycle for a specific leg&apos;s power control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the duty cycle for the power control of a specified leg.</para>
+<para>The duty cycle determines the ON/OFF time ratio of the power signal for the leg.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The leg for which to set the duty cycle: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The duty cycle value to set an unsigned integer number between <computeroutput>duty_cycle_min_raw</computeroutput> and <computeroutput>duty_cycle_max_raw</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="104" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="217" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1abfb00fe45a04ef128e1ec734559e43a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -149,13 +184,15 @@
 <para>Start power output for a specific leg. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function initiates the power output for a specified leg by starting the PWM subunits associated with the leg&apos;s output pins. If the leg&apos;s output pins are not declared inactive in the device tree, the corresponding subunits are started. eg. If output1 is declared inactive in the device tree, PWMA1 will not start</para>
+<para>This function initiates the power output for a specified leg by starting the PWM subunits associated with the leg&apos;s output pins.</para>
+<para>If the leg&apos;s output pins are not declared inactive in the device tree, the corresponding subunits are started. eg.</para>
+<para>If output1 is declared inactive in the device tree, PWMA1 will not start.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which to start the power output. </para>
+<para>The leg for which to start the power output: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -164,7 +201,7 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to enable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="93" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="236" bodyend="274"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="120" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="282" bodyend="322"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a327ca39eb545213ff3201518c01f1dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +222,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which to stop the power output. </para>
+<para>The leg for which to stop the power output: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -194,7 +231,7 @@
         <inbodydescription>
 <para>Only relevant for twist hardware, to disable optocouplers for mosfet driver</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="100" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="276" bodyend="307"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="127" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="324" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1aad16833a793449732c379047d7a765d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,17 +252,17 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The selected leg for which the capacitor will be connected.</para>
+<para>The selected leg for which the capacitor will be connected: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>This function can only be called AFTER initializing the LEG. </para>
+<simplesect kind="warning"><para>This function can only be called AFTER initializing the <computeroutput>LEG</computeroutput>. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="109" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="311" bodyend="335"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="137" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="362" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a32fc0e1db758d17bedbe22d1adc5b20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -246,17 +283,17 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The selected leg for which the capacitor will be disconnected.</para>
+<para>The selected leg for which the capacitor will be disconnected: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>This function can only be called AFTER initializing the LEG. </para>
+<simplesect kind="warning"><para>This function can only be called AFTER initializing the <computeroutput>LEG</computeroutput>. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="118" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="337" bodyend="361"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="147" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="391" bodyend="418"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a3e02864cb637506fcde7e563d48c1a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -277,7 +314,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which the driver will be turned on.</para>
+<para>The leg for which the driver will be turned on: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -287,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="128" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="367" bodyend="390"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="157" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="424" bodyend="447"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a89cb699e02b7136c9b00d5152e1d044d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -300,15 +337,17 @@
           <declname>leg</declname>
         </param>
         <briefdescription>
-<para>Turns the driver of the leg ON. This disenables control over the power switches. </para>
+<para>Turns the driver of the leg OFF. </para>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>      This disables control over the power switches.
+</verbatim></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which the driver will be turned off.</para>
+<para>The leg for which the driver will be turned off: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -318,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="138" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="392" bodyend="415"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="168" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="449" bodyend="475"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a7173c11ed985462663b6b76b4f2609e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -338,13 +377,14 @@
 <para>Set the trigger value for a specific leg&apos;s ADC trigger. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function sets the trigger value for the ADC trigger of a specified leg. The trigger value determines the level at which the ADC trigger is activated.</para>
+<para>This function sets the trigger value for the ADC trigger of a specified leg.</para>
+<para>The trigger value determines the level at which the ADC trigger is activated.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which to set the ADC trigger value. </para>
+<para>The leg for which to set the ADC trigger value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -360,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="150" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="454" bodyend="486"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="182" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="517" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1ac621d3511a7584ec6781920d1d966665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -385,7 +425,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg for which to set the phase shift value. </para>
+<para>The leg for which to set the phase shift value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -393,7 +433,7 @@
 <parametername direction="in">phase_shift</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>phase shift value in degrees between -360 and 360 </para>
+<para>phase shift value in degrees between <computeroutput>-360</computeroutput> and <computeroutput>360</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -401,12 +441,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="158" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="488" bodyend="509"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="191" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="554" bodyend="578"/>
       </memberdef>
-      <memberdef kind="function" id="classPowerAPI_1a646d84a6ffa8a83e9cf209e4c6efaff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPowerAPI_1aefac45bc651f02988a3026107296ff7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PowerAPI::setSlopeCompensation</definition>
-        <argsstring>(leg_t leg, \ float32_t set_voltage, \ float32_t reset_voltage)</argsstring>
+        <argsstring>(leg_t leg, float32_t set_voltage, float32_t reset_voltage)</argsstring>
         <name>setSlopeCompensation</name>
         <qualifiedname>PowerAPI::setSlopeCompensation</qualifiedname>
         <param>
@@ -414,11 +454,11 @@
           <declname>leg</declname>
         </param>
         <param>
-          <type>\ float32_t</type>
+          <type>float32_t</type>
           <declname>set_voltage</declname>
         </param>
         <param>
-          <type>\ float32_t</type>
+          <type>float32_t</type>
           <declname>reset_voltage</declname>
         </param>
         <briefdescription>
@@ -430,7 +470,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The leg to initialize </para>
+<para>The leg to initialize: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -438,7 +478,7 @@
 <parametername>set_voltage</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>in volt, the DAC peak voltage for slope compensation (value between 0 and 2.048) </para>
+<para>in volt, the DAC peak voltage for slope compensation (value between <computeroutput>0</computeroutput> and <computeroutput>2.048</computeroutput>) </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -446,22 +486,22 @@
 <parametername>reset_voltage</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>in volt, the DAC lowest voltage for slope compensation (value between 0 and 2.048)</para>
+<para>in volt, the DAC lowest voltage for slope compensation (value between <computeroutput>0</computeroutput> and <computeroutput>2.048</computeroutput>)</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>Be sure that set_voltage &gt; reset_voltage </para>
+<simplesect kind="warning"><para>Be sure that <computeroutput>set_voltage &gt; reset_voltage</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="171" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="419" bodyend="452"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="204" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="479" bodyend="515"/>
       </memberdef>
-      <memberdef kind="function" id="classPowerAPI_1a38b4ff1bd2f2fe1ed8ad88d0ee1fa658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classPowerAPI_1a644907d4a0a3c37dcae74a02191ddb2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PowerAPI::setDeadTime</definition>
-        <argsstring>(leg_t leg, \ uint16_t ns_rising_dt, \ uint16_t ns_falling_dt)</argsstring>
+        <argsstring>(leg_t leg, uint16_t ns_rising_dt, uint16_t ns_falling_dt)</argsstring>
         <name>setDeadTime</name>
         <qualifiedname>PowerAPI::setDeadTime</qualifiedname>
         <param>
@@ -469,11 +509,11 @@
           <declname>leg</declname>
         </param>
         <param>
-          <type>\ uint16_t</type>
+          <type>uint16_t</type>
           <declname>ns_rising_dt</declname>
         </param>
         <param>
-          <type>\ uint16_t</type>
+          <type>uint16_t</type>
           <declname>ns_falling_dt</declname>
         </param>
         <briefdescription>
@@ -485,7 +525,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- the leg for which to set dead time value </para>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -493,7 +533,7 @@
 <parametername>ns_rising_dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- rising dead time value in ns </para>
+<para>rising dead time value in nanoseconds </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -501,7 +541,7 @@
 <parametername>ns_falling_dt</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- falling dead time value in ns </para>
+<para>falling dead time value in nanoseconds </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -509,7 +549,326 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="182" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="511" bodyend="535"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="215" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="580" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1ab3058e34a4de223accdcbb486a98e9e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerAPI::setDutyCycleMin</definition>
+        <argsstring>(leg_t leg, float32_t duty_cycle)</argsstring>
+        <name>setDutyCycleMin</name>
+        <qualifiedname>PowerAPI::setDutyCycleMin</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+<para>sets the Minimum Duty Cycle Limit </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new minimum duty cycle value between 0.0 and 1.0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="225" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="610" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a5f1e72717f47889516e71312342ede66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerAPI::setDutyCycleMinRaw</definition>
+        <argsstring>(leg_t leg, uint16_t duty_cycle)</argsstring>
+        <name>setDutyCycleMinRaw</name>
+        <qualifiedname>PowerAPI::setDutyCycleMinRaw</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+<para>sets the Minimum Duty Cycle Limit as an unsigned int </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new minimum duty cycle value between <computeroutput>0</computeroutput> and <computeroutput>period</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="233" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="672" bodyend="705"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a0008776d3b7d21ddf48dbf8b91b815fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerAPI::setDutyCycleMaxRaw</definition>
+        <argsstring>(leg_t leg, uint16_t duty_cycle)</argsstring>
+        <name>setDutyCycleMaxRaw</name>
+        <qualifiedname>PowerAPI::setDutyCycleMaxRaw</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+<para>sets the Maximum Duty Cycle Limit as an unsigned int </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new minimum duty cycle value between <computeroutput>0</computeroutput> and <computeroutput>period</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="241" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="707" bodyend="739"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1ab440553ac940e65333e87668558ef713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerAPI::setDutyCycleMax</definition>
+        <argsstring>(leg_t leg, float32_t duty_cycle)</argsstring>
+        <name>setDutyCycleMax</name>
+        <qualifiedname>PowerAPI::setDutyCycleMax</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>float32_t</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+<para>sets the Maximum Duty Cycle Limit </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duty_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new maximum duty cycle value between 0.0 and 1.0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="249" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="641" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1afdb256eeb1712cca4f29a1a058dec491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t PowerAPI::getDutyCycleMax</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>getDutyCycleMax</name>
+        <qualifiedname>PowerAPI::getDutyCycleMax</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>gets the Maximum Duty Cycle Limit as a float </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>LEG5</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para><computeroutput>ALL</computeroutput> is NOT supported ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="257" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="741" bodyend="744"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a7ab3d46481116817c82ad67e15f9851c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PowerAPI::getDutyCycleMaxRaw</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>getDutyCycleMaxRaw</name>
+        <qualifiedname>PowerAPI::getDutyCycleMaxRaw</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>gets the Maximum Duty Cycle Limit as an unsigned integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>LEG5</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para><computeroutput>ALL</computeroutput> is NOT supported ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="265" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="746" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a1ff82e4ab6b1b29cf1c4fe7bd1b507e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float32_t</type>
+        <definition>float32_t PowerAPI::getDutyCycleMin</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>getDutyCycleMin</name>
+        <qualifiedname>PowerAPI::getDutyCycleMin</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>gets the Minimum Duty Cycle Limit as a float </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>LEG5</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para><computeroutput>ALL</computeroutput> is NOT supported ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="273" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="751" bodyend="754"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a155cc8dd11411597071358cb9a24fd03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PowerAPI::getDutyCycleMinRaw</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>getDutyCycleMinRaw</name>
+        <qualifiedname>PowerAPI::getDutyCycleMinRaw</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>gets the Minimum Duty Cycle Limit as an unsigned integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>LEG5</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para><computeroutput>ALL</computeroutput> is NOT supported ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="281" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="756" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerAPI_1a656e1f9509448702534f3e0aa121f640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PowerAPI::getPeriod</definition>
+        <argsstring>(leg_t leg)</argsstring>
+        <name>getPeriod</name>
+        <qualifiedname>PowerAPI::getPeriod</qualifiedname>
+        <param>
+          <type>leg_t</type>
+          <declname>leg</declname>
+        </param>
+        <briefdescription>
+<para>returns the value of the leg period as an unsigned integer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the leg for which to set dead time value: <computeroutput>LEG1</computeroutput> to <computeroutput>LEG5</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para><computeroutput>ALL</computeroutput> is NOT supported ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="289" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="761" bodyend="764"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a762963be2eda26a77facd81070efacfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -526,16 +885,17 @@
           <declname>adc_decim</declname>
         </param>
         <briefdescription>
-<para>set ADC decimator for a leg </para>
+<para>Sets ADC decimator for a leg. </para>
         </briefdescription>
         <detaileddescription>
-<para>this function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if adc_decim = 1, nothing changes but with adc_decims = 2 you have twice less adc trigger.</para>
+<para>This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period.</para>
+<para>For example if adc_decim = 1, nothing changes but with adc_decims = 2 you have twice less adc trigger.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- leg for which to set adc decimator value </para>
+<para>leg for which to set adc decimator value: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -543,7 +903,7 @@
 <parametername>adc_decim</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- adc decimator, a number between 1 and 32 </para>
+<para>adc decimator, a number between 1 and 32 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -551,7 +911,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="198" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="538" bodyend="559"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="305" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="767" bodyend="791"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a845b9c1008aa86deac765ca73ed381f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +937,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Leg to initialize </para>
+<para>Leg to initialize: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -585,15 +945,17 @@
 <parametername>leg_mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>PWM mode - VOLTAGE_MODE or CURRENT_MODE </para>
+<para>PWM mode - <computeroutput>VOLTAGE_MODE</computeroutput> or <computeroutput>CURRENT_MODE</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<simplesect kind="note"><para><computeroutput>CURRENT_MODE</computeroutput> only available to <computeroutput>LEG1</computeroutput> and <computeroutput>LEG2</computeroutput> for the Twist board </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="207" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="562" bodyend="592"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="317" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="794" bodyend="827"/>
       </memberdef>
       <memberdef kind="function" id="classPowerAPI_1a89a40dc093a20d11620549c601ccabe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -614,7 +976,7 @@
 <parametername>leg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Leg to initialize </para>
+<para>Leg to initialize: <computeroutput>LEG1</computeroutput> to <computeroutput>ALL</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -622,27 +984,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="215" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="594" bodyend="624"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="325" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.cpp" bodystart="829" bodyend="862"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="46" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" bodystart="47" bodyend="217"/>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" line="53" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Power.h" bodystart="54" bodyend="327"/>
     <listofallmembers>
       <member refid="classPowerAPI_1aad16833a793449732c379047d7a765d0" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>connectCapacitor</name></member>
       <member refid="classPowerAPI_1a3e02864cb637506fcde7e563d48c1a8b" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>connectDriver</name></member>
       <member refid="classPowerAPI_1a32fc0e1db758d17bedbe22d1adc5b20a" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>disconnectCapacitor</name></member>
       <member refid="classPowerAPI_1a89cb699e02b7136c9b00d5152e1d044d" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>disconnectDriver</name></member>
+      <member refid="classPowerAPI_1afdb256eeb1712cca4f29a1a058dec491" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>getDutyCycleMax</name></member>
+      <member refid="classPowerAPI_1a7ab3d46481116817c82ad67e15f9851c" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>getDutyCycleMaxRaw</name></member>
+      <member refid="classPowerAPI_1a1ff82e4ab6b1b29cf1c4fe7bd1b507e6" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>getDutyCycleMin</name></member>
+      <member refid="classPowerAPI_1a155cc8dd11411597071358cb9a24fd03" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>getDutyCycleMinRaw</name></member>
+      <member refid="classPowerAPI_1a656e1f9509448702534f3e0aa121f640" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>getPeriod</name></member>
       <member refid="classPowerAPI_1a89a40dc093a20d11620549c601ccabe3" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>initBoost</name></member>
       <member refid="classPowerAPI_1a845b9c1008aa86deac765ca73ed381f1" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>initBuck</name></member>
-      <member refid="classPowerAPI_1abc8fef65d23bef0c99f126dd2573fde3" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>initMode</name></member>
+      <member refid="classPowerAPI_1ad739c8a08fd7dd34f8021efdefb8af65" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>initMode</name></member>
       <member refid="classPowerAPI_1a762963be2eda26a77facd81070efacfb" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setAdcDecim</name></member>
-      <member refid="classPowerAPI_1a38b4ff1bd2f2fe1ed8ad88d0ee1fa658" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDeadTime</name></member>
-      <member refid="classPowerAPI_1a4ba345b7c6691d0f4fdf2e547d9d2422" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycle</name></member>
+      <member refid="classPowerAPI_1a644907d4a0a3c37dcae74a02191ddb2d" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDeadTime</name></member>
+      <member refid="classPowerAPI_1ab97f7c8f7d402c4bb03164ab3b727fe6" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycle</name></member>
+      <member refid="classPowerAPI_1ab440553ac940e65333e87668558ef713" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycleMax</name></member>
+      <member refid="classPowerAPI_1a0008776d3b7d21ddf48dbf8b91b815fc" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycleMaxRaw</name></member>
+      <member refid="classPowerAPI_1ab3058e34a4de223accdcbb486a98e9e0" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycleMin</name></member>
+      <member refid="classPowerAPI_1a5f1e72717f47889516e71312342ede66" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycleMinRaw</name></member>
+      <member refid="classPowerAPI_1a9f5b62159fab5ff12d69719a38fd2cab" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setDutyCycleRaw</name></member>
       <member refid="classPowerAPI_1ac621d3511a7584ec6781920d1d966665" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setPhaseShift</name></member>
-      <member refid="classPowerAPI_1a646d84a6ffa8a83e9cf209e4c6efaff1" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setSlopeCompensation</name></member>
+      <member refid="classPowerAPI_1aefac45bc651f02988a3026107296ff7a" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setSlopeCompensation</name></member>
       <member refid="classPowerAPI_1a7173c11ed985462663b6b76b4f2609e3" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>setTriggerValue</name></member>
       <member refid="classPowerAPI_1aab8dedde3cfc699c6619475708e63ea9" prot="private" virt="non-virtual"><scope>PowerAPI</scope><name>spinNumberToTu</name></member>
       <member refid="classPowerAPI_1abfb00fe45a04ef128e1ec734559e43a0" prot="public" virt="non-virtual"><scope>PowerAPI</scope><name>start</name></member>

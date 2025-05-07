@@ -21,6 +21,8 @@
 
 ## b
 
+* **buf** ([**can\_control\_work\_data**](structcan__control__work__data.md))
+* **buf\_len** ([**can\_control\_work\_data**](structcan__control__work__data.md))
 * **burst\_clk** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
@@ -67,6 +69,13 @@
 * **dac\_function** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **dst** ([**dma\_user\_data\_t**](structdma__user__data__t.md))
 * **duty\_cycle** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max\_user** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max\_user\_float** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min\_user** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min\_user\_float** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_swap** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
 ## e
@@ -131,12 +140,12 @@
 
 ## p
 
+* **period** ([**PwmHAL**](classPwmHAL.md), [**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pin\_number** ([**SensorsAPI::sensor\_dt\_data\_t**](structSensorsAPI_1_1sensor__dt__data__t.md))
 * **power** ([**ShieldAPI**](classShieldAPI.md))
 * **pwm** ([**SpinAPI**](classSpinAPI.md))
 * **pinconfigure** ([**dac\_driver\_api**](structdac__driver__api.md))
 * **polarity** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
-* **period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pwm\_mode** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pwm\_tu** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pin\_num** ([**sensor\_info\_t**](structsensor__info__t.md))
@@ -160,6 +169,7 @@
 ## s
 
 * **sync** ([**CommunicationAPI**](classCommunicationAPI.md))
+* **swap\_state** ([**PwmHAL**](classPwmHAL.md))
 * **sensors** ([**ShieldAPI**](classShieldAPI.md))
 * **setconstvalue** ([**dac\_driver\_api**](structdac__driver__api.md))
 * **setfunction** ([**dac\_driver\_api**](structdac__driver__api.md))
@@ -178,9 +188,12 @@
 
 ## t
 
+* **ts\_can\_inst** ([**CanCommunication**](classCanCommunication.md))
 * **temp\_mux\_in\_1** ([**SensorsAPI**](classSensorsAPI.md))
 * **temp\_mux\_in\_2** ([**SensorsAPI**](classSensorsAPI.md))
 * **timer** ([**SpinAPI**](classSpinAPI.md))
+* **timer3init** ([**TimerHAL**](classTimerHAL.md))
+* **timer3started** ([**TimerHAL**](classTimerHAL.md))
 * **timer4init** ([**TimerHAL**](classTimerHAL.md))
 * **timer4started** ([**TimerHAL**](classTimerHAL.md))
 * **tu\_gpio\_CLK** ([**gpio\_conf\_t**](structgpio__conf__t.md))
@@ -202,6 +215,11 @@
 ## v
 
 * **value** ([**phase\_shift\_conf\_t**](structphase__shift__conf__t.md))
+
+
+## w
+
+* **work** ([**can\_control\_work\_data**](structcan__control__work__data.md))
 
 
 

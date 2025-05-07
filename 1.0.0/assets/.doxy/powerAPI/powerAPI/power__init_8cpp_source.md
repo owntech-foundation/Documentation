@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,10 +27,19 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ * @author Jean Alinei <jean.alinei@owntech.org>
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ */
 
 #include "power_init.h"
 
 uint32_t timer_frequency = DT_PROP(POWER_SHIELD_ID, default_frequency);
+
+uint32_t timer_min_frequency = DT_PROP(POWER_SHIELD_ID, min_frequency);
 
 uint16_t dt_pwm_pin[] =
     {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PWM_PIN)};

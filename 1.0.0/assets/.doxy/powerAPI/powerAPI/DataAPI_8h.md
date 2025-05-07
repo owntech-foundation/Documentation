@@ -160,6 +160,10 @@ enum parameter_t {
 
 
 
+Type definitions 
+
+
+        
 
 <hr>
 
@@ -245,6 +249,10 @@ const uint8_t ADC_COUNT;
 
 
 
+Constants definitions 
+
+
+        
 
 <hr>
 

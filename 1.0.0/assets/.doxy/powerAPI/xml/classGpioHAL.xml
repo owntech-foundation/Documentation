@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classGpioHAL" kind="class" language="C++" prot="public">
     <compoundname>GpioHAL</compoundname>
+    <includes refid="GpioHAL_8h" local="no">GpioHAL.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -26,20 +27,21 @@
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pin configuration flags. Authorized values:<itemizedlist>
-<listitem><para>INPUT</para>
-</listitem><listitem><para>INPUT_PULLUP</para>
-</listitem><listitem><para>OUTPUT </para>
-</listitem></itemizedlist>
-</para>
+<para>Pin configuration flags. Authorized values: <computeroutput>INPUT</computeroutput>, <computeroutput>INPUT_PULLUP</computeroutput>, <computeroutput>OUTPUT</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -47,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="151" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="40" bodyend="48"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="154" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="40" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1ac011e04525f1b1d5b33852408c585a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,15 +70,19 @@
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput> </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="161" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="50" bodyend="58"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="167" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="50" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1ab326596ed6b0826158bc4a5db625a5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,15 +103,19 @@
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput> </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="171" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="60" bodyend="68"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="180" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="60" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1a4b5751576cd0dcc6e60bc23c35b71d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -121,25 +131,28 @@
 <para>Toggle the value of a pin configured as output: </para>
         </briefdescription>
         <detaileddescription>
-<para><itemizedlist>
-<listitem><para>if pin value is 1, it will be set to 0</para>
-</listitem><listitem><para>if pin value is 0, it will be set to 1.</para>
-</listitem></itemizedlist>
-</para>
+<para><verbatim>   - if pin value is `1`, it will be set to `0`
+
+   - if pin value is `0`, it will be set to `1`.
+</verbatim></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput> </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="183" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="70" bodyend="78"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="197" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="70" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1a85d13a02c7e01e553703b0a4f14622a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -164,10 +177,16 @@
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
@@ -180,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="195" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="80" bodyend="88"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="212" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="80" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1a3cc80d3a2054968833482744f079b261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -201,17 +220,23 @@
 <parametername>pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </para>
+<para>Number of pin. Format allowed:</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Current value (0 or 1) of the pin. </para>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput> <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>Current value (0 or 1) of the pin. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="206" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="90" bodyend="100"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="226" column="9" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="90" bodyend="100"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -226,12 +251,32 @@
           <declname>pin</declname>
         </param>
         <briefdescription>
+<para>Get the GPIO pin number associated with a logical shield pin. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function translates a shield pin or encoded Nucleo-style pin into the corresponding MCU GPIO pin number (e.g., <computeroutput>PA11</computeroutput> → <computeroutput>11</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pin. Format allowed:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput> <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>GPIO pin number (0–15) or 0xFF if unknown or unsupported. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="209" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="102" bodyend="157"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="244" column="12" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="102" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="classGpioHAL_1a8308cf97155d9148a397b645e3e9aaed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const struct device *</type>
@@ -244,19 +289,40 @@
           <declname>pin</declname>
         </param>
         <briefdescription>
+<para>Get the GPIO port device corresponding to a logical shield pin. </para>
         </briefdescription>
         <detaileddescription>
+<para>If the pin is encoded in Nucleo format (0x8X, 0x9X, 0xAX, etc.), the high nibble determines the port (PA, PB, etc.).</para>
+<para>Otherwise, the function maps shield pins to their appropriate GPIO device (e.g., GPIO_A, GPIO_B).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pin. Format allowed:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>the Spin pin number from 1 to 58</para>
+</listitem><listitem><para>STM32-style pin name from <computeroutput>PA1</computeroutput> to <computeroutput>PA15</computeroutput>, <computeroutput>PB1</computeroutput> to <computeroutput>PB15</computeroutput>, <computeroutput>PC1</computeroutput> to <computeroutput>PC15</computeroutput> and <computeroutput>PD1</computeroutput> to <computeroutput>PD3</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>Pointer to the corresponding Zephyr GPIO device, or nullptr if invalid. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="210" column="20" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="159" bodyend="241"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="266" column="20" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.cpp" bodystart="161" bodyend="245"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Class definition </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="132" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="133" bodyend="212"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" line="135" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h" bodystart="136" bodyend="268"/>
     <listofallmembers>
       <member refid="classGpioHAL_1a842722c2398269a25799cc1910bd58ea" prot="public" virt="non-virtual"><scope>GpioHAL</scope><name>configurePin</name></member>
       <member refid="classGpioHAL_1a8308cf97155d9148a397b645e3e9aaed" prot="private" virt="non-virtual"><scope>GpioHAL</scope><name>getGpioDevice</name></member>

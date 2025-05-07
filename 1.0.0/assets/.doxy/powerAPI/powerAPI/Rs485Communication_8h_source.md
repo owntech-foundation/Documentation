@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,11 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 #ifndef RS485COMMUNICATION_H_
 #define RS485COMMUNICATION_H_
@@ -35,22 +40,27 @@
 
 #ifdef CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485
 
+
 typedef enum {
-    SPEED_2M,  // 2Mbits/s speed communication
-    SPEED_5M,  // 5Mbits/s speed communication
-    SPEED_10M, // 10Mbits/s speed communication
-    SPEED_20M, // 20Mbits/s speed communication
+    SPEED_2M,  
+    SPEED_5M,  
+    SPEED_10M, 
+    SPEED_20M, 
 }rs485_speed_t;
 
-// Static class definition
 
 class Rs485Communication
 {
     public :
-        void configure(uint8_t *transmission_bufer, uint8_t *reception_buffer, uint16_t data_size, void (*user_function)(), 
-                            rs485_speed_t data_speed = SPEED_10M);
+        void configure(uint8_t *transmission_buffer,
+                       uint8_t *reception_buffer,
+                       uint16_t data_size, void (*user_function)(),
+                       rs485_speed_t data_speed = SPEED_10M);
 
-        void configureCustom(uint8_t *transmission_bufer, uint8_t *reception_buffer, uint16_t data_size, void (*user_function)(void), uint32_t baudrate, bool oversampling_8);
+        void configureCustom(uint8_t *transmission_buffer,
+                             uint8_t *reception_buffer,
+                             uint16_t data_size, void (*user_function)(void),
+                             uint32_t baudrate, bool oversampling_8);
 
         void startTransmission();
 
@@ -59,9 +69,9 @@ class Rs485Communication
         void turnOffCommunication();
 };
 
-#endif // CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485
+#endif /* CONFIG_OWNTECH_COMMUNICATION_ENABLE_RS485 */
 
-#endif // RS485COMMUNICATION_H_
+#endif /* RS485COMMUNICATION_H_ */
 ```
 
 

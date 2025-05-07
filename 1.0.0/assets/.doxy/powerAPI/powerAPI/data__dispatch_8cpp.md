@@ -69,7 +69,7 @@
 |  \_\_STATIC\_INLINE uint32\_t | [**\_data\_dispatch\_get\_count**](#function-_data_dispatch_get_count) (uint8\_t adc\_index, uint8\_t channel\_index) <br> |
 |  \_\_STATIC\_INLINE void | [**\_data\_dispatch\_increment\_count**](#function-_data_dispatch_increment_count) (uint8\_t adc\_index, uint8\_t channel\_index) <br> |
 |  \_\_STATIC\_INLINE void | [**\_data\_dispatch\_swap\_buffers**](#function-_data_dispatch_swap_buffers) (uint8\_t adc\_index, uint8\_t channel\_index) <br> |
-|  void | [**data\_dispatch\_do\_dispatch**](#function-data_dispatch_do_dispatch) (uint8\_t adc\_number) <br>_Dispatch function: gets the readings and store them in per-channel arrays. This functon is called by DMA callback when the DMA has filled one of its buffers._  |
+|  void | [**data\_dispatch\_do\_dispatch**](#function-data_dispatch_do_dispatch) (uint8\_t adc\_number) <br>_Dispatch function: gets the readings and store them in per-channel arrays. This function is called by DMA callback when the DMA has filled one of its buffers._  |
 |  void | [**data\_dispatch\_do\_full\_dispatch**](#function-data_dispatch_do_full_dispatch) () <br>_Function to proceed to all chanels dispatch when it is done at uninterruptible task start._  |
 |  uint16\_t \* | [**data\_dispatch\_get\_acquired\_values**](#function-data_dispatch_get_acquired_values) (uint8\_t adc\_number, uint8\_t channel\_rank, uint32\_t & number\_of\_values\_acquired) <br>_Obtain data for a specific channel. The data is provided as an array of values and the count of data in this buffer is returned as an output parameter._  |
 |  void | [**data\_dispatch\_init**](#function-data_dispatch_init) (dispatch\_t dispatch\_method, uint32\_t repetitions) <br>_Init function to be called first._  |
@@ -115,6 +115,10 @@ uint16_t**** adc_channel_buffers;
 
 
 
+Array of per-adc/per-channel buffers. adc\_channel\_buffers[x][y][z][] is ADC x+1 channel y buffer z with z either 0 or 1 as there are two buffers per channel (double buffering) 
+
+
+        
 
 <hr>
 
@@ -128,6 +132,10 @@ uint32_t** buffers_data_count;
 
 
 
+Number of readings stored in each channel. buffers\_data\_count[x][y] is the current number of values stored in the currently written buffer of ADC x+1 Channel y 
+
+
+        
 
 <hr>
 
@@ -141,6 +149,10 @@ uint8_t** current_buffer;
 
 
 
+Currently written buffer for each channel. Either 0 or 1. If current\_buffer[x][y] is 0, the currently written buffer for ADC x+1 Channel y is buffer 0 and the user buffer is buffer 1 
+
+
+        
 
 <hr>
 
@@ -193,6 +205,10 @@ uint16_t* dma_main_buffers[ADC_COUNT];
 
 
 
+DMA buffers: data from the ADC 1/2 are stored in these buffers until dispatch is done (ADC 3/4 won't use DMA). Main buffers are always used, while secondary buffers will only be used when double-buffering is activated. Double buffering is activated in Interrupt mode, while Task mode doesn't need it. 
+
+
+        
 
 <hr>
 
@@ -219,21 +235,7 @@ uint8_t* enabled_channels_count;
 
 
 
-
-
-**Date:**
-
-2023
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
+Local variables 
 
 
         
@@ -250,6 +252,10 @@ uint16_t** peek_memory;
 
 
 
+Small memory to retain latest value available to the peek() function after a buffer swap. 
+
+
+        
 
 <hr>
 ## Public Functions Documentation
@@ -268,6 +274,10 @@ __STATIC_INLINE uint16_t * _data_dispatch_get_buffer (
 
 
 
+Private Functions 
+
+
+        
 
 <hr>
 
@@ -323,7 +333,7 @@ __STATIC_INLINE void _data_dispatch_swap_buffers (
 
 ### function data\_dispatch\_do\_dispatch 
 
-_Dispatch function: gets the readings and store them in per-channel arrays. This functon is called by DMA callback when the DMA has filled one of its buffers._ 
+_Dispatch function: gets the readings and store them in per-channel arrays. This function is called by DMA callback when the DMA has filled one of its buffers._ 
 ```C++
 void data_dispatch_do_dispatch (
     uint8_t adc_number
@@ -375,23 +385,7 @@ uint16_t * data_dispatch_get_acquired_values (
 
 
 
-
-
-**Parameters:**
-
-
-* `adc_number` Number of the ADC from which to obtain data. 
-* `channel_rank` Rank of the channel from which to obtain data. 
-* `number_of_values_acquired` Output parameter: address to a variable that will be updated by the function with the data count. 
-
-
-
-**Returns:**
-
-Buffer containing the available data. Note that the returned buffer is invalidated by further calls to the function with same adc number/channel rank. 
-
-
-
+Accessors 
 
 
         
@@ -412,15 +406,7 @@ void data_dispatch_init (
 
 
 
-
-
-**Parameters:**
-
-
-* `dispatch_method` Indicates when the dispatch should be done. 
-* `repetitions` If dispatch is done at task start, this value represents the number of acquisitions that are done between two execution of the task. Ignored if dispatch is done on interrupt. 
-
-
+Public API 
 
 
         

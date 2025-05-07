@@ -32,6 +32,11 @@
 | class | [**TimerHAL**](classTimerHAL.md) <br>_Handles timer 4 for the SPIN board._  |
 
 
+## Public Types
+
+| Type | Name |
+| ---: | :--- |
+| enum  | [**timernumber\_t**](#enum-timernumber_t)  <br> |
 
 
 
@@ -80,6 +85,24 @@
 
 
 
+## Public Types Documentation
+
+
+
+
+### enum timernumber\_t 
+
+```C++
+enum timernumber_t {
+    TIMER3,
+    TIMER4
+};
+```
+
+
+
+
+<hr>
 
 ------------------------------
 The documentation for this class was generated from the following file `docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h`

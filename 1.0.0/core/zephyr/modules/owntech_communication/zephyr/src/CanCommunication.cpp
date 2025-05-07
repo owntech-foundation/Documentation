@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2024
  *
  * @author Clément Foucher <clement.foucher@laas.fr>
@@ -28,25 +28,34 @@
 /* Header */
 #include "CanCommunication.h"
 #include "data_objects.h"
+#include <thingset.h>
+#include <thingset/can.h>
+#include <thingset/sdk.h>
 
-/* Zephyr driver*/
-#include <zephyr/drivers/gpio.h>
+struct thingset_can *CanCommunication::ts_can_inst = thingset_can_get_inst();
 
-/////
-// Extern variable defined in this module
+/**
+ * Extern variables coming from sdk.c
+ **/
 
-extern uint16_t broadcast_time;
-extern uint16_t control_time;
+#ifdef CONFIG_THINGSET_SUBSET_LIVE_METRICS
+/** Boolean to set or unset CAN broadcasting */
+extern bool live_reporting_enable;
+/** Integer used to set broadcasting period */
+extern uint32_t live_reporting_period;
+#endif
+/**
+ * Extern variable defined in this module
+ */
 
+#ifdef CONFIG_THINGSET_CAN_CONTROL_REPORTING
 
-uint16_t CanCommunication::getCanNodeAddr()
-{
-    return can_node_addr;
-}
+extern bool      start_stop;
+extern float32_t reference_value;
 
 bool CanCommunication::getCtrlEnable()
 {
-    return ctrl_enable;
+    return ts_can_inst->control_enable;
 }
 
 float32_t CanCommunication::getCtrlReference()
@@ -54,25 +63,19 @@ float32_t CanCommunication::getCtrlReference()
     return reference_value;
 }
 
-uint16_t CanCommunication::getBroadcastPeriod()
+float32_t CanCommunication::getStartStopState()
 {
-    return broadcast_time;
+    return start_stop;
 }
 
 uint16_t CanCommunication::getControlPeriod()
 {
-    return control_time;
-}
-
-
-void CanCommunication::setCanNodeAddr(uint16_t addr)
-{
-    can_node_addr = addr;
+    return ts_can_inst->control_period;
 }
 
 void CanCommunication::setCtrlEnable(bool enable)
 {
-    ctrl_enable = enable;
+    ts_can_inst->control_enable = enable;
 }
 
 void CanCommunication::setCtrlReference(float32_t reference)
@@ -80,18 +83,53 @@ void CanCommunication::setCtrlReference(float32_t reference)
     reference_value = reference;
 }
 
-void CanCommunication::setBroadcastPeriod(uint16_t time_100_ms)
+void CanCommunication::stopSlaveDevice()
 {
-    broadcast_time = time_100_ms;
+    start_stop = 0;
 }
 
-void CanCommunication::setControlPeriod(uint16_t time_100_ms)
+void CanCommunication::startSlaveDevice()
 {
-    control_time = time_100_ms;
+    start_stop = 1;
 }
 
-void CanCommunication::enableCan()
+void CanCommunication::setControlPeriod(uint16_t time_ms)
 {
-	const struct gpio_dt_spec can_standby_spec = GPIO_DT_SPEC_GET(CAN_STANDBY_DEVICE, gpios);
-	gpio_pin_configure_dt(&can_standby_spec, GPIO_OUTPUT_INACTIVE);
+    ts_can_inst->control_period = time_ms;
 }
+
+#endif /* CONFIG_THINGSET_CAN_CONTROL_REPORTING */
+
+uint16_t CanCommunication::getCanNodeAddr()
+{
+    return ts_can_inst->node_addr;
+}
+
+void CanCommunication::setCanNodeAddr(uint16_t addr)
+{
+    ts_can_inst->node_addr = addr;
+}
+
+#ifdef CONFIG_THINGSET_SUBSET_LIVE_METRICS
+
+bool CanCommunication::getBroadcastEnable()
+{
+    return live_reporting_enable;
+}
+
+uint16_t CanCommunication::getBroadcastPeriod()
+{
+    return live_reporting_period;
+}
+
+void CanCommunication::setBroadcastEnable(bool enable)
+{
+    live_reporting_enable = enable;
+}
+
+void CanCommunication::setBroadcastPeriod(uint16_t time_s)
+{
+    live_reporting_period = time_s;
+}
+
+#endif /* CONFIG_THINGSET_SUBSET_LIVE_METRICS */

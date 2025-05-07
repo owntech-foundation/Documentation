@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="94" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="94" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="117" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__config__t_1a7d48174f49a75fcd666d9b0970947308" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="95" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="95" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="118" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__config__t_1a6404b2da5fa25ee706cf6c96fd148a51" prot="public" static="no" mutable="no">
         <type>timer_callback_t</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="97" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="97" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="120" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__config__t_1ab7e0ef1f7440a3c6938dbcd4512ecec7" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="98" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="98" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="121" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__config__t_1a7887e2d2e0a30fc0164aa6d15eacfd66" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="99" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="99" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="122" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__config__t_1ae574df86c4d08cb15f31df91c3b0ec15" prot="public" static="no" mutable="no">
         <type>pin_mode_t</type>
@@ -89,13 +89,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="101" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="101" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="124" column="18" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="124" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Timer_enable_irq : set to 1 to enable interrupt on timer overflow. timer_enable_encoder: set to 1 for timer to act as an incremental coder counter. </para>
     </briefdescription>
     <detaileddescription>
-<para>timer_enable_irq : set to 1 to enable interrupt on timer overflow. timer_enable_encoder: set to 1 for timer to act as an incremental coder counter.</para>
 <para>*** IRQ mode (ignored if timer_enable_irq=0) ***<itemizedlist>
 <listitem><para>timer_irq_callback : pointer to a void(void) function that will be called on timer overflow.</para>
 </listitem><listitem><para>timer_irq_t_usec : period of the interrupt in microsecond (2 to 6553 µs)</para>
@@ -106,9 +106,12 @@
 <listitem><para>timer_pin_mode : Pin mode for incremental coder interface.</para>
 </listitem></itemizedlist>
 </para>
-<para>NOTE: At this time, only irq mode is supported on TIM6/TIM7, and only incremental coder mode is suppported on TIM4, which makes this configuration structure almost pointless (except for callback definition). However, it is built this way with future evolutions of the driver in mind. </para>
+<para><simplesect kind="note"><para>At this time, only irq mode is supported on TIM6/TIM7, and only incremental coder mode is supported on TIM4.</para>
+</simplesect>
+This limitation makes this configuration structure almost pointless (except for callback definition).</para>
+<para>However, it is built this way with future evolutions of the driver in mind. </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="91" column="1" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="92" bodyend="102"/>
+    <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="114" column="1" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="115" bodyend="125"/>
     <listofallmembers>
       <member refid="structtimer__config__t_1a7d48174f49a75fcd666d9b0970947308" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_enable_encoder</name></member>
       <member refid="structtimer__config__t_1ac5a610f29b5bee333559cf70157ba87d" prot="public" virt="non-virtual"><scope>timer_config_t</scope><name>timer_enable_irq</name></member>

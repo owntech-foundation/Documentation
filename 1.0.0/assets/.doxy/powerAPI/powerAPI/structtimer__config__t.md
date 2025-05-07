@@ -8,7 +8,7 @@
 
 
 
-[More...](#detailed-description)
+_Timer\_enable\_irq : set to 1 to enable interrupt on timer overflow. timer\_enable\_encoder: set to 1 for timer to act as an incremental coder counter._ [More...](#detailed-description)
 
 * `#include <timer.h>`
 
@@ -89,9 +89,6 @@
 ## Detailed Description
 
 
-timer\_enable\_irq : set to 1 to enable interrupt on timer overflow. timer\_enable\_encoder: set to 1 for timer to act as an incremental coder counter.
-
-
 \*\*\* IRQ mode (ignored if timer\_enable\_irq=0) \*\*\*
 * timer\_irq\_callback : pointer to a void(void) function that will be called on timer overflow.
 * timer\_irq\_t\_usec : period of the interrupt in microsecond (2 to 6553 µs)
@@ -106,7 +103,17 @@ timer\_enable\_irq : set to 1 to enable interrupt on timer overflow. timer\_enab
 
 
 
-NOTE: At this time, only irq mode is supported on TIM6/TIM7, and only incremental coder mode is suppported on TIM4, which makes this configuration structure almost pointless (except for callback definition). However, it is built this way with future evolutions of the driver in mind. 
+
+
+**Note:**
+
+At this time, only irq mode is supported on TIM6/TIM7, and only incremental coder mode is supported on TIM4.
+
+
+This limitation makes this configuration structure almost pointless (except for callback definition).
+
+
+However, it is built this way with future evolutions of the driver in mind. 
 
 
     

@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="71" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="71" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="78" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classTimerHAL_1a094f82bd39f3f0bc01f155240baedd33" prot="private" static="yes" mutable="no">
         <type>bool</type>
@@ -32,16 +32,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="72" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="72" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="79" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTimerHAL_1a9582d5607c8fffc4d38a3dce4de07338" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool TimerHAL::timer3init</definition>
+        <argsstring></argsstring>
+        <name>timer3init</name>
+        <qualifiedname>TimerHAL::timer3init</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="80" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTimerHAL_1a27c815c2586864840024d6c5e1fc6439" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool TimerHAL::timer3started</definition>
+        <argsstring></argsstring>
+        <name>timer3started</name>
+        <qualifiedname>TimerHAL::timer3started</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="81" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="81" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classTimerHAL_1acbfc32c30a3f6544091515c4088e9ffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classTimerHAL_1afbd9b8c7210a0010459e5c7e5b619ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void TimerHAL::startLogTimer4IncrementalEncoder</definition>
-        <argsstring>()</argsstring>
-        <name>startLogTimer4IncrementalEncoder</name>
-        <qualifiedname>TimerHAL::startLogTimer4IncrementalEncoder</qualifiedname>
+        <definition>void TimerHAL::startLogIncrementalEncoder</definition>
+        <argsstring>(timernumber_t timer_number)</argsstring>
+        <name>startLogIncrementalEncoder</name>
+        <qualifiedname>TimerHAL::startLogIncrementalEncoder</qualifiedname>
+        <param>
+          <type>timernumber_t</type>
+          <declname>timer_number</declname>
+        </param>
         <briefdescription>
 <para>Launches the timer4 which is adapted for reading an encoder. </para>
         </briefdescription>
@@ -49,14 +83,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="53" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="54" bodyend="69"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="59" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="74" bodyend="106"/>
       </memberdef>
-      <memberdef kind="function" id="classTimerHAL_1a6c64f087b3df77f9c4e3f276199be880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classTimerHAL_1ae9eb17c15822f2edebaff9149ef014bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
-        <definition>uint32_t TimerHAL::getTimer4IncrementalEncoderValue</definition>
-        <argsstring>()</argsstring>
-        <name>getTimer4IncrementalEncoderValue</name>
-        <qualifiedname>TimerHAL::getTimer4IncrementalEncoderValue</qualifiedname>
+        <definition>uint32_t TimerHAL::getIncrementalEncoderValue</definition>
+        <argsstring>(timernumber_t timer_number)</argsstring>
+        <name>getIncrementalEncoderValue</name>
+        <qualifiedname>TimerHAL::getIncrementalEncoderValue</qualifiedname>
+        <param>
+          <type>timernumber_t</type>
+          <declname>timer_number</declname>
+        </param>
         <briefdescription>
 <para>Gets the encoder step value. </para>
         </briefdescription>
@@ -67,16 +105,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="59" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="71" bodyend="81"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="66" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="108" bodyend="130"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classTimerHAL_1a276ec58d52de04a5c7505c17214eca31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classTimerHAL_1ac7f554c86532cf875ed030ff3199d633" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void TimerHAL::timer4Initialize</definition>
-        <argsstring>()</argsstring>
-        <name>timer4Initialize</name>
-        <qualifiedname>TimerHAL::timer4Initialize</qualifiedname>
+        <definition>void TimerHAL::Initialize</definition>
+        <argsstring>(timernumber_t timer_number)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>TimerHAL::Initialize</qualifiedname>
+        <param>
+          <type>timernumber_t</type>
+          <declname>timer_number</declname>
+        </param>
         <briefdescription>
 <para>Initializes timer 4. </para>
         </briefdescription>
@@ -84,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="68" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="37" bodyend="52"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="75" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.cpp" bodystart="40" bodyend="72"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -95,12 +137,14 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="46" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="47" bodyend="75"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" line="52" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/TimerHAL.h" bodystart="53" bodyend="84"/>
     <listofallmembers>
-      <member refid="classTimerHAL_1a6c64f087b3df77f9c4e3f276199be880" prot="public" virt="non-virtual"><scope>TimerHAL</scope><name>getTimer4IncrementalEncoderValue</name></member>
-      <member refid="classTimerHAL_1acbfc32c30a3f6544091515c4088e9ffe" prot="public" virt="non-virtual"><scope>TimerHAL</scope><name>startLogTimer4IncrementalEncoder</name></member>
+      <member refid="classTimerHAL_1ae9eb17c15822f2edebaff9149ef014bb" prot="public" virt="non-virtual"><scope>TimerHAL</scope><name>getIncrementalEncoderValue</name></member>
+      <member refid="classTimerHAL_1ac7f554c86532cf875ed030ff3199d633" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>Initialize</name></member>
+      <member refid="classTimerHAL_1afbd9b8c7210a0010459e5c7e5b619ce0" prot="public" virt="non-virtual"><scope>TimerHAL</scope><name>startLogIncrementalEncoder</name></member>
+      <member refid="classTimerHAL_1a9582d5607c8fffc4d38a3dce4de07338" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>timer3init</name></member>
+      <member refid="classTimerHAL_1a27c815c2586864840024d6c5e1fc6439" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>timer3started</name></member>
       <member refid="classTimerHAL_1a180d4121e89a3523852733d3e4d19857" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>timer4init</name></member>
-      <member refid="classTimerHAL_1a276ec58d52de04a5c7505c17214eca31" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>timer4Initialize</name></member>
       <member refid="classTimerHAL_1a094f82bd39f3f0bc01f155240baedd33" prot="private" virt="non-virtual"><scope>TimerHAL</scope><name>timer4started</name></member>
     </listofallmembers>
   </compounddef>

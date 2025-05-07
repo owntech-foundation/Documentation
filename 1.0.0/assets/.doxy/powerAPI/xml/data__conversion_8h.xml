@@ -33,10 +33,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Type definitions </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" bodystart="38" bodyend="43"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" bodystart="39" bodyend="44"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -49,10 +50,11 @@
 <para>Initialize data conversion. </para>
         </briefdescription>
         <detaileddescription>
+<para>API </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="52" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="81" bodyend="112" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="52" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="53" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="86" bodyend="127" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="53" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a94c907cbfba1f9b2d449980e3fbd4c59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -106,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="63" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="114" bodyend="145" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="63" declcolumn="11"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="65" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="129" bodyend="181" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="65" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a100e5a8b815232b4d6ce0347ab7445c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="74" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="147" bodyend="162" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="74" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="78" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="183" bodyend="203" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="78" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a5fa66906a5a31b0f044f0a0a65ef90da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -258,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="87" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="164" bodyend="181" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="87" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="94" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="205" bodyend="229" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="94" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a8aa0b6728977dee08ae5cf768603cef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>conversion_type_t</type>
@@ -300,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="97" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="183" bodyend="189" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="97" declcolumn="19"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="109" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="231" bodyend="239" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="109" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a82a9fff853682900e9d30cf21f88a827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -344,7 +346,7 @@
 <parametername direction="in">parameter_num</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the paramter to retreive. E.g. for linear parameters, gain is param 1 and offset is param 2.</para>
+<para>Number of the parameter to retrieve. E.g. for linear parameters, gain is param 1 and offset is param 2.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -354,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="109" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="191" bodyend="208" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="109" declcolumn="11"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="123" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="241" bodyend="265" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="123" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1a3dc4aa206281125cb56750161748887c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -390,13 +392,23 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correcly stored, -1 if there was an error. </para>
+<simplesect kind="return"><para>0 if parameters were correctly stored, -1 if there was an error. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>Handle non volatile memory used to store ADC parameters Flash partition reserved to user data storage is 4kB long We have to mount the file system then we extract one memory page that is 4kB long that contains the data and write the relevant addresses to store ADC parameters.</para>
+<para>The data structure is as follows:<itemizedlist>
+<listitem><para>1 byte indicating the channel descriptor string size</para>
+</listitem><listitem><para>The channel descriptor string (should be max. 23 bytes in current version)</para>
+</listitem><listitem><para>1 byte indicating ADC number</para>
+</listitem><listitem><para>1 byte indicating channel number</para>
+</listitem><listitem><para>1 byte indicating number of conversion parameters</para>
+</listitem><listitem><para>Array of conversion parameters, each using 4 bytes.</para>
+</listitem></itemizedlist>
+</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="119" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="210" bodyend="263" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="119" declcolumn="8"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="136" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="267" bodyend="334" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="136" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="data__conversion_8h_1acd9e1a51073c19c490ea0fd59f1bec67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -412,7 +424,7 @@
           <declname>channel_num</declname>
         </param>
         <briefdescription>
-<para>Retreived previously configured conversion parameters from NVS. </para>
+<para>Retrieved previously configured conversion parameters from NVS. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -432,13 +444,19 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn&apos;t match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel </para>
+<simplesect kind="return"><para>0 if parameters were correctly retrieved, negative value if there was an error:</para>
 </simplesect>
+<itemizedlist>
+<listitem><para><computeroutput>-1</computeroutput>: NVS is empty</para>
+</listitem><listitem><para><computeroutput>-2</computeroutput>: NVS contains data, but their version doesn&apos;t match current version</para>
+</listitem><listitem><para><computeroutput>-3</computeroutput>: NVS data is corrupted</para>
+</listitem><listitem><para><computeroutput>-4</computeroutput>: NVS contains data, but not for the requested channel </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="133" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="265" bodyend="327" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="133" declcolumn="8"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" line="156" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.cpp" bodystart="336" bodyend="406" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h" declline="156" declcolumn="8"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -447,7 +465,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -465,44 +483,63 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2023</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>@author<sp/>Antoine<sp/>Boche<sp/>&lt;antoine.boche@laas.fr&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>@author<sp/>Luiz<sp/>Villa<sp/>&lt;luiz.villa@laas.fr&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@author<sp/>Thomas<sp/>Walter<sp/>&lt;thomas.walter@laas.fr&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adds<sp/>all<sp/>the<sp/>CMSIS<sp/>library</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>adds<sp/>all<sp/>the<sp/>CMSIS<sp/>library<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Type<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>int8_t</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_linear<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_therm<sp/><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>no_channel_error<sp/><sp/>=<sp/>-5</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}<sp/>conversion_type_t;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>enum<sp/>:<sp/>int8_t</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_linear<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>conversion_therm<sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>no_channel_error<sp/><sp/>=<sp/>-5</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/>conversion_type_t;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>API</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_init();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">float32_t<sp/>data_conversion_convert_raw_value(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>uint16_t<sp/>raw_value);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_linear(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>float32_t<sp/>gain,<sp/>float32_t<sp/>offset);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_therm(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>float32_t<sp/>r0,<sp/>float32_t<sp/>b,<sp/>float32_t<sp/>rdiv,<sp/>float32_t<sp/>t0);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">conversion_type_t<sp/>data_conversion_get_conversion_type(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal">float32_t<sp/>data_conversion_get_parameter(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num,<sp/>uint8_t<sp/>parameter_num);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal">int8_t<sp/>data_conversion_store_channel_parameters_in_nvs(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal">int8_t<sp/>data_conversion_retrieve_channel_parameters_from_nvs(uint8_t<sp/>adc_num,<sp/>uint8_t<sp/>channel_num);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATA_CONVERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_init();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">float32_t<sp/>data_conversion_convert_raw_value(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>raw_value);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_linear(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>gain,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_conversion_set_conversion_parameters_therm(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>r0,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>b,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>rdiv,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float32_t<sp/>t0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">conversion_type_t<sp/>data_conversion_get_conversion_type(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">float32_t<sp/>data_conversion_get_parameter(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>parameter_num);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">int8_t<sp/>data_conversion_store_channel_parameters_in_nvs(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">int8_t<sp/>data_conversion_retrieve_channel_parameters_from_nvs(uint8_t<sp/>adc_num,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_num);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DATA_CONVERSION_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_conversion.h"/>
   </compounddef>

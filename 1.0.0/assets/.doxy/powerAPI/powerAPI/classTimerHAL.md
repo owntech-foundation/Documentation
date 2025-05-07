@@ -52,8 +52,8 @@ _Handles timer 4 for the SPIN board._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-|  uint32\_t | [**getTimer4IncrementalEncoderValue**](#function-gettimer4incrementalencodervalue) () <br>_Gets the encoder step value._  |
-|  void | [**startLogTimer4IncrementalEncoder**](#function-startlogtimer4incrementalencoder) () <br>_Launches the timer4 which is adapted for reading an encoder._  |
+|  uint32\_t | [**getIncrementalEncoderValue**](#function-getincrementalencodervalue) (timernumber\_t timer\_number) <br>_Gets the encoder step value._  |
+|  void | [**startLogIncrementalEncoder**](#function-startlogincrementalencoder) (timernumber\_t timer\_number) <br>_Launches the timer4 which is adapted for reading an encoder._  |
 
 
 
@@ -101,11 +101,13 @@ Use this element to initialize timer 4 and use it with an incremental encoder
 
 
 
-### function getTimer4IncrementalEncoderValue 
+### function getIncrementalEncoderValue 
 
 _Gets the encoder step value._ 
 ```C++
-uint32_t TimerHAL::getTimer4IncrementalEncoderValue () 
+uint32_t TimerHAL::getIncrementalEncoderValue (
+    timernumber_t timer_number
+) 
 ```
 
 
@@ -126,11 +128,13 @@ An uint32 value of the counter which corresponds to the step of the system.
 
 
 
-### function startLogTimer4IncrementalEncoder 
+### function startLogIncrementalEncoder 
 
 _Launches the timer4 which is adapted for reading an encoder._ 
 ```C++
-void TimerHAL::startLogTimer4IncrementalEncoder () 
+void TimerHAL::startLogIncrementalEncoder (
+    timernumber_t timer_number
+) 
 ```
 
 

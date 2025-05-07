@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2023 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,14 +27,20 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Antoine Boche <antoine.boche@laas.fr>
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ * @author Thomas Walter <thomas.walter@laas.fr>
+ */
 
 #ifndef DATA_CONVERSION_H_
 #define DATA_CONVERSION_H_
 
-#include <arm_math.h>   // adds all the CMSIS library
+/* adds all the CMSIS library */
+#include <arm_math.h>
 
-
-// Type definitions
 
 typedef enum : int8_t
 {
@@ -45,26 +51,39 @@ typedef enum : int8_t
 } conversion_type_t;
 
 
-// API
-
 void data_conversion_init();
 
-float32_t data_conversion_convert_raw_value(uint8_t adc_num, uint8_t channel_num, uint16_t raw_value);
+float32_t data_conversion_convert_raw_value(uint8_t adc_num,
+                                            uint8_t channel_num,
+                                            uint16_t raw_value);
 
-void data_conversion_set_conversion_parameters_linear(uint8_t adc_num, uint8_t channel_num, float32_t gain, float32_t offset);
+void data_conversion_set_conversion_parameters_linear(uint8_t adc_num,
+                                                      uint8_t channel_num,
+                                                      float32_t gain,
+                                                      float32_t offset);
 
-void data_conversion_set_conversion_parameters_therm(uint8_t adc_num, uint8_t channel_num, float32_t r0, float32_t b, float32_t rdiv, float32_t t0);
+void data_conversion_set_conversion_parameters_therm(uint8_t adc_num,
+                                                     uint8_t channel_num,
+                                                     float32_t r0,
+                                                     float32_t b,
+                                                     float32_t rdiv,
+                                                     float32_t t0);
 
-conversion_type_t data_conversion_get_conversion_type(uint8_t adc_num, uint8_t channel_num);
+conversion_type_t data_conversion_get_conversion_type(uint8_t adc_num,
+                                                      uint8_t channel_num);
 
-float32_t data_conversion_get_parameter(uint8_t adc_num, uint8_t channel_num, uint8_t parameter_num);
+float32_t data_conversion_get_parameter(uint8_t adc_num,
+                                        uint8_t channel_num,
+                                        uint8_t parameter_num);
 
-int8_t data_conversion_store_channel_parameters_in_nvs(uint8_t adc_num, uint8_t channel_num);
+int8_t data_conversion_store_channel_parameters_in_nvs(uint8_t adc_num,
+                                                       uint8_t channel_num);
 
-int8_t data_conversion_retrieve_channel_parameters_from_nvs(uint8_t adc_num, uint8_t channel_num);
+int8_t data_conversion_retrieve_channel_parameters_from_nvs(uint8_t adc_num,
+                                                            uint8_t channel_num);
 
 
-#endif // DATA_CONVERSION_H_
+#endif /* DATA_CONVERSION_H_ */
 ```
 
 

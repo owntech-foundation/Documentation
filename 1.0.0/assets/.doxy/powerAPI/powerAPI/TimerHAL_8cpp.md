@@ -37,6 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
+|  const struct device \* | [**timer3**](#variable-timer3)   = `DEVICE\_DT\_GET(TIMER3\_DEVICE)`<br> |
 |  const struct device \* | [**timer4**](#variable-timer4)   = `DEVICE\_DT\_GET(TIMER4\_DEVICE)`<br> |
 
 
@@ -85,6 +86,19 @@
 
 
 
+### variable timer3 
+
+```C++
+const struct device* timer3;
+```
+
+
+
+
+<hr>
+
+
+
 ### variable timer4 
 
 ```C++
@@ -93,24 +107,6 @@ const struct device* timer4;
 
 
 
-
-
-**Date:**
-
-2023 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-
-        
 
 <hr>
 

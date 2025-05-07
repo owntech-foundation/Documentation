@@ -2,16 +2,17 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classRs485Communication" kind="class" language="C++" prot="public">
     <compoundname>Rs485Communication</compoundname>
+    <includes refid="Rs485Communication_8h" local="no">Rs485Communication.h</includes>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classRs485Communication_1ab31abe0e40fbbef418391773f3b06855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rs485Communication::configure</definition>
-        <argsstring>(uint8_t *transmission_bufer, uint8_t *reception_buffer, uint16_t data_size, void(*user_function)(), rs485_speed_t data_speed=SPEED_10M)</argsstring>
+        <argsstring>(uint8_t *transmission_buffer, uint8_t *reception_buffer, uint16_t data_size, void(*user_function)(), rs485_speed_t data_speed=SPEED_10M)</argsstring>
         <name>configure</name>
         <qualifiedname>Rs485Communication::configure</qualifiedname>
         <param>
           <type>uint8_t *</type>
-          <declname>transmission_bufer</declname>
+          <declname>transmission_buffer</declname>
         </param>
         <param>
           <type>uint8_t *</type>
@@ -31,7 +32,7 @@
           <defval>SPEED_10M</defval>
         </param>
         <briefdescription>
-<para>configuration for RS485 communication using a 10Mbit/s speed </para>
+<para>Configuration for RS485 communication using a 10Mbit/s speed. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -47,7 +48,7 @@
 <parametername>reception_buffer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the recevied buffer </para>
+<para>Pointer to the received buffer </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -71,41 +72,27 @@
 <parametername>data_speed</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Transmission speed (by default to 10Mbits/s) <itemizedlist>
-<listitem><para>SPEED_2M </para>
-</listitem>
-<listitem><para>SPEED_5M </para>
-</listitem>
-<listitem><para>SPEED_10M </para>
-</listitem>
-<listitem><para>SPEED_20M</para>
-</listitem>
-</itemizedlist>
-</para>
+<para>Transmission speed (by default to 10Mbits/s) <computeroutput>SPEED_2M</computeroutput>,<computeroutput>SPEED_5M</computeroutput>,<computeroutput>SPEED_10M</computeroutput>,<computeroutput>SPEED_20M</computeroutput></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>the size of transmission_buffer and reception_buffer must be the same</para>
-</simplesect>
-<simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
+<simplesect kind="warning"><para>The size of transmission_buffer and reception_buffer must be the same </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="61" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="29" bodyend="59"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="73" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="29" bodyend="62"/>
       </memberdef>
-      <memberdef kind="function" id="classRs485Communication_1a4c2daa5920b8c30cdb36ffff58eeda5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classRs485Communication_1a93c8fcf04c4b8afb628f382ff374d843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rs485Communication::configureCustom</definition>
-        <argsstring>(uint8_t *transmission_bufer, uint8_t *reception_buffer, uint16_t data_size, void(*user_function)(void), uint32_t baudrate, bool oversampling_8)</argsstring>
+        <argsstring>(uint8_t *transmission_buffer, uint8_t *reception_buffer, uint16_t data_size, void(*user_function)(void), uint32_t baudrate, bool oversampling_8)</argsstring>
         <name>configureCustom</name>
         <qualifiedname>Rs485Communication::configureCustom</qualifiedname>
         <param>
           <type>uint8_t *</type>
-          <declname>transmission_bufer</declname>
+          <declname>transmission_buffer</declname>
         </param>
         <param>
           <type>uint8_t *</type>
@@ -144,7 +131,7 @@
 <parametername>reception_buffer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the recevied buffer </para>
+<para>Pointer to the received buffer </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -168,7 +155,7 @@
 <parametername>baudrate</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>communication speed in bit/s </para>
+<para>Communication speed in bit/s </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -176,17 +163,17 @@
 <parametername>oversampling_8</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>True for oversampling (and multiply communication speed by 2), false if you want to keep the normal speed communication</para>
+<para>True for oversampling (and multiply communication speed by 2), False if you want to keep the normal speed communication</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>the size of transmission_buffer and reception_buffer must be the same </para>
+<simplesect kind="warning"><para>The size of transmission_buffer and reception_buffer must be the same </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="76" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="61" bodyend="73"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="95" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="64" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classRs485Communication_1ab05a6351f7409bf58ad1367c5bbfe11a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,13 +182,13 @@
         <name>startTransmission</name>
         <qualifiedname>Rs485Communication::startTransmission</qualifiedname>
         <briefdescription>
-<para>start a transmission i.e. you send what is contained in the transmission buffer </para>
+<para>Start a transmission i.e. you send what is contained in the transmission buffer. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="81" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="75" bodyend="78"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="104" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="83" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,13 +200,13 @@
 <para>Turn on the RS485 communication. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="remark"><para>The RS485 is automatically turned on when initializing with configureDefault or configure, no need to call this function </para>
+<para><simplesect kind="warning"><para>The RS485 is automatically turned on when initializing with configureDefault or configure, no need to call this function </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="88" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="80" bodyend="83"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="113" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="88" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -234,17 +221,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="93" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="85" bodyend="88"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="118" column="14" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.cpp" bodystart="93" bodyend="96"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Static class definition </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="43" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" bodystart="44" bodyend="94"/>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" line="57" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h" bodystart="58" bodyend="119"/>
     <listofallmembers>
-      <member refid="classRs485Communication_1abef1061c8412029cbce98bc82a4fce98" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>configure</name></member>
-      <member refid="classRs485Communication_1a4c2daa5920b8c30cdb36ffff58eeda5a" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>configureCustom</name></member>
+      <member refid="classRs485Communication_1ab31abe0e40fbbef418391773f3b06855" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>configure</name></member>
+      <member refid="classRs485Communication_1a93c8fcf04c4b8afb628f382ff374d843" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>configureCustom</name></member>
       <member refid="classRs485Communication_1ab05a6351f7409bf58ad1367c5bbfe11a" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>startTransmission</name></member>
       <member refid="classRs485Communication_1ad2f9a69a03dde731ff7e69f9b7033546" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>turnOffCommunication</name></member>
       <member refid="classRs485Communication_1adb0cbd751fafe35a22d473d89324e2b9" prot="public" virt="non-virtual"><scope>Rs485Communication</scope><name>turnOnCommunication</name></member>

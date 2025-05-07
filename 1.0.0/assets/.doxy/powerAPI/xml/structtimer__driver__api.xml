@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="structtimer__driver__api" kind="struct" language="C++" prot="public">
     <compoundname>timer_driver_api</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structtimer__driver__api_1a28bffdaca216d31bd49d802971a63137" prot="public" static="no" mutable="no">
         <type>timer_api_config</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="115" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="115" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="193" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="193" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__driver__api_1aba98e4999ef444c5345e5ecb6fa2647f" prot="public" static="no" mutable="no">
         <type>timer_api_start</type>
@@ -29,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="116" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="116" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="194" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="194" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__driver__api_1aedc03bad5527bc2aa8968f6fd1c34f9a" prot="public" static="no" mutable="no">
         <type>timer_api_stop</type>
@@ -43,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="117" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="117" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="195" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="195" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimer__driver__api_1a944fa95c7604901a9d61ad87416a333a" prot="public" static="no" mutable="no">
         <type>timer_api_get_count</type>
@@ -57,12 +58,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="118" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="118" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="196" column="21" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="196" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Driver API structure for timer devices. </para>
     </briefdescription>
     <detaileddescription>
+<para>This structure defines the interface that a timer driver must implement to integrate with the OwnTech timer subsystem.</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>config</computeroutput> is the function used to configure the timer.</para>
+</listitem><listitem><para><computeroutput>start</computeroutput> starts the timer operation.</para>
+</listitem><listitem><para><computeroutput>stop</computeroutput> stops the timer operation.</para>
+</listitem><listitem><para><computeroutput>get_count</computeroutput> retrieves the current timer counter value.</para>
+</listitem></itemizedlist>
+</para>
+<para>This structure is registered as a Zephyr subsystem using the <computeroutput>__subsystem</computeroutput> keyword. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="2">
@@ -77,7 +88,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="113" column="12" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="114" bodyend="119"/>
+    <location file="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" line="191" column="12" bodyfile="docs/core/zephyr/modules/owntech_timer_driver/zephyr/public_api/timer.h" bodystart="192" bodyend="197"/>
     <listofallmembers>
       <member refid="structtimer__driver__api_1a28bffdaca216d31bd49d802971a63137" prot="public" virt="non-virtual"><scope>timer_driver_api</scope><name>config</name></member>
       <member refid="structtimer__driver__api_1a944fa95c7604901a9d61ad87416a333a" prot="public" virt="non-virtual"><scope>timer_driver_api</scope><name>get_count</name></member>

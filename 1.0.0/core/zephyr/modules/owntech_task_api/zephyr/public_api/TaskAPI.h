@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2023
  * @author Clément Foucher <clement.foucher@laas.fr>
  */
@@ -26,68 +26,84 @@
 #define TASKAPI_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 
-
-/////
-// Public types
+/**
+ *  Public types
+ */
 
 typedef void (*task_function_t)();
 
-typedef enum { source_uninitialized, source_hrtim, source_tim6 } scheduling_interrupt_source_t;
+typedef enum { source_uninitialized,
+			   source_hrtim,
+			   source_tim6 }
+			   scheduling_interrupt_source_t;
 
-
-/////
-// Static class definition
+/**
+ *  Static class definition
+ */
 
 class TaskAPI
 {
 public:
 	/**
-	 * @brief Creates a time critial task.
+	 * @brief Creates a time critical task.
+	 * 
 	 *        A critical task is an Uninterruptible Synchronous Task
 	 *        that uses a precise timer to execute a periodic,
-	 *        non-interruptible user task.
+	 *        non-interruptable user task.
+	 * 
 	 *        Use this function to define such a task.
+	 * 
 	 *        Only one task of this kind can be defined.
+	 * 
 	 *        This function can be used to redefine (replace) a
 	 *        previously defined uninterruptible synchronous task,
 	 *        but the previously defined task must have been suspended
 	 *        (or never started). An error will be returned if the
 	 *        previously defined task is still running.
-	 * @note  If the HRTIM is used to trigger the task (which is the
-	 *        default behavior), then the HRTIM must have been
+	 * 
+	 * @note  If the `HRTIM` is used to trigger the task (which is the
+	 *        default behavior), then the `HRTIM` must have been
 	 *        configured *before* calling this function.
 	 *
 	 * @param periodic_task Pointer to the void(void) function
 	 *        to be executed periodically.
+	 * 
 	 * @param task_period_us Period of the function in µs.
 	 *        Allowed range: 1 to 6553 µs.
-	 *        If interrupt source is HRTIM, this value *must* be an
-	 *        integer multiple of the HRTIM period.
+	 *        If interrupt source is `HRTIM`, this value *must* be an
+	 *        integer multiple of the `HRTIM` period.
+	 * 
 	 * @param int_source Interrupt source that triggers the task.
-	 *        By default, the HRTIM is the source, but this optional
+	 *        By default, the `HRTIM` is the source, but this optional
 	 *        parameter can be provided to set TIM6 as the source in
-	 *        case the HRTIM is not used or if the task can't be
-	 *        correlated to an HRTIM event.
+	 *        case the `HRTIM` is not used or if the task can't be
+	 *        correlated to an `HRTIM` event.
 	 *        Allowed values are source_hrtim and source_tim6.
-	 * @return 0 if everything went well,
-	 *         -1 if there was an error defining the task.
+	 * 
+	 * @return `0` if everything went well,
+	 *         `-1` if there was an error defining the task.
+	 * 
 	 *         An error can occur notably when an uninterruptible
 	 *         task has already been defined previously.
 	 */
-	int8_t createCritical(task_function_t periodic_task, uint32_t task_period_us, scheduling_interrupt_source_t int_source = source_hrtim);
+	int8_t createCritical(
+				task_function_t periodic_task,
+				uint32_t task_period_us,
+				scheduling_interrupt_source_t int_source = source_hrtim
+			);
 
 	/**
 	 * @brief Use this function to start a previously defined
 	 *        a critical task.
 	 *
-	 *        A critical task is an Uninterruptible Synchronous Task that uses a precise timer to
-	 *        execute a periodic, non-interruptible user task.
+	 *        A critical task is an Uninterruptible Synchronous Task that uses
+	 * 		  a precise timer to execute a periodic, non-interruptable user task.
 	 *
 	 *        If no value is provided
 	 *        for the parameter and Data Acquisition has not been started
@@ -104,9 +120,9 @@ public:
 
 	/**
 	 * @brief Stop the previously started critical task.
-	 *        A critical task is an Uninterruptible Synchronous Task that uses a precise timer to
-	 *        execute a periodic, non-interruptible user task.
-	 *        The task can be then resumed by calling
+	 *        A critical task is an Uninterruptible Synchronous Task
+	 * 		  that uses a precise timer to execute a periodic, non-interruptable
+	 * 		  user task. The task can be then resumed by calling
 	 *        startCritical() again.
 	 */
 	void stopCritical();
@@ -116,8 +132,8 @@ public:
 
 	/**
 	 * @brief Creates a background task.
-	 *        Background tasks are asynchronous tasks that run in the background when there
-	 *        is no critical task running.
+	 *        Background tasks are asynchronous tasks that run in the
+	 * 		  background when there is no critical task running.
 	 *
 	 * @param routine Pointer to the void(void) function
 	 *        that will act as the task main function.
@@ -133,8 +149,8 @@ public:
 	 * @brief Use this function to start a previously defined
 	 *        background task using its task number.
 	 *
-	 *        Background tasks are asynchronous tasks that run in the background when there
-	 *        is no critical task running.
+	 *        Background tasks are asynchronous tasks that run in the background
+	 * 		  when there is no critical task running.
 	 *
 	 * @param task_number Number of the task to start, obtained
 	 *        using the defineAsynchronousTask() function.
@@ -145,8 +161,8 @@ public:
 	 * @brief Use this function to stop a previously started
 	 *        background task using its task number.
 	 *
-	 *        Background tasks are asynchronous tasks that run in the background when there
-	 *        is no critical task running.
+	 *        Background tasks are asynchronous tasks that run in the background
+	 * 		  when there is no critical task running.
 	 *        The task can be then resumed by calling
 	 *        startAsynchronousTask() again.
 	 *
@@ -177,18 +193,18 @@ public:
 	 */
 	void suspendBackgroundUs(uint32_t duration_us);
 
-#endif // CONFIG_OWNTECH_TASK_ENABLE_ASYNCHRONOUS_TASKS
+#endif /* CONFIG_OWNTECH_TASK_ENABLE_ASYNCHRONOUS_TASKS */
 
 private:
 	static const int DEFAULT_PRIORITY;
 
 };
 
-
-/////
-// Public object to interact with the class
+/**
+ *  Public object to interact with the class
+ */
 
 extern TaskAPI task;
 
 
-#endif // TASKAPI_H_
+#endif /* TASKAPI_H_ */

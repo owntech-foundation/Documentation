@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,31 +27,38 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ */
 
 #ifndef TASKAPI_H_
 #define TASKAPI_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 
 
-// Public types
-
 typedef void (*task_function_t)();
 
-typedef enum { source_uninitialized, source_hrtim, source_tim6 } scheduling_interrupt_source_t;
+typedef enum { source_uninitialized,
+               source_hrtim,
+               source_tim6 }
+               scheduling_interrupt_source_t;
 
-
-// Static class definition
 
 class TaskAPI
 {
 public:
-    int8_t createCritical(task_function_t periodic_task, uint32_t task_period_us, scheduling_interrupt_source_t int_source = source_hrtim);
+    int8_t createCritical(
+                task_function_t periodic_task,
+                uint32_t task_period_us,
+                scheduling_interrupt_source_t int_source = source_hrtim
+            );
 
     void startCritical(bool manage_data_acquisition = true);
 
@@ -70,7 +77,7 @@ public:
 
     void suspendBackgroundUs(uint32_t duration_us);
 
-#endif // CONFIG_OWNTECH_TASK_ENABLE_ASYNCHRONOUS_TASKS
+#endif /* CONFIG_OWNTECH_TASK_ENABLE_ASYNCHRONOUS_TASKS */
 
 private:
     static const int DEFAULT_PRIORITY;
@@ -78,12 +85,10 @@ private:
 };
 
 
-// Public object to interact with the class
-
 extern TaskAPI task;
 
 
-#endif // TASKAPI_H_
+#endif /* TASKAPI_H_ */
 ```
 
 

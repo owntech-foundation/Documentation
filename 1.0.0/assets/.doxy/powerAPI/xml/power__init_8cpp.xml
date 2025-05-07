@@ -12,19 +12,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Jean Alinei <ulink url="mailto:jean.alinei@owntech.org">jean.alinei@owntech.org</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-</para>
+<para>Define a variable <computeroutput>timer_frequency</computeroutput> and initialize it with the <computeroutput>frequency</computeroutput> property from the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="30" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="power__init_8cpp_1a908406a56ddc51e93aab0aad6d50b002" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t timer_min_frequency</definition>
+        <argsstring></argsstring>
+        <name>timer_min_frequency</name>
+        <initializer>= DT_PROP(POWER_SHIELD_ID, min_frequency)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define a variable &apos;timer_min_frequency&apos; and initialize it with the &apos;min-frequency&apos; property from the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="32" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a1c344a26ae0bf86917f3bb08e11b8f5c" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -36,11 +43,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_pwm_pin&apos; of type &apos;hrtim_tu_number_t&apos; and initialize it with an array containing the first element of &apos;pwm_pin_num&apos; properties from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_pwm_pin</computeroutput> of type <computeroutput>hrtim_tu_number_t</computeroutput> and initialize it with an array containing the first element of <computeroutput>pwm_pin_num</computeroutput> properties from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="32" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="32" bodyend="33"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="34" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="34" bodyend="35"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a94d897e0a8e5e6789d1daa678099af2d" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -52,11 +59,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_pwm_x1_high&apos; and initialize it with an array of &apos;timing_unit&apos; properties from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_pwm_x1_high</computeroutput> and initialize it with an array of <computeroutput>timing_unit</computeroutput> properties from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="35" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="35" bodyend="36"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="37" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="37" bodyend="38"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1afaa3ac268ff9363bcc90466c0f0cd4c3" prot="public" static="no" mutable="no">
         <type>adc_t</type>
@@ -68,11 +75,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_adc&apos; of type &apos;adc_t&apos; and initialize it with an array of &apos;adc&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_adc</computeroutput> of type <computeroutput>adc_t</computeroutput> and initialize it with an array of <computeroutput>adc</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="38" column="7" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="38" bodyend="39"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="40" column="7" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="40" bodyend="41"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a2ca9bf00ef5fb28f3f2403a2227e94cd" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -84,11 +91,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_adc_decim&apos; of type &apos;uint32_t&apos; and initialize it with an array of &apos;adc_decim&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_adc_decim</computeroutput> of type <computeroutput>uint32_t</computeroutput> and initialize it with an array of <computeroutput>adc_decim</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="41" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="41" bodyend="42"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="43" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="43" bodyend="44"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a60173017a742f6585796a0d28c31e840" prot="public" static="no" mutable="no">
         <type>hrtim_cnt_t</type>
@@ -100,11 +107,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_modulation&apos; of type &apos;hrtim_cnt_t&apos; and initialize it with an array of &apos;modulation&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_modulation</computeroutput> of type <computeroutput>hrtim_cnt_t</computeroutput> and initialize it with an array of <computeroutput>modulation</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="44" column="13" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="44" bodyend="45"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="46" column="13" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="46" bodyend="47"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a9ac881906f17a19920c21edac0a9b697" prot="public" static="no" mutable="no">
         <type>hrtim_adc_edgetrigger_t</type>
@@ -116,11 +123,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_rollover&apos; of type &apos;hrtim_adc_rollover_t&apos; and initialize it with an array of &apos;roll_over&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_rollover</computeroutput> of type <computeroutput>hrtim_adc_rollover_t</computeroutput> and initialize it with an array of <computeroutput>roll_over</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="47" column="25" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="47" bodyend="48"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="49" column="25" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="49" bodyend="50"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1ad05a5b8effeb238c758abf8d69f341ef" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -132,11 +139,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_rising_deadtime&apos; of type &apos;uint16_t&apos; and initialize it with an array of rising dead time values from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_rising_deadtime</computeroutput> of type <computeroutput>uint16_t</computeroutput> and initialize it with an array of rising dead time values from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="50" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="50" bodyend="51"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="52" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="52" bodyend="53"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1aa7ad37cd94fe3f84d1e3f6f12ce22ddd" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -148,11 +155,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_falling_deadtime&apos; of type &apos;uint16_t&apos; and initialize it with an array of falling dead time values from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_falling_deadtime</computeroutput> of type <computeroutput>uint16_t</computeroutput> and initialize it with an array of falling dead time values from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="53" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="53" bodyend="54"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="55" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="55" bodyend="56"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a382bf0e47722e398be2e1e4843500ae2" prot="public" static="no" mutable="no">
         <type>int16_t</type>
@@ -164,11 +171,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_phase_shift&apos; of type &apos;int16_t&apos; and initialize it with an array of &apos;phase_shift&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_phase_shift</computeroutput> of type <computeroutput>int16_t</computeroutput> and initialize it with an array of <computeroutput>phase_shift</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="56" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="56" bodyend="57"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="58" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="58" bodyend="59"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1af89c37eb525d41c2a29fa66027805b40" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -180,11 +187,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define a variable &apos;dt_leg_count&apos; and initialize it with the count of children with status &apos;OKAY&apos; under the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define a variable <computeroutput>dt_leg_count</computeroutput> and initialize it with the count of children with status <computeroutput>OKAY</computeroutput> under the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="59" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="59" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="61" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a318e8e1e06f5de547a0449de990c03ed" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -196,11 +203,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_output1_inactive&apos; of type &apos;uint8_t&apos; and initialize it with an array of &apos;output1_inactive&apos; values from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_output1_inactive</computeroutput> of type <computeroutput>uint8_t</computeroutput> and initialize it with an array of <computeroutput>output1_inactive</computeroutput> values from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="62" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="62" bodyend="63"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="64" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="64" bodyend="65"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a09bd91e539131159af49e0740e317cf6" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -212,11 +219,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_output2_inactive&apos; of type &apos;uint8_t&apos; and initialize it with an array of &apos;output2_inactive&apos; values from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_output2_inactive</computeroutput> of type <computeroutput>uint8_t</computeroutput> and initialize it with an array of <computeroutput>output2_inactive</computeroutput> values from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="65" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="65" bodyend="66"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="67" column="9" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="67" bodyend="68"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1a4e8edef338a05f6d2e91673bb387bf34" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -228,11 +235,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_current_pin&apos; of type &apos;uint16&apos; and initialize it with an array of &apos;curent_pin_num&apos; property from the children of the Device Tree node with the ID &apos;POWER_SHIELD_ID&apos;. </para>
+<para>Define an array <computeroutput>dt_current_pin</computeroutput> of type <computeroutput>uint16</computeroutput> and initialize it with an array of <computeroutput>curent_pin_num</computeroutput> property from the children of the Device Tree node with the ID <computeroutput>POWER_SHIELD_ID</computeroutput>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="68" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="68" bodyend="69"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="70" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="70" bodyend="71"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1ad15b84d9315536f06ceee54cc40664e6" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -244,11 +251,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_pin_driver&apos; of type &apos;uint16&apos; and initialize it with an array of &apos;driver_pin_num&apos; values from the children of the Device Tree node with ID &apos;POWER_SHIELD_ID&apos; </para>
+<para>Define an array <computeroutput>dt_pin_driver</computeroutput> of type <computeroutput>uint16</computeroutput> and initialize it with an array of <computeroutput>driver_pin_num</computeroutput> values from the children of the Device Tree node with ID <computeroutput>POWER_SHIELD_ID</computeroutput> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="71" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="71" bodyend="72"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="73" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="73" bodyend="74"/>
       </memberdef>
       <memberdef kind="variable" id="power__init_8cpp_1aa0beaabbf271695045860ca02dec00f5" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -260,11 +267,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Define an array &apos;dt_pin_driver&apos; of type &apos;uint16&apos; and initialize it with an array of &apos;capa_pin_num&apos; values from the children of the Device Tree node with ID &apos;POWER_SHIELD_ID&apos; </para>
+<para>Define an array <computeroutput>dt_pin_driver</computeroutput> of type <computeroutput>uint16</computeroutput> and initialize it with an array of <computeroutput>capa_pin_num</computeroutput> values from the children of the Device Tree node with ID <computeroutput>POWER_SHIELD_ID</computeroutput> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="74" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="74" bodyend="75"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" line="76" column="10" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp" bodystart="76" bodyend="77"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -273,7 +280,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2024<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -291,55 +298,64 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2024</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>@author<sp/>Jean<sp/>Alinei<sp/>&lt;jean.alinei@owntech.org&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;power_init.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">uint32_t<sp/>timer_frequency<sp/>=<sp/>DT_PROP(POWER_SHIELD_ID,<sp/>default_frequency);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal">uint16_t<sp/>dt_pwm_pin[]<sp/>=</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PWM_PIN)};</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">uint16_t<sp/>dt_pwm_x1_high[]<sp/>=</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PWM_X1_HIGH)};</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">adc_t<sp/>dt_adc[]<sp/>=</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_ADC)};</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">uint32_t<sp/>dt_adc_decim[]<sp/>=</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_ADC_DECIM)};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">hrtim_cnt_t<sp/>dt_modulation[]<sp/>=</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_MODULATION)};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">hrtim_adc_edgetrigger_t<sp/>dt_edge_trigger[]<sp/>=</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_EDGE_TRIGGER)};</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">uint16_t<sp/>dt_rising_deadtime[]<sp/>=</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_RISING_DT)};</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal">uint16_t<sp/>dt_falling_deadtime[]<sp/>=</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_FALLING_DT)};</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">int16_t<sp/>dt_phase_shift[]<sp/>=</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PHASE)};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">uint8_t<sp/>dt_leg_count<sp/>=</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_COUNTER);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">uint8_t<sp/>dt_output1_inactive[]<sp/>=</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_OUTPUT1)};</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal">uint8_t<sp/>dt_output2_inactive[]<sp/>=</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_OUTPUT2)};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">uint16_t<sp/>dt_current_pin[]<sp/>=</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_CURRENT_PIN)};</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal">uint16_t<sp/>dt_pin_driver[]<sp/>=</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_DRIVER_PIN)};</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">uint16_t<sp/>dt_pin_capacitor[]<sp/>=</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_CAPACITOR_PIN)};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">uint32_t<sp/>timer_min_frequency<sp/>=<sp/>DT_PROP(POWER_SHIELD_ID,<sp/>min_frequency);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">uint16_t<sp/>dt_pwm_pin[]<sp/>=</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PWM_PIN)};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">uint16_t<sp/>dt_pwm_x1_high[]<sp/>=</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PWM_X1_HIGH)};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">adc_t<sp/>dt_adc[]<sp/>=</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_ADC)};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">uint32_t<sp/>dt_adc_decim[]<sp/>=</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_ADC_DECIM)};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">hrtim_cnt_t<sp/>dt_modulation[]<sp/>=</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_MODULATION)};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">hrtim_adc_edgetrigger_t<sp/>dt_edge_trigger[]<sp/>=</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_EDGE_TRIGGER)};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">uint16_t<sp/>dt_rising_deadtime[]<sp/>=</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_RISING_DT)};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">uint16_t<sp/>dt_falling_deadtime[]<sp/>=</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_FALLING_DT)};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">int16_t<sp/>dt_phase_shift[]<sp/>=</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_PHASE)};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">uint8_t<sp/>dt_leg_count<sp/>=</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_COUNTER);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">uint8_t<sp/>dt_output1_inactive[]<sp/>=</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_OUTPUT1)};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">uint8_t<sp/>dt_output2_inactive[]<sp/>=</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_OUTPUT2)};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">uint16_t<sp/>dt_current_pin[]<sp/>=</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_CURRENT_PIN)};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">uint16_t<sp/>dt_pin_driver[]<sp/>=</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_DRIVER_PIN)};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">uint16_t<sp/>dt_pin_capacitor[]<sp/>=</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID,<sp/>LEG_CAPACITOR_PIN)};</highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/power_init.cpp"/>
   </compounddef>

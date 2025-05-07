@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,13 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Jean Alinei <jean.alinei@laas.fr>
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 #ifndef NVS_STORAGE_H_
 #define NVS_STORAGE_H_
@@ -38,10 +45,8 @@
 extern "C" {
 #endif
 
-// Type definitions
+/* Types definition */
 
-// NVS categories must be on the upper half
-// of the 2-bytes value, hence end with 00
 typedef enum
 {
     VERSION          = 0x0100,
@@ -49,13 +54,18 @@ typedef enum
     MEASURE_THRESHOLD = 0x0300,
 }nvs_category_t;
 
-// API
-
-int8_t nvs_storage_store_data(uint16_t data_id, const void* data, uint8_t data_size);
-int8_t nvs_storage_retrieve_data(uint16_t data_id, void* data_buffer, uint8_t data_buffer_size);
+int8_t nvs_storage_store_data(uint16_t data_id,
+                              const void* data,
+                              uint8_t data_size);
+                           
+int8_t nvs_storage_retrieve_data(uint16_t data_id,
+                                 void* data_buffer,
+                                 uint8_t data_buffer_size);
+                              
 int8_t nvs_storage_clear_all_stored_data();
 
 uint16_t nvs_storage_get_current_version();
+
 uint16_t nvs_storage_get_version_in_nvs();
 
 
@@ -63,7 +73,7 @@ uint16_t nvs_storage_get_version_in_nvs();
 }
 #endif
 
-#endif // NVS_STORAGE_H_
+#endif /* NVS_STORAGE_H_ */
 ```
 
 

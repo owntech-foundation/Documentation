@@ -62,7 +62,7 @@
 |  conversion\_type\_t | [**data\_conversion\_get\_conversion\_type**](#function-data_conversion_get_conversion_type) (uint8\_t adc\_num, uint8\_t channel\_num) <br>_Get the conversion type for a given channel._  |
 |  float32\_t | [**data\_conversion\_get\_parameter**](#function-data_conversion_get_parameter) (uint8\_t adc\_num, uint8\_t channel\_num, uint8\_t parameter\_num) <br>_Get a conversion parameter for a given channel._  |
 |  void | [**data\_conversion\_init**](#function-data_conversion_init) () <br>_Initialize data conversion._  |
-|  int8\_t | [**data\_conversion\_retrieve\_channel\_parameters\_from\_nvs**](#function-data_conversion_retrieve_channel_parameters_from_nvs) (uint8\_t adc\_num, uint8\_t channel\_num) <br>_Retreived previously configured conversion parameters from NVS._  |
+|  int8\_t | [**data\_conversion\_retrieve\_channel\_parameters\_from\_nvs**](#function-data_conversion_retrieve_channel_parameters_from_nvs) (uint8\_t adc\_num, uint8\_t channel\_num) <br>_Retrieved previously configured conversion parameters from NVS._  |
 |  void | [**data\_conversion\_set\_conversion\_parameters\_linear**](#function-data_conversion_set_conversion_parameters_linear) (uint8\_t adc\_num, uint8\_t channel\_num, float32\_t gain, float32\_t offset) <br>_Set the conversion type for a given channel to linear and set parameters values._  |
 |  void | [**data\_conversion\_set\_conversion\_parameters\_therm**](#function-data_conversion_set_conversion_parameters_therm) (uint8\_t adc\_num, uint8\_t channel\_num, float32\_t r0, float32\_t b, float32\_t rdiv, float32\_t t0) <br>_Set the conversion type for a given channel to therm and set parameters values._  |
 |  int8\_t | [**data\_conversion\_store\_channel\_parameters\_in\_nvs**](#function-data_conversion_store_channel_parameters_in_nvs) (uint8\_t adc\_num, uint8\_t channel\_num) <br>_Store the currently configured conversion parameters of a given channel in NVS._  |
@@ -138,42 +138,7 @@ const uint8_t max_parameters_count;
 
 
 
-
-
-**Date:**
-
-2023 
-
-
-
-
-**Author:**
-
-Antoine Boche [antoine.boche@laas.fr](mailto:antoine.boche@laas.fr) 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Luiz Villa [luiz.villa@laas.fr](mailto:luiz.villa@laas.fr) 
-
-
-
-
-**Author:**
-
-Thomas Walter [thomas.walter@laas.fr](mailto:thomas.walter@laas.fr) 
-
-
-
+Includes Local Variables 
 
 
         
@@ -278,7 +243,7 @@ float32_t data_conversion_get_parameter (
 
 * `adc_num` ADC number 
 * `channel_num` Channel number 
-* `parameter_num` Number of the paramter to retreive. E.g. for linear parameters, gain is param 1 and offset is param 2.
+* `parameter_num` Number of the parameter to retrieve. E.g. for linear parameters, gain is param 1 and offset is param 2.
 
 
 
@@ -305,6 +270,10 @@ void data_conversion_init ()
 
 
 
+API 
+
+
+        
 
 <hr>
 
@@ -312,7 +281,7 @@ void data_conversion_init ()
 
 ### function data\_conversion\_retrieve\_channel\_parameters\_from\_nvs 
 
-_Retreived previously configured conversion parameters from NVS._ 
+_Retrieved previously configured conversion parameters from NVS._ 
 ```C++
 int8_t data_conversion_retrieve_channel_parameters_from_nvs (
     uint8_t adc_num,
@@ -334,8 +303,14 @@ int8_t data_conversion_retrieve_channel_parameters_from_nvs (
 
 **Returns:**
 
-0 if parameters were correcly retreived, negative value if there was an error: -1: NVS is empty -2: NVS contains data, but their version doesn't match current version -3: NVS data is corrupted -4: NVS contains data, but not for the requested channel 
+0 if parameters were correctly retrieved, negative value if there was an error:
 
+
+
+* `-1`: NVS is empty
+* `-2`: NVS contains data, but their version doesn't match current version
+* `-3`: NVS data is corrupted
+* `-4`: NVS contains data, but not for the requested channel 
 
 
 
@@ -440,7 +415,7 @@ int8_t data_conversion_store_channel_parameters_in_nvs (
 
 **Returns:**
 
-0 if parameters were correcly stored, -1 if there was an error. 
+0 if parameters were correctly stored, -1 if there was an error. 
 
 
 
@@ -464,6 +439,10 @@ static uint8_t _data_conversion_get_parameters_count (
 
 
 
+Private functions 
+
+
+        
 
 <hr>
 

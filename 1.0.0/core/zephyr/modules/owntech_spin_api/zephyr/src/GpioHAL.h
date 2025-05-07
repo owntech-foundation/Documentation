@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -30,8 +30,9 @@
 #include <zephyr/drivers/gpio.h>
 
 
-/////
-// Public constants
+/**
+ *  Public constants
+ */
 
 extern const struct device* const GPIO_A;
 extern const struct device* const GPIO_B;
@@ -42,7 +43,7 @@ extern const gpio_flags_t INPUT;
 extern const gpio_flags_t INPUT_PULLUP;
 extern const gpio_flags_t OUTPUT;
 
-// 0x80 is used to indicate nucleo-style pin
+/* 0x80 is used to indicate nucleo-style pin */
 static const uint8_t PA = 0x80 | 0x00;
 static const uint8_t PB = 0x80 | 0x10;
 static const uint8_t PC = 0x80 | 0x20;
@@ -66,8 +67,9 @@ static const uint8_t P14 = 0xE;
 static const uint8_t P15 = 0xF;
 
 
-/////
-// Public types
+/**
+ *  Public types
+ */
 
 typedef enum : uint8_t
 {
@@ -126,8 +128,9 @@ typedef enum : uint8_t
 } pin_t;
 
 
-/////
-// Class definition
+/**
+ *  Class definition
+ */
 
 class GpioHAL
 {
@@ -138,47 +141,58 @@ public:
 	 *        prior to accessing any other function
 	 *        from this API on the pin.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
-	 * @param flags Pin configuration flags.
-	 *        Authorized values:
-	 *        - INPUT
-	 *        - INPUT_PULLUP
-	 *        - OUTPUT
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
+	 * @param flags Pin configuration flags. Authorized values: 
+	 *              `INPUT`, `INPUT_PULLUP`, `OUTPUT`
 	 */
 	void configurePin(uint8_t pin, gpio_flags_t flags);
 
 	/**
 	 * @brief Set the value of a pin configured as output to 1.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
 	 */
 	void setPin(uint8_t pin);
 
 	/**
 	 * @brief Reset the value of a pin configured as output to 0.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
 	 */
 	void resetPin(uint8_t pin);
 
 	/**
 	 * @brief Toggle the value of a pin configured as output:
-	 *        - if pin value is 1, it will be set to 0
-	 *        - if pin value is 0, it will be set to 1.
+	 * 
+	 *        - if pin value is `1`, it will be set to `0`
+	 * 
+	 *        - if pin value is `0`, it will be set to `1`.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
 	 */
 	void togglePin(uint8_t pin);
 
@@ -186,10 +200,13 @@ public:
 	 * @brief Set the value of a pin configured as output
 	 *        to a given value.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
 	 * @param value Value (0 or 1) to assign to the pin.
 	 */
 	void writePin(uint8_t pin, uint8_t value);
@@ -197,18 +214,57 @@ public:
 	/**
 	 * @brief Get the current value of a pin configured as input.
 	 *
-	 * @param pin Number of the Spin pin OR STM32-style
-	 *        name of the pin, e.g. PA1, PB10, etc.
-	 *        See pin_t type for the full list of available
-	 *        STM32-style pins on Spin board.
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`   
+	 *   
 	 * @return Current value (0 or 1) of the pin.
 	 */
 	uint8_t readPin(uint8_t pin);
 
 private:
+	/**
+	 * @brief Get the GPIO pin number associated with a logical shield pin.
+	 *
+	 * This function translates a shield pin or encoded Nucleo-style pin into the
+	 * corresponding MCU GPIO pin number (e.g., `PA11` → `11`).
+	 *
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`   
+	 * 
+	 * @return GPIO pin number (0–15) or 0xFF if unknown or unsupported.
+	 */
 	gpio_pin_t getPinNumber(uint8_t pin);
+
+
+	/**
+	 * @brief Get the GPIO port device corresponding to a logical shield pin.
+	 *
+	 * If the pin is encoded in Nucleo format (0x8X, 0x9X, 0xAX, etc.), the 
+	 * high nibble determines the port (PA, PB, etc.). 
+	 * 
+	 * Otherwise, the function maps shield pins to their appropriate GPIO device
+	 * (e.g., GPIO_A, GPIO_B).
+	 *
+	 * @param pin Number of pin. Format allowed: 
+	 * 
+	 * - the Spin pin number from 1 to 58
+	 * 
+	 * - STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, 
+	 * 								`PC1` to `PC15` and `PD1` to `PD3`
+	 *   
+	 * @return Pointer to the corresponding Zephyr GPIO device, 
+	 * 		   or nullptr if invalid.
+	 */
 	const struct device* getGpioDevice(uint8_t pin);
 
 };
 
-#endif // GPIOHAL_H_
+#endif /* GPIOHAL_H_ */

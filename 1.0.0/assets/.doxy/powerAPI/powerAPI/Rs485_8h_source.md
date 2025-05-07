@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,11 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 #ifndef RS485_H_
 #define RS485_H_
 
@@ -65,7 +70,7 @@ void serial_stop();
 
 void serial_start();
 
-#endif // RS485_H_
+#endif /* RS485_H_ */
 ```
 
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,16 +17,17 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2022
  * @author Clément Foucher <clement.foucher@laas.fr>
  */
 
 
-// OwnTech Power API
-#include "scheduling_common.hpp"
+/* OwnTech Power API */
+#include "scheduling_common.h"
 
-void scheduling_common_start_task(task_information_t& task_info, k_thread_entry_t entry_point)
+void scheduling_common_start_task(task_information_t& task_info,
+								  k_thread_entry_t entry_point)
 {
 	k_tid_t tid = k_thread_create(&task_info.thread_data,
 	                              task_info.stack,

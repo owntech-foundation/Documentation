@@ -14,12 +14,25 @@
           <declname>dac_number</declname>
         </param>
         <briefdescription>
+<para>Initialize a DAC device in constant output mode. </para>
         </briefdescription>
         <detaileddescription>
+<para>Configures the specified DAC (1, 2, or 3) to output a constant analog value.</para>
+<para>This includes setting the value to 0, enabling external output, and starting the DAC.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dac_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC number (1, 2, or 3). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="44" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="47" bodyend="70"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="55" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="48" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classDacHAL_1a4185cb76e6ca7c81e834d8a28731588e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -40,12 +53,40 @@
           <declname>const_value</declname>
         </param>
         <briefdescription>
+<para>Set a constant analog output value on a DAC channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Writes a raw 12-bit value to the selected DAC channel, provided the DAC is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dac_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC number (1, 2, or 3). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC output channel index (usually 1). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The constant value to set (0–4095). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="45" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="72" bodyend="93"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="67" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="74" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classDacHAL_1a53c724d9dc50fb2d04a275e2d8c27393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -66,12 +107,34 @@
           <declname>low_voltage</declname>
         </param>
         <briefdescription>
+<para>Configure a DAC to operate in sawtooth waveform mode for current-mode control. </para>
         </briefdescription>
         <detaileddescription>
+<para>Initializes the DAC to produce a decrementing sawtooth waveform.</para>
+<para>The DAC is triggered by the selected HRTIM timer unit to synchronize waveform generation with the PWM cycle.</para>
+<para>Reset and step triggers are selected based on the <computeroutput>tu_src</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dac_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC number (1 or 3). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tu_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HRTIM timer unit (TIMB to TIMF) used for synchronization. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="46" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="194" bodyend="229"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="84" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="200" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="classDacHAL_1a90366162b6a3a3883195667d6a97b845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,19 +151,47 @@
           <declname>tu_src</declname>
         </param>
         <briefdescription>
+<para>Update slope compensation settings on a DAC using voltage values. </para>
         </briefdescription>
         <detaileddescription>
+<para>Converts the given voltage values into digital DAC values and sets the DAC&apos;s sawtooth waveform reset and step parameters accordingly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dac_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC number (1 or 3). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peak_voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peak voltage value for the sawtooth ramp (reset level). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low_voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The valley (starting) voltage of the ramp. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="47" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="95" bodyend="191"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="99" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.cpp" bodystart="100" bodyend="197"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="41" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" bodystart="42" bodyend="48"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" line="41" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DacHAL.h" bodystart="42" bodyend="100"/>
     <listofallmembers>
       <member refid="classDacHAL_1a90366162b6a3a3883195667d6a97b845" prot="public" virt="non-virtual"><scope>DacHAL</scope><name>currentModeInit</name></member>
       <member refid="classDacHAL_1a17064700c3c32a70589a316be9ac6430" prot="public" virt="non-virtual"><scope>DacHAL</scope><name>initConstValue</name></member>

@@ -94,24 +94,6 @@ SafetyAPI safety;
 
 
 
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
-
-
-
-
-        
-
 <hr>
 
 ------------------------------

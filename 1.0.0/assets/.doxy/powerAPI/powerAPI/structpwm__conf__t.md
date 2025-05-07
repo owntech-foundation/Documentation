@@ -8,7 +8,7 @@
 
 
 
-_Structure containing all the data regarding the pwm of a given timing unit._ 
+_Structure containing all the data regarding the pwm of a given timing unit._ [More...](#detailed-description)
 
 * `#include <hrtim_enum.h>`
 
@@ -39,6 +39,13 @@ _Structure containing all the data regarding the pwm of a given timing unit._
 |  hrtim\_burst\_clk\_t | [**burst\_clk**](#variable-burst_clk)  <br> |
 |  uint8\_t | [**ckpsc**](#variable-ckpsc)  <br> |
 |  uint16\_t | [**duty\_cycle**](#variable-duty_cycle)  <br> |
+|  uint16\_t | [**duty\_max**](#variable-duty_max)  <br> |
+|  uint16\_t | [**duty\_max\_user**](#variable-duty_max_user)  <br> |
+|  float32\_t | [**duty\_max\_user\_float**](#variable-duty_max_user_float)  <br> |
+|  uint16\_t | [**duty\_min**](#variable-duty_min)  <br> |
+|  uint16\_t | [**duty\_min\_user**](#variable-duty_min_user)  <br> |
+|  float32\_t | [**duty\_min\_user\_float**](#variable-duty_min_user_float)  <br> |
+|  uint8\_t | [**duty\_swap**](#variable-duty_swap)  <br> |
 |  hrtim\_external\_trigger\_t | [**external\_trigger**](#variable-external_trigger)  <br> |
 |  uint16\_t | [**fall\_dead\_time**](#variable-fall_dead_time)  <br> |
 |  uint32\_t | [**frequency**](#variable-frequency)  <br> |
@@ -97,6 +104,13 @@ _Structure containing all the data regarding the pwm of a given timing unit._
 
 
 
+## Detailed Description
+
+
+Structs 
+
+
+    
 ## Public Attributes Documentation
 
 
@@ -132,6 +146,97 @@ uint8_t pwm_conf_t::ckpsc;
 
 ```C++
 uint16_t pwm_conf_t::duty_cycle;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_max 
+
+```C++
+uint16_t pwm_conf_t::duty_max;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_max\_user 
+
+```C++
+uint16_t pwm_conf_t::duty_max_user;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_max\_user\_float 
+
+```C++
+float32_t pwm_conf_t::duty_max_user_float;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_min 
+
+```C++
+uint16_t pwm_conf_t::duty_min;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_min\_user 
+
+```C++
+uint16_t pwm_conf_t::duty_min_user;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_min\_user\_float 
+
+```C++
+float32_t pwm_conf_t::duty_min_user_float;
+```
+
+
+
+
+<hr>
+
+
+
+### variable duty\_swap 
+
+```C++
+uint8_t pwm_conf_t::duty_swap;
 ```
 
 

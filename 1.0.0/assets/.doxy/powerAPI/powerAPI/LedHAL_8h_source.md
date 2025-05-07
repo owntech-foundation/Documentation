@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,11 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ */
 
 
 
@@ -37,21 +42,21 @@ class LedHAL
 {
 public:
     void turnOn();
+ 
     void turnOff();
+
     void toggle();
 
 private:
-    // Private functions
     void initialize();
 
-    // Private variables
     static bool ledInitialized;
 
 };
 
 
 
-#endif // LED_H_
+#endif /* LED_H_ */
 ```
 
 

@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2024 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,13 +27,28 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief  This is an ad-hoc ADC driver for OwnTech's
+ * application. It supports differential channel setup
+ * unlike Zephyr's STM32 driver.
+ * It configures ADC 1 and ADC 2, using a common clock
+ * which is AHB clock with a prescaler division by 4.
+ * ADC 3 is also enabled independently.
+ *
+ * To use this driver, first call adc_init(), then call
+ * required configuration functions, then call adc_start().
+ */
 
 
 #ifndef ADC_H_
 #define ADC_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -43,7 +58,6 @@ extern "C" {
 #endif
 
 
-// Public enums
 
 typedef enum
 {
@@ -60,11 +74,13 @@ typedef enum
 } adc_ev_src_t;
 
 
-// Public API
+/* Public API */
 
-void adc_configure_trigger_source(uint8_t adc_number, adc_ev_src_t trigger_source);
+void adc_configure_trigger_source(uint8_t adc_number,
+                                  adc_ev_src_t trigger_source);
 
-void adc_configure_discontinuous_mode(uint8_t adc_number, uint32_t discontinuous_count);
+void adc_configure_discontinuous_mode(uint8_t adc_number,
+                                      uint32_t discontinuous_count);
 
 void adc_add_channel(uint8_t adc_number, uint8_t channel);
 
@@ -79,14 +95,15 @@ void adc_start();
 
 void adc_stop();
 
-void adc_trigger_software_conversion(uint8_t adc_number, uint8_t number_of_acquisitions);
+void adc_trigger_software_conversion(uint8_t adc_number,
+                                     uint8_t number_of_acquisitions);
 
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // ADC_H_
+#endif /* ADC_H_ */
 ```
 
 

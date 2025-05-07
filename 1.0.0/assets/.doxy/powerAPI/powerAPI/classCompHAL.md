@@ -115,7 +115,7 @@ void CompHAL::initialize (
 
 **Note:**
 
-Current mode control deploys a comparator together with a DAC. This function must be called after setting up the DAC linked to the comparator. Note that comparator 1 is linked with DAC3 and comparator 3 with DAC1. Comparator 1 is linked with ilow1 and comparator 3 is linked with ilow2.
+Current mode control deploys a comparator together with a DAC. 
 
 
 
@@ -123,28 +123,7 @@ Current mode control deploys a comparator together with a DAC. This function mus
 **Parameters:**
 
 
-* `comparator_number` can be either 1 or 3
-
-
-
-**Date:**
-
-2023
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
+* `comparator_number` can be either 1 or 3 
 
 
 

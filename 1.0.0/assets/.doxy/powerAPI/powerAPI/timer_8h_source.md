@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2022 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,12 +27,32 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2022
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief  This file is the public include file for the
+ *         Zephyr Timer driver. It provides basic functionality
+ *         to handle STM32 Timers. Is is for now specific
+ *         to certain capabilities of G4 series Timers,
+ *         and mainly restricted to the use we do of
+ *         the timers in the OwnTech project, but it aims
+ *         at becoming more generic over time.
+ *
+ *         This version supports:
+ * 
+ *         * Timer 6 and Timer 7: Periodic call of a callback function
+ *           with period ranging from 2 to 6553 µs.
+ * 
+ *         * Timer 4: Incremental coder acquisition with pinout:
+ *           reset=PB3; CH1=PB6; CH2=PB7.
+ */
 
 #ifndef TIMER_H_
 #define TIMER_H_
 
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 
@@ -42,14 +62,11 @@ extern "C" {
 #endif
 
 
-// Public devices names
-
+#define TIMER3_DEVICE DT_NODELABEL(timers3)
 #define TIMER4_DEVICE DT_NODELABEL(timers4)
 #define TIMER6_DEVICE DT_NODELABEL(timers6)
 #define TIMER7_DEVICE DT_NODELABEL(timers7)
 
-
-// Configuration structure
 
 typedef void (*timer_callback_t)();
 
@@ -62,23 +79,27 @@ typedef enum
 
 struct timer_config_t
 {
-    // Mode
+    /* Mode */
     uint32_t         timer_enable_irq     : 1;
     uint32_t         timer_enable_encoder : 1;
-    // IRQ options
+    /* IRQ options */
     timer_callback_t timer_irq_callback;
     uint32_t         timer_irq_t_usec;
     uint32_t         timer_use_zero_latency : 1;
-    // Incremental encoder option
+    /* Incremental encoder option */
     pin_mode_t       timer_enc_pin_mode;
 };
 
 
-// API
+typedef void     (*timer_api_config)(
+                        const struct device* dev,
+                        const struct timer_config_t* config
+                  );
 
-typedef void     (*timer_api_config)   (const struct device* dev, const struct timer_config_t* config);
 typedef void     (*timer_api_start)    (const struct device* dev);
+
 typedef void     (*timer_api_stop)     (const struct device* dev);
+
 typedef uint32_t (*timer_api_get_count)(const struct device* dev);
 
 __subsystem struct timer_driver_api
@@ -90,30 +111,35 @@ __subsystem struct timer_driver_api
 };
 
 
-static inline void timer_config(const struct device* dev, const struct timer_config_t* config)
+static inline void timer_config(const struct device* dev,
+                                const struct timer_config_t* config)
 {
-    const struct timer_driver_api* api = (const struct timer_driver_api*)(dev->api);
+    const struct timer_driver_api* api =
+                                (const struct timer_driver_api*)(dev->api);
 
     api->config(dev, config);
 }
 
 static inline void timer_start(const struct device* dev)
 {
-    const struct timer_driver_api* api = (const struct timer_driver_api*)(dev->api);
+    const struct timer_driver_api* api =
+                                (const struct timer_driver_api*)(dev->api);
 
     api->start(dev);
 }
 
 static inline void timer_stop(const struct device* dev)
 {
-    const struct timer_driver_api* api = (const struct timer_driver_api*)(dev->api);
+    const struct timer_driver_api* api =
+                                (const struct timer_driver_api*)(dev->api);
 
     api->stop(dev);
 }
 
 static inline uint32_t timer_get_count(const struct device* dev)
 {
-    const struct timer_driver_api* api = (const struct timer_driver_api*)(dev->api);
+    const struct timer_driver_api* api =
+                                (const struct timer_driver_api*)(dev->api);
 
     return api->get_count(dev);
 }
@@ -123,7 +149,7 @@ static inline uint32_t timer_get_count(const struct device* dev)
 }
 #endif
 
-#endif // TIMER_H_
+#endif /* TIMER_H_ */
 ```
 
 

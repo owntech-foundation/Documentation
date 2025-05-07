@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,15 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date 2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ * @author Jean Alinei <jean.alinei@owntech.org
+ *
+ * @brief This file is based on the device tree to initialize legs controlled
+ *        by the HRTIM
+ */
 
 #ifndef POWER_H_
 #define POWER_H_
@@ -37,7 +46,6 @@
 
 #define LEG_TOKEN(node_id) DT_STRING_TOKEN(node_id, leg_name),
 
-/* All the leg with okay status in the device tree */
 typedef enum
 {
     DT_FOREACH_CHILD_STATUS_OKAY(DT_NODELABEL(powershield), LEG_TOKEN)
@@ -50,12 +58,15 @@ private:
     /* return timing unit from spin pin number */
     hrtim_tu_number_t spinNumberToTu(uint16_t spin_number);
 
-public:
-    void initMode(leg_t leg,                                            \
-                     hrtim_switch_convention_t leg_convention,              \
-                     hrtim_pwm_mode_t leg_mode);
 
-    void setDutyCycle(leg_t leg, float32_t duty_leg);
+public:
+    void initMode(leg_t leg,
+                  hrtim_switch_convention_t leg_convention,
+                  hrtim_pwm_mode_t leg_mode);
+
+    void setDutyCycle(leg_t leg, float32_t duty_value);
+
+    void setDutyCycleRaw(leg_t leg, uint16_t duty_value);
 
 
     void start(leg_t leg);
@@ -74,13 +85,32 @@ public:
 
     void setPhaseShift(leg_t leg, int16_t phase_shift);
 
-    void setSlopeCompensation(leg_t leg,                                \
-                                 float32_t set_voltage,                     \
-                                 float32_t reset_voltage);
+    void setSlopeCompensation(leg_t leg,
+                              float32_t set_voltage,
+                              float32_t reset_voltage);
 
-    void setDeadTime(leg_t leg,                                             \
-                        uint16_t ns_rising_dt,                              \
-                        uint16_t ns_falling_dt);
+    void setDeadTime(leg_t leg,
+                     uint16_t ns_rising_dt,
+                     uint16_t ns_falling_dt);
+
+    void setDutyCycleMin(leg_t leg, float32_t duty_cycle);
+
+    void setDutyCycleMinRaw(leg_t leg, uint16_t duty_cycle);
+
+    void setDutyCycleMaxRaw(leg_t leg, uint16_t duty_cycle);
+
+    void setDutyCycleMax(leg_t leg, float32_t duty_cycle);
+
+    float32_t getDutyCycleMax(leg_t leg);
+
+    uint16_t getDutyCycleMaxRaw(leg_t leg);
+
+    float32_t getDutyCycleMin(leg_t leg);
+
+    uint16_t getDutyCycleMinRaw(leg_t leg);
+
+    uint16_t getPeriod(leg_t leg);
+
 
     void setAdcDecim(leg_t leg, uint16_t adc_decim);
 
@@ -90,7 +120,7 @@ public:
 
 };
 
-#endif // POWER_H_
+#endif /* POWER_H_ */
 ```
 
 

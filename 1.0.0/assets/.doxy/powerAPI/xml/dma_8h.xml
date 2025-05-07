@@ -41,7 +41,7 @@
 <parametername>disable_interrupts</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Boolean indicating whether interrupts shoud be disabled. Warning: this override Zephyr DMA driver default behavior. </para>
+<para>Boolean indicating whether interrupts should be disabled. Warning: this override Zephyr DMA driver default behavior. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -64,14 +64,15 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>Reload source address on block completion Enables Half-transfer interrupt</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" line="54" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="113" bodyend="162" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" declline="54" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" line="54" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="121" bodyend="193" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" declline="54" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="dma_8h_1a7268e58e1ba181811027596191c18016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="dma_8h_1a42ea20714daecbd0886513b897b52d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
-        <definition>uint32_t dma_get_retreived_data_count</definition>
+        <definition>uint32_t dma_get_retrieved_data_count</definition>
         <argsstring>(uint8_t adc_number)</argsstring>
-        <name>dma_get_retreived_data_count</name>
+        <name>dma_get_retrieved_data_count</name>
         <param>
           <type>uint8_t</type>
           <declname>adc_number</declname>
@@ -94,8 +95,9 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>Permanent variable -1 is equivalent to (buffer size - 1) in modulo arithmetics</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" line="64" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="164" bodyend="189" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" declline="64" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" line="67" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.cpp" bodystart="195" bodyend="229" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h" declline="67" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -104,7 +106,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -122,21 +124,34 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2023</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@brief<sp/><sp/>This<sp/>file<sp/>provides<sp/>DMA<sp/>configuration<sp/>to<sp/>automatically</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>store<sp/>ADC<sp/>acquisitions<sp/>in<sp/>a<sp/>provided<sp/>buffer.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DMA<sp/>1<sp/>is<sp/>used<sp/>for<sp/>all<sp/>acquisitions,<sp/>with<sp/>channel<sp/>n</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>acquiring<sp/>values<sp/>from<sp/>ADC<sp/>n.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DMA_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DMA_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stdlib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Stdlib<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dma_configure_adc_acquisition(uint8_t<sp/>adc_number,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>disable_interrupts,<sp/>uint16_t*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_size);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">uint32_t<sp/>dma_get_retreived_data_count(uint8_t<sp/>adc_number);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DMA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dma_configure_adc_acquisition(uint8_t<sp/>adc_number,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>disable_interrupts,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t*<sp/>buffer,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_size);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">uint32_t<sp/>dma_get_retrieved_data_count(uint8_t<sp/>adc_number);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DMA_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/dma.h"/>
   </compounddef>

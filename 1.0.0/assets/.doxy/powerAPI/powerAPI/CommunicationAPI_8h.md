@@ -29,7 +29,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**CommunicationAPI**](classCommunicationAPI.md) <br> |
+| class | [**CommunicationAPI**](classCommunicationAPI.md) <br>_Main communication API interface._  |
 
 
 
@@ -98,24 +98,6 @@ CommunicationAPI communication;
 
 
 
-
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
-
-
-
-
-        
 
 <hr>
 

@@ -144,6 +144,10 @@ static void _uart_usart1_process_input (
 
 
 
+USART 1 private functions 
+
+
+        
 
 <hr>
 

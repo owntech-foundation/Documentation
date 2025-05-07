@@ -35,9 +35,12 @@ _Handling of ThingSet data objects._
 
 | Type | Name |
 | ---: | :--- |
-|  uint16\_t | [**can\_node\_addr**](#variable-can_node_addr)  <br> |
-|  bool | [**ctrl\_enable**](#variable-ctrl_enable)  <br> |
-|  float32\_t | [**reference\_value**](#variable-reference_value)  <br> |
+|  char | [**device\_type**](#variable-device_type)   = `HW\_NAME`<br> |
+|  char | [**firmware\_version**](#variable-firmware_version)   = `"1.0.0"`<br> |
+|  char | [**hardware\_version**](#variable-hardware_version)   = `HW\_VER`<br> |
+|  char | [**manufacturer**](#variable-manufacturer)   = `CONFIG\_USB\_DEVICE\_MANUFACTURER`<br> |
+|  float32\_t | [**reference\_value**](#variable-reference_value)   = `0`<br> |
+|  bool | [**start\_stop**](#variable-start_stop)   = `false`<br> |
 
 
 
@@ -58,7 +61,15 @@ _Handling of ThingSet data objects._
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**dataObjectsUpdateMeasures**](#function-dataobjectsupdatemeasures) () <br> |
+|   | [**THINGSET\_ADD\_GROUP**](#function-thingset_add_group) (ID\_ROOT, 0x4, "Device", THINGSET\_NO\_CALLBACK) <br> |
+|   | [**THINGSET\_ADD\_GROUP**](#function-thingset_add_group) (ID\_ROOT, ID\_CTRL, "Control", THINGSET\_NO\_CALLBACK) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_BOOL**](#function-thingset_add_item_bool) (ID\_CTRL, ID\_CTRL\_ENABLE, "zStartStop", & start\_stop, THINGSET\_ANY\_RW, SUBSET\_CTRL) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_FLOAT**](#function-thingset_add_item_float) (ID\_CTRL, ID\_CTRL\_REFERENCE, "zCtrlReference", & reference\_value, 1, THINGSET\_ANY\_RW, SUBSET\_CTRL) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_STRING**](#function-thingset_add_item_string) (ID\_DEVICE, 0x40, "cManufacturer", manufacturer, 0, THINGSET\_ANY\_R, 0) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_STRING**](#function-thingset_add_item_string) (ID\_DEVICE, 0x41, "cType", device\_type, 0, THINGSET\_ANY\_R, 0) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_STRING**](#function-thingset_add_item_string) (ID\_DEVICE, 0x42, "cHardwareVersion", hardware\_version, 0, THINGSET\_ANY\_R, 0) <br> |
+|   | [**THINGSET\_ADD\_ITEM\_STRING**](#function-thingset_add_item_string) (ID\_DEVICE, 0x43, "cFirmwareVersion", firmware\_version, 0, THINGSET\_ANY\_R, 0) <br> |
+|   | [**THINGSET\_ADD\_SUBSET**](#function-thingset_add_subset) (ID\_ROOT, 0x38, "mCAN", SUBSET\_CAN, THINGSET\_ANY\_RW) <br> |
 
 
 
@@ -92,10 +103,10 @@ _Handling of ThingSet data objects._
 
 
 
-### variable can\_node\_addr 
+### variable device\_type 
 
 ```C++
-uint16_t can_node_addr;
+char device_type[];
 ```
 
 
@@ -105,10 +116,36 @@ uint16_t can_node_addr;
 
 
 
-### variable ctrl\_enable 
+### variable firmware\_version 
 
 ```C++
-bool ctrl_enable;
+char firmware_version[];
+```
+
+
+
+
+<hr>
+
+
+
+### variable hardware\_version 
+
+```C++
+char hardware_version[];
+```
+
+
+
+
+<hr>
+
+
+
+### variable manufacturer 
+
+```C++
+char manufacturer[];
 ```
 
 
@@ -128,15 +165,207 @@ float32_t reference_value;
 
 
 <hr>
+
+
+
+### variable start\_stop 
+
+```C++
+bool start_stop;
+```
+
+
+
+Extern variable defined in this module 
+
+
+        
+
+<hr>
 ## Public Functions Documentation
 
 
 
 
-### function dataObjectsUpdateMeasures 
+### function THINGSET\_ADD\_GROUP 
 
 ```C++
-void dataObjectsUpdateMeasures () 
+THINGSET_ADD_GROUP (
+    ID_ROOT,
+    0x4,
+    "Device",
+    THINGSET_NO_CALLBACK
+) 
+```
+
+
+
+Thingset Data Objects (see thingset.io for specification) 
+
+
+        
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_GROUP 
+
+```C++
+THINGSET_ADD_GROUP (
+    ID_ROOT,
+    ID_CTRL,
+    "Control",
+    THINGSET_NO_CALLBACK
+) 
+```
+
+
+
+Control parameters (IDs &gt;= 0x8000) 
+
+
+        
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_BOOL 
+
+```C++
+THINGSET_ADD_ITEM_BOOL (
+    ID_CTRL,
+    ID_CTRL_ENABLE,
+    "zStartStop",
+    & start_stop,
+    THINGSET_ANY_RW,
+    SUBSET_CTRL
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_FLOAT 
+
+```C++
+THINGSET_ADD_ITEM_FLOAT (
+    ID_CTRL,
+    ID_CTRL_REFERENCE,
+    "zCtrlReference",
+    & reference_value,
+    1,
+    THINGSET_ANY_RW,
+    SUBSET_CTRL
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_STRING 
+
+```C++
+THINGSET_ADD_ITEM_STRING (
+    ID_DEVICE,
+    0x40,
+    "cManufacturer",
+    manufacturer,
+    0,
+    THINGSET_ANY_R,
+    0
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_STRING 
+
+```C++
+THINGSET_ADD_ITEM_STRING (
+    ID_DEVICE,
+    0x41,
+    "cType",
+    device_type,
+    0,
+    THINGSET_ANY_R,
+    0
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_STRING 
+
+```C++
+THINGSET_ADD_ITEM_STRING (
+    ID_DEVICE,
+    0x42,
+    "cHardwareVersion",
+    hardware_version,
+    0,
+    THINGSET_ANY_R,
+    0
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_ITEM\_STRING 
+
+```C++
+THINGSET_ADD_ITEM_STRING (
+    ID_DEVICE,
+    0x43,
+    "cFirmwareVersion",
+    firmware_version,
+    0,
+    THINGSET_ANY_R,
+    0
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function THINGSET\_ADD\_SUBSET 
+
+```C++
+THINGSET_ADD_SUBSET (
+    ID_ROOT,
+    0x38,
+    "mCAN",
+    SUBSET_CAN,
+    THINGSET_ANY_RW
+) 
 ```
 
 

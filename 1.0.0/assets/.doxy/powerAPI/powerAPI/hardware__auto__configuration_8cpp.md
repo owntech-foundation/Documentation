@@ -38,7 +38,7 @@
 | Type | Name |
 | ---: | :--- |
 |  const struct device \* | [**cdc\_acm\_console**](#variable-cdc_acm_console)   = `DEVICE\_DT\_GET(CDC\_ACM\_DEVICE)`<br> |
-|  const struct device \* | [**dac2**](#variable-dac2)   = `DEVICE\_DT\_GET(DAC2\_DEVICE)`<br>_This file automatically performs some hardware configuration using Zephyr macros. Configuration done in this file is low-level peripheral configuration required for OwnTech board to operate, do not mess with it unless you are absolutely sure of what you're doing. This file does not contain any public function._  |
+|  const struct device \* | [**dac2**](#variable-dac2)   = `DEVICE\_DT\_GET(DAC2\_DEVICE)`<br> |
 
 
 
@@ -64,20 +64,20 @@
 |   | [**SYS\_INIT**](#function-sys_init) (\_img\_validation, APPLICATION, CONFIG\_APPLICATION\_INIT\_PRIORITY) <br> |
 |   | [**SYS\_INIT**](#function-sys_init) (\_register\_cdc\_rate\_callback, APPLICATION, CONFIG\_APPLICATION\_INIT\_PRIORITY) <br> |
 |   | [**SYS\_INIT**](#function-sys_init) (\_swap\_usart1\_tx\_rx, PRE\_KERNEL\_1, CONFIG\_KERNEL\_INIT\_PRIORITY\_DEVICE) <br> |
-|  void | [**\_cdc\_rate\_callback**](#function-_cdc_rate_callback) (const struct device \* dev, uint32\_t rate) <br> |
-|  void | [**reboot\_bootloader\_task**](#function-reboot_bootloader_task) (struct k\_work \* work) <br> |
+|  void | [**\_cdc\_rate\_callback**](#function-_cdc_rate_callback) (const struct device \* dev, uint32\_t rate) <br>_Register the CDC ACM baud rate callback._  |
+|  void | [**reboot\_bootloader\_task**](#function-reboot_bootloader_task) (struct k\_work \* work) <br>_Submit a warm reboot into bootloader mode._  |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  int | [**\_console\_init**](#function-_console_init) () <br> |
-|  int | [**\_dac2\_init**](#function-_dac2_init) () <br> |
-|  int | [**\_img\_validation**](#function-_img_validation) () <br> |
-|  int | [**\_register\_cdc\_rate\_callback**](#function-_register_cdc_rate_callback) () <br> |
-|  int | [**\_swap\_usart1\_tx\_rx**](#function-_swap_usart1_tx_rx) () <br> |
-|  int | [**\_vrefbuf\_init**](#function-_vrefbuf_init) () <br> |
+|  int | [**\_console\_init**](#function-_console_init) () <br>_Initialize the console backend (e.g., UART)._  |
+|  int | [**\_dac2\_init**](#function-_dac2_init) () <br>_Initialize DAC2 in constant voltage mode._  |
+|  int | [**\_img\_validation**](#function-_img_validation) () <br>_Validate and confirm the current firmware image in MCUBoot._  |
+|  int | [**\_register\_cdc\_rate\_callback**](#function-_register_cdc_rate_callback) () <br>_Register the CDC ACM baud rate callback._  |
+|  int | [**\_swap\_usart1\_tx\_rx**](#function-_swap_usart1_tx_rx) () <br>_Swap TX and RX lines for USART1 (LPUART1)._  |
+|  int | [**\_vrefbuf\_init**](#function-_vrefbuf_init) () <br>_Initialize the internal voltage reference buffer (VREFBUF)._  |
 
 
 
@@ -124,38 +124,12 @@ const struct device* cdc_acm_console;
 
 ### variable dac2 
 
-_This file automatically performs some hardware configuration using Zephyr macros. Configuration done in this file is low-level peripheral configuration required for OwnTech board to operate, do not mess with it unless you are absolutely sure of what you're doing. This file does not contain any public function._ 
 ```C++
 const struct device* dac2;
 ```
 
 
 
-
-
-**Date:**
-
-2024 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Jean Alinei [jean.alinei@laas.fr](mailto:jean.alinei@laas.fr) 
-
-
-
-
-
-        
 
 <hr>
 ## Public Functions Documentation
@@ -191,6 +165,10 @@ SYS_INIT (
 
 
 
+Zephyr macros to automatically run above functions 
+
+
+        
 
 <hr>
 
@@ -283,6 +261,7 @@ SYS_INIT (
 
 ### function \_cdc\_rate\_callback 
 
+_Register the CDC ACM baud rate callback._ 
 ```C++
 void _cdc_rate_callback (
     const struct device * dev,
@@ -292,6 +271,20 @@ void _cdc_rate_callback (
 
 
 
+Used in USB bootloader entry mechanism (e.g., Arduino-style 1200bps trick).
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -299,6 +292,7 @@ void _cdc_rate_callback (
 
 ### function reboot\_bootloader\_task 
 
+_Submit a warm reboot into bootloader mode._ 
 ```C++
 void reboot_bootloader_task (
     struct k_work * work
@@ -307,6 +301,20 @@ void reboot_bootloader_task (
 
 
 
+Called by the 1200 baud callback to initiate a soft reset into DFU mode.
+
+
+
+
+**Parameters:**
+
+
+* `work` Pointer to work item (unused). 
+
+
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation
@@ -316,12 +324,27 @@ void reboot_bootloader_task (
 
 ### function \_console\_init 
 
+_Initialize the console backend (e.g., UART)._ 
 ```C++
 static int _console_init () 
 ```
 
 
 
+Calls the console\_init function defined elsewhere in the system.
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -329,12 +352,27 @@ static int _console_init ()
 
 ### function \_dac2\_init 
 
+_Initialize DAC2 in constant voltage mode._ 
 ```C++
 static int _dac2_init () 
 ```
 
 
 
+If DAC2 is ready, this function sets an output value of 2048 (mid-scale), configures it for external output, and starts the DAC.
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -342,12 +380,27 @@ static int _dac2_init ()
 
 ### function \_img\_validation 
 
+_Validate and confirm the current firmware image in MCUBoot._ 
 ```C++
 static int _img_validation () 
 ```
 
 
 
+If the image is not yet confirmed, this function writes the confirmation flag. Useful in MCUboot-based systems to prevent rollback after boot.
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -355,12 +408,27 @@ static int _img_validation ()
 
 ### function \_register\_cdc\_rate\_callback 
 
+_Register the CDC ACM baud rate callback._ 
 ```C++
 static int _register_cdc_rate_callback () 
 ```
 
 
 
+Used in USB bootloader entry mechanism (e.g., Arduino-style 1200bps trick).
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -368,12 +436,30 @@ static int _register_cdc_rate_callback ()
 
 ### function \_swap\_usart1\_tx\_rx 
 
+_Swap TX and RX lines for USART1 (LPUART1)._ 
 ```C++
 static int _swap_usart1_tx_rx () 
 ```
 
 
 
+Disables the LPUART1 peripheral, swaps the TX/RX pins, and re-enables it.
+
+
+Used with the O2 board.
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 
@@ -381,12 +467,27 @@ static int _swap_usart1_tx_rx ()
 
 ### function \_vrefbuf\_init 
 
+_Initialize the internal voltage reference buffer (VREFBUF)._ 
 ```C++
 static int _vrefbuf_init () 
 ```
 
 
 
+Enables the SYSCFG clock, configures the voltage scaling, disables high-impedance mode, and activates the VREFBUF output.
+
+
+
+
+**Returns:**
+
+Always returns 0 (success). 
+
+
+
+
+
+        
 
 <hr>
 

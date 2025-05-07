@@ -8,8 +8,9 @@
 
 
 
+_Driver API structure for timer devices._ [More...](#detailed-description)
 
-
+* `#include <timer.h>`
 
 
 
@@ -83,6 +84,25 @@
 
 
 
+## Detailed Description
+
+
+This structure defines the interface that a timer driver must implement to integrate with the OwnTech timer subsystem.
+
+
+
+* `config` is the function used to configure the timer.
+* `start` starts the timer operation.
+* `stop` stops the timer operation.
+* `get_count` retrieves the current timer counter value.
+
+
+
+
+This structure is registered as a Zephyr subsystem using the `__subsystem` keyword. 
+
+
+    
 ## Public Attributes Documentation
 
 

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="46" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="46" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="45" column="19" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" prot="public" static="yes" mutable="no">
         <type><ref refid="classPowerAPI" kindref="compound">PowerAPI</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="51" column="17" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="51" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="50" column="17" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" prot="public" static="yes" mutable="no">
         <type><ref refid="classNgndHAL" kindref="compound">NgndHAL</ref></type>
@@ -80,7 +80,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="39" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="40" bodyend="60"/>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h" bodystart="39" bodyend="60"/>
     <listofallmembers>
       <member refid="classShieldAPI_1a861af7c4acd529a0cf4669947a8b0e66" prot="public" virt="non-virtual"><scope>ShieldAPI</scope><name>ngnd</name></member>
       <member refid="classShieldAPI_1a3f77f66fa698660de9c9f97357ed9e3c" prot="public" virt="non-virtual"><scope>ShieldAPI</scope><name>power</name></member>

@@ -106,7 +106,7 @@ hrtim_switch_convention_t switch_conv_conf_t::convention;
 ### variable reset\_H 
 
 ```C++
-uint32_t switch_conv_conf_t::reset_H[2];
+uint32_t switch_conv_conf_t::reset_H;
 ```
 
 
@@ -119,7 +119,7 @@ uint32_t switch_conv_conf_t::reset_H[2];
 ### variable reset\_L 
 
 ```C++
-uint32_t switch_conv_conf_t::reset_L[2];
+uint32_t switch_conv_conf_t::reset_L;
 ```
 
 
@@ -132,7 +132,7 @@ uint32_t switch_conv_conf_t::reset_L[2];
 ### variable set\_H 
 
 ```C++
-uint32_t switch_conv_conf_t::set_H[2];
+uint32_t switch_conv_conf_t::set_H;
 ```
 
 
@@ -145,7 +145,7 @@ uint32_t switch_conv_conf_t::set_H[2];
 ### variable set\_L 
 
 ```C++
-uint32_t switch_conv_conf_t::set_L[2];
+uint32_t switch_conv_conf_t::set_L;
 ```
 
 

@@ -186,6 +186,10 @@ enum pin_t {
 
 
 
+Public types 
+
+
+        
 
 <hr>
 ## Public Attributes Documentation
@@ -200,6 +204,9 @@ _Owntech GPIO API._
 const struct device* const GPIO_A;
 ```
 
+
+
+Public constants
 
 
 

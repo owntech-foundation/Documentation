@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -105,11 +105,13 @@ uint8_t GpioHAL::readPin(uint8_t pin)
 
 gpio_pin_t GpioHAL::getPinNumber(uint8_t pin)
 {
-    if ( (pin & 0x80) != 0) // Nucleo format
+    /* Nucleo format */
+    if ( (pin & 0x80) != 0)
     {
         return (((uint8_t)pin) & 0x0F);
     }
-    else // Pin number
+    /* Pin number */
+    else
     {
         if      (pin == 1)  return 11;
         else if (pin == 2)  return 12;
@@ -162,7 +164,8 @@ gpio_pin_t GpioHAL::getPinNumber(uint8_t pin)
 
 const struct device* GpioHAL::getGpioDevice(uint8_t pin)
 {
-    if ( (pin & 0x80) != 0) // Nucleo format
+    /* Nucleo format */
+    if ( (pin & 0x80) != 0)
     {
         uint8_t deviceNumber = ((uint8_t)pin) & 0xF0;
         switch (deviceNumber)
@@ -181,7 +184,8 @@ const struct device* GpioHAL::getGpioDevice(uint8_t pin)
                 break;
         }
     }
-    else // Pin number
+    /* Pin number */
+    else
     {
         switch (pin)
         {

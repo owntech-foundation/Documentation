@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2024 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,23 +27,35 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Jean Alinei <jean.alinei@laas.fr>
+ *
+ * @brief  This file automatically performs some hardware configuration
+ *         using Zephyr macros.
+ *         Configuration done in this file is low-level peripheral configuration
+ *         required for OwnTech board to operate, do not mess with it unless you
+ *         are absolutely sure of what you're doing.
+ *         This file does not contain any public function.
+ */
 
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/console/console.h>
 
-// STM32 LL
+/* STM32 LL */
 #include <stm32_ll_bus.h>
 #include <stm32_ll_system.h>
 
-// Owntech driver
+/* Owntech driver */
 #include "dac.h"
 
 static const struct device* dac2 = DEVICE_DT_GET(DAC2_DEVICE);
 
-// Functions to be run
+/* Functions to be run */
 
 static int _vrefbuf_init()
 {
@@ -77,6 +89,7 @@ static int _console_init()
 #ifdef CONFIG_BOOTLOADER_MCUBOOT
 #include <zephyr/kernel.h>
 #include <zephyr/dfu/mcuboot.h>
+
 static int _img_validation()
 {
     if (boot_is_img_confirmed() == false)
@@ -90,12 +103,16 @@ static int _img_validation()
 
     return 0;
 }
-#endif // CONFIG_BOOTLOADER_MCUBOOT
+#endif /* CONFIG_BOOTLOADER_MCUBOOT */
 
 
-#if defined(CONFIG_RETENTION_BOOT_MODE) && defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT) && defined(CONFIG_USB_CDC_ACM)
+#if defined(CONFIG_RETENTION_BOOT_MODE) && \
+    defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT) && \
+    defined(CONFIG_USB_CDC_ACM)
+
 #include <zephyr/retention/bootmode.h>
 #include <zephyr/sys/reboot.h>
+
 void reboot_bootloader_task(struct k_work* work)
 {
     bootmode_set(BOOT_MODE_TYPE_BOOTLOADER);
@@ -103,6 +120,7 @@ void reboot_bootloader_task(struct k_work* work)
 }
 
 K_WORK_DEFINE(reboot_bootloader_work, reboot_bootloader_task);
+
 void _cdc_rate_callback(const struct device* dev, uint32_t rate)
 {
     if (rate == 1200)
@@ -114,13 +132,16 @@ void _cdc_rate_callback(const struct device* dev, uint32_t rate)
 #include <zephyr/drivers/uart/cdc_acm.h>
 #define CDC_ACM_DEVICE DT_NODELABEL(cdc_acm_uart0)
 static const struct device* cdc_acm_console = DEVICE_DT_GET(CDC_ACM_DEVICE);
+
 static int _register_cdc_rate_callback()
 {
     cdc_acm_dte_rate_callback_set(cdc_acm_console, _cdc_rate_callback);
 
     return 0;
 }
-#endif // CONFIG_RETENTION_BOOT_MODE && CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT && CONFIG_USB_CDC_ACM
+#endif /* CONFIG_RETENTION_BOOT_MODE &&
+        * CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT &&
+        * CONFIG_USB_CDC_ACM */
 
 
 #ifdef CONFIG_SHIELD_O2
@@ -133,17 +154,18 @@ static int _swap_usart1_tx_rx()
 
     return 0;
 }
-#endif // SHIELD_O2
+#endif /* SHIELD_O2 */
 
-// Zephyr macros to automatically run above functions
 
+/* To be run in the first init phase */
 SYS_INIT(_vrefbuf_init,
-         PRE_KERNEL_1, // To be run in the first init phase
+         PRE_KERNEL_1,
          CONFIG_KERNEL_INIT_PRIORITY_DEVICE
         );
 
+/* To be run in the second init phase (depends on DAC driver initialization)*/
 SYS_INIT(_dac2_init,
-         PRE_KERNEL_2, // To be run in the second init phase (depends on DAC driver initialization)
+         PRE_KERNEL_2,
          CONFIG_KERNEL_INIT_PRIORITY_DEVICE
         );
 
@@ -157,21 +179,27 @@ SYS_INIT(_img_validation,
          APPLICATION,
          CONFIG_APPLICATION_INIT_PRIORITY
         );
-#endif // CONFIG_BOOTLOADER_MCUBOOT
+#endif /* CONFIG_BOOTLOADER_MCUBOOT */
 
-#if defined(CONFIG_RETENTION_BOOT_MODE) && defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT) && defined(CONFIG_USB_CDC_ACM)
+#if defined(CONFIG_RETENTION_BOOT_MODE) && \
+    defined(CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT) && \
+    defined(CONFIG_USB_CDC_ACM)
+
 SYS_INIT(_register_cdc_rate_callback,
          APPLICATION,
          CONFIG_APPLICATION_INIT_PRIORITY
         );
-#endif // CONFIG_RETENTION_BOOT_MODE && CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT && CONFIG_USB_CDC_ACM
+#endif /* CONFIG_RETENTION_BOOT_MODE &&
+        * CONFIG_CDC_ACM_DTE_RATE_CALLBACK_SUPPORT &&
+        * CONFIG_USB_CDC_ACM */
 
 #ifdef CONFIG_SHIELD_O2
+/* To be run in the first init phase */
 SYS_INIT(_swap_usart1_tx_rx,
-         PRE_KERNEL_1, // To be run in the first init phase
+         PRE_KERNEL_1,
          CONFIG_KERNEL_INIT_PRIORITY_DEVICE
         );
-#endif // SHIELD_O2
+#endif /* SHIELD_O2*/
 ```
 
 

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structcan__control__work__data" kind="struct" language="C++" prot="public">
+    <compoundname>can_control_work_data</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcan__control__work__data_1a0fba192c1ffc36f26301ba6f97bce0b6" prot="public" static="no" mutable="no">
+        <type>struct k_work</type>
+        <definition>struct k_work can_control_work_data::work</definition>
+        <argsstring></argsstring>
+        <name>work</name>
+        <qualifiedname>can_control_work_data::work</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" line="39" column="17" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__control__work__data_1a8084ff7e2eb54bdaa4be12340173a04f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t can_control_work_data::buf[4+CAN_MAX_DLEN]</definition>
+        <argsstring>[4+CAN_MAX_DLEN]</argsstring>
+        <name>buf</name>
+        <qualifiedname>can_control_work_data::buf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" line="41" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcan__control__work__data_1a18f7133e77f4db9f7bb72213015444e7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t can_control_work_data::buf_len</definition>
+        <argsstring></argsstring>
+        <name>buf_len</name>
+        <qualifiedname>can_control_work_data::buf_len</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" line="42" column="12" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/thingset_can.c" bodystart="38" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structcan__control__work__data_1a8084ff7e2eb54bdaa4be12340173a04f" prot="public" virt="non-virtual"><scope>can_control_work_data</scope><name>buf</name></member>
+      <member refid="structcan__control__work__data_1a18f7133e77f4db9f7bb72213015444e7" prot="public" virt="non-virtual"><scope>can_control_work_data</scope><name>buf_len</name></member>
+      <member refid="structcan__control__work__data_1a0fba192c1ffc36f26301ba6f97bce0b6" prot="public" virt="non-virtual"><scope>can_control_work_data</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

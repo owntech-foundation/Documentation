@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2024
  *
  * @author Clément Foucher <clement.foucher@laas.fr>
@@ -33,8 +33,7 @@
 #include "../src/Power.h"
 
 
-/////
-// Static class definition
+/* Static class definition */
 
 class ShieldAPI
 {
@@ -52,18 +51,19 @@ public:
 
 #ifdef CONFIG_OWNTECH_NGND_DRIVER
 	/**
-	 * @brief Contains all the function of the NGND switch compatible with TWISTs prior to 1.4.
+	 * @brief Contains all the function of the NGND switch compatible
+	 * 	      with TWISTs prior to 1.4.
 	 */
 	static NgndHAL ngnd;
 #endif
 
 };
 
-
-/////
-// Public object to interact with the class
+/**
+ *  Public object to interact with the class
+ */
 
 extern ShieldAPI shield;
 
 
-#endif // SHIELDAPI_H_
+#endif /* SHIELDAPI_H_ */

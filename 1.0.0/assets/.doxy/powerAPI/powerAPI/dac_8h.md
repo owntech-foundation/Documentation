@@ -30,7 +30,7 @@
 | Type | Name |
 | ---: | :--- |
 | struct | [**dac\_driver\_api**](structdac__driver__api.md) <br> |
-| struct | [**dac\_function\_config\_t**](structdac__function__config__t.md) <br> |
+| struct | [**dac\_function\_config\_t**](structdac__function__config__t.md) <br>_Defines the DAC configuration structure._  |
 
 
 ## Public Types
@@ -44,10 +44,10 @@
 | typedef void(\* | [**dac\_api\_setfunction**](#typedef-dac_api_setfunction)  <br> |
 | typedef void(\* | [**dac\_api\_start**](#typedef-dac_api_start)  <br> |
 | typedef void(\* | [**dac\_api\_stop**](#typedef-dac_api_stop)  <br> |
-| enum  | [**dac\_function\_t**](#enum-dac_function_t)  <br> |
-| enum  | [**dac\_pin\_config\_t**](#enum-dac_pin_config_t)  <br> |
-| enum  | [**dac\_polarity\_t**](#enum-dac_polarity_t)  <br> |
-| enum  | [**dac\_trigger\_t**](#enum-dac_trigger_t)  <br> |
+| enum  | [**dac\_function\_t**](#enum-dac_function_t)  <br>_Defines the possible speeds for the RS485:_  |
+| enum  | [**dac\_pin\_config\_t**](#enum-dac_pin_config_t)  <br>_Defines the types of pin configuration of the DAC:_  |
+| enum  | [**dac\_polarity\_t**](#enum-dac_polarity_t)  <br>_Defines the DAC polarity:_  |
+| enum  | [**dac\_trigger\_t**](#enum-dac_trigger_t)  <br>_Defines the triggers of the DAC:_  |
 
 
 
@@ -205,6 +205,7 @@ typedef void(* dac_api_stop) (const struct device *dev, uint8_t channel);
 
 ### enum dac\_function\_t 
 
+_Defines the possible speeds for the RS485:_ 
 ```C++
 enum dac_function_t {
     dac_function_noise,
@@ -215,6 +216,18 @@ enum dac_function_t {
 
 
 
+Configuration types 
+
+
+
+* `dac_function_noise`: Creates noise on the DAC
+* `dac_function_triangle`: Creates a triangle waveform
+* `dac_function_sawtooth`: Creates a sawtooth waveform 
+
+
+
+
+        
 
 <hr>
 
@@ -222,6 +235,7 @@ enum dac_function_t {
 
 ### enum dac\_pin\_config\_t 
 
+_Defines the types of pin configuration of the DAC:_ 
 ```C++
 enum dac_pin_config_t {
     dac_pin_internal,
@@ -233,12 +247,22 @@ enum dac_pin_config_t {
 
 
 
+* `dac_pin_internal`
+* `dac_pin_external`
+* `dac_pin_internal_and_external` 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### enum dac\_polarity\_t 
 
+_Defines the DAC polarity:_ 
 ```C++
 enum dac_polarity_t {
     dac_polarity_decrement,
@@ -249,12 +273,21 @@ enum dac_polarity_t {
 
 
 
+* `dac_polarity_decrement`: Decrements the DAC counter
+* `dac_polarity_increment`: Increments the DAC counter 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### enum dac\_trigger\_t 
 
+_Defines the triggers of the DAC:_ 
 ```C++
 enum dac_trigger_t {
     hrtim_trig1,
@@ -268,6 +301,13 @@ enum dac_trigger_t {
 
 
 
+
+* `hrtim_trig1` to `hrtim_trig6`: HRTIM driven triggers 
+
+
+
+
+        
 
 <hr>
 ## Public Static Functions Documentation

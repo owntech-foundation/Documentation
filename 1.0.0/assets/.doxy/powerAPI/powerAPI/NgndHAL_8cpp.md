@@ -94,24 +94,6 @@ const struct device* ngnd_switch;
 
 
 
-
-**Date:**
-
-2023 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-
-        
-
 <hr>
 
 ------------------------------

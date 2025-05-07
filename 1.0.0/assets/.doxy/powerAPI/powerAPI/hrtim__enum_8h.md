@@ -41,16 +41,16 @@
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**hrtim\_adc\_edgetrigger\_t**](#enum-hrtim_adc_edgetrigger_t)  <br> |
+| enum  | [**hrtim\_adc\_edgetrigger\_t**](#enum-hrtim_adc_edgetrigger_t)  <br>_Edge Trigger behavior._  |
 | enum  | [**hrtim\_adc\_event\_t**](#enum-hrtim_adc_event_t)  <br>_HRTIM ADC event update._  |
-| enum  | [**hrtim\_adc\_source\_t**](#enum-hrtim_adc_source_t)  <br>_HRTIM ADC Event Number and its associated source There are a huge number of possibilities, for now this code explores only a few._  |
+| enum  | [**hrtim\_adc\_source\_t**](#enum-hrtim_adc_source_t)  <br>_HRTIM ADC Event Number and its associated source._  |
 | enum  | [**hrtim\_adc\_t**](#enum-hrtim_adc_t)  <br>_HRTIM ADC trigger registers definition._  |
 | enum  | [**hrtim\_adc\_trigger\_t**](#enum-hrtim_adc_trigger_t)  <br>_HRTIM ADC trigger._  |
 | enum  | [**hrtim\_burst\_clk\_t**](#enum-hrtim_burst_clk_t)  <br>_HRTIM burst mode clock setting._  |
 | typedef void(\* | [**hrtim\_callback\_t**](#typedef-hrtim_callback_t)  <br>_callback function_  |
 | enum  | [**hrtim\_cmp\_t**](#enum-hrtim_cmp_t)  <br>_HRTIM comparators definition._  |
 | enum  | [**hrtim\_cnt\_t**](#enum-hrtim_cnt_t)  <br>_HRTIM counting mode setting._  |
-| enum  | [**hrtim\_comp\_usage\_t**](#enum-hrtim_comp_usage_t)  <br> |
+| enum  | [**hrtim\_comp\_usage\_t**](#enum-hrtim_comp_usage_t)  <br>_comparator usage for a timing unit_  |
 | enum  | [**hrtim\_external\_trigger\_t**](#enum-hrtim_external_trigger_t)  <br>_External eventcoming from comparator used for current mode._  |
 | enum  | [**hrtim\_gpio\_clock\_number\_t**](#enum-hrtim_gpio_clock_number_t)  <br>_HRTIM gpio clock units definition._  |
 | enum  | [**hrtim\_out\_t**](#enum-hrtim_out_t)  <br>_timing unit output 1 or 2_  |
@@ -60,7 +60,7 @@
 | enum  | [**hrtim\_output\_units\_t**](#enum-hrtim_output_units_t)  <br>_HRTIM output units definition._  |
 | enum  | [**hrtim\_pwm\_mode\_t**](#enum-hrtim_pwm_mode_t)  <br>_Special PWM mode for current mode._  |
 | enum  | [**hrtim\_reset\_trig\_t**](#enum-hrtim_reset_trig_t)  <br>_HRTIM reset trig source definitions._  |
-| enum  | [**hrtim\_switch\_convention\_t**](#enum-hrtim_switch_convention_t)  <br>_HRTIM TU switch convention PWMx1 : control high-side mosfet PWMx2 : control low-side mosfet._  |
+| enum  | [**hrtim\_switch\_convention\_t**](#enum-hrtim_switch_convention_t)  <br>_HRTIM TU switch convention._  |
 | enum  | [**hrtim\_tu\_ON\_OFF\_t**](#enum-hrtim_tu_on_off_t)  <br>_describe if a timing unit has been initialized_  |
 | enum  | [**hrtim\_tu\_number\_t**](#enum-hrtim_tu_number_t)  <br>_HRTIM timing units number definition._  |
 | enum  | [**hrtim\_tu\_t**](#enum-hrtim_tu_t)  <br>_HRTIM timing units definition._  |
@@ -74,8 +74,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = `6`<br> |
-|  const uint32\_t | [**HRTIM\_PRESCALER\_RESOLUTION\_PS**](#variable-hrtim_prescaler_resolution_ps)   = `/* multi line expression */`<br> |
+|  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = `6`<br>_Number of HRTIM channels._  |
+|  const uint32\_t | [**HRTIM\_MAX\_PER\_and\_CMP\_REG\_VALUES**](#variable-hrtim_max_per_and_cmp_reg_values)   = `/* multi line expression */`<br> |
+|  const uint32\_t | [**HRTIM\_MIN\_PER\_and\_CMP\_REG\_VALUES**](#variable-hrtim_min_per_and_cmp_reg_values)   = `/* multi line expression */`<br> |
+|  const uint32\_t | [**HRTIM\_PRESCALER\_RESOLUTION\_PS**](#variable-hrtim_prescaler_resolution_ps)   = `/* multi line expression */`<br>_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` __ |
 
 
 
@@ -125,6 +127,7 @@
 
 ### enum hrtim\_adc\_edgetrigger\_t 
 
+_Edge Trigger behavior._ 
 ```C++
 enum hrtim_adc_edgetrigger_t {
     EdgeTrigger_up = LL_HRTIM_ROLLOVER_MODE_PER,
@@ -135,6 +138,16 @@ enum hrtim_adc_edgetrigger_t {
 
 
 
+`EdgeTrigger_up` = `LL_HRTIM_ROLLOVER_MODE_PER`,
+
+
+`EdgeTrigger_down` = `LL_HRTIM_ROLLOVER_MODE_RST`,
+
+
+`EdgeTrigger_Both` = `LL_HRTIM_ROLLOVER_MODE_BOTH` 
+
+
+        
 
 <hr>
 
@@ -163,7 +176,7 @@ enum hrtim_adc_event_t {
 
 ### enum hrtim\_adc\_source\_t 
 
-_HRTIM ADC Event Number and its associated source There are a huge number of possibilities, for now this code explores only a few._ 
+_HRTIM ADC Event Number and its associated source._ 
 ```C++
 enum hrtim_adc_source_t {
     TIMA_CMP3 = LL_HRTIM_ADCTRIG_SRC13_TIMACMP3,
@@ -179,9 +192,12 @@ enum hrtim_adc_source_t {
 
 
 
+
+
+
 **Warning:**
 
-prioritize cmp3, cmp4 and cmp2 might be used for current mode, and cmp1 for duty cycle 
+Please Prioritize cmp3, because cmp4 and cmp2 might be used for current mode, and cmp1 is used for duty cycle 
 
 
 
@@ -207,6 +223,16 @@ enum hrtim_adc_t {
 
 
 
+
+* `ADC1R = 1`,
+* `ADC2R = 2`,
+* `ADC3R = 3`,
+* `ADC4R = 4` 
+
+
+
+
+        
 
 <hr>
 
@@ -253,6 +279,18 @@ enum hrtim_burst_clk_t {
 
 
 
+
+* `BURST_TIMA` = `LL_HRTIM_BM_CLKSRC_TIMER_A`
+* `BURST_TIMB` = `LL_HRTIM_BM_CLKSRC_TIMER_B`
+* `BURST_TIMC` = `LL_HRTIM_BM_CLKSRC_TIMER_C`
+* `BURST_TIMD` = `LL_HRTIM_BM_CLKSRC_TIMER_D`
+* `BURST_TIME` = `LL_HRTIM_BM_CLKSRC_TIMER_E`
+* `BURST_TIMF` = `LL_HRTIM_BM_CLKSRC_TIMER_F` 
+
+
+
+
+        
 
 <hr>
 
@@ -309,12 +347,21 @@ enum hrtim_cnt_t {
 
 
 
+* `Lft_aligned` = `LL_HRTIM_COUNTING_MODE_UP`
+* `UpDwn` = `LL_HRTIM_COUNTING_MODE_UP_DOWN` = Center Aligned 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### enum hrtim\_comp\_usage\_t 
 
+_comparator usage for a timing unit_ 
 ```C++
 enum hrtim_comp_usage_t {
     USED = true,
@@ -324,7 +371,11 @@ enum hrtim_comp_usage_t {
 
 
 
-comparator usage for a timing unit 
+
+* `USED=true`
+* `FREE=false` 
+
+
 
 
         
@@ -352,6 +403,21 @@ enum hrtim_external_trigger_t {
 
 
 
+
+* `EEV1` = `LL_HRTIM_OUTPUTRESET_EEV_1`
+* `EEV2` = `LL_HRTIM_OUTPUTRESET_EEV_2`
+* `EEV3` = `LL_HRTIM_OUTPUTRESET_EEV_3`
+* `EEV4` = `LL_HRTIM_OUTPUTRESET_EEV_4`
+* `EEV5` = `LL_HRTIM_OUTPUTRESET_EEV_5`
+* `EEV6` = `LL_HRTIM_OUTPUTRESET_EEV_6`
+* `EEV7` = `LL_HRTIM_OUTPUTRESET_EEV_7`
+* `EEV8` = `LL_HRTIM_OUTPUTRESET_EEV_8`
+* `EEV9` = `LL_HRTIM_OUTPUTRESET_EEV_9` 
+
+
+
+
+        
 
 <hr>
 
@@ -517,7 +583,7 @@ enum hrtim_reset_trig_t {
 
 ### enum hrtim\_switch\_convention\_t 
 
-_HRTIM TU switch convention PWMx1 : control high-side mosfet PWMx2 : control low-side mosfet._ 
+_HRTIM TU switch convention._ 
 ```C++
 enum hrtim_switch_convention_t {
     PWMx1 = 0,
@@ -527,6 +593,14 @@ enum hrtim_switch_convention_t {
 
 
 
+
+* `PWMx1=0`: high-side mosfet`,
+* `PWMx2=1`: low-side mosfet` 
+
+
+
+
+        
 
 <hr>
 
@@ -544,6 +618,14 @@ enum hrtim_tu_ON_OFF_t {
 
 
 
+
+* `UNIT_ON=true`
+* `UNIT_OFF=false` 
+
+
+
+
+        
 
 <hr>
 
@@ -587,6 +669,10 @@ enum hrtim_tu_t {
 
 
 
+Enums 
+
+
+        
 
 <hr>
 ## Public Static Attributes Documentation
@@ -596,6 +682,7 @@ enum hrtim_tu_t {
 
 ### variable HRTIM\_CHANNELS 
 
+_Number of HRTIM channels._ 
 ```C++
 const uint8_t HRTIM_CHANNELS;
 ```
@@ -607,8 +694,35 @@ const uint8_t HRTIM_CHANNELS;
 
 
 
+### variable HRTIM\_MAX\_PER\_and\_CMP\_REG\_VALUES 
+
+```C++
+const uint32_t HRTIM_MAX_PER_and_CMP_REG_VALUES[8];
+```
+
+
+
+
+<hr>
+
+
+
+### variable HRTIM\_MIN\_PER\_and\_CMP\_REG\_VALUES 
+
+```C++
+const uint32_t HRTIM_MIN_PER_and_CMP_REG_VALUES[8];
+```
+
+
+
+
+<hr>
+
+
+
 ### variable HRTIM\_PRESCALER\_RESOLUTION\_PS 
 
+_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` __
 ```C++
 const uint32_t HRTIM_PRESCALER_RESOLUTION_PS[8];
 ```

@@ -47,27 +47,27 @@
 
 
 
-## Public Functions
-
-| Type | Name |
-| ---: | :--- |
-|  void | [**enableCan**](#function-enablecan) () <br>_Enable can._  |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
+|  bool | [**getBroadcastEnable**](#function-getbroadcastenable) () <br>_Get the Broadcasting enable status._  |
 |  uint16\_t | [**getBroadcastPeriod**](#function-getbroadcastperiod) () <br>_Get the broadcast period._  |
 |  uint16\_t | [**getCanNodeAddr**](#function-getcannodeaddr) () <br>_Get the CAN node address._  |
 |  uint16\_t | [**getControlPeriod**](#function-getcontrolperiod) () <br>_Get the control period._  |
 |  bool | [**getCtrlEnable**](#function-getctrlenable) () <br>_Get the control enable status._  |
 |  float32\_t | [**getCtrlReference**](#function-getctrlreference) () <br>_Get the control reference value._  |
-|  void | [**setBroadcastPeriod**](#function-setbroadcastperiod) (uint16\_t time\_100\_ms) <br>_Set the broadcast period._  |
+|  float32\_t | [**getStartStopState**](#function-getstartstopstate) () <br>_Get the start - stop current order._  |
+|  void | [**setBroadcastEnable**](#function-setbroadcastenable) (bool enable) <br>_Set the Broadcasting enable status._  |
+|  void | [**setBroadcastPeriod**](#function-setbroadcastperiod) (uint16\_t time\_s) <br>_Set the broadcast period._  |
 |  void | [**setCanNodeAddr**](#function-setcannodeaddr) (uint16\_t addr) <br>_Set the CAN node address._  |
-|  void | [**setControlPeriod**](#function-setcontrolperiod) (uint16\_t time\_100\_ms) <br>_Set the control period._  |
+|  void | [**setControlPeriod**](#function-setcontrolperiod) (uint16\_t time\_ms) <br>_Set the control period._  |
 |  void | [**setCtrlEnable**](#function-setctrlenable) (bool enable) <br>_Set the control enable status._  |
 |  void | [**setCtrlReference**](#function-setctrlreference) (float32\_t reference) <br>_Set the control reference value._  |
+|  void | [**startSlaveDevice**](#function-startslavedevice) () <br>_Set the order to start slave devices._  |
+|  void | [**stopSlaveDevice**](#function-stopslavedevice) () <br>_Set the order to stop slave devices._  |
 
 
 
@@ -94,24 +94,33 @@
 
 
 
-## Public Functions Documentation
+## Public Static Functions Documentation
 
 
 
 
-### function enableCan 
+### function getBroadcastEnable 
 
-_Enable can._ 
+_Get the Broadcasting enable status._ 
 ```C++
-void CanCommunication::enableCan () 
+static bool CanCommunication::getBroadcastEnable () 
 ```
 
 
 
 
-<hr>
-## Public Static Functions Documentation
 
+**Returns:**
+
+True if broadcasting is enabled, false otherwise. 
+
+
+
+
+
+        
+
+<hr>
 
 
 
@@ -128,7 +137,7 @@ static uint16_t CanCommunication::getBroadcastPeriod ()
 
 **Returns:**
 
-The broadcast period in 100 ms units. 
+The broadcast period in seconds (s). 
 
 
 
@@ -178,7 +187,7 @@ static uint16_t CanCommunication::getControlPeriod ()
 
 **Returns:**
 
-The control period in 100 ms units. 
+The control period in milli seconds (ms). 
 
 
 
@@ -240,12 +249,37 @@ The control reference value.
 
 
 
-### function setBroadcastPeriod 
+### function getStartStopState 
 
-_Set the broadcast period._ 
+_Get the start - stop current order._ 
 ```C++
-static void CanCommunication::setBroadcastPeriod (
-    uint16_t time_100_ms
+static float32_t CanCommunication::getStartStopState () 
+```
+
+
+
+
+
+**Returns:**
+
+A boolean that is 1 is current order is start, 0 if stop. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setBroadcastEnable 
+
+_Set the Broadcasting enable status._ 
+```C++
+static void CanCommunication::setBroadcastEnable (
+    bool enable
 ) 
 ```
 
@@ -256,7 +290,34 @@ static void CanCommunication::setBroadcastPeriod (
 **Parameters:**
 
 
-* `time_100_ms` The broadcast period (in multiple of 100 ms) to set. 
+* `enable` True to enable broadcasting, false to disable it. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setBroadcastPeriod 
+
+_Set the broadcast period._ 
+```C++
+static void CanCommunication::setBroadcastPeriod (
+    uint16_t time_s
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `time_s` The broadcast period in seconds (s). 
 
 
 
@@ -299,7 +360,7 @@ static void CanCommunication::setCanNodeAddr (
 _Set the control period._ 
 ```C++
 static void CanCommunication::setControlPeriod (
-    uint16_t time_100_ms
+    uint16_t time_ms
 ) 
 ```
 
@@ -310,7 +371,7 @@ static void CanCommunication::setControlPeriod (
 **Parameters:**
 
 
-* `time_100_ms` The control period (in multiple of 100 ms) to set. 
+* `time_ms` The control period in milli seconds (ms). 
 
 
 
@@ -370,6 +431,34 @@ static void CanCommunication::setCtrlReference (
 
 
         
+
+<hr>
+
+
+
+### function startSlaveDevice 
+
+_Set the order to start slave devices._ 
+```C++
+static void CanCommunication::startSlaveDevice () 
+```
+
+
+
+
+<hr>
+
+
+
+### function stopSlaveDevice 
+
+_Set the order to stop slave devices._ 
+```C++
+static void CanCommunication::stopSlaveDevice () 
+```
+
+
+
 
 <hr>
 

@@ -8,7 +8,7 @@
 
 
 
-_Handles usart 1 for the SPIN board._ [More...](#detailed-description)
+_Handles USART1 for the SPIN board._ [More...](#detailed-description)
 
 * `#include <UartHAL.h>`
 
@@ -52,10 +52,10 @@ _Handles usart 1 for the SPIN board._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**usart1Init**](#function-usart1init) () <br>_Library initialization function for the usart communication. This function is declared on the private section of the .c file._  |
-|  char | [**usart1ReadChar**](#function-usart1readchar) () <br>_This function sends back a single character waiting to be treated from the usart1._  |
-|  void | [**usart1SwapRxTx**](#function-usart1swaprxtx) () <br>_This function swaps the usart RX and TX pins. It should be called in conjunction with a board version setup._  |
-|  void | [**usart1WriteChar**](#function-usart1writechar) (char data) <br>_This function transmits a single character through the usart 1._  |
+|  void | [**usart1Init**](#function-usart1init) () <br>_Library initialization function for the USART communication. This function is declared on the private section of the .c file._  |
+|  char | [**usart1ReadChar**](#function-usart1readchar) () <br>_This function sends back a single character waiting to be treated from the USART1._  |
+|  void | [**usart1SwapRxTx**](#function-usart1swaprxtx) () <br>_This function swaps the USART RX and TX pins. It should be called in conjunction with a board version setup._  |
+|  void | [**usart1WriteChar**](#function-usart1writechar) (char data) <br>_This function transmits a single character through the USART1._  |
 
 
 
@@ -91,7 +91,7 @@ _Handles usart 1 for the SPIN board._ [More...](#detailed-description)
 
 **Note:**
 
-Use this element to initialize and send messages via usart 1 
+Use this element to initialize and send messages via USART1 
 
 
 
@@ -105,13 +105,17 @@ Use this element to initialize and send messages via usart 1
 
 ### function usart1Init 
 
-_Library initialization function for the usart communication. This function is declared on the private section of the .c file._ 
+_Library initialization function for the USART communication. This function is declared on the private section of the .c file._ 
 ```C++
 void UartHAL::usart1Init () 
 ```
 
 
 
+USART 1 public functions 
+
+
+        
 
 <hr>
 
@@ -119,7 +123,7 @@ void UartHAL::usart1Init ()
 
 ### function usart1ReadChar 
 
-_This function sends back a single character waiting to be treated from the usart1._ 
+_This function sends back a single character waiting to be treated from the USART1._ 
 ```C++
 char UartHAL::usart1ReadChar () 
 ```
@@ -144,7 +148,7 @@ This function returns a single char which is waiting to be treated if no char is
 
 ### function usart1SwapRxTx 
 
-_This function swaps the usart RX and TX pins. It should be called in conjunction with a board version setup._ 
+_This function swaps the USART RX and TX pins. It should be called in conjunction with a board version setup._ 
 ```C++
 void UartHAL::usart1SwapRxTx () 
 ```
@@ -158,7 +162,7 @@ void UartHAL::usart1SwapRxTx ()
 
 ### function usart1WriteChar 
 
-_This function transmits a single character through the usart 1._ 
+_This function transmits a single character through the USART1._ 
 ```C++
 void UartHAL::usart1WriteChar (
     char data

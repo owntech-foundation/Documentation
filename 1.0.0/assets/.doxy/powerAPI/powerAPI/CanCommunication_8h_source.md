@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,12 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 
 #ifndef CANCOMMUNICATION_H_
@@ -35,9 +41,7 @@
 #include <stdint.h>
 #include <arm_math.h>
 
-#define CAN_STANDBY_DEVICE DT_CHILD(DT_PATH(can_standby_switch), can_standby_gpio_pin)
-
-// Static class definition
+/* Static class definition */
 
 class CanCommunication
 {
@@ -45,28 +49,46 @@ class CanCommunication
 public:
     static uint16_t getCanNodeAddr();
 
+    static void setCanNodeAddr(uint16_t addr);
+
+#ifdef CONFIG_THINGSET_CAN_CONTROL_REPORTING
+
     static bool getCtrlEnable();
 
     static float32_t getCtrlReference();
 
-    static uint16_t getBroadcastPeriod();
-
+    static float32_t getStartStopState();
     static uint16_t getControlPeriod();
-
-    static void setCanNodeAddr(uint16_t addr);
 
     static void setCtrlEnable(bool enable);
 
     static void setCtrlReference(float32_t reference);
 
-    static void setBroadcastPeriod(uint16_t time_100_ms);
+    static void startSlaveDevice();
 
-    static void setControlPeriod(uint16_t time_100_ms);
+    static void stopSlaveDevice();
 
-    void enableCan();
+    static void setControlPeriod(uint16_t time_ms);
+
+#endif
+
+#ifdef CONFIG_THINGSET_SUBSET_LIVE_METRICS
+
+    static bool getBroadcastEnable();
+
+    static uint16_t getBroadcastPeriod();
+
+    static void setBroadcastEnable(bool enable);
+
+    static void setBroadcastPeriod(uint16_t time_s);
+
+#endif
+
+private:
+    static struct thingset_can *ts_can_inst;
 };
 
-#endif // CANCOMMUNICATION_H_
+#endif /* CANCOMMUNICATION_H_ */
 ```
 
 

@@ -6,7 +6,6 @@
     <innerfile refid="AnalogCommunication_8h">AnalogCommunication.h</innerfile>
     <innerfile refid="CanCommunication_8cpp">CanCommunication.cpp</innerfile>
     <innerfile refid="CanCommunication_8h">CanCommunication.h</innerfile>
-    <innerfile refid="data__objects_8cpp">data_objects.cpp</innerfile>
     <innerfile refid="data__objects_8h">data_objects.h</innerfile>
     <innerfile refid="Rs485_8cpp">Rs485.cpp</innerfile>
     <innerfile refid="Rs485_8h">Rs485.h</innerfile>
@@ -14,8 +13,7 @@
     <innerfile refid="Rs485Communication_8h">Rs485Communication.h</innerfile>
     <innerfile refid="SyncCommunication_8cpp">SyncCommunication.cpp</innerfile>
     <innerfile refid="SyncCommunication_8h">SyncCommunication.h</innerfile>
-    <innerfile refid="thingset__isotp_8cpp">thingset_isotp.cpp</innerfile>
-    <innerfile refid="thingset__pub__sub_8cpp">thingset_pub_sub.cpp</innerfile>
+    <innerfile refid="thingset__can_8c">thingset_can.c</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

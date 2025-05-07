@@ -66,7 +66,7 @@
 | Type | Name |
 | ---: | :--- |
 |  void | [**dma\_configure\_adc\_acquisition**](#function-dma_configure_adc_acquisition) (uint8\_t adc\_number, bool disable\_interrupts, uint16\_t \* buffer, size\_t buffer\_size) <br>_This function configures a channel from DMA 1 to transfer measures from an ADC to buffers, then starts the channels. It must only be called after all the ADCs configuration has been carried out, as it uses its channels configuration to determine the size of the buffers._  |
-|  uint32\_t | [**dma\_get\_retreived\_data\_count**](#function-dma_get_retreived_data_count) (uint8\_t adc\_number) <br>_Obtain the number of acquired data since last time this function was called._  |
+|  uint32\_t | [**dma\_get\_retrieved\_data\_count**](#function-dma_get_retrieved_data_count) (uint8\_t adc\_number) <br>_Obtain the number of acquired data since last time this function was called._  |
 
 
 ## Public Static Functions
@@ -126,21 +126,7 @@ const struct device* dma1;
 
 
 
-
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
+DT definition 
 
 
         
@@ -157,6 +143,10 @@ const uint32_t source_registers[5];
 
 
 
+Local variables 
+
+
+        
 
 <hr>
 
@@ -210,7 +200,7 @@ void dma_configure_adc_acquisition (
 
 
 * `adc_number` Number of the ADC to acquire measures from. 
-* `disable_interrupts` Boolean indicating whether interrupts shoud be disabled. Warning: this override Zephyr DMA driver default behavior. 
+* `disable_interrupts` Boolean indicating whether interrupts should be disabled. Warning: this override Zephyr DMA driver default behavior. 
 * `buffer` Pointer to buffer. 
 * `buffer_size` Number of uint16\_t words the buffer can contain. 
 
@@ -223,11 +213,11 @@ void dma_configure_adc_acquisition (
 
 
 
-### function dma\_get\_retreived\_data\_count 
+### function dma\_get\_retrieved\_data\_count 
 
 _Obtain the number of acquired data since last time this function was called._ 
 ```C++
-uint32_t dma_get_retreived_data_count (
+uint32_t dma_get_retrieved_data_count (
     uint8_t adc_number
 ) 
 ```

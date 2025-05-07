@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,31 +27,42 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief  Shield sensors management from device tree.
+ *         This class allows, for shields that define
+ *         shield-sensor nodes in device tree, to
+ *         automatically extract available sensors and
+ *         manage them by name using an enumeration.
+ */
 
 
 #ifndef SENSORS_H_
 #define SENSORS_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 
-// ARM CMSIS library
+/* ARM CMSIS library */
 #include <arm_math.h>
 
-// Other modules public API
+/* Other modules public API */
 #include "SpinAPI.h"
 
-
-// Device-tree related macro
+/* Device-tree related macro */
 
 #define SENSOR_TOKEN(node_id) DT_STRING_TOKEN(node_id, sensor_name),
 
 
-// Type definitions
+/* Type definitions */
+
 typedef enum
 {
     UNDEFINED_SENSOR = 0,
@@ -81,12 +92,11 @@ struct sensor_info_t
     } ownverter_temp_sensor_t;
 #endif
 
-// Static class definition
+/* Static class definition */
 
 class SensorsAPI
 {
 
-    // Private types definitions
 
 private:
     typedef union
@@ -108,9 +118,9 @@ private:
         uint8_t            channel_number;
         uint8_t            pin_number;
         bool               is_differential;
-        uint32_t           adc_reg_addr; // ADC addr is used to identify ADC
+        uint32_t           adc_reg_addr; /* ADC addr is used to identify ADC */
         conv_type_string_t conversion_type;
-        // Default calibration parameters
+        /* Default calibration parameters */
         int2float default_gain;
         int2float default_offset;
         int2float default_r0;
@@ -124,9 +134,11 @@ public:
 
     int8_t enableSensor(sensor_t sensor_name, adc_t adc_number);
 
-    uint16_t* getRawValues(sensor_t sensor_name, uint32_t& number_of_values_acquired);
+    uint16_t* getRawValues(sensor_t sensor_name,
+                           uint32_t& number_of_values_acquired);
 
-    float32_t* getValues(sensor_t sensor_name, uint32_t& number_of_values_acquired);
+    float32_t* getValues(sensor_t sensor_name,
+                         uint32_t& number_of_values_acquired);
 
     float32_t peekLatestValue(sensor_t sensor_name);
 
@@ -134,11 +146,18 @@ public:
 
     float32_t convertRawValue(sensor_t sensor_name, uint16_t raw_value);
 
-    void setConversionParametersLinear(sensor_t sensor_name, float32_t gain, float32_t offset);
+    void setConversionParametersLinear(sensor_t sensor_name,
+                                       float32_t gain,
+                                       float32_t offset);
 
-    void setConversionParametersNtcThermistor(sensor_t sensor_name, float32_t r0, float32_t b, float32_t rdiv, float32_t t0);
+    void setConversionParametersNtcThermistor(sensor_t sensor_name,
+                                              float32_t r0,
+                                              float32_t b,
+                                              float32_t rdiv,
+                                              float32_t t0);
 
-    float32_t retrieveStoredParameterValue(sensor_t sensor_name, parameter_t parameter_name);
+    float32_t retrieveStoredParameterValue(sensor_t sensor_name,
+                                           parameter_t parameter_name);
 
     conversion_type_t retrieveStoredConversionType(sensor_t sensor_name);
 
@@ -172,7 +191,8 @@ private:
 
     void getLineFromConsole(char* buffer, uint8_t buffer_size);
 
-    float32_t getCalibrationCoefficients(const char* physicalParameter, const char* gainOrOffset);
+    float32_t getCalibrationCoefficients(const char* physicalParameter,
+                                         const char* gainOrOffset);
 
 private:
     static sensor_dt_data_t dt_sensors_props[];
@@ -189,7 +209,7 @@ private:
 
 };
 
-#endif // SENSORS_H_
+#endif /* SENSORS_H */
 ```
 
 

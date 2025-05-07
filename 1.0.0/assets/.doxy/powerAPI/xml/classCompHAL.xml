@@ -18,28 +18,30 @@
 <para>Initializes a comparator for the current mode control. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Current mode control deploys a comparator together with a DAC. This function must be called after setting up the DAC linked to the comparator. Note that comparator 1 is linked with DAC3 and comparator 3 with DAC1. Comparator 1 is linked with ilow1 and comparator 3 is linked with ilow2.</para>
+<para><simplesect kind="note"><para>Current mode control deploys a comparator together with a DAC. <verbatim>    This function must be called after setting up the DAC linked
+       to the comparator. 
+
+       Note that: 
+
+       - comparator 1 is linked with `DAC3` and `I_LOW1` 
+
+       - comparator 3 is linked with `DAC1` and `I_LOW2`
+</verbatim></para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>comparator_number</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>can be either 1 or 3</para>
+<para>can be either 1 or 3 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="date"><para>2023</para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="50" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.cpp" bodystart="37" bodyend="44"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="57" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.cpp" bodystart="37" bodyend="44"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -50,7 +52,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" bodystart="38" bodyend="51"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/CompHAL.h" bodystart="39" bodyend="58"/>
     <listofallmembers>
       <member refid="classCompHAL_1aa139d81847c48e4dd0ce26bbb9b2001c" prot="public" virt="non-virtual"><scope>CompHAL</scope><name>initialize</name></member>
     </listofallmembers>

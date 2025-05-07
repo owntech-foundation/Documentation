@@ -93,21 +93,7 @@ SpinAPI spin;
 
 
 
-
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Jean Alinei [jean.alinei@owntech.org](mailto:jean.alinei@owntech.org) 
-
-
-
+Public object to interact with the class 
 
 
         

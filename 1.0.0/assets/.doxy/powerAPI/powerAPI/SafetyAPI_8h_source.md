@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,14 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date 2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ *
+ * @brief Public class to use safety function
+ *
+ */
 
 #ifndef SAFETYAPI_H_
 #define SAFETYAPI_H_
@@ -40,13 +48,15 @@ class SafetyAPI{
 
     public:
 
-    void init_shield();
+    void initShield();
 
-    void init_shield(sensor_t* sensors_watch, uint8_t sensors_watch_number);
+    void initShield(sensor_t* sensors_watch, uint8_t sensors_watch_number);
 
-    int8_t setChannelWatch(sensor_t* sensors_watch, uint8_t sensors_watch_number);
+    int8_t setChannelWatch(sensor_t* sensors_watch,
+                           uint8_t sensors_watch_number);
 
-    int8_t unsetChannelWatch(sensor_t* sensors_watch, uint8_t sensors_watch_number);
+    int8_t unsetChannelWatch(sensor_t* sensors_watch,
+                             uint8_t sensors_watch_number);
 
     bool getChannelWatch(sensor_t  sensors_watch);
 
@@ -54,9 +64,13 @@ class SafetyAPI{
 
     safety_reaction_t getChannelReaction();
 
-    int8_t setChannelThresholdMax(sensor_t *sensors_threshold, float32_t *threshold_max, uint8_t sensors_threshold_number);
+    int8_t setChannelThresholdMax(sensor_t *sensors_threshold,
+                                  float32_t *threshold_max,
+                                  uint8_t sensors_threshold_number);
 
-    int8_t setChannelThresholdMin(sensor_t *sensors_threshold, float32_t *threshold_min, uint8_t sensors_threshold_number);
+    int8_t setChannelThresholdMin(sensor_t *sensors_threshold,
+                                  float32_t *threshold_min,
+                                  uint8_t sensors_threshold_number);
 
     float32_t getChannelThresholdMax(sensor_t sensors_threshold);
 
@@ -76,7 +90,7 @@ class SafetyAPI{
 
 extern SafetyAPI safety;
 
-#endif // SAFETYAPI_H_
+#endif /* SAFETYAPI_H_ */
 ```
 
 

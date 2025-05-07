@@ -51,7 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**ngnd\_set**](#function-ngnd_set) (const struct device \* dev, int value) <br> |
+|  void | [**ngnd\_set**](#function-ngnd_set) (const struct device \* dev, int value) <br>_Set the state of the NGND (Neutral Ground) switch._  |
 
 
 
@@ -87,6 +87,7 @@
 
 ### function ngnd\_set 
 
+_Set the state of the NGND (Neutral Ground) switch._ 
 ```C++
 void ngnd_set (
     const struct device * dev,
@@ -96,6 +97,27 @@ void ngnd_set (
 
 
 
+This function controls the activation state of the NGND hardware line.
+
+
+Passing a non-zero value activates (connects) NGND to the GND of the O2 board.
+
+
+Zero disconnects the NGND from the GND.
+
+
+
+
+**Parameters:**
+
+
+* `dev` Pointer to the NGND device structure. 
+* `value` Desired state: `1` to activate, `0` to deactivate. 
+
+
+
+
+        
 
 <hr>
 

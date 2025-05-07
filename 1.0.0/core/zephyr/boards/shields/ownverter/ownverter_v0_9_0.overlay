@@ -9,6 +9,12 @@
 		zephyr,can-primary = &fdcan1;
 	};
 
+	pcb: pcb{
+		compatible= "shield-pcb";
+		shield-name = "TWIST";
+		shield-version = "v0.9.0";
+	};
+
 	powershield: power-shield{
         compatible = "power-leg";
         default-frequency = <200000>;
@@ -384,9 +390,9 @@
 &fdcan1 {
 	pinctrl-0 = <&fdcan1_rx_pb8 &fdcan1_tx_pb9>;
 	pinctrl-names = "default";
-	bus-speed = <500000>;
+	bitrate = <500000>;
 	sample-point = <875>;
-	bus-speed-data = <500000>;
+	bitrate-data = <500000>;
 	sample-point-data = <875>;
 	status = "okay";
 	transceiver0: can-phy0 {

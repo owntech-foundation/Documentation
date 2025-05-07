@@ -8,8 +8,9 @@
 
 
 
+[More...](#detailed-description)
 
-
+* `#include <GpioHAL.h>`
 
 
 
@@ -85,6 +86,13 @@
 
 
 
+## Detailed Description
+
+
+Class definition 
+
+
+    
 ## Public Functions Documentation
 
 
@@ -107,13 +115,21 @@ void GpioHAL::configurePin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
-* `flags` Pin configuration flags. Authorized values:
-  * INPUT
-  * INPUT\_PULLUP
-  * OUTPUT 
+* `pin` Number of pin. Format allowed:
 
 
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3`
+
+
+
+
+
+
+**Parameters:**
+
+
+* `flags` Pin configuration flags. Authorized values: `INPUT`, `INPUT_PULLUP`, `OUTPUT` 
 
 
 
@@ -140,7 +156,15 @@ uint8_t GpioHAL::readPin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
+* `pin` Number of pin. Format allowed:
+
+
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3` 
+
+
+
+
 
 
 
@@ -174,7 +198,11 @@ void GpioHAL::resetPin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
+* `pin` Number of pin. Format allowed:
+
+
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3` 
 
 
 
@@ -201,7 +229,11 @@ void GpioHAL::setPin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
+* `pin` Number of pin. Format allowed:
+
+
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3` 
 
 
 
@@ -224,10 +256,6 @@ void GpioHAL::togglePin (
 
 
 
-* if pin value is 1, it will be set to 0
-* if pin value is 0, it will be set to 1.
-
-
 
 
 
@@ -235,7 +263,11 @@ void GpioHAL::togglePin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
+* `pin` Number of pin. Format allowed:
+
+
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3` 
 
 
 
@@ -263,7 +295,20 @@ void GpioHAL::writePin (
 **Parameters:**
 
 
-* `pin` Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin\_t type for the full list of available STM32-style pins on Spin board. 
+* `pin` Number of pin. Format allowed:
+
+
+* the Spin pin number from 1 to 58
+* STM32-style pin name from `PA1` to `PA15`, `PB1` to `PB15`, `PC1` to `PC15` and `PD1` to `PD3`
+
+
+
+
+
+
+**Parameters:**
+
+
 * `value` Value (0 or 1) to assign to the pin. 
 
 

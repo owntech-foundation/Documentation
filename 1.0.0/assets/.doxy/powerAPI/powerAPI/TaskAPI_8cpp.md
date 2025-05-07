@@ -93,6 +93,10 @@ TaskAPI task;
 
 
 
+Public object to interact with the class 
+
+
+        
 
 <hr>
 

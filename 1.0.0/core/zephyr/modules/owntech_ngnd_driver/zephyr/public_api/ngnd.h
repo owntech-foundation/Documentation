@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-2022 LAAS-CNRS
+ * Copyright (c) 2020-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -28,7 +28,7 @@
 #define NGND_H_
 
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/device.h>
 
 
@@ -37,15 +37,25 @@ extern "C" {
 #endif
 
 
-/////
-// Public device name
+/**
+ *  Public Device Name
+ */
 
 #define NGND_DEVICE DT_NODELABEL(ngnd)
 
 
-/////
-// API
-
+/**
+ * @brief Set the state of the NGND (Neutral Ground) switch.
+ *
+ * This function controls the activation state of the NGND hardware line.
+ * 
+ * Passing a non-zero value activates (connects) NGND to the GND of the O2 board.
+ * 
+ * Zero disconnects the NGND from the GND.
+ *
+ * @param dev   Pointer to the NGND device structure.
+ * @param value Desired state: `1` to activate, `0` to deactivate.
+ */
 void ngnd_set(const struct device* dev, int value);
 
 
@@ -53,4 +63,4 @@ void ngnd_set(const struct device* dev, int value);
 }
 #endif
 
-#endif // NGND_H_
+#endif /* NGND_H_ */

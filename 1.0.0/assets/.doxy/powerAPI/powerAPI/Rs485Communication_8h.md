@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**rs485\_speed\_t**](#enum-rs485_speed_t)  <br> |
+| enum  | [**rs485\_speed\_t**](#enum-rs485_speed_t)  <br>_Defines the possible speeds for the RS485:_  |
 
 
 
@@ -92,6 +92,7 @@
 
 ### enum rs485\_speed\_t 
 
+_Defines the possible speeds for the RS485:_ 
 ```C++
 enum rs485_speed_t {
     SPEED_2M,
@@ -103,6 +104,16 @@ enum rs485_speed_t {
 
 
 
+
+* `SPEED_2M`: 2Mbits/s speed communication
+* `SPEED_5M`: 5Mbits/s speed communication
+* `SPEED_10M`: 10Mbits/s speed communication
+* `SPEED_20M`: 20Mbits/s speed communication 
+
+
+
+
+        
 
 <hr>
 

@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classSyncCommunication" kind="class" language="C++" prot="public">
     <compoundname>SyncCommunication</compoundname>
+    <includes refid="SyncCommunication_8h" local="no">SyncCommunication.h</includes>
     <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classSyncCommunication_1a8a5316e02be007aed366fea31211e226" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -10,20 +11,14 @@
         <name>initMaster</name>
         <qualifiedname>SyncCommunication::initMaster</qualifiedname>
         <briefdescription>
-<para>initialization synchronization as MASTER, the master send the synchronization pulsle. </para>
+<para>Initialization synchronization as <computeroutput>MASTER</computeroutput>, the master send the synchronization pulse. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Luiz Villa <ulink url="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
+<para>The SyncIN pin is disabled here, it will be enabled in the ctrl task to ensure synchronization between master and slave.</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="49" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.cpp" bodystart="35" bodyend="52"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="51" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.cpp" bodystart="35" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classSyncCommunication_1a548ac9444487f35e547f33d5f9d26e9f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,20 +27,21 @@
         <name>initSlave</name>
         <qualifiedname>SyncCommunication::initSlave</qualifiedname>
         <briefdescription>
-<para>initialization synchronization as SLAVE, the slave receive the synchronization pulsle. </para>
+<para>Initialization synchronization as <computeroutput>SLAVE</computeroutput>, the slave receive the synchronization pulse. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="54" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.cpp" bodystart="54" bodyend="82"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="57" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.cpp" bodystart="60" bodyend="95"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Static class definition </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="41" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" bodystart="42" bodyend="55"/>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" line="42" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/SyncCommunication.h" bodystart="43" bodyend="58"/>
     <listofallmembers>
       <member refid="classSyncCommunication_1a8a5316e02be007aed366fea31211e226" prot="public" virt="non-virtual"><scope>SyncCommunication</scope><name>initMaster</name></member>
       <member refid="classSyncCommunication_1a548ac9444487f35e547f33d5f9d26e9f" prot="public" virt="non-virtual"><scope>SyncCommunication</scope><name>initSlave</name></member>

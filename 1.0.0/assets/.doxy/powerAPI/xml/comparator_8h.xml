@@ -9,19 +9,23 @@
         <argsstring>()</argsstring>
         <name>comparator1_init</name>
         <briefdescription>
+<para>Initialize comparator <computeroutput>COMP1</computeroutput> with predefined settings. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2022 </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
+<para>This function configures <computeroutput>GPIO</computeroutput> and comparator settings for <computeroutput>COMP1</computeroutput>:</para>
+<para><itemizedlist>
+<listitem><para>Sets <computeroutput>PA1</computeroutput> as the positive input (<computeroutput>COMP1_INP</computeroutput>) in analog mode.</para>
+</listitem><listitem><para>Routes <computeroutput>DAC3</computeroutput> Channel 1 as the negative input.</para>
+</listitem><listitem><para>Configures non-inverting output, no hysteresis, and no blanking source.</para>
+</listitem><listitem><para>Disables related EXTI line (line 21) events and interrupts.</para>
+</listitem><listitem><para>Applies voltage scaler stabilization delay.</para>
+</listitem><listitem><para>Enables the comparator. </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" line="32" column="6" bodyfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.c" bodystart="30" bodyend="33" declfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" declline="32" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" line="49" column="6" bodyfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.c" bodystart="30" bodyend="33" declfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" declline="49" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="comparator_8h_1a54ea5c2265520f1616c4c11aea8f7b47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -29,12 +33,23 @@
         <argsstring>()</argsstring>
         <name>comparator3_init</name>
         <briefdescription>
+<para>Initialize comparator <computeroutput>COMP3</computeroutput> with predefined settings. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function configures <computeroutput>GPIO</computeroutput> and comparator settings for <computeroutput>COMP3</computeroutput>:</para>
+<para><itemizedlist>
+<listitem><para>Sets <computeroutput>PC1</computeroutput> as the positive input (<computeroutput>COMP3_INP</computeroutput>) in analog mode.</para>
+</listitem><listitem><para>Routes <computeroutput>DAC1</computeroutput> Channel 1 as the negative input.</para>
+</listitem><listitem><para>Configures non-inverting output, no hysteresis, and no blanking source.</para>
+</listitem><listitem><para>Disables related EXTI line (line 29) events and interrupts.</para>
+</listitem><listitem><para>Applies voltage scaler stabilization delay.</para>
+</listitem><listitem><para>Enables the comparator. </para>
+</listitem></itemizedlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" line="33" column="6" bodyfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.c" bodystart="35" bodyend="38" declfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" declline="33" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" line="68" column="6" bodyfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.c" bodystart="35" bodyend="38" declfile="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h" declline="68" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -43,7 +58,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -61,6 +76,10 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@author<sp/><sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>@author<sp/><sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMPARATOR_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMPARATOR_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -69,15 +88,16 @@
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>comparator1_init();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>comparator3_init();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>COMPARATOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>comparator1_init();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>comparator3_init();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>COMPARATOR_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_comparator_driver/zephyr/public_api/comparator.h"/>
   </compounddef>

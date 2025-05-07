@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,11 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 #ifndef ANALOGCOMMUNICATION_H_
 #define ANALOGCOMMUNICATION_H_
@@ -37,7 +42,7 @@
 #include <arm_math.h>
 
 
-// Static class definition
+/* Static class definition */
 
 class AnalogCommunication
 {
@@ -50,9 +55,9 @@ public:
     static void setAnalogCommValue(uint32_t analog_bus_value);
 };
 
-#endif // CONFIG_OWNTECH_COMMUNICATION_ENABLE_ANALOG
+#endif /* CONFIG_OWNTECH_COMMUNICATION_ENABLE_ANALOG */
 
-#endif // ANALOGCOMMUNICATION_H_
+#endif /* ANALOGCOMMUNICATION_H_ */
 ```
 
 

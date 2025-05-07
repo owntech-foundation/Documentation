@@ -51,6 +51,7 @@
 |  uint16\_t | [**dt\_pwm\_x1\_high**](#variable-dt_pwm_x1_high)   = `/* multi line expression */`<br> |
 |  uint16\_t | [**dt\_rising\_deadtime**](#variable-dt_rising_deadtime)   = `/* multi line expression */`<br> |
 |  uint32\_t | [**timer\_frequency**](#variable-timer_frequency)   = `DT\_PROP(POWER\_SHIELD\_ID, default\_frequency)`<br> |
+|  uint32\_t | [**timer\_min\_frequency**](#variable-timer_min_frequency)   = `DT\_PROP(POWER\_SHIELD\_ID, min\_frequency)`<br> |
 
 
 
@@ -108,7 +109,7 @@ adc_t dt_adc[];
 
 
 
-Define an array 'dt\_adc' of type 'adc\_t' and initialize it with an array of 'adc' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_adc` of type `adc_t` and initialize it with an array of `adc` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -125,7 +126,7 @@ uint32_t dt_adc_decim[];
 
 
 
-Define an array 'dt\_adc\_decim' of type 'uint32\_t' and initialize it with an array of 'adc\_decim' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_adc_decim` of type `uint32_t` and initialize it with an array of `adc_decim` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -142,7 +143,7 @@ uint16_t dt_current_pin[];
 
 
 
-Define an array 'dt\_current\_pin' of type 'uint16' and initialize it with an array of 'curent\_pin\_num' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_current_pin` of type `uint16` and initialize it with an array of `curent_pin_num` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -159,7 +160,7 @@ hrtim_adc_edgetrigger_t dt_edge_trigger[];
 
 
 
-Define an array 'dt\_rollover' of type 'hrtim\_adc\_rollover\_t' and initialize it with an array of 'roll\_over' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_rollover` of type `hrtim_adc_rollover_t` and initialize it with an array of `roll_over` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -176,7 +177,7 @@ uint16_t dt_falling_deadtime[];
 
 
 
-Define an array 'dt\_falling\_deadtime' of type 'uint16\_t' and initialize it with an array of falling dead time values from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_falling_deadtime` of type `uint16_t` and initialize it with an array of falling dead time values from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -193,7 +194,7 @@ uint8_t dt_leg_count;
 
 
 
-Define a variable 'dt\_leg\_count' and initialize it with the count of children with status 'OKAY' under the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define a variable `dt_leg_count` and initialize it with the count of children with status `OKAY` under the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -210,7 +211,7 @@ hrtim_cnt_t dt_modulation[];
 
 
 
-Define an array 'dt\_modulation' of type 'hrtim\_cnt\_t' and initialize it with an array of 'modulation' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_modulation` of type `hrtim_cnt_t` and initialize it with an array of `modulation` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -227,7 +228,7 @@ uint8_t dt_output1_inactive[];
 
 
 
-Define an array 'dt\_output1\_inactive' of type 'uint8\_t' and initialize it with an array of 'output1\_inactive' values from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_output1_inactive` of type `uint8_t` and initialize it with an array of `output1_inactive` values from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -244,7 +245,7 @@ uint8_t dt_output2_inactive[];
 
 
 
-Define an array 'dt\_output2\_inactive' of type 'uint8\_t' and initialize it with an array of 'output2\_inactive' values from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_output2_inactive` of type `uint8_t` and initialize it with an array of `output2_inactive` values from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -261,7 +262,7 @@ int16_t dt_phase_shift[];
 
 
 
-Define an array 'dt\_phase\_shift' of type 'int16\_t' and initialize it with an array of 'phase\_shift' property from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_phase_shift` of type `int16_t` and initialize it with an array of `phase_shift` property from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -278,7 +279,7 @@ uint16_t dt_pin_capacitor[];
 
 
 
-Define an array 'dt\_pin\_driver' of type 'uint16' and initialize it with an array of 'capa\_pin\_num' values from the children of the Device Tree node with ID 'POWER\_SHIELD\_ID' 
+Define an array `dt_pin_driver` of type `uint16` and initialize it with an array of `capa_pin_num` values from the children of the Device Tree node with ID `POWER_SHIELD_ID` 
 
 
         
@@ -295,7 +296,7 @@ uint16_t dt_pin_driver[];
 
 
 
-Define an array 'dt\_pin\_driver' of type 'uint16' and initialize it with an array of 'driver\_pin\_num' values from the children of the Device Tree node with ID 'POWER\_SHIELD\_ID' 
+Define an array `dt_pin_driver` of type `uint16` and initialize it with an array of `driver_pin_num` values from the children of the Device Tree node with ID `POWER_SHIELD_ID` 
 
 
         
@@ -312,7 +313,7 @@ uint16_t dt_pwm_pin[];
 
 
 
-Define an array 'dt\_pwm\_pin' of type 'hrtim\_tu\_number\_t' and initialize it with an array containing the first element of 'pwm\_pin\_num' properties from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_pwm_pin` of type `hrtim_tu_number_t` and initialize it with an array containing the first element of `pwm_pin_num` properties from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -329,7 +330,7 @@ uint16_t dt_pwm_x1_high[];
 
 
 
-Define an array 'dt\_pwm\_x1\_high' and initialize it with an array of 'timing\_unit' properties from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_pwm_x1_high` and initialize it with an array of `timing_unit` properties from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -346,7 +347,7 @@ uint16_t dt_rising_deadtime[];
 
 
 
-Define an array 'dt\_rising\_deadtime' of type 'uint16\_t' and initialize it with an array of rising dead time values from the children of the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
+Define an array `dt_rising_deadtime` of type `uint16_t` and initialize it with an array of rising dead time values from the children of the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
         
@@ -363,35 +364,24 @@ uint32_t timer_frequency;
 
 
 
+Define a variable `timer_frequency` and initialize it with the `frequency` property from the Device Tree node with the ID `POWER_SHIELD_ID`. 
 
 
-**Date:**
+        
 
-2024
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
+<hr>
 
 
 
+### variable timer\_min\_frequency 
 
-**Author:**
-
-Jean Alinei [jean.alinei@owntech.org](mailto:jean.alinei@owntech.org) 
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
+```C++
+uint32_t timer_min_frequency;
+```
 
 
 
+Define a variable 'timer\_min\_frequency' and initialize it with the 'min-frequency' property from the Device Tree node with the ID 'POWER\_SHIELD\_ID'. 
 
 
         

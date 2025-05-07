@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2023
  * @author Clément Foucher <clement.foucher@laas.fr>
  * @author Luiz Villa <luiz.villa@laas.fr>
@@ -35,21 +35,22 @@ public:
 
 	/**
 	 * @brief Turns the NGND switch ON.
+	 * 
 	 *        It is used with versions of the TWIST board prior to 1.4.
 	 */
 	void turnOn();
 
 	/**
 	 * @brief Turns the NGND switch OFF.
-	 *        It is used with versions of the TWIST board prior to 1.4.
+	 * 
+	 *  	  It is used with versions of the TWIST board prior to 1.4.
 	 */
 	void turnOff();
 
 private:
 
-
 };
 
 
 
-#endif // LED_H_
+#endif /* NGND_H_ */

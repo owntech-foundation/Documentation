@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2023
  * @author Clément Foucher <clement.foucher@laas.fr>
  * @author Luiz Villa <luiz.villa@laas.fr>
@@ -31,19 +31,49 @@
 class LedHAL
 {
 public:
+    /**
+     * @brief Turn the LED on.
+     *
+     * Ensures the LED is initialized, then sets the output state to active.
+     */
 	void turnOn();
+
+    /**
+     * @brief Turn the LED off.
+     *
+     * Ensures the LED is initialized, then sets the output state to inactive.
+     */	
 	void turnOff();
+
+    /**
+     * @brief Toggle the LED state.
+     *
+     * Changes the LED state from on to off or vice versa.
+	 * 
+     * Performs lazy initialization if not already done.
+     */
 	void toggle();
 
 private:
-    // Private functions
+    /**
+     * @brief Initialize the LED hardware.
+     *
+     * Configures GPIO or peripheral resources used by the LED.
+	 * 
+     * This method is called internally by public functions and is guarded
+     * by the `ledInitialized` flag.
+     */
 	void initialize();
 
-    // Private variables
+    /**
+     * @brief Tracks whether the LED has been initialized.
+     *
+     * Used to prevent redundant hardware setup.
+     */
 	static bool ledInitialized;
 
 };
 
 
 
-#endif // LED_H_
+#endif /* LED_H_ */

@@ -8,8 +8,9 @@
 
 
 
+[More...](#detailed-description)
 
-
+* `#include <TaskAPI.h>`
 
 
 
@@ -52,11 +53,11 @@
 | Type | Name |
 | ---: | :--- |
 |  int8\_t | [**createBackground**](#function-createbackground) (task\_function\_t routine) <br>_Creates a background task. Background tasks are asynchronous tasks that run in the background when there is no critical task running._  |
-|  int8\_t | [**createCritical**](#function-createcritical) (task\_function\_t periodic\_task, uint32\_t task\_period\_us, scheduling\_interrupt\_source\_t int\_source=source\_hrtim) <br>_Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running._  |
+|  int8\_t | [**createCritical**](#function-createcritical) (task\_function\_t periodic\_task, uint32\_t task\_period\_us, scheduling\_interrupt\_source\_t int\_source=source\_hrtim) <br>_Creates a time critical task._  |
 |  void | [**startBackground**](#function-startbackground) (uint8\_t task\_number) <br>_Use this function to start a previously defined background task using its task number._  |
 |  void | [**startCritical**](#function-startcritical) (bool manage\_data\_acquisition=true) <br>_Use this function to start a previously defined a critical task._  |
 |  void | [**stopBackground**](#function-stopbackground) (uint8\_t task\_number) <br>_Use this function to stop a previously started background task using its task number._  |
-|  void | [**stopCritical**](#function-stopcritical) () <br>_Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling_ [_**startCritical()**_](classTaskAPI.md#function-startcritical) _again._ |
+|  void | [**stopCritical**](#function-stopcritical) () <br>_Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptable user task. The task can be then resumed by calling_ [_**startCritical()**_](classTaskAPI.md#function-startcritical) _again._ |
 |  void | [**suspendBackgroundMs**](#function-suspendbackgroundms) (uint32\_t duration\_ms) <br>_This function allows to suspend a background task for a specified duration expressed in milliseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently._  |
 |  void | [**suspendBackgroundUs**](#function-suspendbackgroundus) (uint32\_t duration\_us) <br>_This function allows to suspend a background task for a specified duration expressed in microseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently._  |
 
@@ -87,6 +88,13 @@
 
 
 
+## Detailed Description
+
+
+Static class definition 
+
+
+    
 ## Public Functions Documentation
 
 
@@ -128,7 +136,7 @@ Number assigned to the task. Will be -1 if max number of asynchronous task has b
 
 ### function createCritical 
 
-_Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running._ 
+_Creates a time critical task._ 
 ```C++
 int8_t TaskAPI::createCritical (
     task_function_t periodic_task,
@@ -141,9 +149,12 @@ int8_t TaskAPI::createCritical (
 
 
 
+
+
+
 **Note:**
 
-If the HRTIM is used to trigger the task (which is the default behavior), then the HRTIM must have been configured _before_ calling this function.
+If the `HRTIM` is used to trigger the task (which is the default behavior), then the `HRTIM` must have been configured _before_ calling this function.
 
 
 
@@ -151,18 +162,18 @@ If the HRTIM is used to trigger the task (which is the default behavior), then t
 **Parameters:**
 
 
-* `periodic_task` Pointer to the void(void) function to be executed periodically. 
-* `task_period_us` Period of the function in µs. Allowed range: 1 to 6553 µs. If interrupt source is HRTIM, this value _must_ be an integer multiple of the HRTIM period. 
-* `int_source` Interrupt source that triggers the task. By default, the HRTIM is the source, but this optional parameter can be provided to set TIM6 as the source in case the HRTIM is not used or if the task can't be correlated to an HRTIM event. Allowed values are source\_hrtim and source\_tim6. 
+* `periodic_task` Pointer to the void(void) function to be executed periodically.
+* `task_period_us` Period of the function in µs. Allowed range: 1 to 6553 µs. If interrupt source is `HRTIM`, this value _must_ be an integer multiple of the `HRTIM` period.
+* `int_source` Interrupt source that triggers the task. By default, the `HRTIM` is the source, but this optional parameter can be provided to set TIM6 as the source in case the `HRTIM` is not used or if the task can't be correlated to an `HRTIM` event. Allowed values are source\_hrtim and source\_tim6.
 
 
 
 **Returns:**
 
-0 if everything went well, -1 if there was an error defining the task. An error can occur notably when an uninterruptible task has already been defined previously. 
+`0` if everything went well, `-1` if there was an error defining the task.
 
 
-
+An error can occur notably when an uninterruptible task has already been defined previously. 
 
 
         
@@ -212,7 +223,7 @@ void TaskAPI::startCritical (
 
 
 
-A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task.
+A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptable user task.
 
 
 If no value is provided for the parameter and Data Acquisition has not been started yet, Scheduling will automatically start Data Acquisition. Thus, make sure all ADC configuration has been carried out before starting the uninterruptible task.
@@ -266,7 +277,7 @@ Background tasks are asynchronous tasks that run in the background when there is
 
 ### function stopCritical 
 
-_Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling_ [_**startCritical()**_](classTaskAPI.md#function-startcritical) _again._
+_Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptable user task. The task can be then resumed by calling_ [_**startCritical()**_](classTaskAPI.md#function-startcritical) _again._
 ```C++
 void TaskAPI::stopCritical () 
 ```

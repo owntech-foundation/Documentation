@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classDataAPI" kind="class" language="C++" prot="public">
     <compoundname>DataAPI</compoundname>
+    <includes refid="DataAPI_8h" local="no">DataAPI.h</includes>
     <sectiondef kind="friend">
       <memberdef kind="friend" id="classDataAPI_1a021a5ce881f972ca8085a6947796c454" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>class</type>
@@ -18,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="103" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="103" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="105" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classDataAPI_1aaf0811e412708fc111d5c121f97cd9c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="104" column="13"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="106" column="13"/>
       </memberdef>
       <memberdef kind="friend" id="classDataAPI_1a3a4c04db9ff8cba7f3b4606264d63177" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="105" column="13"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="107" column="13"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -63,19 +64,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2024</para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Luiz Villa <ulink url="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Thomas Walter <ulink url="mailto:thomas.walter@laas.fr">thomas.walter@laas.fr</ulink> </para>
-</simplesect>
-</para>
+<para>Static class members </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="465" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="465" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="722" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="722" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1acd293f6108985afa29d7ebbc5a968124" prot="private" static="yes" mutable="no">
         <type>bool</type>
@@ -90,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="466" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="466" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="723" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="723" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a0a1fc6398661eddab3c662cb75292a65" prot="private" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -105,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="467" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="48" bodyend="48"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="724" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1aa0c1000fc5ea7ae9a92e18878bbc7906" prot="private" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -120,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="468" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="49" bodyend="49"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="725" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1ae19ede93eb2655a763eeaf83ea0420a4" prot="private" static="yes" mutable="no">
         <type>DispatchMethod_t</type>
@@ -135,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="469" column="25" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="469" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="726" column="25" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="726" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a0d949a03948434ebfbfa3c7f5de23412" prot="private" static="yes" mutable="no">
         <type>uint32_t</type>
@@ -150,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="470" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="470" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="727" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="727" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1a70ac94ae0b2ea1f35afdcc236d1b7214" prot="private" static="yes" mutable="no">
         <type>adc_t</type>
@@ -165,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="471" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="55" bodyend="55"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="728" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="55" bodyend="55"/>
       </memberdef>
       <memberdef kind="variable" id="classDataAPI_1acd0b5c25cdf42a94a60811e2fead798b" prot="private" static="yes" mutable="no">
         <type>float32_t ***</type>
@@ -180,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="472" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="472" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="729" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="729" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -193,17 +186,19 @@
         <param>
           <type>uint8_t</type>
           <declname>pin_number</declname>
+          <defname>pin_num</defname>
         </param>
         <param>
           <type>adc_t</type>
           <declname>adc_number</declname>
+          <defname>adc_num</defname>
           <defval>DEFAULT_ADC</defval>
         </param>
         <briefdescription>
 <para>This function is used to enable acquisition on a Spin PIN with a given ADC. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Not any pin can be used for acquisiton: the pin must be linked to a channel of the given ADC. Refer to Spin pinout image for PIN/ADC relations.</para>
+<para><simplesect kind="note"><para>Not any pin can be used for acquisition: the pin must be linked to a channel of the given ADC. Refer to Spin pinout image for PIN/ADC relations.</para>
 </simplesect>
 <simplesect kind="note"><para>This function must be called <emphasis>before</emphasis> Data API is started.</para>
 </simplesect>
@@ -220,21 +215,25 @@
 <parametername direction="in">adc_number</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of the ADC on which acquisition is to be done. This parameter can be omitted, in which case:<itemizedlist>
+<para>Number of the ADC on which acquisition is to be done. <linebreak/>
+ This parameter can be omitted, in which case:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
 <listitem><para>If only one ADC is linked to the given pin, it will be selected.</para>
 </listitem><listitem><para>If two ADCs are available for acquisition on the given pin, the ADC with the lowest number will be selected.</para>
 </listitem></itemizedlist>
 </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>0 if acquisition was correctly enabled, -1 if there was an error. Errors generally indicate that the given pin is not linked to and ADC, and thus can not be used for acquisition. If the adc_number parameter was explicitely provided, it can also indicate that the given ADC is not available for acquisition on the provided pin. </para>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if acquisition was correctly enabled, <computeroutput>-1</computeroutput> if there was an error.</para>
 </simplesect>
-</para>
+Errors generally indicate that the given pin is not linked to and ADC, and thus can not be used for acquisition.</para>
+<para>If the adc_number parameter was explicitly provided, it can also indicate that the given ADC is not available for acquisition on the provided pin.</para>
+<para>Public functions accessible only when using a power shield </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="132" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="64" bodyend="89"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="141" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="63" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a4656e02f0227660869d5167f456fedfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -246,19 +245,26 @@
 <para>This functions manually starts the acquisition chain. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>If your code uses an uninterruptible task, you do not need to start Data Acquisition manually, it will automatically be started at the same time as the task as their internal behavior are intrinsically linked. If for some reason you have an uninterruptible task in your code, but do not want the Scheduling module to be in charge of Data Acquisition, you need to indicate it when starting the uninterruptible task. In that case, Data Acquisition must be manually started using this function. Note that in taht case, dispatch will use DMA interrupts which consumes a non-negligible amount of processor time and it is not advised.</para>
+<para><simplesect kind="note"><para>If your code uses an uninterruptible task, you do not need to start Data Acquisition manually:</para>
 </simplesect>
-<simplesect kind="note"><para>Data Acquisition must be started only after ADC module configuration has been fully carried out. No ADC configuration change is allowed after module has been started. If you&apos;re using a power shield and are not sure how to initialize ADCs, you can use data.enableShieldDefaultChannels() for that purpose.</para>
+It will instead start automatically at the same time as the task as their internal behavior is intrinsically linked.</para>
+<para>If, for some reason, you have an uninterruptible task in your code, but do not want the Scheduling module to be in charge of Data Acquisition, you need to indicate it when starting the uninterruptible task.</para>
+<para>In that case, Data Acquisition must be manually started using this function.</para>
+<para>Note that in that case, dispatch will use DMA interrupts which consumes a non-negligible amount of processor time and it is not advised.</para>
+<para><simplesect kind="note"><para>Data Acquisition must be started only after ADC module configuration has been fully carried out.</para>
 </simplesect>
-<simplesect kind="note"><para>Data Acquisition must be started before accessing any data.get*() or data.peek*() function. Other Data Acquisition functions are safe to use before starting the module.</para>
+No ADC configuration change is allowed after module has been started.</para>
+<para>If you&apos;re using a power shield and are not sure how to initialize ADCs, you can use data.enableShieldDefaultChannels() for that purpose.</para>
+<para><simplesect kind="note"><para>Data Acquisition must be started before accessing any data.get*() or data.peek*() function.</para>
 </simplesect>
-<simplesect kind="return"><para>0 if everything went well, -1 if there was an error. Error is triggered when dispatch method is set to be external, but the repetition value has not provided. Another source of error is trying to start Data Acquisition after it has already been started. </para>
+Other Data Acquisition functions are safe to use before starting the module.</para>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if everything went well, <computeroutput>-1</computeroutput> if there was an error Error is triggered when dispatch method is set to be external, but the repetition value has not provided.</para>
 </simplesect>
-</para>
+Another source of error is trying to start Data Acquisition after it has already been started. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="164" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="91" bodyend="126"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="188" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="90" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -271,12 +277,14 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>   For auto-spawning threads, this allows to make sure the module
-   has already been started before trying to access measures.
+   has already been started before trying to access measurements.
 
-   If you don&apos;t use (or don&apos;t know what are) auto-spawning threads,
-   just make sure calls to any data.get*() or data.peek*()
-   function occur after the uninterruptible task is started, or
-   Data Acquisition is manually started, and ignore this function.
+   If you do NOT use (or do NOT know what are) auto-spawning threads:
+
+      - just make sure calls to any `data.get*()` or `data.peek*()`
+   function occur after the uninterruptible task is started, 
+
+      - or `Data Acquisition is manually started, and ignore this function.
 </verbatim></para>
 <para><simplesect kind="return"><para>true is the module has been started, false otherwise. </para>
 </simplesect>
@@ -284,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="179" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="128" bodyend="131"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="205" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="127" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -296,13 +304,15 @@
 <para>Stops the module if it is started. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>0 if everything went well, -1 if there was an error. Error is triggered when trying to stop Data API while it was not started. </para>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if everything went well, <computeroutput>-1</computeroutput> if there was an error. <verbatim>       Error is triggered when trying to stop Data API while it was not 
+       started.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="188" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="133" bodyend="161"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="215" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="132" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -315,10 +325,17 @@
           <declname>adc_number</declname>
         </param>
         <briefdescription>
-<para>Triggers an acquisition on a given ADC. Each channel configured on this ADC will be acquired one after the other until all configured channels have been acquired. </para>
+<para>Triggers an acquisition on a given ADC. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the at least one channel is enabled on the ADC and the <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module is started, either explicitly or by starting the Uninterruptible task.</para>
+<para><verbatim>      Each channel configured on this ADC will be acquired one after 
+      the other until all configured channels have been acquired.
+</verbatim></para>
+<para><simplesect kind="note"><para>This function can NOT be called before: <verbatim>      - at least one channel is enabled on the ADC
+
+      - AND the DataAPI module is started, (either explicitly or by 
+        starting the Uninterruptible task.)
+</verbatim></para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -333,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="201" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="163" bodyend="178"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="232" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="164" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -350,14 +367,27 @@
           <declname>number_of_values_acquired</declname>
         </param>
         <briefdescription>
-<para>Function to access the acquired data for specified pin. This function provides a buffer in which all data that have been acquired since last call are stored. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer. </para>
+<para>Function to access the acquired data for specified pin. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must have been started, either explicitly or by starting the Uninterruptible task.</para>
+<para><verbatim>   This function provides a buffer in which all data that
+   have been acquired since last call are stored. 
+</verbatim></para>
+<para><simplesect kind="note"><para>The count of these values is returned as an output parameter. <verbatim>      The user has to define a variable and pass it as the parameter
+   of the function. 
+
+      The variable will be updated with the number of values that are 
+      available in the buffer.
+</verbatim></para>
 </simplesect>
-<simplesect kind="note"><para>When calling this function, it invalidates the buffer returned by a previous call to the same function. However, different channels buffers are independent from each other.</para>
+<simplesect kind="note"><para>This function can NOT be called before the pin is enabled. <verbatim>   The DataAPI module must have been started, either
+   explicitly or by starting the Uninterruptible task.
+</verbatim></para>
 </simplesect>
-<simplesect kind="note"><para>When using this functions, the user is responsible for data conversion. Use data.convertValue() function for this purpose.</para>
+<simplesect kind="note"><para>When calling this function, it invalidates the buffer returned by a previous call to the same function.</para>
+</simplesect>
+However, different channels buffers are independent from each other.</para>
+<para><simplesect kind="note"><para>When using this functions, the user is responsible for data conversion. Use data.convertValue() function for this purpose.</para>
 </simplesect>
 <simplesect kind="note"><para>When using this function, DO NOT use the function to get the latest converted value for the same channel as this function will clear the buffer and disregard all values but the latest.</para>
 </simplesect>
@@ -378,13 +408,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Pointer to a buffer in which the acquired values are stored. If number_of_values_acquired is 0, do not try to access the buffer as it may be nullptr. </para>
+<simplesect kind="return"><para>Pointer to a buffer in which the acquired values are stored. <verbatim>    If number_of_values_acquired is `0`, do not try to access the
+    buffer as it may be nullptr.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="237" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="180" bodyend="197"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="276" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="178" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aed44259775058a42eccd5603a4137d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t *</type>
@@ -401,16 +433,41 @@
           <declname>number_of_values_acquired</declname>
         </param>
         <briefdescription>
-<para>Function to access the acquired data for specified pin. This function converts all values that have been acquired since last call are stored and provide an array containing all of them. The count of these values is returned as an output parameter: the user has to define a variable and pass it as the parameter of the function. The variable will be updated with the number of values that are available in the buffer. </para>
+<para>Function to access the acquired data for specified pin. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="warning"><para>This is an expensive function. Calling this function trigger the conversion of all values acquired since the last call. If only the lastet value is required, it is advised to call <ref refid="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" kindref="member">getLatestValue()</ref> instead. If multiple values are required, but not all, it is advised to call <ref refid="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" kindref="member">getRawValues()</ref> instead, then explicitely convert required values using <ref refid="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" kindref="member">convertValue()</ref>.</para>
+<para><verbatim>   This function converts all values that have been acquired
+   since last call are stored and provide an array containing
+   all of them. 
+
+      The count of these values is returned as an
+   output parameter. 
+
+      The user has to define a variable and pass it as the parameter of 
+      the function.
+
+      The variable will be updated with the number of values that are 
+      available in the buffer.
+</verbatim></para>
+<para><simplesect kind="warning"><para>This is an expensive function. <verbatim>        Calling this function trigger the conversion of all values 
+        acquired since the last call.
+
+     If only the latest value is required, it is advised to call
+     getLatestValue() instead. 
+
+        If multiple values are required, but not all, it is advised to 
+        call getRawValues() instead, then explicitly convert required 
+        values using convertValue().
+</verbatim></para>
 </simplesect>
-<simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must have been started, either explicitly or by starting the Uninterruptible task.</para>
+<simplesect kind="note"><para>This function can NOT be called before the pin is enabled. <verbatim>   The DataAPI module must have been started, either
+   explicitly or by starting the Uninterruptible task.
+</verbatim></para>
 </simplesect>
-<simplesect kind="note"><para>When calling this function, it invalidates the array returned by a previous call to the same function. However, different channels buffers are independent from each other.</para>
+<simplesect kind="note"><para>When calling this function, it invalidates the array returned by a previous call to the same function.</para>
 </simplesect>
-<parameterlist kind="param"><parameteritem>
+However, different channels buffers are independent from each other.</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">pin_number</parametername>
 </parameternamelist>
@@ -427,13 +484,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Pointer to an array in which the acquired values are stored. If number_of_values_acquired is 0, do not try to access the buffer as it may be nullptr. </para>
+<simplesect kind="return"><para>Pointer to an array in which the acquired values are stored. <verbatim>    If number_of_values_acquired is 0, do not try to access the
+    buffer as it may be nullptr.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="273" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="199" bodyend="216"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="328" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="200" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a71c77e8ada7b064600e89a1e1a827ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -446,10 +505,18 @@
           <declname>pin_number</declname>
         </param>
         <briefdescription>
-<para>Function to access the latest value available from a pin, expressed in the relevant unit for the data: Volts, Amperes, or Degree Celcius. This function will not touch anything in the buffer, and thus can be called safely at any time after the module has been started. </para>
+<para>Function to access the latest value available from a pin. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must have been started, either explicitly or by starting the Uninterruptible task.</para>
+<para><verbatim>      Values are expressed in the relevant unit for the data 
+      (Volts, Amperes, or Degree Celsius). 
+
+      This function will not touch anything in the buffer, and thus can 
+      be called safely at any time after the module has been started.
+</verbatim></para>
+<para><simplesect kind="note"><para>This function can NOT be called before the pin is enabled. <verbatim>   The DataAPI module must have been started, either
+   explicitly or by starting the Uninterruptible task.
+</verbatim></para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -460,13 +527,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Latest available value available from the given channel. If there was no value acquired in this channel yet, return value is NO_VALUE. </para>
+<simplesect kind="return"><para>Latest available value available from the given channel. <verbatim>       If there was no value acquired in this channel yet,
+    return value is NO_VALUE.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="292" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="218" bodyend="233"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="352" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="222" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aaf284cff0d07af90e2bf5ca6832e4af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -484,10 +553,15 @@
           <defval>nullptr</defval>
         </param>
         <briefdescription>
-<para>This function returns the latest acquired measure expressed in the relevant unit for the channel: Volts, Amperes, or Degree Celcius. </para>
+<para>This function returns the latest acquired measurement. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must have been started, either explicitly or by starting the Uninterruptible task.</para>
+<para><verbatim>      Values are expressed in the relevant unit for the channel 
+      (Volts, Amperes, or Degree Celsius).
+</verbatim></para>
+<para><simplesect kind="note"><para>This function can NOT be called before the pin is enabled. <verbatim>   The DataAPI module must have been started, either
+   explicitly or by starting the Uninterruptible task.
+</verbatim></para>
 </simplesect>
 <simplesect kind="note"><para>When using this functions, you loose the ability to access raw values using data.getRawValues() function for the matching channel, as data.getLatestValue() function clears the buffer on each call.</para>
 </simplesect>
@@ -504,22 +578,31 @@
 <parametername direction="out">dataValid</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to an uint8_t variable. This parameter is facultative. If this parameter is provided, it will be updated to indicate information about data. Possible values for this parameter will be:<itemizedlist>
-<listitem><para>DATA_IS_OK if returned data is a newly acquired data,</para>
-</listitem><listitem><para>DATA_IS_OLD if returned data has already been provided before (no new data available since latest time this function was called),</para>
-</listitem><listitem><para>DATA_IS_MISSING if returned data is NO_VALUE.</para>
-</listitem></itemizedlist>
-</para>
+<para>Pointer to an uint8_t variable. <verbatim>      This parameter is facultative. 
+
+      If this parameter is provided, it will be updated
+   to indicate information about data. 
+
+      Possible values for this parameter will be:
+
+   - `DATA_IS_OK` if returned data is a newly acquired data,
+
+   - `DATA_IS_OLD` if returned data has already been provided before
+   (no new data available since latest time this function was called),
+
+   - `DATA_IS_MISSING` if returned data is NO_VALUE.
+</verbatim></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Latest acquired measure for the channel. If no value was acquired in this channel yet, return value is NO_VALUE. </para>
+<simplesect kind="return"><para>Latest acquired measure for the channel. <verbatim>    If no value was acquired in this channel yet, return value is NO_VALUE.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="322" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="235" bodyend="258"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="392" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="239" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a5d2310e005017f6a5a76786cf6012b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -536,10 +619,10 @@
           <declname>raw_value</declname>
         </param>
         <briefdescription>
-<para>Use this function to convert values obtained using matching data.getRawValues() function to relevant unit for the data: Volts, Amperes, or Degree Celcius. </para>
+<para>Use this function to convert values obtained using matching data.getRawValues() function to relevant unit for the data (Volts, Amperes, or Degree Celsius). </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled.</para>
+<para><simplesect kind="note"><para>This function can NOT be called before the pin is enabled.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -558,13 +641,14 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Converted value in the relevant unit. If there is an error, returns -5000. </para>
+<simplesect kind="return"><para>Converted value in the relevant unit. <verbatim>       If there is an error, returns `-5000`.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="336" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="260" bodyend="275"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="408" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="264" bodyend="279"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a55bc18d5cbcb646fa0dca4cad6d83d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -588,7 +672,9 @@
 <para>Use this function to tweak the conversion values for the channel if default values are not accurate enough. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the pin is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> module must not have been started, neither explicitly nor by starting the Uninterruptible task.</para>
+<para><simplesect kind="note"><para>This function can NOT be called before the pin is enabled. <verbatim>   The DataAPI module must not have been started, neither
+   explicitly nor by starting the Uninterruptible task.
+</verbatim></para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -619,7 +705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="351" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="277" bodyend="292"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="424" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="281" bodyend="301"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a8400bb28ffd38fea3edac8963bc59a7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -651,7 +737,7 @@
 <para>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the sensor is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task.</para>
+<para><simplesect kind="note"><para>This function can NOT be called before the sensor is enabled. The <ref refid="classDataAPI" kindref="compound">DataAPI</ref> must not have been started, neither explicitly nor by starting the Uninterruptible task.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -682,7 +768,7 @@
 <parametername direction="in">rdiv</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The bridge dividor resistance used to condition the NTC. </para>
+<para>The bridge divider resistance used to condition the NTC. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -698,7 +784,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="367" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="294" bodyend="309"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="442" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="303" bodyend="327"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a5d5fed98f96043bf30ade4b0004a9596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -715,10 +801,10 @@
           <declname>parameter_name</declname>
         </param>
         <briefdescription>
-<para>Use this function to get the current conversion parameteres for the chosen channel . </para>
+<para>Use this function to get the current conversion parameters for the chosen channel . </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+<para><simplesect kind="note"><para>This function can NOT be called before the channel is enabled.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -733,17 +819,18 @@
 <parametername direction="in">parameter_name</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Paramater to be retreived: <computeroutput>gain</computeroutput> or <computeroutput>offset</computeroutput>.</para>
+<para>Paramater to be retrieved: <computeroutput>gain</computeroutput> or <computeroutput>offset</computeroutput>.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Returns the value of the parameter. Returns -5000 if the channel is not active. </para>
+<simplesect kind="return"><para>Returns the value of the parameter. <verbatim>       Returns `-5000` if the channel is not active.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="379" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="312" bodyend="327"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="461" column="11" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="330" bodyend="346"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a2d129bb41de793a9ba79e33cd7bf858f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>conversion_type_t</type>
@@ -759,7 +846,7 @@
 <para>Use this function to get the current conversion type for the chosen channel. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>This function can&apos;t be called before the channel is enabled.</para>
+<para><simplesect kind="note"><para>This function can NOT be called before the channel is enabled.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -770,13 +857,14 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Returns the type of convertion of the given pin. Returns -5 if the channel is not active. </para>
+<simplesect kind="return"><para>Returns the type of conversion of the given pin. <verbatim>       Returns `-5` if the channel is not active.
+</verbatim> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="390" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="329" bodyend="344"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="476" column="19" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="348" bodyend="363"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -801,13 +889,17 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correctly stored, negative value if there was an error: -1: There was an error, -5000: pin not found. </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if parameters were correctly stored, negative value if there was an error:</para>
 </simplesect>
+<itemizedlist>
+<listitem><para><computeroutput>-1</computeroutput>: There was an error,</para>
+</listitem><listitem><para><computeroutput>-5000</computeroutput>: pin not found. </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="401" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="346" bodyend="361"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="491" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="365" bodyend="380"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a866cf1113a45f2a7b52421ac2fb72582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -832,13 +924,21 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>0 if parameters were correcly retrieved, negative value if there was an error: -1: persistent memory is empty -2: persistent memory contains data, but its version doesn&apos;t match current version -3: data in persistent memory is corrupted -4: persistent memory contains data, but not for the requested pin -5000: pin not found. </para>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if parameters were correctly retrieved, <linebreak/>
+ negative value if there was an error:</para>
 </simplesect>
+<itemizedlist>
+<listitem><para><computeroutput>-1</computeroutput>: persistent memory is empty</para>
+</listitem><listitem><para><computeroutput>-2</computeroutput>: persistent memory contains data, but its version doesn&apos;t match current version</para>
+</listitem><listitem><para><computeroutput>-3</computeroutput>: data in persistent memory is corrupted</para>
+</listitem><listitem><para><computeroutput>-4</computeroutput>: persistent memory contains data, but not for the requested pin</para>
+</listitem><listitem><para><computeroutput>-5000</computeroutput>: pin not found. </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="415" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="364" bodyend="379"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="513" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="383" bodyend="399"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6a538eeb36311f01d0d8545a0f0c3f58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -855,13 +955,18 @@
           <declname>dicontinuous_count</declname>
         </param>
         <briefdescription>
-<para>Set the discontinuous count for an ADC. By default, ADCs are not in discontinuous mode. </para>
+<para>Set the discontinuous count for an ADC. </para>
         </briefdescription>
         <detaileddescription>
-<para>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</para>
-<para><simplesect kind="note"><para>This is an advanced function that requires to understand the way the ADC work. Only for use if you explicitely requires it.</para>
+<para><verbatim>   By default, ADCs are NOT in discontinuous mode.
+
+   Applied configuration will only be set when ADC is started.
+   If ADC is already started, it must be stopped then started again.
+</verbatim></para>
+<para><simplesect kind="note"><para>This is an advanced function that requires to understand the way the ADC work.</para>
 </simplesect>
-<parameterlist kind="param"><parameteritem>
+Only for use if you explicitly requires it.</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">adc_number</parametername>
 </parameternamelist>
@@ -882,7 +987,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="431" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="381" bodyend="395"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="532" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="401" bodyend="412"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a145c0e66e99fbf0a9952e667e1317fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -899,10 +1004,19 @@
           <declname>trigger_source</declname>
         </param>
         <briefdescription>
-<para>Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is on HRTIM1, and ADC 3/4 is software-triggered. </para>
+<para>Change the trigger source of an ADC. </para>
         </briefdescription>
         <detaileddescription>
-<para>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</para>
+<para><verbatim>   By default, trigger sources are: 
+
+     - `ADC_1` and `ADC_2` = `TRIG_PWM`     
+
+  - `ADC_3`, `ADC_4` and `ADC_5` = `TRIG_SOFTWARE`.
+
+   Applied configuration will only be set when ADC is started.
+
+   If ADC is already started, it must be stopped then started again.
+</verbatim></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">adc_number</parametername>
@@ -923,8 +1037,9 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>Check parameters validity</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="444" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="397" bodyend="446"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="551" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="414" bodyend="462"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -935,12 +1050,14 @@
         <name>initializeAllAdcs</name>
         <qualifiedname>DataAPI::initializeAllAdcs</qualifiedname>
         <briefdescription>
+<para>Initialize all available ADC peripherals if not already initialized. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function configures each ADC with a default software trigger source and sets the adcInitialized flag to true. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="447" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="452" bodyend="465"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="560" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="466" bodyend="479"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a17250468115f01f7c6646d856ef63824" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int8_t</type>
@@ -957,12 +1074,36 @@
           <declname>channel_num</declname>
         </param>
         <briefdescription>
+<para>Enable a specific ADC channel for sampling and DMA. </para>
         </briefdescription>
         <detaileddescription>
+<para>Adds the channel to the ADC&apos;s active conversion list and tracks its rank.</para>
+<para>ADC must not be started when enabling channels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the ADC (1–5). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC channel number to enable (1–N). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, <verbatim>       -1 if invalid ADC/channel or ADC already started.
+</verbatim> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="448" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="467" bodyend="501"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="575" column="15" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="481" bodyend="514"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a622cd08c0d6e2dfd203fd1625c4a572d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -979,12 +1120,32 @@
           <declname>channel</declname>
         </param>
         <briefdescription>
+<para>Disable a previously enabled ADC channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Removes the channel from the conversion list of the given ADC.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the ADC (1–5). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number to disable (1–N). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="449" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="503" bodyend="517"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="585" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="516" bodyend="526"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ae2b5b30e95e12b8dfd1355c3f333e47a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -1005,12 +1166,43 @@
           <declname>number_of_values_acquired</declname>
         </param>
         <briefdescription>
+<para>Retrieve raw ADC conversion data for a specific channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns a pointer to the buffer of raw values and updates the sample count.</para>
+<para>Returns nullptr if API is not started or the channel is invalid.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index (1–5). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_values_acquired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to output number of samples. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to raw ADC value buffer or nullptr on error. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="450" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="519" bodyend="535"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="600" column="17" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="528" bodyend="548"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1ab65ad2330b4d88cfdeedb4953adc006b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t *</type>
@@ -1031,12 +1223,43 @@
           <declname>number_of_values_acquired</declname>
         </param>
         <briefdescription>
+<para>Retrieve floating-point converted values for a specific ADC channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Allocates and fills a buffer of converted values from raw ADC data.</para>
+<para>May initialize internal buffers as needed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index (1–5). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_values_acquired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to output number of samples. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to converted float32_t values or nullptr on error. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="451" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="537" bodyend="585"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="617" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="550" bodyend="610"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a858c28b0348ceeddf5644b8ae2f391d6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -1053,12 +1276,34 @@
           <declname>channel_num</declname>
         </param>
         <briefdescription>
+<para>Peek at the latest value sampled for the specified channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns the latest available floating-point value, without affecting internal state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index (1–5). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted floating-point value, or NO_VALUE if unavailable. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="452" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="587" bodyend="607"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="631" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="612" bodyend="633"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6dda412bdb465bcf3af90c92ed334084" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -1080,12 +1325,43 @@
           <defval>nullptr</defval>
         </param>
         <briefdescription>
+<para>Retrieve the latest sampled value for a channel and its validity status. </para>
         </briefdescription>
         <detaileddescription>
+<para>If available, returns the most recent converted value.</para>
+<para>Optionally updates a flag indicating if the data is fresh, old, or missing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dataValid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to validity flag (optional). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Latest converted value or NO_VALUE. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="453" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="609" bodyend="669"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="647" column="18" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="635" bodyend="704"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6988b0a34c4d0c8ed07390149c4017b5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1102,12 +1378,34 @@
           <declname>channel_num</declname>
         </param>
         <briefdescription>
+<para>Get the conversion rank of a given ADC channel. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns the rank used internally to track channel position in DMA acquisition.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rank index (1–N) or 0 if not active. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="454" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="671" bodyend="680"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="661" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="706" bodyend="715"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a0685587c4707fa473d617c5d76c9851a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1124,12 +1422,34 @@
           <declname>shield_pin</declname>
         </param>
         <briefdescription>
+<para>Get the ADC channel number mapped to a specific shield pin. </para>
         </briefdescription>
         <detaileddescription>
+<para>Converts a shield pin number to the corresponding ADC channel.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shield_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pin number on the OwnTech shield. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ADC channel number (1–N) or 0 if invalid. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="455" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="682" bodyend="838"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="672" column="16" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="717" bodyend="873"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1af1778d91d3a60fa1b2fabbb2309d5f4e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>adc_t</type>
@@ -1142,12 +1462,26 @@
           <declname>pin_number</declname>
         </param>
         <briefdescription>
+<para>Return the default ADC assigned to a specific pin. </para>
         </briefdescription>
         <detaileddescription>
+<para>Used to choose the preferred ADC in case multiple are supported.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shield pin number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Default ADC enum (<computeroutput>ADC_1</computeroutput> to <computeroutput>ADC_5</computeroutput> or <computeroutput>UNKNOWN_ADC</computeroutput>). </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="456" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="840" bodyend="888"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="682" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="875" bodyend="923"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a6c9f265ac1228509939b821b0014dcc6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>adc_t</type>
@@ -1160,12 +1494,26 @@
           <declname>pin_number</declname>
         </param>
         <briefdescription>
+<para>Return the ADC currently assigned to a specific pin. </para>
         </briefdescription>
         <detaileddescription>
+<para>May differ from default if overridden by user logic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shield pin number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Current ADC assignment or UNKNOWN_ADC. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="457" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="890" bodyend="903"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="692" column="14" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="925" bodyend="938"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1aa73130020e80ffb99f43201e317a53eb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1178,12 +1526,24 @@
           <declname>repetition</declname>
         </param>
         <briefdescription>
+<para>Set the number of scheduling repetitions between data dispatches. </para>
         </briefdescription>
         <detaileddescription>
+<para>Used by the internal scheduler to control how often data is pushed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>repetition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of repetitions between dispatches. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="460" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="905" bodyend="908"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="703" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="940" bodyend="943"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1abb9623a77e9c1924413f39488814e8b8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1196,12 +1556,24 @@
           <declname>dispatch_method</declname>
         </param>
         <briefdescription>
+<para>Set the dispatch method for data acquisition. </para>
         </briefdescription>
         <detaileddescription>
+<para>Determines if data is triggered internally or externally.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dispatch_method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dispatch method enum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="461" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="910" bodyend="913"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="712" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="945" bodyend="948"/>
       </memberdef>
       <memberdef kind="function" id="classDataAPI_1a3bb778d3044d6f2c8b41b33ae07c48e5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1210,19 +1582,22 @@
         <name>doFullDispatch</name>
         <qualifiedname>DataAPI::doFullDispatch</qualifiedname>
         <briefdescription>
+<para>Force a full data dispatch cycle immediately. </para>
         </briefdescription>
         <detaileddescription>
+<para>Pushes all currently acquired data through the dispatch mechanism. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="462" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="915" bodyend="918"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="719" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="950" bodyend="953"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>Static class definition </para>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="100" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="101" bodyend="474"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="102" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" bodystart="103" bodyend="731"/>
     <listofallmembers>
       <member refid="classDataAPI_1acd293f6108985afa29d7ebbc5a968124" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>adcInitialized</name></member>
       <member refid="classDataAPI_1a0a1fc6398661eddab3c662cb75292a65" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>channels_ranks</name></member>

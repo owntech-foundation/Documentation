@@ -10,13 +10,13 @@
         <name>init</name>
         <qualifiedname>AnalogCommunication::init</qualifiedname>
         <briefdescription>
-<para>Initializing analog communication (ADC and DAC) </para>
+<para>Initializing analog communication (<computeroutput>ADC</computeroutput> and <computeroutput>DAC</computeroutput>) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="45" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="41" bodyend="55"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="44" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="41" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classAnalogCommunication_1a5c8f7bf0809b5f91baf3f96785cc9cf8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float32_t</type>
@@ -28,13 +28,13 @@
 <para>Get the analog value. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Analog value (A value between 0 and 4096) </para>
+<para><simplesect kind="return"><para>Analog value (A value between <computeroutput>0</computeroutput> and <computeroutput>4096</computeroutput>) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="52" column="18" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="57" bodyend="61"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="51" column="18" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classAnalogCommunication_1a02653f7a85f104cf78b45da094b10c77" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
           <declname>analog_bus_value</declname>
         </param>
         <briefdescription>
-<para>Set the analog value, the DAC output. </para>
+<para>Set the analog value, the <computeroutput>DAC</computeroutput> output. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -55,7 +55,7 @@
 <parametername>analog_bus_value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A value between 0 and 4096 </para>
+<para>A value between <computeroutput>0</computeroutput> and <computeroutput>4096</computeroutput> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -63,14 +63,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="59" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="63" bodyend="66"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="58" column="13" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.cpp" bodystart="63" bodyend="66"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="38" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" bodystart="39" bodyend="60"/>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" line="37" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/src/AnalogCommunication.h" bodystart="38" bodyend="59"/>
     <listofallmembers>
       <member refid="classAnalogCommunication_1a5c8f7bf0809b5f91baf3f96785cc9cf8" prot="public" virt="non-virtual"><scope>AnalogCommunication</scope><name>getAnalogCommValue</name></member>
       <member refid="classAnalogCommunication_1a56a95af9f091a01290d3fd924740d06f" prot="public" virt="non-virtual"><scope>AnalogCommunication</scope><name>init</name></member>

@@ -11,19 +11,14 @@
         <qualifiedname>LedHAL::ledInitialized</qualifiedname>
         <initializer>= false</initializer>
         <briefdescription>
+<para>Tracks whether the LED has been initialized. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2023 </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Luiz Villa <ulink url="mailto:luiz.villa@laas.fr">luiz.villa@laas.fr</ulink> </para>
-</simplesect>
-</para>
+<para>Used to prevent redundant hardware setup. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="43" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" bodystart="43" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="73" column="13" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" bodystart="73" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -34,12 +29,14 @@
         <name>turnOn</name>
         <qualifiedname>LedHAL::turnOn</qualifiedname>
         <briefdescription>
+<para>Turn the LED on. </para>
         </briefdescription>
         <detaileddescription>
+<para>Ensures the LED is initialized, then sets the output state to active. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="34" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="46" bodyend="54"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="39" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="47" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classLedHAL_1a97427b0594118ff50b93a99de458f1a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -48,12 +45,14 @@
         <name>turnOff</name>
         <qualifiedname>LedHAL::turnOff</qualifiedname>
         <briefdescription>
+<para>Turn the LED off. </para>
         </briefdescription>
         <detaileddescription>
+<para>Ensures the LED is initialized, then sets the output state to inactive. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="35" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="56" bodyend="64"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="46" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="57" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classLedHAL_1a1568cc368fd3b8821d412603fe4cfff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -62,12 +61,15 @@
         <name>toggle</name>
         <qualifiedname>LedHAL::toggle</qualifiedname>
         <briefdescription>
+<para>Toggle the LED state. </para>
         </briefdescription>
         <detaileddescription>
+<para>Changes the LED state from on to off or vice versa.</para>
+<para>Performs lazy initialization if not already done. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="36" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="66" bodyend="74"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="55" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="67" bodyend="75"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -78,19 +80,22 @@
         <name>initialize</name>
         <qualifiedname>LedHAL::initialize</qualifiedname>
         <briefdescription>
+<para>Initialize the LED hardware. </para>
         </briefdescription>
         <detaileddescription>
+<para>Configures GPIO or peripheral resources used by the LED.</para>
+<para>This method is called internally by public functions and is guarded by the <computeroutput>ledInitialized</computeroutput> flag. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="40" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="40" bodyend="44"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="66" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.cpp" bodystart="41" bodyend="45"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="31" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" bodystart="32" bodyend="45"/>
+    <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" line="31" column="1" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/LedHAL.h" bodystart="32" bodyend="75"/>
     <listofallmembers>
       <member refid="classLedHAL_1adc8db5102ef7072973a1f65ba3669024" prot="private" virt="non-virtual"><scope>LedHAL</scope><name>initialize</name></member>
       <member refid="classLedHAL_1aceaab2df22bde836c86c0ec8c5f6042b" prot="private" virt="non-virtual"><scope>LedHAL</scope><name>ledInitialized</name></member>

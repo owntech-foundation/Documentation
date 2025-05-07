@@ -35,8 +35,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint16\_t | [**broadcast\_time**](#variable-broadcast_time)  <br> |
-|  uint16\_t | [**control\_time**](#variable-control_time)  <br> |
+|  bool | [**live\_reporting\_enable**](#variable-live_reporting_enable)  <br> |
+|  uint32\_t | [**live\_reporting\_period**](#variable-live_reporting_period)  <br> |
+|  float32\_t | [**reference\_value**](#variable-reference_value)  <br> |
+|  bool | [**start\_stop**](#variable-start_stop)  <br> |
 
 
 
@@ -86,36 +88,15 @@
 
 
 
-### variable broadcast\_time 
+### variable live\_reporting\_enable 
 
 ```C++
-uint16_t broadcast_time;
+bool live_reporting_enable;
 ```
 
 
 
-
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
-
-
+Extern variables coming from sdk.c Boolean to set or unset CAN broadcasting 
 
 
         
@@ -124,14 +105,48 @@ Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.f
 
 
 
-### variable control\_time 
+### variable live\_reporting\_period 
 
 ```C++
-uint16_t control_time;
+uint32_t live_reporting_period;
 ```
 
 
 
+Integer used to set broadcasting period 
+
+
+        
+
+<hr>
+
+
+
+### variable reference\_value 
+
+```C++
+float32_t reference_value;
+```
+
+
+
+
+<hr>
+
+
+
+### variable start\_stop 
+
+```C++
+bool start_stop;
+```
+
+
+
+Extern variable defined in this module 
+
+
+        
 
 <hr>
 

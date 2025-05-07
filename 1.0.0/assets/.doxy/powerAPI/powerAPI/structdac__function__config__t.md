@@ -8,8 +8,9 @@
 
 
 
+_Defines the DAC configuration structure._ 
 
-
+* `#include <dac.h>`
 
 
 

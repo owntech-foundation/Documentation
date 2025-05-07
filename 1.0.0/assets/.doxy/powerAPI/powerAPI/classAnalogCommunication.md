@@ -54,8 +54,8 @@
 | Type | Name |
 | ---: | :--- |
 |  float32\_t | [**getAnalogCommValue**](#function-getanalogcommvalue) () <br>_Get the analog value._  |
-|  void | [**init**](#function-init) () <br>_Initializing analog communication (ADC and DAC)_  |
-|  void | [**setAnalogCommValue**](#function-setanalogcommvalue) (uint32\_t analog\_bus\_value) <br>_Set the analog value, the DAC output._  |
+|  void | [**init**](#function-init) () <br>_Initializing analog communication (_ `ADC` _and_`DAC` _)_ |
+|  void | [**setAnalogCommValue**](#function-setanalogcommvalue) (uint32\_t analog\_bus\_value) <br>_Set the analog value, the_ `DAC` _output._ |
 
 
 
@@ -100,7 +100,7 @@ static float32_t AnalogCommunication::getAnalogCommValue ()
 
 **Returns:**
 
-Analog value (A value between 0 and 4096) 
+Analog value (A value between `0` and `4096`) 
 
 
 
@@ -114,7 +114,7 @@ Analog value (A value between 0 and 4096)
 
 ### function init 
 
-_Initializing analog communication (ADC and DAC)_ 
+_Initializing analog communication (_ `ADC` _and_`DAC` _)_
 ```C++
 static void AnalogCommunication::init () 
 ```
@@ -128,7 +128,7 @@ static void AnalogCommunication::init ()
 
 ### function setAnalogCommValue 
 
-_Set the analog value, the DAC output._ 
+_Set the analog value, the_ `DAC` _output._
 ```C++
 static void AnalogCommunication::setAnalogCommValue (
     uint32_t analog_bus_value
@@ -142,7 +142,7 @@ static void AnalogCommunication::setAnalogCommValue (
 **Parameters:**
 
 
-* `analog_bus_value` A value between 0 and 4096 
+* `analog_bus_value` A value between `0` and `4096` 
 
 
 

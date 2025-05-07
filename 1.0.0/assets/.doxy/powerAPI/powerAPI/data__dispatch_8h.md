@@ -62,7 +62,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**data\_dispatch\_do\_dispatch**](#function-data_dispatch_do_dispatch) (uint8\_t adc\_number) <br>_Dispatch function: gets the readings and store them in per-channel arrays. This functon is called by DMA callback when the DMA has filled one of its buffers._  |
+|  void | [**data\_dispatch\_do\_dispatch**](#function-data_dispatch_do_dispatch) (uint8\_t adc\_number) <br>_Dispatch function: gets the readings and store them in per-channel arrays. This function is called by DMA callback when the DMA has filled one of its buffers._  |
 |  void | [**data\_dispatch\_do\_full\_dispatch**](#function-data_dispatch_do_full_dispatch) () <br>_Function to proceed to all chanels dispatch when it is done at uninterruptible task start._  |
 |  uint16\_t \* | [**data\_dispatch\_get\_acquired\_values**](#function-data_dispatch_get_acquired_values) (uint8\_t adc\_number, uint8\_t channel\_rank, uint32\_t & number\_of\_values\_acquired) <br>_Obtain data for a specific channel. The data is provided as an array of values and the count of data in this buffer is returned as an output parameter._  |
 |  void | [**data\_dispatch\_init**](#function-data_dispatch_init) (dispatch\_t dispatch\_method, uint32\_t repetitions) <br>_Init function to be called first._  |
@@ -152,7 +152,7 @@ const uint16_t PEEK_NO_VALUE;
 
 ### function data\_dispatch\_do\_dispatch 
 
-_Dispatch function: gets the readings and store them in per-channel arrays. This functon is called by DMA callback when the DMA has filled one of its buffers._ 
+_Dispatch function: gets the readings and store them in per-channel arrays. This function is called by DMA callback when the DMA has filled one of its buffers._ 
 ```C++
 void data_dispatch_do_dispatch (
     uint8_t adc_number
@@ -217,10 +217,10 @@ uint16_t * data_dispatch_get_acquired_values (
 
 **Returns:**
 
-Buffer containing the available data. Note that the returned buffer is invalidated by further calls to the function with same adc number/channel rank. 
+Buffer containing the available data. Note that the returned buffer is invalidated by further calls to the function with same adc number/channel rank.
 
 
-
+Accessors 
 
 
         
@@ -247,9 +247,9 @@ void data_dispatch_init (
 
 
 * `dispatch_method` Indicates when the dispatch should be done. 
-* `repetitions` If dispatch is done at task start, this value represents the number of acquisitions that are done between two execution of the task. Ignored if dispatch is done on interrupt. 
+* `repetitions` If dispatch is done at task start, this value represents the number of acquisitions that are done between two execution of the task. Ignored if dispatch is done on interrupt.
 
-
+Public API 
 
 
         

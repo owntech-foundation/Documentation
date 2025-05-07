@@ -8,8 +8,9 @@
 
 
 
+[More...](#detailed-description)
 
-
+* `#include <SyncCommunication.h>`
 
 
 
@@ -53,8 +54,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**initMaster**](#function-initmaster) () <br>_initialization synchronization as MASTER, the master send the synchronization pulsle._  |
-|  void | [**initSlave**](#function-initslave) () <br>_initialization synchronization as SLAVE, the slave receive the synchronization pulsle._  |
+|  void | [**initMaster**](#function-initmaster) () <br>_Initialization synchronization as_ `MASTER` _, the master send the synchronization pulse._ |
+|  void | [**initSlave**](#function-initslave) () <br>_Initialization synchronization as_ `SLAVE` _, the slave receive the synchronization pulse._ |
 
 
 
@@ -81,6 +82,13 @@
 
 
 
+## Detailed Description
+
+
+Static class definition 
+
+
+    
 ## Public Static Functions Documentation
 
 
@@ -88,7 +96,7 @@
 
 ### function initMaster 
 
-_initialization synchronization as MASTER, the master send the synchronization pulsle._ 
+_Initialization synchronization as_ `MASTER` _, the master send the synchronization pulse._
 ```C++
 static void SyncCommunication::initMaster () 
 ```
@@ -96,38 +104,13 @@ static void SyncCommunication::initMaster ()
 
 
 
-
-**Date:**
-
-2024
-
-
-
-
-**Author:**
-
-Luiz Villa [luiz.villa@laas.fr](mailto:luiz.villa@laas.fr) 
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
-
-
-
-
-        
-
 <hr>
 
 
 
 ### function initSlave 
 
-_initialization synchronization as SLAVE, the slave receive the synchronization pulsle._ 
+_Initialization synchronization as_ `SLAVE` _, the slave receive the synchronization pulse._
 ```C++
 static void SyncCommunication::initSlave () 
 ```

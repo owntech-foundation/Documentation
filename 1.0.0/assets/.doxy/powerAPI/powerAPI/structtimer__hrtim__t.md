@@ -8,7 +8,7 @@
 
 
 
-_Timinig unit configuration - aggregates all the structures._ 
+_Timing unit configuration that aggregates all the structures:_ [More...](#detailed-description)
 
 * `#include <hrtim.h>`
 
@@ -86,6 +86,25 @@ _Timinig unit configuration - aggregates all the structures._
 
 
 
+## Detailed Description
+
+
+
+* `pwm_conf` = Pulse Width Modulation Configuration
+* `phase_shift` = Phase shift configuration 
+
+* `gpio_conf` = Configuration of the gpio 
+
+* `switch_conv` = Switch Convention 
+
+* `adc_hrtim` = ADC - HRTIM setup 
+
+* `comp_usage` = Usage of comp1 to comp4 
+
+
+
+
+    
 ## Public Attributes Documentation
 
 

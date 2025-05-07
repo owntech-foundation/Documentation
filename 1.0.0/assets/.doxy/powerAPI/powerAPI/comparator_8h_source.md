@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,10 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @author  Clément Foucher <clement.foucher@laas.fr>
+ * @author  Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 #ifndef COMPARATOR_H_
 #define COMPARATOR_H_
@@ -36,6 +40,7 @@ extern "C" {
 #endif
 
 void comparator1_init();
+
 void comparator3_init();
 
 
@@ -43,7 +48,7 @@ void comparator3_init();
 }
 #endif
 
-#endif // COMPARATOR_H_
+#endif /* COMPARATOR_H_ */
 ```
 
 

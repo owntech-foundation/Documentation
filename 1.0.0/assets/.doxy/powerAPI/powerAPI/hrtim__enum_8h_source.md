@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,10 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ */
 
 #ifndef HRTIM_ENUM_H_
 #define HRTIM_ENUM_H_
@@ -52,6 +56,25 @@ extern "C"
                                                               5880,
                                                               11760,
                                                               23530};
+    /* RM0440 REV8 PAGE 842 */
+    static const uint32_t HRTIM_MIN_PER_and_CMP_REG_VALUES[8] = {0x0060,
+                                                                 0x0030,
+                                                                 0x0018,
+                                                                 0x000C,
+                                                                 0x0006,
+                                                                 0x0003,
+                                                                 0x0003,
+                                                                 0x0003};
+
+    static const uint32_t HRTIM_MAX_PER_and_CMP_REG_VALUES[8] = {0xFFDF,
+                                                                 0xFFEF,
+                                                                 0xFFF7,
+                                                                 0xFFFB,
+                                                                 0xFFFD,
+                                                                 0xFFFD,
+                                                                 0xFFFD,
+                                                                 0xFFFD};
+                                                                    
 
 
     typedef enum
@@ -242,7 +265,7 @@ extern "C"
     typedef enum
     {
         Lft_aligned = LL_HRTIM_COUNTING_MODE_UP,
-        UpDwn = LL_HRTIM_COUNTING_MODE_UP_DOWN // also known as center aligned
+        UpDwn = LL_HRTIM_COUNTING_MODE_UP_DOWN /* also known as center aligned */
 
     } hrtim_cnt_t;
 
@@ -259,29 +282,36 @@ extern "C"
 
     typedef struct
     {
-        hrtim_tu_t pwm_tu;                         /* Timing Unit associated with the PWM */
-        uint16_t rise_dead_time;                   /* Rising Edge Dead time */
-        uint16_t fall_dead_time;                   /* Falling Edge Dead time */
-        uint16_t duty_cycle;                       /* Current value of its duty cycle */
-        uint16_t period;                           /* Period used by the unit */
-        uint16_t max_period;                       /* Max Period used by the unit */
-        uint16_t min_period;                       /* Min Period used by the unit */
-        uint32_t frequency;                        /* Frequency used by the unit */
-        uint32_t max_frequency;                    /* Max frequency used by the unit */
-        uint32_t min_frequency;                    /* Min frequency used by the unit */
-        hrtim_cnt_t modulation;                    /* Type of modulation used for this unit */
-        hrtim_tu_ON_OFF_t unit_on;                 /* State of the time unit (ON/OFF) */
-        uint8_t ckpsc;                             /* Holds the clock pre-scaler of the timing unit */
-        uint32_t resolution;                       /* Holds the resolution of the timing unit  */
-        hrtim_pwm_mode_t pwm_mode;                 /* pwm mode for voltage mode or current mode */
-        hrtim_external_trigger_t external_trigger; /* external trigger event for current mode */
-        hrtim_burst_clk_t burst_clk;               /* clock source for burst mode generator*/
+        hrtim_tu_t pwm_tu;             /* Timing Unit associated with the PWM */
+        uint16_t rise_dead_time;       /* Rising Edge Dead time */
+        uint16_t fall_dead_time;       /* Falling Edge Dead time */
+        uint16_t duty_cycle;           /* Current value of its duty cycle */
+        uint16_t period;               /* Period used by the unit */
+        uint16_t max_period;           /* Absolute Max Period used by the unit */
+        uint16_t min_period;           /* Absolute Min Period used by the unit */
+        uint32_t frequency;            /* Frequency used by the unit */
+        uint32_t max_frequency;        /* Max frequency used by the unit */
+        uint32_t min_frequency;        /* Min frequency used by the unit */
+        hrtim_cnt_t modulation;        /* Type of modulation used for this unit */
+        hrtim_tu_ON_OFF_t unit_on;     /* State of the time unit (ON/OFF) */
+        uint8_t ckpsc;                 /* Clock pre-scaler of the timing unit */
+        uint32_t resolution;           /* Resolution of the timing unit */
+        uint16_t duty_min;             /* Absolute Minimum duty cycle for the timing unit */
+        uint16_t duty_max;             /* Absolute Maximum duty cycle for the timing unit */
+        uint16_t duty_min_user;        /* Minimum duty cycle set by the user */
+        uint16_t duty_max_user;        /* Maximum duty cycle set by the user */
+        float32_t duty_min_user_float; /* Minimum duty cycle set by the user in float */
+        float32_t duty_max_user_float; /* Maximum duty cycle set by the user in float */
+        uint8_t duty_swap;             /* Detects if the duty has been swapped */
+        hrtim_pwm_mode_t pwm_mode;     /* voltage mode or current mode */
+        hrtim_external_trigger_t external_trigger;  /* event for current mode */
+        hrtim_burst_clk_t burst_clk;   /* clock source for burst mode generator*/
     } pwm_conf_t;
 
     typedef struct
     {
-        uint16_t value;                /* Value of the phase shift */
-        hrtim_tu_t compare_tu;         /* Compare timing unit used to make the phase shift */
+        uint16_t value;            /* Value of the phase shift */
+        hrtim_tu_t compare_tu;     /* Compare timing unit used to make the phase shift */
         hrtim_reset_trig_t reset_trig; /* Pulse width */
     } phase_shift_conf_t;
 
@@ -297,11 +327,16 @@ extern "C"
 
     typedef struct
     {
-        hrtim_switch_convention_t convention; /* High-side or Low-side switch convention */
-        uint32_t set_H[2];                    /* Set event used to the High-side switch on the high-side convention */
-        uint32_t reset_H[2];                  /* Set event used to the Low-side switch on the high-side convention */
-        uint32_t set_L[2];                    /* Set event used to the High-side switch on the high-side convention */
-        uint32_t reset_L[2];                  /* Set event used to the Low-side switch on the high-side convention */
+        /* High-side or Low-side switch convention */
+        hrtim_switch_convention_t convention;
+        /* Set event used to the High-side switch on the high-side convention */
+        uint32_t set_H;
+        /* Set event used to the Low-side switch on the high-side convention */
+        uint32_t reset_H;
+        /* Set event used to the High-side switch on the high-side convention */
+        uint32_t set_L;
+        /* Set event used to the Low-side switch on the high-side convention */
+        uint32_t reset_L;
     } switch_conv_conf_t;
 
     typedef struct
@@ -328,7 +363,7 @@ extern "C"
 }
 #endif
 
-#endif // COMPARATOR_DRIVER_H_
+#endif /* COMPARATOR_DRIVER_H_ */
 ```
 
 

@@ -29,7 +29,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**UartHAL**](classUartHAL.md) <br>_Handles usart 1 for the SPIN board._  |
+| class | [**UartHAL**](classUartHAL.md) <br>_Handles USART1 for the SPIN board._  |
 
 
 

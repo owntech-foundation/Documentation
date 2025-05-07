@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 LAAS-CNRS
+ * Copyright (c) 2024-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2024
  *
  * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
@@ -31,31 +31,46 @@
 #include "../src/Rs485Communication.h"
 #include "../src/SyncCommunication.h"
 
+/**
+ * @brief Main communication API interface.
+ *
+ * This class provides access to all supported communication interfaces,
+ * including analog, CAN, RS485, and real-time synchronization protocols.
+ *
+ * - `analog`: provides analog communication functions.
+ *
+ * - `can`: provides CAN bus communication functions.
+ *
+ * - `rs485`: provides RS485 serial communication functions.
+ *
+ * - `sync`: provides real-time synchronization functions.
+ *
+ */
 class CommunicationAPI
 {
-    public : 
+    public :
         /**
-         * @brief Contains all the function for analog communication
-        */
+         * @brief Contains all the functions for Analog communication
+         */
         AnalogCommunication analog;
 
         /**
-         * @brief Contains all the function for can communication
-        */
+         * @brief Contains all the functions for CAN communication
+         */
         CanCommunication can;
 
         /**
-         * @brief Contains all the function for rs485 communication
-        */
+         * @brief Contains all the functions for RS485 communication
+         */
         Rs485Communication rs485;
 
         /**
-         * @brief Contains all the function for sync communication
-        */
+         * @brief Contains all the functions for Real Time synchronization
+         */
         SyncCommunication sync;
 
 };
 
 extern CommunicationAPI communication;
 
-#endif // COMMUNICATIONAPI_H
+#endif /* COMMUNICATIONAPI_H */

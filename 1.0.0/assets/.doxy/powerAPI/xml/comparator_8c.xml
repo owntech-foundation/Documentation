@@ -9,14 +9,18 @@
         <argsstring>()</argsstring>
         <name>comparator1_init</name>
         <briefdescription>
+<para>Initialize comparator <computeroutput>COMP1</computeroutput> with predefined settings. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="date"><para>2022 </para>
-</simplesect>
-<simplesect kind="author"><para>Clément Foucher <ulink url="mailto:clement.foucher@laas.fr">clement.foucher@laas.fr</ulink> </para>
-</simplesect>
-<simplesect kind="author"><para>Ayoub Farah Hassan <ulink url="mailto:ayoub.farah-hassan@laas.fr">ayoub.farah-hassan@laas.fr</ulink> </para>
-</simplesect>
+<para>This function configures <computeroutput>GPIO</computeroutput> and comparator settings for <computeroutput>COMP1</computeroutput>:</para>
+<para><itemizedlist>
+<listitem><para>Sets <computeroutput>PA1</computeroutput> as the positive input (<computeroutput>COMP1_INP</computeroutput>) in analog mode.</para>
+</listitem><listitem><para>Routes <computeroutput>DAC3</computeroutput> Channel 1 as the negative input.</para>
+</listitem><listitem><para>Configures non-inverting output, no hysteresis, and no blanking source.</para>
+</listitem><listitem><para>Disables related EXTI line (line 21) events and interrupts.</para>
+</listitem><listitem><para>Applies voltage scaler stabilization delay.</para>
+</listitem><listitem><para>Enables the comparator. </para>
+</listitem></itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
@@ -29,8 +33,19 @@
         <argsstring>()</argsstring>
         <name>comparator3_init</name>
         <briefdescription>
+<para>Initialize comparator <computeroutput>COMP3</computeroutput> with predefined settings. </para>
         </briefdescription>
         <detaileddescription>
+<para>This function configures <computeroutput>GPIO</computeroutput> and comparator settings for <computeroutput>COMP3</computeroutput>:</para>
+<para><itemizedlist>
+<listitem><para>Sets <computeroutput>PC1</computeroutput> as the positive input (<computeroutput>COMP3_INP</computeroutput>) in analog mode.</para>
+</listitem><listitem><para>Routes <computeroutput>DAC1</computeroutput> Channel 1 as the negative input.</para>
+</listitem><listitem><para>Configures non-inverting output, no hysteresis, and no blanking source.</para>
+</listitem><listitem><para>Disables related EXTI line (line 29) events and interrupts.</para>
+</listitem><listitem><para>Applies voltage scaler stabilization delay.</para>
+</listitem><listitem><para>Enables the comparator. </para>
+</listitem></itemizedlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -43,7 +58,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -61,8 +76,13 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2022</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Ayoub<sp/>Farah<sp/>Hassan<sp/>&lt;ayoub.farah-hassan@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Current<sp/>module<sp/>private<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Current<sp/>module<sp/>private<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/comparator_driver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>

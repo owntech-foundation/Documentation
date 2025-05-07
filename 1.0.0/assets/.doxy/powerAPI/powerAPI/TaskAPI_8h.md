@@ -121,6 +121,10 @@ typedef void(* task_function_t) ();
 
 
 
+Public types 
+
+
+        
 
 <hr>
 ## Public Attributes Documentation
@@ -136,6 +140,10 @@ TaskAPI task;
 
 
 
+Public object to interact with the class 
+
+
+        
 
 <hr>
 

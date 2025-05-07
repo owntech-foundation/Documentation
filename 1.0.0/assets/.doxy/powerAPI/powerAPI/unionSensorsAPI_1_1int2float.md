@@ -8,7 +8,7 @@
 
 
 
-
+[More...](#detailed-description)
 
 
 
@@ -81,6 +81,13 @@
 
 
 
+## Detailed Description
+
+
+Private types definitions 
+
+
+    
 ## Public Attributes Documentation
 
 

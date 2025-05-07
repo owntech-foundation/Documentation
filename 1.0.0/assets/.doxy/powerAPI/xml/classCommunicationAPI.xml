@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classCommunicationAPI" kind="class" language="C++" prot="public">
     <compoundname>CommunicationAPI</compoundname>
+    <includes refid="CommunicationAPI_8h" local="no">CommunicationAPI.h</includes>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classCommunicationAPI_1a23af9a759f00d48b93b5b1a4e7ce40b4" prot="public" static="no" mutable="no">
         <type><ref refid="classAnalogCommunication" kindref="compound">AnalogCommunication</ref></type>
@@ -10,13 +11,13 @@
         <name>analog</name>
         <qualifiedname>CommunicationAPI::analog</qualifiedname>
         <briefdescription>
-<para>Contains all the function for analog communication. </para>
+<para>Contains all the functions for Analog communication. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="40" column="29" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="40" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="55" column="29" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classCommunicationAPI_1a5a3ff2d2f025ecfc4803b24c07a03562" prot="public" static="no" mutable="no">
         <type><ref refid="classCanCommunication" kindref="compound">CanCommunication</ref></type>
@@ -25,13 +26,13 @@
         <name>can</name>
         <qualifiedname>CommunicationAPI::can</qualifiedname>
         <briefdescription>
-<para>Contains all the function for can communication. </para>
+<para>Contains all the functions for CAN communication. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="45" column="26" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="45" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="60" column="26" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classCommunicationAPI_1a67e60ef7a2001504f920dded5a2f5bcd" prot="public" static="no" mutable="no">
         <type><ref refid="classRs485Communication" kindref="compound">Rs485Communication</ref></type>
@@ -40,13 +41,13 @@
         <name>rs485</name>
         <qualifiedname>CommunicationAPI::rs485</qualifiedname>
         <briefdescription>
-<para>Contains all the function for rs485 communication. </para>
+<para>Contains all the functions for RS485 communication. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="50" column="28" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="50" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="65" column="28" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classCommunicationAPI_1a6a5d660d8bbd77b656549a8ed110e43e" prot="public" static="no" mutable="no">
         <type><ref refid="classSyncCommunication" kindref="compound">SyncCommunication</ref></type>
@@ -55,18 +56,27 @@
         <name>sync</name>
         <qualifiedname>CommunicationAPI::sync</qualifiedname>
         <briefdescription>
-<para>Contains all the function for sync communication. </para>
+<para>Contains all the functions for Real Time synchronization. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="55" column="27" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="55" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="70" column="27" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Main communication API interface. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class provides access to all supported communication interfaces, including analog, CAN, RS485, and real-time synchronization protocols.</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>analog</computeroutput>: provides analog communication functions.</para>
+</listitem><listitem><para><computeroutput>can</computeroutput>: provides CAN bus communication functions.</para>
+</listitem><listitem><para><computeroutput>rs485</computeroutput>: provides RS485 serial communication functions.</para>
+</listitem><listitem><para><computeroutput>sync</computeroutput>: provides real-time synchronization functions. </para>
+</listitem></itemizedlist>
+</para>
     </detaileddescription>
     <collaborationgraph>
       <node id="2">
@@ -102,7 +112,7 @@
         <link refid="classSyncCommunication"/>
       </node>
     </collaborationgraph>
-    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="34" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="35" bodyend="57"/>
+    <location file="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" line="49" column="1" bodyfile="docs/core/zephyr/modules/owntech_communication/zephyr/public_api/CommunicationAPI.h" bodystart="50" bodyend="72"/>
     <listofallmembers>
       <member refid="classCommunicationAPI_1a23af9a759f00d48b93b5b1a4e7ce40b4" prot="public" virt="non-virtual"><scope>CommunicationAPI</scope><name>analog</name></member>
       <member refid="classCommunicationAPI_1a5a3ff2d2f025ecfc4803b24c07a03562" prot="public" virt="non-virtual"><scope>CommunicationAPI</scope><name>can</name></member>

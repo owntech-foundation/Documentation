@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2021-2023 LAAS-CNRS
+ * Copyright (c) 2021-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -48,7 +48,7 @@
 #define TU_DEFAULT_PERIOD (27200U) /* default period for 200kHz in bits */
 
 #ifdef HRTIM_MCR_TFCEN
-#define HRTIM_STU_NUMOF (6U) 
+#define HRTIM_STU_NUMOF (6U) /* number of slave timing units */
 #else
 #define HRTIM_STU_NUMOF (5U)
 #endif
@@ -60,16 +60,17 @@ extern "C"
 
 typedef struct
 {
-    pwm_conf_t pwm_conf;            /* Pulse Width Modulation Configuration */
-    phase_shift_conf_t phase_shift; /* Phase shift configuration */
-    gpio_conf_t gpio_conf;          /* Pulse width */
-    switch_conv_conf_t switch_conv; /* Switch Convention */
-    adc_hrtim_conf_t adc_hrtim;     /* ADC - HRTIM setup*/
-    comp_usage_conf_t comp_usage;   /* Usage of comp1 to comp4 */
+    pwm_conf_t pwm_conf;            
+    phase_shift_conf_t phase_shift;            
+    gpio_conf_t gpio_conf;          
+    switch_conv_conf_t switch_conv; 
+    adc_hrtim_conf_t adc_hrtim;     
+    comp_usage_conf_t comp_usage;   
 } timer_hrtim_t;
 
 extern timer_hrtim_t *tu_channel[HRTIM_STU_NUMOF];
 
+/* Public Functions */
 
 int hrtim_get_apb2_clock();
 
@@ -106,13 +107,15 @@ uint32_t hrtim_get_min_frequency(hrtim_tu_number_t tu_number);
 
 
 
-void hrtim_set_switch_convention(hrtim_tu_number_t tu_number, hrtim_switch_convention_t convention);
+void hrtim_set_switch_convention(hrtim_tu_number_t tu_number,
+                                 hrtim_switch_convention_t convention);
 
-hrtim_switch_convention_t hrtim_get_switch_convention(hrtim_tu_number_t tu_number);
+hrtim_switch_convention_t hrtim_get_switch_convention(
+    hrtim_tu_number_t tu_number
+);
 
-void hrtim_cmpl_pwm_out1(hrtim_tu_number_t tu_number);
+void hrtim_cmpl_pwm_out(hrtim_tu_number_t tu_number);
 
-void hrtim_cmpl_pwm_out2(hrtim_tu_number_t tu_number);
 
 void hrtim_frequency_set(uint32_t frequency_set, uint32_t frequency_min);
 
@@ -124,11 +127,15 @@ uint32_t hrtim_period_get_us(hrtim_tu_number_t tu_number);
 
 uint32_t hrtim_period_Master_get_us();
 
-void hrtim_tu_cmp_set(hrtim_tu_number_t tu_number, hrtim_cmp_t cmp, uint16_t value);
+void hrtim_tu_cmp_set(hrtim_tu_number_t tu_number,
+                      hrtim_cmp_t cmp,
+                      uint16_t value);
 
 void hrtim_master_cmp_set(hrtim_cmp_t cmp, uint16_t value);
 
-void hrtim_dt_set(hrtim_tu_number_t tu_number, uint16_t rise_ns, uint16_t fall_ns);
+void hrtim_dt_set(hrtim_tu_number_t tu_number,
+                  uint16_t rise_ns,
+                  uint16_t fall_ns);
 
 void hrtim_duty_cycle_set(hrtim_tu_number_t tu_number, uint16_t value);
 
@@ -154,17 +161,21 @@ void hrtim_rst_evt_en(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
 
 void hrtim_rst_evt_dis(hrtim_tu_number_t tu_number, hrtim_reset_trig_t evt);
 
-void hrtim_adc_trigger_set_postscaler(hrtim_tu_number_t tu_number, uint32_t ps_ratio);
+void hrtim_adc_trigger_set_postscaler(hrtim_tu_number_t tu_number,
+                                      uint32_t ps_ratio);
 
 void hrtim_adc_trigger_en(hrtim_tu_number_t tu_number);
 
 void hrtim_adc_trigger_dis(hrtim_tu_number_t tu_number);
 
-void hrtim_adc_rollover_set(hrtim_tu_number_t tu_number, hrtim_adc_edgetrigger_t adc_rollover);
+void hrtim_adc_rollover_set(hrtim_tu_number_t tu_number,
+                            hrtim_adc_edgetrigger_t adc_rollover);
 
 hrtim_adc_edgetrigger_t hrtim_adc_rollover_get(hrtim_tu_number_t tu_number);
 
-void hrtim_PeriodicEvent_configure(hrtim_tu_t tu, uint32_t repetition, hrtim_callback_t callback);
+void hrtim_PeriodicEvent_configure(hrtim_tu_t tu,
+                                   uint32_t repetition,
+                                   hrtim_callback_t callback);
 
 void hrtim_PeriodicEvent_en(hrtim_tu_t tu);
 
@@ -180,9 +191,10 @@ void hrtim_pwm_mode_set(hrtim_tu_number_t tu_number, hrtim_pwm_mode_t mode);
 
 hrtim_pwm_mode_t hrtim_pwm_mode_get(hrtim_tu_number_t tu_number);
 
-void hrtim_adc_triger_set(hrtim_tu_number_t tu_number, hrtim_adc_trigger_t adc_trig);
+void hrtim_adc_trigger_set(hrtim_tu_number_t tu_number,
+                           hrtim_adc_trigger_t adc_trig);
 
-hrtim_adc_trigger_t hrtim_adc_triger_get(hrtim_tu_number_t tu_number);
+hrtim_adc_trigger_t hrtim_adc_trigger_get(hrtim_tu_number_t tu_number);
 
 void hrtim_eev_set(hrtim_tu_number_t tu_number, hrtim_external_trigger_t eev);
 
@@ -190,11 +202,14 @@ hrtim_external_trigger_t hrtim_eev_get(hrtim_tu_number_t tu_number);
 
 void hrtim_change_frequency(uint32_t new_frequency);
 
+
+void hrtim_output_hot_swap(hrtim_tu_number_t tu_number);
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif // HRTIM_H_
+#endif /* HRTIM_H_ */
 ```
 
 

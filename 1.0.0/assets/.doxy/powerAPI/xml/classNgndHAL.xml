@@ -10,13 +10,15 @@
         <name>turnOn</name>
         <qualifiedname>NgndHAL::turnOn</qualifiedname>
         <briefdescription>
-<para>Turns the NGND switch ON. It is used with versions of the TWIST board prior to 1.4. </para>
+<para>Turns the NGND switch ON. </para>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>   It is used with versions of the TWIST board prior to 1.4.
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="40" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.cpp" bodystart="36" bodyend="42"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="41" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.cpp" bodystart="36" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classNgndHAL_1a8c6942db4f9e3738db58ab89eb7bd293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -25,20 +27,22 @@
         <name>turnOff</name>
         <qualifiedname>NgndHAL::turnOff</qualifiedname>
         <briefdescription>
-<para>Turns the NGND switch OFF. It is used with versions of the TWIST board prior to 1.4. </para>
+<para>Turns the NGND switch OFF. </para>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>  It is used with versions of the TWIST board prior to 1.4.
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="46" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.cpp" bodystart="44" bodyend="50"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="48" column="6" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.cpp" bodystart="44" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="32" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" bodystart="33" bodyend="51"/>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" line="32" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/NgndHAL.h" bodystart="33" bodyend="52"/>
     <listofallmembers>
       <member refid="classNgndHAL_1a8c6942db4f9e3738db58ab89eb7bd293" prot="public" virt="non-virtual"><scope>NgndHAL</scope><name>turnOff</name></member>
       <member refid="classNgndHAL_1ac68efaad48a7f458df854ce15d29ed00" prot="public" virt="non-virtual"><scope>NgndHAL</scope><name>turnOn</name></member>

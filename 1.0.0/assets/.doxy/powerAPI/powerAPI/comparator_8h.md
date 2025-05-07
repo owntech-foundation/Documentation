@@ -51,8 +51,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**comparator1\_init**](#function-comparator1_init) () <br> |
-|  void | [**comparator3\_init**](#function-comparator3_init) () <br> |
+|  void | [**comparator1\_init**](#function-comparator1_init) () <br>_Initialize comparator_ `COMP1` _with predefined settings._ |
+|  void | [**comparator3\_init**](#function-comparator3_init) () <br>_Initialize comparator_ `COMP3` _with predefined settings._ |
 
 
 
@@ -88,32 +88,23 @@
 
 ### function comparator1\_init 
 
+_Initialize comparator_ `COMP1` _with predefined settings._
 ```C++
 void comparator1_init () 
 ```
 
 
 
-
-
-**Date:**
-
-2022 
+This function configures `GPIO` and comparator settings for `COMP1`:
 
 
 
-
-**Author:**
-
-Clément Foucher [clement.foucher@laas.fr](mailto:clement.foucher@laas.fr) 
-
-
-
-
-**Author:**
-
-Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.fr) 
-
+* Sets `PA1` as the positive input (`COMP1_INP`) in analog mode.
+* Routes `DAC3` Channel 1 as the negative input.
+* Configures non-inverting output, no hysteresis, and no blanking source.
+* Disables related EXTI line (line 21) events and interrupts.
+* Applies voltage scaler stabilization delay.
+* Enables the comparator. 
 
 
 
@@ -126,12 +117,28 @@ Ayoub Farah Hassan [ayoub.farah-hassan@laas.fr](mailto:ayoub.farah-hassan@laas.f
 
 ### function comparator3\_init 
 
+_Initialize comparator_ `COMP3` _with predefined settings._
 ```C++
 void comparator3_init () 
 ```
 
 
 
+This function configures `GPIO` and comparator settings for `COMP3`:
+
+
+
+* Sets `PC1` as the positive input (`COMP3_INP`) in analog mode.
+* Routes `DAC1` Channel 1 as the negative input.
+* Configures non-inverting output, no hysteresis, and no blanking source.
+* Disables related EXTI line (line 29) events and interrupts.
+* Applies voltage scaler stabilization delay.
+* Enables the comparator. 
+
+
+
+
+        
 
 <hr>
 

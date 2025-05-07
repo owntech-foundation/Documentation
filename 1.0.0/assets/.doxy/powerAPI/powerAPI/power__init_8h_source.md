@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2023-2024 LAAS-CNRS
+ * Copyright (c) 2023-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,6 +27,15 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date 2024
+ *
+ * @author Ayoub Farah Hassan <ayoub.farah-hassan@laas.fr>
+ * @author Jean Alinei <jean.alinei@owntech.org>
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ *
+ * @brief This file save all the parameters set in the device tree
+ */
 
 #ifndef POWER_INIT_H_
 #define POWER_INIT_H_
@@ -70,7 +79,7 @@
 
 #define LEG_COUNTER(node_id) +1
 
-// the shield node identifier in the device tree
+/* The shield node identifier in the device tree */
 #define POWER_SHIELD_ID           DT_NODELABEL(powershield)
 
 typedef enum{
@@ -79,7 +88,14 @@ typedef enum{
     CM_DAC3 = 30,
 }cm_dac_t;
 
+
 extern uint32_t timer_frequency;
+
+extern uint32_t timer_min_frequency;
+
+
+extern uint32_t timer_min_frequency;
+
 
 extern uint16_t dt_pwm_pin[];
 
@@ -111,7 +127,7 @@ extern uint16_t dt_pin_driver[];
 
 extern uint16_t dt_pin_capacitor[];
 
-#endif // POWER_H_
+#endif /* POWER_H_ */
 ```
 
 

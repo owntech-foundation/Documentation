@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2024 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,26 +27,30 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ *
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Thomas Walter <thomas.walter@laas.fr>
+ */
 
 
 #ifndef DATAAPI_H_
 #define DATAAPI_H_
 
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/kernel.h>
 
-// ARM CMSIS library
+/* ARM CMSIS library */
 #include <arm_math.h>
 
-// Current module private functions
+/* Current module private functions */
 #include "./data/data_conversion.h"
 
-
-// Type definitions
 
 typedef enum : uint8_t
 {
@@ -81,13 +85,12 @@ enum class DispatchMethod_t
     externally_triggered
 };
 
-// Constants definitions
 
 static const uint8_t ADC_COUNT = 5;
 static const uint8_t PIN_COUNT = 59;
 static const uint8_t CHANNELS_PER_ADC = 19;
 
-// Define "no value" as an impossible, out of range value
+/* Define "no value" as an impossible, out of range value */
 const float32_t NO_VALUE = -10000;
 #define ERROR_CHANNEL_OFF -5
 #define ERROR_CHANNEL_NOT_FOUND -2
@@ -96,11 +99,10 @@ const uint8_t DATA_IS_OK      = 0;
 const uint8_t DATA_IS_OLD     = 1;
 const uint8_t DATA_IS_MISSING = 2;
 
-// Static class definition
 
 class DataAPI
 {
-    // Allow specific extenal members to access private members of this class
+    /* Allow specific external members to access private members of this class */
     friend class SensorsAPI;
     friend void user_task_proxy();
     friend void scheduling_start_uninterruptible_synchronous_task(bool);
@@ -117,9 +119,11 @@ public:
 
     void triggerAcquisition(adc_t adc_number);
 
-    uint16_t* getRawValues(uint8_t pin_number, uint32_t& number_of_values_acquired);
+    uint16_t* getRawValues(uint8_t pin_number,
+                           uint32_t& number_of_values_acquired);
 
-    float32_t* getValues(uint8_t pin_number, uint32_t& number_of_values_acquired);
+    float32_t* getValues(uint8_t pin_number,
+                         uint32_t& number_of_values_acquired);
 
     float32_t peekLatestValue(uint8_t pin_number);
 
@@ -127,11 +131,18 @@ public:
 
     float32_t convertValue(uint8_t pin_number, uint16_t raw_value);
 
-    void setConversionParametersLinear(uint8_t pin_number, float32_t gain, float32_t offset);
+    void setConversionParametersLinear(uint8_t pin_number,
+                                       float32_t gain,
+                                       float32_t offset);
 
-    void setConversionParametersNtcThermistor(uint8_t pin_num, float32_t r0, float32_t b, float32_t rdiv, float32_t t0);
+    void setConversionParametersNtcThermistor(uint8_t pin_num,
+                                              float32_t r0,
+                                              float32_t b,
+                                              float32_t rdiv,
+                                              float32_t t0);
 
-    float32_t getConversionParameterValue(uint8_t pin_number, parameter_t parameter_name);
+    float32_t getConversionParameterValue(uint8_t pin_number,
+                                          parameter_t parameter_name);
 
     conversion_type_t getConversionParameterType(uint8_t pin_number);
 
@@ -139,26 +150,48 @@ public:
 
     int8_t retrieveConversionParametersFromMemory(uint8_t pin_number);
 
-    void configureDiscontinuousMode(adc_t adc_number, uint32_t dicontinuous_count);
+    void configureDiscontinuousMode(adc_t adc_number,
+                                    uint32_t dicontinuous_count);
 
     void configureTriggerSource(adc_t adc_number, trigger_source_t trigger_source);
 
 private:
     static void initializeAllAdcs();
+
     static int8_t enableChannel(adc_t adc_number, uint8_t channel_num);
+
     static void disableChannel(adc_t adc_number, uint8_t channel);
-    static uint16_t* getChannelRawValues(adc_t adc_number, uint8_t channel_num, uint32_t& number_of_values_acquired);
-    static float32_t* getChannelValues(adc_t adc_number, uint8_t channel_num, uint32_t& number_of_values_acquired);
+
+
+    static uint16_t* getChannelRawValues(adc_t adc_number,
+                                         uint8_t channel_num,
+                                         uint32_t& number_of_values_acquired);
+    
+
+    static float32_t* getChannelValues(adc_t adc_number,
+                                       uint8_t channel_num,
+                                       uint32_t& number_of_values_acquired);
+
     static float32_t peekChannel(adc_t adc_number, uint8_t channel_num);
-    static float32_t getChannelLatest(adc_t adc_number, uint8_t channel_num, uint8_t* dataValid = nullptr);
+
+    static float32_t getChannelLatest(adc_t adc_number,
+                                      uint8_t channel_num,
+                                      uint8_t* dataValid = nullptr);
+
     static uint8_t getChannelRank(adc_t adc_number, uint8_t channel_num);
+
     static uint8_t getChannelNumber(adc_t adc_number, uint8_t shield_pin);
+
     static adc_t getDefaultAdcForPin(uint8_t pin_number);
+
     static adc_t getCurrentAdcForPin(uint8_t pin_number);
 
-    // Private members accessed by external friend members
+    /* Private members accessed by external friend members */
+
     static void setRepetitionsBetweenDispatches(uint32_t repetition);
+
     static void setDispatchMethod(DispatchMethod_t dispatch_method);
+
     static void doFullDispatch();
 
 private:
@@ -173,7 +206,7 @@ private:
 
 };
 
-#endif // DATAAPI_H_
+#endif /* DATAAPI_H_ */
 ```
 
 

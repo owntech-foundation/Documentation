@@ -91,15 +91,17 @@
 <parametername>repetitions</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>If dispatch is done at task start, this value represents the number of acquisitions that are done between two execution of the task. Ignored if dispatch is done on interrupt. </para>
+<para>If dispatch is done at task start, this value represents the number of acquisitions that are done between two execution of the task. Ignored if dispatch is done on interrupt.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
+Public API </para>
         </detaileddescription>
         <inbodydescription>
+<para>Make sure buffer size is a multiple of enabled channels count so that each channel data will always be at the same position</para>
+<para>Add room for one additional measure per channel. This prevents DMA buffer to do exactly one rotation between two tasks calls, to prevent edge cases in acquired data count computation.</para>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="62" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="120" bodyend="203" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="62" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="62" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="135" bodyend="273" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="62" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1a8ee29e42025c0a494cf4ac1e9f2fa959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -111,7 +113,7 @@
           <declname>adc_number</declname>
         </param>
         <briefdescription>
-<para>Dispatch function: gets the readings and store them in per-channel arrays. This functon is called by DMA callback when the DMA has filled one of its buffers. </para>
+<para>Dispatch function: gets the readings and store them in per-channel arrays. This function is called by DMA callback when the DMA has filled one of its buffers. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -127,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="71" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="205" bodyend="269" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="71" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="71" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="275" bodyend="347" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="71" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1acefeb0a090afb5be43e2cbae17c0263e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="77" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="271" bodyend="277" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="77" declcolumn="6"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="77" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="349" bodyend="355" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="77" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1a60c7faf2a9c6784fda863ebf8d564301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t *</type>
@@ -189,13 +191,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Buffer containing the available data. Note that the returned buffer is invalidated by further calls to the function with same adc number/channel rank. </para>
+<simplesect kind="return"><para>Buffer containing the available data. Note that the returned buffer is invalidated by further calls to the function with same adc number/channel rank.</para>
 </simplesect>
-</para>
+Accessors </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="97" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="283" bodyend="312" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="97" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="97" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="361" bodyend="396" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="97" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="data__dispatch_8h_1ac9d1c5171b4f3bb37046bde6c0b58777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -237,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="112" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="314" bodyend="338" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="112" declcolumn="10"/>
+        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" line="114" column="10" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.cpp" bodystart="398" bodyend="426" declfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h" declline="114" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -246,7 +248,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>LAAS-CNRS</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-present<sp/>LAAS-CNRS</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
@@ -264,16 +266,29 @@
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>LGPL-2.1</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>@date<sp/><sp/><sp/>2023</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>@author<sp/>Clément<sp/>Foucher<sp/>&lt;clement.foucher@laas.fr&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Data<sp/>dispatch<sp/>is<sp/>intended<sp/>at<sp/>dispatching<sp/>ADCs</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>acquired<sp/>data<sp/>from<sp/>DMA<sp/>buffers<sp/>to<sp/>per-channel<sp/>buffers.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>User<sp/>can<sp/>then<sp/>request<sp/>the<sp/>data<sp/>of<sp/>a<sp/>specific<sp/>channel.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>It<sp/>uses<sp/>double-buffering,<sp/>holding<sp/>2<sp/>buffers<sp/>for<sp/>each</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>enabled<sp/>channel<sp/>of<sp/>each<sp/>ADC,<sp/>one<sp/>being<sp/>filled<sp/>and<sp/>one</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>made<sp/>available<sp/>to<sp/>the<sp/>user.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DATA_DISPATCH_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATA_DISPATCH_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stdlib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Stdlib<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Constants<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>PEEK_NO_VALUE<sp/>=<sp/>0xFFFF;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>CHANNELS_BUFFERS_SIZE<sp/>=<sp/>32;</highlight></codeline>
@@ -286,12 +301,15 @@
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>data_dispatch_do_full_dispatch();</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">uint16_t*<sp/>data_dispatch_get_acquired_values(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_rank,<sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal">uint16_t<sp/>data_dispatch_peek_acquired_value(uint8_t<sp/>adc_number,<sp/>uint8_t<sp/>channel_rank);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATA_DISPATCH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">uint16_t*<sp/>data_dispatch_get_acquired_values(uint8_t<sp/>adc_number,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_rank,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t&amp;<sp/>number_of_values_acquired);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">uint16_t<sp/>data_dispatch_peek_acquired_value(uint8_t<sp/>adc_number,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>channel_rank);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DATA_DISPATCH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/data/data_dispatch.h"/>
   </compounddef>

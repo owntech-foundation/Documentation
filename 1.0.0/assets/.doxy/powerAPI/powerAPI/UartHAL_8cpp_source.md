@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,20 +27,23 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2023
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ */
 
 
-// STM 32 LL
+/* STM 32 LL */
 #include <stm32_ll_lpuart.h>
 
-// Zephyr
+/* Zephyr */
 #include <zephyr/drivers/uart.h>
 #include <zephyr/console/console.h>
 
-// Current file header
+/* Current file header */
 #include "UartHAL.h"
 
-
-// USART 1 defines
 
 #define CONFIG_OWNTECH_SERIAL_TX_BUF_SIZE 5
 #define CONFIG_OWNTECH_SERIAL_RX_BUF_SIZE 5
@@ -51,9 +54,8 @@ static char buf_req[CONFIG_OWNTECH_SERIAL_RX_BUF_SIZE];
 static bool command_flag = false;
 
 
-// USART 1 private functions
-
-static void _uart_usart1_process_input(const struct device *dev, void* user_data)
+static void _uart_usart1_process_input(const struct device *dev,
+                                       void* user_data)
 {
     uint8_t c;
 
@@ -70,7 +72,6 @@ static void _uart_usart1_process_input(const struct device *dev, void* user_data
     }
 }
 
-// USART 1 public functions
 
 void UartHAL::usart1Init()
 {
@@ -86,7 +87,11 @@ void UartHAL::usart1Init()
     if (device_is_ready(uart_dev) == true)
     {
         uart_configure(uart_dev, &usart1_config);
-        uart_irq_callback_user_data_set(uart_dev, _uart_usart1_process_input, NULL);
+
+        uart_irq_callback_user_data_set(uart_dev,
+                                        _uart_usart1_process_input,
+                                        NULL);
+
         uart_irq_rx_enable(uart_dev);
     }
 }
@@ -97,7 +102,8 @@ char UartHAL::usart1ReadChar()
         command_flag = false;
         return buf_req[0];
     } else {
-        return 'x';     // returns an x to signal there is no command waiting to be treated
+        /* returns an x to signal there is no command waiting to be treated */
+        return 'x';
     }
 }
 

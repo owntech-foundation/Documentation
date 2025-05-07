@@ -68,18 +68,18 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**dma\_channel\_init\_rx**](#function-dma_channel_init_rx) () <br>_initialize dma 1 channel 7 for receiving data in circular mode_  |
-|  void | [**dma\_channel\_init\_tx**](#function-dma_channel_init_tx) () <br>_initialize dma 1 channel 6 for sending data via USART3._  |
-|  void | [**init\_DEmode**](#function-init_demode) (void) <br>_initialize Driver Enable mode for RS485 hardware flowcontrol. pin B14 is set to level high when data is transmitted._  |
-|  void | [**init\_usrBaudrate**](#function-init_usrbaudrate) (uint32\_t usr\_baud) <br>_initialize baudrate with user choice._  |
-|  void | [**init\_usrBuffer**](#function-init_usrbuffer) (uint8\_t \* tx\_buffer, uint8\_t \* rx\_buffer) <br>_initialize user transmission and reception buffer_  |
-|  void | [**init\_usrDataSize**](#function-init_usrdatasize) (uint16\_t size) <br>_initialize DMA data size to send and receive_  |
-|  void | [**init\_usrFunc**](#function-init_usrfunc) (dma\_callbackRXfunc\_t fnc\_callback) <br>_initialize user function called every RX callback_  |
-|  void | [**oversamp\_set**](#function-oversamp_set) (usart\_oversampling\_t oversampling) <br>_set oversampling which is by default oversampling\_16. With oversampling\_8 we increase speed by 2 but decrease USART sampling by half making it more sensitive to noise._  |
-|  void | [**serial\_init**](#function-serial_init) (void) <br>_initialize USART3_  |
-|  void | [**serial\_start**](#function-serial_start) () <br>_enable usart_  |
-|  void | [**serial\_stop**](#function-serial_stop) () <br>_disable usart_  |
-|  void | [**serial\_tx\_on**](#function-serial_tx_on) () <br>_reload dma buffer TX_  |
+|  void | [**dma\_channel\_init\_rx**](#function-dma_channel_init_rx) () <br>_Initialize dma 1 channel 7 for receiving data in circular mode._  |
+|  void | [**dma\_channel\_init\_tx**](#function-dma_channel_init_tx) () <br>_Initialize dma 1 channel 6 for sending data via USART3._  |
+|  void | [**init\_DEmode**](#function-init_demode) (void) <br>_Initialize Driver Enable mode for RS485 hardware flowcontrol._  |
+|  void | [**init\_usrBaudrate**](#function-init_usrbaudrate) (uint32\_t usr\_baud) <br>_Initialize baudrate with user choice._  |
+|  void | [**init\_usrBuffer**](#function-init_usrbuffer) (uint8\_t \* tx\_buffer, uint8\_t \* rx\_buffer) <br>_Initialize user transmission and reception buffer._  |
+|  void | [**init\_usrDataSize**](#function-init_usrdatasize) (uint16\_t size) <br>_Initialize DMA data size to send and receive._  |
+|  void | [**init\_usrFunc**](#function-init_usrfunc) (dma\_callbackRXfunc\_t fnc\_callback) <br>_Initialize user function called every RX callback._  |
+|  void | [**oversamp\_set**](#function-oversamp_set) (usart\_oversampling\_t oversampling) <br>_Set oversampling which is by default oversampling\_16._  |
+|  void | [**serial\_init**](#function-serial_init) (void) <br>_Initialize USART3._  |
+|  void | [**serial\_start**](#function-serial_start) () <br>_Enable USART._  |
+|  void | [**serial\_stop**](#function-serial_stop) () <br>_Disable USART._  |
+|  void | [**serial\_tx\_on**](#function-serial_tx_on) () <br>_Reload dma buffer TX._  |
 
 
 ## Public Static Functions
@@ -242,7 +242,7 @@ dma_callbackRXfunc_t user_fnc;
 
 ### function dma\_channel\_init\_rx 
 
-_initialize dma 1 channel 7 for receiving data in circular mode_ 
+_Initialize dma 1 channel 7 for receiving data in circular mode._ 
 ```C++
 void dma_channel_init_rx () 
 ```
@@ -260,7 +260,7 @@ DMA channel RX initialization, this channel is set on circular mode.
 
 ### function dma\_channel\_init\_tx 
 
-_initialize dma 1 channel 6 for sending data via USART3._ 
+_Initialize dma 1 channel 6 for sending data via USART3._ 
 ```C++
 void dma_channel_init_tx () 
 ```
@@ -278,7 +278,7 @@ This is the TX dma channel initialization. The channel is not enabled here to av
 
 ### function init\_DEmode 
 
-_initialize Driver Enable mode for RS485 hardware flowcontrol. pin B14 is set to level high when data is transmitted._ 
+_Initialize Driver Enable mode for RS485 hardware flowcontrol._ 
 ```C++
 void init_DEmode (
     void
@@ -298,7 +298,7 @@ Initialize driver enable mode for RS485 flowcontrol. See RM0440 37.5.20 for more
 
 ### function init\_usrBaudrate 
 
-_initialize baudrate with user choice._ 
+_Initialize baudrate with user choice._ 
 ```C++
 void init_usrBaudrate (
     uint32_t usr_baud
@@ -318,7 +318,7 @@ Initialize baudrate by user
 
 ### function init\_usrBuffer 
 
-_initialize user transmission and reception buffer_ 
+_Initialize user transmission and reception buffer._ 
 ```C++
 void init_usrBuffer (
     uint8_t * tx_buffer,
@@ -339,7 +339,7 @@ Initialize RX and TX buffer by user
 
 ### function init\_usrDataSize 
 
-_initialize DMA data size to send and receive_ 
+_Initialize DMA data size to send and receive._ 
 ```C++
 void init_usrDataSize (
     uint16_t size
@@ -359,7 +359,7 @@ Set the size of data we send ie. the number of bytes. eg. : size = 5 means that 
 
 ### function init\_usrFunc 
 
-_initialize user function called every RX callback_ 
+_Initialize user function called every RX callback._ 
 ```C++
 void init_usrFunc (
     dma_callbackRXfunc_t fnc_callback
@@ -379,7 +379,7 @@ Initialize usr function to use in the RX callback
 
 ### function oversamp\_set 
 
-_set oversampling which is by default oversampling\_16. With oversampling\_8 we increase speed by 2 but decrease USART sampling by half making it more sensitive to noise._ 
+_Set oversampling which is by default oversampling\_16._ 
 ```C++
 void oversamp_set (
     usart_oversampling_t oversampling
@@ -399,7 +399,7 @@ Set the oversampling. See RM0440 37.5.7 for more details.
 
 ### function serial\_init 
 
-_initialize USART3_ 
+_Initialize USART3._ 
 ```C++
 void serial_init (
     void
@@ -419,14 +419,14 @@ This function initialise USART3 peripheral
 
 ### function serial\_start 
 
-_enable usart_ 
+_Enable USART._ 
 ```C++
 void serial_start () 
 ```
 
 
 
-to start or restart communication 
+To start or restart communication 
 
 
         
@@ -437,14 +437,14 @@ to start or restart communication
 
 ### function serial\_stop 
 
-_disable usart_ 
+_Disable USART._ 
 ```C++
 void serial_stop () 
 ```
 
 
 
-to stop communication 
+To stop communication 
 
 
         
@@ -455,7 +455,7 @@ to stop communication
 
 ### function serial\_tx\_on 
 
-_reload dma buffer TX_ 
+_Reload dma buffer TX._ 
 ```C++
 void serial_tx_on () 
 ```

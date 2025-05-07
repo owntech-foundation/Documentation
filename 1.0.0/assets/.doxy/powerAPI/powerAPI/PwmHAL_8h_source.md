@@ -9,7 +9,7 @@
 
 ```C++
 /*
- * Copyright (c) 2022-2024 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -27,17 +27,22 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+/*
+ * @date   2024
+ * @author Clément Foucher <clement.foucher@laas.fr>
+ * @author Luiz Villa <luiz.villa@laas.fr>
+ */
 
 #ifndef PWMHAL_H_
 #define PWMHAL_H_
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
-// ARM lib
+/* ARM lib */
 #include <arm_math.h>
 
-// OwnTech API
+/* OwnTech API */
 #include "DataAPI.h"
 #include "hrtim_enum.h"
 
@@ -56,7 +61,7 @@ typedef enum
 class PwmHAL
 {
 public:
-     // HRTIM configuration
+     /* HRTIM configuration */
 
      void initUnit(hrtim_tu_number_t pwmX);
 
@@ -70,7 +75,8 @@ public:
 
      void setModulation(hrtim_tu_number_t pwmX, hrtim_cnt_t modulation);
 
-     void setSwitchConvention(hrtim_tu_number_t pwmX, hrtim_switch_convention_t convention);
+     void setSwitchConvention(hrtim_tu_number_t pwmX,
+                              hrtim_switch_convention_t convention);
 
      void initFixedFrequency(uint32_t fixed_frequency);
 
@@ -80,6 +86,9 @@ public:
      void setDeadTime(hrtim_tu_number_t pwmX, uint16_t rise_ns, uint16_t fall_ns);
 
      void setDutyCycle(hrtim_tu_number_t pwmX, float32_t duty_cycle);
+
+     void setDutyCycleRaw(hrtim_tu_number_t pwmX, uint16_t duty_cycle);
+
 
      void setPhaseShift(hrtim_tu_number_t pwmX, int16_t shift);
 
@@ -113,7 +122,8 @@ public:
 
      void setAdcTriggerInstant(hrtim_tu_number_t pwmX, float32_t trig_val);
 
-     void setAdcEdgeTrigger(hrtim_tu_number_t pwmX, hrtim_adc_edgetrigger_t adc_edge_trigger);
+     void setAdcEdgeTrigger(hrtim_tu_number_t pwmX,
+                            hrtim_adc_edgetrigger_t adc_edge_trigger);
 
      hrtim_adc_edgetrigger_t getAdcEdgeTrigger(hrtim_tu_number_t pwmX);
 
@@ -125,7 +135,9 @@ public:
 
      uint32_t getPeriodEvntRep(hrtim_tu_t PWM_tu);
 
-     void configurePeriodEvnt(hrtim_tu_t PWM_tu, uint32_t repetition, hrtim_callback_t callback);
+     void configurePeriodEvnt(hrtim_tu_t PWM_tu,
+                              uint32_t repetition,
+                              hrtim_callback_t callback);
 
      void enablePeriodEvnt(hrtim_tu_t PWM_tu);
 
@@ -148,9 +160,15 @@ public:
      void stopBurstMode();
 
      void deInitBurstMode();
+
+private:
+
+     bool swap_state[HRTIM_CHANNELS] = {false};
+     uint16_t period[HRTIM_CHANNELS] = {0};
+
 };
 
-#endif // PWMHAL_H_
+#endif /* PWMHAL_H_ */
 ```
 
 

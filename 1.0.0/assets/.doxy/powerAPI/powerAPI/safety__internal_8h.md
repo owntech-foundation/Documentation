@@ -51,7 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  int8\_t | [**safety\_task**](#function-safety_task) () <br>_This function first watch the measure from the monitored channels, and compare it with the threshold values max/min to detect faults. If an error was detected, the siwtches will either in open-circuit mode or in short-circuit mode._  |
+|  int8\_t | [**safety\_task**](#function-safety_task) () <br>_This function first watches the measure from the monitored channels, and then compares it with the threshold values max/min to detect faults._  |
 
 
 
@@ -87,18 +87,21 @@
 
 ### function safety\_task 
 
-_This function first watch the measure from the monitored channels, and compare it with the threshold values max/min to detect faults. If an error was detected, the siwtches will either in open-circuit mode or in short-circuit mode._ 
+_This function first watches the measure from the monitored channels, and then compares it with the threshold values max/min to detect faults._ 
 ```C++
 int8_t safety_task () 
 ```
 
 
 
+If an error was detected, the switches will either in open-circuit mode or in short-circuit mode.
+
+
 
 
 **Returns:**
 
-0 if we did not detect any error, -1 else 
+`0` if no error was detected, `-1` else 
 
 
 

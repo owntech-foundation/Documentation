@@ -10,6 +10,7 @@
 
 ## c
 
+* [**can\_control\_work\_data**](structcan__control__work__data.md)
 * [**CanCommunication**](classCanCommunication.md)
 * [**CommunicationAPI**](classCommunicationAPI.md)
 * [**comp\_usage\_conf\_t**](structcomp__usage__conf__t.md)

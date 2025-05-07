@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="103" column="27" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="103" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="174" column="27" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="174" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1aa32088534b74e1030bb8c70260bc71f6" prot="public" static="no" mutable="no">
         <type>dac_api_setfunction</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="104" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="104" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="175" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="175" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1ac2942f1f7157e6eaaec263d606cbd626" prot="public" static="no" mutable="no">
         <type>dac_api_fn_upd_reset</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="105" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="105" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="176" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="176" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1aae2a2977533976f772fa170a0ed011d5" prot="public" static="no" mutable="no">
         <type>dac_api_fn_upd_step</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="106" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="106" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="177" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="177" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1a645e450ee28ec2d26046b78ae585e0d4" prot="public" static="no" mutable="no">
         <type>dac_api_pinconfigure</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="107" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="107" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="178" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="178" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1afffa63fb46a1deb97cf73252dcde69b9" prot="public" static="no" mutable="no">
         <type>dac_api_start</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="108" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="108" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="179" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="179" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdac__driver__api_1ab9f34201c47d54118939531243a9340a" prot="public" static="no" mutable="no">
         <type>dac_api_stop</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="109" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="109" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="180" column="23" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="180" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -119,7 +119,7 @@
         <link refid="structdac__function__config__t"/>
       </node>
     </collaborationgraph>
-    <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="101" column="12" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="102" bodyend="110"/>
+    <location file="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" line="172" column="12" bodyfile="docs/core/zephyr/modules/owntech_dac_driver/zephyr/public_api/dac.h" bodystart="173" bodyend="181"/>
     <listofallmembers>
       <member refid="structdac__driver__api_1ac2942f1f7157e6eaaec263d606cbd626" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>fn_upd_reset</name></member>
       <member refid="structdac__driver__api_1aae2a2977533976f772fa170a0ed011d5" prot="public" virt="non-virtual"><scope>dac_driver_api</scope><name>fn_upd_step</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="111" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="111" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="109" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1ae8af2a63448afefd8820d7e903db94c4" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="112" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="112" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="110" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1ab4e4a939ebb3b78ab8923569c10440dc" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="113" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="113" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="111" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a812ee98a33ac0eaa8d525a175755ec0f" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="114" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="114" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="112" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a782d1a7802aa7c1b72f1d911f90c8c80" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="115" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="115" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="113" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1acf257f843cf94a8304af3fc19dce7d09" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="116" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="116" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="114" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a9c6dadb9842b426c9f0391548da72ace" prot="public" static="no" mutable="no">
         <type>conv_type_string_t</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="117" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="117" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="115" column="20" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a41a3d679e1101368dae1aafe42bf21c9" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="119" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="119" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="117" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1aa7e0e79bd97840dbbcae4e15ec77c510" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="120" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="120" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="118" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a640e737982212ea36dd06795e62b209a" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="121" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="121" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="119" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1a77c242361f8016f7ec8b214e9580be51" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="122" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="122" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="120" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1acaabec4b2936ae896fa1b98a1c8a1a1d" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="123" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="123" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="121" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structSensorsAPI_1_1sensor__dt__data__t_1adcbd32a0fecefc18aec5d26b26358984" prot="public" static="no" mutable="no">
         <type>int2float</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="124" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="124" bodyend="-1"/>
+        <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="122" column="11" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="122" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -206,7 +206,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="109" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="110" bodyend="125"/>
+    <location file="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" line="107" column="1" bodyfile="docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h" bodystart="108" bodyend="123"/>
     <listofallmembers>
       <member refid="structSensorsAPI_1_1sensor__dt__data__t_1ae8af2a63448afefd8820d7e903db94c4" prot="public" virt="non-virtual"><scope>SensorsAPI::sensor_dt_data_t</scope><name>adc_number</name></member>
       <member refid="structSensorsAPI_1_1sensor__dt__data__t_1acf257f843cf94a8304af3fc19dce7d09" prot="public" virt="non-virtual"><scope>SensorsAPI::sensor_dt_data_t</scope><name>adc_reg_addr</name></member>

@@ -22,6 +22,8 @@
 ## b
 
 * **buildSensorListFromDeviceTree** ([**SensorsAPI**](classSensorsAPI.md))
+* **buf** ([**can\_control\_work\_data**](structcan__control__work__data.md))
+* **buf\_len** ([**can\_control\_work\_data**](structcan__control__work__data.md))
 * **burst\_clk** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
@@ -90,11 +92,17 @@
 * **dac\_function** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
 * **dst** ([**dma\_user\_data\_t**](structdma__user__data__t.md))
 * **duty\_cycle** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max\_user** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_max\_user\_float** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min\_user** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_min\_user\_float** ([**pwm\_conf\_t**](structpwm__conf__t.md))
+* **duty\_swap** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 
 
 ## e
 
-* **enableCan** ([**CanCommunication**](classCanCommunication.md))
 * **enableAcquisition** ([**DataAPI**](classDataAPI.md))
 * **enableChannel** ([**DataAPI**](classDataAPI.md))
 * **enableAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
@@ -118,11 +126,13 @@
 ## g
 
 * **getAnalogCommValue** ([**AnalogCommunication**](classAnalogCommunication.md))
+* **getBroadcastEnable** ([**CanCommunication**](classCanCommunication.md))
 * **getBroadcastPeriod** ([**CanCommunication**](classCanCommunication.md))
 * **getCanNodeAddr** ([**CanCommunication**](classCanCommunication.md))
 * **getControlPeriod** ([**CanCommunication**](classCanCommunication.md))
 * **getCtrlEnable** ([**CanCommunication**](classCanCommunication.md))
 * **getCtrlReference** ([**CanCommunication**](classCanCommunication.md))
+* **getStartStopState** ([**CanCommunication**](classCanCommunication.md))
 * **getChannelLatest** ([**DataAPI**](classDataAPI.md))
 * **getChannelNumber** ([**DataAPI**](classDataAPI.md))
 * **getChannelRank** ([**DataAPI**](classDataAPI.md))
@@ -137,6 +147,11 @@
 * **getValues** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
 * **getGpioDevice** ([**GpioHAL**](classGpioHAL.md))
 * **getPinNumber** ([**GpioHAL**](classGpioHAL.md))
+* **getDutyCycleMax** ([**PowerAPI**](classPowerAPI.md))
+* **getDutyCycleMaxRaw** ([**PowerAPI**](classPowerAPI.md))
+* **getDutyCycleMin** ([**PowerAPI**](classPowerAPI.md))
+* **getDutyCycleMinRaw** ([**PowerAPI**](classPowerAPI.md))
+* **getPeriod** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
 * **getAdcEdgeTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **getAdcTrigger** ([**PwmHAL**](classPwmHAL.md))
 * **getEev** ([**PwmHAL**](classPwmHAL.md))
@@ -144,7 +159,6 @@
 * **getFrequencyMin** ([**PwmHAL**](classPwmHAL.md))
 * **getMode** ([**PwmHAL**](classPwmHAL.md))
 * **getModulation** ([**PwmHAL**](classPwmHAL.md))
-* **getPeriod** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriodEvntRep** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriodMax** ([**PwmHAL**](classPwmHAL.md))
 * **getPeriodMin** ([**PwmHAL**](classPwmHAL.md))
@@ -160,7 +174,7 @@
 * **getEnabledSensorInfo** ([**SensorsAPI**](classSensorsAPI.md))
 * **getLineFromConsole** ([**SensorsAPI**](classSensorsAPI.md))
 * **gpio** ([**SpinAPI**](classSpinAPI.md))
-* **getTimer4IncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
+* **getIncrementalEncoderValue** ([**TimerHAL**](classTimerHAL.md))
 * **get\_count** ([**timer\_driver\_api**](structtimer__driver__api.md))
 * **gpio\_conf** ([**timer\_hrtim\_t**](structtimer__hrtim__t.md))
 
@@ -184,11 +198,12 @@
 * **initFixedFrequency** ([**PwmHAL**](classPwmHAL.md))
 * **initUnit** ([**PwmHAL**](classPwmHAL.md))
 * **initVariableFrequency** ([**PwmHAL**](classPwmHAL.md))
-* **init\_shield** ([**SafetyAPI**](classSafetyAPI.md))
+* **initShield** ([**SafetyAPI**](classSafetyAPI.md))
 * **initialized** ([**SensorsAPI**](classSensorsAPI.md))
 * **is\_differential** ([**SensorsAPI::sensor\_dt\_data\_t**](structSensorsAPI_1_1sensor__dt__data__t.md))
 * **initMaster** ([**SyncCommunication**](classSyncCommunication.md))
 * **initSlave** ([**SyncCommunication**](classSyncCommunication.md))
+* **Initialize** ([**TimerHAL**](classTimerHAL.md))
 
 
 ## l
@@ -222,12 +237,12 @@
 
 * **peekChannel** ([**DataAPI**](classDataAPI.md))
 * **peekLatestValue** ([**DataAPI**](classDataAPI.md), [**SensorsAPI**](classSensorsAPI.md))
+* **period** ([**PwmHAL**](classPwmHAL.md), [**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pin\_number** ([**SensorsAPI::sensor\_dt\_data\_t**](structSensorsAPI_1_1sensor__dt__data__t.md))
 * **power** ([**ShieldAPI**](classShieldAPI.md))
 * **pwm** ([**SpinAPI**](classSpinAPI.md))
 * **pinconfigure** ([**dac\_driver\_api**](structdac__driver__api.md))
 * **polarity** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
-* **period** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pwm\_mode** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pwm\_tu** ([**pwm\_conf\_t**](structpwm__conf__t.md))
 * **pin\_num** ([**sensor\_info\_t**](structsensor__info__t.md))
@@ -258,11 +273,14 @@
 ## s
 
 * **setAnalogCommValue** ([**AnalogCommunication**](classAnalogCommunication.md))
+* **setBroadcastEnable** ([**CanCommunication**](classCanCommunication.md))
 * **setBroadcastPeriod** ([**CanCommunication**](classCanCommunication.md))
 * **setCanNodeAddr** ([**CanCommunication**](classCanCommunication.md))
 * **setControlPeriod** ([**CanCommunication**](classCanCommunication.md))
 * **setCtrlEnable** ([**CanCommunication**](classCanCommunication.md))
 * **setCtrlReference** ([**CanCommunication**](classCanCommunication.md))
+* **startSlaveDevice** ([**CanCommunication**](classCanCommunication.md))
+* **stopSlaveDevice** ([**CanCommunication**](classCanCommunication.md))
 * **sync** ([**CommunicationAPI**](classCommunicationAPI.md))
 * **setConstValue** ([**DacHAL**](classDacHAL.md))
 * **slopeCompensation** ([**DacHAL**](classDacHAL.md))
@@ -278,6 +296,11 @@
 * **setAdcDecim** ([**PowerAPI**](classPowerAPI.md))
 * **setDeadTime** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
 * **setDutyCycle** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
+* **setDutyCycleMax** ([**PowerAPI**](classPowerAPI.md))
+* **setDutyCycleMaxRaw** ([**PowerAPI**](classPowerAPI.md))
+* **setDutyCycleMin** ([**PowerAPI**](classPowerAPI.md))
+* **setDutyCycleMinRaw** ([**PowerAPI**](classPowerAPI.md))
+* **setDutyCycleRaw** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
 * **setPhaseShift** ([**PowerAPI**](classPowerAPI.md), [**PwmHAL**](classPwmHAL.md))
 * **setSlopeCompensation** ([**PowerAPI**](classPowerAPI.md))
 * **setTriggerValue** ([**PowerAPI**](classPowerAPI.md))
@@ -300,6 +323,7 @@
 * **stopBurstMode** ([**PwmHAL**](classPwmHAL.md))
 * **stopDualOutput** ([**PwmHAL**](classPwmHAL.md))
 * **stopSingleOutput** ([**PwmHAL**](classPwmHAL.md))
+* **swap\_state** ([**PwmHAL**](classPwmHAL.md))
 * **startTransmission** ([**Rs485Communication**](classRs485Communication.md))
 * **setChannelReaction** ([**SafetyAPI**](classSafetyAPI.md))
 * **setChannelThresholdMax** ([**SafetyAPI**](classSafetyAPI.md))
@@ -316,7 +340,7 @@
 * **stopCritical** ([**TaskAPI**](classTaskAPI.md))
 * **suspendBackgroundMs** ([**TaskAPI**](classTaskAPI.md))
 * **suspendBackgroundUs** ([**TaskAPI**](classTaskAPI.md))
-* **startLogTimer4IncrementalEncoder** ([**TimerHAL**](classTimerHAL.md))
+* **startLogIncrementalEncoder** ([**TimerHAL**](classTimerHAL.md))
 * **setconstvalue** ([**dac\_driver\_api**](structdac__driver__api.md))
 * **setfunction** ([**dac\_driver\_api**](structdac__driver__api.md))
 * **step\_data** ([**dac\_function\_config\_t**](structdac__function__config__t.md))
@@ -333,6 +357,7 @@
 
 ## t
 
+* **ts\_can\_inst** ([**CanCommunication**](classCanCommunication.md))
 * **triggerAcquisition** ([**DataAPI**](classDataAPI.md))
 * **togglePin** ([**GpioHAL**](classGpioHAL.md))
 * **toggle** ([**LedHAL**](classLedHAL.md))
@@ -344,7 +369,8 @@
 * **temp\_mux\_in\_2** ([**SensorsAPI**](classSensorsAPI.md))
 * **triggerTwistTempMeas** ([**SensorsAPI**](classSensorsAPI.md))
 * **timer** ([**SpinAPI**](classSpinAPI.md))
-* **timer4Initialize** ([**TimerHAL**](classTimerHAL.md))
+* **timer3init** ([**TimerHAL**](classTimerHAL.md))
+* **timer3started** ([**TimerHAL**](classTimerHAL.md))
 * **timer4init** ([**TimerHAL**](classTimerHAL.md))
 * **timer4started** ([**TimerHAL**](classTimerHAL.md))
 * **tu\_gpio\_CLK** ([**gpio\_conf\_t**](structgpio__conf__t.md))
@@ -376,6 +402,7 @@
 ## w
 
 * **writePin** ([**GpioHAL**](classGpioHAL.md))
+* **work** ([**can\_control\_work\_data**](structcan__control__work__data.md))
 
 
 

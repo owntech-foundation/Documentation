@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 LAAS-CNRS
+ * Copyright (c) 2022-present LAAS-CNRS
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU Lesser General Public License as published by
@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
-/**
+/*
  * @date   2023
  * @author Clément Foucher <clement.foucher@laas.fr>
  * @author Luiz Villa <luiz.villa@laas.fr>
@@ -26,13 +26,14 @@
 #ifndef COMPHAL_H_
 #define COMPHAL_H_
 
-// Stdlib
+/* Stdlib */
 #include <stdint.h>
 
 /**
  * @brief  Handles comparator 1 and 3 of the SPIN board
  *
- * @note   Use this element to call the initialization function of either comparator
+ * @note   Use this element to call the initialization function
+ * 		   of either comparator
  */
 class CompHAL
 {
@@ -41,9 +42,15 @@ public:
 	 * @brief  Initializes a comparator for the current mode control.
 	 *
 	 * @note   Current mode control deploys a comparator together with a DAC.
-     *         This function must be called after setting up the DAC linked to the comparator.
-     *         Note that comparator 1 is linked with DAC3 and comparator 3 with DAC1.
-     *         Comparator 1 is linked with ilow1 and comparator 3 is linked with ilow2.
+	 * 
+     *         This function must be called after setting up the DAC linked
+	 * 		   to the comparator. 
+	 * 
+	 * 		   Note that: 
+	 * 		   
+	 * 		   - comparator 1 is linked with `DAC3` and `I_LOW1` 
+	 * 
+	 * 		   - comparator 3 is linked with `DAC1` and `I_LOW2`
 	 *
 	 * @param  comparator_number can be either 1 or 3
 	 */
@@ -52,4 +59,4 @@ public:
 
 
 
-#endif // COMPHAL_H_
+#endif /* COMPHAL_H_ */

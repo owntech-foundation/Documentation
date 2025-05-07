@@ -29,10 +29,8 @@ Here is a list of all files with brief descriptions:
                             * **file** [**Rs485Communication.h**](Rs485Communication_8h.md)     
                             * **file** [**SyncCommunication.cpp**](SyncCommunication_8cpp.md) 
                             * **file** [**SyncCommunication.h**](SyncCommunication_8h.md)     
-                            * **file** [**data\_objects.cpp**](data__objects_8cpp.md)     
                             * **file** [**data\_objects.h**](data__objects_8h.md) _Handling of ThingSet data objects._     
-                            * **file** [**thingset\_isotp.cpp**](thingset__isotp_8cpp.md)     
-                            * **file** [**thingset\_pub\_sub.cpp**](thingset__pub__sub_8cpp.md)     
+                            * **file** [**thingset\_can.c**](thingset__can_8c.md)     
                 * **dir** [**owntech\_comparator\_driver**](dir_5e1fc12cba5504c19e6728f660c9416f.md)     
                     * **dir** [**zephyr**](dir_d1334978536d898e33969dcd9ce58335.md)     
                         * **dir** [**public\_api**](dir_cd6387a1b9260a1118a1ac8d0c26218a.md)     
