@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef DATA_API_INTERNAL_H_
 #define DATA_API_INTERNAL_H_
 

@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 // Current module private functions
 #include "../src/comparator_driver.h"
 

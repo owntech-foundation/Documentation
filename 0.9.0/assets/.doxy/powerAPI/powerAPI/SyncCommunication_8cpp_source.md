@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 // LL driver
 #include "stm32_ll_hrtim.h"
 #include "stm32_ll_gpio.h"

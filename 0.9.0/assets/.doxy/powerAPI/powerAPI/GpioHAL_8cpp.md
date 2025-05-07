@@ -35,13 +35,13 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \*const | [**GPIO\_A**](#variable-gpio_a)   = = DEVICE\_DT\_GET(DT\_NODELABEL(gpioa))<br>_Owntech GPIO API._  |
-|  const struct device \*const | [**GPIO\_B**](#variable-gpio_b)   = = DEVICE\_DT\_GET(DT\_NODELABEL(gpiob))<br> |
-|  const struct device \*const | [**GPIO\_C**](#variable-gpio_c)   = = DEVICE\_DT\_GET(DT\_NODELABEL(gpioc))<br> |
-|  const struct device \*const | [**GPIO\_D**](#variable-gpio_d)   = = DEVICE\_DT\_GET(DT\_NODELABEL(gpiod))<br> |
-|  const gpio\_flags\_t | [**INPUT**](#variable-input)   = = GPIO\_INPUT<br> |
-|  const gpio\_flags\_t | [**INPUT\_PULLUP**](#variable-input_pullup)   = = GPIO\_INPUT \| GPIO\_PULL\_UP<br> |
-|  const gpio\_flags\_t | [**OUTPUT**](#variable-output)   = = GPIO\_OUTPUT<br> |
+|  const struct device \*const | [**GPIO\_A**](#variable-gpio_a)   = `DEVICE\_DT\_GET(DT\_NODELABEL(gpioa))`<br>_Owntech GPIO API._  |
+|  const struct device \*const | [**GPIO\_B**](#variable-gpio_b)   = `DEVICE\_DT\_GET(DT\_NODELABEL(gpiob))`<br> |
+|  const struct device \*const | [**GPIO\_C**](#variable-gpio_c)   = `DEVICE\_DT\_GET(DT\_NODELABEL(gpioc))`<br> |
+|  const struct device \*const | [**GPIO\_D**](#variable-gpio_d)   = `DEVICE\_DT\_GET(DT\_NODELABEL(gpiod))`<br> |
+|  const gpio\_flags\_t | [**INPUT**](#variable-input)   = `GPIO\_INPUT`<br> |
+|  const gpio\_flags\_t | [**INPUT\_PULLUP**](#variable-input_pullup)   = `GPIO\_INPUT \| GPIO\_PULL\_UP`<br> |
+|  const gpio\_flags\_t | [**OUTPUT**](#variable-output)   = `GPIO\_OUTPUT`<br> |
 
 
 

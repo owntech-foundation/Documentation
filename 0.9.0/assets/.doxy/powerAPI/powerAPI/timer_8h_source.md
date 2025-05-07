@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef TIMER_H_
 #define TIMER_H_
 

@@ -43,13 +43,13 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint32\_t | [**baud**](#variable-baud)   = = 21250000 / (2)<br> |
-|  const struct device \* | [**dma1**](#variable-dma1)   = = DEVICE\_DT\_GET(DT\_NODELABEL(dma1))<br> |
+|  uint32\_t | [**baud**](#variable-baud)   = `21250000 / (2)`<br> |
+|  const struct device \* | [**dma1**](#variable-dma1)   = `DEVICE\_DT\_GET(DT\_NODELABEL(dma1))`<br> |
 |  uint16\_t | [**dma\_buffer\_size**](#variable-dma_buffer_size)  <br> |
 |  uint8\_t \* | [**rx\_usart\_val**](#variable-rx_usart_val)  <br> |
 |  uint8\_t \* | [**tx\_usart\_val**](#variable-tx_usart_val)  <br> |
-|  const struct device \* | [**uart\_dev**](#variable-uart_dev)   = = DEVICE\_DT\_GET(DT\_NODELABEL(usart3))<br> |
-|  dma\_callbackRXfunc\_t | [**user\_fnc**](#variable-user_fnc)   = = NULL<br> |
+|  const struct device \* | [**uart\_dev**](#variable-uart_dev)   = `DEVICE\_DT\_GET(DT\_NODELABEL(usart3))`<br> |
+|  dma\_callbackRXfunc\_t | [**user\_fnc**](#variable-user_fnc)   = `NULL`<br> |
 
 
 

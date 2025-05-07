@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef NVS_STORAGE_H_
 #define NVS_STORAGE_H_
 

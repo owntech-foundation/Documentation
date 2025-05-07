@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef SYNCCOMMUNICATION_H_
 #define SYNCCOMMUNICATION_H_
 

@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #include "Rs485.h"
 #include "Rs485Communication.h"
 

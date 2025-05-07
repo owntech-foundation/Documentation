@@ -35,16 +35,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|  uint16\_t | [**broadcast\_time**](#variable-broadcast_time)   = = 10<br> |
+|  uint16\_t | [**broadcast\_time**](#variable-broadcast_time)   = `10`<br> |
 |  uint16\_t | [**can\_node\_addr**](#variable-can_node_addr)  <br> |
-|  uint16\_t | [**control\_time**](#variable-control_time)   = = 10<br> |
-|  const struct can\_filter | [**ctrl\_filter**](#variable-ctrl_filter)   = = {
-    .id = TS\_CAN\_BASE\_CONTROL,
-    .rtr = CAN\_DATAFRAME,
-    .id\_type = CAN\_EXTENDED\_IDENTIFIER,
-    .id\_mask = TS\_CAN\_TYPE\_MASK,
-    .rtr\_mask = 1
-}<br> |
+|  uint16\_t | [**control\_time**](#variable-control_time)   = `10`<br> |
+|  const struct can\_filter | [**ctrl\_filter**](#variable-ctrl_filter)   = `/* multi line expression */`<br> |
 |  ThingSet | [**ts**](#variable-ts)  <br> |
 
 
@@ -52,7 +46,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**can\_dev**](#variable-can_dev)   = = DEVICE\_DT\_GET(DT\_NODELABEL(can1))<br> |
+|  const struct device \* | [**can\_dev**](#variable-can_dev)   = `DEVICE\_DT\_GET(DT\_NODELABEL(can1))`<br> |
 
 
 

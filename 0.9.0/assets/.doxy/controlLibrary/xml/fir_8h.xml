@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="fir_8h" kind="file" language="C++">
     <compoundname>fir.h</compoundname>
     <includes local="no">arm_math.h</includes>
@@ -70,15 +70,15 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIR_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="classFir" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFir" kindref="compound">Fir</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="classFir" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Fir<sp/>{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFir" kindref="compound">Fir</ref>();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFir" kindref="compound">Fir</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>nc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>*coeffs);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Fir();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Fir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>nc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>*coeffs);</highlight></codeline>
 <codeline lineno="47" refid="classFir_1ab3c26dd1d24e5d8c1c4a515b0e250fd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classFir_1ab3c26dd1d24e5d8c1c4a515b0e250fd5" kindref="member">init</ref>(uint8_t<sp/>nc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>float32_t<sp/>*coeffs);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/>update(float32_t<sp/>new_data);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCoeff(uint8_t<sp/>n,<sp/>float32_t<sp/>value);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFir" kindref="compound">~Fir</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>~Fir();</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>nc;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>float32_t<sp/>*coeffs;</highlight></codeline>

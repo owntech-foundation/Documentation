@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 #ifndef CANCOMMUNICATION_H_
 #define CANCOMMUNICATION_H_
 

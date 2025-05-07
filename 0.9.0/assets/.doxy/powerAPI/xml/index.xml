@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
   <compound refid="structadc__hrtim__conf__t" kind="struct"><name>adc_hrtim_conf_t</name>
     <member refid="structadc__hrtim__conf__t_1ae418d1bee76e0d87f9332b2f66832d9a" kind="variable"><name>adc_event</name></member>
     <member refid="structadc__hrtim__conf__t_1ae2418b156739e753a529874016397f08" kind="variable"><name>adc_source</name></member>

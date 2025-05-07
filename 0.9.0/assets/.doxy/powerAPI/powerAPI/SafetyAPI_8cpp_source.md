@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #include "SafetyAPI.h"
 #include "../src/safety_shield.h"
 #include "../src/safety_setting.h"

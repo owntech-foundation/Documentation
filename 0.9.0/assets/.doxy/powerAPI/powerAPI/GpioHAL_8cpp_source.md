@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 #include "GpioHAL.h"
 
 const struct device* const GPIO_A = DEVICE_DT_GET(DT_NODELABEL(gpioa));

@@ -73,7 +73,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = = 6<br> |
+|  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = `6`<br> |
 
 
 

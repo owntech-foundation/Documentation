@@ -26,6 +26,7 @@
  *
  * SPDX-License-Identifier: LGLPV2.1
  */
+
 #ifndef TRANSFORM_H_
 #define TRANSFORM_H_
 #include <arm_math.h>
@@ -33,6 +34,7 @@
 
 const float32_t SQRT3_INVERSE  = 0.57735026F;
 const float32_t SQRT3_DIV_2    = 0.8660254F;
+
 
 
 struct three_phase_t {

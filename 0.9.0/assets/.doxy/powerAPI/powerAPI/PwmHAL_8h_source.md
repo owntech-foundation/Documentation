@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef PWMHAL_H_
 #define PWMHAL_H_
 

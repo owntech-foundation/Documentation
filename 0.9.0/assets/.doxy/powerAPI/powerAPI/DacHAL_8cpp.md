@@ -37,9 +37,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**dac1**](#variable-dac1)   = = DEVICE\_DT\_GET(DAC1\_DEVICE)<br> |
-|  const struct device \* | [**dac2**](#variable-dac2)   = = DEVICE\_DT\_GET(DAC2\_DEVICE)<br> |
-|  const struct device \* | [**dac3**](#variable-dac3)   = = DEVICE\_DT\_GET(DAC3\_DEVICE)<br> |
+|  const struct device \* | [**dac1**](#variable-dac1)   = `DEVICE\_DT\_GET(DAC1\_DEVICE)`<br> |
+|  const struct device \* | [**dac2**](#variable-dac2)   = `DEVICE\_DT\_GET(DAC2\_DEVICE)`<br> |
+|  const struct device \* | [**dac3**](#variable-dac3)   = `DEVICE\_DT\_GET(DAC3\_DEVICE)`<br> |
 
 
 

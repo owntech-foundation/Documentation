@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef ADCHAL_H_
 #define ADCHAL_H_
 

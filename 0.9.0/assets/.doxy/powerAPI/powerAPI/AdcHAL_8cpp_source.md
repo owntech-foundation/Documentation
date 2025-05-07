@@ -27,6 +27,8 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
+
 // OwnTech Power API
 #include "adc.h"
 

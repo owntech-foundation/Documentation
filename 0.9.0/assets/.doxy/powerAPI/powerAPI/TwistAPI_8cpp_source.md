@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #include "TwistAPI.h"
 #include "../src/power_init.h"
 
@@ -82,6 +83,7 @@ void TwistAPI::initLegMode(leg_t leg, hrtim_switch_convention_t leg_convention, 
     spin.pwm.setModulation(spinNumberToTu(dt_pwm_pin[leg]), dt_modulation[leg]); // Set modulation
 
     spin.pwm.setAdcEdgeTrigger(spinNumberToTu(dt_pwm_pin[leg]), dt_edge_trigger[leg]); // Configure ADC rollover in center aligned mode
+
 
     if (leg_mode == CURRENT_MODE)
     {

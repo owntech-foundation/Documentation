@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  const struct device \* | [**ngnd\_switch**](#variable-ngnd_switch)   = = DEVICE\_DT\_GET(NGND\_DEVICE)<br> |
+|  const struct device \* | [**ngnd\_switch**](#variable-ngnd_switch)   = `DEVICE\_DT\_GET(NGND\_DEVICE)`<br> |
 
 
 

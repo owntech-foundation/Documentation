@@ -27,6 +27,7 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+
 #ifndef RS485COMMUNICATION_H_
 #define RS485COMMUNICATION_H_
 
