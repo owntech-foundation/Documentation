@@ -210,5 +210,5 @@ jobs:
       - name: Make sure git user.email is configured
         run: git config --global user.email "${{github.actor}}@users.noreply.github.com" 
       - name: Publish docs for v1.0.0 using mike versioning tool
-        run: mike deploy --push --update-aliases 1.0.0 release_candidate
+        run: mike deploy --push --update-aliases 1.0.0 latest
 
