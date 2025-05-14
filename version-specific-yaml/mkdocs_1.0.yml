@@ -30,6 +30,8 @@ nav:
             - Timer:
                 - Incremental encoder: examples/SPIN/TIMER/incremental_encoder/README.md
         - TWIST:
+            - BASIC:
+                - Open-Loop PWM: examples/TWIST/Basic/Open-Loop PWM/README.md
             - DC DC topology examples:
                 - Buck voltage mode: examples/TWIST/DC_DC/buck_voltage_mode/README.md
                 - Buck current mode: examples/TWIST/DC_DC/buck_current_mode/README.md
@@ -43,6 +45,10 @@ nav:
             - DC AC topology examples:
                 - Grid forming Inverter: examples/TWIST/DC_AC/grid_forming/README.md
                 - Grid following Inverter: examples/TWIST/DC_AC/grid_following/README.md
+        - OWNVERTER:
+            - Hall Sensors:
+                - BLDC control: examples/OWNVERTER/BLDC_hall_sensor/README.md
+                - FOC control : examples/OWNVERTER/FOC_hall_sensor/README.md
     - Power API:
         - Home: core/docs/powerAPI.md
         - Bootloader: bootloader/docs/getting_started.md
