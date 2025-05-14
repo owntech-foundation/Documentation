@@ -157,7 +157,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/examples
-          ref: docs
+          ref: v1.0.0
           path: docs/examples
 
       - name: Checkout OwnTech Matlab repo
