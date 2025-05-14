@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5002,11 +5011,11 @@ Acquiring data without a shield is done using <a href="../spin_dataAPI/">Data AP
 <p>To enable the Twist Shield channels, indicate which shield you are using by editing the file <code>platformio.ini</code> to define the <code>board_shield=</code> and <code>board_shield_version=</code> commands. From there, the Shield sensors API will be available simply by including <code>ShieldAPI.h</code> in your code.</p>
 <p>Using shield sensor API is done quite similarly to the <a href="../spin_dataAPI/">Data API</a>. The difference is that you do not have to know which pin a sensor is connected to.</p>
 <p>For example, if you want to access the V1_LOW sensor from the Twist shield using Data API, you would have to consult the pinout of the shield and identify that it is connected to pin 29 of the Spin, then write:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>spin.data.enableAcquisition(29);
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>spin.data.enableAcquisition(29);
 </code></pre></div>
 However, using Shield sensor API, you just have to write:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>shield.sensors.enableAcquisition(V1_LOW);
-</code></pre></div></p>
+</code></pre></div>
 <p>Everything else should be used similarly as Data API, just replace <code>spin.data</code> by <code>shield.sensors</code> in your code, then use the sensor name instead of the pin number as a parameter for the functions.</p>
 <h2 id="auto-configuration-of-the-api">Auto-configuration of the API</h2>
 <p>Moreover, as Shield sensor API is aware of what sensors are available on the shield you use, it provides an auto-configuration that enables acquisition for all the sensors from the shield.</p>
@@ -5096,11 +5105,11 @@ However, using Shield sensor API, you just have to write:
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-convertrawvalue">function convertRawValue</h3>
 <p><em>Use this function to convert values obtained using matching spin.data.get*RawValues() function.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">convertRawValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">convertRawValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">raw_value</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Conversion will be done to relevant unit for the data: Volts, Amperes, or Degree Celsius.</p>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled.</p>
@@ -5116,8 +5125,8 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-enabledefaultownvertersensors">function enableDefaultOwnverterSensors</h3>
 <p><em>This function is used to enable acquisition of all voltage/current sensors on the OwnVerter shield.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableDefaultOwnverterSensors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableDefaultOwnverterSensors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>ADCs are triggered simultaneously.</p>
 <p><strong>Note:</strong></p>
@@ -5139,8 +5148,8 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-enabledefaulttwistsensors">function enableDefaultTwistSensors</h3>
 <p><em>This function is used to enable acquisition of all voltage/current sensors on the Twist shield.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableDefaultTwistSensors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableDefaultTwistSensors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>ADCs are triggered simultaneously.</p>
 <p><strong>Note:</strong></p>
@@ -5159,11 +5168,11 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-enablesensor">function enableSensor</h3>
 <p><em>This function is used to enable a shield sensor for acquisition by a given ADC.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableSensor</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">enableSensor</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">adc_t</span><span class="w"> </span><span class="n">adc_number</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function requires the presence of an "shield-sensor" node in the shield device-tree.</p>
 <p><strong>Note:</strong></p>
@@ -5180,11 +5189,11 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-getlatestvalue">function getLatestValue</h3>
 <p><em>This function returns the latest acquired measure expressed in the relevant unit for the sensor: Volts, Amperes, or Degree Celsius.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getLatestValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getLatestValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataValid</span><span class="o">=</span><span class="k">nullptr</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled and the <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>
 <p><strong>Note:</strong></p>
@@ -5209,11 +5218,11 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-getrawvalues">function getRawValues</h3>
 <p><em>Function to access the acquired data for specified sensor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getRawValues</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getRawValues</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled and the <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>
 <p><strong>Note:</strong></p>
@@ -5235,11 +5244,11 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-getvalues">function getValues</h3>
 <p><em>Function to access the acquired data for specified pin.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getValues</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">getValues</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">number_of_values_acquired</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Warning:</strong></p>
 <p>This is an expensive function. </p>
 <p><strong>Note:</strong></p>
@@ -5258,10 +5267,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-peeklatestvalue">function peekLatestValue</h3>
 <p><em>Function to access the latest value available from the sensor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">peekLatestValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">peekLatestValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled and the <a href="../../../powerAPI/classDataAPI/"><strong>DataAPI</strong></a> module is started, either explicitly or by starting the Uninterruptible task.</p>
 <p><strong>Parameters:</strong></p>
@@ -5274,10 +5283,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-retrieveparametersfrommemory">function retrieveParametersFromMemory</h3>
 <p><em>Use this function to read the gain and offset parameters of the board to is non-volatile memory.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveParametersFromMemory</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>sensor_name</code> Name of the shield sensor to save the values. </li>
@@ -5294,10 +5303,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-retrievestoredconversiontype">function retrieveStoredConversionType</h3>
 <p><em>Use this function to get the current conversion type for the chosen sensor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveStoredConversionType</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">conversion_type_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveStoredConversionType</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled.</p>
 <p><strong>Parameters:</strong></p>
@@ -5308,11 +5317,11 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-retrievestoredparametervalue">function retrieveStoredParameterValue</h3>
 <p><em>Use this function to get the current conversion parameters for the chosen sensor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveStoredParameterValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">retrieveStoredParameterValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">parameter_t</span><span class="w"> </span><span class="n">parameter_name</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled.</p>
 <p><strong>Parameters:</strong></p>
@@ -5324,12 +5333,12 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-setconversionparameterslinear">function setConversionParametersLinear</h3>
 <p><em>Use this function to tweak the conversion values for any linear sensor if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setConversionParametersLinear</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setConversionParametersLinear</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">offset</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled. </p>
 <p><strong>Parameters:</strong></p>
@@ -5342,14 +5351,14 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-setconversionparametersntcthermistor">function setConversionParametersNtcThermistor</h3>
 <p><em>Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setConversionParametersNtcThermistor</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setConversionParametersNtcThermistor</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span><span class="p">,</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">r0</span><span class="p">,</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">b</span><span class="p">,</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">rdiv</span><span class="p">,</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">t0</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function can NOT be called before the sensor is enabled. </p>
 <p><strong>Parameters:</strong></p>
@@ -5364,10 +5373,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-setownvertertempmeas">function setOwnverterTempMeas</h3>
 <p><em>This function sets the GPIOs attached to the MUX to control which temperature sensor will be measured.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setOwnverterTempMeas</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setOwnverterTempMeas</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">ownverter_temp_sensor_t</span><span class="w"> </span><span class="n">temperature_sensor</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>temperature_sensor</code> Name of the temperature sensor to trigger: <code>TEMP_1</code>, <code>TEMP_2</code>, <code>TEMP_3</code></li>
@@ -5385,8 +5394,8 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-settwistsensorsusercalibrationfactors">function setTwistSensorsUserCalibrationFactors</h3>
 <p><em>Manually set parameters values using console. You will be directed via console to input the parameters of each sensor of the Twist board.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setTwistSensorsUserCalibrationFactors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">setTwistSensorsUserCalibrationFactors</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <p>After the parameters have been set, they will be stored in Spin Non-Volatile memory so that they are automatically applied on subsequent boots.</p>
 <p><strong>Note:</strong></p>
 <p>This function requires a console to interact with the user. </p>
@@ -5397,10 +5406,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-storeparametersinmemory">function storeParametersInMemory</h3>
 <p><em>Use this function to write the gain and offset parameters of the board to is non-volatile memory.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">storeParametersInMemory</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">storeParametersInMemory</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">sensor_name</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This function should be called after updating the parameters using setParameters.</p>
 <p><strong>Parameters:</strong></p>
@@ -5411,10 +5420,10 @@ However, using Shield sensor API, you just have to write:
 
 <h3 id="function-triggertwisttempmeas">function triggerTwistTempMeas</h3>
 <p><em>Manually triggers the temperature measurement of the Twist board.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">triggerTwistTempMeas</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">SensorsAPI</span><span class="o">::</span><span class="n">triggerTwistTempMeas</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">sensor_t</span><span class="w"> </span><span class="n">temperature_sensor</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>temperature_sensor</code> Name of the temperature sensor to trigger: <code>TEMP_SENSOR_1</code>, <code>TEMP_SENSOR_2</code></li>
@@ -5425,7 +5434,7 @@ However, using Shield sensor API, you just have to write:
 <p>Account for delays in the measurement. </p>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_shield_api/zephyr/src/Sensors.h</code></p>
 
 <!-- Source file information -->
@@ -5627,10 +5636,10 @@ However, using Shield sensor API, you just have to write:
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -5639,5 +5648,7 @@ However, using Shield sensor API, you just have to write:
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

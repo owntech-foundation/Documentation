@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -66,7 +66,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4978,12 +4987,12 @@
 <h2 id="public-types-documentation">Public Types Documentation</h2>
 <h3 id="enum-hrtim_adc_edgetrigger_t">enum hrtim_adc_edgetrigger_t</h3>
 <p><em>Edge Trigger behavior.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">EdgeTrigger_up</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ROLLOVER_MODE_PER</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">EdgeTrigger_down</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ROLLOVER_MODE_RST</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">EdgeTrigger_Both</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ROLLOVER_MODE_BOTH</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><code>EdgeTrigger_up</code> = <code>LL_HRTIM_ROLLOVER_MODE_PER</code>,</p>
 <p><code>EdgeTrigger_down</code> = <code>LL_HRTIM_ROLLOVER_MODE_RST</code>,</p>
 <p><code>EdgeTrigger_Both</code> = <code>LL_HRTIM_ROLLOVER_MODE_BOTH</code> </p>
@@ -4991,7 +5000,7 @@
 
 <h3 id="enum-hrtim_adc_event_t">enum hrtim_adc_event_t</h3>
 <p><em>HRTIM ADC event update.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_event_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_event_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">PWMA_UPDT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_UPDATE_TIMER_A</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">PWMB_UPDT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_UPDATE_TIMER_B</span><span class="p">,</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">PWMC_UPDT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_UPDATE_TIMER_C</span><span class="p">,</span>
@@ -4999,12 +5008,12 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">PWME_UPDT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_UPDATE_TIMER_E</span><span class="p">,</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">PWMF_UPDT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_UPDATE_TIMER_F</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_adc_source_t">enum hrtim_adc_source_t</h3>
 <p><em>HRTIM ADC Event Number and its associated source.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_source_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_source_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">TIMA_CMP3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_SRC13_TIMACMP3</span><span class="p">,</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">TIMB_CMP3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_SRC13_TIMBCMP3</span><span class="p">,</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">TIMC_CMP3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_SRC13_TIMCCMP3</span><span class="p">,</span>
@@ -5012,20 +5021,20 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">TIME_CMP3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_SRC13_TIMECMP3</span><span class="p">,</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">TIMF_CMP3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_SRC13_TIMFCMP3</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Warning:</strong></p>
 <p>Please Prioritize cmp3, because cmp4 and cmp2 might be used for current mode, and cmp1 is used for duty cycle </p>
 <hr>
 
 <h3 id="enum-hrtim_adc_t">enum hrtim_adc_t</h3>
 <p><em>HRTIM ADC trigger registers definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">ADC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">ADC2R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">ADC3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">ADC4R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>ADC1R = 1</code>,</li>
 <li><code>ADC2R = 2</code>,</li>
@@ -5036,7 +5045,7 @@
 
 <h3 id="enum-hrtim_adc_trigger_t">enum hrtim_adc_trigger_t</h3>
 <p><em>HRTIM ADC trigger.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_trigger_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_adc_trigger_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">ADCTRIG_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_1</span><span class="p">,</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">ADCTRIG_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_2</span><span class="p">,</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">ADCTRIG_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_3</span><span class="p">,</span>
@@ -5048,12 +5057,12 @@
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="n">ADCTRIG_9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_ADCTRIG_9</span><span class="p">,</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">ADCTRIG_NONE</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_burst_clk_t">enum hrtim_burst_clk_t</h3>
 <p><em>HRTIM burst mode clock setting.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_burst_clk_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_burst_clk_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">BURST_TIMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_BM_CLKSRC_TIMER_A</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">BURST_TIMB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_BM_CLKSRC_TIMER_B</span><span class="p">,</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">BURST_TIMC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_BM_CLKSRC_TIMER_C</span><span class="p">,</span>
@@ -5061,7 +5070,7 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">BURST_TIME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_BM_CLKSRC_TIMER_E</span><span class="p">,</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">BURST_TIMF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_BM_CLKSRC_TIMER_F</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>BURST_TIMA</code> = <code>LL_HRTIM_BM_CLKSRC_TIMER_A</code></li>
 <li><code>BURST_TIMB</code> = <code>LL_HRTIM_BM_CLKSRC_TIMER_B</code></li>
@@ -5074,13 +5083,13 @@
 
 <h3 id="typedef-hrtim_callback_t">typedef hrtim_callback_t</h3>
 <p><em>callback function</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">hrtim_callback_t</span><span class="p">)</span><span class="w"> </span><span class="p">();</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">hrtim_callback_t</span><span class="p">)</span><span class="w"> </span><span class="p">();</span>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_cmp_t">enum hrtim_cmp_t</h3>
 <p><em>HRTIM comparators definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_cmp_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_cmp_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">CMP1xR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">CMP2xR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">CMP3xR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
@@ -5091,16 +5100,16 @@
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">MCMP4R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">MCMPER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_cnt_t">enum hrtim_cnt_t</h3>
 <p><em>HRTIM counting mode setting.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_cnt_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_cnt_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">Lft_aligned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_COUNTING_MODE_UP</span><span class="p">,</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">UpDwn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_COUNTING_MODE_UP_DOWN</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>Lft_aligned</code> = <code>LL_HRTIM_COUNTING_MODE_UP</code></li>
 <li><code>UpDwn</code> = <code>LL_HRTIM_COUNTING_MODE_UP_DOWN</code> = Center Aligned </li>
@@ -5109,11 +5118,11 @@
 
 <h3 id="enum-hrtim_comp_usage_t">enum hrtim_comp_usage_t</h3>
 <p><em>comparator usage for a timing unit</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_comp_usage_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_comp_usage_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">USED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">FREE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>USED=true</code></li>
 <li><code>FREE=false</code> </li>
@@ -5122,7 +5131,7 @@
 
 <h3 id="enum-hrtim_external_trigger_t">enum hrtim_external_trigger_t</h3>
 <p><em>External eventcoming from comparator used for current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_external_trigger_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_external_trigger_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">EEV1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_EEV_1</span><span class="p">,</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">EEV2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_EEV_2</span><span class="p">,</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">EEV3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_EEV_3</span><span class="p">,</span>
@@ -5133,7 +5142,7 @@
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="n">EEV8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_EEV_8</span><span class="p">,</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">EEV9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_EEV_9</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>EEV1</code> = <code>LL_HRTIM_OUTPUTRESET_EEV_1</code></li>
 <li><code>EEV2</code> = <code>LL_HRTIM_OUTPUTRESET_EEV_2</code></li>
@@ -5149,21 +5158,21 @@
 
 <h3 id="enum-hrtim_gpio_clock_number_t">enum hrtim_gpio_clock_number_t</h3>
 <p><em>HRTIM gpio clock units definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_gpio_clock_number_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_gpio_clock_number_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">CLK_GPIOA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_AHB2_GRP1_PERIPH_GPIOA</span><span class="p">,</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">CLK_GPIOB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_AHB2_GRP1_PERIPH_GPIOB</span><span class="p">,</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">CLK_GPIOC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_AHB2_GRP1_PERIPH_GPIOC</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_out_t">enum hrtim_out_t</h3>
 <p><em>timing unit output 1 or 2</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_out_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_out_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">OUT1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">OUT2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_output_number_t">enum hrtim_output_number_t</h3>
@@ -5176,7 +5185,7 @@
 
 <h3 id="enum-hrtim_output_reset_t">enum hrtim_output_reset_t</h3>
 <p><em>HRTIM output reset units definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_reset_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_reset_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">RST_NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_NONE</span><span class="p">,</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">RST_CMP1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_TIMCMP1</span><span class="p">,</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">RST_CMP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_TIMCMP2</span><span class="p">,</span>
@@ -5184,12 +5193,12 @@
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">RST_CMP4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_TIMCMP4</span><span class="p">,</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="n">RST_PER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTRESET_TIMPER</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_output_set_t">enum hrtim_output_set_t</h3>
 <p><em>HRTIM output set units definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_set_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_set_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">SET_NONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTSET_NONE</span><span class="p">,</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">SET_CMP1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTSET_TIMCMP1</span><span class="p">,</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="n">SET_CMP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTSET_TIMCMP2</span><span class="p">,</span>
@@ -5197,12 +5206,12 @@
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="n">SET_CMP4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTSET_TIMCMP4</span><span class="p">,</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="n">SET_PER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUTSET_TIMPER</span>
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_output_units_t">enum hrtim_output_units_t</h3>
 <p><em>HRTIM output units definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_units_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_output_units_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">PWMA1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUT_TA1</span><span class="p">,</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">PWMA2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUT_TA2</span><span class="p">,</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="n">PWMB1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUT_TB1</span><span class="p">,</span>
@@ -5216,21 +5225,21 @@
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="n">PWMF1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUT_TF1</span><span class="p">,</span>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="n">PWMF2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_OUTPUT_TF2</span>
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_pwm_mode_t">enum hrtim_pwm_mode_t</h3>
 <p><em>Special PWM mode for current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_pwm_mode_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_pwm_mode_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">VOLTAGE_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">CURRENT_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_reset_trig_t">enum hrtim_reset_trig_t</h3>
 <p><em>HRTIM reset trig source definitions.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_reset_trig_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_reset_trig_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">MSTR_PER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_RESETTRIG_MASTER_PER</span><span class="p">,</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">MSTR_CMP1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_RESETTRIG_MASTER_CMP1</span><span class="p">,</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">MSTR_CMP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_RESETTRIG_MASTER_CMP2</span><span class="p">,</span>
@@ -5238,16 +5247,16 @@
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="n">MSTR_CMP4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_RESETTRIG_MASTER_CMP4</span><span class="p">,</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="n">PWMA_CMP2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_RESETTRIG_OTHER1_CMP2</span>
 <a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_switch_convention_t">enum hrtim_switch_convention_t</h3>
 <p><em>HRTIM TU switch convention.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_switch_convention_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_switch_convention_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">PWMx1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">PWMx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>PWMx1=0</code>: high-side mosfet`,</li>
 <li><code>PWMx2=1</code>: low-side mosfet` </li>
@@ -5256,11 +5265,11 @@
 
 <h3 id="enum-hrtim_tu_on_off_t">enum hrtim_tu_ON_OFF_t</h3>
 <p><em>describe if a timing unit has been initialized</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_ON_OFF_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">UNIT_ON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">UNIT_OFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><code>UNIT_ON=true</code></li>
 <li><code>UNIT_OFF=false</code> </li>
@@ -5269,7 +5278,7 @@
 
 <h3 id="enum-hrtim_tu_number_t">enum hrtim_tu_number_t</h3>
 <p><em>HRTIM timing units number definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_number_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_number_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">PWMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">PWMB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="n">PWMC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
@@ -5277,12 +5286,12 @@
 <a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="n">PWME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
 <a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="n">PWMF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
 <a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr>
 
 <h3 id="enum-hrtim_tu_t">enum hrtim_tu_t</h3>
 <p><em>HRTIM timing units definition.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_t</span><span class="w"> </span><span class="p">{</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">hrtim_tu_t</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">TIMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_TIMER_A</span><span class="p">,</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">TIMB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_TIMER_B</span><span class="p">,</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="n">TIMC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_TIMER_C</span><span class="p">,</span>
@@ -5291,14 +5300,14 @@
 <a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="n">TIMF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_TIMER_F</span><span class="p">,</span>
 <a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="n">MSTR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LL_HRTIM_TIMER_MASTER</span>
 <a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">};</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Enums </p>
 <hr>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
 <h3 id="variable-hrtim_channels">variable HRTIM_CHANNELS</h3>
 <p><em>Number of HRTIM channels.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">HRTIM_CHANNELS</span><span class="p">;</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">HRTIM_CHANNELS</span><span class="p">;</span>
+</code></pre></div>
 <hr>
 
 <h3 id="variable-hrtim_max_per_and_cmp_reg_values">variable HRTIM_MAX_PER_and_CMP_REG_VALUES</h3>
@@ -5313,11 +5322,11 @@
 
 <h3 id="variable-hrtim_prescaler_resolution_ps">variable HRTIM_PRESCALER_RESOLUTION_PS</h3>
 <p><em>Resolution of the HRTIM prescaler in pico-seconds. *</em> <code>values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]</code> __
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">HRTIM_PRESCALER_RESOLUTION_PS</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">HRTIM_PRESCALER_RESOLUTION_PS</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+</code></pre></div>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_hrtim_driver/zephyr/public_api/hrtim_enum.h</code></p>
 
 <!-- Source file information -->
@@ -5481,10 +5490,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/version_selector.js"></script>
       
@@ -5493,5 +5502,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

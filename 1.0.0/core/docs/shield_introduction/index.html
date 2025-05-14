@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4986,10 +4995,10 @@
 </code></pre></div>
 </div>
 <h2 id="features">Features</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="TWIST schema" src="../images/TWIST_illustration.svg" width="200" />
+<p><img align="left" alt="TWIST schema" src="../images/TWIST_illustration.svg" width="200">
 - <strong>Versatile Control Modes</strong>: The API supports both voltage and peak current control modes, allowing you to choose the best option for your specific application.
 - <strong>Independent Leg Operation</strong>: Each of the two legs can operate independently with different topologies, such as boost or buck, offering greater flexibility in power management.
 - <strong>Configure different paramaters</strong> for power electronics (dead time, phase shift)
@@ -5001,7 +5010,7 @@
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Voltage mode with all the legs</label><label for="__tabbed_2_2">Voltage mode with only LEG1</label><label for="__tabbed_2_3">Current mode with all the legs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Voltage mode with all the legs</label><label for="__tabbed_2_2">Voltage mode with only LEG1</label><label for="__tabbed_2_3">Current mode with all the legs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>1. Choose the wished topology : buck, boost. You can select all the legs to be in the same topology or choose a specific configuration for each one <a href="https://owntech-foundation.github.io/Documentation/1.0.0/powerAPI/classPowerAPI/#function-initbuck"><code>shield.power.initBuck(ALL)</code></a>, <a href="https://owntech-foundation.github.io/Documentation/1.0.0/powerAPI/classPowerAPI/#function-initboost"><code>shield.power.initBoost(ALL)</code></a></p>
@@ -5045,7 +5054,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Voltage mode with all the legs</label><label for="__tabbed_3_2">Voltage mode with only LEG1</label><label for="__tabbed_3_3">Current mode with all the legs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Voltage mode with all the legs</label><label for="__tabbed_3_2">Voltage mode with only LEG1</label><label for="__tabbed_3_3">Current mode with all the legs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">shield</span><span class="p">.</span><span class="n">power</span><span class="p">.</span><span class="n">initBuck</span><span class="p">(</span><span class="n">ALL</span><span class="p">);</span>
@@ -5085,37 +5094,37 @@
 <h3 id="voltage-mode">Voltage mode</h3>
 <p>Voltage mode is a traditional and widely-used approach in power electronics, where the output voltage is regulated by controlling the duty cycle. The duty cycle is a crucial parameter that determines the proportion of time a switch (such as a transistor) is active during a complete switching period. By adjusting the duty cycle, you can effectively manage the power delivered to a load.</p>
 <p>A higher duty cycle indicates that the switch remains on for a more extended period, resulting in increased power delivery to the load. Conversely, a lower duty cycle means the switch is on for a shorter duration, thereby reducing the power supplied. Consequently, the average power and voltage applied to the load can be precisely controlled by fine-tuning the duty cycle.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"> Voltage mode PWM schematic </label><label for="__tabbed_4_2"> Voltage mode PWM waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1"> Voltage mode PWM schematic </label><label for="__tabbed_4_2"> Voltage mode PWM waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="voltage mode PWM" src="../images/voltage_mode_schema.svg" /></p>
+<p><figure id="_figure-1"><img alt="voltage mode PWM" src="../images/voltage_mode_schema.svg"><figcaption>Figure 1: voltage mode PWM</figcaption></figure></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="voltage mode PWM waveform" src="../images/changing_duty_cycle.gif" /></p>
+<p><figure id="_figure-2"><img alt="voltage mode PWM waveform" src="../images/changing_duty_cycle.gif"><figcaption>Figure 2: voltage mode PWM waveform</figcaption></figure></p>
 </div>
 </div>
 </div>
 <h3 id="current-mode">Current mode</h3>
 <p>In peak current mode control,  we monitors the current flowing through the power switch. Once the current reaches a predetermined peak value, we promptly turns off the power switch. This mechanism helps maintain a constant output voltage by regulating the current flow.</p>
 <p>In this setup, a clock signal determines the switching frequency and triggers the switch to close. The controller then sends a reference peak current value. When the inductor's current reaches this reference value, the switch opens.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"> Current mode schematic </label><label for="__tabbed_5_2"> Current mode waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1"> Current mode schematic </label><label for="__tabbed_5_2"> Current mode waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_schema.svg" width="600" /></p>
+<p><img alt="" src="../images/current_mode_schema.svg" width="600"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_pwm_scheme.svg" width="600" /></p>
+<p><img alt="" src="../images/current_mode_pwm_scheme.svg" width="600"></p>
 </div>
 </div>
 </div>
 <p>However, using a constant peak current reference can lead to subharmonic oscillations. To prevent this issue, we employ a technique called slope compensation. Instead of a constant value, the peak current reference is a sawtooth waveform. The final schematic with slope compensation is shown below:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"> Final current mode schematic </label><label for="__tabbed_6_2">Final current mode waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1"> Final current mode schematic </label><label for="__tabbed_6_2">Final current mode waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_schema_final.svg" width="600" /></p>
+<p><img alt="" src="../images/current_mode_schema_final.svg" width="600"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_pwm_scheme_final.svg" /></p>
+<p><img alt="" src="../images/current_mode_pwm_scheme_final.svg"></p>
 </div>
 </div>
 </div>
@@ -5125,13 +5134,13 @@
 <h2 id="snippets-examples">Snippets examples</h2>
 <h3 id="buck-topology">Buck topology</h3>
 <h4 id="2-legs-with-the-same-configuration">2 legs with the same configuration</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"> Connection </label><label for="__tabbed_7_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1"> Connection </label><label for="__tabbed_7_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_buck_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_buck_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5140,13 +5149,13 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">shield</span><span class="p">.</span><span class="n">power</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="n">ALL</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="2-independant-leg-operations">2 independant leg operations</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"> Connection </label><label for="__tabbed_8_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1"> Connection </label><label for="__tabbed_8_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_2leg_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_buck_2leg_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_2leg_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_buck_2leg_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5157,13 +5166,13 @@
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">shield</span><span class="p">.</span><span class="n">power</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="n">ALL</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="boost-topology">Boost topology</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1"> Connection </label><label for="__tabbed_9_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1"> Connection </label><label for="__tabbed_9_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_boost_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_boost_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_boost_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_boost_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5172,13 +5181,13 @@
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">shield</span><span class="p">.</span><span class="n">power</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="n">ALL</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="inverter-topology">Inverter topology</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1"> Connection </label><label for="__tabbed_10_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1"> Connection </label><label for="__tabbed_10_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_inverter_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_inverter_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_inverter_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_inverter_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5232,23 +5241,23 @@
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
 <h3 id="variable-ngnd">variable ngnd</h3>
 <p><em>Contains all the function of the NGND switch compatible with TWISTs prior to 1.4.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">NgndHAL</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">ngnd</span><span class="p">;</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">NgndHAL</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">ngnd</span><span class="p">;</span>
+</code></pre></div>
 <hr>
 
 <h3 id="variable-power">variable power</h3>
 <p><em>Contains all the functions to drive shield power capabilities.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">PowerAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">power</span><span class="p">;</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">PowerAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">power</span><span class="p">;</span>
+</code></pre></div>
 <hr>
 
 <h3 id="variable-sensors">variable sensors</h3>
 <p><em>Contains all the functions to interact with shield sensors.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">SensorsAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">sensors</span><span class="p">;</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">SensorsAPI</span><span class="w"> </span><span class="n">ShieldAPI</span><span class="o">::</span><span class="n">sensors</span><span class="p">;</span>
+</code></pre></div>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_shield_api/zephyr/public_api/ShieldAPI.h</code></p>
 
 <!-- Source file information -->
@@ -5450,10 +5459,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -5462,5 +5471,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

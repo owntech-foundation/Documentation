@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4629,13 +4638,13 @@
 <h2 id="running-the-closed-loop-model">Running the closed loop model</h2>
 <p>The closed loop model is much similar to its open-loop equivalent. Here are the steps to launch it.</p>
 <p><strong>Step 1 -</strong> In <em>PLECS Library Browser</em> go to <em>File-&gt;Open</em></p>
-<p><img alt="PLECS Library Open" src="../Images/PLECS_open_model.png" /></p>
+<p><figure id="_figure-1"><img alt="PLECS Library Open" src="../Images/PLECS_open_model.png"><figcaption>Figure 1: PLECS Library Open</figcaption></figure></p>
 <p><strong>Step 2 -</strong> Navigate to the <em>Voltage Mode Buck</em> folder. Choose<em> the </em>Twist_voltage_mode_buck.plecs<em> and click </em>Open*.</p>
-<p><img alt="PLECS voltage mode model" src="../Images/PLECS_voltage_mode_SW.png" /></p>
+<p><figure id="_figure-2"><img alt="PLECS voltage mode model" src="../Images/PLECS_voltage_mode_SW.png"><figcaption>Figure 2: PLECS voltage mode model</figcaption></figure></p>
 <p><strong>Step 3 -</strong> You will see the model and a scope window. Notice that there is a discrete PI controller attached to the PWM generator. Press <em>Ctrl+T</em> on your computer or click on <em>Simulation-&gt;Start</em>.</p>
-<p><img alt="Voltage mode switched model and scope window" src="../Images/PLECS_voltage_mode_SW_open.png" /></p>
+<p><figure id="_figure-3"><img alt="Voltage mode switched model and scope window" src="../Images/PLECS_voltage_mode_SW_open.png"><figcaption>Figure 3: Voltage mode switched model and scope window</figcaption></figure></p>
 <p><strong>Step 4 -</strong> The simulation will run its course and give you the results as in the image below.</p>
-<p><img alt="Simulation run on switched model" src="../Images/PLECS_voltage_mode_SW_result.png" /></p>
+<p><figure id="_figure-4"><img alt="Simulation run on switched model" src="../Images/PLECS_voltage_mode_SW_result.png"><figcaption>Figure 4: Simulation run on switched model</figcaption></figure></p>
 <p>You can see an initial in-rush current for loading the Twist board capacitors. The voltage then steadly rises to track its reference of 15 volts.</p>
 <div class="admonition note">
 <p class="admonition-title">Speed</p>
@@ -4644,13 +4653,13 @@
 <h2 id="running-the-closed-loop-model-averaged-version">Running the closed loop model - AVERAGED version</h2>
 <p>We will now run the averaged version of the closed loop voltage mode model. The idea here is to show you how a less precise model is much faster.</p>
 <p><strong>Step 1 -</strong> In <em>PLECS Library Browser</em> go to <em>File-&gt;Open</em></p>
-<p><img alt="PLECS Library Open" src="../Images/PLECS_open_model.png" /></p>
+<p><figure id="_figure-5"><img alt="PLECS Library Open" src="../Images/PLECS_open_model.png"><figcaption>Figure 5: PLECS Library Open</figcaption></figure></p>
 <p><strong>Step 2 -</strong> Navigate to the <em>Voltage Mode Buck</em> folder. Choose<em> the </em>Twist_voltage_mode_buck_AVG.plecs<em> and click </em>Open*.</p>
-<p><img alt="PLECS voltage mode model" src="../Images/PLECS_voltage_mode_AVG.png" /></p>
+<p><figure id="_figure-6"><img alt="PLECS voltage mode model" src="../Images/PLECS_voltage_mode_AVG.png"><figcaption>Figure 6: PLECS voltage mode model</figcaption></figure></p>
 <p><strong>Step 3 -</strong> You will see the model and a scope window. Notice that there is a discrete PI controller attached to the PWM generator. Press <em>Ctrl+T</em> on your computer or click on <em>Simulation-&gt;Start</em>.</p>
-<p><img alt="Voltage mode average model and scope window" src="../Images/PLECS_voltage_mode_AVG_open.png" /></p>
+<p><figure id="_figure-7"><img alt="Voltage mode average model and scope window" src="../Images/PLECS_voltage_mode_AVG_open.png"><figcaption>Figure 7: Voltage mode average model and scope window</figcaption></figure></p>
 <p><strong>Step 4 -</strong> The simulation will run its course and give you the results as in the image below.</p>
-<p><img alt="Simulation run on average model" src="Images/PLECS_voltage_mode_AVG_result.png" /></p>
+<p><figure id="_figure-8"><img alt="Simulation run on average model" src="Images/PLECS_voltage_mode_AVG_result.png"><figcaption>Figure 8: Simulation run on average model</figcaption></figure></p>
 <p>You can see an initial in-rush current for loading the Twist board capacitors. The voltage then rises to track its reference of 15 volts.</p>
 <div class="admonition note">
 <p class="admonition-title">Speed</p>
@@ -4857,10 +4866,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -4869,5 +4878,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

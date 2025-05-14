@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -66,7 +66,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4517,7 +4526,7 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arm_math.h&gt;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;thingset.h&quot;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"thingset.h"</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cm">/*</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="cm"> * Groups / first layer data object IDs</span>
@@ -4543,7 +4552,7 @@
 <a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="kt">char</span><span class="w"> </span><span class="n">manufacturer</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_USB_DEVICE_MANUFACTURER</span><span class="p">;</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="kt">char</span><span class="w"> </span><span class="n">device_type</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HW_NAME</span><span class="p">;</span>
 <a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="kt">char</span><span class="w"> </span><span class="n">hardware_version</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HW_VER</span><span class="p">;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="kt">char</span><span class="w"> </span><span class="n">firmware_version</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="kt">char</span><span class="w"> </span><span class="n">firmware_version</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1.0.0"</span><span class="p">;</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
 <a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="cm">/* Store value of reference (master-slave mode) */</span>
 <a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="n">float32_t</span><span class="w"> </span><span class="n">reference_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -4561,30 +4570,30 @@
 <a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="cp">#define SUBSET_CTRL (1U &lt;&lt; 3)</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
 <a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">THINGSET_ADD_GROUP</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Device&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_NO_CALLBACK</span><span class="p">);</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">THINGSET_ADD_GROUP</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4</span><span class="p">,</span><span class="w"> </span><span class="s">"Device"</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_NO_CALLBACK</span><span class="p">);</span>
 <a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
-<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cManufacturer&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="s">"cManufacturer"</span><span class="p">,</span>
 <a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">                         </span><span class="n">manufacturer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_ANY_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
-<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cType&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">device_type</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">,</span><span class="w"> </span><span class="s">"cType"</span><span class="p">,</span><span class="w"> </span><span class="n">device_type</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">                         </span><span class="n">THINGSET_ANY_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>
-<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cHardwareVersion&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">,</span><span class="w"> </span><span class="s">"cHardwareVersion"</span><span class="p">,</span>
 <a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">                         </span><span class="n">hardware_version</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_ANY_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>
-<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x43</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cFirmwareVersion&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="n">THINGSET_ADD_ITEM_STRING</span><span class="p">(</span><span class="n">ID_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="mh">0x43</span><span class="p">,</span><span class="w"> </span><span class="s">"cFirmwareVersion"</span><span class="p">,</span>
 <a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">                         </span><span class="n">firmware_version</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_ANY_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>
-<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="n">THINGSET_ADD_SUBSET</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mCAN&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSET_CAN</span><span class="p">,</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="n">THINGSET_ADD_SUBSET</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="s">"mCAN"</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSET_CAN</span><span class="p">,</span>
 <a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">                    </span><span class="n">THINGSET_ANY_RW</span><span class="p">);</span>
 <a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>
 <a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
-<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="n">THINGSET_ADD_GROUP</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Control&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_NO_CALLBACK</span><span class="p">);</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="n">THINGSET_ADD_GROUP</span><span class="p">(</span><span class="n">ID_ROOT</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="s">"Control"</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_NO_CALLBACK</span><span class="p">);</span>
 <a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>
-<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="n">THINGSET_ADD_ITEM_FLOAT</span><span class="p">(</span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL_REFERENCE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;zCtrlReference&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="n">THINGSET_ADD_ITEM_FLOAT</span><span class="p">(</span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL_REFERENCE</span><span class="p">,</span><span class="w"> </span><span class="s">"zCtrlReference"</span><span class="p">,</span>
 <a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="w">                        </span><span class="o">&amp;</span><span class="n">reference_value</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">THINGSET_ANY_RW</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSET_CTRL</span><span class="p">);</span>
 <a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
-<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="n">THINGSET_ADD_ITEM_BOOL</span><span class="p">(</span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL_ENABLE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;zStartStop&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">start_stop</span><span class="p">,</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="n">THINGSET_ADD_ITEM_BOOL</span><span class="p">(</span><span class="n">ID_CTRL</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CTRL_ENABLE</span><span class="p">,</span><span class="w"> </span><span class="s">"zStartStop"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">start_stop</span><span class="p">,</span>
 <a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="w">                       </span><span class="n">THINGSET_ANY_RW</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSET_CTRL</span><span class="p">);</span>
 <a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>
 <a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="cp">#endif </span><span class="cm">/* DATA_OBJECTS_H_ */</span>
@@ -4751,10 +4760,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/version_selector.js"></script>
       
@@ -4763,5 +4772,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

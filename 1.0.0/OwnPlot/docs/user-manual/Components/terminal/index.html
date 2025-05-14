@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -66,7 +66,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4506,17 +4515,17 @@
 <p>As of today, the terminal is not independent. It relies on the graph data to show information.
 Consequently, some settings are linked with the graph. Moreover, the data is coming from the port, so a lot of standard settings for this type of application are related to the port.</p>
 <h2 id="main-terminals-settings-section">Main terminal's settings section</h2>
-<p><img alt="Main terminal settings" src="../../imgs/OwnPlot_terminal_settings.png" width="300" /></p>
+<p><figure id="_figure-1"><img alt="Main terminal settings" src="../../imgs/OwnPlot_terminal_settings.png" width="300"><figcaption>Figure 1: Main terminal settings</figcaption></figure></p>
 <p>Most of the terminal settings live under the <strong>Settings</strong> tab.</p>
 <h3 id="lines-history">Lines history</h3>
 <p>To set the maximum number of lines stored in the terminal, enter a number between 0 and 1000 in the input field <strong># Lines</strong>
-<img alt="terminal lines" src="../../imgs/OwnPlot_terminal_lines.png" width="300" /></p>
+<figure id="_figure-2"><img alt="terminal lines" src="../../imgs/OwnPlot_terminal_lines.png" width="300"><figcaption>Figure 2: terminal lines</figcaption></figure></p>
 <h3 id="timestamp">Timestamp</h3>
 <p>The timestamp option permits to log the time aside of the data.
 It is enabled by default (green button) and can be disabled by pressing the timestamp button (it will become yellow).
-<img alt="terminal lines" src="../../imgs/OwnPlot_terminal_timestamp_button_on.png" /><img alt="terminal lines" src="../../imgs/OwnPlot_terminal_timestamp_button_off.png" /></p>
+<figure id="_figure-3"><img alt="terminal lines" src="../../imgs/OwnPlot_terminal_timestamp_button_on.png"><img alt="terminal lines" src="../../imgs/OwnPlot_terminal_timestamp_button_off.png"><figcaption>Figure 3: terminal lines</figcaption></figure></p>
 <p>The timestamp in the terminal is the part preceding the data.
-<img alt="terminal timestamp" src="../../imgs/OwnPlot_terminal_with_without_timestamp.png" /></p>
+<figure id="_figure-4"><img alt="terminal timestamp" src="../../imgs/OwnPlot_terminal_with_without_timestamp.png"><figcaption>Figure 4: terminal timestamp</figcaption></figure></p>
 
 <!-- Source file information -->
 
@@ -4679,10 +4688,10 @@ It is enabled by default (green button) and can be disabled by pressing the time
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../../javascripts/version_selector.js"></script>
       
@@ -4691,5 +4700,7 @@ It is enabled by default (green button) and can be disabled by pressing the time
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

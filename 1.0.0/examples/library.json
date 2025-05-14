@@ -8,7 +8,7 @@
         "type": "git",
         "url": "https://github.com/owntech-foundation/examples.git"
     },
-    "build": 
+    "build":
     {
         "srcFilter": "-<**>"
     },
@@ -85,6 +85,28 @@
         "description": "Interleaved mode buck converter with PID controlled output voltage",
         "group": "Examples TWIST",
         "base": "TWIST/DC_DC/interleaved",
+        "files": [
+            "main.cpp",
+            "README.md"
+        ]
+    },
+    {
+        "name": "scope_simple_example",
+        "title": "Simple scope example",
+        "description": "Simple example of triggering the scope to acquire a step response.",
+        "group": "Examples TWIST",
+        "base": "TWIST/DC_DC/scope_simple_example",
+        "files": [
+            "main.cpp",
+            "README.md"
+        ]
+    },
+    {
+        "name": "ripple_measurement",
+        "title": "Current Ripple Measurement",
+        "description": "Current ripple measurement in buck voltage mode, by sweeping adc trigger",
+        "group": "Examples TWIST",
+        "base": "TWIST/DC_DC/current_ripple_measurement",
         "files": [
             "main.cpp",
             "README.md"
@@ -168,6 +190,31 @@
         ]
     },
     {
+        "name": "python_communication_protocol",
+        "title": "Python Communication Protocol",
+        "description": "This example allows a user to control a Twist in DC-DC buck mode using a Python script.",
+        "group": "Examples TWIST",
+        "base": "TWIST/Communication/python_comm_library",
+        "files": [
+            "main.cpp",
+            "comm_script.py",
+            "README.md"
+        ]
+    },
+    {
+        "name": "can_communication",
+        "title": "CAN Communication",
+        "description": "This example deploys CAN communication of the Twist board",
+        "group": "Examples TWIST",
+        "base": "TWIST/Communication/CAN",
+        "files": [
+            "main.cpp",
+            "app.conf",
+            "README.md",
+            "user_data_objects.h"
+        ]
+    },
+    {
         "name": "blinky",
         "title": "Blinky LED",
         "description": "Toggling LED",
@@ -212,6 +259,17 @@
         ]
     },
     {
+        "name": "burst_mode",
+        "title": "Setting Burst Mode PWM",
+        "description": "Setting pulsed mode PWM",
+        "group": "Examples SPIN",
+        "base": "SPIN/PWM/burst_mode",
+        "files": [
+            "main.cpp",
+            "README.md"
+        ]
+    },
+    {
         "name": "signal_generation",
         "title": "DAC signal generation",
         "description": "Sawtooth generation with DAC",
@@ -250,6 +308,28 @@
         "description": "Using a timer with a rotary incrmental encoder",
         "group": "Examples SPIN",
         "base": "SPIN/TIMER/incremental_encoder",
+        "files": [
+            "main.cpp",
+            "README.md"
+        ]
+    },
+    {
+        "name": "BLDC_hall_sensor",
+        "title": "BLDC motor with hall sensor",
+        "description": "Control a BLDC motor using hall effect sensor",
+        "group": "Examples OWNVERTER",
+        "base": "OWNVERTER/BLDC_hall_sensor",
+        "files": [
+            "main.cpp",
+            "README.md"
+        ]
+    },
+    {
+        "name": "foc_hall_sensor",
+        "title": "Motor control using FOC and hall sensors",
+        "description": "an example which show the use of a Field Oriented Control algorithm with discrete hall sensors",
+        "group": "Examples OWNVERTER",
+        "base": "OWNVERTER/FOC_hall_sensor",
         "files": [
             "main.cpp",
             "README.md"

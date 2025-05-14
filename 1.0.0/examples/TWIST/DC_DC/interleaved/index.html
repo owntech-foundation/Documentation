@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1542,6 +1551,15 @@
       
         <li class="md-nav__item">
   <a href="#software-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-setup_1" class="md-nav__link">
     <span class="md-ellipsis">
       Software setup
     </span>
@@ -4571,6 +4589,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#software-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#expected-results" class="md-nav__link">
     <span class="md-ellipsis">
       Expected results
@@ -4640,39 +4667,81 @@
 <h2 id="overview">Overview</h2>
 <p>In the case of a two-phase interleaved buck converter, the term "interleaved" implies that there are two power stages operating, and they are out of phase by 180 degrees. This means that while one power stage is in its on-state (conducting), the other is in its off-state (non-conducting), and vice versa.</p>
 <p>The 180-degree phase shift ensures that there is always at least one power stage active, reducing the overall ripple and improving the efficiency of the buck converter. The interleaved operation helps distribute the load more evenly, minimizing the stress on individual components and resulting in a more efficient power conversion process.</p>
-<p><img alt="circuit" src="https://qph.cf2.quoracdn.net/main-qimg-27bbfbbb9466a9f8a6ee4c105a884f26" /></p>
-<p><img alt="waveform" src="https://qph.cf2.quoracdn.net/main-qimg-102ebabc9c40d17b58069d02025a0175" /></p>
+<p>The image below shows two legs being connected for interleaving. </p>
+<p><figure id="_figure-1"><img alt="circuit" src="https://qph.cf2.quoracdn.net/main-qimg-27bbfbbb9466a9f8a6ee4c105a884f26"><figcaption>Figure 1: circuit</figcaption></figure></p>
+<p>The waveform below shows how each switch in the image above operates and their associated current waveforms. Note that the frequency of the ripple in the output current is twice that of each current, and that its amplitude is divided by 2.</p>
+<p><figure id="_figure-2"><img alt="waveform" src="https://qph.cf2.quoracdn.net/main-qimg-102ebabc9c40d17b58069d02025a0175"><figcaption>Figure 2: waveform</figcaption></figure></p>
 <p>This example will implement interleaved operation using the two legs of the TWIST.</p>
+<p>!!! attention Are you ready to start ?
+    Before you can run this example, you must have successfully gone through our <a href="https://docs.owntech.org/core/docs/environment_setup/">getting started</a>.  </p>
 <h2 id="hardware-setup-and-requirements">Hardware setup and requirements</h2>
-<p><img alt="schema" src="Image/buck_m.png" /></p>
-<p>You will need :</p>
-<ul>
-<li>1 TWIST</li>
-<li>A DC voltage power supply</li>
-<li>A resistor (or a DC electronic load)</li>
-</ul>
+<p><figure id="_figure-3"><img alt="schema" src="Image/buck_m.png"><figcaption>Figure 3: schema</figcaption></figure></p>
+<div class="admonition warning hardware pre-requisites">
+<p class="admonition-title">Warning</p>
+<p>You will need :
+- 1 TWIST
+- A dc power supply (20-60V)
+- A resistor (or a dc electronic load)</p>
+</div>
 <h2 id="software-setup">Software setup</h2>
-<p>We import <code>control_library</code> with platformio.ini via the line :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lib_deps=
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    control_lib = https://github.com/owntech-foundation/control_library.git
+<h2 id="software-setup_1">Software setup</h2>
+<p>Locate your <code>platformio.ini file</code> in your working folder.</p>
+<p><figure id="_figure-4"><img alt="platformio.ini location" src="Image/platformio_ini_location.png"><figcaption>Figure 4: platformio.ini location</figcaption></figure></p>
+<p>We will import <code>control_library</code> in <code>platformio.ini</code> by decommenting the line :</p>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">lib_deps</span><span class="o">=</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">#control_lib = https://github.com/owntech-foundation/control_library.git</span>
+</code></pre></div>
+It should look like this: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">lib_deps</span><span class="o">=</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="na">control_lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/owntech-foundation/control_library.git</span>
 </code></pre></div>
 <p>We can use this library to initialize a PID control with the function :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pid</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">pid_params</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pid</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">pid_params</span><span class="p">);</span>
 </code></pre></div>
 <p>the initial parameters are defined using the following lines :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Pid</span><span class="w"> </span><span class="n">pid</span><span class="p">;</span><span class="w"> </span><span class="c1">// define a pid controller.</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_task_period</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.</span><span class="n">e</span><span class="mi">-6</span><span class="n">F</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">kp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.000215</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Ti</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.5175e-5</span><span class="p">;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Td</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">upper_bound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0F</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">lower_bound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0F</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">static</span><span class="w"> </span><span class="n">PidParams</span><span class="w"> </span><span class="nf">pid_params</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span><span class="w"> </span><span class="n">kp</span><span class="p">,</span><span class="w"> </span><span class="n">Ti</span><span class="p">,</span><span class="w"> </span><span class="n">Td</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">,</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Pid</span><span class="w"> </span><span class="n">pid</span><span class="p">;</span><span class="w"> </span><span class="c1">// define a pid controller.</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_task_period</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.</span><span class="n">e</span><span class="mi">-6</span><span class="n">F</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">kp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.000215</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Ti</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.5175e-5</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">Td</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">upper_bound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0F</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">static</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="n">lower_bound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0F</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">static</span><span class="w"> </span><span class="n">PidParams</span><span class="w"> </span><span class="nf">pid_params</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span><span class="w"> </span><span class="n">kp</span><span class="p">,</span><span class="w"> </span><span class="n">Ti</span><span class="p">,</span><span class="w"> </span><span class="n">Td</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">,</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="expected-results">Expected results</h2>
-<p>The voltage reference is initially 15V, but you can increase/decrease it with the serial monitor with 'u' and 'd' on you keyboard.</p>
+<p>This code will control the output voltage to have 15V, you can control the output voltage with platformio serial monitor. The image below shows your a snippet of the window and the button to press.</p>
+<p><figure id="_figure-5"><img alt="serial monitor button" src="Image/serial_monitor_button.png"><figcaption>Figure 5: serial monitor button</figcaption></figure></p>
+<p>When opening it for the first time, the serial monitor will give you an initialization message regarding the parameteres of the ADCs as shown below.  </p>
+<p><figure id="_figure-6"><img alt="serial monitor initialization" src="Image/serial_monitor_initialization.png"><figcaption>Figure 6: serial monitor initialization</figcaption></figure></p>
+<div class="admonition tip commands keys">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>press <code>u</code> to increase the voltage</li>
+<li>press <code>d</code> to decrease the voltage</li>
+<li>press <code>h</code> to show the help menu</li>
+</ul>
+</div>
+<p>Here's sequence when the help menu is activated with <code>h</code>, the power mode is then activated with <code>p</code> and finally the Twist converter is put in idle with the <code>i</code>. </p>
+<p><figure id="_figure-7"><img alt="serial monitor working" src="Image/serial_monitor_operation.gif"><figcaption>Figure 7: serial monitor working</figcaption></figure></p>
+<div class="admonition note the data that you see">
+<p class="admonition-title">Note</p>
+<p>When you send <code>p</code> the Twist board will send you back a stream of data on the following format: </p>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nl">I1</span><span class="p">:</span><span class="n">V1</span><span class="o">:</span><span class="n">I2</span><span class="o">:</span><span class="n">V2</span><span class="o">:</span><span class="n">IH</span><span class="o">:</span><span class="n">VH</span>
+</code></pre></div>
+Where: 
+- <code>I1</code> is the current in <code>LEG1</code> of the <code>LOW</code> side
+- <code>V1</code> is the voltage in <code>LEG1</code> of the <code>LOW</code> side
+- <code>I2</code> is the current in <code>LEG1</code> of the <code>LOW</code> side
+- <code>V2</code> is the voltage in <code>LEG2</code> of the <code>LOW</code> side
+- <code>IH</code> is the current in <code>LEG2</code> of the <code>LOW</code> side
+- <code>VH</code> is the voltage on the <code>HIGH</code> side
+<p>For instance when you reveive this: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="mf">1.44</span><span class="o">:</span><span class="mf">14.80</span><span class="o">:</span><span class="mf">0.13</span><span class="o">:</span><span class="mf">16.14</span><span class="o">:</span><span class="mf">1.14</span><span class="o">:</span><span class="mf">22.82</span><span class="o">:</span>
+</code></pre></div>
+<p>It means that <code>I1 = 1.46 A</code>, <code>V1 = 14.80 V</code> and so on. </p>
+</div>
 
 <!-- Source file information -->
 
@@ -4873,10 +4942,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../javascripts/version_selector.js"></script>
       
@@ -4885,5 +4954,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
