@@ -52,7 +52,9 @@ theme:
     - content.code.copy
     - navigation.footer
     - content.tooltips
+    - content.figure.numbering
   language: en
+  
   palette:
     - scheme: default
       toggle:
@@ -60,6 +62,7 @@ theme:
         name: Switch to dark mode
       primary: teal
       accent: grey
+    
     - scheme: slate
       toggle:
         icon: material/toggle-switch
@@ -69,8 +72,17 @@ theme:
 
 plugins:
   - search
+  - caption:
+      additional_identifier: ["Equation"]
+  - glightbox:
+      manual: true
+      background: none
+      zoomable: true
+
+  - meta
   - macros
   - drawio
+  # - pheasant
   - mkdoxy:
       projects:
         powerAPI: # name of project must be alphanumeric + numbers (without spaces)
