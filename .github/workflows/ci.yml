@@ -20,11 +20,11 @@ jobs:
           fetch-depth: 0 # fetch all commits/branches, fixes fast forward issue of mike tool
 
       - name: Checkout OwnTech Core repo
-        if: ${{ github.event.client_payload.version == 'v0.9.0' }}
+        if: ${{ github.event.client_payload.version == 'v0.9' }}
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/Core
-          ref: v0.9.0
+          ref: v0.9
           path: docs/core
 
       - name: Checkout OwnTech Core repo
@@ -108,7 +108,7 @@ jobs:
         run: pip install Jinja2 --upgrade
 
       - name: Configure navigation menu for version 0.9
-        if: ${{ github.event.client_payload.version == 'v0.9.0' }}
+        if: ${{ github.event.client_payload.version == 'v0.9' }}
         run: |
           rm $GITHUB_WORKSPACE/mkdocs.yml
           cp $GITHUB_WORKSPACE/version-specific-yaml/mkdocs_0.9.yml $GITHUB_WORKSPACE/mkdocs.yml
@@ -127,7 +127,7 @@ jobs:
       #- name: Clear all docs versions (do not uncomment except if you know what u'r doing)
       #  run: mike delete --all
       - name: Publish docs for v0.9.0 using mike versioning tool
-        if: ${{ github.event.client_payload.version == 'v0.9.0' }}
+        if: ${{ github.event.client_payload.version == 'v0.9' }}
         run: mike deploy --push --update-aliases 0.9.0
       - name: Publish docs for v1.0.0 using mike versioning tool
         if: ${{ github.event.client_payload.version == 'v1.0' }}
