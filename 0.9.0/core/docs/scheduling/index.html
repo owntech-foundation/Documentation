@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4620,26 +4629,26 @@ In that context, scheduling is the action of asigning computing ressources to pe
 <h2 id="include">Include</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;TaskAPI.h&gt;
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;TaskAPI.h&gt;
 </code></pre></div>
-Make sure that Task API is included</p>
+Make sure that Task API is included
 </div>
 <h2 id="deploying-a-real-time-control-task">Deploying a real time control task</h2>
 <p>Having a periodical code execution is key to real time applications. It is easy to spawn one using the TaskAPI.</p>
 <h3 id="the-control-task-sources">The control task sources</h3>
 <p>You can have different <strong>source</strong> calling the control task.</p>
-<p>The control task is synchronous, it means that it is called at fixed period. So we need some kind of timer calling the control, this timer is considered as the <strong>source</strong>. There are two sources : <br />
-- The PWM carrier<br />
+<p>The control task is synchronous, it means that it is called at fixed period. So we need some kind of timer calling the control, this timer is considered as the <strong>source</strong>. There are two sources : <br>
+- The PWM carrier<br>
 - An independant timer   </p>
 <h4 id="the-pwm-carrier">The PWM carrier</h4>
 <p>The carrier has a period called the <strong>switching period</strong>, we can use it to call the control task after a fixed number of switching period. </p>
-<p><img alt="PWM control task" src="../images/pwm_source_task.svg" /></p>
+<p><figure id="_figure-1"><img alt="PWM control task" src="../images/pwm_source_task.svg"><figcaption>Figure 1: PWM control task</figcaption></figure></p>
 <p>On the figure above, the switching period is 5µs (200Khz) and we call the control every 10 switching cycle so 50µs (20Khz).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>There are limitations when using this method : <br />
-    - You need to start the a PWM to start the control task<br />
-    - You can only have control period which are multiple of the switching period<br />
+<p>There are limitations when using this method : <br>
+    - You need to start the a PWM to start the control task<br>
+    - You can only have control period which are multiple of the switching period<br>
     - You can not have a control period inferior to the switching period  </p>
 </div>
 <div class="admonition tip">
@@ -4648,7 +4657,7 @@ Make sure that Task API is included</p>
 </div>
 <h4 id="independant-timer">Independant timer</h4>
 <p>A simple timer not related to the PWM can be used to compute the control task period. We choose one of the MCU timer (the <code>timer 6</code>), to which we give our control period and this timer will call the control task each period.  </p>
-<p><img alt="timer source" src="../images/timer_source_task.svg" /></p>
+<p><figure id="_figure-2"><img alt="timer source" src="../images/timer_source_task.svg"><figcaption>Figure 2: timer source</figcaption></figure></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>With an independant timer you can choose any value in µs as the control period, there is not the same limitation as the PWM source.  </p>
@@ -4660,14 +4669,14 @@ Make sure that Task API is included</p>
 <h3 id="initialization-sequence">Initialization sequence</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Periodic task based on PWM source</label><label for="__tabbed_1_2">Periodic task based on Timer6</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Periodic task based on PWM source</label><label for="__tabbed_1_2">Periodic task based on Timer6</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1. Create the critical task and link it to the function to be called and choose hrtim as the source source. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_hrtim);</code></a><br />
+<p>1. Create the critical task and link it to the function to be called and choose hrtim as the source source. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_hrtim);</code></a><br>
 2. Start the critical function.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startcritical"><code>task.startCritical()</code></a>  </p>
 </div>
 <div class="tabbed-block">
-<p>1. Create the critical task and link it to the function to be called and choose tim6 as the source.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_tim6);</code></a><br />
+<p>1. Create the critical task and link it to the function to be called and choose tim6 as the source.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createcritical"><code>task.createCritical(critical_function, control_period, source_tim6);</code></a><br>
 2. Start the critical function.  <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startcritical"><code>task.startCritical()</code></a>  </p>
 </div>
 </div>
@@ -4675,7 +4684,7 @@ Make sure that Task API is included</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">20kHz Periodic task based on PWM</label><label for="__tabbed_2_2">10kHz Periodic task based on Timer6</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">20kHz Periodic task based on PWM</label><label for="__tabbed_2_2">10kHz Periodic task based on Timer6</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    task.createCritical(my_critical_function, 50, source_hrtim); 
@@ -4698,35 +4707,35 @@ Make sure that Task API is included</p>
 <p>In the powerAPI, non time critical tasks are refered as background tasks.</p>
 <h3 id="priority-between-critical-and-non-critical-task">Priority between critical and non-critical task</h3>
 <p>The control task has priority over any other task. It will preempts any background task. The control task can not be preempted. That is why it is also refered as an uninteruptible task.</p>
-<p><img alt="task priority" src="../images/task_priority.svg" /></p>
+<p><figure id="_figure-3"><img alt="task priority" src="../images/task_priority.svg"><figcaption>Figure 3: task priority</figcaption></figure></p>
 <h3 id="pseudo-periodicity-of-non-critical-task">Pseudo periodicity of non-critical task</h3>
 <p>Non-critical tasks aren't synchronous, meaning they're not recurring at regular intervals. Instead, they operate in a pseudo-periodic manner: we can temporarily halt them for a specific duration, during which they remain inactive.  Below, in the illustration we suspend the background task for a period of 500ms. After 500ms we can execute again the background task, but we need to end the control task to do that (the critical task is uninteruptible).</p>
-<p><img alt="" src="../images/task_pseudo_periodic.svg" /></p>
+<p><img alt="" src="../images/task_pseudo_periodic.svg"></p>
 <h3 id="initialization-sequence_1">Initialization sequence</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>1. Create the background task and link it to the function to be called. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createbackground"><code>task.createBackground(function)</code></a> <br />
+<p>1. Create the background task and link it to the function to be called. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-createbackground"><code>task.createBackground(function)</code></a> <br>
 2. Start the background function. <a href="https://owntech-foundation.github.io/Documentation/core/docs/scheduling/#function-startbackground"><code>task.startCritical()</code></a>  </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Spawning a background task</label><label for="__tabbed_3_2">Making it pseudo periodic</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Spawning a background task</label><label for="__tabbed_3_2">Making it pseudo periodic</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    void my_background_function(){
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    void my_background_function(){
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        do_stuff();
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    }
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    task.createBackground(my_background_function);
 </code></pre></div>
-In that case <code>do_stuff()</code> will execute continuously each time the processor is not occupied by the critical task.</p>
+In that case <code>do_stuff()</code> will execute continuously each time the processor is not occupied by the critical task.
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    void my_background_function(){
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    void my_background_function(){
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        do_stuff();
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        suspendBackgroundUs(500);
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    }
 </code></pre></div>
-In that case after executing <code>do_stuff();</code> the task will be suspended for 500us and resumed after. It creates a pseudo periodical task, runs every 500us + the time taken to execute <code>do_stuff()</code>.</p>
+In that case after executing <code>do_stuff();</code> the task will be suspended for 500us and resumed after. It creates a pseudo periodical task, runs every 500us + the time taken to execute <code>do_stuff()</code>.
 </div>
 </div>
 </div>
@@ -4779,10 +4788,10 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-createbackground">function createBackground</h3>
 <p><em>Creates a background task. Background tasks are asynchronous tasks that run in the background when there is no critical task running.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createBackground</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createBackground</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">task_function_t</span><span class="w"> </span><span class="n">routine</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>routine</code> Pointer to the void(void) function that will act as the task main function. </li>
@@ -4793,12 +4802,12 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 
 <h3 id="function-createcritical">function createCritical</h3>
 <p><em>Creates a time critial task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. Use this function to define such a task. Only one task of this kind can be defined. This function can be used to redefine (replace) a previously defined uninterruptible synchronous task, but the previously defined task must have been suspended (or never started). An error will be returned if the previously defined task is still running.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createCritical</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int8_t</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">createCritical</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">task_function_t</span><span class="w"> </span><span class="n">periodic_task</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">task_period_us</span><span class="p">,</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">scheduling_interrupt_source_t</span><span class="w"> </span><span class="n">int_source</span><span class="o">=</span><span class="n">source_hrtim</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>periodic_task</code> Pointer to the void(void) function to be executed periodically. </li>
@@ -4811,10 +4820,10 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 
 <h3 id="function-startbackground">function startBackground</h3>
 <p><em>Use this function to start a previously defined background task using its task number.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startBackground</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startBackground</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">task_number</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Background tasks are asynchronous tasks that run in the background when there is no critical task running.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4824,10 +4833,10 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 
 <h3 id="function-startcritical">function startCritical</h3>
 <p><em>Use this function to start a previously defined a critical task.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startCritical</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">startCritical</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">manage_data_acquisition</span><span class="o">=</span><span class="nb">true</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task.</p>
 <p>If no value is provided for the parameter and Data Acquisition has not been started yet, Scheduling will automatically start Data Acquisition. Thus, make sure all ADC configuration has been carried out before starting the uninterruptible task.</p>
 <p><strong>Parameters:</strong></p>
@@ -4838,10 +4847,10 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 
 <h3 id="function-stopbackground">function stopBackground</h3>
 <p><em>Use this function to stop a previously started background task using its task number.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopBackground</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopBackground</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">task_number</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Background tasks are asynchronous tasks that run in the background when there is no critical task running. The task can be then resumed by calling startAsynchronousTask() again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4851,29 +4860,29 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
 
 <h3 id="function-stopcritical">function stopCritical</h3>
 <p><em>Stop the previously started critical task. A critical task is an Uninterruptible Synchronous Task that uses a precise timer to execute a periodic, non-interruptible user task. The task can be then resumed by calling</em> <a href="../../../powerAPI/classTaskAPI/#function-startcritical"><em><strong>startCritical()</strong></em></a> <em>again.</em>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopCritical</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">stopCritical</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-suspendbackgroundms">function suspendBackgroundMs</h3>
 <p><em>This function allows to suspend a background task for a specified duration expressed in milliseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundMs</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundMs</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">duration_ms</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>DO NOT use this function in a critical task! </p>
 <hr>
 
 <h3 id="function-suspendbackgroundus">function suspendBackgroundUs</h3>
 <p><em>This function allows to suspend a background task for a specified duration expressed in microseconds. For example, you can call this function at the end of a background task function, when there is no need for the task to run permanently.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundUs</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TaskAPI</span><span class="o">::</span><span class="n">suspendBackgroundUs</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">duration_us</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>DO NOT use this function in a critical task! </p>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_task_api/zephyr/public_api/TaskAPI.h</code></p>
 
 <!-- Source file information -->
@@ -5075,10 +5084,10 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -5087,5 +5096,7 @@ In that case after executing <code>do_stuff();</code> the task will be suspended
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

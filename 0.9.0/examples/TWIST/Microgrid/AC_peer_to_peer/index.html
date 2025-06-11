@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4308,14 +4317,14 @@
 <h1 id="peer-to-peer-ac-control-with-an-inverter-and-a-synchronous-rectifier">Peer to peer AC control with an inverter and a synchronous rectifier</h1>
 <h2 id="overview">Overview</h2>
 <p>Peer-to-peer communication in power electronics involves two converters, a DC/AC converter producing a certain power and informing an AC/DC converter that it can consume this reference power.</p>
-<p><img src="Image/p2p_schematic.svg" alt="Schematic p2p" width="600" height="400"></p>
+<p><figure id="_figure-1"><img src="Image/p2p_schematic.svg" alt="Schematic p2p" width="600" height="400"><figcaption>Figure 1: Schematic p2p</figcaption></figure></p>
 <p>DC/AC Converter (<strong>single phase inverter</strong>): This converter is responsible for converting direct current (DC) power into alternating current (AC) power. It may be connected to renewable energy sources (such as solar panels or wind turbines) or batteries, which produce DC power. The DC/AC converter's task is to generate AC power for use in the electrical network.</p>
 <p>AC/DC Converter (<strong>single phase synchronous rectifier</strong>): This converter performs the opposite function. It converts AC power back into DC power. This conversion is necessary when the electrical network requires DC power for various applications, such as charging batteries or powering DC devices.</p>
 <p>In a peer-to-peer communication system, these converters communicate with each other to optimize power exchange. The DC/AC converter informs the AC/DC converter of the available power it can deliver. This information includes details like the power's magnitude and frequency.</p>
 <p>An important aspect of this exchange is that the DC/AC converter must maintain an alternating current in phase opposition (180 degrees phase shift) with the input alternating voltage. This phase opposition ensures that power is effectively delivered to the load.</p>
 <p>A <strong>proportional resonant</strong> is used to keep the input alternative current in phase opposition with the Vac, a PI is used to control the output voltage Vdc.</p>
 <h2 id="requirements-and-schematic">Requirements and schematic</h2>
-<p><img alt="twist" src="Image/schema_P2P_TWIST.png" /></p>
+<p><figure id="_figure-2"><img alt="twist" src="Image/schema_P2P_TWIST.png"><figcaption>Figure 2: twist</figcaption></figure></p>
 <p>You will need :</p>
 <ul>
 <li>Two Twist</li>
@@ -4333,10 +4342,10 @@
 <li>ScopeMimicry</li>
 </ol>
 <p>To use them, you have to add the following lines in platformio.ini file:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lib_deps=
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lib_deps=
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    control_library = https://github.com/owntech-foundation/control_library.git
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    scope = https://github.com/owntech-foundation/scopemimicry.git 
-</code></pre></div></p>
+</code></pre></div>
 <p>In src/main.cpp at the line n. 48 you have a macro that defines wether you are flashing the inverter or the synchronous rectifier.</p>
 <p>To flash the inverter, choose :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#define SERVER</span>
@@ -4361,11 +4370,11 @@ console stream to put it in a txt file named <code>year-month-day_hour_minutes_s
 <h2 id="expected-results">Expected results</h2>
 <p>If everything goes well you'll have 47V delivered to the resistor.</p>
 <p>Here are some results for Vdc and Idc :
-<img alt="DC side result" src="Image/P2P-DCside_m.png" /></p>
+<figure id="_figure-3"><img alt="DC side result" src="Image/P2P-DCside_m.png"><figcaption>Figure 3: DC side result</figcaption></figure></p>
 <p>And for Vac and Iac :
-<img alt="AC side result" src="Image/P2p-AcSide_m.png" /></p>
+<figure id="_figure-4"><img alt="AC side result" src="Image/P2p-AcSide_m.png"><figcaption>Figure 4: AC side result</figcaption></figure></p>
 <p>By using the python script you can also watch MCU internal variables :</p>
-<p><img alt="MCU values" src="Image/ADC_result_P2P.png" /></p>
+<p><figure id="_figure-5"><img alt="MCU values" src="Image/ADC_result_P2P.png"><figcaption>Figure 5: MCU values</figcaption></figure></p>
 
 <!-- Source file information -->
 
@@ -4566,10 +4575,10 @@ console stream to put it in a txt file named <code>year-month-day_hour_minutes_s
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../javascripts/version_selector.js"></script>
       
@@ -4578,5 +4587,7 @@ console stream to put it in a txt file named <code>year-month-day_hour_minutes_s
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

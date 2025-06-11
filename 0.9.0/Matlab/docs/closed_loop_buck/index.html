@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4154,13 +4163,13 @@
 <h1 id="closed-loop-buck">Closed loop buck</h1>
 <p>After the open-loop mode, the aim of this tutorial is to show you how you can implement a buck voltage control using simulink and owntech library.</p>
 <p>You can delete all the data store variable related to the duty_cycle that we have created in the open loop section. Enter inside the block closed_loop_task, and with the association of the block “constant”, “sum” and “discrete PID controller” from the simulink library, <code>set leg duty</code> and <code>get data</code> from owntech library you can create the following schema :</p>
-<p><img alt="PID_voltage.png" src="../Images/PID_voltage.png" /></p>
+<p><figure id="_figure-1"><img alt="PID_voltage.png" src="../Images/PID_voltage.png"><figcaption>Figure 1: PID_voltage.png</figcaption></figure></p>
 <p>We are fixing the output voltage to 15 volt, as for the PI paramters you should have the same as below :</p>
-<p><img alt="main" src="../Images/main.PNG" /> <img alt="output_saturation" src="../Images/output_saturation.PNG" /></p>
+<p><figure id="_figure-2"><img alt="main" src="../Images/main.PNG"> <img alt="output_saturation" src="../Images/output_saturation.PNG"><figcaption>Figure 2: main</figcaption></figure></p>
 <p>Then generate the code, matlab will upload it automatically to the board :</p>
-<p><img alt="generate_code" src="../Images/generate_code.PNG" /></p>
+<p><figure id="_figure-3"><img alt="generate_code" src="../Images/generate_code.PNG"><figcaption>Figure 3: generate_code</figcaption></figure></p>
 <p>Finally, switch to ownplot, open the correct port and send the matlab_mode to execute the generated code :</p>
-<p><img alt="ownplot_setting" src="../Images/ownplot_setting.PNG" /></p>
+<p><figure id="_figure-4"><img alt="ownplot_setting" src="../Images/ownplot_setting.PNG"><figcaption>Figure 4: ownplot_setting</figcaption></figure></p>
 <p>When enabling the matlab_mode, the output voltage will be fixed to 15V.</p>
 
 <!-- Source file information -->
@@ -4362,10 +4371,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -4374,5 +4383,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

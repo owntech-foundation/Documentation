@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -5166,10 +5175,10 @@
 <p>In power electronics, PWM is super important because it allows us to control the average power delivered to a load by varying the duty cycle of the pulse. This means we can regulate the speed of motors or the brightness of LEDs.</p>
 </div>
 <h2 id="features">Features</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="HRTIM pin" src="../images/SPIN_1.1.0_main_hrtim.svg" /></p>
+<p><figure id="_figure-1"><img align="left" alt="HRTIM pin" src="../images/SPIN_1.1.0_main_hrtim.svg"><figcaption>Figure 1: HRTIM pin</figcaption></figure></p>
 <ul>
 <li>Up to 5 pairs of PWMs possible (PWMA, PWC, PWMD, PWME, PWMF)</li>
 <li>Each PWM unit has a resolution of 184ps.</li>
@@ -5198,28 +5207,28 @@
 <h2 id="include">Include</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
 </code></pre></div>
-Make sure that SPIN API is included to use PwmHAL </p>
+Make sure that SPIN API is included to use PwmHAL 
 </div>
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note pre-initialization">
 <p class="admonition-title">Note</p>
 <p>Function to call before initializing the PWM unit.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered</label><label for="__tabbed_2_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered</label><label for="__tabbed_2_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br />
-2. Set wich output (1 or 2) will be controlled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br />
-3.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br />
+<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br>
+2. Set wich output (1 or 2) will be controlled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br>
+3.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br>
 4.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a>  </p>
 </div>
 <div class="tabbed-block">
-<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br />
-2. Set ow which edge (up/down) to trigger adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcEdgeTrigger(PWMx, edgeTrigUp/edgeTrigDwn)</code></a><br />
-3. Set the division of the number of trigger in a fixed period <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcdecimation"><code>spin.pwm.setAdcDecimation(PWMx, DecimValue)</code></a><br />
-4. Set wich output (1 or 2) will be constrolled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br />
-5.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br />
+<p>1.  Set the modulation type : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmodulation"><code>spin.pwm.setModulation(PWMx, lft_aligned/upDwn)</code></a><br>
+2. Set ow which edge (up/down) to trigger adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcedgetrigger"><code>spin.pwm.setAdcEdgeTrigger(PWMx, edgeTrigUp/edgeTrigDwn)</code></a><br>
+3. Set the division of the number of trigger in a fixed period <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setadcdecimation"><code>spin.pwm.setAdcDecimation(PWMx, DecimValue)</code></a><br>
+4. Set wich output (1 or 2) will be constrolled by the duty cycle, the other will be complementary <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setswitchconvention"><code>spin.pwm.setSwitchConvention(PWMx, PWMx1/PWMx2)</code></a><br>
+5.  Set if the pwm is designed to be duty-cycle driven (voltage mode) or current driven (current mode) <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-setmode"><code>spin.pwm.setMode(PWMx, voltageMode/currentMode)</code></a><br>
 6.  Initialize the pwm unit : <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classPwmHAL/#function-initunit"><code>spin.pwm.initUnit(PWMx)</code></a>  </p>
 </div>
 </div>
@@ -5228,7 +5237,7 @@ Make sure that SPIN API is included to use PwmHAL </p>
 <div class="admonition note post-initialization">
 <p class="admonition-title">Note</p>
 <p>Function to call after initializing PWM unit.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Software triggered</label><label for="__tabbed_3_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Software triggered</label><label for="__tabbed_3_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -5253,7 +5262,7 @@ Make sure that SPIN API is included to use PwmHAL </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Software triggered</label><label for="__tabbed_4_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Software triggered</label><label for="__tabbed_4_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
@@ -5289,66 +5298,66 @@ Make sure that SPIN API is included to use PwmHAL </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Here is a counter incrementing from 0 to 27200.
-<img alt="PWM carrier" src="../images/Carrier_PWM.svg" /></p>
-<p>The increment between each step is made at the PWM resolution which is here 184ps, so the carrier gets from 0 to 27200 in 5µs so a frequency of 200kHz.<br />
+<figure id="_figure-2"><img alt="PWM carrier" src="../images/Carrier_PWM.svg"><figcaption>Figure 2: PWM carrier</figcaption></figure></p>
+<p>The increment between each step is made at the PWM resolution which is here 184ps, so the carrier gets from 0 to 27200 in 5µs so a frequency of 200kHz.<br>
 In other words the smallest step is 1/27200 or 0.0037% of the period. </p>
 </div>
 <h3 id="duty-cycle">Duty cycle</h3>
 <p>The duty cycle is a constant value compared to the carrier. </p>
-<p><img alt="Duty cycle" src="../images/changing_duty_cycle.gif" /></p>
+<p><figure id="_figure-3"><img alt="Duty cycle" src="../images/changing_duty_cycle.gif"><figcaption>Figure 3: Duty cycle</figcaption></figure></p>
 <p>When the carrier is superior to the duty cycle, the logic output is at high level. On the contrary, when the carrier is inferior to the duty cycle the the output logic is low level. A PWM signal is thus a sqarewave signal with a frequency (the <strong>switching frequency</strong>) is fixed by the carrier.</p>
 <p>Varying the duty cycle is how to vary the output of the PWM.</p>
 <h2 id="snippet-examples">Snippet examples</h2>
 <h3 id="frequency">Frequency</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">200kHz frequency</label><label for="__tabbed_5_2">400kHz frequency</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">200kHz frequency</label><label for="__tabbed_5_2">400kHz frequency</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="frequency 200 kHz" src="../images/frequency_200.svg" width="800" /></p>
+<p><figure id="_figure-4"><img alt="frequency 200 kHz" src="../images/frequency_200.svg" width="800"><figcaption>Figure 4: frequency 200 kHz</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setFrequency</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">200000</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="frequency 400 kHz" src="../images/frequency_400.svg" width="800" /></p>
+<p><figure id="_figure-5"><img alt="frequency 400 kHz" src="../images/frequency_400.svg" width="800"><figcaption>Figure 5: frequency 400 kHz</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setFrequency</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">400000</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h3 id="singledual-output">Single/Dual Output</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Single Output</label><label for="__tabbed_6_2">Single Output PWMx2</label><label for="__tabbed_6_3">Dual Output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Single Output</label><label for="__tabbed_6_2">Single Output PWMx2</label><label for="__tabbed_6_3">Dual Output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="single_output_pwm" src="../images/single_output_pwm.svg" width="800" /></p>
+<p><figure id="_figure-6"><img alt="single_output_pwm" src="../images/single_output_pwm.svg" width="800"><figcaption>Figure 6: single_output_pwm</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT1</span><span class="p">);</span><span class="w">    </span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="single_output_pwm2" src="../images/single_output_pwm2.svg" width="800" /></p>
+<p><figure id="_figure-7"><img alt="single_output_pwm2" src="../images/single_output_pwm2.svg" width="800"><figcaption>Figure 7: single_output_pwm2</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startSingleOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">TIMING_OUTPUT2</span><span class="p">);</span><span class="w">    </span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="dual_output_pwm" src="../images/dual_output_pwm.svg" width="800" /></p>
+<p><figure id="_figure-8"><img alt="dual_output_pwm" src="../images/dual_output_pwm.svg" width="800"><figcaption>Figure 8: dual_output_pwm</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">startDualOutput</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h3 id="duty-cycle_1">Duty Cycle</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">20% Duty cycle</label><label for="__tabbed_7_2">80% Duty cycle</label><label for="__tabbed_7_3">How it works</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><input id="__tabbed_7_3" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">20% Duty cycle</label><label for="__tabbed_7_2">80% Duty cycle</label><label for="__tabbed_7_3">How it works</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="duty_cycle_20" src="../images/duty_cycle_20.svg" width="800" /></p>
+<p><figure id="_figure-9"><img alt="duty_cycle_20" src="../images/duty_cycle_20.svg" width="800"><figcaption>Figure 9: duty_cycle_20</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="duty_cycle_80" src="../images/duty_cycle_80.svg" width="800" /></p>
+<p><figure id="_figure-10"><img alt="duty_cycle_80" src="../images/duty_cycle_80.svg" width="800"><figcaption>Figure 10: duty_cycle_80</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="phase_shift_80" src="../images/duty_cycle_how_it_works.svg" width="800" /></p>
+<p><figure id="_figure-11"><img alt="phase_shift_80" src="../images/duty_cycle_how_it_works.svg" width="800"><figcaption>Figure 11: phase_shift_80</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -5358,64 +5367,64 @@ In other words the smallest step is 1/27200 or 0.0037% of the period. </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>PWMA is defined as the phase reference. It can not be phase shifted. 
-If you are not using PWMA, you can define any PWM channel as the reference by setting its phase shift to 0°<br />
+If you are not using PWMA, you can define any PWM channel as the reference by setting its phase shift to 0°<br>
 NB: Phase reference is 0°.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">20% Phase Shift</label><label for="__tabbed_8_2">80% Phase Shift</label><label for="__tabbed_8_3">How it works</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><input id="__tabbed_8_3" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">20% Phase Shift</label><label for="__tabbed_8_2">80% Phase Shift</label><label for="__tabbed_8_3">How it works</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="phase_shift_20" src="../images/phase_shift_20.svg" width="800" /></p>
+<p><figure id="_figure-12"><img alt="phase_shift_20" src="../images/phase_shift_20.svg" width="800"><figcaption>Figure 12: phase_shift_20</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setPhaseShift</span><span class="p">(</span><span class="n">PWMC</span><span class="p">,</span><span class="w">  </span><span class="mi">72</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="phase_shift_80" src="../images/phase_shift_80.svg" width="800" /></p>
+<p><figure id="_figure-13"><img alt="phase_shift_80" src="../images/phase_shift_80.svg" width="800"><figcaption>Figure 13: phase_shift_80</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setPhaseShift</span><span class="p">(</span><span class="n">PWMC</span><span class="p">,</span><span class="w">  </span><span class="mi">288</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="phase_shift_how_it_works" src="../images/phase_shift_with_carriers.svg" width="800" /></p>
+<p><figure id="_figure-14"><img alt="phase_shift_how_it_works" src="../images/phase_shift_with_carriers.svg" width="800"><figcaption>Figure 14: phase_shift_how_it_works</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setPhaseShift</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w">  </span><span class="mi">288</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h3 id="dead-time">Dead Time</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">2% Dead Time</label><label for="__tabbed_9_2">8% Dead Time</label><label for="__tabbed_9_3">Asymetric Dead Time leading edge</label><label for="__tabbed_9_4">Asymetric Dead Time trailing edge</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><input id="__tabbed_9_3" name="__tabbed_9" type="radio"><input id="__tabbed_9_4" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">2% Dead Time</label><label for="__tabbed_9_2">8% Dead Time</label><label for="__tabbed_9_3">Asymetric Dead Time leading edge</label><label for="__tabbed_9_4">Asymetric Dead Time trailing edge</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="dead_time_02" src="../images/dead_time_02.svg" width="800" /></p>
+<p><figure id="_figure-15"><img alt="dead_time_02" src="../images/dead_time_02.svg" width="800"><figcaption>Figure 15: dead_time_02</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadtime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w">  </span><span class="mi">100</span><span class="p">,</span><span class="w">  </span><span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="dead_time_08" src="../images/dead_time_08.svg" width="800" /></p>
+<p><figure id="_figure-16"><img alt="dead_time_08" src="../images/dead_time_08.svg" width="800"><figcaption>Figure 16: dead_time_08</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadtime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w">  </span><span class="mi">400</span><span class="p">,</span><span class="w">  </span><span class="mi">400</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="dead_time_asymetric_0208" src="../images/dead_time_asymetric_0208.svg" width="800" /></p>
+<p><figure id="_figure-17"><img alt="dead_time_asymetric_0208" src="../images/dead_time_asymetric_0208.svg" width="800"><figcaption>Figure 17: dead_time_asymetric_0208</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadtime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w">  </span><span class="mi">100</span><span class="p">,</span><span class="w">  </span><span class="mi">400</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="dead_time_asymetric_0802" src="../images/dead_time_asymetric_0802.svg" width="800" /></p>
+<p><figure id="_figure-18"><img alt="dead_time_asymetric_0802" src="../images/dead_time_asymetric_0802.svg" width="800"><figcaption>Figure 18: dead_time_asymetric_0802</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDeadtime</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w">  </span><span class="mi">400</span><span class="p">,</span><span class="w">  </span><span class="mi">100</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <h3 id="modulation-type">Modulation Type</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Left Aligned</label><label for="__tabbed_10_2">Center Aligned</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">Left Aligned</label><label for="__tabbed_10_2">Center Aligned</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="left_aligned_modulation_pwm" src="../images/left_aligned_modulation_pwm.svg" width="800" /></p>
+<p><figure id="_figure-19"><img alt="left_aligned_modulation_pwm" src="../images/left_aligned_modulation_pwm.svg" width="800"><figcaption>Figure 19: left_aligned_modulation_pwm</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">Lft_aligned</span><span class="p">);</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.28</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="center_aligned_modulation_pwm" src="../images/center_aligned_modulation_pwm.svg" width="800" /></p>
+<p><figure id="_figure-20"><img alt="center_aligned_modulation_pwm" src="../images/center_aligned_modulation_pwm.svg" width="800"><figcaption>Figure 20: center_aligned_modulation_pwm</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setModulation</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">UpDwn</span><span class="p">);</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setDutyCycle</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.28</span><span class="p">);</span>
 </code></pre></div>
@@ -5600,12 +5609,12 @@ NB: Phase reference is 0°.</p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-configureperiodevnt">function configurePeriodEvnt</h3>
 <p><em>This function configures the interrupt on repetition counter.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">configurePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">configurePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span><span class="p">,</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span><span class="p">,</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="n">hrtim_callback_t</span><span class="w"> </span><span class="n">callback</span>
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>PWM_tu</code> PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </li>
@@ -5616,10 +5625,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-disableadctrigger">function disableAdcTrigger</h3>
 <p><em>This function disables the adc trigger for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">disableAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">disableAdcTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5628,10 +5637,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-disableperiodevnt">function disablePeriodEvnt</h3>
 <p><em>This function disables the interrupt on repetition counter.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">disablePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">disablePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>PWM_tu</code> PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </li>
@@ -5640,10 +5649,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-enableadctrigger">function enableAdcTrigger</h3>
 <p><em>This function enables the adc trigger for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">enableAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">enableAdcTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu_number</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</li>
@@ -5654,10 +5663,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-enableperiodevnt">function enablePeriodEvnt</h3>
 <p><em>This function enables the interrupt on repetition counter.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">enablePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">enablePeriodEvnt</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>PWM_tu</code> PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </li>
@@ -5666,10 +5675,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getadcedgetrigger">function getAdcEdgeTrigger</h3>
 <p><em>This function returns the adc trigger rollover mode for the selected timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5680,11 +5689,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getadctrigger">function getAdcTrigger</h3>
 <p><em>This function returns the adc trigger linked to a timer unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getAdcTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5695,10 +5704,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-geteev">function getEev</h3>
 <p><em>This function sets the external event linked to the timing unit used for the current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getEev</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getEev</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5709,10 +5718,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getmode">function getMode</h3>
 <p><em>This function returns the PWM mode (voltage or current mode)</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5725,10 +5734,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getmodulation">function getModulation</h3>
 <p><em>This function returns the modulation type of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getModulation</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getModulation</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5739,10 +5748,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getperiod">function getPeriod</h3>
 <p><em>This function returns the period of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriod</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriod</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5753,10 +5762,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getperiodevntrep">function getPeriodEvntRep</h3>
 <p><em>This function returns the repetition counter value.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>PWM_tu</code> PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </li>
@@ -5767,10 +5776,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getperiodus">function getPeriodUs</h3>
 <p><em>This function returns the period in µs of the selected timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodUs</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getPeriodUs</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5779,10 +5788,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-getswitchconvention">function getSwitchConvention</h3>
 <p><em>This function returns the switching convention of the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getSwitchConvention</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">getSwitchConvention</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5793,10 +5802,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-initfrequency-12">function initFrequency [1/2]</h3>
 <p><em>This function initialize the frequency.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">init_frequency</span>
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>init_frequency</code> frequency in Hz</li>
@@ -5807,11 +5816,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-initfrequency-22">function initFrequency [2/2]</h3>
 <p><em>This functions initialize the frequency and also sets the minimal reachable frequency.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initFrequency</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">init_frequency</span><span class="p">,</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">minimal_frequency</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>init_frequency</code> frequency in Hz </li>
@@ -5823,10 +5832,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-initunit">function initUnit</h3>
 <p><em>This function initializes a timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initUnit</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">initUnit</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF</li>
@@ -5843,11 +5852,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setadcdecimation">function setAdcDecimation</h3>
 <p><em>This function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if decimation = 1, nothing changes but with decimation = 2 you have twice less adc trigger.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcDecimation</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcDecimation</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">decimation</span>
 <a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5859,11 +5868,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setadcedgetrigger">function setAdcEdgeTrigger</h3>
 <p><em>This function sets the adc trig rollover mode for the selected timer.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcEdgeTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">    </span><span class="n">hrtim_adc_edgetrigger_t</span><span class="w"> </span><span class="n">adc_edge_trigger</span>
 <a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5875,11 +5884,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setadctrigger">function setAdcTrigger</h3>
 <p><em>This function sets the adc trigger linked to a timer unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTrigger</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTrigger</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="n">hrtim_adc_trigger_t</span><span class="w"> </span><span class="n">adc_trig</span>
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5891,11 +5900,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setadctriggerinstant">function setAdcTriggerInstant</h3>
 <p><em>This function sets the comparator value at which the ADC is trigered.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerInstant</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerInstant</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trig_val</span>
 <a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5905,11 +5914,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setadctriggerpostscaler">function setAdcTriggerPostScaler</h3>
 <p><em>This function sets the PostScaler value for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerPostScaler</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setAdcTriggerPostScaler</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ps_ratio</span>
 <a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5921,12 +5930,12 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setdeadtime">function setDeadTime</h3>
 <p><em>This function sets the dead time for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDeadTime</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDeadTime</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">rise_ns</span><span class="p">,</span>
 <a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">fall_ns</span>
 <a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5939,11 +5948,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setdutycycle">function setDutyCycle</h3>
 <p><em>This function sets the duty cycle for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDutyCycle</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setDutyCycle</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_cycle</span>
 <a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5953,11 +5962,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-seteev">function setEev</h3>
 <p><em>This function sets external event linked to the timing unit essential for the current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setEev</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setEev</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="n">hrtim_external_trigger_t</span><span class="w"> </span><span class="n">eev</span>
 <a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5969,10 +5978,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setfrequency">function setFrequency</h3>
 <p><em>Change the frequency/period after it has been initialized.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setFrequency</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setFrequency</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency_update</span>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>frequency_update</code> The new frequency in Hz </li>
@@ -5983,11 +5992,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setmode">function setMode</h3>
 <p><em>This function sets a special pwm mode for voltage or current mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">mode</span>
 <a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -5999,11 +6008,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setmodulation">function setModulation</h3>
 <p><em>This function sets the modulation mode for a given PWM unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setModulation</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setModulation</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="n">hrtim_cnt_t</span><span class="w"> </span><span class="n">modulation</span>
 <a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -6015,11 +6024,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setperiodevntrep">function setPeriodEvntRep</h3>
 <p><em>This function sets the repetition counter to ISR period.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPeriodEvntRep</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="n">hrtim_tu_t</span><span class="w"> </span><span class="n">PWM_tu</span><span class="p">,</span>
 <a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">repetition</span>
 <a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>PWM_tu</code> PWM Unit - TIMA, TIMB, TIMC, TIMD, TIME or TIMF </li>
@@ -6029,11 +6038,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setphaseshift">function setPhaseShift</h3>
 <p><em>This function sets the phase shift in respect to timer A for the selected timing unit.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPhaseShift</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setPhaseShift</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">shift</span>
 <a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -6045,11 +6054,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-setswitchconvention">function setSwitchConvention</h3>
 <p><em>This function sets the switch convention for a given PWM unit i.e. you decide which one of the output of the timer can be controlled with duty cycle.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setSwitchConvention</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">setSwitchConvention</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span><span class="p">,</span>
 <a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">convention</span>
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -6061,10 +6070,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-startdualoutput">function startDualOutput</h3>
 <p><em>This fonction starts both outputs of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startDualOutput</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startDualOutput</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -6073,11 +6082,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-startsingleoutput">function startSingleOutput</h3>
 <p><em>This function starts only one output of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startSingleOutput</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">startSingleOutput</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
 <a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
 <a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>tu</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF </li>
@@ -6087,10 +6096,10 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-stopdualoutput">function stopDualOutput</h3>
 <p><em>This function stops both outputs of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopDualOutput</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopDualOutput</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">pwmX</span>
 <a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pwmX</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME or PWMF </li>
@@ -6099,11 +6108,11 @@ NB: Phase reference is 0°.</p>
 
 <h3 id="function-stopsingleoutput">function stopSingleOutput</h3>
 <p><em>This function starts only one output of the selected HRTIM channel.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopSingleOutput</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">PwmHAL</span><span class="o">::</span><span class="n">stopSingleOutput</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">    </span><span class="n">hrtim_tu_number_t</span><span class="w"> </span><span class="n">tu</span><span class="p">,</span>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">    </span><span class="n">hrtim_output_number_t</span><span class="w"> </span><span class="n">output</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>tu</code> PWM Unit - PWMA, PWMB, PWMC, PWMD, PWME, PWMF </li>
@@ -6111,7 +6120,7 @@ NB: Phase reference is 0°.</p>
 </ul>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_spin_api/zephyr/src/PwmHAL.h</code></p>
 
 <!-- Source file information -->
@@ -6313,10 +6322,10 @@ NB: Phase reference is 0°.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -6325,5 +6334,7 @@ NB: Phase reference is 0°.</p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

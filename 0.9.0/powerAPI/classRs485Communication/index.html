@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4357,14 +4366,14 @@
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-configure">function configure</h3>
 <p><em>configuration for RS485 communication using a 10Mbit/s speed</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">configure</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">configure</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">transmission_bufer</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">reception_buffer</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">data_size</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)()</span><span class="w"> </span><span class="n">user_function</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">rs485_speed_t</span><span class="w"> </span><span class="n">data_speed</span><span class="o">=</span><span class="n">SPEED_10M</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>transmission_buffer</code> Pointer to the transmitted buffer </li>
@@ -4387,7 +4396,7 @@
 
 <h3 id="function-configurecustom">function configureCustom</h3>
 <p><em>Custom configuration for RS485 communication to choose the communication speed.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">configureCustom</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">configureCustom</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">transmission_bufer</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">reception_buffer</span><span class="p">,</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">data_size</span><span class="p">,</span>
@@ -4395,7 +4404,7 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">baudrate</span><span class="p">,</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">oversampling_8</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>transmission_buffer</code> Pointer to the transmitted buffer </li>
@@ -4411,25 +4420,25 @@
 
 <h3 id="function-starttransmission">function startTransmission</h3>
 <p><em>start a transmission i.e. you send what is contained in the transmission buffer</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">startTransmission</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">startTransmission</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-turnoffcommunication">function turnOffCommunication</h3>
 <p><em>Turn off the RS485.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">turnOffCommunication</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">turnOffCommunication</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-turnoncommunication">function turnOnCommunication</h3>
 <p><em>Turn on the RS485 communication.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">turnOnCommunication</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Rs485Communication</span><span class="o">::</span><span class="n">turnOnCommunication</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <p><strong>Remark:</strong></p>
 <p>The RS485 is automatically turned on when initializing with configureDefault or configure, no need to call this function </p>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_communication/zephyr/src/Rs485Communication.h</code></p>
 
 <!-- Source file information -->
@@ -4631,10 +4640,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/version_selector.js"></script>
       
@@ -4643,5 +4652,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

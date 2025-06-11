@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4977,14 +4986,14 @@
 <p>This API is designed to work with the TWIST hardware, providing a set of functions to manage and control the output power.</p>
 </div>
 <h2 id="features">Features</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="TWIST schema" src="../images/TWIST_illustration.svg" width="200" /><br />
-- <strong>Versatile Control Modes</strong>: The API supports both voltage and peak current control modes, allowing you to choose the best option for your specific application.<br />
-- <strong>Independent Leg Operation</strong>: Each of the two legs can operate independently with different topologies, such as boost or buck, offering greater flexibility in power management.<br />
-- <strong>Configure different paramaters</strong> for power electronics (dead time, phase shift)<br />
-- <strong>Simplified ADC value retrieval</strong><br />
+<p><figure id="_figure-1"><img align="left" alt="TWIST schema" src="../images/TWIST_illustration.svg" width="200"><figcaption>Figure 1: TWIST schema</figcaption></figure><br>
+- <strong>Versatile Control Modes</strong>: The API supports both voltage and peak current control modes, allowing you to choose the best option for your specific application.<br>
+- <strong>Independent Leg Operation</strong>: Each of the two legs can operate independently with different topologies, such as boost or buck, offering greater flexibility in power management.<br>
+- <strong>Configure different paramaters</strong> for power electronics (dead time, phase shift)<br>
+- <strong>Simplified ADC value retrieval</strong><br>
 - Refer to <a href="https://github.com/owntech-foundation/TWIST">TWIST hardware specifications</a> for more detail on TWIST board.  </p>
 </div>
 </div>
@@ -4992,42 +5001,42 @@
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Voltage mode with all the legs</label><label for="__tabbed_2_2">Voltage mode with only LEG1</label><label for="__tabbed_2_3">Current mode with all the legs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Voltage mode with all the legs</label><label for="__tabbed_2_2">Voltage mode with only LEG1</label><label for="__tabbed_2_3">Current mode with all the legs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br>
 2. Choose the wished topology : buck, boost. You can select all the legs to be in the same topology or choose a specific configuration for each one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallbuck"><code>twist.initAllBuck()</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallboost"><code>twist.initAllBoost()</code></a>  </p>
 <p><details><summary>Optional steps</summary>
-3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br />
-4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br />
-5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br />
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br>
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br>
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br>
 </details></p>
-<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
-7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldutycycle"><code>twist.setAllDutyCycle(duty_cycle)</code></a> <br />
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br>
+7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldutycycle"><code>twist.setAllDutyCycle(duty_cycle)</code></a> <br>
 8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startall"><code>twist.startAll()</code></a>   </p>
 </div>
 <div class="tabbed-block">
-<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br>
 2. Choose the wished topology : buck, boost <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initlegbuck"><code>twist.initLegBuck(LEG1/LEG2)</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initlegboost"><code>twist.initLegBoost(LEG1/LEG2)</code></a>  </p>
 <p><details><summary>Optional steps</summary>
-3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegadcdecim"><code>twist.setLegAdcDecim(LEG1/LEG2, decim)</code></a><br />
-4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdeadtime"><code>twist.setLegDeadTime(LEG1/LEG2,rise_deadTime_ns, fall_deadTime_ns)</code></a><br />
-5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegphaseshift"><code>twist.setLegPhaseShift(LEG1/LEG2, ps_degree)</code></a><br />
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegadcdecim"><code>twist.setLegAdcDecim(LEG1/LEG2, decim)</code></a><br>
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdeadtime"><code>twist.setLegDeadTime(LEG1/LEG2,rise_deadTime_ns, fall_deadTime_ns)</code></a><br>
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegphaseshift"><code>twist.setLegPhaseShift(LEG1/LEG2, ps_degree)</code></a><br>
 </details></p>
-<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
-7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdutycycle"><code>twist.setLegDutyCycle(LEG1/LEG2, duty_cycle)</code></a><br />
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br>
+7. Set the duty cycle to control output voltage <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setlegdutycycle"><code>twist.setLegDutyCycle(LEG1/LEG2, duty_cycle)</code></a><br>
 8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startleg"><code>twist.startLeg(LEG1/LEG2)</code></a>  </p>
 </div>
 <div class="tabbed-block">
-<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br />
+<p>1. Set the version of the board <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setversion"><code>twist.setVersion(shield_TWIST_VERSION)</code></a>  <br>
 2. Choose the wished topology : buck, boost. You can select all the legs to be in the same topology or choose a specific configuration for each one <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallbuck"><code>twist.initAllBuck(CURRENT_MODE)</code></a>, <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-initallboost"><code>twist.initAllBoost()</code></a>  </p>
 <p><details><summary>Optional steps</summary>
-3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br />
-4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br />
-5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br />
+3. Set the adc decimation to divide the number of trigger event starting the adc conversion <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalladcdecim"><code>twist.setAllAdcDecim(decim)</code></a> <br>
+4. Set the dead time <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setalldeadtime"><code>twist.setAllDeadTime(rise_deadTime_ns, fall_deadTime_ns)</code></a> <br>
+5. Set the phase shift in degree <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallphaseshift"><code>twist.setAllPhaseShift(ps_degree)</code></a> <br>
 </details></p>
-<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br />
-7. Set the slope compensation to control the output current<a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallslopecompensation"><code>twist.setAllSlopeCompensation(1.4, 1.0)</code></a> <br />
+<p>6. Enable the ADC acquisition for twist to get voltage and current measures <a href="https://owntech-foundation.github.io/Documentation/core/docs/dataAPI/#function-enableshieldchannel"><code>data.enableTwistDefaultChannels()</code></a><br>
+7. Set the slope compensation to control the output current<a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-setallslopecompensation"><code>twist.setAllSlopeCompensation(1.4, 1.0)</code></a> <br>
 8. Then start the converters <a href="https://owntech-foundation.github.io/Documentation/powerAPI/classTwistAPI/#function-startall"><code>twist.startAll()</code></a>   </p>
 </div>
 </div>
@@ -5039,7 +5048,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Voltage mode with all the legs</label><label for="__tabbed_3_2">Voltage mode with only LEG1</label><label for="__tabbed_3_3">Current mode with all the legs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Voltage mode with all the legs</label><label for="__tabbed_3_2">Voltage mode with only LEG1</label><label for="__tabbed_3_3">Current mode with all the legs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">twist</span><span class="p">.</span><span class="n">setVersion</span><span class="p">(</span><span class="n">shield_TWIST_V1_3</span><span class="p">);</span>
@@ -5082,37 +5091,37 @@
 <h3 id="voltage-mode">Voltage mode</h3>
 <p>Voltage mode is a traditional and widely-used approach in power electronics, where the output voltage is regulated by controlling the duty cycle. The duty cycle is a crucial parameter that determines the proportion of time a switch (such as a transistor) is active during a complete switching period. By adjusting the duty cycle, you can effectively manage the power delivered to a load.</p>
 <p>A higher duty cycle indicates that the switch remains on for a more extended period, resulting in increased power delivery to the load. Conversely, a lower duty cycle means the switch is on for a shorter duration, thereby reducing the power supplied. Consequently, the average power and voltage applied to the load can be precisely controlled by fine-tuning the duty cycle.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"> Voltage mode PWM schematic </label><label for="__tabbed_4_2"> Voltage mode PWM waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1"> Voltage mode PWM schematic </label><label for="__tabbed_4_2"> Voltage mode PWM waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="voltage mode PWM" src="../images/voltage_mode_schema.svg" /></p>
+<p><figure id="_figure-2"><img alt="voltage mode PWM" src="../images/voltage_mode_schema.svg"><figcaption>Figure 2: voltage mode PWM</figcaption></figure></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="voltage mode PWM waveform" src="../images/changing_duty_cycle.gif" /></p>
+<p><figure id="_figure-3"><img alt="voltage mode PWM waveform" src="../images/changing_duty_cycle.gif"><figcaption>Figure 3: voltage mode PWM waveform</figcaption></figure></p>
 </div>
 </div>
 </div>
 <h3 id="current-mode">Current mode</h3>
 <p>In peak current mode control,  we monitors the current flowing through the power switch. Once the current reaches a predetermined peak value, we promptly turns off the power switch. This mechanism helps maintain a constant output voltage by regulating the current flow.</p>
 <p>In this setup, a clock signal determines the switching frequency and triggers the switch to close. The controller then sends a reference peak current value. When the inductor's current reaches this reference value, the switch opens.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"> Current mode schematic </label><label for="__tabbed_5_2"> Current mode waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1"> Current mode schematic </label><label for="__tabbed_5_2"> Current mode waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_schema.svg" width="600" />  </p>
+<p><img alt="" src="../images/current_mode_schema.svg" width="600">  </p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_pwm_scheme.svg" width="600" />  </p>
+<p><img alt="" src="../images/current_mode_pwm_scheme.svg" width="600">  </p>
 </div>
 </div>
 </div>
 <p>However, using a constant peak current reference can lead to subharmonic oscillations. To prevent this issue, we employ a technique called slope compensation. Instead of a constant value, the peak current reference is a sawtooth waveform. The final schematic with slope compensation is shown below:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"> Final current mode schematic </label><label for="__tabbed_6_2">Final current mode waveform </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1"> Final current mode schematic </label><label for="__tabbed_6_2">Final current mode waveform </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_schema_final.svg" width="600" />  </p>
+<p><img alt="" src="../images/current_mode_schema_final.svg" width="600">  </p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/current_mode_pwm_scheme_final.svg" /></p>
+<p><img alt="" src="../images/current_mode_pwm_scheme_final.svg"></p>
 </div>
 </div>
 </div>
@@ -5122,13 +5131,13 @@
 <h2 id="snippets-examples">Snippets examples</h2>
 <h3 id="buck-topology">Buck topology</h3>
 <h4 id="2-legs-with-the-same-configuration">2 legs with the same configuration</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"> Connection </label><label for="__tabbed_7_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1"> Connection </label><label for="__tabbed_7_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_buck_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_buck_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5137,13 +5146,13 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
 </code></pre></div>
 <h4 id="2-independant-leg-operations">2 independant leg operations</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"> Connection </label><label for="__tabbed_8_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1"> Connection </label><label for="__tabbed_8_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_2leg_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_buck_2leg_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_buck_2leg_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_buck_2leg_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5154,13 +5163,13 @@
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
 </code></pre></div>
 <h3 id="boost-topology">Boost topology</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1"> Connection </label><label for="__tabbed_9_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1"> Connection </label><label for="__tabbed_9_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_boost_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_boost_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_boost_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_boost_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5169,13 +5178,13 @@
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">twist</span><span class="p">.</span><span class="n">startAll</span><span class="p">();</span>
 </code></pre></div>
 <h3 id="inverter-topology">Inverter topology</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1"> Connection </label><label for="__tabbed_10_2"> Schematic </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1"> Connection </label><label for="__tabbed_10_2"> Schematic </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_inverter_conf.svg" width="400" /></p>
+<p><img alt="" src="../images/twist_inverter_conf.svg" width="400"></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="" src="../images/twist_inverter_schematic.svg" /></p>
+<p><img alt="" src="../images/twist_inverter_schematic.svg"></p>
 </div>
 </div>
 </div>
@@ -5186,9 +5195,9 @@
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Check the following examples for an application :<br />
-    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_voltage_mode/">Voltage mode buck</a><br />
-    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_current_mode/">Current mode buck</a><br />
+<p>Check the following examples for an application :<br>
+    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_voltage_mode/">Voltage mode buck</a><br>
+    - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/buck_current_mode/">Current mode buck</a><br>
     - <a href="https://owntech-foundation.github.io/Documentation/examples/TWIST/DC_DC/boost_voltage_mode/">Voltage mode boost</a>  </p>
 </div>
 <h1 id="class-twistapi">Class TwistAPI</h1>
@@ -5315,16 +5324,16 @@
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-connectallcapacitor">function connectAllCapacitor</h3>
 <p><em>Connect the electrolyt capacitor to all the legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">connectAllCapacitor</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">connectAllCapacitor</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-connectlegcapacitor">function connectLegCapacitor</h3>
 <p><em>Connect the electrolytic capacitor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">connectLegCapacitor</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">connectLegCapacitor</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> The selected leg for which to connect the capacitor. </li>
@@ -5333,16 +5342,16 @@
 
 <h3 id="function-disconnectallcapacitor">function disconnectAllCapacitor</h3>
 <p><em>disconnect the electrolyt capacitor to all the legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">disconnectAllCapacitor</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">disconnectAllCapacitor</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-disconnectlegcapacitor">function disconnectLegCapacitor</h3>
 <p><em>Disonnect the electrolytic capacitor.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">disconnectLegCapacitor</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">disconnectLegCapacitor</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> The selected leg for which to disonnect the capacitor. </li>
@@ -5351,16 +5360,16 @@
 
 <h3 id="function-initallboost">function initAllBoost</h3>
 <p><em>Initialise all the legs for boost topology, current mode is not supported for boost.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllBoost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllBoost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-initallbuck">function initAllBuck</h3>
 <p><em>Initialise all the legs for buck topology.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllBuck</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllBuck</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="o">=</span><span class="n">VOLTAGE_MODE</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg_mode</code> PWM mode - VOLTAGE_MODE or CURRENT_MODE </li>
@@ -5369,11 +5378,11 @@
 
 <h3 id="function-initallmode">function initAllMode</h3>
 <p><em>Initialize power modes for all legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initAllMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">leg_convention</span><span class="p">,</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function initializes the power modes for each leg with the specified 'buck' and 'voltage_mode' settings.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5384,10 +5393,10 @@
 
 <h3 id="function-initlegboost">function initLegBoost</h3>
 <p><em>Initialise all the legs for boost topology, current mode is not supported for boost.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegBoost</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegBoost</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> Leg to initialize </li>
@@ -5396,11 +5405,11 @@
 
 <h3 id="function-initlegbuck">function initLegBuck</h3>
 <p><em>Initialise a leg for buck topology.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegBuck</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegBuck</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span><span class="o">=</span><span class="n">VOLTAGE_MODE</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> Leg to initialize </li>
@@ -5410,12 +5419,12 @@
 
 <h3 id="function-initlegmode">function initLegMode</h3>
 <p><em>Initialize the power mode for a given leg.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">initLegMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">hrtim_switch_convention_t</span><span class="w"> </span><span class="n">leg_convention</span><span class="p">,</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="n">hrtim_pwm_mode_t</span><span class="w"> </span><span class="n">leg_mode</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function configures modulation, frequency, phase shift, dead time, and other parameters for power control of a specified leg.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5427,10 +5436,10 @@
 
 <h3 id="function-setalladcdecim">function setAllAdcDecim</h3>
 <p><em>set ADC decimator for all legs</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllAdcDecim</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllAdcDecim</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">adc_decim</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>this function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if adc_decim = 1, nothing changes but with adc_decims = 2 you have twice less adc trigger.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5440,11 +5449,11 @@
 
 <h3 id="function-setalldeadtime">function setAllDeadTime</h3>
 <p><em>set the dead time value for all legs</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllDeadTime</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllDeadTime</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_rising_dt</span><span class="p">,</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_falling_dt</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>ns_rising_dt</code> - rising dead time value in ns </li>
@@ -5454,10 +5463,10 @@
 
 <h3 id="function-setalldutycycle">function setAllDutyCycle</h3>
 <p><em>Set the duty cycle for power control of all the legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllDutyCycle</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllDutyCycle</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_all</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function sets the same duty cycle for power control of all the legs. The duty cycle determines the ON/OFF ratio of the power signal for all legs.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5467,10 +5476,10 @@
 
 <h3 id="function-setallphaseshift">function setAllPhaseShift</h3>
 <p><em>Set the phase shift value for all the legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllPhaseShift</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllPhaseShift</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">phase_shift</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>phase_shift</code> The phase shift value to set. </li>
@@ -5479,11 +5488,11 @@
 
 <h3 id="function-setallslopecompensation">function setAllSlopeCompensation</h3>
 <p><em>Set the slope compensation in current mode for all the leg.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllSlopeCompensation</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllSlopeCompensation</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">set_voltage</span><span class="p">,</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">reset_voltage</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>set_voltage</code> in volt, the DAC peak voltage for slope compensation (value between 0 and 2.048) </li>
@@ -5495,10 +5504,10 @@
 
 <h3 id="function-setalltriggervalue">function setAllTriggerValue</h3>
 <p><em>Set the trigger value for the ADC trigger of all the legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllTriggerValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setAllTriggerValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trigger_value</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function sets the same trigger value for the ADC trigger of all the legs. The trigger value determines the level at which the ADC trigger is activated for all legs.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5508,11 +5517,11 @@
 
 <h3 id="function-setlegadcdecim">function setLegAdcDecim</h3>
 <p><em>set ADC decimator for a leg</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegAdcDecim</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegAdcDecim</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">adc_decim</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>this function sets the number of event which will be ignored between two events. ie. you divide the number of trigger in a fixed period. For example if adc_decim = 1, nothing changes but with adc_decims = 2 you have twice less adc trigger.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5523,12 +5532,12 @@
 
 <h3 id="function-setlegdeadtime">function setLegDeadTime</h3>
 <p><em>set the dead time value for a leg</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegDeadTime</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegDeadTime</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_rising_dt</span><span class="p">,</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ns_falling_dt</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> - the leg for which to set dead time value </li>
@@ -5539,11 +5548,11 @@
 
 <h3 id="function-setlegdutycycle">function setLegDutyCycle</h3>
 <p><em>Set the duty cycle for a specific leg's power control.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegDutyCycle</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegDutyCycle</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">duty_leg</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function sets the duty cycle for the power control of a specified leg. The duty cycle determines the ON/OFF ratio of the power signal for the leg.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5554,11 +5563,11 @@
 
 <h3 id="function-setlegphaseshift">function setLegPhaseShift</h3>
 <p><em>Set the phase shift value for a specific leg's power control.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegPhaseShift</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegPhaseShift</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">phase_shift</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> The leg for which to set the phase shift value. </li>
@@ -5568,12 +5577,12 @@
 
 <h3 id="function-setlegslopecompensation">function setLegSlopeCompensation</h3>
 <p><em>Set the slope compensation in current mode for a leg.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegSlopeCompensation</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegSlopeCompensation</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">set_voltage</span><span class="p">,</span>
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">reset_voltage</span>
 <a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> The leg to initialize </li>
@@ -5586,11 +5595,11 @@
 
 <h3 id="function-setlegtriggervalue">function setLegTriggerValue</h3>
 <p><em>Set the trigger value for a specific leg's ADC trigger.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegTriggerValue</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setLegTriggerValue</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span><span class="p">,</span>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="n">float32_t</span><span class="w"> </span><span class="n">trigger_value</span>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function sets the trigger value for the ADC trigger of a specified leg. The trigger value determines the level at which the ADC trigger is activated.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5601,10 +5610,10 @@
 
 <h3 id="function-setversion">function setVersion</h3>
 <p><em>Set the hardware version of the board.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setVersion</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">setVersion</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">twist_version_t</span><span class="w"> </span><span class="n">twist_ver</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>shield</code> shield version - shield_TWIST_V1_2, shield_TWIST_V1_3, shield_ownverter or shield_other</li>
@@ -5615,16 +5624,16 @@
 
 <h3 id="function-startall">function startAll</h3>
 <p><em>Start power output for all legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">startAll</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">startAll</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-startleg">function startLeg</h3>
 <p><em>Start power output for a specific leg.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">startLeg</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">startLeg</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>This function initiates the power output for a specified leg by starting the PWM subunits associated with the leg's output pins. If the leg's output pins are not declared inactive in the device tree, the corresponding subunits are started. eg. If output1 is declared inactive in the device tree, PWMA1 will not start</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5634,23 +5643,23 @@
 
 <h3 id="function-stopall">function stopAll</h3>
 <p><em>Stop power output for all legs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">stopAll</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">stopAll</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-stopleg">function stopLeg</h3>
 <p><em>Stop power output for a specific leg.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">stopLeg</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">TwistAPI</span><span class="o">::</span><span class="n">stopLeg</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">leg_t</span><span class="w"> </span><span class="n">leg</span>
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>leg</code> The leg for which to stop the power output. </li>
 </ul>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_power_api/zephyr/public_api/TwistAPI.h</code></p>
 
 <!-- Source file information -->
@@ -5852,10 +5861,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -5864,5 +5873,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

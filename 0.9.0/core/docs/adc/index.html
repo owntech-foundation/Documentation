@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4782,15 +4791,15 @@ For most data acquisition tasks, use the <a href="../dataAPI/">Data API</a> whic
 -  Sensing full scale: 0V to 2.048V
 -  Sampling time down to 42ns</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SPIN v1.1.0</label><label for="__tabbed_1_2">SPIN v1.0.0</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">SPIN v1.1.0</label><label for="__tabbed_1_2">SPIN v1.0.0</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="SPIN_1_1_0_ADC_pinout_main" src="../images/SPIN_1.1.0_main_adc.png" width="451" />
-<img alt="SPIN_1_1_0_ADC_pinout_inner" src="../images/SPIN_1.1.0_inner_adc.png" width="243" /></p>
+<p><figure id="_figure-1"><img align="left" alt="SPIN_1_1_0_ADC_pinout_main" src="../images/SPIN_1.1.0_main_adc.png" width="451">
+<img alt="SPIN_1_1_0_ADC_pinout_inner" src="../images/SPIN_1.1.0_inner_adc.png" width="243"><figcaption>Figure 1: SPIN_1_1_0_ADC_pinout_main</figcaption></figure></p>
 </div>
 <div class="tabbed-block">
-<p><img align="left" alt="SPIN_1_0_0_ADC_pinout_main" src="../images/SPIN_1.0.0_main_adc.png" width="451" />
-<img alt="SPIN_1_0_0_ADC_pinout_inner" src="../images/SPIN_1.0.0_inner_adc.png" width="243" /></p>
+<p><figure id="_figure-2"><img align="left" alt="SPIN_1_0_0_ADC_pinout_main" src="../images/SPIN_1.0.0_main_adc.png" width="451">
+<img alt="SPIN_1_0_0_ADC_pinout_inner" src="../images/SPIN_1.0.0_inner_adc.png" width="243"><figcaption>Figure 2: SPIN_1_0_0_ADC_pinout_main</figcaption></figure></p>
 </div>
 </div>
 </div>
@@ -4804,14 +4813,14 @@ For most data acquisition tasks, use the <a href="../dataAPI/">Data API</a> whic
 <h2 id="include">Include</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#include &lt;SpinAPI.h&gt;
 </code></pre></div>
-Make sure that SPIN API is included to use AdcHAL</p>
+Make sure that SPIN API is included to use AdcHAL
 </div>
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered</label><label for="__tabbed_2_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Software triggered</label><label for="__tabbed_2_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -4834,7 +4843,7 @@ Make sure that SPIN API is included to use AdcHAL</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Software triggered</label><label for="__tabbed_3_2">Hardware triggered</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Software triggered</label><label for="__tabbed_3_2">Hardware triggered</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">software</span><span class="p">);</span>
@@ -4876,17 +4885,17 @@ This can be changed using <a href="#continuous-discontinuous-sequence">Discontin
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">3 channels on ADC1</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">3 channels on ADC1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">enableChannel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">enableChannel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">enableChannel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">enableChannel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-In this example, for each trigger action, the ADC1 will measure channel 2, then channel 3, then channel 1.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Single channel</label></div>
+In this example, for each trigger action, the ADC1 will measure channel 2, then channel 3, then channel 1.
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Single channel</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -4899,10 +4908,10 @@ In this example, for each trigger action, the ADC1 will measure channel 2, then 
 <p>Sequence order is given by <code>spin.adc.enableChannel()</code> order.</p>
 </div>
 <h2 id="software-triggered">Software triggered</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"> </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1"> </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img align="left" alt="adc software triggers" src="../images/ADC_software_trigger.svg" width="300" /></p>
+<p><figure id="_figure-3"><img align="left" alt="adc software triggers" src="../images/ADC_software_trigger.svg" width="300"><figcaption>Figure 3: adc software triggers</figcaption></figure></p>
 <p>A software trigger for an ADC is a command or signal generated by the software to start the ADC conversion process. Instead of using a hardware signal or event to initiate the conversion, the ADC is triggered by software instructions, allowing for precise control and synchronization with other software processes or events. For example this trigger command can be generated from a high speed control task.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">software</span><span class="p">);</span><span class="w"> </span><span class="c1">// ADC 2 configured in software mode</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">data</span><span class="p">.</span><span class="n">triggerAcquisition</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Send an adc trigger to ADC2 to start conversion</span>
@@ -4943,10 +4952,10 @@ To retrieve measurement values please refer to DataAPI</p>
 </div>
 <h3 id="the-different-event-and-trigger-of-adchrtim">The different event and trigger of ADC/HRTIM</h3>
 <p>You might have seen that there are differents variables referencing adc trigger : </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 </code></pre></div>
-There is <code>hrtim_eevx</code> or <code>ADCTRIG_x</code>, let's see the role of each of them.</p>
+There is <code>hrtim_eevx</code> or <code>ADCTRIG_x</code>, let's see the role of each of them.
 <h4 id="adctrig_x">ADCTRIG_x</h4>
 <p>In the PWM API, four signals can serve as ADC triggers, initiating ADC conversions: ADC_TRIG1, ADC_TRIG2, ADC_TRIG3, and ADC_TRIG4.</p>
 <p>The PWM is produced by a carrier (see <a href="https://owntech-foundation.github.io/Documentation/core/docs/pwm/">here</a>) by using a comparator to compare a specific constant value with the carrier, we can generate an event when enabling a trigger on the PWM. For instance :  </p>
@@ -4954,25 +4963,25 @@ There is <code>hrtim_eevx</code> or <code>ADCTRIG_x</code>, let's see the role o
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
 <p>We are enabling and linking ADCTRIG_1 to PWMA. That means that when the comparator value and the carrier value of the PWMA we can generate an event from ADCTRIG_1 that can be used to start an ADC conversion : </p>
-<p><img alt="ADC trigger" src="../images/hrtim_adc_trigger_schema.svg" /></p>
+<p><figure id="_figure-4"><img alt="ADC trigger" src="../images/hrtim_adc_trigger_schema.svg"><figcaption>Figure 4: ADC trigger</figcaption></figure></p>
 <p>The comparator value can be adjusted using the function <code>spin.pwm.setAdcTriggerInstant(PWMA, 0.5)</code>. For example, setting it to 0.5 means triggering an event halfway through the switching period, initiating an ADC conversion.</p>
 <h4 id="hrtim_eevx">hrtim_eevx</h4>
 <p>An ADC conversion can be initiated either by software (via a function) or hardware through an external event. Numerous external events exist, but some are specifically related to PWM: <code>hrtim_eev1</code>, <code>hrtim_eev2</code>, <code>hrtim_eev3</code>, and <code>hrtim_eev4</code>.</p>
 <p>Each of these external events is associated with events generated by ADCTRIG_x. For instance, hrtim_eev1 is linked to ADCTRIG_1, and so on.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureTriggerSource</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">hrtim_eev1</span><span class="p">);</span>
 </code></pre></div>
-The above code indicates that we've connected ADC<strong>1</strong> to the external event <strong>hrtim_eev1</strong>, which, in turn, is connected to the event generated by <strong>ADCTRIG1</strong> when the comparator (set by the trigger value) matches the carrier of <strong>PWMA</strong>.</p>
+The above code indicates that we've connected ADC<strong>1</strong> to the external event <strong>hrtim_eev1</strong>, which, in turn, is connected to the event generated by <strong>ADCTRIG1</strong> when the comparator (set by the trigger value) matches the carrier of <strong>PWMA</strong>.
 <h3 id="source-adc-and-pwm-channel">Source ADC and PWM channel</h3>
 <p>ADC1 and ADC2 can be associated with PWM channels at will.</p>
 <h3 id="function-configurediscontinuousmode">function configureDiscontinuousMode</h3>
 <p><em>Set the discontinuous count for an ADC. By default, ADCs are not in discontinuous mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">dicontinuous_count</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -4981,16 +4990,16 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 </ul>
 <hr>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">ADC1 and PWMA</label><label for="__tabbed_7_2">ADC1 and PWMC</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">ADC1 and PWMA</label><label for="__tabbed_7_2">ADC1 and PWMC</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800" /></p>
+<p><figure id="_figure-5"><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800"><figcaption>Figure 5: left_aligned_ADC_50</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_PWM_C" src="../images/left_aligned_ADC_PWM_C.svg" width="800" /></p>
+<p><figure id="_figure-6"><img alt="left_aligned_ADC_PWM_C" src="../images/left_aligned_ADC_PWM_C.svg" width="800"><figcaption>Figure 6: left_aligned_ADC_PWM_C</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMC</span><span class="p">);</span>
 </code></pre></div>
@@ -5002,16 +5011,16 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 <p class="admonition-title">Note</p>
 <p>Hardware trigger depends on PWM modulation.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Left Aligned Modulation</label><label for="__tabbed_8_2">Center aligned modulation</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Left Aligned Modulation</label><label for="__tabbed_8_2">Center aligned modulation</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800" /></p>
+<p><figure id="_figure-7"><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800"><figcaption>Figure 7: left_aligned_ADC_50</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800" /></p>
+<p><figure id="_figure-8"><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800"><figcaption>Figure 8: center_aligned_ADC_rising_edge</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
@@ -5023,17 +5032,17 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 <p class="admonition-title">Note</p>
 <p>This only applies to center aligned modulation.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Rising Edge</label><label for="__tabbed_9_2">Falling Edge</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">Rising Edge</label><label for="__tabbed_9_2">Falling Edge</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800" /></p>
+<p><figure id="_figure-9"><img alt="center_aligned_ADC_rising_edge" src="../images/center_aligned_ADC_rising_edge.svg" width="800"><figcaption>Figure 9: center_aligned_ADC_rising_edge</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_up</span><span class="p">);</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="center_aligned_ADC_falling_edge" src="../images/center_aligned_ADC_falling_edge.svg" width="800" /></p>
+<p><figure id="_figure-10"><img alt="center_aligned_ADC_falling_edge" src="../images/center_aligned_ADC_falling_edge.svg" width="800"><figcaption>Figure 10: center_aligned_ADC_falling_edge</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcEdgeTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeTrigger_down</span><span class="p">);</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="n">ADCTRIG_1</span><span class="p">);</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">enableAdcTrigger</span><span class="p">(</span><span class="n">PWMA</span><span class="p">);</span>
@@ -5043,15 +5052,15 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 </div>
 <h3 id="measurment-trigger-instant">Measurment trigger instant</h3>
 <p>Trigger timing can be defined or changed dynamically.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">20% Duty cycle</label><label for="__tabbed_10_2">80% Duty cycle</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">20% Duty cycle</label><label for="__tabbed_10_2">80% Duty cycle</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_20" src="../images/left_aligned_ADC_20.svg" width="800" /></p>
+<p><figure id="_figure-11"><img alt="left_aligned_ADC_20" src="../images/left_aligned_ADC_20.svg" width="800"><figcaption>Figure 11: left_aligned_ADC_20</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_80" src="../images/left_aligned_ADC_80.svg" width="800" /></p>
+<p><figure id="_figure-12"><img alt="left_aligned_ADC_80" src="../images/left_aligned_ADC_80.svg" width="800"><figcaption>Figure 12: left_aligned_ADC_80</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerInstant</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -5062,15 +5071,15 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 <p class="admonition-title">Note</p>
 <p>This is relevant if more than one measurement is taken with the same ADC.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Continuous sequence</label><label for="__tabbed_11_2">Discontinuous sequence </label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked id="__tabbed_11_1" name="__tabbed_11" type="radio"><input id="__tabbed_11_2" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="__tabbed_11_1">Continuous sequence</label><label for="__tabbed_11_2">Discontinuous sequence </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="left_aligned_continuous_sampling" src="../images/left_aligned_continuous_sampling.svg" width="800" /></p>
+<p><figure id="_figure-13"><img alt="left_aligned_continuous_sampling" src="../images/left_aligned_continuous_sampling.svg" width="800"><figcaption>Figure 13: left_aligned_continuous_sampling</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800" /></p>
+<p><figure id="_figure-14"><img alt="left_aligned_ADC_50" src="../images/left_aligned_ADC_50.svg" width="800"><figcaption>Figure 14: left_aligned_ADC_50</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">configureDiscontinuousMode</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -5081,20 +5090,20 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 <p class="admonition-title">Note</p>
 <p>This is relevant if more than one measurement is taken with the same ADC.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">With 2 periods</label><label for="__tabbed_12_2">With 4 periods</label><label for="__tabbed_12_3">Without interuptions</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked id="__tabbed_12_1" name="__tabbed_12" type="radio"><input id="__tabbed_12_2" name="__tabbed_12" type="radio"><input id="__tabbed_12_3" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="__tabbed_12_1">With 2 periods</label><label for="__tabbed_12_2">With 4 periods</label><label for="__tabbed_12_3">Without interuptions</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="sparse_sampling_2" src="../images/sparse_sampling_2.svg" width="800" /></p>
+<p><figure id="_figure-15"><img alt="sparse_sampling_2" src="../images/sparse_sampling_2.svg" width="800"><figcaption>Figure 15: sparse_sampling_2</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="sparse_sampling_4" src="../images/sparse_sampling_4.svg" width="800" /></p>
+<p><figure id="_figure-16"><img alt="sparse_sampling_4" src="../images/sparse_sampling_4.svg" width="800"><figcaption>Figure 16: sparse_sampling_4</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="left_aligned_continuous_sampling" src="../images/left_aligned_continuous_sampling.svg" width="800" /></p>
+<p><figure id="_figure-17"><img alt="left_aligned_continuous_sampling" src="../images/left_aligned_continuous_sampling.svg" width="800"><figcaption>Figure 17: left_aligned_continuous_sampling</figcaption></figure></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">    </span><span class="n">spin</span><span class="p">.</span><span class="n">pwm</span><span class="p">.</span><span class="n">setAdcTriggerPostScaler</span><span class="p">(</span><span class="n">PWMA</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -5167,11 +5176,11 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-configurediscontinuousmode_1">function configureDiscontinuousMode</h3>
 <p><em>Set the discontinuous count for an ADC. By default, ADCs are not in discontinuous mode.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureDiscontinuousMode</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">dicontinuous_count</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5182,11 +5191,11 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-configuretriggersource">function configureTriggerSource</h3>
 <p><em>Change the trigger source of an ADC. By default, triggger source for ADC 1/2 is on HRTIM1, and ADC 3/4 is software-triggered.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureTriggerSource</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">configureTriggerSource</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n">adc_ev_src_t</span><span class="w"> </span><span class="n">trigger_source</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5197,11 +5206,11 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-disablechannel">function disableChannel</h3>
 <p><em>Removes a channel from the list of channels that are acquired by an ADC.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">disableChannel</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">disableChannel</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">channel</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>If a channel has been enabled multiple times, then only the first occurence in the list will be removed.</p>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
@@ -5214,11 +5223,11 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-enablechannel">function enableChannel</h3>
 <p><em>Add a channel to the list of channels to be acquired for an ADC. The order in which channels are acquired is determined by the order in which they are enabled.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">enableChannel</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">enableChannel</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">channel</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5229,11 +5238,11 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-enabledma">function enableDma</h3>
 <p><em>ADC DMA mode configuration. Enables DMA and circular mode on an ADC.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">enableDma</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">enableDma</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">use_dma</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Applied configuration will only be set when ADC is started. If ADC is already started, it must be stopped then started again.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -5244,10 +5253,10 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-getenabledchannelscount">function getEnabledChannelsCount</h3>
 <p><em>Returns the number of enabled channels for an ADC.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">getEnabledChannelsCount</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">getEnabledChannelsCount</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>adc_number</code> Number of the ADC to fetch. </li>
@@ -5258,23 +5267,23 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 
 <h3 id="function-startalladcs">function startAllAdcs</h3>
 <p><em>Start all configured ADCs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">startAllAdcs</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">startAllAdcs</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-stopalladcs">function stopAllAdcs</h3>
 <p><em>Stop all configured ADCs.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">stopAllAdcs</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">stopAllAdcs</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
 <hr>
 
 <h3 id="function-triggersoftwareconversion">function triggerSoftwareConversion</h3>
 <p><em>Triggers a conversion on an ADC which is configured as software triggered.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">triggerSoftwareConversion</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AdcHAL</span><span class="o">::</span><span class="n">triggerSoftwareConversion</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adc_number</span><span class="p">,</span>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_of_acquisitions</span>
 <a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Note:</strong></p>
 <p>Software trigger is default for all ADCs unless configured differently by the user or another module.</p>
 <p><strong>Parameters:</strong></p>
@@ -5284,7 +5293,7 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
 </ul>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_spin_api/zephyr/src/AdcHAL.h</code></p>
 
 <!-- Source file information -->
@@ -5486,10 +5495,10 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -5498,5 +5507,7 @@ The above code indicates that we've connected ADC<strong>1</strong> to the exter
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

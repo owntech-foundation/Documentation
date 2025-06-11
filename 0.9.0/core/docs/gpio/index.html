@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4405,18 +4414,18 @@
 <h2 id="initialization-sequence">Initialization sequence</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Set the output pin</label><label for="__tabbed_1_2">Reset the output pin</label><label for="__tabbed_1_3">Read the input pin</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Set the output pin</label><label for="__tabbed_1_2">Reset the output pin</label><label for="__tabbed_1_3">Read the input pin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>1. Configure the pin in output mode.<br />
+<p>1. Configure the pin in output mode.<br>
 2. Set the pin.  </p>
 </div>
 <div class="tabbed-block">
-<p>1. Configure the pin in output mode.<br />
+<p>1. Configure the pin in output mode.<br>
 2. Reset the pin  </p>
 </div>
 <div class="tabbed-block">
-<p>1. Configure the pin in input mode.<br />
+<p>1. Configure the pin in input mode.<br>
 2. Read the pin input.  </p>
 </div>
 </div>
@@ -4424,18 +4433,18 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Set the output pin</label><label for="__tabbed_2_2">Reset the output pin</label><label for="__tabbed_2_3">Read the input pin</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Set the output pin</label><label for="__tabbed_2_2">Reset the output pin</label><label for="__tabbed_2_3">Read the input pin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>spin.gpio.configurePin(9, OUTPUT);<br />
+<p>spin.gpio.configurePin(9, OUTPUT);<br>
 spin.gpio.setPin(9);  </p>
 </div>
 <div class="tabbed-block">
-<p>spin.gpio.configurePin(9, OUTPUT);<br />
+<p>spin.gpio.configurePin(9, OUTPUT);<br>
 spin.gpio.resetPin(9);  </p>
 </div>
 <div class="tabbed-block">
-<p>spin.gpio.configurePin(9, INPUT);<br />
+<p>spin.gpio.configurePin(9, INPUT);<br>
 uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 </div>
 </div>
@@ -4482,11 +4491,11 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-configurepin">function configurePin</h3>
 <p><em>Configure an I/O pin. This must be done prior to accessing any other function from this API on the pin.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">configurePin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">configurePin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">gpio_flags_t</span><span class="w"> </span><span class="n">flags</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pin</code> Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </li>
@@ -4499,10 +4508,10 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 
 <h3 id="function-readpin">function readPin</h3>
 <p><em>Get the current value of a pin configured as input.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">readPin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">readPin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pin</code> Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </li>
@@ -4513,10 +4522,10 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 
 <h3 id="function-resetpin">function resetPin</h3>
 <p><em>Reset the value of a pin configured as output to 0.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">resetPin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">resetPin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pin</code> Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </li>
@@ -4525,10 +4534,10 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 
 <h3 id="function-setpin">function setPin</h3>
 <p><em>Set the value of a pin configured as output to 1.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">setPin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">setPin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pin</code> Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </li>
@@ -4537,10 +4546,10 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 
 <h3 id="function-togglepin">function togglePin</h3>
 <p><em>Toggle the value of a pin configured as output:</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">togglePin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">togglePin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li>if pin value is 1, it will be set to 0</li>
 <li>if pin value is 0, it will be set to 1.</li>
@@ -4553,11 +4562,11 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 
 <h3 id="function-writepin">function writePin</h3>
 <p><em>Set the value of a pin configured as output to a given value.</em> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">writePin</span><span class="w"> </span><span class="p">(</span>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">GpioHAL</span><span class="o">::</span><span class="n">writePin</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">value</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>pin</code> Number of the Spin pin OR STM32-style name of the pin, e.g. PA1, PB10, etc. See pin_t type for the full list of available STM32-style pins on Spin board. </li>
@@ -4565,7 +4574,7 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
 </ul>
 <hr>
 
-<hr />
+<hr>
 <p>The documentation for this class was generated from the following file <code>docs/core/zephyr/modules/owntech_spin_api/zephyr/src/GpioHAL.h</code></p>
 
 <!-- Source file information -->
@@ -4767,10 +4776,10 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/version_selector.js"></script>
       
@@ -4779,5 +4788,7 @@ uint8_t return_gpio = spin.gpio.readPin(9);  </p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

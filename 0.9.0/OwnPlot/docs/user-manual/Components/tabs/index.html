@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -66,7 +66,16 @@
     <!-- main.html | Added "navigation.instant" support -->
     <link rel="canonical" href=".">
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4208,7 +4217,7 @@
 <!-- Page content -->
 <h1 id="tabs">Tabs</h1>
 <p>The tabs of OwnPlot splits all the settings and functions of the app between different pages.
-<img alt="Main terminal settings" src="../../imgs/OwnPlot_tabs.png" width="300" /></p>
+<figure id="_figure-1"><img alt="Main terminal settings" src="../../imgs/OwnPlot_tabs.png" width="300"><figcaption>Figure 1: Main terminal settings</figcaption></figure></p>
 <h3 id="send-tab">Send Tab</h3>
 <p>Purpose: The send tab is dedicated to "Send" data to the selected serial port.
 The most important field is </p>
@@ -4219,18 +4228,18 @@ The most important field is </p>
 <p>The <strong>Mockports</strong> tab hosts the setup of the Mockport 4 (File reader).</p>
 <h4 id="file-reader">File reader</h4>
 <p>You can upload a file recorded from the Record tab and play it back.
-<img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_select_file.png" width="300" /></p>
+<figure id="_figure-2"><img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_select_file.png" width="300"><figcaption>Figure 2: mockports</figcaption></figure></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You have to select the Mockport 4 in the port selector in order to upload a record file.</p>
 </div>
 <p>By default, the data will be read once and the port will automatically close.
-<img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_loop_data.png" width="300" />
+<img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_loop_data.png" width="300">
 You can change this behavior by pressing the <strong>Loop Data</strong> button. This will read the available data in the provided file and restart the process every time the end file has been reached.</p>
 <h4 id="interval">Interval</h4>
 <p>You can also change the interval of points using the <strong>interval (ms)</strong>.
 the smaller the number, the more data points per second will appear in the graph.
-<img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_interval.png" width="300" /></p>
+<figure id="_figure-3"><img alt="mockports" src="../../imgs/OwnPlot_Mockports_tab_interval.png" width="300"><figcaption>Figure 3: mockports</figcaption></figure></p>
 <h3 id="controls-tab">Controls Tab</h3>
 <p>The <strong>Controls</strong> tab enables you to set shortcuts for common actions.</p>
 <table>
@@ -4451,10 +4460,10 @@ the smaller the number, the more data points per second will appear in the graph
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer", "content.tooltips", "content.figure.numbering"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../../javascripts/version_selector.js"></script>
       
@@ -4463,5 +4472,7 @@ the smaller the number, the more data points per second will appear in the graph
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
