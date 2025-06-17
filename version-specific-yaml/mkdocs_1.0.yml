@@ -113,7 +113,7 @@ nav:
     - Hardware:
         - SPIN: spin/1.2.0/getting_started.md
         - TWIST: twist/1.4.1/getting_started.md
-        - OWNVERTER: ownverter/1.0.0/getting_started.md
+        - OWNVERTER: ownverter/1.1.0/getting_started.md
         
     - MATLAB:
         - Getting started: Matlab/docs/getting_started.md
