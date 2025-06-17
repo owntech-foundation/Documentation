@@ -43,7 +43,7 @@ document$.subscribe(function() {
                 "1.1.0": {
                     buttonText: "1.1.0",
                     aliasText: "Latest"
-                }
+                },
                 "1.0.0": {
                     buttonText: "1.0.0",
                     aliasText: "Stable"
