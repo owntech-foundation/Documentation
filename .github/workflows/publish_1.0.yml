@@ -125,7 +125,19 @@ jobs:
           rm -rf docs/spinV11
           rm -rf docs/spinV10
 
-      - name: Checkout OwnTech OWNVERTER repo
+      - name: Checkout OwnTech OWNVERTER V1.1 repo
+        uses: actions/checkout@v4
+        with:
+          repository: owntech-foundation/ownverter
+          ref: OWNVERTER_V1.1
+          path: docs/ownverterV11
+          sparse-checkout: |
+            docs/getting_started.md
+            docs/images/
+            docs/images/*
+          sparse-checkout-cone-mode: false
+          
+      - name: Checkout OwnTech OWNVERTER V1.0 repo
         uses: actions/checkout@v4
         with:
           repository: owntech-foundation/ownverter
@@ -141,10 +153,15 @@ jobs:
         run: |
           mkdir docs/ownverter
           mkdir docs/ownverter/1.0.0
+          mkdir docs/ownverter/1.1.0
           mkdir docs/ownverter/1.0.0/images/
+          mkdir docs/ownverter/1.1.0/images/
           mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
+          mv docs/ownverterV11/docs/getting_started.md docs/ownverter/1.1.0/getting_started.md
           mv docs/ownverterV10/docs/images/* docs/ownverter/1.0.0/images
+          mv docs/ownverterV10/docs/images/* docs/ownverter/1.1.0/images
           rm -rf docs/ownverterV10
+          rm -rf docs/ownverterV11
 
       - name: Checkout OwnTech Control library repo
         uses: actions/checkout@v4
