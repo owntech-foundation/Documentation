@@ -159,7 +159,7 @@ jobs:
           mv docs/ownverterV10/docs/getting_started.md docs/ownverter/1.0.0/getting_started.md
           mv docs/ownverterV11/docs/getting_started.md docs/ownverter/1.1.0/getting_started.md
           mv docs/ownverterV10/docs/images/* docs/ownverter/1.0.0/images
-          mv docs/ownverterV10/docs/images/* docs/ownverter/1.1.0/images
+          mv docs/ownverterV11/docs/images/* docs/ownverter/1.1.0/images
           rm -rf docs/ownverterV10
           rm -rf docs/ownverterV11
 
