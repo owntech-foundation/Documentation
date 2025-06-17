@@ -40,9 +40,13 @@ document$.subscribe(function() {
         }
         else if (currentBoard == "ownverter") {
             versions = {
+                "1.1.0": {
+                    buttonText: "1.1.0",
+                    aliasText: "Latest"
+                }
                 "1.0.0": {
                     buttonText: "1.0.0",
-                    aliasText: "Latest"
+                    aliasText: "Stable"
                 }
             };
         }
