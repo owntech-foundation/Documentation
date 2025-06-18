@@ -3846,6 +3846,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SPIN
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3857,6 +3870,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery Mode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4690,6 +4731,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery Mode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4771,7 +4829,75 @@
 <h1 id="spin-v12-documentation">SPIN V1.2 Documentation</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This page is version specific. Make sure that your board version matches prior reader further.</p>
+<p>This page is version specific. Make sure that your board version matches before reader further.  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Powerful Microcontroller made for digital power applications</p>
+<p>The main element of the spin board is the powerful <strong>STM32G474</strong> microcontroller.<br>
+It is meant to be used for digital power applications, and has complex and versatile 
+analog peripherals, that can be paired with digital PWMs signals.<br>
+Aside from the microcontroller there are two buttons.  </p>
+<ul>
+<li>Reset <strong>RST</strong> – Reset the board  </li>
+<li>Button <strong>BTN</strong> – Connected to PC14, can be used for user-defined applications<br>
+Pressing both buttons simultaneously resets the microcontroller into <strong>RECOVERY</strong> mode, allowing safe reprogramming even if the device is unresponsive.  </li>
+</ul>
+<p><img alt="Microcontroller" src="../images/microcontroller.png">  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Onboard LEDs - Intuitive silkscreen</p>
+<p>Two LEDs are present onboard.<br>
+<em> </em><em>PWR LED</em><em> indicates power presence.<br>
+</em> <strong>User LED</strong> connected to PA5 can be used for application development.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The User <strong>LED</strong> can be disconnected via the onboard solder jumper if PA5 is required for other purposes.  </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A dim or flickering <strong>PWR</strong> LED may indicate insufficient or unstable power supply.<br>
+If the SPIN board is mounted on a power shield, check the upstream source for issues.  </p>
+</div>
+<p>Silkscreen marking<br>
+<em> is squared for GND pins<br>
+</em> and round for any other signal.<br>
+<img alt="LEDs" src="../images/LEDs.png">  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Native USB support</p>
+<p>The onboard USB-C port supports both microcontroller programming and serial communication, 
+and is protected against electrostatic discharge.<br>
+<img alt="USB" src="../images/USBC.png">  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">debugger port</p>
+<p>This connector allows to connect an STLINK debugger.<br>
+Having a dedicated debugger permits advanced tracing, and using breakpoints in the code.<br>
+<img alt="STLink interface" src="../images/stlink.png">  </p>
+</div>
+<h2 id="recovery-mode">Recovery Mode</h2>
+<p>The SPIN board has a <strong>RECOVERY</strong> mode. This mode permits to restore a known to work program, when 
+the board is stuck.<br>
+In recovery mode, flashing the board is not different from a regular flash.  </p>
+<p>There are 3 ways to enter recovery mode.  </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Using onboard buttons</label><label for="__tabbed_1_2">Using serial port</label><label for="__tabbed_1_3">Using code</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pressing simultaneously <strong>BTN</strong> and <strong>RST</strong> will reboot the board in <strong>RECOVERY</strong> mode.  </p>
+</div>
+<div class="tabbed-block">
+<p>Connecting to the serial port at 1200Baud will trigger a reboot callback that will place
+the microcontroller in recovery mode.  </p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Drive PC14 high in software  </li>
+<li>Trigger a software reset  </li>
+</ol>
+<p>Setting PC14 pin to high state, will load a small onboard capacitance, similar to the pressing 
+action on the <strong>BTN</strong> button.  </p>
+</div>
+</div>
 </div>
 
 <!-- Source file information -->
