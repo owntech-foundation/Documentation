@@ -90,6 +90,8 @@ jobs:
           path: docs/spinV12
           sparse-checkout: |
             docs/getting_started.md
+            docs/images/
+            docs/images/*
           sparse-checkout-cone-mode: false
 
       - name: Checkout OwnTech SPIN V1_1 repo
@@ -116,9 +118,11 @@ jobs:
         run: |
           mkdir docs/spin
           mkdir docs/spin/1.2.0
+          mkdir docs/spin/1.2.0/images/
           mkdir docs/spin/1.1.0
           mkdir docs/spin/1.0.0
           mv docs/spinV12/docs/getting_started.md docs/spin/1.2.0/getting_started.md
+          mv docs/spinV12/docs/images/* docs/spin/1.2.0/images
           mv docs/spinV11/docs/getting_started.md docs/spin/1.1.0/getting_started.md
           mv docs/spinV10/docs/getting_started.md docs/spin/1.0.0/getting_started.md
           rm -rf docs/spinV12
