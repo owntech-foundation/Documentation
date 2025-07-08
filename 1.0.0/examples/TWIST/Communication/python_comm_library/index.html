@@ -4808,9 +4808,9 @@
 <p class="admonition-title">Warning</p>
 </div>
 <h2 id="embedded-firmware-setup">Embedded Firmware setup</h2>
-<p>We import the <code>communication_library</code> in <code>platformio.ini</code> via the line. Be careful to include the <code>#generic_shield_comm</code> at the end, since it will get the right version of the protocol :</p>
+<p>We import the <code>communication_library</code> in <code>platformio.ini</code> via the line. Be careful to include the <code>#power_tuesday</code> at the end, since it will get the right version of the protocol :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">lib_deps</span><span class="o">=</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">comm_protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/owntech-foundation/python_twist_comm_protocol.git</span><span class="c1">#generic_shield_comm</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">comm_protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/owntech-foundation/python_twist_comm_protocol.git</span><span class="c1">#power_tuesday</span>
 </code></pre></div>
 <h2 id="embedded-firmware-explanation">Embedded Firmware explanation</h2>
 <p>The emebedded firmware will configure the <code>TWIST</code> or <code>OWNVERTER</code> board to be able to communicate with your computer via python. </p>
