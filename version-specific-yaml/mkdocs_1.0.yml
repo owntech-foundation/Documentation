@@ -74,7 +74,7 @@ nav:
             - Analog Communication: powerAPI/classAnalogCommunication.md
             - RS485: powerAPI/classRs485Communication.md
             - CAN: powerAPI/classCanCommunication.md
-            - Real Time Sync: powerAPI/classSyncCommunication.md
+            - Real Time Sync: core/docs/communication_sync.md
         - Safety API:
             - Introduction: core/docs/safety_introduction.md
     - Control Library:
