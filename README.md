@@ -43,6 +43,8 @@ single MkDocs source tree.
 - `mkdocs.yml` is a placeholder. During CI it is replaced by a file from
   `version-specific-yaml/`.
 - `version-specific-yaml/` contains version-specific navigation files.
+- `scripts/update_examples_nav.py` regenerates the Examples navigation from
+  `docs/examples/library.json`.
 - `overrides/` contains MkDocs Material template overrides, including the custom
   hardware version selector.
 - `docs/` contains local site assets and landing page content. During CI, this
@@ -90,11 +92,18 @@ The publishing workflows build the documentation in several stages:
    The workflows install Doxygen, Python, MkDocs Material, MkDoxy, `mike`, and
    the MkDocs plugins used by the site.
 
-6. Select the version-specific MkDocs navigation.
+6. Generate Examples navigation and select the version-specific MkDocs
+   navigation.
 
-   CI removes the placeholder `mkdocs.yml` and copies the relevant file from
-   `version-specific-yaml/`. For example, `publish_1.0.yml` copies
-   `version-specific-yaml/mkdocs_1.0.yml` to `mkdocs.yml`.
+   Before copying the version-specific navigation file, CI runs
+   `scripts/update_examples_nav.py`. The script reads
+   `docs/examples/library.json`, verifies that each listed example has a
+   `README.md`, and replaces the Examples section in the target MkDocs
+   navigation file.
+
+   CI then removes the placeholder `mkdocs.yml` and copies the relevant file
+   from `version-specific-yaml/`. For example, `publish_1.0.yml` updates
+   `version-specific-yaml/mkdocs_1.0.yml` and copies it to `mkdocs.yml`.
 
 7. Configure Git identity.
 
@@ -179,6 +188,30 @@ When adding a regular documentation page:
    navigation file.
 4. If the page uses images, make sure the workflow also checks out the required
    `images/` files.
+
+## Updating Examples Navigation
+
+Examples navigation is generated from `docs/examples/library.json` rather than
+maintained by hand in `version-specific-yaml/mkdocs_1.0.yml`.
+
+To add, remove, rename, or move an example:
+
+1. Update the example metadata in the source repository that provides
+   `docs/examples/library.json`.
+2. Make sure the example entry includes `README.md` in its `files` list.
+3. Make sure that `README.md` exists at the path described by the entry's
+   `base` value.
+4. Run the generator locally after the examples repository has been assembled:
+
+   ```sh
+   python3 scripts/update_examples_nav.py \
+     --mkdocs version-specific-yaml/mkdocs_1.0.yml \
+     --library docs/examples/library.json
+   ```
+
+The script groups examples by product and category, keeps the configured
+SPIN/TWIST/OWNVERTER order, and fails if `library.json` points to a missing
+example `README.md`.
 
 ## MkDocs Material Configuration
 
