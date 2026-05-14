@@ -53,19 +53,19 @@
 | ---: | :--- |
 |  void | [**disableSafetyApi**](#function-disablesafetyapi) () <br>_Disables the safety API fault detection task._  |
 |  void | [**enableSafetyApi**](#function-enablesafetyapi) () <br>_Enables the safety API fault detection task._  |
-|  bool | [**getChannelError**](#function-getchannelerror) (sensor\_t sensors\_error) <br>_Check if the sensor faced an error (went over/under threshold)_  |
+|  bool | [**getChannelError**](#function-getchannelerror) (sensor\_t sensors\_error) <br>_Check if the sensor faced an error (went over/under threshold)._  |
 |  safety\_reaction\_t | [**getChannelReaction**](#function-getchannelreaction) () <br>_returns the reaction to do when encountering an error._  |
 |  float32\_t | [**getChannelThresholdMax**](#function-getchannelthresholdmax) (sensor\_t sensors\_threshold) <br>_Get the maximum threshold of the selected sensor._  |
 |  float32\_t | [**getChannelThresholdMin**](#function-getchannelthresholdmin) (sensor\_t sensors\_threshold) <br>_Get the minimum threshold of the selected sensor._  |
 |  bool | [**getChannelWatch**](#function-getchannelwatch) (sensor\_t sensors\_watch) <br>_check if a sensor is being monitored or not._  |
 |  void | [**initShield**](#function-initshield-12) () <br>_Initializes thresholds min/max with the default value from the device tree._  |
 |  void | [**initShield**](#function-initshield-22) (sensor\_t \* sensors\_watch, uint8\_t sensors\_watch\_number) <br>_Initializes thresholds min/max with the default value from the device tree._  |
-|  int8\_t | [**retrieveThreshold**](#function-retrievethreshold) (sensor\_t sensor\_threshold\_retrieve) <br>_Retrieves the current minimum and maximum threshold stored in the flash (non volatile memory)_  |
+|  int8\_t | [**retrieveThreshold**](#function-retrievethreshold) (sensor\_t sensor\_threshold\_retrieve) <br>_Retrieves the current minimum and maximum threshold stored in the flash (non volatile memory)._  |
 |  void | [**setChannelReaction**](#function-setchannelreaction) (safety\_reaction\_t sensors\_reaction) <br>_Set the reaction to do if an error has been detected._  |
 |  int8\_t | [**setChannelThresholdMax**](#function-setchannelthresholdmax) (sensor\_t \* sensors\_threshold, float32\_t \* threshold\_max, uint8\_t sensors\_threshold\_number) <br>_Set the maximum threshold for the sensors present in the list safety\_sensors._  |
 |  int8\_t | [**setChannelThresholdMin**](#function-setchannelthresholdmin) (sensor\_t \* sensors\_threshold, float32\_t \* threshold\_min, uint8\_t sensors\_threshold\_number) <br>_Set the minimum threshold for the sensors present in the list safety\_sensors._  |
 |  int8\_t | [**setChannelWatch**](#function-setchannelwatch) (sensor\_t \* sensors\_watch, uint8\_t sensors\_watch\_number) <br>_Enables the monitoring of the selected sensors for safety._  |
-|  int8\_t | [**storeThreshold**](#function-storethreshold) (sensor\_t sensor\_threshold\_store) <br>_Store the current minimum and maximum threshold in the flash (non volatile memory)_  |
+|  int8\_t | [**storeThreshold**](#function-storethreshold) (sensor\_t sensor\_threshold\_store) <br>_Store the current minimum and maximum threshold in the flash (non volatile memory)._  |
 |  int8\_t | [**unsetChannelWatch**](#function-unsetchannelwatch) (sensor\_t \* sensors\_watch, uint8\_t sensors\_watch\_number) <br>_Disables the monitoring of the selected sensors for safety._  |
 
 
@@ -130,7 +130,7 @@ void SafetyAPI::enableSafetyApi ()
 
 ### function getChannelError 
 
-_Check if the sensor faced an error (went over/under threshold)_ 
+_Check if the sensor faced an error (went over/under threshold)._ 
 ```C++
 bool SafetyAPI::getChannelError (
     sensor_t sensors_error
@@ -369,7 +369,7 @@ All the sensors will be monitored to detect potential faults in voltage/current.
 
 ### function retrieveThreshold 
 
-_Retrieves the current minimum and maximum threshold stored in the flash (non volatile memory)_ 
+_Retrieves the current minimum and maximum threshold stored in the flash (non volatile memory)._ 
 ```C++
 int8_t SafetyAPI::retrieveThreshold (
     sensor_t sensor_threshold_retrieve
@@ -585,7 +585,7 @@ int8_t SafetyAPI::setChannelWatch (
 
 ### function storeThreshold 
 
-_Store the current minimum and maximum threshold in the flash (non volatile memory)_ 
+_Store the current minimum and maximum threshold in the flash (non volatile memory)._ 
 ```C++
 int8_t SafetyAPI::storeThreshold (
     sensor_t sensor_threshold_store

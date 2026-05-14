@@ -77,7 +77,7 @@
 |  const uint8\_t | [**HRTIM\_CHANNELS**](#variable-hrtim_channels)   = `6`<br>_Number of HRTIM channels._  |
 |  const uint32\_t | [**HRTIM\_MAX\_PER\_and\_CMP\_REG\_VALUES**](#variable-hrtim_max_per_and_cmp_reg_values)   = `/* multi line expression */`<br> |
 |  const uint32\_t | [**HRTIM\_MIN\_PER\_and\_CMP\_REG\_VALUES**](#variable-hrtim_min_per_and_cmp_reg_values)   = `/* multi line expression */`<br> |
-|  const uint32\_t | [**HRTIM\_PRESCALER\_RESOLUTION\_PS**](#variable-hrtim_prescaler_resolution_ps)   = `/* multi line expression */`<br>_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` __ |
+|  const uint32\_t | [**HRTIM\_PRESCALER\_RESOLUTION\_PS**](#variable-hrtim_prescaler_resolution_ps)   = `/* multi line expression */`<br>_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` _._ |
 
 
 
@@ -722,7 +722,7 @@ const uint32_t HRTIM_MIN_PER_and_CMP_REG_VALUES[8];
 
 ### variable HRTIM\_PRESCALER\_RESOLUTION\_PS 
 
-_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` __
+_Resolution of the HRTIM prescaler in pico-seconds. \*_ `values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]` _._
 ```C++
 const uint32_t HRTIM_PRESCALER_RESOLUTION_PS[8];
 ```

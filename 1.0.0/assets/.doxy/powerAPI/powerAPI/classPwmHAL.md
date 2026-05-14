@@ -63,7 +63,7 @@ _Handles all pwm signals for the spin board._ [More...](#detailed-description)
 |  hrtim\_external\_trigger\_t | [**getEev**](#function-geteev) (hrtim\_tu\_number\_t pwmX) <br>_This function sets the external event linked to the timing unit used for the current mode._  |
 |  uint32\_t | [**getFrequencyMax**](#function-getfrequencymax) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the maximum frequency of the selected timer in Hz._  |
 |  uint32\_t | [**getFrequencyMin**](#function-getfrequencymin) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the minimum frequency of the selected timer in Hz._  |
-|  hrtim\_pwm\_mode\_t | [**getMode**](#function-getmode) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the PWM mode (voltage or current mode)_  |
+|  hrtim\_pwm\_mode\_t | [**getMode**](#function-getmode) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the PWM mode (voltage or current mode)._  |
 |  hrtim\_cnt\_t | [**getModulation**](#function-getmodulation) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the modulation type of the selected timing unit._  |
 |  uint16\_t | [**getPeriod**](#function-getperiod) (hrtim\_tu\_number\_t pwmX) <br>_This function returns the period of the selected timing unit._  |
 |  uint32\_t | [**getPeriodEvntRep**](#function-getperiodevntrep) (hrtim\_tu\_t PWM\_tu) <br>_This function returns the repetition counter value._  |
@@ -458,7 +458,7 @@ uint32_t PwmHAL::getFrequencyMin (
 
 ### function getMode 
 
-_This function returns the PWM mode (voltage or current mode)_ 
+_This function returns the PWM mode (voltage or current mode)._ 
 ```C++
 hrtim_pwm_mode_t PwmHAL::getMode (
     hrtim_tu_number_t pwmX

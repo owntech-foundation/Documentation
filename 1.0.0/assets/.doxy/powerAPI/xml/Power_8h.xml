@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="Power_8h" kind="file" language="C++">
     <compoundname>Power.h</compoundname>
     <innerclass refid="classPowerAPI" prot="public">PowerAPI</innerclass>
@@ -10,7 +10,7 @@
         <enumvalue id="Power_8h_1a48d53d330c5450e13451d2804668ff53a27fc47307d6e13d26305f3269e13f5ad" prot="public">
           <name>DT_FOREACH_CHILD_STATUS_OKAY</name>
           <initializer>=(DT_NODELABEL(powershield), LEG_TOKEN)
-	ALL</initializer>
+    ALL</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>

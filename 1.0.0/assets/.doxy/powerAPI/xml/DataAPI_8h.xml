@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="DataAPI_8h" kind="file" language="C++">
     <compoundname>DataAPI.h</compoundname>
     <innerclass refid="classDataAPI" prot="public">DataAPI</innerclass>
@@ -393,7 +393,7 @@
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" kindref="member">start</ref>();</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" kindref="member">started</ref>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>started();</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight></codeline>
 <codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" kindref="member">stop</ref>();</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"></highlight></codeline>

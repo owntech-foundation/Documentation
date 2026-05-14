@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="nvs__storage_8c" kind="file" language="C++">
     <compoundname>nvs_storage.c</compoundname>
     <sectiondef kind="var">
@@ -51,10 +51,10 @@
         <definition>struct nvs_fs fs</definition>
         <argsstring></argsstring>
         <name>fs</name>
-        <initializer>=
+        <initializer>                   =
 {
-	.offset       = FIXED_PARTITION_OFFSET(NVS_PARTITION),
-	.flash_device = FIXED_PARTITION_DEVICE(NVS_PARTITION)
+    .offset       = FIXED_PARTITION_OFFSET(NVS_PARTITION),
+    .flash_device = FIXED_PARTITION_DEVICE(NVS_PARTITION)
 }</initializer>
         <briefdescription>
 <para>Flash memory file system. </para>

@@ -96,7 +96,7 @@ _Parses all the legs with okay status in the device tree and fills this type def
 ```C++
 enum leg_t {
     DT_FOREACH_CHILD_STATUS_OKAY =(DT_NODELABEL(powershield), LEG_TOKEN)
-	ALL
+    ALL
 };
 ```
 

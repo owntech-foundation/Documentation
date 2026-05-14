@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="classDataAPI" kind="class" language="C++" prot="public">
     <compoundname>DataAPI</compoundname>
     <includes refid="DataAPI_8h" local="no">DataAPI.h</includes>
@@ -266,12 +266,12 @@ Another source of error is trying to start Data Acquisition after it has already
         </inbodydescription>
         <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="188" column="8" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="90" bodyend="125"/>
       </memberdef>
-      <memberdef kind="function" id="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool DataAPI::started</definition>
+      <memberdef kind="function" id="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DataAPI::stop</definition>
         <argsstring>()</argsstring>
-        <name>started</name>
-        <qualifiedname>DataAPI::started</qualifiedname>
+        <name>stop</name>
+        <qualifiedname>DataAPI::stop</qualifiedname>
         <briefdescription>
 <para>Checks if the module is already started. </para>
         </briefdescription>
@@ -281,31 +281,17 @@ Another source of error is trying to start Data Acquisition after it has already
 
    If you do NOT use (or do NOT know what are) auto-spawning threads:
 
-      - just make sure calls to any `data.get*()` or `data.peek*()`
+   - just make sure calls to any `data.get*()` or `data.peek*()`
    function occur after the uninterruptible task is started, 
 
-      - or `Data Acquisition is manually started, and ignore this function.
+   - or `Data Acquisition is manually started, and ignore this function.
 </verbatim></para>
-<para><simplesect kind="return"><para>true is the module has been started, false otherwise. </para>
+<para><simplesect kind="return"><para>true is the module has been started, false otherwise. */ bool started();</para>
 </simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.h" line="205" column="6" bodyfile="docs/core/zephyr/modules/owntech_spin_api/zephyr/src/DataAPI.cpp" bodystart="127" bodyend="130"/>
-      </memberdef>
-      <memberdef kind="function" id="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int8_t</type>
-        <definition>int8_t DataAPI::stop</definition>
-        <argsstring>()</argsstring>
-        <name>stop</name>
-        <qualifiedname>DataAPI::stop</qualifiedname>
-        <briefdescription>
-<para>Stops the module if it is started. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if everything went well, <computeroutput>-1</computeroutput> if there was an error. <verbatim>       Error is triggered when trying to stop Data API while it was not 
-       started.
+/**</para>
+<para>Stops the module if it is started.</para>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if everything went well, <computeroutput>-1</computeroutput> if there was an error. <verbatim>    Error is triggered when trying to stop Data API while it was not 
+    started.
 </verbatim> </para>
 </simplesect>
 </para>
@@ -1637,7 +1623,6 @@ Only for use if you explicitly requires it.</para>
       <member refid="classDataAPI_1abb9623a77e9c1924413f39488814e8b8" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>setDispatchMethod</name></member>
       <member refid="classDataAPI_1aa73130020e80ffb99f43201e317a53eb" prot="private" virt="non-virtual"><scope>DataAPI</scope><name>setRepetitionsBetweenDispatches</name></member>
       <member refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>start</name></member>
-      <member refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>started</name></member>
       <member refid="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>stop</name></member>
       <member refid="classDataAPI_1a6fa8b8d7d3235bff9beb4b567ed3a22d" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>storeConversionParametersInMemory</name></member>
       <member refid="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" prot="public" virt="non-virtual"><scope>DataAPI</scope><name>triggerAcquisition</name></member>

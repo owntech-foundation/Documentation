@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="LedHAL_8cpp" kind="file" language="C++">
     <compoundname>LedHAL.cpp</compoundname>
     <sectiondef kind="var">
@@ -9,7 +9,7 @@
         <argsstring></argsstring>
         <name>led_pin_spec</name>
         <initializer>=
-							GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios)</initializer>
+   GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

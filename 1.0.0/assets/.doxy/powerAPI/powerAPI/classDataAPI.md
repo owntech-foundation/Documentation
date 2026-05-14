@@ -66,8 +66,7 @@
 |  void | [**setConversionParametersLinear**](#function-setconversionparameterslinear) (uint8\_t pin\_number, float32\_t gain, float32\_t offset) <br>_Use this function to tweak the conversion values for the channel if default values are not accurate enough._  |
 |  void | [**setConversionParametersNtcThermistor**](#function-setconversionparametersntcthermistor) (uint8\_t pin\_num, float32\_t r0, float32\_t b, float32\_t rdiv, float32\_t t0) <br>_Use this function to set the conversion values for any NTC thermistor sensor if default values are not accurate enough._  |
 |  int8\_t | [**start**](#function-start) () <br>_This functions manually starts the acquisition chain._  |
-|  bool | [**started**](#function-started) () <br>_Checks if the module is already started._  |
-|  int8\_t | [**stop**](#function-stop) () <br>_Stops the module if it is started._  |
+|  int8\_t | [**stop**](#function-stop) () <br>_Checks if the module is already started._  |
 |  int8\_t | [**storeConversionParametersInMemory**](#function-storeconversionparametersinmemory) (uint8\_t pin\_number) <br>_Store the currently configured conversion parameters of a given channel in persistent memory._  |
 |  void | [**triggerAcquisition**](#function-triggeracquisition) (adc\_t adc\_number) <br>_Triggers an acquisition on a given ADC._  |
 
@@ -801,11 +800,11 @@ Another source of error is trying to start Data Acquisition after it has already
 
 
 
-### function started 
+### function stop 
 
 _Checks if the module is already started._ 
 ```C++
-bool DataAPI::started () 
+int8_t DataAPI::stop () 
 ```
 
 
@@ -817,25 +816,13 @@ bool DataAPI::started ()
 
 **Returns:**
 
-true is the module has been started, false otherwise. 
+true is the module has been started, false otherwise. \*/ bool started();
 
 
+/\*\*
 
 
-
-        
-
-<hr>
-
-
-
-### function stop 
-
-_Stops the module if it is started._ 
-```C++
-int8_t DataAPI::stop () 
-```
-
+Stops the module if it is started.
 
 
 

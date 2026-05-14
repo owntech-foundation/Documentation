@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
   <compound refid="structadc__hrtim__conf__t" kind="struct"><name>adc_hrtim_conf_t</name>
     <member refid="structadc__hrtim__conf__t_1ae418d1bee76e0d87f9332b2f66832d9a" kind="variable"><name>adc_event</name></member>
     <member refid="structadc__hrtim__conf__t_1ae2418b156739e753a529874016397f08" kind="variable"><name>adc_source</name></member>
@@ -90,7 +90,6 @@
     <member refid="classDataAPI_1acd0b5c25cdf42a94a60811e2fead798b" kind="variable"><name>converted_values_buffer</name></member>
     <member refid="classDataAPI_1a2cb56a6f6f652e2ad9216d52bafb9c2a" kind="function"><name>enableAcquisition</name></member>
     <member refid="classDataAPI_1a4656e02f0227660869d5167f456fedfe" kind="function"><name>start</name></member>
-    <member refid="classDataAPI_1aa0acfd495a05173afa4c8061c9b0a897" kind="function"><name>started</name></member>
     <member refid="classDataAPI_1a28c7936314d9a4b152b3ca0807284392" kind="function"><name>stop</name></member>
     <member refid="classDataAPI_1aa86c01fa8971c1a5e1f16a5c82065fb8" kind="function"><name>triggerAcquisition</name></member>
     <member refid="classDataAPI_1af8de8f2ec899d5b11956964e92ee16dc" kind="function"><name>getRawValues</name></member>

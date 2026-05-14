@@ -289,7 +289,6 @@
 * **setDispatchMethod** ([**DataAPI**](classDataAPI.md))
 * **setRepetitionsBetweenDispatches** ([**DataAPI**](classDataAPI.md))
 * **start** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md), [**dac\_driver\_api**](structdac__driver__api.md), [**timer\_driver\_api**](structtimer__driver__api.md))
-* **started** ([**DataAPI**](classDataAPI.md))
 * **stop** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md), [**dac\_driver\_api**](structdac__driver__api.md), [**timer\_driver\_api**](structtimer__driver__api.md))
 * **storeConversionParametersInMemory** ([**DataAPI**](classDataAPI.md))
 * **setPin** ([**GpioHAL**](classGpioHAL.md))

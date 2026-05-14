@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="power__init_8cpp" kind="file" language="C++">
     <compoundname>power_init.cpp</compoundname>
     <sectiondef kind="var">
@@ -38,8 +38,8 @@
         <definition>uint16_t dt_pwm_pin[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_pwm_pin</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PWM_PIN)}</initializer>
+        <initializer>                =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PWM_PIN)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -54,8 +54,8 @@
         <definition>uint16_t dt_pwm_x1_high[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_pwm_x1_high</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PWM_X1_HIGH)}</initializer>
+        <initializer>                    =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PWM_X1_HIGH)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -70,8 +70,8 @@
         <definition>adc_t dt_adc[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_adc</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_ADC)}</initializer>
+        <initializer>         =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_ADC)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -86,8 +86,8 @@
         <definition>uint32_t dt_adc_decim[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_adc_decim</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_ADC_DECIM)}</initializer>
+        <initializer>                  =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_ADC_DECIM)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -102,8 +102,8 @@
         <definition>hrtim_cnt_t dt_modulation[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_modulation</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_MODULATION)}</initializer>
+        <initializer>                      =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_MODULATION)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -118,8 +118,8 @@
         <definition>hrtim_adc_edgetrigger_t dt_edge_trigger[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_edge_trigger</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_EDGE_TRIGGER)}</initializer>
+        <initializer>                                    =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_EDGE_TRIGGER)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -134,8 +134,8 @@
         <definition>uint16_t dt_rising_deadtime[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_rising_deadtime</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_RISING_DT)}</initializer>
+        <initializer>                        =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_RISING_DT)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -150,8 +150,8 @@
         <definition>uint16_t dt_falling_deadtime[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_falling_deadtime</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_FALLING_DT)}</initializer>
+        <initializer>                         =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_FALLING_DT)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -166,8 +166,8 @@
         <definition>int16_t dt_phase_shift[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_phase_shift</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PHASE)}</initializer>
+        <initializer>                   =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_PHASE)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -182,8 +182,8 @@
         <definition>uint8_t dt_leg_count</definition>
         <argsstring></argsstring>
         <name>dt_leg_count</name>
-        <initializer>=
-    DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_COUNTER)</initializer>
+        <initializer>                 =
+DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_COUNTER)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -198,8 +198,8 @@
         <definition>uint8_t dt_output1_inactive[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_output1_inactive</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_OUTPUT1)}</initializer>
+        <initializer>                        =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_OUTPUT1)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -214,8 +214,8 @@
         <definition>uint8_t dt_output2_inactive[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_output2_inactive</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_OUTPUT2)}</initializer>
+        <initializer>                        =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_OUTPUT2)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -230,8 +230,8 @@
         <definition>uint16_t dt_current_pin[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_current_pin</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_CURRENT_PIN)}</initializer>
+        <initializer>                    =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_CURRENT_PIN)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -246,8 +246,8 @@
         <definition>uint16_t dt_pin_driver[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_pin_driver</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_DRIVER_PIN)}</initializer>
+        <initializer>                   =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_DRIVER_PIN)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -262,8 +262,8 @@
         <definition>uint16_t dt_pin_capacitor[]</definition>
         <argsstring>[]</argsstring>
         <name>dt_pin_capacitor</name>
-        <initializer>=
-    {DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_CAPACITOR_PIN)}</initializer>
+        <initializer>                      =
+{DT_FOREACH_CHILD_STATUS_OKAY(POWER_SHIELD_ID, LEG_CAPACITOR_PIN)}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

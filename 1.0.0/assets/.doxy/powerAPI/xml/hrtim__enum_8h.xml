@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="hrtim__enum_8h" kind="file" language="C++">
     <compoundname>hrtim_enum.h</compoundname>
     <innerclass refid="structpwm__conf__t" prot="public">pwm_conf_t</innerclass>
@@ -1270,15 +1270,15 @@
         <argsstring>[8]</argsstring>
         <name>HRTIM_PRESCALER_RESOLUTION_PS</name>
         <initializer>= {184,
-                                                              368,
-                                                              735,
-                                                              1470,
-                                                              2940,
-                                                              5880,
-                                                              11760,
-                                                              23530}</initializer>
+      368,
+      735,
+      1470,
+      2940,
+      5880,
+      11760,
+      23530}</initializer>
         <briefdescription>
-<para>Resolution of the HRTIM prescaler in pico-seconds. * <computeroutput>values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]</computeroutput> </para>
+<para>Resolution of the HRTIM prescaler in pico-seconds. * <computeroutput>values[8] = [184, 368, 735,1470, 2940, 5880,11760,23530]</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1292,13 +1292,13 @@
         <argsstring>[8]</argsstring>
         <name>HRTIM_MIN_PER_and_CMP_REG_VALUES</name>
         <initializer>= {0x0060,
-                                                                 0x0030,
-                                                                 0x0018,
-                                                                 0x000C,
-                                                                 0x0006,
-                                                                 0x0003,
-                                                                 0x0003,
-                                                                 0x0003}</initializer>
+      0x0030,
+      0x0018,
+      0x000C,
+      0x0006,
+      0x0003,
+      0x0003,
+      0x0003}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1313,13 +1313,13 @@
         <argsstring>[8]</argsstring>
         <name>HRTIM_MAX_PER_and_CMP_REG_VALUES</name>
         <initializer>= {0xFFDF,
-                                                                 0xFFEF,
-                                                                 0xFFF7,
-                                                                 0xFFFB,
-                                                                 0xFFFD,
-                                                                 0xFFFD,
-                                                                 0xFFFD,
-                                                                 0xFFFD}</initializer>
+      0xFFEF,
+      0xFFF7,
+      0xFFFB,
+      0xFFFD,
+      0xFFFD,
+      0xFFFD,
+      0xFFFD}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

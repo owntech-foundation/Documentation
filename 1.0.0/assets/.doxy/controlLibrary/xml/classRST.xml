@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="classRST" kind="class" language="C++" prot="public">
     <compoundname>RST</compoundname>
     <basecompoundref refid="classController" prot="public" virt="non-virtual">Controller&lt; float32_t, float32_t, float32_t, RstParams &gt;</basecompoundref>
@@ -120,7 +120,7 @@
           <type>void</type>
         </param>
         <briefdescription>
-<para>calculate a new command value according to a reference fixed using <computeroutput>setReference</computeroutput> method and a measuremnt fixed using <computeroutput>setMeasurement</computeroutput>. </para>
+<para>calculate a new command value according to a reference fixed using <computeroutput><ref refid="classController_1a85bb132e340061655b62be027f0afe97" kindref="member">setReference</ref></computeroutput> method and a measuremnt fixed using <computeroutput><ref refid="classController_1a279f0b4a725d12c287ab37403d1f3ad0" kindref="member">setMeasurement</ref></computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para>The new command value can be captured using the <computeroutput>get_output</computeroutput> method. </para>

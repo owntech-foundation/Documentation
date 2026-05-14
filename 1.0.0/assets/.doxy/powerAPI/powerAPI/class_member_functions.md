@@ -156,7 +156,6 @@
 * **setDispatchMethod** ([**DataAPI**](classDataAPI.md))
 * **setRepetitionsBetweenDispatches** ([**DataAPI**](classDataAPI.md))
 * **start** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md))
-* **started** ([**DataAPI**](classDataAPI.md))
 * **stop** ([**DataAPI**](classDataAPI.md), [**PowerAPI**](classPowerAPI.md))
 * **storeConversionParametersInMemory** ([**DataAPI**](classDataAPI.md))
 * **setPin** ([**GpioHAL**](classGpioHAL.md))
