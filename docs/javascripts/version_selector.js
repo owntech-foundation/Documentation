@@ -42,11 +42,15 @@ document$.subscribe(function() {
             versions = {
                 "1.1.0": {
                     buttonText: "1.1.0",
-                    aliasText: "Latest"
+                    aliasText: "Stable"
                 },
                 "1.0.0": {
                     buttonText: "1.0.0",
                     aliasText: "Stable"
+                },
+                "1.1.1": {
+                    buttonText: "1.1.1",
+                    aliasText: "Latest"
                 }
             };
         }

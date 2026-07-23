@@ -2,5 +2,6 @@
 # VSCODE config
 .vscode/*
 site/*
-.venv/*
+*venv/*
+docs/*
 .secrets
