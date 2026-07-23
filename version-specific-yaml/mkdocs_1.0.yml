@@ -2,8 +2,7 @@ INHERIT: mkdocs-common.yml
 
 
 nav:
-    - Home:
-        - index.md
+    - Home: index.md
     - Getting Started:
         - Environment Setup: core/docs/environment_setup.md
         - First Example: core/docs/first_example.md
